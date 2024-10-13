@@ -1,19 +1,50 @@
+import Card from '@/components/Card';
+import TextCompanyOverview from '@/components/Nav/TextCompanyOverview';
+import Image from 'next/image';
 import React from 'react';
+import {RoutesSvg, UsCanadaCitiesSvg, InternationalCitiesSvg, AircraftSvg, AirportsSvg} from '@/svg'
 
 const CompanyOverview = () => {
     return (
-        <div className="flex flex-col lg:flex-row items-center space-y-6 md:space-y-0 md:space-x-12 p-10  max-w-screen-xl mx-auto">
-            <div className="text-left lg:w-1/2 w-full">
-                <h1 className="text-2xl font-bold mb-4">Our Story, Mission, and Values at Jetlevel Aviation.</h1>
-                <p className="mb-4">
-                    At Jetlevel Aviation, we're redefining the private jet charter experience by prioritizing safety, reliability, and transparency. Founded in 2019, we've established ourselves as a trusted global advisor in the aviation industry. Our mission is to provide high-quality aircraft and competitive pricing, backed by leading customer service to deliver the best value. We are committed to core values of reliability, safety, and transparency, ensuring client satisfaction for both frequent travels and special occasions. Fly across the US, Canada, and beyond with our diverse network of aircraft and convenient departure points. Choose Jetlevel Aviation for a seamless, worry-free journey every time—elevating your travel experiences to new heights.
-                </p>
-                <p className="text-blue-600 font-bold">Fly with Confidence!</p>
+        <section className='max-w-screen-2xl mx-auto'>
+            <div className="flex flex-col md:flex-row justify-center items-center p-4 gap-1 w-fit">
+                <div className="w-full md:w-2/5">
+                    <h2 className="text-2xl font-bold mb-4">Our Story, Mission, and Values at Jetlevel Aviation.</h2>
+                    <TextCompanyOverview />
+                </div>
+                <div className="md:w-3/5">
+                    <Image src="https://jetlevel.com/wp-content/uploads/elementor/thumbs/of-experience-under-the-hud-1-1-qmfcszjfjpfop9nwox08fyw6iclg6chjd2lfs6hieo.jpg" alt="60 years of experience under one roof with an airplane flying through the number 60" width={500} height={500} className="" />
+                </div>
             </div>
-            <div className="md:w-1/2 w-full">
-                <img src="https://jetlevel.com/wp-content/uploads/elementor/thumbs/of-experience-under-the-hud-1-1-qmfcszjfjpfop9nwox08fyw6iclg6chjd2lfs6hieo.jpg" alt="60 years of experience under one roof with an airplane flying through the number 60" className="w-full" />
+
+            <div className="grid grid-cols-1 sm:grid-cols-3 lg:grid-cols-5 justify-between gap-2 max-w-screen-2xl mx-auto px-4 py-3">
+                <Card
+                    icon={<RoutesSvg />}
+                    title="Routes"
+                    description="Explore diverse routes for your travel needs."
+                />
+                <Card
+                    icon={<UsCanadaCitiesSvg />}
+                    title="US & Canada Cities"
+                    description="Connect to major cities across US and Canada."
+                />
+                <Card
+                    icon={<InternationalCitiesSvg />}
+                    title="International Cities"
+                    description="Fly globally to various international destinations."
+                />
+                <Card
+                    icon={<AircraftSvg />}
+                    title="Aircraft"
+                    description="Choose from a wide range of luxury jets."
+                />
+                <Card
+                    icon={<AirportsSvg />}
+                    title="Airports"
+                    description="Access convenient airports for your journey."
+                />
             </div>
-        </div>
+        </section>
     );
 };
 

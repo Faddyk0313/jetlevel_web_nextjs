@@ -26,11 +26,27 @@
 }
 
 /* Global font settings */
+h1.LargeFont {
+  font-size: 58px;
+}
+
 h1 {
-  font-size: 61px;
-  line-height: 73px;
+  line-height: 1.2;
   font-weight: bold;
   font-family: var(--font-playfair-display), serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+p.subtitle {
+  line-height: 38px;
+  font-weight: bold;
+  font-family: var(--font-playfair-display), serif;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+p.TitleTtagline {
+  line-height: 1.5;
+  font-family: var(--font-lato), serif;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
 }
 
