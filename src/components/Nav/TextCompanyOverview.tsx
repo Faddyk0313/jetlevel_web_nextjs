@@ -13,23 +13,19 @@ const TextCompanyOverview = () => {
     return (
         <>
             <div className='lg:hidden'>
-                <p className='inline'>
-                    Since 2005, Paramount Business Jets has redefined luxury air travel,
-                    emerging as the gold standard in bespoke private jet services. Our
-                    dedication to superior quality, safety, and client satisfaction ensures a
-                    seamless and opulent private jet travel experience tailored to your
-                    preferences.&nbsp;
+                <p className='inline leading-normal'>
+                    At JetLevel Aviation, we’re redefining the private jet charter experience by prioritizing safety, reliability, and transparency. Founded in 2019, we’ve established ourselves as a trusted global advisor in the aviation industry. Our mission is to provide high-quality aircraft and competitive pricing, backed by leading customer service to deliver the best value. We are committed to core values of reliability, safety, and transparency, ensuring client satisfaction for both frequent travels and special occasions.&nbsp;
                 </p>
 
                 <div
                     className={`transition-all duration-500 ease-in-out overflow-hidden ${showMore ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'}`}
                 >
-                    <div className="inline">
+                    <div className="inline leading-normal">
                         <p>
-                        Fly across the US, Canada, and beyond with our diverse network of aircraft and convenient departure points. Choose JetLevel Aviation for a seamless, worry-free journey every time—elevating your travel experiences to new heights.
+                            Fly across the US, Canada, and beyond with our diverse network of aircraft and convenient departure points. Choose JetLevel Aviation for a seamless, worry-free journey every time—elevating your travel experiences to new heights.
                         </p>
-                        <p className="my-2 text-blue-600 font-bold italic">
-                            Fly with <span className='border-b-2 border-blue-600'>
+                        <p className="my-2 text-blue-600 font-bold italic leading-normal">
+                            Fly with <span className='border-b-2 border-blue-600 leading-normal'>
                                 Confidence!
                             </span>
                         </p>
@@ -44,8 +40,13 @@ const TextCompanyOverview = () => {
                     {showMore ? <FaCaretUp /> : <FaCaretDown />}
                 </button>
             </div>
-            <p className='hidden lg:block'>
+            <p className='hidden lg:block leading-8'>
                 At JetLevel Aviation, we're redefining the private jet charter experience by prioritizing safety, reliability, and transparency. Founded in 2019, we've established ourselves as a trusted global advisor in the aviation industry. Our mission is to provide high-quality aircraft and competitive pricing, backed by leading customer service to deliver the best value. We are committed to core values of reliability, safety, and transparency, ensuring client satisfaction for both frequent travels and special occasions. Fly across the US, Canada, and beyond with our diverse network of aircraft and convenient departure points. Choose JetLevel Aviation for a seamless, worry-free journey every time—elevating your travel experiences to new heights.
+                <div className="my-2 text-blue-600 font-bold italic leading-normal">
+                    Fly with <span className='border-b-2 border-blue-600 leading-normal'>
+                        Confidence!
+                    </span>
+                </div>
             </p>
         </>
     );

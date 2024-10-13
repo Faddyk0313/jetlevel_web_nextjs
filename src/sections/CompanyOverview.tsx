@@ -7,13 +7,13 @@ import {RoutesSvg, UsCanadaCitiesSvg, InternationalCitiesSvg, AircraftSvg, Airpo
 const CompanyOverview = () => {
     return (
         <section className='max-w-screen-2xl mx-auto'>
-            <div className="flex flex-col md:flex-row justify-center items-center p-4 gap-1 w-fit">
-                <div className="w-full md:w-2/5">
-                    <h2 className="text-2xl font-bold mb-4">Our Story, Mission, and Values at Jetlevel Aviation.</h2>
-                    <TextCompanyOverview />
+            <div className="flex flex-col md:flex-row justify-center  p-8 gap-1 w-fit">
+                <div className="w-full md:max-w-[40%]">
+                    <h2 className="mb-4">Our Story, Mission, and Values at Jetlevel Aviation.</h2>
+                    <TextCompanyOverview /> 
                 </div>
-                <div className="md:w-3/5">
-                    <Image src="https://jetlevel.com/wp-content/uploads/elementor/thumbs/of-experience-under-the-hud-1-1-qmfcszjfjpfop9nwox08fyw6iclg6chjd2lfs6hieo.jpg" alt="60 years of experience under one roof with an airplane flying through the number 60" width={500} height={500} className="" />
+                <div className="w-full ">
+                    <Image width={600} height={600} className='mx-auto' src="https://jetlevel.com/wp-content/uploads/elementor/thumbs/of-experience-under-the-hud-1-1-qmfcszjfjpfop9nwox08fyw6iclg6chjd2lfs6hieo.jpg" alt="60 years of experience under one roof with an airplane flying through the number 60"  />
                 </div>
             </div>
 
