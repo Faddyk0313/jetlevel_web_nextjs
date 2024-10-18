@@ -2,7 +2,7 @@ import Card from '@/components/Card';
 import TextCompanyOverview from '@/components/Nav/TextCompanyOverview';
 import Image from 'next/image';
 import React from 'react';
-import { Routes, UsCanadaCities, InternationalCities, Aircraft, Airports } from '@/svg';
+import { Routes_DistanceCalculator, UsCanadaCities, InternationalCities, Aircraft, Airports } from '@/svg';
 import Carousel from '@/components/Crousel';
 
 const CompanyOverview = () => {
@@ -11,7 +11,7 @@ const CompanyOverview = () => {
         text: string;
     }
     const carouselItems: CarouselItem[] = [
-        { icon: <Routes />, text: "Routes" },
+        { icon: <Routes_DistanceCalculator />, text: "Routes" },
         { icon: <UsCanadaCities />, text: "US & Canada Cities" },
         { icon: <InternationalCities />, text: "International Cities" },
         { icon: <Aircraft />, text: "Aircraft" },
@@ -43,7 +43,7 @@ const CompanyOverview = () => {
 
             <div className="hidden md:grid grid-cols-5 justify-between gap-2 py-3">
                 <Card
-                    icon={<Routes />}
+                    icon={<Routes_DistanceCalculator />}
                     title="Routes"
                     description="Explore diverse routes for your travel needs."
                     bgcolor="black"
