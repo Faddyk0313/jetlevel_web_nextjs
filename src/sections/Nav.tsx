@@ -5,7 +5,7 @@ import NavOptions from "@/components/Nav/NavOptions";
 const Nav = () => {
   return (
     <header className="bg-black sticky top-0 z-20">
-      <nav className="text-white sticky flex items-center justify-between py-6 px-3 max-w-[1500px] mx-auto ">
+      <nav className="text-white sticky flex items-center justify-between py-6 px-3 max-w-[1800px] mx-auto ">
         <div id="logo" className="flex-1 min-w-40 max-w-56">
           <img
             src="https://jetlevel.com/wp-content/uploads/2023/07/jetLeval-logo-1.png"

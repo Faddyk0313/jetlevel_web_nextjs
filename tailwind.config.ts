@@ -8,6 +8,8 @@ const config: Config = {
     extend: {
       backgroundImage: {
         'hero-background': "url('https://fly.jetlevel.com/assets/Private%20jet%20interior%20bg%20.webp')",
+        'aboutUs-background': "url('https://jetlevel.com/wp-content/uploads/2022/08/R-29.jpg')",
+        'ourOffices-background': "url('https://jetlevel.com/wp-content/uploads/2022/11/pexels-pixabay-236070-scaled.jpeg')",
       },
       fontFamily: {
         playfair: ['var(--font-playfair-display)', 'serif'],

@@ -1,7 +1,21 @@
-import AircraftSvg from "@/svg/Aircraft.svg";
-import AirportsSvg from "@/svg/Airports.svg";
-import InternationalCitiesSvg from "@/svg/InternationalCities.svg";
-import RoutesSvg from "@/svg/Routes.svg";
-import UsCanadaCitiesSvg from "@/svg/UsCanadaCities.svg";
+import Aircraft from "./Aircraft.svg";
+import Airports from "./Airports.svg";
+import InternationalCities from "./InternationalCities.svg";
+import Routes from "./Routes.svg";
+import UsCanadaCities from "./UsCanadaCities.svg";
+import OnDemandCharter from "./onDemandCharter.svg";
+import ProvenSafetyRecords from "./provenSafetyRecords.svg";
+import Reliability from "./reliability.svg";
+import Transparency from "./transparency.svg";
+import Testimonials from "./testimonials.svg";
+import GroupCharter from "./groupCharter.svg";
+import AirAmbulance from "./airAmbulance.svg";
+import Helicopter from "./helicopter.svg";
+import EmptyLeg from "./emptyLeg.svg";
+import IndustrySpecific from "./industrySpecific.svg";
+import OurOfficesSvg from "./ourOffices.svg";
 
-export { AircraftSvg, AirportsSvg, InternationalCitiesSvg, RoutesSvg, UsCanadaCitiesSvg };
+export { Aircraft, Airports, InternationalCities, Routes, UsCanadaCities };
+export { OnDemandCharter, ProvenSafetyRecords, Reliability, Transparency, Testimonials };
+export { GroupCharter, AirAmbulance, Helicopter, EmptyLeg, IndustrySpecific };
+export { OurOfficesSvg };
