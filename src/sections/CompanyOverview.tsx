@@ -1,5 +1,5 @@
 import Card from '@/components/Card';
-import TextCompanyOverview from '@/components/Nav/TextCompanyOverview';
+import TextCompanyOverview from '@/components/TextCompanyOverview';
 import Image from 'next/image';
 import React from 'react';
 import { Routes_DistanceCalculator, UsCanadaCities, InternationalCities, Aircraft, Airports } from '@/svg';
@@ -8,14 +8,14 @@ import Carousel from '@/components/Crousel';
 const CompanyOverview = () => {
     interface CarouselItem {
         icon: any | string;
-        text: string;
+        title: string;
     }
-    const carouselItems: CarouselItem[] = [
-        { icon: <Routes_DistanceCalculator />, text: "Routes" },
-        { icon: <UsCanadaCities />, text: "US & Canada Cities" },
-        { icon: <InternationalCities />, text: "International Cities" },
-        { icon: <Aircraft />, text: "Aircraft" },
-        { icon: <Airports />, text: "Airports" }
+    const carouselItems: CarouselItem[] = [ 
+        { icon: <Routes_DistanceCalculator />, title: "Routes" },
+        { icon: <UsCanadaCities />, title: "US & Canada Cities" },
+        { icon: <InternationalCities />, title: "International Cities" },
+        { icon: <Aircraft />, title: "Aircraft" },
+        { icon: <Airports />, title: "Airports" }
     ];
 
     return (
@@ -46,35 +46,35 @@ const CompanyOverview = () => {
                     icon={<Routes_DistanceCalculator />}
                     title="Routes"
                     description="Explore diverse routes for your travel needs."
-                    bgcolor="black"
+                    bgcolor="white"
                 />
                 <Card
                     icon={<UsCanadaCities />}
                     title="US & Canada Cities"
                     description="Connect to major cities across US and Canada."
-                    bgcolor="black"
+                    bgcolor="white"
                 />
                 <Card
                     icon={<InternationalCities />}
                     title="International Cities"
                     description="Fly globally to various international destinations."
-                    bgcolor="black"
+                    bgcolor="white"
                 />
                 <Card
                     icon={<Aircraft />}
                     title="Aircraft"
                     description="Choose from a wide range of luxury jets."
-                    bgcolor="black"
+                    bgcolor="white"
                 />
                 <Card
                     icon={<Airports />}
                     title="Airports"
                     description="Access convenient airports for your journey."
-                    bgcolor="black"
+                    bgcolor="white"
                 />
             </div>
             <div className='block md:hidden'>
-                <Carousel items={carouselItems} bgcolor="black" />
+                <Carousel items={carouselItems} bgcolor="white" />
             </div>
         </section>
     );

@@ -27,7 +27,7 @@ const TextCompanyOverview = () => {
                 </div>
 
                 <button
-                    className="flex  text-xl items-center gap-1 mt-3 cursor-pointer text-blue-600"
+                    className="flex text-xl items-center gap-1 mt-3 cursor-pointer text-blue-600"
                     onClick={handleShowMore}
                 >
                     {showMore ? 'Show Less' : 'Show More'}

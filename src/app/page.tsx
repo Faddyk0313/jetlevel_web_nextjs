@@ -9,7 +9,10 @@ import FourMetrics from "@/sections/FourMetrics";
 import SmartTravelTools from "@/sections/SmartTravelTools";
 import OurComitment from "@/sections/OurComitment";
 import PopularPrivateJetCharters from "@/sections/PopularPrivateJetCharters";
-// import MeetOwner from "@/sections/MeetOwner";
+import MeetOwner from "@/sections/MeetOwner";
+import AvailableAircrafts from "@/sections/AvailableAircrafts";
+import WhatOurClientsSay from "@/sections/WhatOurClientsSay";
+import BookYourPrivateJet from "@/sections/BookYourPrivateJet";
 
 
 export default function Home() {
@@ -22,11 +25,14 @@ export default function Home() {
       <ExclusiveServices />
       <OurOffices />
       <CharterProcessSteps />
-      {/* <MeetOwner /> */}
+      <MeetOwner />
       <FourMetrics />
       <SmartTravelTools />
       <OurComitment />
       <PopularPrivateJetCharters />
+      <AvailableAircrafts />
+      <WhatOurClientsSay />
+      <BookYourPrivateJet />
       
       <div className="h-screen bg-black"></div>
     </>

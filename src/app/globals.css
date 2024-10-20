@@ -84,16 +84,23 @@ caption {
   font-family: var(--font-lato), sans-serif;
 }
 h2 {
-  font-size: 32px;
+  font-size: 2rem; /* 32px */
   font-weight: bold;
+  letter-spacing: 1px;
 }
 h3 {
-  font-size: 24px;
+  font-size: 1.25rem; /* 20px*/
+  @media (min-width: 765px) {
+    font-size: 1.5rem; /* 24px */
+  }
 }
 h4 {
-  font-size: 0.75rem /* 12px */;
+  font-size: 1.125rem /* 18px */;
   line-height: 1rem /* 16px */;
   letter-spacing: 1px;
+  @media (min-width: 765px) {
+    font-size: 1.25rem; /* 20px */
+  }
 }
 
 p.details {
