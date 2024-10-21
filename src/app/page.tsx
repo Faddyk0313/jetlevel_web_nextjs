@@ -13,6 +13,8 @@ import MeetOwner from "@/sections/MeetOwner";
 import AvailableAircrafts from "@/sections/AvailableAircrafts";
 import WhatOurClientsSay from "@/sections/WhatOurClientsSay";
 import BookYourPrivateJet from "@/sections/BookYourPrivateJet";
+import Faqs from "@/sections/Faqs";
+import Footer from "@/sections/Footer";
 
 
 export default function Home() {
@@ -20,7 +22,7 @@ export default function Home() {
     <>
       <Nav />
       <Hero />
-      <CompanyOverview />
+      {/* <CompanyOverview />
       <AboutUs />
       <ExclusiveServices />
       <OurOffices />
@@ -32,9 +34,9 @@ export default function Home() {
       <PopularPrivateJetCharters />
       <AvailableAircrafts />
       <WhatOurClientsSay />
+      <Faqs /> */}
       <BookYourPrivateJet />
-      
-      <div className="h-screen bg-black"></div>
+      <Footer />
     </>
   );
 }

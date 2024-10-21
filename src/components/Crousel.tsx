@@ -40,7 +40,7 @@ const Carousel: React.FC<CarouselProps> = ({ items, bgcolor }) => {
   }; 
 
   return (
-    <div className="text-center my-3">
+    <div className="my-3">
       <div
         className="overflow-hidden scroll-snap-x-mandatory touch-auto"
         ref={containerRef}
@@ -49,22 +49,22 @@ const Carousel: React.FC<CarouselProps> = ({ items, bgcolor }) => {
         onTouchEnd={handleTouchEnd}
       >
         <div
-          className="flex transition-transform duration-500 ease-in-out snap-start"
+          className="flex transition-transform gap-[5%] duration-500 ease-in-out snap-start"
           style={{ transform: `translateX(-${currentIndex * 50}%)` }}
         >
           {items.map((item: CarouselItem, index: number) => (
             <div
               key={index}
-              className={`${
+              className={` ${
                 bgcolor == "white"
                   ? "bg-black" : bgcolor === 'gray' ? "bg-black" 
                   : "bg-white bg-opacity-10 backdrop-blur-lg"
-              } rounded-lg p-4 w-1/2 flex-shrink-0 snap-center`}
+              } rounded-lg p-4 w-[45%] flex-shrink-0 snap-center`}
             >
               <div className="flex justify-center items-center mx-auto mb-4 bg-blue-600 w-20 h-20 rounded-full">
                 {item.icon}
               </div>
-              <h3 className="text-white">{item.title}</h3>
+              <h3 className="text-white text-lg">{item.title}</h3>
             </div>
           ))}
         </div>

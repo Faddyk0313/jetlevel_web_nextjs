@@ -12,7 +12,7 @@ const CustomComponent: React.FC<CustomComponentProps> = ({ heading, para, backgr
 
   return (
     <section className={`${background === "white" ? "max-w-[1800px] mx-auto p-5 py-10 " : background === 'gray' ? "bg-gray-200" : "relative overflow-hidden bg-aboutUs-background bg-cover bg-fixed p-5 py-[30px] md:py-[50px] lg:py-[80px]"}`}>
-      <div className={`${background === "white" ? "" : background === 'gray' ? "max-w-[1800px] mx-auto p-5 py-10" : "max-w-[1800px] mx-auto p-5"}`}>
+      <div className={`${background === "white" ? "" : background === 'gray' ? "max-w-[1800px] mx-auto p-5 py-10" : "max-w-[1800px] mx-auto"}`}>
         {
           background === "white"
             ? "" : 

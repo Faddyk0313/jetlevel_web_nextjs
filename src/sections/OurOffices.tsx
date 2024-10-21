@@ -8,7 +8,7 @@ const OurOffices = () => {
                 <div className="max-w-[1800px] mx-auto flex flex-col text-white px-7 justify-center py-20 md:py-32 ">
                     <h2 className="mb-4">Our Offices</h2>
                     <div className='flex flex-col items-center md:flex-row gap-10 md:gap-14'>
-                        <div className='lg:w-1/2 pl-5'>
+                        <div className='lg:w-1/2'>
                             <div className="flex justify-center items-center mb-4 bg-blue-600 w-20 lg:w-28 h-20 lg:h-28 rounded-full">
                                 <OurOfficesSvg />
                             </div>
