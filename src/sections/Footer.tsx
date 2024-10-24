@@ -100,9 +100,8 @@ const Footer = () => {
                         </div>
                         <ul className='list-none lg:w-3/4'>
                             {section.links.map((link, linkIndex) => (
-                                <li className='inline'>
+                                <li key={linkIndex} className='inline'>
                                     <Link
-                                        key={linkIndex}
                                         href="#"
                                         className="text-[#858585] mr-4 break-words"
 

@@ -22,7 +22,7 @@ export default function Home() {
     <>
       <Nav />
       <Hero />
-      {/* <CompanyOverview />
+      <CompanyOverview />
       <AboutUs />
       <ExclusiveServices />
       <OurOffices />
@@ -34,7 +34,7 @@ export default function Home() {
       <PopularPrivateJetCharters />
       <AvailableAircrafts />
       <WhatOurClientsSay />
-      <Faqs /> */}
+      <Faqs />
       <BookYourPrivateJet />
       <Footer />
     </>
