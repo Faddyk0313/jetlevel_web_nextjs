@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 const Faqs = () => {
     return (
-        <section className="max-w-[1800px] mx-auto p-6">
+        <section className="max-w-[1800px] mx-auto min-h-screen flex flex-col justify-center px-5">
             <h4 className='text-center text-[#6cc4e9] font-bold mb-2'>GET ANSWERS</h4>
             <h2 className="text-center font-bold mb-8">
                 Frequently Asked Questions
@@ -13,10 +13,9 @@ const Faqs = () => {
                     <Image
                         src="/images/FaqImage.webp"
                         alt="Interior of a luxury private jet with a table set with champagne glasses and a bottle"
-                        layout="responsive"
                         width={700} // Adjust according to the image size
                         height={475}
-                        className='w-auto h-auto md:w-1/2 '
+                        className='w-auto h-auto '
                     />
                 </div>
                 <FaqList />

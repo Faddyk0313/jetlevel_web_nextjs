@@ -2,9 +2,9 @@ import React from 'react';
 
 const BookYourPrivateJet = () => {
     return (
-        <section className="relative flex flex-col items-center justify-center text-white">
+        <section className="relative flex flex-col items-center justify-center min-h-screen text-white">
             <img src='/images/blue-background.png' alt='Background' className='w-full h-full object-cover absolute z-0' />
-            <div className='max-w-[1800px] mx-auto z-10 px-5 py-20'>
+            <div className='max-w-[1800px] mx-auto z-10 px-5'>
                 <h3 className="text-center text-lg font-bold mb-2">BOOK YOUR PRIVATE JET</h3>
                 <h2 className="text-center mb-6 ">Aviation agents standing by 24/7 to assist</h2>
                 <div className="flex flex-col md:flex-row justify-center gap-5 ">

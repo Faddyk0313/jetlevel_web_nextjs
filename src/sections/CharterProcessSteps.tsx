@@ -27,12 +27,12 @@ const CharterProcessSteps = () => {
     ];
 
     return (
-        <section className=" bg-gray-200">
-            <div className='max-w-[1800px] mx-auto p-7 flex flex-col md:flex-row gap-2'>
-                <h2 className="md:w-1/2 mb-4">
+        <section className=" bg-gray-200 px-5 min-h-screen h-auto flex items-center">
+            <div className='max-w-[1800px] mx-auto flex flex-col md:flex-row gap-2'>
+                <h2 className="md:w-5/12 mb-4">
                     Simple 4-Step <span className='inline-block border-b-2 border-blue-600'>Charter Process.</span>
                 </h2>
-                <div className='md:w-1/2'>
+                <div className='md:w-7/12'>
                     {steps.map((step, index) => (
                         <div key={index}>
                             <div className="flex items-start gap-2 ">

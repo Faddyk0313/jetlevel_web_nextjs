@@ -30,7 +30,7 @@ function NavbarDropdown() {
       </div>
       <div
         id="nav-dropdown"
-        className={`fixed top-20 left-0 h-full w-full bg-black flex flex-col pl-5 space-y-6 transform transition-transform duration-500 ease-in-out  ${isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-[4.5rem] left-0 h-full w-full bg-black flex flex-col pl-5 space-y-6 transform transition-transform duration-500 ease-in-out  ${isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
       >
         <Link href="tel:+18555385383" className="text-white text-sm font-bold no-underline">

@@ -65,7 +65,7 @@ const AvailableAircrafts = () => {
         }
     ];
     return (
-        <div className="max-w-[1800px] mx-auto p-5">
+        <section className="max-w-[1800px] mx-auto px-5">
             <h2 className="text-center mb-2">Available Private Jets</h2>
             <p className="text-center details mb-8">We Offer Hundreds of Private Jets to Choose from in various Jet Sizes, Explore some of them below.</p>
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
@@ -100,7 +100,7 @@ const AvailableAircrafts = () => {
                     </div>
                 ))}
             </div>
-        </div>
+        </section>
     );
 };
 

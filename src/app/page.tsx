@@ -1,5 +1,6 @@
 import Nav from "@/sections/Nav";
 import Hero from "@/sections/Hero";
+import BrandNames from "@/sections/BrandNames";
 import CompanyOverview from "@/sections/CompanyOverview";
 import AboutUs from "@/sections/AboutUs";
 import ExclusiveServices from "@/sections/ExclusiveServices";
@@ -20,8 +21,10 @@ import Footer from "@/sections/Footer";
 export default function Home() {
   return (
     <>
+     {/* py-[30px] md:py-[50px] lg:py-[80px] */}
       <Nav />
       <Hero />
+      <BrandNames />
       <CompanyOverview />
       <AboutUs />
       <ExclusiveServices />

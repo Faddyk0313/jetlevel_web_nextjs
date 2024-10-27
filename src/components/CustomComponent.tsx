@@ -11,8 +11,8 @@ const CustomComponent: React.FC<CustomComponentProps> = ({ heading, para, backgr
   }));
 
   return (
-    <section className={`${background === "white" ? "max-w-[1800px] mx-auto p-5 py-10 " : background === 'gray' ? "bg-gray-200" : "relative overflow-hidden bg-aboutUs-background bg-cover bg-fixed p-5 py-[30px] md:py-[50px] lg:py-[80px]"}`}>
-      <div className={`${background === "white" ? "" : background === 'gray' ? "max-w-[1800px] mx-auto p-5 py-10" : "max-w-[1800px] mx-auto"}`}>
+    <section className={`px-5  flex flex-col justify-center min-h-screen ${background === "white" ? "max-w-[1800px] mx-auto" : background === 'gray' ? "bg-gray-200 " : "relative overflow-hidden bg-aboutUs-background bg-cover bg-fixed"}`}>
+      <div className={`${background === "white" ? "" : "max-w-[1800px] mx-auto"}`}>
         {
           background === "white"
             ? "" : 
@@ -30,9 +30,7 @@ const CustomComponent: React.FC<CustomComponentProps> = ({ heading, para, backgr
         <div
           className={`
           ${background === "white" ? "" : background === 'gray' ? "" : "relative z-10 "} 
-          hidden md:grid 
-          ${items.length % 2 === 0 ? `grid-cols-${items.length / 2}` : `grid-cols-${items.length}`} 
-          lg:grid-cols-${items.length} justify-between gap-2 py-3
+          hidden md:grid grid-cols-${items.length} justify-between gap-2 py-3 
         `}
         >
           {items.map((item, index) => (

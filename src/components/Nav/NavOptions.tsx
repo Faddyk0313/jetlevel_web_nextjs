@@ -30,7 +30,7 @@ function NavOptions() {
     }, [activeDropdown]);
 
     return (
-        <div id="nav-options" className="flex items-center font-bold" ref={navOptionsRef}>
+        <div id="nav-options" className="flex items-center xl:gap-4 font-bold" ref={navOptionsRef}>
             {/* OUR SERVICES Dropdown */}
             <div onClick={() => { handleClick('services'); }}>
                 <span className="flex items-center cursor-pointer gap-1 mx-2 text-white text-xs text-nowrap min-[1200px]:text-sm">
@@ -89,7 +89,7 @@ function NavOptions() {
                 )}
             </div>
 
-            <Link href="#" className="flex items-center gap-1 lg:mx-2 min-[1200px]:mx-2 text-white text-xs text-nowrap min-[1200px]:text-sm">
+            <Link href="#" className="flex items-center text-white text-xs text-nowrap min-[1200px]:text-sm">
                 PRICING
             </Link>
 

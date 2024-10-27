@@ -3,13 +3,13 @@ import { SafetyFirst, TailoredLuxury } from '@/svg';
 
 const OurComitment = () => {
     return (
-        <div className="bg-fourMetrics-OurCommitment-background bg-[center_center] md:bg-[center_-80px] bg-no-repeat bg-cover">
-            <div className='bg-black bg-opacity-50 '>
-                <div className="max-w-[1800px] mx-auto flex flex-col text-white px-7 justify-center py-20 md:py-32 ">
+        <section className="bg-fourMetrics-OurCommitment-background min-h-screen bg-[-670px_center] min-[450px]:bg-center md:bg-top  bg-no-repeat bg-cover overflow-hidden p-0">
+            <div className='bg-black bg-opacity-50 min-h-screen flex items-center overflow-hidden'>
+                <div className="max-w-[1800px] mx-auto flex flex-col text-white px-5">
                     <h2 className="mb-4">Our Commitment </h2>
                     <div className='flex flex-col items-center md:flex-row gap-10 md:gap-14'>
                         <div className='lg:w-1/2'>
-                            <div className="flex justify-center items-center mb-4 bg-blue-600 w-20 lg:w-28 h-20 lg:h-28 rounded-full">
+                            <div className="flex justify-center items-center mb-4 bg-[#0071ba] w-20 lg:w-28 h-20 lg:h-28 rounded-full">
                                 <SafetyFirst />
                             </div>
                             <h3 className="font-bold">Safety First </h3>
@@ -18,7 +18,7 @@ const OurComitment = () => {
                             </p>
                         </div>
                         <div className='lg:w-1/2'>
-                            <div className="flex justify-center items-center mb-4 bg-blue-600 w-20 lg:w-28 h-20 lg:h-28 rounded-full">
+                            <div className="flex justify-center items-center mb-4 bg-[#0071ba] w-20 lg:w-28 h-20 lg:h-28 rounded-full">
                                 <TailoredLuxury />
                             </div>
                             <h3 className="font-bold">Tailored Luxury </h3>
@@ -29,7 +29,7 @@ const OurComitment = () => {
                     </div>
                 </div>
             </div>
-        </div>
+        </section>
     );
 };
 

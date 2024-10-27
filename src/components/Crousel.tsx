@@ -61,7 +61,7 @@ const Carousel: React.FC<CarouselProps> = ({ items, bgcolor }) => {
                   : "bg-white bg-opacity-10 backdrop-blur-lg"
               } rounded-lg p-4 w-[45%] flex-shrink-0 snap-center`}
             >
-              <div className="flex justify-center items-center mx-auto mb-4 bg-blue-600 w-20 h-20 rounded-full">
+              <div className="flex justify-center items-center mx-auto mb-4 bg-[#0071ba] w-20 h-20 rounded-full">
                 {item.icon}
               </div>
               <h3 className="text-white text-lg">{item.title}</h3>
