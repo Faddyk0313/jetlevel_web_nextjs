@@ -50,7 +50,7 @@ const Footer = () => {
     ];
 
     return (
-        <section className='bg-black '>
+        <section className='bg-black pt-0 pb-0'>
             <div className="max-w-[1800px] mx-auto px-5 md:px-10 py-10 text-[#f0f1f2]">
                 <div className="pb-6 lg:pb-1 flex flex-col lg:flex-row gap-5">
                     <div className='mb-4 lg:mb-8 mt-4'>
@@ -62,14 +62,17 @@ const Footer = () => {
                             className='w-56 md:w-72 lg:w-80 h-auto'
                         />
                     </div>
-                    <div className='flex flex-col md:flex-row gap-4 lg:w-full'>
+                    <div className='flex flex-col md:flex-row gap-4 lg:w-full '>
                         <div className="flex flex-col lg:flex-row lg:items-center gap-3 md:w-1/2 lg:h-[54px]">
                             <h4 className="text-lg flex-1 max-w-fit">Get the Latest Updates</h4>
-                            <input
-                                type="email"
-                                placeholder="Enter your email"
-                                className="py-4 flex-1 px-3 h-14 text-sm border placeholder-[#858585] border-[#858585] bg-black outline-none rounded-sm "
-                            />
+                            <div className='relative flex-1'>
+                                <input
+                                    type="email"
+                                    placeholder="Enter your email"
+                                    className="py-4 w-full px-3 h-14 text-sm border placeholder-[#858585] border-[#858585] bg-black outline-none rounded-sm "
+                                />
+                                <button className='absolute right-3 top-3 text-2xl text-[#858585] hover:text-white'>→</button>
+                            </div>
                         </div>
                         <div className='flex flex-col lg:flex-row lg:items-center lg:h-[54px] gap-4 pb-4 lg:pb-0 md:w-1/2'>
                             <h4 className="text-lg">Connect with us</h4>
@@ -94,17 +97,17 @@ const Footer = () => {
 
                 {/* Loop through the sections array and generate each section */}
                 {sections.map((section, index) => (
-                    <div key={index} className="bg-[#202020] p-6 my-1 lg:flex items-center">
+                    <div key={index} className="bg-[#202020] py-5 border-b border-black lg:flex">
                         <div className='lg:w-1/4 pb-4'>
                             <h4 className="text-lg lg:w-fit lg:pl-[20%]">{section.title}</h4>
                         </div>
-                        <ul className='list-none lg:w-3/4'>
+                        <ul className='list-none lg:w-3/4 pr-12  text-sm'>
                             {section.links.map((link, linkIndex) => (
                                 <li key={linkIndex} className='inline'>
                                     <Link
                                         href="#"
-                                        className="text-[#858585] mr-4 break-words"
-
+                                        // Will cause weird wrapping of li if not inline flex
+                                        className={`text-[#858585] leading-7  mr-4 ${index !== 0 ? "inline-flex" : ""}`}
                                     >
                                         {link}
                                     </Link>
