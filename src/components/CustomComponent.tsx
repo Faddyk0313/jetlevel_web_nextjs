@@ -15,23 +15,24 @@ const CustomComponent: React.FC<CustomComponentProps> = ({ heading, para, backgr
       <div className={`${background === "white" ? "" : "max-w-[1800px] mx-auto"}`}>
         {
           background === "white"
-            ? "" : 
-            background === 'gray' 
             ? "" :
-            <div className="absolute inset-0 w-full h-full bg-[rgba(0,0,0,0.5)] z-0"></div>
+            background === 'gray'
+              ? "" :
+              <div className="absolute inset-0 w-full h-full bg-[rgba(0,0,0,0.5)] z-0"></div>
         }
 
         <div
           className={`mb-10 ${background === "white" ? "text-left" : background === 'gray' ? "text-left" : "text-center relative z-10 text-white"} `}
         >
           <h2>{heading}</h2>
-          <p className={`details mt-4 ${background === "white" ? ""  : background === 'gray' ? "" : "text-gray-100"} `}>{para}</p>
+          <p className={`details mt-4 ${background === "white" ? "" : background === 'gray' ? "" : "text-gray-100"} `}>{para}</p>
         </div>
         <div
           className={`
-          ${background === "white" ? "" : background === 'gray' ? "" : "relative z-10 "} 
-          hidden md:grid grid-cols-${items.length} justify-between gap-2 py-3 
-        `}
+          ${background === "white" || background === 'gray' ? "" : "relative z-10 "} 
+          hidden md:grid justify-between gap-2 py-3 
+          `}
+          style={{ gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))` }}
         >
           {items.map((item, index) => (
             <Card key={index} icon={item.icon} title={item.title} description={item.description} bgcolor={background} />

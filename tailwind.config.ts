@@ -18,8 +18,8 @@ const config: Config = {
         lato: ['var(--font-lato)', 'sans-serif'],
         libre: ['var(--font-libre-baskerville)', 'serif'],
       },
-      cardShadow: {
-        'card-shadow': '0 0 10px rgba(0, 0, 0, 0.15)', // Modify as needed
+      boxShadow: {
+        'card-shadow': '0px 0px 20px rgba(0, 0, 0, 0.4)', // Modify as needed
       },
     },
   },

@@ -68,7 +68,7 @@ const AvailableAircrafts = () => {
         <section className="max-w-[1800px] mx-auto px-5">
             <h2 className="text-center mb-2">Available Private Jets</h2>
             <p className="text-center details mb-8">We Offer Hundreds of Private Jets to Choose from in various Jet Sizes, Explore some of them below.</p>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {jets.map((jet, index) => (
                     <div key={index} className="border rounded-lg overflow-hidden shadow-lg">
                         <div className='h-56 max-h-56'>
@@ -88,12 +88,12 @@ const AvailableAircrafts = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="p-4 bg-blue-background bg-cover bg-no-repeat">
+                        <div className="p-4 h-full bg-blue-background bg-cover bg-no-repeat">
                             <h3 className="text-white font-bold mb-4">{jet.type}</h3>
                             <p className="mb-3 font-bold text-white">{jet.name}</p>
                             <p className="mb-4 text-gray-300">{jet.description}</p>
                             <div className='flex flex-col md:flex-row items-center justify-center md:justify-start text-xs md:text-sm gap-2'>
-                                <button className="text-white font-bold px-3 py-2 md:py-3 min-w-fit w-2/5  md:w-[35%] rounded-full md:rounded-lg bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1">GET A QUOTE →</button>
+                                <button className="text-white font-bold px-3 py-2 md:py-3 min-w-fit w-2/5  md:w-[35%] rounded-full md:rounded-xl bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1">GET A QUOTE →</button>
                                 <p className="mt-2 text-white font-bold">{jet.price}<span className='text-gray-300'>/ Per Hour</span></p>
                             </div>
                         </div>
