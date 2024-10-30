@@ -56,8 +56,8 @@ const Carousel: React.FC<CarouselProps> = ({ items, bgcolor }) => {
             <div
               key={index}
               className={` ${
-                bgcolor == "white"
-                  ? "bg-black" : bgcolor === 'gray' ? "bg-black" 
+                bgcolor == "white" || bgcolor === 'gray'
+                  ? "bg-black" 
                   : "bg-white bg-opacity-10 backdrop-blur-lg"
               } rounded-lg p-4 w-[45%] flex-shrink-0 snap-center`}
             >
@@ -76,7 +76,7 @@ const Carousel: React.FC<CarouselProps> = ({ items, bgcolor }) => {
             className={`w-2.5 h-2.5 rounded-full mx-1 ${
               index === currentIndex ||
               index === (currentIndex + 1) % items.length
-                ? `${bgcolor == "white" ? "bg-black" : bgcolor === 'gray' ? "bg-black" : "bg-white"}`
+                ? `${bgcolor == "white" || bgcolor === 'gray'  ? "bg-black" : "bg-white"}`
                 : "bg-gray-500"
             }`}
           ></div>

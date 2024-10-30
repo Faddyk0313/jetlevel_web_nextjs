@@ -16,6 +16,7 @@ import WhatOurClientsSay from "@/sections/WhatOurClientsSay";
 import BookYourPrivateJet from "@/sections/BookYourPrivateJet";
 import Faqs from "@/sections/Faqs";
 import Footer from "@/sections/Footer";
+import ContactMenu from "@/sections/ContactMenu";
 
 
 export default function Home() {
@@ -39,6 +40,7 @@ export default function Home() {
       <WhatOurClientsSay />
       <Faqs />
       <BookYourPrivateJet />
+      <ContactMenu />
       <Footer />
     </>
   );
