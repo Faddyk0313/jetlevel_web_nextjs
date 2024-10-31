@@ -7,12 +7,14 @@ import Link from 'next/link';
 
 function NavOptions() {
     const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
-    const navOptionsRef = useRef<HTMLDivElement>(null); // Ref for the entire dropdown and trigger container
+    const navOptionsRef = useRef<HTMLDivElement>(null);
 
     const handleClick = (menu: string) => {
-        // Toggle the dropdown menu
         setActiveDropdown((prev) => (prev === menu ? null : menu));
     };
+
+    // Close dropdown function
+    const closeDropdown = () => setActiveDropdown(null);
 
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
@@ -40,11 +42,12 @@ function NavOptions() {
                     <div onClick={(e) => e.stopPropagation()}> {/* Prevent the click inside the dropdown from closing it */}
                         <NavClickedContent
                             subOptions={[
-                                { name: 'On-Demand Charter', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/On-Demand-Charter.png' },
-                                { name: 'Group Charter', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Group-Charter.png' },
-                                { name: 'Air Ambulance', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Air-Ambulance.png' },
-                                { name: 'Helicopter', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Helicopter.png' },
+                                { name: 'On-Demand Charter', link: '/our-services/on-demand-charter', image: 'https://jetlevel.com/wp-content/uploads/2023/07/On-Demand-Charter.png' },
+                                { name: 'Group Charter', link: '/our-services/group-charter', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Group-Charter.png' },
+                                { name: 'Air Ambulance', link: '/our-services/air-ambulance', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Air-Ambulance.png' },
+                                { name: 'Helicopter', link: '/our-services/helicopter', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Helicopter.png' },
                             ]}
+                            closeDropdown={closeDropdown} // Pass the closeDropdown function here
                         />
                     </div>
                 )}
@@ -60,36 +63,38 @@ function NavOptions() {
                     <div onClick={(e) => e.stopPropagation()}>
                         <NavClickedContent
                             subOptions={[
-                                { name: 'US & Canada', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/US-CANADA.png' },
-                                { name: 'International', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/International.png' },
-                                { name: 'Popular Routes', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Popular-Routes.png' },
-                                { name: 'Empty Legs', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Empty-Legs.png' },
+                                { name: 'US & Canada', link: '/jet-charter/us-canada', image: 'https://jetlevel.com/wp-content/uploads/2023/07/US-CANADA.png' },
+                                { name: 'International', link: '/jet-charter/international', image: 'https://jetlevel.com/wp-content/uploads/2023/07/International.png' },
+                                { name: 'Popular Routes', link: '/jet-charter/popular-routes', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Popular-Routes.png' },
+                                { name: 'Empty Legs', link: '/jet-charter/empty-legs', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Empty-Legs.png' },
                             ]}
+                            closeDropdown={closeDropdown} // Pass the closeDropdown function here
                         />
                     </div>
                 )}
             </div>
 
-            <div onClick={() => { handleClick('charter-resources')}}>
+            <div onClick={() => { handleClick('charter-resources'); }}>
                 <span className="flex items-center cursor-pointer gap-1 mx-2 text-white text-xs text-nowrap min-[1200px]:text-sm">
                     CHARTER RESOURCES <FaChevronDown />
                 </span>
                 {activeDropdown === 'charter-resources' && (
                     <div onClick={(e) => e.stopPropagation()}>
-                    <NavClickedContent
-                        subOptions={[
-                            { name: 'Private Jet Airports', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Private-jet-Airports.png' },
-                            { name: 'Aircraft Types', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Aircraft-Types.png' },
-                            { name: 'Cost Estimator', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Cost-Estimator.png' },
-                            { name: 'Flight Tracker', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Flight-Tracker.png' },
-                            { name: 'Distance Calculator', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Distance-Calculator.png' },
-                        ]}
-                    />
+                        <NavClickedContent
+                            subOptions={[
+                                { name: 'Private Jet Airports', link: '/charter-resources/private-jet-charter', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Private-jet-Airports.png' },
+                                { name: 'Aircraft Types', link: '/charter-resources/aircraft-types', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Aircraft-Types.png' },
+                                { name: 'Cost Estimator', link: '/charter-resources/cost-estimator', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Cost-Estimator.png' },
+                                { name: 'Flight Tracker', link: '/charter-resources/flight-tracker', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Flight-Tracker.png' },
+                                { name: 'Distance Calculator', link: '/charter-resources/distance-calculator', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Distance-Calculator.png' },
+                            ]}
+                            closeDropdown={closeDropdown} // Pass the closeDropdown function here
+                        />
                     </div>
                 )}
             </div>
 
-            <Link href="#" className="flex items-center text-white text-xs text-nowrap min-[1200px]:text-sm">
+            <Link href="/pricing" className="flex items-center text-white text-xs text-nowrap min-[1200px]:text-sm">
                 PRICING
             </Link>
 
@@ -98,15 +103,18 @@ function NavOptions() {
                     COMPANY <FaChevronDown />
                 </span>
                 {activeDropdown === 'company' && (
-                    <NavClickedContent
-                        subOptions={[
-                            { name: 'About Us', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/About-us.png' },
-                            { name: 'Contact Us', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Contact-Us.png' },
-                            { name: 'Blogs', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Blogs.png' },
-                            { name: 'Charter FAQs', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Charter-FAQs.png' },
-                            { name: 'Out Team', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Our-Team.png' },
-                        ]}
-                    />
+                    <div onClick={(e) => e.stopPropagation()}>
+                        <NavClickedContent
+                            subOptions={[
+                                { name: 'About Us', link: '/company/about-us', image: 'https://jetlevel.com/wp-content/uploads/2023/07/About-us.png' },
+                                { name: 'Contact Us', link: '/company/contact-us', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Contact-Us.png' },
+                                { name: 'Blogs', link: '/company/blogs', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Blogs.png' },
+                                { name: 'Charter FAQs', link: '/company/charter-faqs', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Charter-FAQs.png' },
+                                { name: 'Out Team', link: '/company/our-team', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Our-Team.png' },
+                            ]}
+                            closeDropdown={closeDropdown} // Pass the closeDropdown function here
+                        />
+                    </div>
                 )}
             </div>
         </div>

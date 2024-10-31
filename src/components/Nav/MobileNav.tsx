@@ -20,6 +20,7 @@ function NavbarDropdown() {
     // If the clicked menu is already active, close it. Otherwise, open the clicked menu.
     setActiveDropdown((prev) => (prev === menu ? null : menu));
   };
+  const closeDropdown = () => setActiveDropdown(null);
 
   return (
     <>
@@ -49,6 +50,8 @@ function NavbarDropdown() {
                 { name: 'Air Ambulance', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Air-Ambulance.png' },
                 { name: 'Helicopter', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Helicopter.png' },
               ]}
+              closeDropdown={closeDropdown} // Pass the closeDropdown function here
+
             />
           )}
         </div>
@@ -61,11 +64,13 @@ function NavbarDropdown() {
           {activeDropdown === 'jet-charter' && (
             <NavClickedContent
               subOptions={[
-                { name: 'US & Canada', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/US-CANADA.png' },
-                { name: 'International', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/International.png' },
-                { name: 'Popular Routes', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Popular-Routes.png' },
-                { name: 'Empty Legs', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Empty-Legs.png' },
+                { name: 'US & Canada', link: '/us-canada', image: 'https://jetlevel.com/wp-content/uploads/2023/07/US-CANADA.png' },
+                { name: 'International', link: '/international', image: 'https://jetlevel.com/wp-content/uploads/2023/07/International.png' },
+                { name: 'Popular Routes', link: '/popular-routes', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Popular-Routes.png' },
+                { name: 'Empty Legs', link: '/empty-legs', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Empty-Legs.png' },
               ]}
+              closeDropdown={closeDropdown} // Pass the closeDropdown function here
+
             />
           )}
         </div>
@@ -83,6 +88,8 @@ function NavbarDropdown() {
                 { name: 'Flight Tracker', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Flight-Tracker.png' },
                 { name: 'Distance Calculator', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Distance-Calculator.png' },
               ]}
+              closeDropdown={closeDropdown} // Pass the closeDropdown function here
+
             />
           )}
         </div>
@@ -103,6 +110,8 @@ function NavbarDropdown() {
                 { name: 'Charter FAQs', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Charter-FAQs.png' },
                 { name: 'Out Team', link: '#', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Our-Team.png' },
               ]}
+              closeDropdown={closeDropdown} // Pass the closeDropdown function here
+
             />
           )}
         </div>

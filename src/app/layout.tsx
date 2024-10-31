@@ -2,6 +2,7 @@ import { Playfair_Display, Lato, Libre_Baskerville } from 'next/font/google';
 import "./globals.css";
 import Nav from '@/sections/Nav';
 import Footer from '@/sections/Footer';
+import ContactMenu from "@/sections/ContactMenu";
 
 // Configure the fonts with subsets
 const playfairDisplay = Playfair_Display({
@@ -35,6 +36,7 @@ export default function RootLayout({
       <body className={`${playfairDisplay.variable} ${lato.variable} ${libreBaskerville.variable}`}>
         <Nav />
         {children}
+        <ContactMenu />
         <Footer />
       </body>
     </html>

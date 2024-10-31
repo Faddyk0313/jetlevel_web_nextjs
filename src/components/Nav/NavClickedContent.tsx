@@ -4,9 +4,10 @@ import React from 'react';
 
 type navClickedContentProps = {
   subOptions: { name: string; link: string; image: string; }[];
+  closeDropdown: () => void;  // Add this prop type
 };
 
-const NavClickedContent: React.FC<navClickedContentProps> = ({ subOptions }) => {
+const NavClickedContent: React.FC<navClickedContentProps> = ({ subOptions, closeDropdown }) => {
   return (
     <div className="lg:absolute top-20 left-0 w-screen bg-black z-50">  {/* Full width black background */}
       <div className='bg-black w-full absolute right-full h-full'></div>
@@ -21,7 +22,7 @@ const NavClickedContent: React.FC<navClickedContentProps> = ({ subOptions }) => 
                 height={60}
                 className="rounded-full object-cover w-[60px] h-[60px] lg:w-20 lg:h-20"
               />
-              <Link href={option.link} className="text-white text-md md:text-lg lg:text-nowrap hover:text-gray-300">
+              <Link href={option.link} className="text-white text-md md:text-lg lg:text-nowrap hover:text-gray-300"  onClick={closeDropdown}>
                 {option.name}
               </Link>
             </li>
