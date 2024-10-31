@@ -51,7 +51,7 @@ const FaqList: React.FC = () => {
     };
 
     return (
-        <div className="lg:w-1/2 md:-ml-[70px] lg:-ml-[90px] mt-4 md:my-auto">
+        <div className="lg:w-full lg:-ml-[70px] xl:-ml-[90px] mt-4">
             {faqData.map((faq, index) => (
                 <div key={index} className="bg-gray-100 px-2 lg:px-6 py-2 lg:py-4 mb-4">
                     <h3

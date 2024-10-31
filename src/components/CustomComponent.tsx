@@ -11,7 +11,7 @@ const CustomComponent: React.FC<CustomComponentProps> = ({ heading, para, backgr
   }));
 
   return (
-    <section className={`px-5  flex flex-col justify-center min-h-screen ${background === "white" ? "max-w-[1800px] mx-auto" : background === 'gray' ? "bg-gray-200 " : "relative overflow-hidden bg-aboutUs-background bg-cover bg-fixed"}`}>
+    <section className={`px-5 md:px-10 lg:px-20 flex flex-col justify-center ${background === 'gray' ? "" : 'sectionHeight'} ${background === "white" ? "max-w-[1800px] mx-auto" : background === 'gray' ? "bg-gray-200 " : "relative overflow-hidden bg-aboutUs-background bg-cover bg-fixed"}`}>
       <div className={`${background === "white" ? "" : "lg:max-w-[1800px] lg:mx-auto"}`}>
         {
           background === "white"
@@ -30,7 +30,7 @@ const CustomComponent: React.FC<CustomComponentProps> = ({ heading, para, backgr
         <div
           className={`
           ${background === "white" || background === 'gray' ? "" : "relative z-10 "} 
-          hidden md:grid justify-between gap-2 py-3 
+          hidden md:grid justify-between lg:gap-2 py-3 
           `}
           style={{ gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))` }}
         >

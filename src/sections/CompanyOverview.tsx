@@ -4,7 +4,6 @@ import Image from 'next/image';
 import React from 'react';
 import { Routes_DistanceCalculator, UsCanadaCities, InternationalCities, Aircraft, Airports } from '@/svg';
 import Carousel from '@/components/Crousel';
-import CardLeather from '@/components/CardLeather';
 
 const CompanyOverview = () => {
     interface CarouselItem {
@@ -20,9 +19,9 @@ const CompanyOverview = () => {
     ];
 
     return (
-        <section className='max-w-[1800px] mx-auto flex flex-col justify-center min-h-screen px-5'>
+        <section className='max-w-[1800px] mx-auto flex flex-col justify-center sectionHeight lg:pt-2 px-5 md:px-10 lg:px-20'>
             <div className="flex flex-col lg:flex-row justify-center gap-1 w-fit">
-                <div className="w-full lg:min-w-[50%] lg:max-w-[50%] pt-8">
+                <div className="w-full lg:min-w-[50%] lg:max-w-[50%] lg:pt-7">
                     <h2 className="mb-4">Our Story, Mission, and Values at Jetlevel Aviation.</h2>
                     <p className='hidden xl:block details'>
                         At JetLevel Aviation, we're redefining the private jet charter experience by prioritizing safety, reliability, and transparency. Founded in 2019, we've established ourselves as a trusted global advisor in the aviation industry. Our mission is to provide high-quality aircraft and competitive pricing, backed by leading customer service to deliver the best value. We are committed to core values of reliability, safety, and transparency, ensuring client satisfaction for both frequent travels and special occasions. Fly across the US, Canada, and beyond with our diverse network of aircraft and convenient departure points. Choose JetLevel Aviation for a seamless, worry-free journey every time—elevating your travel experiences to new heights. <br />
@@ -43,31 +42,31 @@ const CompanyOverview = () => {
             </div>
 
             <div className="hidden md:grid grid-cols-5 justify-between gap-2 py-3">
-                <CardLeather
+                <Card
                     icon={<Routes_DistanceCalculator />}
                     title="Routes"
                     description="Explore diverse routes for your travel needs."
                     bgcolor="white"
                 />
-                <CardLeather
+                <Card
                     icon={<UsCanadaCities />}
                     title="US & Canada Cities"
                     description="Connect to major cities across US and Canada."
                     bgcolor="white"
                 />
-                <CardLeather
+                <Card
                     icon={<InternationalCities />}
                     title="International Cities"
                     description="Fly globally to various international destinations."
                     bgcolor="white"
                 />
-                <CardLeather
+                <Card
                     icon={<Aircraft />}
                     title="Aircraft"
                     description="Choose from a wide range of luxury jets."
                     bgcolor="white"
                 />
-                <CardLeather
+                <Card
                     icon={<Airports />}
                     title="Airports"
                     description="Access convenient airports for your journey."

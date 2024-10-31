@@ -8,7 +8,7 @@ interface CarouselItem {
 }
 
 interface CarouselProps {
-  items: CarouselItem[]; // Accepts an array of items as a prop
+  items: CarouselItem[]; // Accepts an array  of items as a prop
   bgcolor: string; // Background color prop
 }
 const Carousel: React.FC<CarouselProps> = ({ items, bgcolor }) => {

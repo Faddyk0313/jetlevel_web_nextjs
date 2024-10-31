@@ -22,8 +22,6 @@ import ContactMenu from "@/sections/ContactMenu";
 export default function Home() {
   return (
     <>
-     {/* py-[30px] md:py-[50px] lg:py-[80px] */}
-      <Nav />
       <Hero />
       <BrandNames />
       <CompanyOverview />
@@ -32,16 +30,15 @@ export default function Home() {
       <OurOffices />
       <CharterProcessSteps />
       <MeetOwner />
-      <FourMetrics />
       <SmartTravelTools />
       <OurComitment />
       <PopularPrivateJetCharters />
+      <FourMetrics />
       <AvailableAircrafts />
       <WhatOurClientsSay />
       <Faqs />
       <BookYourPrivateJet />
       <ContactMenu />
-      <Footer />
     </>
   );
 }

@@ -4,7 +4,7 @@ import NavOptions from "@/components/Nav/NavOptions";
 
 const Nav = () => {
   return (
-    <header className="bg-black sticky top-0 z-20">
+    <header className="bg-black sticky top-0 z-50">
       <nav className="text-white sticky flex items-center justify-between py-5  px-3 max-w-[1800px] mx-auto ">
         <div id="logo" className="flex-1 min-w-40 max-w-56">
           <img

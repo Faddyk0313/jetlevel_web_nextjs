@@ -51,7 +51,7 @@ const Footer = () => {
 
     return (
         <section className='bg-black pt-0 pb-0'>
-            <div className="max-w-[1800px] mx-auto px-5 md:px-10 py-10 text-[#f0f1f2]">
+            <div className="max-w-[1800px] mx-auto px-5 md:px-16 lg:px-24 py-10 text-[#f0f1f2]">
                 <div className="pb-6 lg:pb-1 flex flex-col lg:flex-row gap-5">
                     <div className='mb-4 lg:mb-8 mt-4'>
                         <Image
@@ -99,9 +99,9 @@ const Footer = () => {
                 {sections.map((section, index) => (
                     <div key={index} className="bg-[#202020] py-5 border-b border-black lg:flex">
                         <div className='lg:w-1/4 pb-4'>
-                            <h4 className="text-lg lg:w-fit lg:pl-[20%]">{section.title}</h4>
+                            <h4 className="text-lg lg:w-fit px-8 lg:pl-[25%] lg:pr-0">{section.title}</h4>
                         </div>
-                        <ul className='list-none lg:w-3/4 pr-12  text-sm'>
+                        <ul className='list-none lg:w-3/4 px-8  lg:pr-12 lg:pl-0  text-sm'>
                             {section.links.map((link, linkIndex) => (
                                 <li key={linkIndex} className='inline'>
                                     <Link
@@ -121,7 +121,7 @@ const Footer = () => {
                 ))}
 
             </div>
-            <div className="border-t border-[#858585] pb-5">
+            <div className="border-t border-[#858585]">
                 <div className='max-w-[1800px] mx-auto p-5   flex flex-col lg:flex-row text-[#f0f1f2] text-sm gap-5 mt-8 pt-4 '>
                     <div className='flex gap-5 flex-col md:flex-row lg:flex-col'>
                         <div>&copy; 2024 Jetlevel Aviation LLC All rights reserved</div>

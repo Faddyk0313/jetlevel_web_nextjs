@@ -1,5 +1,7 @@
 import { Playfair_Display, Lato, Libre_Baskerville } from 'next/font/google';
 import "./globals.css";
+import Nav from '@/sections/Nav';
+import Footer from '@/sections/Footer';
 
 // Configure the fonts with subsets
 const playfairDisplay = Playfair_Display({
@@ -29,10 +31,11 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="https://jetlevel.com/wp-content/uploads/2019/08/cropped-icon-32x32.png" />
-        <script src="https://cdn.lordicon.com/lordicon.js"></script>
       </head>
       <body className={`${playfairDisplay.variable} ${lato.variable} ${libreBaskerville.variable}`}>
+        <Nav />
         {children}
+        <Footer />
       </body>
     </html>
   );

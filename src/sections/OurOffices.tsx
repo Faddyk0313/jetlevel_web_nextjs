@@ -5,7 +5,7 @@ const OurOffices = () => {
     return (
         <section className="bg-cover bg-center bg-ourOffices-background p-0">
             <div className='bg-black h-screen max-h-[900px] overflow-hidden bg-opacity-50 flex items-center'>
-                <div className="max-w-[1800px] w-full mx-auto px-5 md:px-32 flex flex-col text-white justify-center">
+                <div className="max-w-[1800px] w-full mx-auto px-5 md:px-32  flex flex-col text-white justify-center">
                     <h2 className="mb-4">Our Offices</h2>
                     <div className='flex flex-col items-center md:flex-row gap-10 md:gap-14'>
                         <div className='lg:w-1/2'>

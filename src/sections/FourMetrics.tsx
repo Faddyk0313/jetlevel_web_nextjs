@@ -5,19 +5,19 @@ const FourMetrics = () => {
         <section className="bg-fourMetrics-OurCommitment-background bg-[center_top] md:bg-[center_-80px] bg-no-repeat bg-cover p-0">
             <div className="w-full h-full flex items-center bg-[rgba(0,0,0,0.5)] justify-center px-10 py-14 md:p-[100px]">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 w-full text-white max-w-[1800px] mx-auto">
-                    <div className="md:text-center">
+                    <div className="text-center">
                         <h2 className='mb-2'>5000+</h2>
                         <p className=''>World's Safest Jets</p>
                     </div>
-                    <div className="md:text-center">
+                    <div className="text-center">
                         <h2 className='mb-2'>5+</h2>
                         <p className=''>Years in Business</p>
                     </div>
-                    <div className="md:text-center">
+                    <div className="text-center">
                         <h2 className='mb-2'>100+</h2>
                         <p className=''>BBB Rating</p>
                     </div>
-                    <div className="md:text-center">
+                    <div className="text-center">
                         <h2 className='mb-2'>1000+</h2>
                         <p className=''>Annual Charters</p>
                     </div>

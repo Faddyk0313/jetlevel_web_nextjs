@@ -27,7 +27,7 @@ const CharterProcessSteps = () => {
     ];
 
     return (
-        <section className=" bg-gray-200 px-5 min-h-screen h-auto flex items-center">
+        <section className=" bg-gray-200 px-5 md:px-10 lg:px-20 sectionHeight h-auto flex items-center">
             <div className='max-w-[1800px] mx-auto flex flex-col md:flex-row gap-2'>
                 <h2 className="md:w-5/12 mb-4">
                     Simple 4-Step <span className='inline-block border-b-2 border-blue-600'>Charter Process.</span>
