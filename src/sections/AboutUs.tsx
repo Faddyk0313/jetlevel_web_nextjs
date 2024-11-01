@@ -37,7 +37,7 @@ const AboutUs = () => {
     ];
 
     return (
-        <CustomComponent heading={heading} para={para} background="sjkb" items={data} />
+        <CustomComponent heading={heading} para={para} background="image" items={data} />
     );
 };
 

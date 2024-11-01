@@ -27,7 +27,7 @@ const SmartTravelTools = () => {
     ];
 
     return (
-        <CustomComponent heading={heading} para={para} background="gray" items={data} />
+        <CustomComponent heading={heading} para={para} background="white" items={data} />
 
     );
 

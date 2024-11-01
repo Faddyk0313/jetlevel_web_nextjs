@@ -1,4 +1,3 @@
-import Image from 'next/image';
 import React from 'react';
 
 const WhatOurClientsSay = () => {
@@ -25,10 +24,8 @@ const WhatOurClientsSay = () => {
         } 
     ];
     return (
-        <section className="relative flex flex-col items-center sectionHeight justify-center">
-            <img src='https://jetlevel.com/wp-content/uploads/2021/01/In-Flight-Productivity.jpg' alt='Background' className='w-full h-full object-cover absolute z-0' />
-            <div className="absolute inset-0 w-full h-full bg-[rgba(0,0,0,0.5)] z-0"></div>
-            <div className='max-w-[1800px] mx-auto z-10 px-5 md:px-10 lg:px-20'>
+        <section className="overlay bg-[url(https://jetlevel.com/wp-content/uploads/2021/01/In-Flight-Productivity.jpg)] flex flex-col items-center justify-center">
+            <div className='max-w-[1800px] mx-auto px-5 md:px-10 lg:px-20'>
                 <h2 className="text-center text-white pb-7">What Our Clients Say</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {testimonials.map((testimonial, index) => (

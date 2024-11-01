@@ -2,8 +2,7 @@ import React from 'react';
 
 const FourMetrics = () => {
     return (
-        <section className="bg-fourMetrics-OurCommitment-background bg-[center_top] md:bg-[center_-80px] bg-no-repeat bg-cover p-0">
-            <div className="w-full h-full flex items-center bg-[rgba(0,0,0,0.5)] justify-center px-10 py-14 md:p-[100px]">
+        <section className="bg-fourMetrics-OurCommitment-background overlay bg-[center_top] md:bg-[center_-80px] bg-no-repeat bg-cover flex items-center justify-center px-10 py-14 md:p-[100px]">
                 <div className="grid grid-cols-2 md:grid-cols-4 gap-3 w-full text-white max-w-[1800px] mx-auto">
                     <div className="text-center">
                         <h2 className='mb-2'>5000+</h2>
@@ -22,7 +21,6 @@ const FourMetrics = () => {
                         <p className=''>Annual Charters</p>
                     </div>
                 </div>
-            </div>
         </section>
     );
 };

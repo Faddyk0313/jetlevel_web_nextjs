@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 type PageProps = {
   params: {
     subOption: string;
@@ -30,6 +32,7 @@ const JetCharter = ({ params }: PageProps) => {
     <div className="p-6 max-w-4xl mx-auto text-center">
       <h1 className="text-3xl font-bold my-4">{title}</h1>
     </div>
+    
   );
 };
 
