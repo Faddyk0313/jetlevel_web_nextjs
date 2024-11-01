@@ -5,52 +5,11 @@ import Hero from "@/sections/Hero";
 import CollapsibleSection from "./CollapsibleSection";
 import TopCharteredCities from "./TopCharteredCities";
 import BookYourPrivateJet from "@/sections/BookYourPrivateJet";
+import Breadcrumb from "./Breadcrumb/Breadcrumb";
 
 const EmptyLegPage = () => {
     const links = [
-        'Empty Leg Flights to Aspen',
-        'Empty Leg Flights to Atlanta, GA',
-        'Empty Leg Flights to Austin, TX',
-        'Empty Leg Flights to Beverly Hills',
-        'Empty Leg Flights to Boston, MA',
-        'Empty Leg Flights to Cancun',
-        'Empty Leg Flights to Charleston',
-        'Empty Leg Flights to Chicago, IL',
-        'Empty Leg Flights to Dallas, TX',
-        'Empty Leg Flights to Denver, CO',
-        'Empty Leg Flights to Detroit',
-        'Empty Leg Flights to Florida',
-        'Empty Leg Flights to Fort Lauderdale',
-        'Empty Leg Flights to Hawaii',
-        'Empty Leg Flights to Honolulu​',
-        'Empty Leg Flights to Houston, TX',
-        'Empty Leg Flights to Indianapolis',
-        'Empty Leg Flights to Jacksonville',
-        'Empty Leg Flights to Kansas City',
-        'Empty Leg Flights to Las Vegas, NV',
-        'Empty Leg Flights to Los Angeles, CA',
-        'Empty Leg Flights to Miami, FL',
-        'Empty Leg Flights to Naples',
-        'Empty Leg Flights to Nashville',
-        'Empty Leg Flights to New Orleans',
-        'Empty Leg Flights to New York, NY',
-        'Empty Leg Flights to Ocala, FL',
-        'Empty Leg Flights to Orlando, FL',
-        'Empty Leg Flights to Palm Beach​',
-        'Empty Leg Flights to Philadelphia​',
-        'Empty Leg Flights to Phoenix',
-        'Empty Leg Flights to Raleigh',
-        'Empty Leg Flights to Sacramento',
-        'Empty Leg Flights to Salt Lake City',
-        'Empty Leg Flights to San Diego, CA',
-        'Empty Leg Flights to San Francisco, CA',
-        'Empty Leg Flights to San Jose',
-        'Empty Leg Flights to Santa Barbara',
-        'Empty Leg Flights to Santa Fe',
-        'Empty Leg Flights to Scottsdale',
-        'Empty Leg Flights to Seattle, WA',
-        'Empty Leg Flights to Vail',
-        'Empty Leg Flights to Washington, D.C.',
+        'Empty Leg Flights to Aspen', 'Empty Leg Flights to Atlanta, GA', 'Empty Leg Flights to Austin, TX', 'Empty Leg Flights to Beverly Hills', 'Empty Leg Flights to Boston, MA', 'Empty Leg Flights to Cancun', 'Empty Leg Flights to Charleston', 'Empty Leg Flights to Chicago, IL', 'Empty Leg Flights to Dallas, TX', 'Empty Leg Flights to Denver, CO', 'Empty Leg Flights to Detroit', 'Empty Leg Flights to Florida', 'Empty Leg Flights to Fort Lauderdale', 'Empty Leg Flights to Hawaii', 'Empty Leg Flights to Honolulu​', 'Empty Leg Flights to Houston, TX', 'Empty Leg Flights to Indianapolis', 'Empty Leg Flights to Jacksonville', 'Empty Leg Flights to Kansas City', 'Empty Leg Flights to Las Vegas, NV', 'Empty Leg Flights to Los Angeles, CA', 'Empty Leg Flights to Miami, FL', 'Empty Leg Flights to Naples', 'Empty Leg Flights to Nashville', 'Empty Leg Flights to New Orleans', 'Empty Leg Flights to New York, NY', 'Empty Leg Flights to Ocala, FL', 'Empty Leg Flights to Orlando, FL', 'Empty Leg Flights to Palm Beach​', 'Empty Leg Flights to Philadelphia​', 'Empty Leg Flights to Phoenix', 'Empty Leg Flights to Raleigh', 'Empty Leg Flights to Sacramento', 'Empty Leg Flights to Salt Lake City', 'Empty Leg Flights to San Diego, CA', 'Empty Leg Flights to San Francisco, CA', 'Empty Leg Flights to San Jose', 'Empty Leg Flights to Santa Barbara', 'Empty Leg Flights to Santa Fe', 'Empty Leg Flights to Scottsdale', 'Empty Leg Flights to Seattle, WA', 'Empty Leg Flights to Vail', 'Empty Leg Flights to Washington, D.C.'
     ];
     const faqContent = [
         {
@@ -76,6 +35,8 @@ const EmptyLegPage = () => {
             <BrandNames />
             <section className="flex flex-col lg:flex-row gap-5 px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
                 <div className="min-w-[75%] md:w-full">
+                    <Breadcrumb />
+
                     <CollapsibleSection title="Empty Leg Flights Aspen" content="Empty leg flights to Aspen are cost-effective options for private jet travel, typically offered at a discount when the plane needs to return empty after dropping off passengers. Ideal for last-minute trips, these flights provide the luxury of private jet travel at a lower cost, although availability and scheduling can be less predictable." isDefaultOpen={true} />
                     <CollapsibleSection title="Empty Leg Private Jet Flights Aspen" content="Empty leg flights to Aspen are cost-effective options for private jet travel, typically offered at a discount when the plane needs to return empty after dropping off passengers. Ideal for last-minute trips, these flights provide the luxury of private jet travel at a lower cost, although availability and scheduling can be less predictable." />
                     <CollapsibleSection title="What are the Benefits of Chartering Empty Leg Flights to Aspen?" content="Empty leg flights to Aspen are cost-effective options for private jet travel, typically offered at a discount when the plane needs to return empty after dropping off passengers. Ideal for last-minute trips, these flights provide the luxury of private jet travel at a lower cost, although availability and scheduling can be less predictable." />

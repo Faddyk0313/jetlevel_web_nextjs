@@ -30,10 +30,10 @@ const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({ title, content,
                 onClick={toggleSection}
                 aria-expanded={isOpen}
             >
-                <h2 className={`transition-colors duration-300 ${isOpen ? 'text-[#0071ba]' : 'text-[rgb(136,136,136)] group-hover:text-[#0071ba]'}`}>
+                <h2 className={`transition-colors duration-200 ${isOpen ? 'text-[#0071ba]' : 'text-gray-600 group-hover:text-[#0071ba]'}`}>
                     {title}
                 </h2>
-                <span className={`transition-all duration-300 border rounded-full ${isOpen ? 'rotate-45 text-[#0071ba] border-[#0071ba]' : 'text-[rgb(136,136,136)] border-[rgb(136,136,136)] group-hover:text-[#0071ba] group-hover:border-[#0071ba]'}`}>
+                <span className={`transition-all duration-200 border-2 rounded-full ${isOpen ? 'rotate-45 text-[#0071ba] border-[#0071ba]' : 'text-gray-600 border-gray-600 group-hover:text-[#0071ba] group-hover:border-[#0071ba]'}`}>
                     <FiPlus className="w-7 h-7" />
                 </span>
             </div>

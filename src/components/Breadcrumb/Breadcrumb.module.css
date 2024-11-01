@@ -1,0 +1,67 @@
+/* Add styles for the breadcrumb container */
+.breadcrumbContainer  {
+  color: white;
+  padding: 0.5rem;
+}
+
+/* Styles for each breadcrumb link */
+.breadcrumbLink {
+  position: relative;
+  display: flex;
+  align-items: center;
+  background-color: #0071ba;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease;
+}
+
+.breadcrumbLink:hover {
+  background-color: #374151;
+}
+
+.breadcrumbLink:hover::after {
+  border-left-color: #374151;
+}
+
+/* Create the "pointy" right arrow effect */
+.breadcrumbLink::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -20px; /* Adjust based on your arrow size */
+  width: 0;
+  height: 0;
+  border-top: 1.5rem solid transparent;
+  border-bottom: 1rem solid transparent;
+  border-left: 20px solid #0071ba;
+  transition: border-left-color 0.3s ease;
+}
+
+/* Create the "pointy" right arrow effect */
+.breadcrumbLink::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0px; /* Adjust based on your arrow size */
+  width: 0;
+  height: 0;
+  border-top: 1.5rem solid transparent;
+  border-bottom: 1rem solid transparent;
+  border-left: 20px solid white;
+  transition: border-left-color 0.3s ease;
+}
+
+/* Remove the arrow for the last breadcrumb item */
+.breadcrumbContainer > div:first-child .breadcrumbLink::before {
+  display: none;
+}
+/* Remove the arrow for the last breadcrumb item */
+.breadcrumbContainer > div:last-child .breadcrumbLink::after {
+  display: none;
+  /* border-radius: 10px; */
+}
+.breadcrumbContainer > div:last-child .breadcrumbLink {
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+}
