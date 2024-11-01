@@ -11,13 +11,13 @@ const CustomComponent: React.FC<CustomComponentProps> = ({ heading, para, backgr
   }));
 
   return (
-    <section className={`px-5 md:px-10 lg:px-20 flex flex-col justify-center ${background === "white" ? "max-w-[1800px] mx-auto" : "overflow-hidden bg-aboutUs-background overlay bg-cover bg-fixed"}`}>
+    <section className={` flex flex-col justify-center ${background === "white" ? "max-w-[1800px] mx-auto" : "overflow-hidden bg-aboutUs-background overlay bg-cover bg-fixed"}`}>
       <div className={`${background === "white" ? "" : "lg:max-w-[1800px] lg:mx-auto"}`}>
         <div
           className={`mb-10 ${background === "white" ? "text-left" : "text-center text-white"} `}
         >
           <h2>{heading}</h2>
-          <p className={`details mt-4 ${background === "white" ? "" : "text-gray-100"} `}>{para}</p>
+          <p className={`details leading-relaxed mt-4 ${background === "white" ? "" : "text-gray-100"} `}>{para}</p>
         </div>
         <div
           className="hidden md:grid justify-between lg:gap-2 py-3"

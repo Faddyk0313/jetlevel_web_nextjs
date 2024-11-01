@@ -23,7 +23,7 @@ const CompanyOverview = () => {
             <div className="flex flex-col lg:flex-row justify-center gap-1 w-fit">
                 <div className="w-full lg:min-w-[50%] lg:max-w-[50%] lg:pt-7">
                     <h2 className="mb-4">Our Story, Mission, and Values at Jetlevel Aviation.</h2>
-                    <p className='hidden xl:block details'>
+                    <p className='hidden xl:block details leading-relaxed'>
                         At JetLevel Aviation, we're redefining the private jet charter experience by prioritizing safety, reliability, and transparency. Founded in 2019, we've established ourselves as a trusted global advisor in the aviation industry. Our mission is to provide high-quality aircraft and competitive pricing, backed by leading customer service to deliver the best value. We are committed to core values of reliability, safety, and transparency, ensuring client satisfaction for both frequent travels and special occasions. Fly across the US, Canada, and beyond with our diverse network of aircraft and convenient departure points. Choose JetLevel Aviation for a seamless, worry-free journey every time—elevating your travel experiences to new heights. <br />
                         <span className="my-2 text-blue-600 font-bold italic">
                             Fly with <span className='border-b-2 border-blue-600'>
@@ -31,7 +31,7 @@ const CompanyOverview = () => {
                             </span>
                         </span>
                     </p>
-                    <p className='details xl:hidden'>
+                    <p className='details leading-relaxed xl:hidden'>
                         At JetLevel Aviation, we're redefining the private jet charter experience by prioritizing safety, reliability, and transparency. Founded in 2019, we've established ourselves as a trusted global advisor in the aviation industry. Our mission is to provide high-quality aircraft and competitive pricing, backed by leading customer service to deliver the best value. We are committed to core values of reliability, safety, and transparency, ensuring client satisfaction for both frequent travels and special occasions.
                     </p>
                     <TextCompanyOverview />

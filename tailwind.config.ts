@@ -19,7 +19,7 @@ const config: Config = {
         libre: ['var(--font-libre-baskerville)', 'serif'],
       },
       boxShadow: {
-        'card-shadow': '0px 0px 20px rgba(0, 0, 0, 0.4)', // Modify as needed
+        'card-shadow': '0px 0px 20px rgba(0, 0, 0, 0.3)', // Modify as needed
       },
     },
   },

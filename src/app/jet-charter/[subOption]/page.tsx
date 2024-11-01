@@ -1,10 +1,8 @@
-import Link from "next/link";
-
 type PageProps = {
   params: {
     subOption: string;
   };
-};
+}; 
 
 // Define page content based on `subOption`
 const pageContent: Record<string, { title: string}> = {

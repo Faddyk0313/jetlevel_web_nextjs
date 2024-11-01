@@ -1,4 +1,5 @@
-// import { useRouter } from 'next/navigation';
+import CityPage from "@/components/CityPage";
+import EmptyLegPage from "@/components/EmptyLegPage";
 
 type PageProps = {
     params: {
@@ -15,15 +16,29 @@ const pageContent: Record<string, { title: string; }> = {
     'boston-ma': { title: 'Flght to Boston, MA' },
 };
 
-// This function generates static parameters for known paths
+/* Explanation of generateStaticParams
+
 export async function generateStaticParams() {
     return Object.keys(pageContent).map((cityPage) => ({ cityPage }));
 }
 
-const CityPage = ({ params }: PageProps) => {
-    const { cityPage } = params;
-    const { subOption } = params;
+    Purpose:
+        This function is used to generate a list of static parameters for dynamic routes. When you return values from generateStaticParams, Next.js will use those values to statically generate pages for each specified parameter combination.
 
+    Implementation:
+        pageContent is an object that contains specific data for each city.
+        Object.keys(pageContent) retrieves an array of keys in pageContent (e.g., ['aspen', 'atlanta-ga', 'austin-tx']).
+        .map((cityPage) => ({ cityPage })) then maps over each key to create an object with a cityPage property (e.g., { cityPage: 'aspen' }), so the function returns an array of objects like [{ cityPage: 'aspen' }, { cityPage: 'atlanta-ga' }, ...].
+
+    Generated Output:
+        The output from generateStaticParams lets Next.js know that it should statically generate pages at build time for each cityPage value in pageContent.
+*/
+export async function generateStaticParams() {
+    return Object.keys(pageContent).map((cityPage) => ({ cityPage }));
+}
+
+const FlightPage = ({ params }: PageProps) => {
+    const { cityPage, subOption } = params;
 
     // Get content based on `cityPage`, with fallback for 404 content
     const { title } = pageContent[cityPage] || {
@@ -35,12 +50,12 @@ const CityPage = ({ params }: PageProps) => {
     // const { subOption, destination } = router.query;
     if (subOption === 'us-canada' || subOption === 'international') {
         return (
-            <CityPage content={pageContent} />
+            <CityPage />
         );
     }
     else if (subOption === 'empty-legs') {
         return (
-            <EmptyLegPage content={pageContent} />
+            <EmptyLegPage />
         );
     }
     else {
@@ -53,4 +68,4 @@ const CityPage = ({ params }: PageProps) => {
     }
 };
 
-export default CityPage;
+export default FlightPage;

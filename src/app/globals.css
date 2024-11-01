@@ -105,12 +105,11 @@ h4 {
 
 p.details {
   font-size: 1.188rem /* 19px */;
-  line-height: 1.6;
   font-weight: 300;
 }
 
 .overlay {
-  border-image: fill 1 linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+  border-image: fill 1 linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }
 
 section {
