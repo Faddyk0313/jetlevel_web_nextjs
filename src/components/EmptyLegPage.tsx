@@ -74,14 +74,9 @@ const EmptyLegPage = () => {
                 subtitle="Search, Compare, and Book Seamlessly"
             />
             <BrandNames />
-            <section className="flex flex-col lg:flex-row gap-5 px-5 md:px-10 xl:px-20 py-10 max-w-[1800px] mx-auto">
+            <section className="flex flex-col lg:flex-row gap-5 px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
                 <div className="min-w-[75%] md:w-full">
-                    <CollapsibleSection title="Empty Leg Flights Aspen" content="Empty leg flights to Aspen are cost-effective options for private jet travel, typically offered at a discount when the plane needs to return empty after dropping off passengers. Ideal for last-minute trips, these flights provide the luxury of private jet travel at a lower cost, although availability and scheduling can be less predictable." />
-                    <div className="border-b py-5">
-                        <h2>Browse The Upcoming Featured list of Empty Leg Flights</h2>
-                        {/* Avinode's Empty Leg Iframe */}
-                    </div>
-                    {/* below section will be generated using map array */}
+                    <CollapsibleSection title="Empty Leg Flights Aspen" content="Empty leg flights to Aspen are cost-effective options for private jet travel, typically offered at a discount when the plane needs to return empty after dropping off passengers. Ideal for last-minute trips, these flights provide the luxury of private jet travel at a lower cost, although availability and scheduling can be less predictable." isDefaultOpen={true} />
                     <CollapsibleSection title="Empty Leg Private Jet Flights Aspen" content="Empty leg flights to Aspen are cost-effective options for private jet travel, typically offered at a discount when the plane needs to return empty after dropping off passengers. Ideal for last-minute trips, these flights provide the luxury of private jet travel at a lower cost, although availability and scheduling can be less predictable." />
                     <CollapsibleSection title="What are the Benefits of Chartering Empty Leg Flights to Aspen?" content="Empty leg flights to Aspen are cost-effective options for private jet travel, typically offered at a discount when the plane needs to return empty after dropping off passengers. Ideal for last-minute trips, these flights provide the luxury of private jet travel at a lower cost, although availability and scheduling can be less predictable." />
                     <CollapsibleSection title="The Art of Finding and Booking Empty Leg Flights" content="Empty leg flights to Aspen are cost-effective options for private jet travel, typically offered at a discount when the plane needs to return empty after dropping off passengers. Ideal for last-minute trips, these flights provide the luxury of private jet travel at a lower cost, although availability and scheduling can be less predictable." />
