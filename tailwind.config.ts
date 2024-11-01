@@ -12,7 +12,6 @@ const config: Config = {
         'ourOffices-background': "url('https://jetlevel.com/wp-content/uploads/2022/11/pexels-pixabay-236070-scaled.jpeg')",
         'fourMetrics-OurCommitment-background': "url('https://jetlevel.com/wp-content/uploads/2022/10/iStock-1210052781.jpeg')",
         'blue-background': "url('/images/blue-background.png')",
-        'blue-background2': "url('/images/blue-background2.png')",
       },
       fontFamily: {
         playfair: ['var(--font-playfair-display)', 'serif'],
