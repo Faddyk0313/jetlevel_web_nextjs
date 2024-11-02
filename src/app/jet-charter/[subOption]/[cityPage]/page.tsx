@@ -10,10 +10,9 @@ type PageProps = {
 
 // Define page content based on `cityPage`
 const pageContent: Record<string, { title: string; }> = {
-    'aspen': { title: 'Flght to aspen' },
-    'atlanta-ga': { title: 'Flght to Atlanta, GA' },
-    'austin-tx': { title: 'Flght to Austin, TX' },
-    'boston-ma': { title: 'Flght to Boston, MA' },
+    'aspen': { title: 'Aspen' },
+    'addison-tx': { title: 'Addison, TX' },
+    'boston-ma': { title: 'Boston, MA' },
 };
 
 /* Explanation of generateStaticParams
@@ -43,26 +42,25 @@ const FlightPage = ({ params }: PageProps) => {
     // Get content based on `cityPage`, with fallback for 404 content
     const { title } = pageContent[cityPage] || {
         title: 'Page Not Found',
-        description: 'The page you are looking for does not exist.',
     };
 
     // const router = useRouter();
     // const { subOption, destination } = router.query;
     if (subOption === 'us-canada' || subOption === 'international') {
         return (
-            <CityPage />
+            <CityPage title={title} />
         );
     }
     else if (subOption === 'empty-legs') {
         return (
-            <EmptyLegPage />
+            <EmptyLegPage title={title} />
         );
     }
     else {
         // Fallback layout for any other or undefined subOption
         return (
             < div className="p-6 max-w-4xl mx-auto text-center" >
-                <h1 className="text-3xl font-bold my-4">{title}</h1>
+                <h1 className="text-3xl font-bold my-4">Page Not Found</h1>
             </div >
         );
     }

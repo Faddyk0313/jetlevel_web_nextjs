@@ -1,6 +1,6 @@
 "use client";
 import Link from 'next/link';
-import React, { useState, useEffect } from 'react';
+import React, { useState} from 'react';
 import { FiPlus } from "react-icons/fi";
 
 interface FAQ {

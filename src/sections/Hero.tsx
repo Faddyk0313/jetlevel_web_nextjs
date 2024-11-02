@@ -4,7 +4,7 @@ import IframeEmbed from './Iframe';
 type HeroProps = {
     image: string;
     title: string;
-    subtitle: string;
+    subtitle?: string;
     tagline?: string;
 };  
 
