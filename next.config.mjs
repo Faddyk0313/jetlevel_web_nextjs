@@ -1,5 +1,13 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  async rewrites() {
+    return [
+      {
+        source: '/empty-leg-flights-:location',
+        destination: '/jet-charter/empty-legs/:location',
+      },
+    ];
+  },
   images: {
     remotePatterns: [
       {
