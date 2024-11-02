@@ -3,7 +3,7 @@ import React from 'react';
 
 const BookYourPrivateJet = () => {
     return (
-        <section className="flex flex-col items-center bg-blue-background bg-cover justify-center min-h-screen text-white">
+        <section className="flex flex-col items-center bg-blue-background bg-cover justify-center sectionHeight text-white">
             <div className='max-w-[1800px] mx-auto px-8'>
                 <h3 className="text-center text-lg font-bold mb-2">BOOK YOUR PRIVATE JET</h3>
                 <h2 className="text-center mb-6 ">Aviation agents standing by 24/7 to assist</h2>

@@ -122,7 +122,7 @@ section {
 }
 
 .sectionHeight {
-  min-height: min(calc(100vh - 125px), 800px);
+  min-height: min(calc(100vh - 50px), 800px);
 }
 
 body,
