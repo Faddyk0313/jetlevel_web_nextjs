@@ -14,7 +14,7 @@ const Nav = () => {
               width={790}
               height={142}
               className="w-auto h-auto"
-              src="/images/logo.png"
+              src="/images/Logo.png"
               alt="Jet Level Aviation Logo"
             />
           </div>
