@@ -1,5 +1,5 @@
 import { Playfair_Display, Lato, Libre_Baskerville } from 'next/font/google';
-import "./globals.css";
+import "@/styles/globals.css";
 import Nav from '@/sections/Nav';
 import Footer from '@/sections/Footer';
 import ContactMenu from "@/sections/ContactMenu";

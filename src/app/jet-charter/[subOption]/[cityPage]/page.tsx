@@ -53,7 +53,7 @@ const FlightPage = ({ params }: PageProps) => {
     }
     else if (subOption === 'empty-legs') {
         return (
-            <EmptyLegPage title={title} />
+            <EmptyLegPage/>
         );
     }
     else {
