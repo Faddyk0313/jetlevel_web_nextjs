@@ -4,14 +4,36 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FiHome } from "react-icons/fi";
-import styles from './Breadcrumb.module.css'; // Import the CSS module
+import styles from './Breadcrumb.module.css';
 
 const Breadcrumb: React.FC = () => {
     const pathname = usePathname();
     const pathSegments: string[] = pathname?.split('/').filter(Boolean) || [];
-
-    // Set the starting z-index
     const startingZIndex = 9;
+
+    // Rewrite mappings (mirror rewrites in next.config.js)
+    const rewriteMapping: { [key: string]: string } = {
+        '/jet-charter/us-canada': '/us-canada-chartered-cities',
+        '/jet-charter/international': '/international-chartered-cities',
+        '/jet-charter/popular-routes': '/popular-routes',
+        '/jet-charter/empty-legs': '/empty-leg-flights',
+    };
+
+    // Function to handle rewrite matching
+    const getRewritePath = (segments: string[]) => {
+        const path = '/' + segments.join('/');
+        
+        // Check if path matches any rewrites
+        for (const [dest, source] of Object.entries(rewriteMapping)) {
+            if (path.startsWith(dest)) {
+                // Replace destination with source in breadcrumb path
+                return path.replace(dest, source);
+            }
+        }
+        
+        // Default to the actual path if no rewrite found
+        return path;
+    };
 
     return (
         <div className={`${styles.breadcrumbContainer} flex items-center w-fit gap-1`}>
@@ -23,14 +45,16 @@ const Breadcrumb: React.FC = () => {
             </div>
 
             {pathSegments.map((segment, index) => {
-                // Redirect `/jet-charter` to `/`
                 const isJetCharter = segment === 'jet-charter';
-                const href = isJetCharter
-                    ? '/'  // Redirect path for `jet-charter`
-                    : '/' + pathSegments.slice(0, index + 1).join('/');
+                const currentSegments = isJetCharter 
+                    ? [] 
+                    : pathSegments.slice(0, index + 1);
+                
+                const href = isJetCharter 
+                    ? '/' 
+                    : getRewritePath(currentSegments);
+                
                 const segmentName = segment.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
-
-                // Calculate z-index by starting from `startingZIndex` and decreasing by `index`
                 const zIndex = startingZIndex - index;
 
                 return (
@@ -38,7 +62,7 @@ const Breadcrumb: React.FC = () => {
                         <Link
                             href={href}
                             className={`${styles.breadcrumbLink} py-2 pl-7 pr-3`}
-                            style={{ zIndex }} // Apply dynamic z-index
+                            style={{ zIndex }}
                         >
                             {segmentName}
                         </Link>

@@ -33,9 +33,9 @@ const FlightPage: FC<PageProps>  = async({ params }: PageProps) => {
     // const router = useRouter();
     // const { subOption, destination } = router.query;
     // if (subOption === 'us-canada' || subOption === 'international') {
-    //     return (
-    //         <CityPage title={title} />
-    //     );
+        return (
+            <CityPage />
+        );
     // }
     // else if (subOption === 'empty-legs') {
         return (
