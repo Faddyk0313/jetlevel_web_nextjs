@@ -63,10 +63,10 @@ function NavOptions() {
                     <div onClick={(e) => e.stopPropagation()}>
                         <NavClickedContent
                             subOptions={[
-                                { name: 'US & Canada', link: '/jet-charter/us-canada', image: 'https://jetlevel.com/wp-content/uploads/2023/07/US-CANADA.png' },
-                                { name: 'International', link: '/jet-charter/international', image: 'https://jetlevel.com/wp-content/uploads/2023/07/International.png' },
-                                { name: 'Popular Routes', link: '/jet-charter/popular-routes', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Popular-Routes.png' },
-                                { name: 'Empty Legs', link: '/jet-charter/empty-legs', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Empty-Legs.png' },
+                                { name: 'US & Canada', link: 'us-canada-chartered-cities', image: 'https://jetlevel.com/wp-content/uploads/2023/07/US-CANADA.png' },
+                                { name: 'International', link: '/international-chartered-cities', image: 'https://jetlevel.com/wp-content/uploads/2023/07/International.png' },
+                                { name: 'Popular Routes', link: '/popular-routes', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Popular-Routes.png' },
+                                { name: 'Empty Legs', link: '/empty-leg-flights', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Empty-Legs.png' },
                             ]}
                             closeDropdown={closeDropdown} // Pass the closeDropdown function here
                         />

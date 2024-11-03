@@ -1,19 +1,20 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const MeetOwner = () => {
     return (
-        <section className="bg-blue-background px-4  py-10 bg-no-repeat bg-cover">
-            <div className="flex flex-col md:flex-row items-center lg:items-start gap-5 max-w-[1800px] mx-auto">
-                <div className="mb-5 md:min-w-[47%] ">
+        <section className="bg-blue-background px-4 flex items-center  py-10 bg-no-repeat bg-cover sectionHeight">
+            <div className="flex flex-col md:flex-row items-center justify-center lg:items-start gap-5 max-w-[1800px] m-auto">
+                <div className="mb-5 md:min-w-[570px]">
                     <Image
                         src='/images/ricky-photo.webp'
                         alt="Owner Image"
                         width={600} // Adjust according to the image size
                         height={800} // Adjust according to the image size
-                        className="w-auto h-auto object-cover"
+                        className="w-full h-full max-w-[570px] max-h-[780px] object-cover"
                     />
                 </div>
-                <div className="text-white md:pl-5 pt-5 md:pt-[5vh]">
+                <div className="text-white md:max-w-[60%] md:pl-5 pt-5 md:pt-[5vh]">
                     <h4 className='mb-3'>MEET THE OWNER</h4>
                     <h2 className='mb-3'>Hi, I'm Ricky</h2>
                     <p className='mb-[10px] details leading-relaxed text-[#bbbbbb]'>
@@ -32,7 +33,7 @@ const MeetOwner = () => {
                         <p className='text-[#bbbbbb] pb-1'><span className='text-cyan-400'>✓&nbsp;</span> 1,000+ annual charters</p>
                     </div>
                     <button className='text-white px-5 py-2 my-2 rounded-full text-lg bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1'>
-                        <a href="" className=''>Book Your Flight</a>
+                        <Link href="#" className=''>Book Your Flight</Link>
                     </button>
                 </div>
             </div>

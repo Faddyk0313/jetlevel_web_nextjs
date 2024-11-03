@@ -20,7 +20,7 @@ const CustomComponent: React.FC<CustomComponentProps> = ({ heading, para, backgr
           <p className={`details leading-relaxed mt-4 ${background === "white" ? "" : "text-gray-100"} `}>{para}</p>
         </div>
         <div
-          className="hidden md:grid justify-between lg:gap-2 py-3"
+          className="hidden md:grid justify-between gap-1 lg:gap-2 py-3"
           style={{ gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))` }}
         >
           {items.map((item, index) => (

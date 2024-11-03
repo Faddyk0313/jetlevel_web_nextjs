@@ -35,7 +35,7 @@ const PopularPrivateJetCharters = () => {
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 w-full gap-4 mb-8">
         {cardInfo.map((card, index) => (
-          <div key={index} className="cursor-pointer rounded-lg shadow-[0_0_4px_3px_rgba(0,0,0,0.2)] overflow-hidden">
+          <div key={index} className="cursor-pointer rounded-2xl border-[3px] hover:shadow-card-shadow overflow-hidden transition-all ease-in duration-100 hover:-translate-y-2 hover:border-[#0071ba] h-full">
             <Image
               src={card.imageLink}
               width={280}

@@ -1,7 +1,8 @@
 "use client";
 import Link from 'next/link';
-import React, { useState} from 'react';
+import React, { useState, useEffect } from 'react';
 import { FiPlus } from "react-icons/fi";
+import Markdown from 'markdown-to-jsx';
 
 interface FAQ {
     question: string;
@@ -15,11 +16,14 @@ interface CollapsibleSectionProps {
 }
 
 const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({ title, content, isDefaultOpen = false }) => {
-    const [isOpen, setIsOpen] = useState(isDefaultOpen);
+    const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+        setIsOpen(isDefaultOpen);
+    }, [isDefaultOpen]);
 
     const toggleSection = () => setIsOpen((prev) => !prev);
 
-    // Type guard to check if content is an array of FAQs
     const isFAQArray = (items: any[]): items is FAQ[] =>
         items.every(item => typeof item === 'object' && 'question' in item && 'answer' in item);
 
@@ -38,32 +42,45 @@ const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({ title, content,
                 </span>
             </div>
             <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[2100px] sm:max-h-[1200px]' : 'max-h-0'}`}>
-                {/* Conditional rendering based on content type */}
                 {Array.isArray(content) && isFAQArray(content) ? (
                     <div className="mt-2">
                         {content.map((faq, index) => (
-                            <div key={index} className="pb-6">
+                            <div key={faq.question} className="pb-6">
                                 <h3 className="font-bold text-gray-900">{faq.question}</h3>
                                 <p className="text-gray-700 leading-7 mt-1">{faq.answer}</p>
                             </div>
                         ))}
                     </div>
                 ) : Array.isArray(content) ? (
-                    <div className="grid grid-cols-1 gap-y-1 md:gap-x-4 md:gap-y-1 sm:grid-cols-2 lg:grid-cols-3 mt-2">
+                    <div className="grid grid-cols-1 gap-y-1 md:gap-x-4 md:gap-y-1 sm:grid-cols-2 lg:grid-cols-3 mt-2 details leading-8 text-gray-700">
                         {content.map((text, index) => (
                             <Link
-                                key={index}
+                                key={text + index} // Added index for uniqueness if text is repeated
                                 href="#"
-                                className="block leading-8 text-blue-500 underline"
+                                className="block leading-8  hover:underline hover:text-blue-600"
                             >
                                 {text}
                             </Link>
                         ))}
                     </div>
                 ) : (
-                    <p className="mt-2 details leading-8 text-gray-700"       
-                    dangerouslySetInnerHTML={{ __html: content }}>
-                    </p>
+                    // Render markdown content safely
+                    <div className='mt-2 details leading-8 text-gray-700'>
+                        <Markdown
+                            options={{
+                                overrides: {
+                                    a: {
+                                        props: {
+                                            className: 'underline text-blue-400',
+                                        },
+                                    },
+                                },
+                            }}
+                        >
+                            {content as string}
+                        </Markdown>
+                    </div>
+
                 )}
             </div>
         </section>

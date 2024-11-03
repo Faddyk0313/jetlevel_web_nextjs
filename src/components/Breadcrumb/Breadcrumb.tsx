@@ -4,45 +4,73 @@
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { FiHome } from "react-icons/fi";
-import styles from './Breadcrumb.module.css'; // Import the CSS module
+import styles from './Breadcrumb.module.css';
 
 const Breadcrumb: React.FC = () => {
     const pathname = usePathname();
     const pathSegments: string[] = pathname?.split('/').filter(Boolean) || [];
 
-    // Set the starting z-index
-    const startingZIndex = 9;
+    // Rewrite mappings (mirror rewrites in next.config.js)
+    const rewriteMapping: { [key: string]: string; } = {
+        '/jet-charter/us-canada/': '/us-canada-chartered-cities',
+        '/jet-charter/international/': '/international-chartered-cities',
+        '/jet-charter/popular-routes/': '/popular-routes',
+        '/jet-charter/empty-legs/': '/empty-leg-flights-',
+    };
 
+
+
+    // Function to handle rewrite matching
+    const getRewritePath = (segments: string[]) => {
+        const path = '/' + segments.join('/'); // '/empty-leg-flights-:location'
+        // Check if path matches any rewrites
+        for (const [dest, source] of Object.entries(rewriteMapping)) {
+            if (path.startsWith(source)) {
+                // Replace destination with source in breadcrumb path
+                console.log("if", path.replace(source, dest));
+                return path.replace(source, dest);
+            }
+        }
+        return path;
+    };
+
+    const isJetCharter = pathSegments[0] === 'jet-charter';
+    const href = isJetCharter
+        ? '/'
+        : getRewritePath(pathSegments.slice(0, 1));
+    const hrefArray = href.split("/").filter(Boolean);
+    console.log("hrefArray: ", hrefArray);
     return (
         <div className={`${styles.breadcrumbContainer} flex items-center w-fit gap-1`}>
             {/* Home Icon and Link */}
             <div className="rounded-lg">
-                <Link href="/" className={`${styles.breadcrumbLink} rounded-l-md px-3 py-2 flex items-center h-10 text-xl gap-1 text-white z-10`}>
+                <Link href="/" className={`${styles.breadcrumbLink}  rounded-l-md px-3 py-2 flex items-center h-10 text-xl gap-1 text-white z-10`}>
                     <FiHome />
                 </Link>
             </div>
+            {hrefArray.map((segment, index) => {
+                // Build incremental href path
+                const hrefPath = `/${hrefArray.slice(0, index + 1).join("/")}`;
+                console.log("hrefPath", index, ": ", hrefPath);
 
-            {pathSegments.map((segment, index) => {
-                // Redirect `/jet-charter` to `/`
-                const isJetCharter = segment === 'jet-charter';
-                const href = isJetCharter
-                    ? '/'  // Redirect path for `jet-charter`
-                    : '/' + pathSegments.slice(0, index + 1).join('/');
-                const segmentName = segment.replace(/-/g, ' ').replace(/\b\w/g, char => char.toUpperCase());
+                // Generate segment name by replacing "-" with space and capitalizing
+                const segmentName = segment.replace(/-/g, ' ').toUpperCase();
+                console.log("segmentName", index, ": ", segmentName);
 
-                // Calculate z-index by starting from `startingZIndex` and decreasing by `index`
-                const zIndex = startingZIndex - index;
-
+                // Calculate z-index, with the first link getting the highest value
+                const zIndex = 8 - index;
+                
                 return (
-                    <div key={href} className="flex items-center">
+                    <div key={`${hrefPath}-${index}`} className="flex items-center">
                         <Link
-                            href={href}
+                            href={hrefPath}
                             className={`${styles.breadcrumbLink} py-2 pl-7 pr-3`}
-                            style={{ zIndex }} // Apply dynamic z-index
+                            style={{ zIndex: zIndex }}
                         >
                             {segmentName}
                         </Link>
                     </div>
+
                 );
             })}
         </div>

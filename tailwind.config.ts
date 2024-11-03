@@ -6,6 +6,12 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      colors: {
+        'darkerBlueIcon': '#476679',
+        'darkBlue': '#0170ce',
+        'lightBlue': '#0170ce',
+        'grayText': '#d1d5db',
+      },
       backgroundImage: {
         'home-background': "url('https://fly.jetlevel.com/assets/Private%20jet%20interior%20bg%20.webp')",
         'aboutUs-background': "url('https://jetlevel.com/wp-content/uploads/2022/08/R-29.jpg')",

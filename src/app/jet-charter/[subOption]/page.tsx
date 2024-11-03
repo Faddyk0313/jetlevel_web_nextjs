@@ -17,10 +17,6 @@ const pageContent: Record<string, { title: string}> = {
   'empty-legs': { title: 'Empty Legs'},
 };
 
-
-
-
- 
 // This function generates static parameters for known paths
 export async function generateStaticParams() {
   return Object.keys(pageContent).map((subOption) => ({ subOption }));
@@ -55,10 +51,10 @@ console.log(content)
       <ul>
       {content.map((item,key)=>(
           <li key={key}>
-            <Link href={"/"+item.slug+"?id="+item.id}>{item.name}</Link> 
+            <Link className=" hover:underline hover:text-blue-600" href={"/"+item.slug}>{item.name}</Link> 
             </li>
         ))}
-      </ul>
+      </ul> 
     </div>
     
   );
