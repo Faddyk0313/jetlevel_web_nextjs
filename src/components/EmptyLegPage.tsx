@@ -42,9 +42,9 @@ const EmptyLegPage = async({fields}:any) => {
                     <Breadcrumb />
 
                     <CollapsibleSection title={fields.intoduction.blocks[0].fields.title.text} content={fields.intoduction.blocks[0].fields.paragraph.text} isDefaultOpen={true} />
-                    <CollapsibleSection title={fields.overview.blocks[0].fields.title.text} content={fields.overview.blocks[0].fields.paragraph.text} isDefaultOpen={true} />
-                    <CollapsibleSection title={fields.benefits.blocks[0].fields.title.text} content={fields.benefits.blocks[0].fields.paragraph.text} isDefaultOpen={true} />
-                    <CollapsibleSection title={fields.finding_and_booking.blocks[0].fields.title.text} content={fields.finding_and_booking.blocks[0].fields.paragraph.text} isDefaultOpen={true} />
+                    <CollapsibleSection title={fields.overview.blocks[0].fields.title.text} content={fields.overview.blocks[0].fields.paragraph.text}/>
+                    <CollapsibleSection title={fields.benefits.blocks[0].fields.title.text} content={fields.benefits.blocks[0].fields.paragraph.text}/>
+                    <CollapsibleSection title={fields.finding_and_booking.blocks[0].fields.title.text} content={fields.finding_and_booking.blocks[0].fields.paragraph.text}/>
                     <CollapsibleSection title={fields.airports.blocks[0].fields.title.text} content={fields.airports.blocks[0].fields.paragraph.text}/>
                     <CollapsibleSection title={fields.flights_details.blocks[0].fields.title.text} content={fields.flights_details.blocks[0].fields.paragraph.text}/>
                     <CollapsibleSection title="Listing of Region-Specific Empty Leg Flights" content={links} />
