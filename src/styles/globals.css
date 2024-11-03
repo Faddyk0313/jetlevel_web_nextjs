@@ -134,3 +134,10 @@ blockquote {
 blockquote {
   font-style: italic;
 }
+
+
+a {
+  /* color: blue; */
+  text-decoration:  underline;
+}
+

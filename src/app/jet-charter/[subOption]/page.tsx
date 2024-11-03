@@ -1,5 +1,7 @@
-import { fetcher } from "@/lib/fetcher";
+import { createClient } from "@/lib/contento";
+// import { fetcher } from "@/lib/fetcher";
 import Link from "next/link";
+import { notFound } from "next/navigation";
 
 type PageProps = {
   params: {
@@ -33,18 +35,25 @@ const JetCharter = async({ params }: PageProps) => {
     description: 'The page you are looking for does not exist.',
   };
 
-  const {data} = await fetcher('https://app.contento.io/api/v1/content',{
-    headers:{
-    "Authorization": "Bearer 0IH1nNoitk9HWNDvj5esoDJRDQlg8IHCVuOxHTpb1792712e",
-    "X-CONTENTO-SITE": "s_01JA0hQj1BcayHdvz8pvEM0GH0"
-    }
-});
+  const {content} = await createClient()
+  // .getContentBySlug('empty-leg-flights-aspen', 'empty_leg_flights')
+  .getContentByType({
+    contentType: "empty_leg_flights",
+       sortBy: "published_at",
+    sortDirection: "desc"
+  })
+  .catch((err) => {
+    console.log(err)
+    notFound()
+  })
+
+console.log(content)
 
   return (
     <div className="p-6 max-w-4xl mx-auto text-center">
       <h1 className="text-3xl font-bold my-4">{title}</h1>
       <ul>
-      {data.map((item,key)=>(
+      {content.map((item,key)=>(
           <li key={key}>
             <Link href={"/"+item.slug+"?id="+item.id}>{item.name}</Link> 
             </li>
