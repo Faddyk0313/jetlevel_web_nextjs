@@ -2,18 +2,18 @@ import Image from 'next/image';
 
 const MeetOwner = () => {
     return (
-        <section className="bg-blue-background px-4  py-10 bg-no-repeat bg-cover">
-            <div className="flex flex-col md:flex-row items-center lg:items-start gap-5 max-w-[1800px] mx-auto">
-                <div className="mb-5 md:min-w-[47%] ">
+        <section className="bg-blue-background px-4 flex items-center  py-10 bg-no-repeat bg-cover sectionHeight">
+            <div className="flex flex-col md:flex-row items-center justify-center lg:items-start gap-5 max-w-[1800px] m-auto">
+                <div className="mb-5 md:min-w-[570px]">
                     <Image
                         src='/images/ricky-photo.webp'
                         alt="Owner Image"
                         width={600} // Adjust according to the image size
                         height={800} // Adjust according to the image size
-                        className="w-auto h-auto object-cover"
+                        className="w-full h-full max-w-[570px] max-h-[780px] object-cover"
                     />
                 </div>
-                <div className="text-white md:pl-5 pt-5 md:pt-[5vh]">
+                <div className="text-white md:max-w-[60%] md:pl-5 pt-5 md:pt-[5vh]">
                     <h4 className='mb-3'>MEET THE OWNER</h4>
                     <h2 className='mb-3'>Hi, I'm Ricky</h2>
                     <p className='mb-[10px] details leading-relaxed text-[#bbbbbb]'>
