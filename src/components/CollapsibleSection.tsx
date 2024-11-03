@@ -61,8 +61,8 @@ const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({ title, content,
                         ))}
                     </div>
                 ) : (
-                    <p className="mt-2 details leading-8 text-gray-700">
-                        {content}
+                    <p className="mt-2 details leading-8 text-gray-700"       
+                    dangerouslySetInnerHTML={{ __html: content }}>
                     </p>
                 )}
             </div>
