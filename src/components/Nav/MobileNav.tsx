@@ -34,11 +34,11 @@ function NavbarDropdown() {
         className={`fixed top-[4.5rem] left-0 h-full w-full bg-black flex flex-col pl-5 space-y-6 transform transition-transform duration-500 ease-in-out  ${isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
       >
-        <Link href="tel:+18555385383" className="text-white text-sm font-bold no-underline">
+        <Link href="tel:+18555385383" className="text-white text-sm font-bold hover:underline hover:text-blue-600">
           1-855-JETLEVEL
         </Link>
         <div onClick={() => handleClick('services')}>
-          <span className="flex items-center gap-4 text-white text-sm font-bold no-underline">
+          <span className="flex items-center gap-4 text-white text-sm font-bold  hover:underline hover:text-blue-600">
             OUR SERVICES
             <FaChevronDown className="border w-9 h-4 rounded-lg" />
           </span>
@@ -57,7 +57,7 @@ function NavbarDropdown() {
         </div>
 
         <div onClick={() => handleClick('jet-charter')}>
-          <span className="flex items-center gap-4 text-white text-sm font-bold no-underline">
+          <span className="flex items-center gap-4 text-white text-sm font-bold ">
             JET CHARTER
             <FaChevronDown className="border w-9 h-4 rounded-lg" />
           </span>
@@ -75,7 +75,7 @@ function NavbarDropdown() {
           )}
         </div>
         <div onClick={() => handleClick('charter-resources')}>
-          <span className="flex items-center gap-4 text-white text-sm font-bold no-underline">
+          <span className="flex items-center gap-4 text-white text-sm font-bold ">
             CHARTER RESOURCES
             <FaChevronDown className="border w-9 h-4 rounded-lg" />
           </span>
@@ -93,11 +93,11 @@ function NavbarDropdown() {
             />
           )}
         </div>
-        <Link href="#" className="text-white text-sm font-bold no-underline">
+        <Link href="#" className="text-white text-sm font-bold ">
           PRICING
         </Link>
         <div onClick={() => handleClick('company')}>
-          <span className="flex items-center gap-4 text-white text-sm font-bold no-underline">
+          <span className="flex items-center gap-4 text-white text-sm font-bold ">
             COMPANY
             <FaChevronDown className="border w-9 h-4 rounded-lg" />
           </span>

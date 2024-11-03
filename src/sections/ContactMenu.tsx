@@ -9,21 +9,21 @@ const ContactMenu = () => {
     <section className="sticky bottom-0 p-0 bg-[#f7f7f7] z-20">
       <div className="max-w-[1800px] mx-auto px-0 md:px-10 lg:px-20 grid grid-cols-3 gap-1">
         <Link
-          className="flex items-center justify-center gap-2 bg-[#ebecee] text-xs md:text-base font-bold md:font-normal text-gray-800 py-2 text-center"
+          className="flex items-center justify-center gap-2 bg-[#ebecee] text-xs md:text-base font-bold md:font-normal text-gray-800 py-2 text-center hover:underline "
           href={"#"}
         >
           <IoCall className="hidden md:block text-2xl" />
           <span>CALL US</span>
         </Link>
         <Link
-          className="flex items-center justify-center gap-2  bg-[#ebecee] text-xs md:text-base font-bold md:font-normal text-gray-800 py-2 text-center"
+          className="flex items-center justify-center gap-2  bg-[#ebecee] text-xs md:text-base font-bold md:font-normal text-gray-800 py-2 text-center hover:underline "
           href={"#"}
         >
           <IoMail className="hidden md:block text-2xl" /> 
           <span>EMAIL US</span>
         </Link>
         <Link
-          className="flex items-center justify-center gap-2 bg-[#0071ba] text-xs md:text-base font-bold md:font-normal text-white py-2 text-center"
+          className="flex items-center justify-center gap-2 bg-[#0071ba] text-xs md:text-base font-bold md:font-normal text-white py-2 text-center hover:underline "
           href={"#"}
         >
           <IoIosAirplane className="hidden md:block text-2xl" /> 

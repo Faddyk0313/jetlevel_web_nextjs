@@ -12,15 +12,15 @@ const nextConfig = {
         destination: '/jet-charter/us-canada/:location',
       },
       {
-        source: '/international-chartered-cities/',
+        source: '/international-chartered-cities',
         destination: '/jet-charter/international',
       },
       {
-        source: '/popular-routes/',
+        source: '/popular-routes',
         destination: '/jet-charter/popular-routes',
       },
       {
-        source: '/empty-leg-flights/',
+        source: '/empty-leg-flights',
         destination: '/jet-charter/empty-legs',
       },
       {

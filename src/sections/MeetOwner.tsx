@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 
 const MeetOwner = () => {
     return (
@@ -32,7 +33,7 @@ const MeetOwner = () => {
                         <p className='text-[#bbbbbb] pb-1'><span className='text-cyan-400'>✓&nbsp;</span> 1,000+ annual charters</p>
                     </div>
                     <button className='text-white px-5 py-2 my-2 rounded-full text-lg bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1'>
-                        <a href="" className=''>Book Your Flight</a>
+                        <Link href="#" className=''>Book Your Flight</Link>
                     </button>
                 </div>
             </div>

@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import { FiPlus } from "react-icons/fi";
 import { FaUserFriends, FaPlane } from "react-icons/fa";
+import Link from 'next/link';
 
 interface Aircraft {
     type: string;
@@ -61,7 +62,7 @@ const CollapsibleAircraftSection: React.FC<CollapsibleAircraftSectionProps> = ({
 
                 {/* Disclaimer Message */}
                 <p className="text-gray-500 text-center text-xs italic mt-3">
-                    For more information on these and other charter aircraft, visit our <a href="#" className="text-[#0071ba] underline">Private Jet Charter Aircraft</a>.
+                    For more information on these and other charter aircraft, visit our <Link href="#" className="text-[#0071ba] underline">Private Jet Charter Aircraft Page</Link>.
                 </p>
             </div>
         </section>

@@ -107,7 +107,7 @@ const Footer = () => {
                                     <Link
                                         href="#"
                                         // Will cause weird wrapping of li if not inline flex
-                                        className={`text-[#858585] leading-7  mr-4 ${index !== 0 ? "inline-flex" : ""}`}
+                                        className={`text-[#858585] leading-7 hover:underline hover:text-blue-600 mr-4 ${index !== 0 ? "inline-flex" : ""}`}
                                     >
                                         {link}
                                     </Link>
@@ -126,8 +126,8 @@ const Footer = () => {
                     <div className='flex gap-5 flex-col md:flex-row lg:flex-col'>
                         <div>&copy; 2024 Jetlevel Aviation LLC All rights reserved</div>
                         <div className='flex flex-row gap-3 md:mx-auto lg:mx-0'>
-                            <a href="#">Privacy</a>
-                            <a href="#" >Legal</a>
+                            <Link href="#" className='hover:underline hover:text-blue-600'>Privacy</Link>
+                            <Link href="#" className='hover:underline hover:text-blue-600'>Legal</Link>
                         </div>
                     </div>
                     <div className='flex-1 text-[#858585] text-xs '>
