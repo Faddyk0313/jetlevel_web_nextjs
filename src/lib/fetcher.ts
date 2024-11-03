@@ -106,10 +106,10 @@ export type FetcherOptions = {
 
 
 
-  export async function fetcher<EmptyLegFlightsResponse>(
+  export async function fetcher<T>(
     url: string,
     options: FetcherOptions = {}
-  ): Promise<EmptyLegFlightsResponse> {
+  ): Promise<T> {
     const { method = 'GET', headers = {}, body } = options;
   
     try {
@@ -127,7 +127,7 @@ export type FetcherOptions = {
       }
   
       const data = await response.json();
-      return data as EmptyLegFlightsResponse;
+      return data as T;
     } catch (error) {
       console.error("Fetch error:", error);
       throw error;
