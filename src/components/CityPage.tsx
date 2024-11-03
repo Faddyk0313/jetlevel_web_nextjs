@@ -187,6 +187,7 @@ const CityPage = () => {
                     <CollapsibleSection
                         title={`Private jet to Addison, TX`}
                         content="Traveling to Addison, TX, via private jet provides convenient access to Addison Airport, right in the heart of the Dallas area, offering privacy and speed. Golfers can enjoy the nearby Bent Tree Country Club. Addison's vibrant dining scene and numerous events, like the Kaboom Town! fireworks show, make it a lively destination. For business or leisure, dining at Chamberlain’s Steak and Chop House offers a top-tier culinary experience. Luxury accommodations are available at the InterContinental Dallas. Must-visit spots include the Cavanaugh Flight Museum and the Addison Circle Park. Private jet travel to Addison ensures efficiency and personalized service, enhancing the journey with comfort and exclusivity."
+                        isDefaultOpen={true}
                     />
                     <CollapsibleInfoSection
                         title={`Addison, TX Airports & Charter Routes`}
@@ -284,7 +285,6 @@ const CityPage = () => {
                     <CollapsibleTravelGuideSection
                         title="Addison, TX Travel Guide"
                         data={travelGuideData}
-                        isDefaultOpen={true}
                     />
 
 
