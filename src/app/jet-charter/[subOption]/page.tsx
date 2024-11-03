@@ -32,16 +32,18 @@ const JetCharter = async({ params }: PageProps) => {
   };
 
   const {content} = await createClient()
+  // .getContentBySlug('empty-leg-flights-aspen', 'empty_leg_flights')
   .getContentByType({
     contentType: "empty_leg_flights",
        sortBy: "published_at",
     sortDirection: "desc"
   })
   .catch((err) => {
-    // console.log(err)
+    console.log(err)
     notFound()
   })
 
+console.log(content)
 
   return (
     <div className="p-6 max-w-4xl mx-auto text-center">
