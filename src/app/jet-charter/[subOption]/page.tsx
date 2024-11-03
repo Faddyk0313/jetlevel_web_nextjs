@@ -51,7 +51,7 @@ console.log(content)
       <ul>
       {content.map((item,key)=>(
           <li key={key}>
-            <Link href={"/"+item.slug+"?id="+item.id}>{item.name}</Link> 
+            <Link href={"/"+item.slug}>{item.name}</Link> 
             </li>
         ))}
       </ul> 
