@@ -1,10 +1,10 @@
 "use client";
+import Markdown from 'markdown-to-jsx';
 import React, { useState } from 'react';
 import { FiPlus } from "react-icons/fi";
 
 interface TableData {
-    headers: string[];
-    rows: string[][];
+    rows2: any;
 }
 
 interface Item {
@@ -23,6 +23,13 @@ const CollapsibleTableSection: React.FC<CollapsibleTableSectionProps> = ({ title
     const [isOpen, setIsOpen] = useState(isDefaultOpen);
 
     const toggleSection = () => setIsOpen((prev) => !prev);
+
+    // Transform data into the desired rows structure
+    const Tablerows = item.tableData.rows2.map((item: { text: string }) => item.text.split('/'));
+    let firstTable = {
+        headers: ["To/From Location", "Aircraft Type", "Passengers", "Avg. Flight Time (hrs)", "Targeted Price (One-way)"],
+        newRows: Tablerows
+    };
 
     const secondSubHeadng = {
         heading: "Private Jet Prices – Ballpark Hourly Rates",
@@ -61,25 +68,39 @@ const CollapsibleTableSection: React.FC<CollapsibleTableSectionProps> = ({ title
                         <h3 className="text-xl font-bold text-gray-800 mb-2">{item.heading}</h3>
 
                         {/* Section Content */}
-                        <p className="text-gray-700 mb-4">{item.content}</p>
+                        <div className='mt-2 details leading-8 text-gray-700'>
+                            <Markdown
+                                options={{
+                                    overrides: {
+                                        a: {
+                                            props: {
+                                                className: 'underline text-blue-400',
+                                            },
+                                        },
+                                    },
+                                }}
+                            >
+                                {item.content as string}
+                            </Markdown>
+                        </div>
 
                         {/* Table */}
                         <div className="overflow-x-auto">
                             <table className="min-w-full border border-gray-200">
                                 <thead>
                                     <tr className="bg-[#0071ba] text-white">
-                                        {item.tableData.headers.map((header, headerIndex) => (
-                                            <th key={headerIndex} className="px-4 py-2 text-left text-sm font-semibold border border-gray-200">
+                                        {firstTable.headers.map((header, headerIndex) => (
+                                            <th key={headerIndex} className="px-4 py-2 text-sm text-center font-semibold border border-gray-200">
                                                 {header}
                                             </th>
                                         ))}
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    {item.tableData.rows.map((row, rowIndex) => (
+                                    {firstTable.newRows.map((row: string[], rowIndex: number)=> (
                                         <tr key={rowIndex} className={rowIndex % 2 === 0 ? "bg-gray-100" : "bg-white"}>
                                             {row.map((cell, cellIndex) => (
-                                                <td key={cellIndex} className="px-4 py-2 text-sm text-gray-700 border border-gray-200">
+                                                <td key={cellIndex} className="px-4 py-2 text-sm text-center text-gray-700 border border-gray-200">
                                                     {cell}
                                                 </td>
                                             ))}
@@ -106,7 +127,7 @@ const CollapsibleTableSection: React.FC<CollapsibleTableSectionProps> = ({ title
                                 <thead>
                                     <tr className="bg-[#0071ba] text-white">
                                         {secondSubHeadng.tableData.headers.map((header, headerIndex) => (
-                                            <th key={headerIndex} className="px-4 py-2 text-left text-sm font-semibold border border-gray-200">
+                                            <th key={headerIndex} className="px-4 py-2 text-center text-sm font-semibold border border-gray-200">
                                                 {header}
                                             </th>
                                         ))}
@@ -116,7 +137,7 @@ const CollapsibleTableSection: React.FC<CollapsibleTableSectionProps> = ({ title
                                     {secondSubHeadng.tableData.rows.map((row, rowIndex) => (
                                         <tr key={rowIndex} className={rowIndex % 2 === 0 ? "bg-gray-100" : "bg-white"}>
                                             {row.map((cell, cellIndex) => (
-                                                <td key={cellIndex} className="px-4 py-2 text-sm text-gray-700 border border-gray-200">
+                                                <td key={cellIndex} className="px-4 py-2 text-sm text-center text-gray-700 border border-gray-200">
                                                     {cell}
                                                 </td>
                                             ))}

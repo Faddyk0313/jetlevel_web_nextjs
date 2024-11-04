@@ -1,29 +1,23 @@
 "use client";
+import Markdown from 'markdown-to-jsx';
+import Image from 'next/image';
 import React, { useState } from 'react';
 import { FiPlus } from "react-icons/fi";
 
-interface TravelGuideSection {
+// Type definition for the final output
+interface OutputArray {
     title: string;
-    key: string;
-    items: { name: string; description: string; link: string; }[];
-}
-
-interface TravelGuideData {
-    conciergeServices: {
-        description: string;
-        imageUrl: string;
-    };
-    sections: TravelGuideSection[];
-    emergencyContacts: { name: string; phone: string; }[];
+    paragraph: string;
 }
 
 interface CollapsibleTravelGuideSectionProps {
     title: string;
-    data: TravelGuideData;
+    data1: OutputArray[];
+    data2: OutputArray[];
     isDefaultOpen?: boolean;
 }
 
-const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps> = ({ title, data, isDefaultOpen = false }) => {
+const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps> = ({ title, data1, data2, isDefaultOpen = false }) => {
     const [isOpen, setIsOpen] = useState(isDefaultOpen);
 
     const toggleSection = () => setIsOpen((prev) => !prev);
@@ -44,40 +38,68 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
             </div>
             <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[5000px]' : 'max-h-0'}`}>
                 <div className="mt-5 space-y-8">
-
-
                     {/* Weather Section */}
-                    {/* <div>
-                            
-                        </div> */}
 
                     {/* Travel Concierge Services */}
                     <div>
-                        <h3 className="text-2xl font-semibold text-gray-800">Travel Concierge Services</h3>
-                        <p className="text-gray-700 mt-2">{data.conciergeServices.description}</p>
-                        <img src={data.conciergeServices.imageUrl} alt="Concierge Services" className="w-full mt-4 shadow-lg max-w-[1000px] max-h-[750px]" />
+                        <h3 className="text-2xl font-semibold text-gray-800">{data2[0].title}</h3>
+                        <div className='mt-2 details leading-8 text-gray-700'>
+                            <Markdown
+                                options={{
+                                    overrides: {
+                                        a: {
+                                            props: {
+                                                className: 'underline text-blue-400',
+                                            },
+                                        },
+                                    },
+                                }}
+                            >
+                                {data2[0].paragraph as string}
+                            </Markdown>
+                        </div>
+                        <Image width={1100} height={750} src="https://jetlevel.com/wp-content/uploads/2022/10/iStock-664704040-scaled.jpg" alt="Concierge Services" className="w-full mt-4 shadow-lg max-w-[1000px] max-h-[750px]" />
                     </div>
 
-                    {/* Dynamically render sections */}
-                    {data.sections.map((section, sectionIndex) => (
-                        <div key={section.key || sectionIndex}>
+                    {data1.map((section, sectionIndex) => (
+                        <div key={sectionIndex}>
                             <h3 className="text-2xl font-semibold text-gray-800">{section.title}</h3>
-                            {section.items.map((item, itemIndex) => (
-                                <p key={itemIndex} className="text-gray-700 mt-2">
-                                    <a href={item.link} className="text-[#0071ba] underline">{item.name}</a>: {item.description}
-                                </p>
-                            ))}
+                            <div className='mt-2 details leading-8 text-gray-700'>
+                                <Markdown
+                                    options={{
+                                        overrides: {
+                                            a: {
+                                                props: {
+                                                    className: 'underline text-blue-400',
+                                                },
+                                            },
+                                        },
+                                    }}
+                                >
+                                    {section.paragraph as string}
+                                </Markdown>
+                            </div>
                         </div>
                     ))}
 
                     {/* Emergency Services */}
                     <div>
-                        <h3 className="text-2xl font-semibold text-gray-800">Emergency Services and Contacts in Addison, TX</h3>
-                        <p className="text-gray-700 mt-2">In case of emergencies, here are some important contacts:</p>
-                        <p className="text-gray-700 mt-1">Police Department: <a href="tel:972-450-7100" className="text-[#0071ba]">972-450-7100</a></p>
-                        <p className="text-gray-700 mt-1">Fire Department: <a href="tel:972-450-7201" className="text-[#0071ba]">972-450-7201</a></p>
-                        <p className="text-gray-700 mt-1">Medical Center: <a href="tel:972-888-7200" className="text-[#0071ba]">972-888-7200</a></p>
-                        <p className="text-gray-700 mt-2">Call <a href="tel:911" className="text-[#0071ba] font-semibold">911</a> for immediate assistance in any emergency situation.</p>
+                        <h3 className="text-2xl font-semibold text-gray-800">{data2[1].title}</h3>
+                        <div className='mt-2 details leading-8 text-gray-700'>
+                            <Markdown
+                                options={{
+                                    overrides: {
+                                        a: {
+                                            props: {
+                                                className: 'underline text-blue-400',
+                                            },
+                                        },
+                                    },
+                                }}
+                            >
+                                {data2[1].paragraph as string}
+                            </Markdown>
+                        </div>
                     </div>
 
                 </div>

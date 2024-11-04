@@ -1,4 +1,5 @@
 "use client";
+import Markdown from 'markdown-to-jsx';
 import React, { useState } from 'react';
 import { FiPlus } from "react-icons/fi";
 
@@ -10,8 +11,6 @@ interface SectionItem {
 interface Section {
     heading: string;
     content?: string;
-    items?: SectionItem[];
-    requestItenararyMsg?: boolean;
 }
 
 interface CollapsibleInfoSectionProps {
@@ -43,9 +42,21 @@ const CollapsibleInfoSection: React.FC<CollapsibleInfoSectionProps> = ({ title, 
             <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[2100px] sm:max-h-[1200px]' : 'max-h-0'}`}>
                 {/* Render Intro Text */}
                 {intro && (
-                    <p className="mt-2 text-gray-700 leading-7">
-                        {intro}
-                    </p>
+                    <div className='mt-2 details leading-8 text-gray-700'>
+                        <Markdown
+                            options={{
+                                overrides: {
+                                    a: {
+                                        props: {
+                                            className: 'underline text-blue-400',
+                                        },
+                                    },
+                                },
+                            }}
+                        >
+                            {intro as string}
+                        </Markdown>
+                    </div>
                 )}
 
                 {/* Render Sections */}
@@ -55,27 +66,20 @@ const CollapsibleInfoSection: React.FC<CollapsibleInfoSectionProps> = ({ title, 
 
                         {/* Render Section Content if available */}
                         {section.content && (
-                            <p className="mt-2 text-gray-700 leading-7">
-                                {section.content}
-                            </p>
-                        )}
-
-                        {/* Render Section Items if available */}
-                        {section.items && (
-                            <ul className="mt-2 list-disc pl-5">
-                                {section.items.map((item, itemIndex) => (
-                                    <li key={itemIndex} className="mt-1">
-                                        <strong>{item.title} – </strong> {item.description}
-                                    </li>
-                                ))}
-                            </ul>
-                        )}
-                        {section.requestItenararyMsg && (
-                            <div>
-                                <p className="mt-2 text-gray-700 leading-7">
-                                    Don’t see your itinerary above?
-                                    Click here to request a quote using your exact destinations or call us to discuss your routing – 1-855-JetLevel
-                                </p>
+                            <div className='mt-2 details leading-8 text-gray-700'>
+                                <Markdown
+                                    options={{
+                                        overrides: {
+                                            a: {
+                                                props: {
+                                                    className: 'underline text-blue-400',
+                                                },
+                                            },
+                                        },
+                                    }}
+                                >
+                                    {section.content as string}
+                                </Markdown>
                             </div>
                         )}
                     </div>

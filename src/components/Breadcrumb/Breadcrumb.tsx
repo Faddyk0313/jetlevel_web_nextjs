@@ -27,7 +27,6 @@ const Breadcrumb: React.FC = () => {
         for (const [dest, source] of Object.entries(rewriteMapping)) {
             if (path.startsWith(source)) {
                 // Replace destination with source in breadcrumb path
-                console.log("if", path.replace(source, dest));
                 return path.replace(source, dest);
             }
         }
@@ -39,7 +38,6 @@ const Breadcrumb: React.FC = () => {
         ? '/'
         : getRewritePath(pathSegments.slice(0, 1));
     const hrefArray = href.split("/").filter(Boolean);
-    console.log("hrefArray: ", hrefArray);
     return (
         <div className={`${styles.breadcrumbContainer} flex items-center w-fit gap-1`}>
             {/* Home Icon and Link */}
@@ -51,11 +49,9 @@ const Breadcrumb: React.FC = () => {
             {hrefArray.map((segment, index) => {
                 // Build incremental href path
                 const hrefPath = `/${hrefArray.slice(0, index + 1).join("/")}`;
-                console.log("hrefPath", index, ": ", hrefPath);
 
                 // Generate segment name by replacing "-" with space and capitalizing
                 const segmentName = segment.replace(/-/g, ' ').toUpperCase();
-                console.log("segmentName", index, ": ", segmentName);
 
                 // Calculate z-index, with the first link getting the highest value
                 const zIndex = 8 - index;

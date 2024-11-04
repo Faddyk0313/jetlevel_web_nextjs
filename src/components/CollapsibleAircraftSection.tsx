@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import { FiPlus } from "react-icons/fi";
 import { FaUserFriends, FaPlane } from "react-icons/fa";
 import Link from 'next/link';
+import Markdown from 'markdown-to-jsx';
 
 interface Aircraft {
     type: string;
@@ -39,7 +40,21 @@ const CollapsibleAircraftSection: React.FC<CollapsibleAircraftSectionProps> = ({
                 </span>
             </div>
             <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[2100px] sm:max-h-[1200px]' : 'max-h-0'}`}>
-                <p className="text-gray-700 mt-3 mb-5">{description}</p>
+                <div className='my-2 details leading-8 text-gray-700'>
+                    <Markdown
+                        options={{
+                            overrides: {
+                                a: {
+                                    props: {
+                                        className: 'underline text-blue-400',
+                                    },
+                                },
+                            },
+                        }}
+                    >
+                        {description as string}
+                    </Markdown>
+                </div>
 
                 {/* Aircraft Cards Grid */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
