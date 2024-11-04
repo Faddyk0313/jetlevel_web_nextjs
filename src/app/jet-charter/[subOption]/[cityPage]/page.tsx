@@ -4,7 +4,6 @@ import { createClient } from "@/lib/contento";
 import { ContentData } from "@gocontento/client";
 import { notFound } from "next/navigation";
 
-
 type PageProps = {
     params: {
         subOption: string;
@@ -14,33 +13,38 @@ type PageProps = {
 
 const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
     const { subOption, cityPage } = params;
-    
+
     // if (subOption === 'us-canada' || subOption === 'international') {
-    if (subOption === 'us-canada'){
-        return (
-            <CityPage />
-        );
+    if (subOption === 'us-canada') {
+        const content: void | ContentData = await createClient()
+            .getContentById("c_01jBV38cd9sWaJ3agMZP1b0xqx")
+            .catch((err) => {
+                console.log(err);
+            });
+
+        if (!content) {
+            return notFound(); // navigate to a "not found" page if content is missing
+        }
+        return <CityPage fields={content.fields} />;
     }
     else if (subOption === 'empty-legs') {
         // Access the query parameters
-        const content: ContentData = await createClient()
+        const content: void | ContentData = await createClient()
             // .getContentBySlug('empty-leg-flights-aspen', 'empty_leg_flights')
             .getContentBySlug(`empty-leg-flights-${cityPage}`, 'empty_leg_flights')
             .catch((err) => {
-                // console.log(err);
+                console.log(err);
                 notFound();
             });
-        // console.log("-------------", content.fields);
+        if (!content) {
+            return notFound(); // navigate to a "not found" page if content is missing
+        }
+        return <EmptyLegPage fields={content.fields} />;
+    } else {
         return (
-            <EmptyLegPage fields={content.fields} />
-        );
-    }
-    else {
-        // Fallback layout for any other or undefined subOption
-        return (
-            < div className="p-6 max-w-4xl mx-auto text-center" >
+            <div className="p-6 max-w-4xl mx-auto text-center">
                 <h1 className="text-3xl font-bold my-4">Page Not Found</h1>
-            </div >
+            </div>
         );
     }
 };

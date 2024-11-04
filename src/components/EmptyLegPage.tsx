@@ -52,7 +52,7 @@ const EmptyLegPage = async({fields}:any) => {
                 </div>
                 <div className="min-w-[25%] md:w-fit">
                     <TopCharteredCities
-                        title="US"
+                        title="Empty Leg"
                         cities={[
                             { name: 'New York, NY', link: '#' },
                             { name: 'Aspen, CO', link: '#' },

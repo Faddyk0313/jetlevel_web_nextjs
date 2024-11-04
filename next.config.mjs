@@ -12,6 +12,10 @@ const nextConfig = {
         destination: '/jet-charter/us-canada/:location',
       },
       {
+        source: '/private-jet-charter-flights-to-:location',
+        destination: '/jet-charter/us-canada/:location',
+      },
+      {
         source: '/international-chartered-cities',
         destination: '/jet-charter/international',
       },
