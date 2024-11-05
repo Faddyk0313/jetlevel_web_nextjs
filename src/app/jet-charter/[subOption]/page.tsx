@@ -53,7 +53,7 @@ const JetCharter = async ({ params }: PageProps) => {
     .catch((err) => {
       notFound();
     });
-
+console.log("contentType:",content)
   return (
     <div className="p-6 max-w-4xl mx-auto text-center">
       <h1 className="text-3xl font-bold my-4">{title}</h1>

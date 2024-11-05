@@ -17,7 +17,8 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
     // if (subOption === 'us-canada' || subOption === 'international') {
     if (subOption === 'us-canada') {
         const content: void | ContentData = await createClient()
-            .getContentById("c_01jBV38cd9sWaJ3agMZP1b0xqx")
+            // .getContentById("c_01jBV38cd9sWaJ3agMZP1b0xqx")
+            .getContentBySlug(`private-jet-charter-flights-to-${cityPage}`, 'usa_city_pages')
             .catch((err) => {
                 console.log(err);
             });
@@ -30,7 +31,6 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
     else if (subOption === 'empty-legs') {
         // Access the query parameters
         const content: void | ContentData = await createClient()
-            // .getContentBySlug('empty-leg-flights-aspen', 'empty_leg_flights')
             .getContentBySlug(`empty-leg-flights-${cityPage}`, 'empty_leg_flights')
             .catch((err) => {
                 console.log(err);
