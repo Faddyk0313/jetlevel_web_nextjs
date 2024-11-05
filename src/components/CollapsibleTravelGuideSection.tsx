@@ -3,25 +3,36 @@ import Markdown from 'markdown-to-jsx';
 import Image from 'next/image';
 import React, { useState } from 'react';
 import { FiPlus } from "react-icons/fi";
+import dynamic from "next/dynamic";
+
+const DynamicWeatherWidget = dynamic(() => import("./WeatherWidget"), {
+    ssr: false,
+});
 
 // Type definition for the final output
 interface OutputArray {
     title: string;
     paragraph: string;
 }
+interface WeatherData {
+    title: string;
+    paragraph: string;
+    widgetHtml: string;
+}
 
 interface CollapsibleTravelGuideSectionProps {
     title: string;
     data1: OutputArray[];
     data2: OutputArray[];
+    weatherData: WeatherData;
     isDefaultOpen?: boolean;
 }
 
-const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps> = ({ title, data1, data2, isDefaultOpen = false }) => {
+const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps> = ({ title, data1, data2, weatherData, isDefaultOpen = false }) => {
+
     const [isOpen, setIsOpen] = useState(isDefaultOpen);
 
     const toggleSection = () => setIsOpen((prev) => !prev);
-
     return (
         <section className="border-b py-5">
             <div
@@ -39,6 +50,17 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
             <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[5000px]' : 'max-h-0'}`}>
                 <div className="mt-5 space-y-8">
                     {/* Weather Section */}
+                    <div>
+                        <h3 className="text-2xl font-semibold text-gray-800">{weatherData.title}</h3>
+                        <div className='mt-2 details leading-8 text-gray-700'>
+                            <p className='my-2'>
+                                <Markdown>
+                                    {weatherData.paragraph}
+                                </Markdown>
+                            </p>
+                            <DynamicWeatherWidget widgetHtml={weatherData.widgetHtml} />
+                        </div>
+                    </div>
 
                     {/* Travel Concierge Services */}
                     <div>

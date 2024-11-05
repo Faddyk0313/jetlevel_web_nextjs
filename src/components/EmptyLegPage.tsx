@@ -4,7 +4,6 @@ import CollapsibleSection from "./CollapsibleSection";
 import TopCharteredCities from "./TopCharteredCities";
 import BookYourPrivateJet from "@/sections/BookYourPrivateJet";
 import Breadcrumb from "./Breadcrumb/Breadcrumb";
-import { console } from "inspector";
 
 // import { EmptyLegFlightResponse, fetcher } from '@/lib/fetcher';
 // type EmptyLegProps = {

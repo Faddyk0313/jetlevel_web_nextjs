@@ -13,6 +13,7 @@ const Breadcrumb: React.FC = () => {
     // Rewrite mappings (mirror rewrites in next.config.js)
     const rewriteMapping: { [key: string]: string; } = {
         '/jet-charter/us-canada/': '/us-canada-chartered-cities',
+        '/jet-charter/us-canada/addison': '/us-canada-chartered-cities',
         '/jet-charter/international/': '/international-chartered-cities',
         '/jet-charter/popular-routes/': '/popular-routes',
         '/jet-charter/empty-legs/': '/empty-leg-flights-',

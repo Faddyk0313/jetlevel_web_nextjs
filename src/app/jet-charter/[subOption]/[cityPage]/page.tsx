@@ -31,6 +31,7 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
     else if (subOption === 'empty-legs') {
         // Access the query parameters
         const content: void | ContentData = await createClient()
+            // .getContentBySlug('empty-leg-flights-aspen', 'empty_leg_flights')
             .getContentBySlug(`empty-leg-flights-${cityPage}`, 'empty_leg_flights')
             .catch((err) => {
                 console.log(err);
