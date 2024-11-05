@@ -17,34 +17,41 @@ const CityPage = async ({ fields }: any) => {
     })); 
     let fields2 = [
         {
-            title: fields.must_see_attractions.blocks[0].fields.title.text,
-            paragraph: fields.must_see_attractions.blocks[0].fields.paragraph.text
+            title: fields.must_see_attractions?.blocks[0]?.fields?.title?.text,
+        paragraph: fields.must_see_attractions?.blocks[0]?.fields?.paragraph?.text,
         },
         {
-            title: fields.top_luxury_hotels.blocks[0].fields.title.text,
-            paragraph: fields.top_luxury_hotels.blocks[0].fields.paragraph.text,
+            title: fields.top_luxury_hotels?.blocks[0]?.fields?.title?.text,
+            paragraph: fields.top_luxury_hotels?.blocks[0]?.fields?.paragraph?.text,
         },
         {
-            title: fields.high_end_restaurants.blocks[0].fields.title.text,
-            paragraph: fields.high_end_restaurants.blocks[0].fields.paragraph.text,
+            title: fields.high_end_restaurants?.blocks[0]?.fields?.title?.text,
+            paragraph: fields.high_end_restaurants?.blocks[0]?.fields?.paragraph?.text,
         },
         {
-            title: fields.top_business_venues.blocks[0].fields.title.text,
-            paragraph: fields.top_business_venues.blocks[0].fields.paragraph.text,
+            title: fields.top_business_venues?.blocks[0]?.fields?.title?.text,
+            paragraph: fields.top_business_venues?.blocks[0]?.fields?.paragraph?.text,
         },
         {
-            title: fields.concerts_and_shows.blocks[0].fields.title.text,
-            paragraph: fields.concerts_and_shows.blocks[0].fields.paragraph.text,
+            title: fields.concerts_and_shows?.blocks[0]?.fields?.title?.text,
+            paragraph: fields.concerts_and_shows?.blocks[0]?.fields?.paragraph?.text,
         },
         {
-            title: fields.arts_and_culture.blocks[0].fields.title.text,
-            paragraph: fields.arts_and_culture.blocks[0].fields.paragraph.text,
+            title: fields.arts_and_culture?.blocks[0]?.fields?.title?.text,
+            paragraph: fields.arts_and_culture?.blocks[0]?.fields?.paragraph?.text,
         },
         {
-            title: fields.golf_courses.blocks[0].fields.title.text,
-            paragraph: fields.golf_courses.blocks[0].fields.paragraph.text,
+            title: fields.golf_courses?.blocks[0]?.fields?.title?.text,
+            paragraph: fields.golf_courses?.blocks[0]?.fields?.paragraph?.text,
         }
     ];
+    fields2 = fields2.filter(item => item.title && item.paragraph);
+
+    const weatherFields = {
+        title: fields.weather.blocks[0].fields.title.text,
+        paragraph: fields.weather.blocks[0].fields.paragraph.text,
+        widgetHtml: fields.weather.blocks[0].fields.weather_widget.text
+    }
 
     const otherFields = [
         {
@@ -56,6 +63,7 @@ const CityPage = async ({ fields }: any) => {
             paragraph: fields.emergency_services.blocks[0].fields.paragraph.text
         }
     ];
+
     return (
         <>
             {/* Hero link will come inn props */}
@@ -147,7 +155,7 @@ const CityPage = async ({ fields }: any) => {
                     />
                     <CollapsibleSection title="Frequently Asked Questions" content={faqContent} />
 
-                    <CollapsibleTravelGuideSection title={fields.main_heading.text} data1={fields2} data2={otherFields} isDefaultOpen={true} />
+                    <CollapsibleTravelGuideSection title={fields.main_heading.text} data1={fields2} data2={otherFields} weatherData={weatherFields} isDefaultOpen={true} />
                 </div>
                 <div className="min-w-[25%] md:w-fit">
                     <TopCharteredCities
