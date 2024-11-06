@@ -1,4 +1,3 @@
-// app/components/Breadcrumb.tsx
 "use client";
 
 import Link from 'next/link';
@@ -10,66 +9,86 @@ const Breadcrumb: React.FC = () => {
     const pathname = usePathname();
     const pathSegments: string[] = pathname?.split('/').filter(Boolean) || [];
 
-    // Rewrite mappings (mirror rewrites in next.config.js)
-    const rewriteMapping: { [key: string]: string; } = {
-        '/jet-charter/us-canada/': '/us-canada-chartered-cities',
-        '/jet-charter/us-canada/addison': '/us-canada-chartered-cities',
-        '/jet-charter/international/': '/international-chartered-cities',
-        '/jet-charter/popular-routes/': '/popular-routes',
-        '/jet-charter/empty-legs/': '/empty-leg-flights-',
+    // Rewrite mappings (including dynamic routes)
+    const rewriteMapping: { [key: string]: string } = {
+        '/jet-charter/us-canada': '/us-canada-chartered-cities',
+        '/jet-charter/us-canada/:location': '/private-jet-charter-flights-to-:location',
+        '/jet-charter/international': '/international-chartered-cities',
+        '/jet-charter/popular-routes': '/popular-routes',
+        '/jet-charter/empty-legs': '/empty-leg-flights',
+        '/jet-charter/empty-legs/:location': '/empty-leg-flights-:location',
     };
 
-    // Function to handle rewrite matching
-    const getRewritePath = (segments: string[]) => {
-        const path = '/' + segments.join('/'); // '/empty-leg-flights-:location'
-        // Check if path matches any rewrites
+    // Helper function to apply rewrite rules based on dynamic segments
+    // `reverse` flag indicates whether to map from actual path to rewrite path (normal) or reverse
+    const applyRewrite = (path: string, reverse: boolean = false): string => {
         for (const [dest, source] of Object.entries(rewriteMapping)) {
-            if (path.startsWith(source)) {
-                // Replace destination with source in breadcrumb path
-                return path.replace(source, dest);
+            // Determine the mapping direction based on the reverse flag
+            const from = reverse ? dest : source;
+            const to = reverse ? source : dest;
+
+            // Create regex pattern to match dynamic segments (e.g., ":location")
+            const regex = new RegExp('^' + from.replace(/:([^/]+)/g, '([^/]+)') + '$');
+            const match = path.match(regex);
+
+            if (match) {
+                // Replace dynamic segments with actual values from the matched URL
+                let rewrittenPath = to;
+                const dynamicParts = from.match(/:([^/]+)/g) || [];
+                dynamicParts.forEach((part, index) => {
+                    const value = match[index + 1];
+                    rewrittenPath = rewrittenPath.replace(part, value);
+                });
+                return rewrittenPath;
             }
         }
-        return path;
+        return path; // Return original path if no rewrite match is found
     };
 
+    // Get rewrite path for constructing breadcrumb segments
+    const getRewritePath = (segments: string[]) => applyRewrite('/' + segments.join('/'));
+
+    // Get the rewritten display URL for a given actual route path
+    const getRewrittenHref = (actualPath: string) => applyRewrite(actualPath, true);
+
     const isJetCharter = pathSegments[0] === 'jet-charter';
-    const href = isJetCharter
-        ? '/'
-        : getRewritePath(pathSegments.slice(0, 1));
-    const hrefArray = href.split("/").filter(Boolean);
-    console.log("hrefArray", hrefArray)
+    const href = isJetCharter ? '/' : getRewritePath(pathSegments.slice(0, 1));
+
+    // Skip the first segment ("jet-charter") for rendering breadcrumbs
+    const hrefArray = href.split("/").filter(Boolean).slice(1);
 
     return (
-        <div className={`${styles.breadcrumbContainer} flex flex-wrap items-center w-fit gap-1`}>
-            {/* Home Icon and Link */}
-            <div className="rounded-lg h-10">
-                <Link href="/" className={`${styles.breadcrumbLink} h-10  rounded-l-md px-3 py-2 flex items-center text-xl gap-1 text-white z-10`}>
+        <div className={`${styles.breadcrumbContainer} flex items-center w-fit gap-1`}>
+            {/* Home icon linking to root */}
+            <div className="rounded-lg">
+                <Link href="/" className={`${styles.breadcrumbLink} rounded-l-md px-3 py-2 flex items-center h-10 text-xl gap-1 text-white z-10`}>
                     <FiHome />
                 </Link>
             </div>
+            {/* Map through each segment to generate breadcrumb links */}
             {hrefArray.map((segment, index) => {
-                // Build incremental href path
-                const hrefPath = `/${hrefArray.slice(0, index + 1).join("/")}`;
-                const linkHref = hrefPath === '/jet-charter' ? '/' : hrefPath;
+                // Construct path up to the current segment for breadcrumb linking
+                const hrefPath = `/${['jet-charter', ...hrefArray.slice(0, index + 1)].join("/")}`;
 
-                // Generate segment name by replacing "-" with space and capitalizing
+                // Get the rewritten URL (e.g., applying dynamic segments) for each breadcrumb
+                const rewrittenHref = getRewrittenHref(hrefPath);
+
+                // Format segment name for display (replacing hyphens and capitalizing)
                 const segmentName = segment.replace(/-/g, ' ').toUpperCase();
 
-                // Calculate z-index, with the first link getting the highest value
+                // z-index for overlapping visual styling, decreasing with each segment
                 const zIndex = 8 - index;
-                console.log("hrefPath", hrefPath)
-                
+
                 return (
-                    <div key={`${hrefPath}-${index}`} className="flex items-center h-10 ">
+                    <div key={`${hrefPath}-${index}`} className="flex items-center">
                         <Link
-                            href={linkHref}
-                            className={`${styles.breadcrumbLink} h-10  text-xs md:text-base py-2 pl-7 pr-3`}
+                            href={rewrittenHref}  // Use the rewritten URL here
+                            className={`${styles.breadcrumbLink} py-2 pl-7 pr-3`}
                             style={{ zIndex: zIndex }}
                         >
                             {segmentName}
                         </Link>
                     </div>
-
                 );
             })}
         </div>
