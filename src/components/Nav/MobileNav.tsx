@@ -20,7 +20,7 @@ function NavbarDropdown() {
     // If the clicked menu is already active, close it. Otherwise, open the clicked menu.
     setActiveDropdown((prev) => (prev === menu ? null : menu));
   };
-  const closeDropdown = () => setActiveDropdown(null);
+  const closeDropdown = () => setIsOpen(false);
 
   return (
     <>
