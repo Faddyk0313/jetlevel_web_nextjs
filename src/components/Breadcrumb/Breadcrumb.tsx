@@ -19,8 +19,6 @@ const Breadcrumb: React.FC = () => {
         '/jet-charter/empty-legs/': '/empty-leg-flights-',
     };
 
-
-
     // Function to handle rewrite matching
     const getRewritePath = (segments: string[]) => {
         const path = '/' + segments.join('/'); // '/empty-leg-flights-:location'
@@ -39,29 +37,33 @@ const Breadcrumb: React.FC = () => {
         ? '/'
         : getRewritePath(pathSegments.slice(0, 1));
     const hrefArray = href.split("/").filter(Boolean);
+    console.log("hrefArray", hrefArray)
+
     return (
-        <div className={`${styles.breadcrumbContainer} flex items-center w-fit gap-1`}>
+        <div className={`${styles.breadcrumbContainer} flex flex-wrap items-center w-fit gap-1`}>
             {/* Home Icon and Link */}
-            <div className="rounded-lg">
-                <Link href="/" className={`${styles.breadcrumbLink}  rounded-l-md px-3 py-2 flex items-center h-10 text-xl gap-1 text-white z-10`}>
+            <div className="rounded-lg h-10">
+                <Link href="/" className={`${styles.breadcrumbLink} h-10  rounded-l-md px-3 py-2 flex items-center text-xl gap-1 text-white z-10`}>
                     <FiHome />
                 </Link>
             </div>
             {hrefArray.map((segment, index) => {
                 // Build incremental href path
                 const hrefPath = `/${hrefArray.slice(0, index + 1).join("/")}`;
+                const linkHref = hrefPath === '/jet-charter' ? '/' : hrefPath;
 
                 // Generate segment name by replacing "-" with space and capitalizing
                 const segmentName = segment.replace(/-/g, ' ').toUpperCase();
 
                 // Calculate z-index, with the first link getting the highest value
                 const zIndex = 8 - index;
+                console.log("hrefPath", hrefPath)
                 
                 return (
-                    <div key={`${hrefPath}-${index}`} className="flex items-center">
+                    <div key={`${hrefPath}-${index}`} className="flex items-center h-10 ">
                         <Link
-                            href={hrefPath}
-                            className={`${styles.breadcrumbLink} py-2 pl-7 pr-3`}
+                            href={linkHref}
+                            className={`${styles.breadcrumbLink} h-10  text-xs md:text-base py-2 pl-7 pr-3`}
                             style={{ zIndex: zIndex }}
                         >
                             {segmentName}
