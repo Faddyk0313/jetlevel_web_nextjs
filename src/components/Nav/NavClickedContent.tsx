@@ -9,7 +9,7 @@ type navClickedContentProps = {
 
 const NavClickedContent: React.FC<navClickedContentProps> = ({ subOptions, closeDropdown }) => {
   return (
-    <div className="lg:absolute top-20 left-0 w-screen bg-black z-50">  {/* Full width black background */}
+    <div className="lg:absolute top-[4.5rem] left-0 w-screen bg-black z-50">  {/* Full width black background */}
       <div className='bg-black w-full absolute right-full h-full'></div>
       <div className="max-w-[1800px] mr-auto">  {/* Center the content with max width */}
         <ul className="flex lg:w-full lg:justify-evenly items-center py-5 pr-2 lg:py-10 flex-wrap">
