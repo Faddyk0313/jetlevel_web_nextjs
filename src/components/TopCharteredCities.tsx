@@ -25,7 +25,7 @@ const TopCharteredCities: React.FC<TopCharteredCitiesProps> = ({ title, cities, 
                 <div className="px- text-center text-gray-700">
                     <div className="grid grid-cols-2 gap-y-5 gap-x-2 py-5 px-3 justify-center">
                         {cities.map((city, index) => (
-                            <Link key={index} className='text-xs hover:underline hover:text-blue-600' href={city.link}>
+                            <Link key={index} className='text-xs hover:text-darkBlue' href={city.link}>
                                 {city.name}
                             </Link>
                         ))}

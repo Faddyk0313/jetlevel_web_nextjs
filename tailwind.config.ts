@@ -7,10 +7,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'darkerBlueIcon': '#476679',
         'darkBlue': '#0170ce',
-        'lightBlue': '#0170ce',
-        'grayText': '#d1d5db',
+        'lightBlue': '#6ec1e4',
       },
       backgroundImage: {
         'home-background': "url('https://fly.jetlevel.com/assets/Private%20jet%20interior%20bg%20.webp')",

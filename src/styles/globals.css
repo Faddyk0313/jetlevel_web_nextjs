@@ -25,7 +25,6 @@
     100% {
       transform: rotate(0);
     }
-    /* The ringing animation happens within the first 20% of the total time */
   }
 
   .animate-ringing {

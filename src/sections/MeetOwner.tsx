@@ -27,10 +27,10 @@ const MeetOwner = () => {
                         Whether you're traveling for business or pleasure, we're ready to get you from point A to B in style and luxury. So, please, relax and enjoy your flight.
                     </p>
                     <div className='my-3 details leading-relaxed'>
-                        <p className='text-[#bbbbbb] pb-1'><span className='text-cyan-400'>✓&nbsp;</span> 5,000+ world's safest jets</p>
-                        <p className='text-[#bbbbbb] pb-1'><span className='text-cyan-400'>✓&nbsp;</span> 15+ years in business</p>
-                        <p className='text-[#bbbbbb] pb-1'><span className='text-cyan-400'>✓&nbsp;</span> A+ BBB rating</p>
-                        <p className='text-[#bbbbbb] pb-1'><span className='text-cyan-400'>✓&nbsp;</span> 1,000+ annual charters</p>
+                        <p className='text-[#bbbbbb] pb-1'><span className='text-lightBlue'>✓&nbsp;</span> 5,000+ world's safest jets</p>
+                        <p className='text-[#bbbbbb] pb-1'><span className='text-lightBlue'>✓&nbsp;</span> 15+ years in business</p>
+                        <p className='text-[#bbbbbb] pb-1'><span className='text-lightBlue'>✓&nbsp;</span> A+ BBB rating</p>
+                        <p className='text-[#bbbbbb] pb-1'><span className='text-lightBlue'>✓&nbsp;</span> 1,000+ annual charters</p>
                     </div>
                     <button className='text-white px-5 py-2 my-2 rounded-full text-lg bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1'>
                         <Link href="#" className=''>Book Your Flight</Link>
