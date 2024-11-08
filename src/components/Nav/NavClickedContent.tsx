@@ -22,7 +22,7 @@ const NavClickedContent: React.FC<navClickedContentProps> = ({ subOptions, close
                 height={60}
                 className="rounded-full object-cover w-[60px] h-[60px] lg:w-20 lg:h-20"
               />
-              <Link href={option.link} className="text-white text-md md:text-lg lg:text-nowrap hover:text-gray-300"  onClick={closeDropdown}>
+              <Link href={option.link} className="text-white text-md md:text-lg lg:text-nowrap hover:text-darkBlue transition-all duration-100"  onClick={closeDropdown}>
                 {option.name}
               </Link>
             </li>

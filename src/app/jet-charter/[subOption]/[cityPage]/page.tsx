@@ -44,7 +44,7 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
     } else {
         return (
             <div className="p-6 max-w-4xl mx-auto text-center">
-                <h1 className="text-3xl font-bold my-4">Page Not Found</h1>
+                <h1 className="font-bold my-4">Page Not Found</h1>
             </div>
         );
     }

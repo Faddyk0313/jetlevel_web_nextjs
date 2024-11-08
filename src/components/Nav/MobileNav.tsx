@@ -34,11 +34,11 @@ function NavbarDropdown() {
         className={`fixed top-[4.5rem] left-0 h-full overflow-hidden w-full bg-black flex flex-col pl-5 space-y-6 transform transition-transform duration-500 ease-in-out  ${isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
       >
-        <Link href="tel:+18555385383" className="text-white text-sm font-bold hover:underline hover:text-blue-600">
+        <Link href="tel:+18555385383" className="text-white text-sm font-bold">
           1-855-JETLEVEL
         </Link>
         <div onClick={() => handleClick('services')}>
-          <span className="flex items-center gap-4 text-white text-sm font-bold  hover:underline hover:text-blue-600">
+          <span className="flex items-center gap-4 text-white text-sm font-bold">
             OUR SERVICES
             <FaChevronDown className="border w-9 h-4 rounded-lg" />
           </span>

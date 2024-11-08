@@ -4,7 +4,7 @@ import Image from 'next/image';
 const Faqs = () => {
     return (
         <section className="max-w-[1800px] mx-auto sectionHeight flex flex-col justify-center px-5 md:px-10 lg:px-20">
-            <h4 className='text-center text-[#6cc4e9] font-bold mb-2'>GET ANSWERS</h4>
+            <h4 className='text-center text-lightBlue font-bold mb-2'>GET ANSWERS</h4>
             <h2 className="text-center font-bold mb-8">
                 Frequently Asked Questions
             </h2>

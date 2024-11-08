@@ -9,7 +9,7 @@ const OurComitment = () => {
                     <h2 className="mb-4">Our Commitment </h2>
                     <div className='flex flex-col items-center md:flex-row gap-10 md:gap-14'>
                         <div className='lg:w-1/2'>
-                            <div className="flex justify-center items-center mb-4 bg-[#0071ba] w-20 lg:w-28 h-20 lg:h-28 rounded-full">
+                            <div className="flex justify-center items-center mb-4 bg-darkBlue w-20 lg:w-28 h-20 lg:h-28 rounded-full">
                                 <SafetyFirst />
                             </div>
                             <h3 className="font-bold">Safety First </h3>
@@ -18,7 +18,7 @@ const OurComitment = () => {
                             </p>
                         </div>
                         <div className='lg:w-1/2'>
-                            <div className="flex justify-center items-center mb-4 bg-[#0071ba] w-20 lg:w-28 h-20 lg:h-28 rounded-full">
+                            <div className="flex justify-center items-center mb-4 bg-darkBlue w-20 lg:w-28 h-20 lg:h-28 rounded-full">
                                 <TailoredLuxury />
                             </div>
                             <h3 className="font-bold">Tailored Luxury </h3>

@@ -55,11 +55,11 @@ const JetCharter = async ({ params }: PageProps) => {
     });
   return (
     <div className="p-6 max-w-4xl mx-auto text-center">
-      <h1 className="text-3xl font-bold my-4">{title}</h1>
+      <h1 className="font-bold my-4">{title}</h1>
       <ul>
         {content?.map((item, key) => (
           <li key={key}>
-            <Link className="hover:underline hover:text-blue-600" href={"/" + item.slug}>
+            <Link className="hover:text-darkBlue" href={"/" + item.slug}>
               {item.name}
             </Link>
           </li>
