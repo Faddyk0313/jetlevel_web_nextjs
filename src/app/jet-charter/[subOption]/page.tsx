@@ -44,15 +44,34 @@ const JetCharter = async ({ params }: PageProps) => {
   }
 
   // Fetch content based on determined contentType
-  const { content } = await createClient()
-    .getContentByType({
-      contentType: contentType,
-      sortBy: "published_at",
-      sortDirection: "desc"
-    })
-    .catch((err) => {
-      notFound();
-    });
+  // const { content } = await createClient()
+  //   .getContentByType({
+  //     contentType: contentType,
+  //     sortBy: "published_at",
+  //     sortDirection: "desc",
+  //     limit: 30,
+  //   })
+  //   .catch((err) => {
+  //     notFound();
+  //   });
+  // console.log("content-----", content.length)
+  const client = createClient();
+  const limit = 100;  // Set to a reasonable high limit
+  let response = await client.getContentByType({
+    contentType: contentType,
+    sortBy: "published_at",
+    sortDirection: "desc",
+    limit
+  });
+
+  let content = [...response.content];
+
+  while (response.nextPage) {
+    response = await response.nextPage();
+    content = content.concat(response.content);
+  }
+  console.log("Total content items:", content.length);
+
   return (
     <div className="p-6 max-w-4xl mx-auto text-center">
       <h1 className="font-bold my-4">{title}</h1>

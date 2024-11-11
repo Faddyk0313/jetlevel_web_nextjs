@@ -3,10 +3,10 @@ import Markdown from 'markdown-to-jsx';
 import React, { useState } from 'react';
 import { FiPlus } from "react-icons/fi";
 
-interface SectionItem {
-    title: string;
-    description: string;
-}
+// interface SectionItem {
+//     title: string;
+//     description: string;
+// }
 
 interface Section {
     heading: string;
@@ -24,7 +24,15 @@ const CollapsibleInfoSection: React.FC<CollapsibleInfoSectionProps> = ({ title, 
     const [isOpen, setIsOpen] = useState(isDefaultOpen);
 
     const toggleSection = () => setIsOpen((prev) => !prev);
+    function addSpanToTitles(content: string): string {
+        return content.replace(
+            /<p>([^–:]+)[–:]/g,
+            (match, title) => `<p><span>${title.trim()}</span> –`
+        );
+    }
 
+
+    console.log(addSpanToTitles(sections[0].content as string));
     return (
         <section className="border-b py-5">
             <div
@@ -39,7 +47,7 @@ const CollapsibleInfoSection: React.FC<CollapsibleInfoSectionProps> = ({ title, 
                     <FiPlus className="w-7 h-7" />
                 </span>
             </div>
-            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[2100px] sm:max-h-[1200px]' : 'max-h-0'}`}>
+            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? '' : 'max-h-0'}`}>
                 {/* Render Intro Text */}
                 {intro && (
                     <div className='mt-2 details leading-8 text-gray-700'>
@@ -72,13 +80,18 @@ const CollapsibleInfoSection: React.FC<CollapsibleInfoSectionProps> = ({ title, 
                                         overrides: {
                                             a: {
                                                 props: {
-                                                    className: ' text-darkBlue',
+                                                    className: 'text-darkBlue', // Apply blue color to links
+                                                },
+                                            },
+                                            span: {
+                                                props: {
+                                                    className: 'text-darkBlue', // Apply blue color to span-wrapped titles
                                                 },
                                             },
                                         },
                                     }}
                                 >
-                                    {section.content as string}
+                                    {addSpanToTitles(section.content as string)}
                                 </Markdown>
                             </div>
                         )}

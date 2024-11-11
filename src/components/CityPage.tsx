@@ -15,10 +15,11 @@ const CityPage = async ({ fields }: any) => {
         question: fields.faq.blocks[0].fields.questions.list[index].text,
         answer: item.text
     })); 
+
     let fields2 = [
         {
             title: fields.must_see_attractions?.blocks[0]?.fields?.title?.text,
-        paragraph: fields.must_see_attractions?.blocks[0]?.fields?.paragraph?.text,
+            paragraph: fields.must_see_attractions?.blocks[0]?.fields?.paragraph?.text,
         },
         {
             title: fields.top_luxury_hotels?.blocks[0]?.fields?.title?.text,
@@ -155,7 +156,7 @@ const CityPage = async ({ fields }: any) => {
                     />
                     <CollapsibleSection title="Frequently Asked Questions" content={faqContent} />
 
-                    <CollapsibleTravelGuideSection title={fields.main_heading.text} data1={fields2} data2={otherFields} weatherData={weatherFields} isDefaultOpen={true} />
+                    <CollapsibleTravelGuideSection title={fields.main_heading.text} travelGuideFields={fields2} travelConceirge_EmergencyContacts={otherFields} weatherFields={weatherFields} isDefaultOpen={true} />
                 </div>
                 <div className="min-w-[25%] md:w-fit">
                     <TopCharteredCities
