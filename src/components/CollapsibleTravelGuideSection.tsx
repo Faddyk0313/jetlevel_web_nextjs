@@ -14,7 +14,7 @@ interface OutputArray {
     title: string;
     paragraph: string;
 }
-interface WeatherData {
+interface WeatherFields {
     title: string;
     paragraph: string;
     widgetHtml: string;
@@ -22,17 +22,27 @@ interface WeatherData {
 
 interface CollapsibleTravelGuideSectionProps {
     title: string;
-    data1: OutputArray[];
-    data2: OutputArray[];
-    weatherData: WeatherData;
+    travelGuideFields: OutputArray[];
+    travelConceirge_EmergencyContacts: OutputArray[];
+    weatherFields: WeatherFields;
     isDefaultOpen?: boolean;
 }
 
-const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps> = ({ title, data1, data2, weatherData, isDefaultOpen = false }) => {
+const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps> = ({ title, travelGuideFields, travelConceirge_EmergencyContacts, weatherFields, isDefaultOpen = false }) => {
 
     const [isOpen, setIsOpen] = useState(isDefaultOpen);
 
     const toggleSection = () => setIsOpen((prev) => !prev);
+
+    // Utility function to wrap plain text titles with <span>
+    const addSpanToTitles = (html: string): string => {
+        // Regular expression to match list items without <a> tags around the title text
+        return html.replace(
+            /<p>(?!<a)(.*?)[–:]/g,
+            '<p><span>$1</span>:'
+        );
+    };   
+
     return (
         <section className="border-b py-5">
             <div
@@ -51,9 +61,9 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
                 <div className="mt-5 space-y-8">
                     {/* Weather Section */}
                     <div>
-                        <h3 className="text-2xl font-semibold text-gray-800">{weatherData.title}</h3>
+                        <h3 className="text-2xl font-semibold text-gray-800">{weatherFields.title}</h3>
                         <div className='mt-2 details leading-8 text-gray-700'>
-                            <p className='my-2'>
+                            <div className='my-2'>
                                 <Markdown
                                     options={{
                                         overrides: {
@@ -65,16 +75,16 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
                                         },
                                     }}
                                 >
-                                    {weatherData.paragraph}
+                                    {weatherFields.paragraph}
                                 </Markdown>
-                            </p>
-                            <DynamicWeatherWidget widgetHtml={weatherData.widgetHtml} />
+                            </div>
+                            <DynamicWeatherWidget widgetHtml={weatherFields.widgetHtml} />
                         </div>
                     </div>
 
                     {/* Travel Concierge Services */}
                     <div>
-                        <h3 className="text-2xl font-semibold text-gray-800">{data2[0].title}</h3>
+                        <h3 className="text-2xl font-semibold text-gray-800">{travelConceirge_EmergencyContacts[0].title}</h3>
                         <div className='mt-2 details leading-8 text-gray-700'>
                             <Markdown
                                 options={{
@@ -87,13 +97,13 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
                                     },
                                 }}
                             >
-                                {data2[0].paragraph as string}
+                                {travelConceirge_EmergencyContacts[0].paragraph as string}
                             </Markdown>
                         </div>
                         <Image width={1100} height={750} src="https://jetlevel.com/wp-content/uploads/2022/10/iStock-664704040-scaled.jpg" alt="Concierge Services" className="w-full mt-4 shadow-lg max-w-[1000px] max-h-[750px]" />
                     </div>
 
-                    {data1.map((section, sectionIndex) => (
+                    {travelGuideFields.map((section, sectionIndex) => (
                         <div key={sectionIndex}>
                             <h3 className="text-2xl font-semibold text-gray-800">{section.title}</h3>
                             <div className='mt-2 details leading-8 text-gray-700'>
@@ -102,13 +112,18 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
                                         overrides: {
                                             a: {
                                                 props: {
-                                                    className: ' text-darkBlue',
+                                                    className: 'text-darkBlue', // Apply blue color to links
+                                                },
+                                            },
+                                            span: {
+                                                props: {
+                                                    className: 'text-darkBlue', // Apply blue color to span-wrapped titles
                                                 },
                                             },
                                         },
                                     }}
                                 >
-                                    {section.paragraph as string}
+                                    {addSpanToTitles(section.paragraph as string)}
                                 </Markdown>
                             </div>
                         </div>
@@ -116,7 +131,7 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
 
                     {/* Emergency Services */}
                     <div>
-                        <h3 className="text-2xl font-semibold text-gray-800">{data2[1].title}</h3>
+                        <h3 className="text-2xl font-semibold text-gray-800">{travelConceirge_EmergencyContacts[1].title}</h3>
                         <div className='mt-2 details leading-8 text-gray-700'>
                             <Markdown
                                 options={{
@@ -129,7 +144,7 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
                                     },
                                 }}
                             >
-                                {data2[1].paragraph as string}
+                                {travelConceirge_EmergencyContacts[1].paragraph as string}
                             </Markdown>
                         </div>
                     </div>
