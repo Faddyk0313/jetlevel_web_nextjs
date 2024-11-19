@@ -1,4 +1,4 @@
-import { Playfair_Display, Lato, Libre_Baskerville } from 'next/font/google';
+import { Playfair_Display, Montserrat, Libre_Baskerville} from 'next/font/google';
 import "@/styles/globals.css";
 import Nav from '@/sections/Nav';
 import Footer from '@/sections/Footer';
@@ -11,10 +11,10 @@ const playfairDisplay = Playfair_Display({
   variable: '--font-playfair-display',
 });
 
-const lato = Lato({
+const montserrat = Montserrat({
   subsets: ['latin'],
-  weight: ['400', '900'],
-  variable: '--font-lato',
+  weight: ['400', '700'],
+  variable: '--font-montserrat',
 });
 
 const libreBaskerville = Libre_Baskerville({
@@ -33,7 +33,7 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="https://jetlevel.com/wp-content/uploads/2019/08/cropped-icon-32x32.png" />
       </head>
-      <body className={`${playfairDisplay.variable} ${lato.variable} ${libreBaskerville.variable}`}>
+      <body className={`${playfairDisplay.variable} ${montserrat.variable} ${libreBaskerville.variable}`}>
         <Nav />
         {children}
         <ContactMenu />

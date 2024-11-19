@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 import { RxHamburgerMenu, RxCross1 } from "react-icons/rx";
-import { FaChevronDown } from "react-icons/fa6";
+import { FaChevronDown, FaPhone } from "react-icons/fa6";
 import Link from "next/link";
 import NavClickedContent from "./NavClickedContent";
 
@@ -31,10 +31,11 @@ function NavbarDropdown() {
       </div>
       <div
         id="nav-dropdown"
-        className={`fixed top-[4.5rem] left-0 h-full overflow-hidden w-full bg-black flex flex-col pl-5 space-y-6 transform transition-transform duration-500 ease-in-out  ${isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-[4rem] left-0 h-full overflow-hidden w-full bg-black flex flex-col pt-5 pl-5 space-y-4 transform transition-transform duration-500 ease-in-out  ${isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
       >
-        <Link href="tel:+18555385383" className="text-white text-sm font-bold">
+        <Link href="tel:+18555385383" className="flex items-center gap-3 text-white text-base font-bold">
+          <FaPhone className=" animate-ringing" />
           1-855-JETLEVEL
         </Link>
         <div onClick={() => handleClick('services')}>

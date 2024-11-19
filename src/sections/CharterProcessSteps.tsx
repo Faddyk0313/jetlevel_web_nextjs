@@ -30,7 +30,7 @@ const CharterProcessSteps = () => {
         <section className="px-5 md:px-10 lg:px-20 sectionHeight h-auto flex items-center">
             <div className='max-w-[1800px] mx-auto flex flex-col md:flex-row gap-2'>
                 <h2 className="md:w-5/12 mb-4">
-                    Simple 4-Step <span className='inline-block border-b-2 border-darkBlue'>Charter Process.</span>
+                    Simple 4-Step <span className='inline-block border-b-2 border-blue'>Charter Process.</span>
                 </h2>
                 <div className='md:w-7/12'>
                     {steps.map((step, index) => (
@@ -44,7 +44,7 @@ const CharterProcessSteps = () => {
                                     <p className="">{step.description}</p>
                                 </div>
                             </div>
-                            {index < steps.length - 1 && <div className="h-14 mb-2 ml-[30px] border-l-2 border-l-darkBlue "></div>}
+                            {index < steps.length - 1 && <div className="h-14 mb-2 ml-[30px] border-l-2 border-l-blue "></div>}
                         </div>
                     ))}
                 </div>

@@ -7,7 +7,8 @@ const config: Config = {
   theme: {
     extend: {
       colors: {
-        'darkBlue': '#0170ce',
+        'blue': '#0071b8',
+        'darkBlue': '#1A4159',
         'lightBlue': '#6ec1e4',
       },
       backgroundImage: {
@@ -19,8 +20,8 @@ const config: Config = {
       },
       fontFamily: {
         playfair: ['var(--font-playfair-display)', 'serif'],
-        lato: ['var(--font-lato)', 'sans-serif'],
         libre: ['var(--font-libre-baskerville)', 'serif'],
+        montserrat: ['var(--font-montserrat)', 'serif'],
       },
       boxShadow: {
         'card-shadow': '0px 0px 20px rgba(0, 0, 0, 0.3)', // Modify as needed

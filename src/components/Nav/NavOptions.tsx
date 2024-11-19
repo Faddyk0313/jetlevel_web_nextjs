@@ -32,10 +32,10 @@ function NavOptions() {
     }, [activeDropdown]);
 
     return (
-        <div id="nav-options" className="flex items-center xl:gap-4 font-bold" ref={navOptionsRef}>
+        <div id="nav-options" className="flex items-center xl:gap-3 font-libre" ref={navOptionsRef}>
             {/* OUR SERVICES Dropdown */}
             <div onClick={() => { handleClick('services'); }}>
-                <span className="flex items-center cursor-pointer gap-1 mx-2 text-white text-xs text-nowrap min-[1200px]:text-sm hover:text-darkBlue transition-all duration-100">
+                <span className="flex items-center cursor-pointer gap-2 mx-2 text-white text-xs text-nowrap  hover:text-blue transition-all duration-100">
                     OUR SERVICES <FaChevronDown />
                 </span>
                 {activeDropdown === 'services' && (
@@ -56,7 +56,7 @@ function NavOptions() {
             {/* Repeat for other dropdowns */}
             {/* JET CHARTER Dropdown */}
             <div onClick={() => { handleClick('jet-charter'); }}>
-                <span className="flex items-center cursor-pointer gap-1 mx-2 text-white text-xs text-nowrap min-[1200px]:text-sm hover:text-darkBlue transition-all duration-100">
+                <span className="flex items-center cursor-pointer gap-2 mx-2 text-white text-xs text-nowrap  hover:text-blue transition-all duration-100">
                     JET CHARTER <FaChevronDown />
                 </span>
                 {activeDropdown === 'jet-charter' && (
@@ -75,7 +75,7 @@ function NavOptions() {
             </div>
 
             <div onClick={() => { handleClick('charter-resources'); }}>
-                <span className="flex items-center cursor-pointer gap-1 mx-2 text-white text-xs text-nowrap min-[1200px]:text-sm hover:text-darkBlue transition-all duration-100">
+                <span className="flex items-center cursor-pointer gap-2 mx-2 text-white text-xs text-nowrap  hover:text-blue transition-all duration-100">
                     CHARTER RESOURCES <FaChevronDown />
                 </span>
                 {activeDropdown === 'charter-resources' && (
@@ -94,12 +94,12 @@ function NavOptions() {
                 )}
             </div>
 
-            <Link href="/pricing" className="flex items-center text-white text-xs text-nowrap min-[1200px]:text-sm hover:text-darkBlue transition-all duration-100">
+            <Link href="/pricing" className="flex items-center text-white text-xs text-nowrap  hover:text-blue transition-all duration-100">
                 PRICING
             </Link>
 
             <div onClick={() => handleClick('company')}>
-                <span className="flex items-center cursor-pointer gap-1 mx-2 text-white text-xs text-nowrap min-[1200px]:text-sm hover:text-darkBlue transition-all duration-100">
+                <span className="flex items-center cursor-pointer gap-2 mx-2 text-white text-xs text-nowrap  hover:text-blue transition-all duration-100">
                     COMPANY <FaChevronDown />
                 </span>
                 {activeDropdown === 'company' && (

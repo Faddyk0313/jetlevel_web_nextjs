@@ -16,7 +16,7 @@ const CustomComponent: React.FC<CustomComponentProps> = ({ heading, para, backgr
         <div
           className={`mb-10 ${background === "white" ? "text-left" : "text-center text-white"} `}
         >
-          <h2>{heading}</h2>
+          <h2 className={`${background === "white" ? "" : "text-white"}`}>{heading}</h2>
           <p className={`details leading-relaxed mt-4 ${background === "white" ? "" : "text-gray-100"} `}>{para}</p>
         </div>
         <div

@@ -34,10 +34,10 @@ const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({ title, content,
                 onClick={toggleSection}
                 aria-expanded={isOpen}
             >
-                <h2 className={`transition-colors duration-200 ${isOpen ? 'text-darkBlue' : 'text-gray-600 group-hover:text-darkBlue'}`}>
+                <h2 className={`transition-colors duration-200 ${isOpen ? 'text-blue' : 'text-gray-600 group-hover:text-blue'}`}>
                     {title}
                 </h2>
-                <span className={`transition-all duration-200 border-2 rounded-full ${isOpen ? 'rotate-45 text-darkBlue border-darkBlue' : 'text-gray-600 border-gray-600 group-hover:text-darkBlue group-hover:border-darkBlue'}`}>
+                <span className={`transition-all duration-200 border-2 rounded-full ${isOpen ? 'rotate-45 text-blue border-blue' : 'text-gray-600 border-gray-600 group-hover:text-blue group-hover:border-blue'}`}>
                     <FiPlus className="w-7 h-7" />
                 </span>
             </div>
@@ -57,7 +57,7 @@ const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({ title, content,
                             <Link
                                 key={text + index} // Added index for uniqueness if text is repeated
                                 href="#"
-                                className="block leading-8 hover:text-darkBlue"
+                                className="block leading-8 hover:text-blue"
                             >
                                 {text}
                             </Link>
@@ -71,7 +71,7 @@ const CollapsibleSection: React.FC<CollapsibleSectionProps> = ({ title, content,
                                 overrides: {
                                     a: {
                                         props: {
-                                            className: ' text-darkBlue',
+                                            className: ' text-blue',
                                         },
                                     },
                                 },

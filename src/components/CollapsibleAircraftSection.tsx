@@ -32,10 +32,10 @@ const CollapsibleAircraftSection: React.FC<CollapsibleAircraftSectionProps> = ({
                 onClick={toggleSection}
                 aria-expanded={isOpen}
             >
-                <h2 className={`transition-colors duration-200 ${isOpen ? 'text-darkBlue' : 'text-gray-600 group-hover:text-darkBlue'}`}>
+                <h2 className={`transition-colors duration-200 ${isOpen ? 'text-blue' : 'text-gray-600 group-hover:text-blue'}`}>
                     {title}
                 </h2>
-                <span className={`transition-all duration-200 border-2 rounded-full ${isOpen ? 'rotate-45 text-darkBlue border-darkBlue' : 'text-gray-600 border-gray-600 group-hover:text-darkBlue group-hover:border-darkBlue'}`}>
+                <span className={`transition-all duration-200 border-2 rounded-full ${isOpen ? 'rotate-45 text-blue border-blue' : 'text-gray-600 border-gray-600 group-hover:text-blue group-hover:border-blue'}`}>
                     <FiPlus className="w-7 h-7" />
                 </span>
             </div>
@@ -46,7 +46,7 @@ const CollapsibleAircraftSection: React.FC<CollapsibleAircraftSectionProps> = ({
                             overrides: {
                                 a: {
                                     props: {
-                                        className: ' text-darkBlue',
+                                        className: ' text-blue',
                                     },
                                 },
                             },
@@ -77,7 +77,7 @@ const CollapsibleAircraftSection: React.FC<CollapsibleAircraftSectionProps> = ({
 
                 {/* Disclaimer Message */}
                 <p className="text-gray-500 text-center text-xs italic mt-3">
-                    For more information on these and other charter aircraft, visit our <Link href="#" className="text-darkBlue">Private Jet Charter Aircraft Page</Link>.
+                    For more information on these and other charter aircraft, visit our <Link href="#" className="text-blue">Private Jet Charter Aircraft Page</Link>.
                 </p>
             </div>
         </section>
