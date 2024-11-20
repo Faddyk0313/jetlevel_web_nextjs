@@ -100,7 +100,7 @@ const Footer = () => {
                 {sections.map((section, index) => (
                     <div key={index} className="bg-[#202020] py-8 border-b border-black lg:flex items-baseline">
                         <div className='lg:w-1/4 pb-4'>
-                            <h4 className="font-libre text-[15px] lg:w-fit px-8 lg:pl-[25%] lg:pr-0">{section.title}</h4>
+                            <h4 className="font-playfair tracking-widest text-[15px] lg:w-fit px-8 lg:pl-[25%] lg:pr-0">{section.title}</h4>
                         </div>
                         <ul className='list-none lg:w-3/4 px-8  lg:pr-12 lg:pl-0  text-sm'>
                             {section.links.map((link, linkIndex) => (

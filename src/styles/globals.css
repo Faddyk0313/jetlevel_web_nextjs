@@ -76,15 +76,15 @@ p.TitleTtagline {
   }
 }
 
-h2,
 h3,
 h4,
 caption {
   font-family: var(--font-montserrat), sans-serif;
 }
 h2 {
+  font-family: var(--font-playfair-display);
   font-size: 2.375rem; /* 32px */
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 1px;
   color: #1A4159;
   @media (min-width: 765px) {

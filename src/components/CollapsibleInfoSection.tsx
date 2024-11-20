@@ -30,9 +30,6 @@ const CollapsibleInfoSection: React.FC<CollapsibleInfoSectionProps> = ({ title, 
             (match, title) => `<p><span>${title.trim()}</span> –`
         );
     }
-
-
-    console.log(addSpanToTitles(sections[0].content as string));
     return (
         <section className="border-b py-5">
             <div
@@ -93,6 +90,16 @@ const CollapsibleInfoSection: React.FC<CollapsibleInfoSectionProps> = ({ title, 
                                 >
                                     {addSpanToTitles(section.content as string)}
                                 </Markdown>
+
+                                <div>
+                                    <strong>Don’t see your itinerary above?</strong>
+
+                                    <p><a href="https://jetlevel.com/request-a-quote/" className='text-blue'>Click here</a> to request a quote using your exact destinations or call us to discuss your routing – <a href="tel:8555385383" className='text-blue'>1-855-JetLevel</a></p>
+
+                                    {
+                                        index === 0 ? <p>For more information on these and other airports, visit our <a href="https://jetlevel.com/usa-airport-directory/" className='text-blue'>Airport Directory</a>.</p> : ""
+                                    }
+                                </div>
                             </div>
                         )}
                     </div>
