@@ -42,7 +42,7 @@ function NavOptions() {
                     <div onClick={(e) => e.stopPropagation()}> {/* Prevent the click inside the dropdown from closing it */}
                         <NavClickedContent
                             subOptions={[
-                                { name: 'On-Demand Charter', link: '/our-services/on-demand-charter', image: 'https://jetlevel.com/wp-content/uploads/2023/07/On-Demand-Charter.png' },
+                                { name: 'On-Demand Charter', link: '/our-services/on-demand-charter', image: '/navInsideIcons/On-Demand Charter.svg' },
                                 { name: 'Group Charter', link: '/our-services/group-charter', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Group-Charter.png' },
                                 { name: 'Air Ambulance', link: '/our-services/air-ambulance', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Air-Ambulance.png' },
                                 { name: 'Helicopter', link: '/our-services/helicopter', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Helicopter.png' },

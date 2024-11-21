@@ -92,8 +92,8 @@ h2 {
   }
 }
 h3 {
-  font-size: 1.125rem; /* 18px*/
-  @media (min-width: 950px) {
+  font-size: 1.15rem; /* 18px*/
+  @media (min-width: 1000px) {
     font-size: 1.5rem; /* 24px */
   }
 }
@@ -130,5 +130,4 @@ blockquote {
 blockquote {
   font-style: italic;
 }
-
 

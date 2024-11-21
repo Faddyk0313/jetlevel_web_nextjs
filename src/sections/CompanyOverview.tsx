@@ -3,14 +3,19 @@ import TextCompanyOverview from '@/components/TextCompanyOverview';
 import Image from 'next/image';
 import React from 'react';
 import { Routes_DistanceCalculator, UsCanadaCities, InternationalCities, Aircraft, Airports } from '@/svg';
-import Carousel from '@/components/Crousel';
+import {
+    Carousel,
+    CarouselContent,
+    CarouselItem,
+} from "@/components/ui/carousel";
+import CarouselCard from '@/components/CrouselCard';
 
 const CompanyOverview = () => {
-    interface CarouselItem {
+    interface CarouselItem3 {
         icon: any | string;
         title: string;
     }
-    const carouselItems: CarouselItem[] = [ 
+    const carouselItems: CarouselItem3[] = [
         { icon: <Routes_DistanceCalculator />, title: "Routes" },
         { icon: <UsCanadaCities />, title: "US & Canada Cities" },
         { icon: <InternationalCities />, title: "International Cities" },
@@ -41,7 +46,7 @@ const CompanyOverview = () => {
                 </div>
             </div>
 
-            <div className="hidden md:grid grid-cols-5 justify-between gap-2 py-3">
+            <div className="hidden carousel:grid grid-cols-5 justify-between gap-2 py-3">
                 <Card
                     icon={<Routes_DistanceCalculator />}
                     title="Routes"
@@ -73,8 +78,20 @@ const CompanyOverview = () => {
                     bgcolor="white"
                 />
             </div>
-            <div className='block md:hidden'>
-                <Carousel items={carouselItems} bgcolor="white" />
+            <div className='block carousel:hidden'>
+                <Carousel className='mt-5' opts={{ align: "start", loop: true }}>
+                    {/* Carousel Content */}
+                    <CarouselContent>
+                        {carouselItems.map((item, index) => (
+                            <CarouselItem
+                                key={index} // Two items visible with snapping
+                                className="sm:basis-1/2"
+                            >
+                                <CarouselCard item={item} bgcolor="white" />
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                </Carousel>
             </div>
         </section>
     );

@@ -13,7 +13,7 @@ export interface CustomComponentProps {
 }
 
 // New type for only icon and title to pass in carousel
-export type CarouselItem = {
+export type CarouselItem2 = {
     icon: any;
     title: string;
   };
