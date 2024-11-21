@@ -3,13 +3,12 @@ import { SafetyFirst, TailoredLuxury } from '@/svg';
 
 const OurComitment = () => {
     return (
-        <section className="bg-fourMetrics-OurCommitment-background overlay bg-[-670px_center] min-[450px]:bg-center md:bg-top bg-no-repeat bg-cover overflow-hidden px-0 flex items-center">
-           
+        <section className="bg-fourMetrics-OurCommitment-background overlay min-h-dvh bg-[-670px_center] min-[450px]:bg-center md:bg-top bg-no-repeat bg-cover overflow-hidden px-0 flex items-center">
                 <div className="max-w-[1800px] mx-auto flex flex-col text-white px-5 md:px-10 lg:px-20">
-                    <h2 className="mb-4">Our Commitment </h2>
-                    <div className='flex flex-col items-center md:flex-row gap-10 md:gap-14'>
+                    <h2 className="mb-4 text-white">Our Commitment </h2>
+                    <div className='flex flex-col justify-center md:flex-row gap-10 md:gap-14'>
                         <div className='lg:w-1/2'>
-                            <div className="flex justify-center items-center mb-4 bg-darkBlue w-20 lg:w-28 h-20 lg:h-28 rounded-full">
+                            <div className="flex justify-center items-center mb-4 bg-blue w-20 lg:w-28 h-20 lg:h-28 rounded-full">
                                 <SafetyFirst />
                             </div>
                             <h3 className="font-bold">Safety First </h3>
@@ -18,7 +17,7 @@ const OurComitment = () => {
                             </p>
                         </div>
                         <div className='lg:w-1/2'>
-                            <div className="flex justify-center items-center mb-4 bg-darkBlue w-20 lg:w-28 h-20 lg:h-28 rounded-full">
+                            <div className="flex justify-center items-center mb-4 bg-blue w-20 lg:w-28 h-20 lg:h-28 rounded-full">
                                 <TailoredLuxury />
                             </div>
                             <h3 className="font-bold">Tailored Luxury </h3>

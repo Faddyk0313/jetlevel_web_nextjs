@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const AvailableAircrafts = () => {
@@ -70,30 +71,32 @@ const AvailableAircrafts = () => {
             <p className="text-center details leading-relaxed mb-8">We Offer Hundreds of Private Jets to Choose from in various Jet Sizes, Explore some of them below.</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {jets.map((jet, index) => (
-                    <div key={index} className="border rounded-lg overflow-hidden shadow-lg">
-                        <div className='h-56 max-h-56'>
-                            <img src={jet.image} alt={`${jet.type} - ${jet.name}`} className="w-full h-full object-cover" />
-                            <div className=" text-white flex justify-center -mt-[85px] mb-2 gap-5">
-                                <div className="text-center p-4 bg-[#202b349d]">
+                    <div key={index} className="border  rounded-lg overflow-hidden shadow-lg">
+                        <div className='bg-cover bg-no-repeat bg-center h-56 flex justify-center items-end' style={{ backgroundImage: `url(${jet.image})` }}>
+                            <div className=" text-white grid grid-cols-3  mb-2 gap-2 px-2">
+                                <div className="text-center px-3 lg:px-2 xl:px-3 py-4 flex-1  bg-[#202b349d]">
                                     <h4 className="font-bold leading-tight">Seats</h4>
                                     <p className='text-sm'>{jet.seats}</p>
                                 </div>
-                                <div className="text-center p-4 bg-[#202b349d]">
+                                <div className="text-center py-4 flex-1  bg-[#202b349d]">
                                     <h4 className="font-bold leading-tight">Range</h4>
                                     <p className='text-sm'>{jet.range}</p>
                                 </div>
-                                <div className="text-center p-4 bg-[#202b349d]">
+                                <div className="text-center px-3 lg:px-2 xl:px-3 py-4 flex-1  bg-[#202b349d]">
                                     <h4 className="font-bold leading-tight">Speed</h4>
                                     <p className='text-sm'>{jet.speed}</p>
                                 </div>
                             </div>
                         </div>
-                        <div className="p-4 h-full bg-blue-background bg-cover bg-no-repeat">
-                            <h3 className="text-white font-bold mb-4">{jet.type}</h3>
-                            <p className="mb-3 font-bold text-white">{jet.name}</p>
-                            <p className="mb-4 text-gray-300">{jet.description}</p>
-                            <div className='flex flex-col md:flex-row items-center justify-center md:justify-start text-xs md:text-sm gap-2'>
-                                <button className="text-white font-bold px-3 py-2 md:py-3 min-w-fit w-2/5  md:w-[35%] rounded-full md:rounded-xl bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1">GET A QUOTE →</button>
+                        <div className="p-4 box-border bg-blue-background h-64 lg:h-[300px] xl:h-64 flex flex-col justify-between bg-cover bg-no-repeat">
+                            <div>
+                                <h3 className="text-white font-bold mb-4">{jet.type}</h3>
+                                <p className="mb-3 font-bold text-white">{jet.name}</p>
+                                <p className="mb-4 text-gray-300">{jet.description}</p>
+                            </div>
+                            <div className='flex flex-col md:flex-row items-center justify-center md:justify-start text-xs md:text-sm gap-3  '>
+                                <Link href='https://jetlevel.com/request-a-quote' className="text-white px-3 py-2 md:py-3 min-w-fit w-2/5  md:w-[35%] rounded-full bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1">GET A QUOTE →</Link>
+
                                 <p className="mt-2 text-white font-bold">{jet.price}<span className='text-gray-300'>/ Per Hour</span></p>
                             </div>
                         </div>

@@ -50,10 +50,10 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
                 onClick={toggleSection}
                 aria-expanded={isOpen}
             >
-                <h2 className={`transition-colors duration-200 ${isOpen ? 'text-darkBlue' : 'text-gray-600 group-hover:text-darkBlue'}`}>
+                <h2 className={`transition-colors duration-200 ${isOpen ? 'text-blue' : 'text-gray-600 group-hover:text-blue'}`}>
                     {title}
                 </h2>
-                <span className={`transition-all duration-200 border-2 rounded-full ${isOpen ? 'rotate-45 text-darkBlue border-darkBlue' : 'text-gray-600 border-gray-600 group-hover:text-darkBlue group-hover:border-darkBlue'}`}>
+                <span className={`transition-all duration-200 border-2 rounded-full ${isOpen ? 'rotate-45 text-blue border-blue' : 'text-gray-600 border-gray-600 group-hover:text-blue group-hover:border-blue'}`}>
                     <FiPlus className="w-7 h-7" />
                 </span>
             </div>
@@ -69,7 +69,7 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
                                         overrides: {
                                             a: {
                                                 props: {
-                                                    className: ' text-darkBlue',
+                                                    className: ' text-blue',
                                                 },
                                             },
                                         },
@@ -91,7 +91,7 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
                                     overrides: {
                                         a: {
                                             props: {
-                                                className: ' text-darkBlue',
+                                                className: ' text-blue',
                                             },
                                         },
                                     },
@@ -112,12 +112,12 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
                                         overrides: {
                                             a: {
                                                 props: {
-                                                    className: 'text-darkBlue', // Apply blue color to links
+                                                    className: 'text-blue', // Apply blue color to links
                                                 },
                                             },
                                             span: {
                                                 props: {
-                                                    className: 'text-darkBlue', // Apply blue color to span-wrapped titles
+                                                    className: 'text-blue', // Apply blue color to span-wrapped titles
                                                 },
                                             },
                                         },
@@ -138,7 +138,7 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
                                     overrides: {
                                         a: {
                                             props: {
-                                                className: ' text-darkBlue',
+                                                className: ' text-blue',
                                             },
                                         },
                                     },

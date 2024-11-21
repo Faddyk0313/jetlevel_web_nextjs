@@ -32,17 +32,17 @@ function NavOptions() {
     }, [activeDropdown]);
 
     return (
-        <div id="nav-options" className="flex items-center xl:gap-4 font-bold" ref={navOptionsRef}>
+        <div id="nav-options" className="flex items-center xl:gap-3 font-playfair text-sm tracking-wider" ref={navOptionsRef}>
             {/* OUR SERVICES Dropdown */}
             <div onClick={() => { handleClick('services'); }}>
-                <span className="flex items-center cursor-pointer gap-1 mx-2 text-white text-xs text-nowrap min-[1200px]:text-sm hover:text-darkBlue transition-all duration-100">
+                <span className="flex items-center cursor-pointer gap-2 mx-2 text-white text-nowrap  hover:text-blue transition-all duration-100">
                     OUR SERVICES <FaChevronDown />
                 </span>
                 {activeDropdown === 'services' && (
                     <div onClick={(e) => e.stopPropagation()}> {/* Prevent the click inside the dropdown from closing it */}
                         <NavClickedContent
                             subOptions={[
-                                { name: 'On-Demand Charter', link: '/our-services/on-demand-charter', image: 'https://jetlevel.com/wp-content/uploads/2023/07/On-Demand-Charter.png' },
+                                { name: 'On-Demand Charter', link: '/our-services/on-demand-charter', image: '/navInsideIcons/On-Demand Charter.svg' },
                                 { name: 'Group Charter', link: '/our-services/group-charter', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Group-Charter.png' },
                                 { name: 'Air Ambulance', link: '/our-services/air-ambulance', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Air-Ambulance.png' },
                                 { name: 'Helicopter', link: '/our-services/helicopter', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Helicopter.png' },
@@ -56,7 +56,7 @@ function NavOptions() {
             {/* Repeat for other dropdowns */}
             {/* JET CHARTER Dropdown */}
             <div onClick={() => { handleClick('jet-charter'); }}>
-                <span className="flex items-center cursor-pointer gap-1 mx-2 text-white text-xs text-nowrap min-[1200px]:text-sm hover:text-darkBlue transition-all duration-100">
+                <span className="flex items-center cursor-pointer gap-2 mx-2 text-white text-nowrap  hover:text-blue transition-all duration-100">
                     JET CHARTER <FaChevronDown />
                 </span>
                 {activeDropdown === 'jet-charter' && (
@@ -75,7 +75,7 @@ function NavOptions() {
             </div>
 
             <div onClick={() => { handleClick('charter-resources'); }}>
-                <span className="flex items-center cursor-pointer gap-1 mx-2 text-white text-xs text-nowrap min-[1200px]:text-sm hover:text-darkBlue transition-all duration-100">
+                <span className="flex items-center cursor-pointer gap-2 mx-2 text-white text-nowrap  hover:text-blue transition-all duration-100">
                     CHARTER RESOURCES <FaChevronDown />
                 </span>
                 {activeDropdown === 'charter-resources' && (
@@ -94,12 +94,12 @@ function NavOptions() {
                 )}
             </div>
 
-            <Link href="/pricing" className="flex items-center text-white text-xs text-nowrap min-[1200px]:text-sm hover:text-darkBlue transition-all duration-100">
+            <Link href="/pricing" className="flex items-center text-white text-nowrap  hover:text-blue transition-all duration-100">
                 PRICING
             </Link>
 
             <div onClick={() => handleClick('company')}>
-                <span className="flex items-center cursor-pointer gap-1 mx-2 text-white text-xs text-nowrap min-[1200px]:text-sm hover:text-darkBlue transition-all duration-100">
+                <span className="flex items-center cursor-pointer gap-2 mx-2 text-white text-nowrap  hover:text-blue transition-all duration-100">
                     COMPANY <FaChevronDown />
                 </span>
                 {activeDropdown === 'company' && (

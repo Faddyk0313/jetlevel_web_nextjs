@@ -50,32 +50,33 @@ const Footer = () => {
     ];
 
     return (
-        <section className='bg-black pt-0 pb-0'>
-            <div className="max-w-[1800px] mx-auto px-5 md:px-10 py-10 text-[#f0f1f2]">
-                <div className="pb-4 flex flex-col min-[1100px]:flex-row gap-5">
-                    <div className='mb-4 lg:mb-8 mt-4'>
+        <section className='bg-black pt-5 px-5 md:px-10 pb-0'>
+            <div className=" max-w-[1170px] mx-auto pt-10 text-[#f0f1f2]">
+                <div className="pb-4 flex flex-col justify-between min-[1100px]:flex-row gap-5">
+                    <div className='mb-4 lg:mb-8'>
                         <Image
-                            src="https://jetlevel.com/wp-content/uploads/2023/07/jetLeval-logo-1.png"
-                            alt="Paramount Business Jets Logo"
-                            width={300}
-                            height={60}
-                            className='w-56 md:w-72 lg:w-80 h-auto'
+                            src="/images/Logo.png"
+                            alt="Jet Level Aviation Logo"
+                            width={790}
+                            height={142}
+                            className='w-56 md:w-72 max-w-72 h-auto'
                         />
                     </div>
-                    <div className='flex flex-col md:flex-row gap-4 lg:w-full '>
-                        <div className="flex flex-col flex-grow lg:flex-row lg:items-center gap-3 md:w-1/2 lg:h-[54px]">
-                            <h4 className="text-lg flex-1 max-w-fit">Get the Latest Updates</h4>
-                            <div className='flex flex-1'>
+                    <div className='flex flex-col md:flex-row gap-7 '>
+                        <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:h-[54px]">
+                            <h4 className="text-lg flex-1 min-w-36 lg:max-w-36">Get the Latest Updates</h4>
+                            <form action="mailto:kingshahbaz0313@gmail.com" method="post" className='flex max-w-72'>
                                 <input
                                     type="email"
                                     placeholder="Enter your email"
-                                    className="py-4 w-full px-3 h-14 text-sm border border-r-0 placeholder-[#858585] border-[#858585] bg-black outline-none rounded-sm "
+                                    className="py-4 w-full px-3 h-14 text-sm border border-r-0 placeholder-[#858585] border-[#858585] bg-black outline-none rounded-sm"
+                                    required
                                 />
-                                <button className='text-xl border border-l-0 border-[#858585] pr-1 text-[#858585] hover:text-white'>→</button>
-                            </div>
+                                <button type='submit' className='cursor-pointer text-xl border border-l-0 border-[#858585] pr-4 text-[#858585] hover:text-white transition-all duration-150'>→</button>
+                            </form>
                         </div>
-                        <div className='flex flex-col lg:flex-row lg:items-center  lg:h-[54px] gap-4 pb-0 lg:pb-0 '>
-                            <h4 className="text-lg">Connect with us</h4>
+                        <div className='flex flex-col lg:flex-row lg:items-center lg:h-[54px] gap-4 pb-0 lg:pb-0 '>
+                            <h4 className="text-lg min-w-24 lg:max-w-24">Connect with us</h4>
                             <div className="flex gap-6 items-center">
                                 {/* Add proper href values for each social media link */}
                                 <a className='border border-[#858585] rounded-full p-2 text-[#858585]' href="#" aria-label="Facebook" >
@@ -97,9 +98,9 @@ const Footer = () => {
 
                 {/* Loop through the sections array and generate each section */}
                 {sections.map((section, index) => (
-                    <div key={index} className="bg-[#202020] py-5 border-b border-black lg:flex">
+                    <div key={index} className="bg-[#202020] py-8 border-b border-black lg:flex items-baseline">
                         <div className='lg:w-1/4 pb-4'>
-                            <h4 className="text-lg lg:w-fit px-8 lg:pl-[25%] lg:pr-0">{section.title}</h4>
+                            <h4 className="font-playfair tracking-widest text-[15px] lg:w-fit px-8 lg:pl-[25%] lg:pr-0">{section.title}</h4>
                         </div>
                         <ul className='list-none lg:w-3/4 px-8  lg:pr-12 lg:pl-0  text-sm'>
                             {section.links.map((link, linkIndex) => (
@@ -107,7 +108,7 @@ const Footer = () => {
                                     <Link
                                         href="#"
                                         // Will cause weird wrapping of li if not inline flex
-                                        className={`text-[#858585] leading-7 hover:text-darkBlue mr-4 ${index !== 0 ? "inline-flex" : ""}`}
+                                        className={`text-[#858585] leading-7 hover:text-blue mr-4 ${index !== 0 ? "inline-flex" : ""}`}
                                     >
                                         {link}
                                     </Link>
@@ -121,18 +122,19 @@ const Footer = () => {
                 ))}
 
             </div>
-            <div className="border-t border-[#858585]">
-                <div className='max-w-[1800px] mx-auto p-5   flex flex-col lg:flex-row text-[#f0f1f2] text-sm gap-5 mt-8 pt-4 '>
-                    <div className='flex gap-5 flex-col md:flex-row lg:flex-col'>
+            <div className="relative">
+                <hr className='-ml-5 md:-ml-10 border-[#858585] absolute w-[calc(100%_+40px)] md:w-[calc(100%_+80px)]'/>
+                <div className='max-w-[1170px] mx-auto flex flex-col lg:flex-row text-[#f0f1f2] gap-5 mt-8 py-4'>
+                    <div className='flex gap-5 flex-col md:flex-row lg:flex-col text-[11px]'>
                         <div>&copy; 2024 Jetlevel Aviation LLC All rights reserved</div>
                         <div className='flex flex-row gap-3 md:mx-auto lg:mx-0'>
-                            <Link href="#" className='hover:text-darkBlue'>Privacy</Link>
-                            <Link href="#" className='hover:text-darkBlue'>Legal</Link>
+                            <Link href="#" className='hover:text-blue'>Privacy</Link>
+                            <Link href="#" className='hover:text-blue'>Legal</Link>
                         </div>
                     </div>
-                    <div className='flex-1 text-[#858585] text-xs '>
+                    <div className='flex-1 text-[#858585] text-[9px] '>
                         All Aircraft and Air Carriers selected by JetLevel Aviation, LLC are fully certified by The Federal Aviation Administration and The U.S Department of Transportation under Part 135 regulations. Carriers are solely responsible for the air transportation arranged on behalf of JetLevel Aviation, LLC. JetLevel Aviation, LLC does not own or operate any aircraft. JetLevel Aviation, LLC is not a direct or indirect air carrier. All flights chartered through JetLevel Aviation, LLC are operated by Part 135 Air Carriers or Foreign Civil Aviation Authority (CAA) equivalent that operate and exercise full operational control over those flights at all times.
-                        <span className='text-darkBlue'>&nbsp; Full Disclaimer.</span>
+                        <span className='text-blue'>&nbsp; Full Disclaimer.</span>
                     </div>
                 </div>
             </div>

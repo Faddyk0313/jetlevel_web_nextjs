@@ -29,7 +29,7 @@ const WhatOurClientsSay = () => {
                 <h2 className="text-center text-white pb-7">What Our Clients Say</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {testimonials.map((testimonial, index) => (
-                        <div key={index} className="flex flex-col justify-between bg-white bg-opacity-10 backdrop-blur-lg text-white p-4 rounded-lg border-2 border-darkBlue">
+                        <div key={index} className="flex flex-col justify-between bg-white bg-opacity-10 backdrop-blur-lg text-white p-6 rounded-lg border-2 border-blue text-[15px]">
                             <p className="mb-4">{testimonial.text}</p>
                             <div>
                                 <p>{testimonial.client}</p>

@@ -16,7 +16,7 @@ const MeetOwner = () => {
                 </div>
                 <div className="text-white md:max-w-[60%] md:pl-5 pt-5 md:pt-[5vh]">
                     <h4 className='mb-3'>MEET THE OWNER</h4>
-                    <h2 className='mb-3'>Hi, I'm Ricky</h2>
+                    <h2 className='mb-3 text-white'>Hi, I'm Ricky</h2>
                     <p className='mb-[10px] details leading-relaxed text-[#bbbbbb]'>
                         Working for over a decade in the private jet charter sector has helped me understand the problems that people are facing when looking for jets. Whether it's hard to get a hold of someone, trouble finding flights, or frustrating hidden costs and fees, I've seen it and I feel your pain.
                     </p>
@@ -32,9 +32,7 @@ const MeetOwner = () => {
                         <p className='text-[#bbbbbb] pb-1'><span className='text-lightBlue'>✓&nbsp;</span> A+ BBB rating</p>
                         <p className='text-[#bbbbbb] pb-1'><span className='text-lightBlue'>✓&nbsp;</span> 1,000+ annual charters</p>
                     </div>
-                    <button className='text-white px-5 py-2 my-2 rounded-full text-lg bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1'>
-                        <Link href="#" className=''>Book Your Flight</Link>
-                    </button>
+                        <Link href="#" className='text-white px-5 py-2 my-2 rounded-full text-lg bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1'>Book Your Flight</Link>
                 </div>
             </div>
         </section>

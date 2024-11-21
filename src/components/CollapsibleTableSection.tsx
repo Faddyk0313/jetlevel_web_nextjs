@@ -54,10 +54,10 @@ const CollapsibleTableSection: React.FC<CollapsibleTableSectionProps> = ({ title
                 onClick={toggleSection}
                 aria-expanded={isOpen}
             >
-                <h2 className={`transition-colors duration-200 ${isOpen ? 'text-darkBlue' : 'text-gray-600 group-hover:text-darkBlue'}`}>
+                <h2 className={`transition-colors duration-200 ${isOpen ? 'text-blue' : 'text-gray-600 group-hover:text-blue'}`}>
                     {title}
                 </h2>
-                <span className={`transition-all duration-200 border-2 rounded-full ${isOpen ? 'rotate-45 text-darkBlue border-darkBlue' : 'text-gray-600 border-gray-600 group-hover:text-darkBlue group-hover:border-darkBlue'}`}>
+                <span className={`transition-all duration-200 border-2 rounded-full ${isOpen ? 'rotate-45 text-blue border-blue' : 'text-gray-600 border-gray-600 group-hover:text-blue group-hover:border-blue'}`}>
                     <FiPlus className="w-7 h-7" />
                 </span>
             </div>
@@ -74,7 +74,7 @@ const CollapsibleTableSection: React.FC<CollapsibleTableSectionProps> = ({ title
                                     overrides: {
                                         a: {
                                             props: {
-                                                className: ' text-darkBlue',
+                                                className: ' text-blue',
                                             },
                                         },
                                     },
@@ -88,7 +88,7 @@ const CollapsibleTableSection: React.FC<CollapsibleTableSectionProps> = ({ title
                         <div className="overflow-x-auto">
                             <table className="min-w-full border border-gray-200">
                                 <thead>
-                                    <tr className="bg-darkBlue text-white">
+                                    <tr className="bg-blue text-white">
                                         {firstTable.headers.map((header, headerIndex) => (
                                             <th key={headerIndex} className="px-4 py-2 text-sm text-center font-semibold border border-gray-200">
                                                 {header}
@@ -125,7 +125,7 @@ const CollapsibleTableSection: React.FC<CollapsibleTableSectionProps> = ({ title
                         <div className="overflow-x-auto">
                             <table className="min-w-full border border-gray-200">
                                 <thead>
-                                    <tr className="bg-darkBlue text-white">
+                                    <tr className="bg-blue text-white">
                                         {secondSubHeadng.tableData.headers.map((header, headerIndex) => (
                                             <th key={headerIndex} className="px-4 py-2 text-center text-sm font-semibold border border-gray-200">
                                                 {header}

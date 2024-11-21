@@ -41,7 +41,7 @@
 /* Global font settings */
 
 h1 {
-  font-size: 45px;
+  font-size: 45px; 
   line-height: 1.2;
   font-weight: bold;
   font-family: var(--font-playfair-display), serif;
@@ -76,23 +76,24 @@ p.TitleTtagline {
   }
 }
 
-h2,
 h3,
 h4,
 caption {
-  font-family: var(--font-lato), sans-serif;
+  font-family: var(--font-montserrat), sans-serif;
 }
 h2 {
+  font-family: var(--font-playfair-display);
   font-size: 2.375rem; /* 32px */
-  font-weight: 900;
+  font-weight: 700;
   letter-spacing: 1px;
+  color: #1A4159;
   @media (min-width: 765px) {
     font-size: 2.5rem; /* 40px */
   }
 }
 h3 {
-  font-size: 1.125rem; /* 18px*/
-  @media (min-width: 950px) {
+  font-size: 1.15rem; /* 18px*/
+  @media (min-width: 1000px) {
     font-size: 1.5rem; /* 24px */
   }
 }
@@ -114,24 +115,19 @@ p.details {
 section {
   padding-top: 40px;
   padding-bottom: 40px;
-  @media (min-width: 950px) {
-    padding-top: 60px;
-    padding-bottom: 60px;
+  @media (min-width: 768px) {
+    padding-top: 80px;
+    padding-bottom: 80px;
   }
-}
-
-.sectionHeight {
-  min-height: min(calc(100vh - 50px), 1000px);
 }
 
 body,
 p,
 blockquote {
-  font-family: var(--font-libre-baskerville), serif;
+  font-family: var(--font-montserrat), serif;
 }
 
 blockquote {
   font-style: italic;
 }
-
 
