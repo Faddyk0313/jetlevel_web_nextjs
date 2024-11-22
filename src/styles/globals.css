@@ -41,7 +41,7 @@
 /* Global font settings */
 
 h1 {
-  font-size: 45px; 
+  font-size: 45px;
   line-height: 1.2;
   font-weight: bold;
   font-family: var(--font-playfair-display), serif;
@@ -58,13 +58,12 @@ p.subtitle {
   font-weight: bold;
   font-family: var(--font-playfair-display), serif;
   text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-
-  @media (min-width: 768px) {
+}
+@media (min-width: 768px) {
+  p.subtitle {
     font-size: 1.875rem /* 30px */;
-    line-height: 2.25rem /* 36px */;
   }
 }
-
 p.TitleTtagline {
   font-size: 1.125rem; /* 18px */
   line-height: 1.75rem;
@@ -86,7 +85,7 @@ h2 {
   font-size: 2.375rem; /* 32px */
   font-weight: 700;
   letter-spacing: 1px;
-  color: #1A4159;
+  color: #1a4159;
   @media (min-width: 765px) {
     font-size: 2.5rem; /* 40px */
   }
@@ -109,7 +108,8 @@ p.details {
 }
 
 .overlay {
-  border-image: fill 1 linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
+  border-image: fill 1
+    linear-gradient(to right, rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4));
 }
 
 section {
@@ -130,4 +130,3 @@ blockquote {
 blockquote {
   font-style: italic;
 }
-
