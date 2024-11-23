@@ -26,7 +26,7 @@ const ContactMenu = () => {
 
   return (
     <section
-      className={`sticky bottom-0 p-0 bg-[#f7f7f7] z-20 transform transition-transform duration-300 ${
+      className={`hidden md:block sticky bottom-0 p-0 bg-[#f7f7f7] z-20 transform transition-transform duration-300 ${
         isVisible ? "translate-y-0" : "translate-y-full"
       }`}
     >
@@ -46,7 +46,7 @@ const ContactMenu = () => {
           <span>EMAIL US</span>
         </a>
         <Link
-          className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8]  text-xs md:text-base font-bold md:font-normal text-white py-2 text-center hover:text-blue transition-all duration-100"
+          className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8]  text-xs md:text-base font-bold md:font-normal text-white py-2 text-center hover:text-darkBlue transition-all duration-100"
           href={"https://jetlevel.com/request-a-quote"}
         >
           <IoIosAirplane className="hidden md:block text-2xl" />

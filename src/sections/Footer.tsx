@@ -50,21 +50,21 @@ const Footer = () => {
     ];
 
     return (
-        <section className='bg-black pt-5 px-5 md:px-10 pb-0'>
-            <div className=" max-w-[1170px] mx-auto pt-10 text-[#f0f1f2]">
-                <div className="pb-4 flex flex-col justify-between min-[1100px]:flex-row gap-5">
-                    <div className='mb-4 lg:mb-8'>
+        <section className='bg-black pt-5 px-5 md:px-10 lg:px-20 pb-0'>
+            <div className=" max-w-[1800px] mx-auto pt-10 text-[#f0f1f2]">
+                <div className="pb-4 flex flex-col justify-between w-fit mx-auto min-[1100px]:flex-row gap-5">
+                    <div className='mb-4 lg:mb-8 '>
                         <Image
                             src="/images/Logo.png"
                             alt="Jet Level Aviation Logo"
                             width={790}
                             height={142}
-                            className='w-56 md:w-72 max-w-72 h-auto'
+                            className='md:w-72 max-w-72 mx-auto h-auto'
                         />
                     </div>
                     <div className='flex flex-col md:flex-row gap-7 '>
                         <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:h-[54px]">
-                            <h4 className="text-lg flex-1 min-w-36 lg:max-w-36">Get the Latest Updates</h4>
+                            <h4 className="text-lg flex-1 min-w-36 lg:max-w-36 text-center">Get the Latest Updates</h4>
                             <form action="mailto:kingshahbaz0313@gmail.com" method="post" className='flex max-w-72'>
                                 <input
                                     type="email"
@@ -76,8 +76,8 @@ const Footer = () => {
                             </form>
                         </div>
                         <div className='flex flex-col lg:flex-row lg:items-center lg:h-[54px] gap-4 pb-0 lg:pb-0 '>
-                            <h4 className="text-lg min-w-24 lg:max-w-24">Connect with us</h4>
-                            <div className="flex gap-6 items-center">
+                            <h4 className="text-lg min-w-24 lg:max-w-24 text-center">Connect with us</h4>
+                            <div className="flex gap-6 items-center mx-auto">
                                 {/* Add proper href values for each social media link */}
                                 <a className='border border-[#858585] rounded-full p-2 text-[#858585]' href="#" aria-label="Facebook" >
                                     <FaFacebookF />
@@ -123,7 +123,7 @@ const Footer = () => {
 
             </div>
             <div className="relative">
-                <hr className='-ml-5 md:-ml-10 border-[#858585] absolute w-[calc(100%_+40px)] md:w-[calc(100%_+80px)]'/>
+                <hr className='-ml-5 md:-ml-20 border-[#858585] absolute w-[calc(100%_+40px)] md:w-[calc(100%_+160px)]'/>
                 <div className='max-w-[1170px] mx-auto flex flex-col lg:flex-row text-[#f0f1f2] gap-5 mt-8 py-4'>
                     <div className='flex gap-5 flex-col md:flex-row lg:flex-col text-[11px]'>
                         <div>&copy; 2024 Jetlevel Aviation LLC All rights reserved</div>

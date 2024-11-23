@@ -51,11 +51,11 @@ const FaqList: React.FC = () => {
     };
 
     return (
-        <div className="lg:w-full lg:-ml-[70px] xl:-ml-[90px] mt-4">
+        <div className=" lg:absolute mt-5 lg:mt-0 left-[40%] top-10">
             {faqData.map((faq, index) => (
-                <div key={index} className="bg-gray-100 px-2 lg:px-6 py-2 lg:py-4 mb-4">
+                <div key={index} className="bg-gray-100 px-3 py-1 mb-3">
                     <h3
-                        className="flex items-center justify-between font-bold cursor-pointer mb-2"
+                        className="flex items-center justify-between font-bold text-darkBlue cursor-pointer mb-2"
                         onClick={() => toggleFaq(index)}
                     >
                         {faq.question} <FaCaretDown />

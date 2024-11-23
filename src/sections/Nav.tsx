@@ -6,8 +6,8 @@ import Image from "next/image";
 
 const Nav = () => {
   return (
-    <header className="bg-black sticky top-0 z-50 px-4 md:px-8">
-      <nav className="text-white sticky flex items-center lg:items-end justify-between py-4 sm:py-3 lg:pt-2  max-w-[1170px] mx-auto ">
+    <header className="bg-black sticky top-0 z-50 px-5 md:px-10 lg:px-20">
+      <nav className="text-white sticky flex items-center lg:items-end justify-between py-4 sm:py-3 lg:pt-2  max-w-[1800px] mx-auto ">
         <Link id="logo" className="flex-1 min-w-40 max-w-56 mr-4" href={"/"}>
           <Image
             width={790}
@@ -22,8 +22,8 @@ const Nav = () => {
             <NavOptions />
           </div>
 
-          <div id="contact-request" className="flex flex-col text-xs xl:text-sm items-center gap-2 lg:gap-0.5 justify-end">
-            <div className="hidden lg:flex items-center gap-1 text-[11px]">
+          <div id="contact-request" className="flex flex-col text-xs xl:text-sm items-end gap-2 lg:gap-0.5 ">
+            <div className="hidden lg:flex items-center gap-1 text-[11px] mr-3">
               <FaPhone className=" animate-ringing" />
               <a href="tel:+18555385383" className="whitespace-nowrap" >(855) 538-5383</a>
             </div>

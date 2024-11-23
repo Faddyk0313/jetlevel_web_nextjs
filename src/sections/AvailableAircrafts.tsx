@@ -8,9 +8,9 @@ const AvailableAircrafts = () => {
             type: "Turbo Prop",
             name: "King Air 350",
             image: "/images/Turboprop.jpg",
-            seats: 8,
-            range: "2040 mi",
-            speed: "310 mph",
+            seats: 5,
+            range: "1070 mi",
+            speed: "250 mph",
             description: "King Air 90, King Air 200, Pilatus PC-12, King Air 250, King Air 350, Piaggio Avanti, Beechcraft 1900",
             price: "FROM $1,800"
         },
@@ -18,9 +18,9 @@ const AvailableAircrafts = () => {
             type: "Light Jets",
             name: "Honda Jet",
             image: "/images/Light-Jet.jpg",
-            seats: 8,
-            range: "2040 mi",
-            speed: "478 mph",
+            seats: 6,
+            range: "1700 mi",
+            speed: "450 mph",
             description: "Citation CJ2, Citation CJ3, Citation Ultra, Hawker 400XP, Citation Encore, Nextant 400XTi",
             price: "FROM $4,000"
         },
@@ -28,9 +28,9 @@ const AvailableAircrafts = () => {
             type: "Midsize Jet",
             name: "Citation XLS",
             image: "/images/Mid-Size-Jet.jpg",
-            seats: 8,
-            range: "2040 mi",
-            speed: "478 mph",
+            seats: 6,
+            range: "2100 mi",
+            speed: "500 mph",
             description: "Citation Excel/XLS, Hawker 800XP, Hawker 900XP, Learjet 60, Citation Latitude, Gulfstream G150",
             price: "FROM $4,500"
         },
@@ -39,8 +39,8 @@ const AvailableAircrafts = () => {
             name: "Citation X",
             image: "/images/Super-Mid-Size-Jet.jpg",
             seats: 8,
-            range: "2040 mi",
-            speed: "478 mph",
+            range: "2800 mi",
+            speed: "525 mph",
             description: "Challenger 300, Citation X, Gulfstream G200, Citation Longitude, Citation Sovereign, Falcon 2000",
             price: "FROM $6,000"
         },
@@ -49,8 +49,8 @@ const AvailableAircrafts = () => {
             name: "Gulfstream GV",
             image: "/images/Heavy-Jet.jpg",
             seats: 8,
-            range: "2040 mi",
-            speed: "478 mph",
+            range: "3000 mi",
+            speed: "525 mph",
             description: "Global 5000, Gulfstream G500, Legacy 650, Gulfstream 450, Challenger 850, Falcon 900EX",
             price: "FROM $10,000"
         },
@@ -58,9 +58,9 @@ const AvailableAircrafts = () => {
             type: "Very Light Jet",
             name: "Phenom 100",
             image: "/images/Very-Light-Jet.jpg",
-            seats: 8,
-            range: "2040 mi",
-            speed: "478 mph",
+            seats: 4,
+            range: "1100 mi",
+            speed: "400 mph",
             description: "Citation Mustang, Eclipse 500, HondaJet, HondaJet Elite, Phenom 100, Phenom 100E, Vision Jet",
             price: "FROM $3,000"
         }
@@ -95,9 +95,9 @@ const AvailableAircrafts = () => {
                                 <p className="mb-4 text-gray-300">{jet.description}</p>
                             </div>
                             <div className='flex flex-col md:flex-row items-center justify-center md:justify-start text-xs md:text-sm gap-3  '>
-                                <Link href='https://jetlevel.com/request-a-quote' className="text-white px-3 py-2 md:py-3 min-w-fit w-2/5  md:w-[35%] rounded-full bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1">GET A QUOTE →</Link>
+                                <Link href='https://jetlevel.com/request-a-quote' className="text-white px-3 py-2 md:py-3 min-w-fit w-2/5  md:w-[35%] rounded-full bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1 text-center text-xs sm:text-sm hover:shadow-card_shadow">GET A QUOTE &nbsp;→</Link>
 
-                                <p className="mt-2 text-white font-bold">{jet.price}<span className='text-gray-300'>/ Per Hour</span></p>
+                                <p className="text-white font-bold">{jet.price}<span className='text-gray-300'>/ Per Hour</span></p>
                             </div>
                         </div>
                     </div>

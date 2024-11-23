@@ -36,7 +36,7 @@ const PopularPrivateJetCharters = () => {
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 w-full gap-4 mb-8">
         {cardInfo.map((card, index) => (
-          <div key={index} className="cursor-pointer rounded-2xl border-[3px] hover:shadow-card-shadow overflow-hidden transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue h-full">
+          <div key={index} className="cursor-pointer rounded-2xl border-[3px]  overflow-hidden transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue h-full hover:shadow-card_shadow">
             <Image
               src={card.imageLink}
               width={280}
@@ -50,7 +50,7 @@ const PopularPrivateJetCharters = () => {
           </div>
         ))}
       </div>
-      <Link href="#" className='text-white px-10 py-2 my-2 rounded-full text-lg bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1'>View All</Link>
+      <Link href="#" className='text-white px-10 py-2 my-2 rounded-full text-lg bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1 hover:shadow-card_shadow'>View All</Link>
     </section>
   );
 };

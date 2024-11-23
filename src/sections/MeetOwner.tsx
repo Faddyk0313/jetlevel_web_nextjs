@@ -32,7 +32,7 @@ const MeetOwner = () => {
                         <p className='text-[#bbbbbb] pb-1'><span className='text-lightBlue'>✓&nbsp;</span> A+ BBB rating</p>
                         <p className='text-[#bbbbbb] pb-1'><span className='text-lightBlue'>✓&nbsp;</span> 1,000+ annual charters</p>
                     </div>
-                        <Link href="#" className='text-white px-5 py-2 my-2 rounded-full text-lg bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1'>Book Your Flight</Link>
+                        <Link href="#" className='text-white px-5 py-2 my-2 rounded-full text-lg bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1 hover:shadow-card_shadow'>Book Your Flight</Link>
                 </div>
             </div>
         </section>

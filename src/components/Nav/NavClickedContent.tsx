@@ -12,12 +12,12 @@ const NavClickedContent: React.FC<navClickedContentProps> = ({ subOptions, close
     <div className="lg:absolute top-[4.5rem] left-[-30px] w-screen bg-black z-50">  {/* Full width black background */}
       <div className='bg-black w-full absolute right-full h-full'></div>
       <div className="max-w-[1170px] mr-auto">  {/* Center the content with max width */}
-        <ul className="flex lg:w-full lg:justify-evenly items-center py-5 pr-2 lg:py-10 flex-wrap">
+        <ul className="flex lg:w-full mx-1 lg:mx-8 items-center  py-2 lg:py-6 flex-wrap">
           {subOptions.map((option, index) => (
-            <li key={index} className="flex w-1/2 md:w-1/4 lg:w-max items-center gap-2 pr-1 pb-5">
+            <li key={index} className="flex w-1/2 flex-grow md:w-1/4 lg:w-max items-center py-3 gap-2 pr-3">
               <Image
                 src={option.image}
-                alt="Image"
+                alt={`Image ${index}`}
                 width={60}
                 height={60}
                 className="rounded-full object-cover w-[60px] h-[60px] lg:w-20 lg:h-20"
