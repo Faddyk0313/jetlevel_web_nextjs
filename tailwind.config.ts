@@ -26,8 +26,10 @@ const config: Config = {
   		},
 		screens:{
 			carousel: '900px'
+		},
+  		boxShadow: {
+			card_shadow: '0px 5px 12px 0px rgb(0,0,0,0.4)',
 		}
-  		
   	}
   },
   plugins: [require("tailwindcss-animate")],

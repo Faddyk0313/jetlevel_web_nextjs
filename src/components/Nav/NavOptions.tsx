@@ -43,9 +43,9 @@ function NavOptions() {
                         <NavClickedContent
                             subOptions={[
                                 { name: 'On-Demand Charter', link: '/our-services/on-demand-charter', image: '/navInsideIcons/On-Demand Charter.svg' },
-                                { name: 'Group Charter', link: '/our-services/group-charter', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Group-Charter.png' },
-                                { name: 'Air Ambulance', link: '/our-services/air-ambulance', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Air-Ambulance.png' },
-                                { name: 'Helicopter', link: '/our-services/helicopter', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Helicopter.png' },
+                                { name: 'Group Charter', link: '/our-services/group-charter', image: '/navInsideIcons/Group Charter.svg' },
+                                { name: 'Air Ambulance', link: '/our-services/air-ambulance', image: '/navInsideIcons/Air Ambulance.svg' },
+                                { name: 'Helicopter', link: '/our-services/helicopter', image: '/navInsideIcons/Helicopter.svg' },
                             ]}
                             closeDropdown={closeDropdown} // Pass the closeDropdown function here
                         />
@@ -63,10 +63,10 @@ function NavOptions() {
                     <div onClick={(e) => e.stopPropagation()}>
                         <NavClickedContent
                             subOptions={[
-                                { name: 'US & Canada', link: '/us-canada-chartered-cities', image: 'https://jetlevel.com/wp-content/uploads/2023/07/US-CANADA.png' },
-                                { name: 'International', link: '/international-chartered-cities', image: 'https://jetlevel.com/wp-content/uploads/2023/07/International.png' },
-                                { name: 'Popular Routes', link: '/popular-routes', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Popular-Routes.png' },
-                                { name: 'Empty Legs', link: '/empty-leg-flights', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Empty-Legs.png' },
+                                { name: 'US & Canada', link: '/us-canada-chartered-cities', image: '/navInsideIcons/US & CANADA.svg' },
+                                { name: 'International', link: '/international-chartered-cities', image: '/navInsideIcons/International.svg' },
+                                { name: 'Popular Routes', link: '/popular-routes', image: '/navInsideIcons/Popular Routes.svg' },
+                                { name: 'Empty Legs', link: '/empty-leg-flights', image: '/navInsideIcons/Empty Legs.svg' },
                             ]}
                             closeDropdown={closeDropdown} // Pass the closeDropdown function here
                         />
@@ -82,11 +82,11 @@ function NavOptions() {
                     <div onClick={(e) => e.stopPropagation()}>
                         <NavClickedContent
                             subOptions={[
-                                { name: 'Private Jet Airports', link: '/charter-resources/private-jet-charter', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Private-jet-Airports.png' },
-                                { name: 'Aircraft Types', link: '/charter-resources/aircraft-types', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Aircraft-Types.png' },
-                                { name: 'Cost Estimator', link: '/charter-resources/cost-estimator', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Cost-Estimator.png' },
-                                { name: 'Flight Tracker', link: '/charter-resources/flight-tracker', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Flight-Tracker.png' },
-                                { name: 'Distance Calculator', link: '/charter-resources/distance-calculator', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Distance-Calculator.png' },
+                                { name: 'Private Jet Airports', link: '/charter-resources/private-jet-charter', image: '/navInsideIcons/Private Jet Airports.svg' },
+                                { name: 'Aircraft Types', link: '/charter-resources/aircraft-types', image: '/navInsideIcons/Aircraft Types.svg' },
+                                { name: 'Cost Estimator', link: '/charter-resources/cost-estimator', image: '/navInsideIcons/Cost Estimator.svg' },
+                                { name: 'Flight Tracker', link: '/charter-resources/flight-tracker', image: '/navInsideIcons/Flight Tracker.svg' },
+                                { name: 'Distance Calculator', link: '/charter-resources/distance-calculator', image: '/navInsideIcons/Distance Calculator.svg' },
                             ]}
                             closeDropdown={closeDropdown} // Pass the closeDropdown function here
                         />
@@ -106,11 +106,11 @@ function NavOptions() {
                     <div onClick={(e) => e.stopPropagation()}>
                         <NavClickedContent
                             subOptions={[
-                                { name: 'About Us', link: '/company/about-us', image: 'https://jetlevel.com/wp-content/uploads/2023/07/About-us.png' },
-                                { name: 'Contact Us', link: '/company/contact-us', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Contact-Us.png' },
-                                { name: 'Blogs', link: '/company/blogs', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Blogs.png' },
-                                { name: 'Charter FAQs', link: '/company/charter-faqs', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Charter-FAQs.png' },
-                                { name: 'Out Team', link: '/company/our-team', image: 'https://jetlevel.com/wp-content/uploads/2023/07/Our-Team.png' },
+                                { name: 'About Us', link: '/company/about-us', image: '/navInsideIcons/About Us.svg' },
+                                { name: 'Contact Us', link: '/company/contact-us', image: '/navInsideIcons/Contact Us.svg' },
+                                { name: 'Blogs', link: '/company/blogs', image: '/navInsideIcons/On-Demand Charter.svg' },
+                                { name: 'Charter FAQs', link: '/company/charter-faqs', image: '/navInsideIcons/Charter FAQs.svg' },
+                                { name: 'Our Team', link: '/company/our-team', image: '/navInsideIcons/Our Team.svg' },
                             ]}
                             closeDropdown={closeDropdown} // Pass the closeDropdown function here
                         />

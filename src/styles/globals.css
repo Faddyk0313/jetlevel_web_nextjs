@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --darkBlue : '#1A4159';
+}
+
 @layer utilities {
   @keyframes ringing {
     0% {
