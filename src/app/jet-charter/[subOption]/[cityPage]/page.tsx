@@ -1,5 +1,6 @@
 import CityPage from "@/components/CityPage";
 import EmptyLegPage from "@/components/EmptyLegPage";
+import RoutesPage from "@/components/RoutesPage";
 import { createClient } from "@/lib/contento";
 import { ContentData } from "@gocontento/client";
 import { notFound } from "next/navigation";
@@ -14,8 +15,9 @@ type PageProps = {
 const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
     const { subOption, cityPage } = params;
 
-    // if (subOption === 'us-canada' || subOption === 'international') {
-    if (subOption === 'us-canada') {
+    if (subOption === 'cities') {
+
+
         const content: void | ContentData = await createClient()
             // .getContentById("c_01jBV38cd9sWaJ3agMZP1b0xqx")
             .getContentBySlug(`private-jet-charter-flights-to-${cityPage}`, 'usa_city_pages')
@@ -27,6 +29,12 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
             return notFound(); // navigate to a "not found" page if content is missing
         }
         return <CityPage fields={content.fields} />;
+    }
+    else if (subOption == 'popular-routes') {
+        return (
+            // <RoutesPage fields={content.fields} />
+            <RoutesPage />
+        );
     }
     else if (subOption === 'empty-legs') {
         // Access the query parameters
@@ -44,7 +52,7 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
     } else {
         return (
             <div className="p-6 max-w-4xl mx-auto text-center">
-                <h1 className="font-bold my-4">Page Not Found</h1>
+                <h2 className="font-bold my-4">Page Not Found</h2>
             </div>
         );
     }
