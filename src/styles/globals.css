@@ -89,7 +89,7 @@ h2 {
   font-size: 2.375rem; /* 32px */
   font-weight: 700;
   letter-spacing: 1px;
-  color: #1a4159;
+  color: var(--darkBlue);
   @media (min-width: 765px) {
     font-size: 2.5rem; /* 40px */
   }
