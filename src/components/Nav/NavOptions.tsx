@@ -53,7 +53,7 @@ function NavOptions() {
                 )}
             </div>
 
-            {/* Repeat for other dropdowns */}
+            {/* Repeat for other dropdowns */} 
             {/* JET CHARTER Dropdown */}
             <div onClick={() => { handleClick('jet-charter'); }}>
                 <span className="flex items-center cursor-pointer gap-2 mx-2 text-white text-nowrap  hover:text-blue transition-all duration-100">
