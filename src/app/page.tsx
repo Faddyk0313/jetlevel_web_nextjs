@@ -12,13 +12,12 @@ import PopularPrivateJetCharters from "@/sections/PopularPrivateJetCharters";
 import MeetOwner from "@/sections/MeetOwner";
 import AvailableAircrafts from "@/sections/AvailableAircrafts";
 import WhatOurClientsSay from "@/sections/WhatOurClientsSay";
-import BookYourPrivateJet from "@/sections/BookYourPrivateJet";
 import Faqs from "@/sections/Faqs";
 
 export default function Home() {
   return (
     <>
-      <Hero image={"https://fly.jetlevel.com/assets/Private%20jet%20interior%20bg%20.webp"} title={"Get Instant Quote and Charter Your Private Jet Today"} subtitle={"Fly with Confidence!"} tagline={"Fly in 2-4 hours. No hidden fees."} />
+      <Hero image={"https://fly.jetlevel.com/assets/Private%20jet%20interior%20bg%20.webp"} title={"Get Instant Quote and Charter Your Private Jet Today"} subtitle={"Fly with Confidence!"} tagline={"Fly in 2-4 hours. No hidden fees."} hasCalculator={true} hasOverlay={false}/>
       <BrandNames />
       <CompanyOverview />
       <AboutUs />
@@ -33,7 +32,6 @@ export default function Home() {
       <AvailableAircrafts />
       <WhatOurClientsSay />
       <Faqs />
-      <BookYourPrivateJet />
     </>
   );
 }

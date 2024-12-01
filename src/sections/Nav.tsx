@@ -6,7 +6,7 @@ import Image from "next/image";
 
 const Nav = () => {
   return (
-    <header className="bg-black sticky top-0 z-50 px-5 md:px-10 lg:px-20">
+    <header className="bg-black sticky top-0 z-50 px-5 md:px-10 lg:px-20 ">
       <nav className="text-white sticky flex items-center lg:items-end justify-between py-4 sm:py-3 lg:pt-2  max-w-[1800px] mx-auto ">
         <Link id="logo" className="flex-1 min-w-40 max-w-56 mr-4" href={"/"}>
           <Image

@@ -3,6 +3,7 @@ import "@/styles/globals.css";
 import Nav from '@/sections/Nav';
 import Footer from '@/sections/Footer';
 import ContactMenu from "@/sections/ContactMenu";
+import BookYourPrivateJet from '@/sections/BookYourPrivateJet';
 
 // Configure the fonts with subsets
 const playfairDisplay = Playfair_Display({
@@ -33,9 +34,10 @@ export default function RootLayout({
       <head>
         <link rel="icon" href="https://jetlevel.com/wp-content/uploads/2019/08/cropped-icon-32x32.png" />
       </head>
-      <body className={`${playfairDisplay.variable} ${montserrat.variable} ${libreBaskerville.variable}`}>
+      <body className={`${playfairDisplay.variable} ${montserrat.variable} ${libreBaskerville.variable} max-w-screen overflow-x-hidden`}>
         <Nav />
         {children}
+        <BookYourPrivateJet />
         <ContactMenu />
         <Footer />
       </body>

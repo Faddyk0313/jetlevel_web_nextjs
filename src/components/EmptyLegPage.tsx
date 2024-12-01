@@ -2,7 +2,6 @@ import BrandNames from "@/sections/BrandNames";
 import Hero from "@/sections/Hero";
 import CollapsibleSection from "./CollapsibleSection";
 import TopCharteredCities from "./TopCharteredCities";
-import BookYourPrivateJet from "@/sections/BookYourPrivateJet";
 import Breadcrumb from "./Breadcrumb/Breadcrumb";
 import CollapsibleAvinodeCalculatorSection from "./CollapsibleAvinodeCalculatorSection";
 
@@ -35,6 +34,8 @@ const EmptyLegPage = async ({ fields }: any) => {
                 image="https://jetlevel.com/wp-content/uploads/2024/04/Empty-Legs-1.jpg"
                 title={fields.title.text}
                 subtitle={fields.subtitle.text}
+                hasOverlay={true}
+                hasCalculator={false}
             />
             <BrandNames />
             <section className="flex flex-col lg:flex-row gap-5 px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
@@ -70,7 +71,6 @@ const EmptyLegPage = async ({ fields }: any) => {
                     />
                 </div>
             </section>
-            <BookYourPrivateJet />
         </>
     );
 };

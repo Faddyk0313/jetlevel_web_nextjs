@@ -8,11 +8,11 @@ type PageProps = {
   };
 };
 
-const pageContent: Record<string, { title: string; }> = {
-  'us-canada': { title: 'US Canada' },
-  'international': { title: 'International' },
-  'popular-routes': { title: 'Popular Routes' },
-  'empty-legs': { title: 'Empty Legs' },
+const pageContent: Record<string, { title: string }> = {
+  "us-canada": { title: "US Canada" },
+  international: { title: "International" },
+  "popular-routes": { title: "Popular Routes" },
+  "empty-legs": { title: "Empty Legs" },
 };
 
 // This function generates static parameters for known paths
@@ -24,7 +24,7 @@ const JetCharter = async ({ params }: PageProps) => {
   const { subOption } = params;
 
   const { title } = pageContent[subOption] || {
-    title: 'Page Not Found',
+    title: "Page Not Found",
   };
 
   // Determine the contentType based on subOption
@@ -43,12 +43,12 @@ const JetCharter = async ({ params }: PageProps) => {
   }
 
   const client = createClient();
-  const limit = 100;  // Set to a reasonable high limit
+  const limit = 100; // Set to a reasonable high limit
   let response = await client.getContentByType({
     contentType: contentType,
     sortBy: "published_at",
     sortDirection: "desc",
-    limit
+    limit,
   });
 
   let content = [...response.content];
@@ -63,6 +63,18 @@ const JetCharter = async ({ params }: PageProps) => {
     <div className="p-6 max-w-4xl mx-auto text-center">
       <h1 className="font-bold my-4">{title}</h1>
       <ul>
+        {subOption === "popular-routes" ? (
+          <li>
+            <Link
+              className="hover:text-blue"
+              href={"/private-jet-charter-teterboro-to-buffalo"}
+            >
+              Private Jet Charter Routes: Teterboro to Buffalo
+            </Link>
+          </li>
+        ) : (
+          ""
+        )}
         {content?.map((item, key) => (
           <li key={key}>
             <Link className="hover:text-blue" href={"/" + item.slug}>
