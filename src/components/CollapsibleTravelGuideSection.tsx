@@ -4,10 +4,7 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 import { FiPlus } from "react-icons/fi";
 import dynamic from "next/dynamic";
-
-const DynamicWeatherWidget = dynamic(() => import("./WeatherWidget"), {
-    ssr: false,
-});
+import WeatherWidget from './WeatherWidget';
 
 // Type definition for the final output
 interface OutputArray {
@@ -41,7 +38,7 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
             /<p>(?!<a)(.*?)[–:]/g,
             '<p><span>$1</span>:'
         );
-    };   
+    };
 
     return (
         <section className="border-b py-5">
@@ -60,7 +57,29 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
             <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[5000px]' : 'max-h-0'}`}>
                 <div className="mt-5 space-y-8">
                     {/* Weather Section */}
-                    <div>
+                    <div className='flex flex-col gap-1'>
+                        <h3 className="font-semibold text-gray-800">{weatherFields.title}</h3>
+                        <div className='details leading-8 text-gray-700'>
+                            <div className=''>
+                                <Markdown
+                                    options={{
+                                        overrides: {
+                                            a: {
+                                                props: {
+                                                    className: ' text-blue',
+                                                },
+                                            },
+                                        },
+                                    }}
+                                >
+                                    {weatherFields.paragraph}
+                                </Markdown>
+                            </div>
+                        </div>
+                        <WeatherWidget widgetHtml={weatherFields.widgetHtml}/>
+
+                    </div>
+                    {/* <div>
                         <h3 className="text-2xl font-semibold text-gray-800">{weatherFields.title}</h3>
                         <div className='mt-2 details leading-8 text-gray-700'>
                             <div className='my-2'>
@@ -80,7 +99,7 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
                             </div>
                             <DynamicWeatherWidget widgetHtml={weatherFields.widgetHtml} />
                         </div>
-                    </div>
+                    </div> */}
 
                     {/* Travel Concierge Services */}
                     <div>

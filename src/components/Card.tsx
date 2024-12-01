@@ -9,7 +9,8 @@ type CardProps = {
 
 const Card: React.FC<CardProps> = ({ icon, title, description, bgcolor }) => { 
     return (
-        <div
+        <a
+            href="https://jetlevel.com/"
             className={`flex flex-col items-start text-left border-[3px]  text-white rounded-2xl px-4 py-4 box-border cursor-pointer transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue h-full
                 ${
                     bgcolor == "white"
@@ -23,7 +24,7 @@ const Card: React.FC<CardProps> = ({ icon, title, description, bgcolor }) => {
             </div>
             <h3 className="mb-2">{title}</h3>
             <p className="max-[950px]:text-sm text-gray-300">{description}</p>
-        </div>
+        </a>
     );
 };
 

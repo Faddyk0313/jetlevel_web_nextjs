@@ -3,14 +3,13 @@ import BrandNames from "@/sections/BrandNames";
 import Hero from "@/sections/Hero";
 import CollapsibleSection from "./CollapsibleSection";
 import TopCharteredCities from "./TopCharteredCities";
-import BookYourPrivateJet from "@/sections/BookYourPrivateJet";
 import Breadcrumb from "./Breadcrumb/Breadcrumb";
 import CollapsibleInfoSection from './CollapsibleInfoSection';
 import CollapsibleTableSection from './CollapsibleTableSection';
 import CollapsibleAircraftSection from './CollapsibleAircraftSection';
 import CollapsibleTravelGuideSection from './CollapsibleTravelGuideSection';
 
-const CityPage = async ({ fields }: any) => {
+const CityPage = ({ fields }: any) => {
     const faqContent = fields.faq.blocks[0].fields.answers.list.map((item: { text: string }, index: number) => ({
         question: fields.faq.blocks[0].fields.questions.list[index].text,
         answer: item.text
@@ -54,7 +53,7 @@ const CityPage = async ({ fields }: any) => {
         widgetHtml: fields.weather.blocks[0].fields.weather_widget.text
     }
 
-    const otherFields = [
+    const otherFields  = [
         {
             title: fields.travel_concierge_services.blocks[0].fields.title.text,
             paragraph: fields.travel_concierge_services.blocks[0].fields.paragraph.text
@@ -71,10 +70,12 @@ const CityPage = async ({ fields }: any) => {
             <Hero
                 image={fields.hero_image.assets[0].asset.url}
                 title={fields.title.text}
+                hasOverlay={true}
+                hasCalculator={true}
             />
             <BrandNames />
-            <section className="flex flex-col lg:flex-row gap-5 px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
-                <div className="min-w-[75%] md:w-full">
+            <section className="flex flex-col lg:flex-row justify-between gap-5 px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
+                <div className="min-w-[74%] md:w-full">
                     <Breadcrumb />
 
                     <CollapsibleSection
@@ -156,9 +157,9 @@ const CityPage = async ({ fields }: any) => {
                     />
                     <CollapsibleSection title="Frequently Asked Questions" content={faqContent} />
 
-                    <CollapsibleTravelGuideSection title={fields.main_heading.text} travelGuideFields={fields2} travelConceirge_EmergencyContacts={otherFields} weatherFields={weatherFields} isDefaultOpen={true} />
+                    <CollapsibleTravelGuideSection title={fields.main_heading.text} travelGuideFields={fields2} travelConceirge_EmergencyContacts={otherFields} weatherFields={weatherFields} />
                 </div>
-                <div className="min-w-[25%] md:w-fit">
+                <div className="min-w-[24%] md:w-fit">
                     <TopCharteredCities
                         title="US"
                         cities={[
@@ -177,7 +178,6 @@ const CityPage = async ({ fields }: any) => {
                     />
                 </div>
             </section>
-            <BookYourPrivateJet />
         </>
     );
 };

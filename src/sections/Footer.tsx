@@ -52,8 +52,8 @@ const Footer = () => {
     return (
         <section className='bg-black pt-5 px-5 md:px-10 lg:px-20 pb-0'>
             <div className=" max-w-[1800px] mx-auto pt-10 text-[#f0f1f2]">
-                <div className="pb-4 flex flex-col justify-between w-fit mx-auto min-[1100px]:flex-row gap-5">
-                    <div className='mb-4 lg:mb-8 '>
+                <div className="pb-4 flex flex-col justify-between w-fit mx-auto min-[1180px]:w-full min-[1180px]:m-0  min-[1180px]:flex-row gap-5">
+                    <div className='mb-4 min-[1180px]:mb-8 '>
                         <Image
                             src="/images/Logo.png"
                             alt="Jet Level Aviation Logo"
@@ -123,8 +123,8 @@ const Footer = () => {
 
             </div>
             <div className="relative">
-                <hr className='-ml-5 md:-ml-20 border-[#858585] absolute w-[calc(100%_+40px)] md:w-[calc(100%_+160px)]'/>
-                <div className='max-w-[1170px] mx-auto flex flex-col lg:flex-row text-[#f0f1f2] gap-5 mt-8 py-4'>
+                <hr className='-ml-5 md:-ml-20 border-[#858585] absolute w-[calc(100%_+40px)] md:w-[calc(100%_+120px)] lg:w-[calc(100%_+160px)]'/>
+                <div className='max-w-[1800px] mx-auto flex flex-col lg:flex-row text-[#f0f1f2] gap-5 mt-8 py-4'>
                     <div className='flex gap-5 flex-col md:flex-row lg:flex-col text-[11px]'>
                         <div>&copy; 2024 Jetlevel Aviation LLC All rights reserved</div>
                         <div className='flex flex-row gap-3 md:mx-auto lg:mx-0'>

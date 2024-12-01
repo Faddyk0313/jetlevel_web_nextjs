@@ -16,8 +16,6 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
     const { subOption, cityPage } = params;
 
     if (subOption === 'cities') {
-
-
         const content: void | ContentData = await createClient()
             // .getContentById("c_01jBV38cd9sWaJ3agMZP1b0xqx")
             .getContentBySlug(`private-jet-charter-flights-to-${cityPage}`, 'usa_city_pages')

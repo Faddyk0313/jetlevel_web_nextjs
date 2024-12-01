@@ -82,7 +82,7 @@ function NavOptions() {
                     <div onClick={(e) => e.stopPropagation()}>
                         <NavClickedContent
                             subOptions={[
-                                { name: 'Private Jet Airports', link: '/charter-resources/private-jet-charter', image: '/navInsideIcons/Private Jet Airports.svg' },
+                                { name: 'Private Jet Airports', link: '/usa-airport-directory', image: '/navInsideIcons/Private Jet Airports.svg' },
                                 { name: 'Aircraft Types', link: '/charter-resources/aircraft-types', image: '/navInsideIcons/Aircraft Types.svg' },
                                 { name: 'Cost Estimator', link: '/charter-resources/cost-estimator', image: '/navInsideIcons/Cost Estimator.svg' },
                                 { name: 'Flight Tracker', link: '/charter-resources/flight-tracker', image: '/navInsideIcons/Flight Tracker.svg' },

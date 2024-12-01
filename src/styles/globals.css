@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 :root {
-  --darkBlue : '#1A4159';
+  --darkBlue : #1A4159;
 }
 
 @layer utilities {

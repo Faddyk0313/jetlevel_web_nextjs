@@ -9,12 +9,13 @@ type navClickedContentProps = {
 
 const NavClickedContent: React.FC<navClickedContentProps> = ({ subOptions, closeDropdown }) => {
   return (
-    <div className="lg:absolute top-[4.5rem] left-[-30px] w-screen bg-black z-50">  {/* Full width black background */}
-      <div className='bg-black w-full absolute right-full h-full'></div>
-      <div className="max-w-[1170px] mr-auto">  {/* Center the content with max width */}
-        <ul className="flex lg:w-full mx-1 lg:mx-8 items-center  py-2 lg:py-6 flex-wrap">
+    <div className="lg:absolute top-[4.5rem] left-0 w-full bg-black z-50">  {/* Full width black background */}
+      <div className='hidden lg:block bg-black w-full absolute right-full h-full'></div>
+      <div className='hidden lg:block bg-black w-full absolute left-full h-full'></div>
+      <div className="lg:max-w-[1800px] overflow-hidden lg:overflow-visible mx-auto">  {/* Center the content with max width */}
+        <ul className="flex lg:w-full items-center justify-between  py-2 lg:py-6 flex-wrap">
           {subOptions.map((option, index) => (
-            <li key={index} className="flex w-1/2 flex-grow md:w-1/4 lg:w-max items-center py-3 gap-2 pr-3">
+            <li key={index} className="flex w-1/2 md:w-1/4 lg:w-max items-center py-3 gap-2 pr-3">
               <Image
                 src={option.image}
                 alt={`Image ${index}`}

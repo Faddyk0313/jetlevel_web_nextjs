@@ -24,7 +24,7 @@ const CompanyOverview = () => {
     ];
 
     return (
-        <section className='max-w-[1800px] mx-auto flex flex-col justify-center sectionHeight lg:pt-2 px-5 md:px-10 lg:px-20'>
+        <section className='max-w-[1800px] mx-auto flex flex-col justify-center min-h-screen  lg:pt-2 px-5 md:px-10 lg:px-20'>
             <div className="flex flex-col lg:flex-row justify-center gap-1 w-fit">
                 <div className="w-full lg:min-w-[50%] lg:max-w-[50%] lg:pt-7">
                     <h2 className="mb-4">Our Story, Mission, and Values at Jetlevel Aviation.</h2>

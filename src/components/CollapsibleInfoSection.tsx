@@ -1,6 +1,6 @@
 "use client";
 import Markdown from 'markdown-to-jsx';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { FiPlus } from "react-icons/fi";
 
 // interface SectionItem {
@@ -21,9 +21,15 @@ interface CollapsibleInfoSectionProps {
 }
 
 const CollapsibleInfoSection: React.FC<CollapsibleInfoSectionProps> = ({ title, intro, sections, isDefaultOpen = false }) => {
-    const [isOpen, setIsOpen] = useState(isDefaultOpen);
+    const [isOpen, setIsOpen] = useState(false);
+
+    useEffect(() => {
+        setIsOpen(isDefaultOpen);
+    }, [isDefaultOpen]);
 
     const toggleSection = () => setIsOpen((prev) => !prev);
+
+
     function addSpanToTitles(content: string): string {
         return content.replace(
             /<p>([^–:]+)[–:]/g,
@@ -37,14 +43,14 @@ const CollapsibleInfoSection: React.FC<CollapsibleInfoSectionProps> = ({ title, 
                 onClick={toggleSection}
                 aria-expanded={isOpen}
             >
-                <h2 className={`transition-colors duration-200 ${isOpen ? 'text-blue' : 'text-darkBlue group-hover:text-blue'}`}>
+                <h2 className={`transition-all duration-200 ${isOpen ? 'text-blue' : 'text-darkBlue group-hover:text-blue'}`}>
                     {title}
                 </h2>
-                <span className={`transition-all duration-200 border-2 rounded-full ${isOpen ? 'rotate-45 text-blue border-blue' : 'text-darkBlue border-gray-600 group-hover:text-blue group-hover:border-blue'}`}>
+                <span className={`transition-all duration-200 border-2 rounded-full ${isOpen ? 'rotate-45 text-blue border-blue' : 'text-darkBlue border-darkBlue group-hover:text-blue group-hover:border-blue'}`}>
                     <FiPlus className="w-7 h-7" />
                 </span>
             </div>
-            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? '' : 'max-h-0'}`}>
+            <div className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? 'max-h-[2100px] sm:max-h-[1200px]' : 'max-h-0'}`}>
                 {/* Render Intro Text */}
                 {intro && (
                     <div className='mt-2 details leading-8 text-gray-700'>

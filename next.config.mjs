@@ -2,7 +2,6 @@
 const nextConfig = {
   async rewrites() {
     return [
-      
       {
         source: '/us-canada-chartered-cities',
         destination: '/jet-charter/us-canada',
@@ -31,6 +30,14 @@ const nextConfig = {
         source: '/empty-leg-flights-:location',
         destination: '/jet-charter/empty-legs/:location',
       },
+      {
+        source: '/usa-airport-directory',
+        destination: '/charter-resources/private-jet-airports',
+      },
+      {
+        source: '/:location',
+        destination: '/charter-resources/private-jet-airports/:location',
+      },
     ];
   },
   images: {
@@ -43,6 +50,11 @@ const nextConfig = {
       {
         protocol: 'https',
         hostname: 'fly.jetlevel.com',
+        pathname: '**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'assets.contento.io', // Added this hostname
         pathname: '**',
       },
     ],

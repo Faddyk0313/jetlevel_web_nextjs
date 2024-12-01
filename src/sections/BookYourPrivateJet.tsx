@@ -1,6 +1,5 @@
 "use client"
 
-import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 import React from 'react';
 import { Player } from '@lordicon/react';
@@ -17,14 +16,13 @@ const BookYourPrivateJet = () => {
         playerRef2.current?.playFromBeginning();
     }, [])
     return (
-        <section className="flex flex-col items-center bg-blue-background bg-cover justify-center sectionHeight text-white">
+        <section className="flex flex-col items-center bg-blue-background bg-cover justify-center min-h-screen py-[90px] text-white">
             <div className='max-w-[1800px] mx-auto px-8'>
                 <h3 className="text-center text-lg font-bold mb-2">BOOK YOUR PRIVATE JET</h3>
-                <h2 className="text-center mb-6 text-white">Aviation agents standing by 24/7 to assist</h2>
+                <h2 className="text-center mb-10 text-white">Aviation agents standing by 24/7 to assist</h2>
                 <div className="flex flex-col md:flex-row justify-center gap-5 ">
                     <div className="bg-white flex flex-col items-center gap-5 text-center sm:mx-[20%] md:mx-0 md:min-w-[310px] md:px-10 pt-4 pb-2 md:py-7 rounded-2xl shadow-lg text-gray-800">
                         <Player
-                        
                             ref={playerRef1}
                             icon={ICON1}
                             size={100}
