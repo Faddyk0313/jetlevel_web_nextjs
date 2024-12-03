@@ -46,13 +46,15 @@ const RoutesPage = () => {
     const googleMapsContent = [
         {
             heading: "Teterboro Airports",
-            airports: "1,2,3,4,5",
-            widgetHtml: `<a className="weatherwidget-io" href="https://forecast7.com/en/40d86n74d06/teterboro/?unit=us" data-label_1="TETERBORO" data-label_2="WEATHER" data-theme="marine" >TETERBORO WEATHER</a>`
+            airportsArray: [
+                { name: 'Teterboro Airport', latitude: 40.8583, longitude: -74.0615 },
+            ]
         },
         {
             heading: "Buffalo Airports",
-            airports: "1,2,3,4,5",
-            widgetHtml: `<a className="weatherwidget-io" href="https://forecast7.com/en/42d89n78d88/buffalo/?unit=us" data-label_1="BUFFALO" data-label_2="WEATHER" data-theme="marine" >BUFFALO WEATHER</a>`
+            airportsArray: [
+                { name: 'Buffalo Niagara International Airport', latitude: 42.9394, longitude: -78.7335 },
+            ]
         }
     ];
     return (
@@ -71,7 +73,7 @@ const RoutesPage = () => {
                     <CollapsibleSection
                         title="Private Jet from Teterboro to Buffalo"
                         content="Traveling by private jet from Teterboro to Buffalo typically takes about 1 hour. Costs vary, generally ranging from $4,000 to $7,000 one-way, depending on the aircraft and services. Common choices for this route include efficient jets like the HondaJet or Cessna Citation Mustang. Flights depart from Teterboro Airport, offering direct and quick access to Buffalo, ideal for business or leisure, providing flexibility, privacy, and a streamlined travel experience."
-                        isDefaultOpen={true} 
+                        isDefaultOpen={true}
                     />
                     <CollapsibleRouteWeatherSection title="Best Airports for Private Jet Charter" items={googleMapsContent} />
                     <CollapsibleSection title="Why Choose a Private Jet?" content={faqContent} />

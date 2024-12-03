@@ -10,8 +10,8 @@ const Breadcrumb: React.FC = () => {
   const pathname = usePathname();
   const pathSegments: string[] = pathname?.split("/").filter(Boolean) || [];
 
-  console.log("pathname", pathname);
-  console.log("pathSegments", pathSegments);
+  // console.log("pathname", pathname);
+  // console.log("pathSegments", pathSegments);
 
   // Rewrite mappings (including dynamic routes)
   const rewriteMapping: { [key: string]: string; } = {
@@ -61,23 +61,22 @@ const Breadcrumb: React.FC = () => {
   const segments = href.split("/").filter(Boolean); // Remove empty segments
   // Determine the base segment dynamically (e.g., 'jet-charter' or 'charter-resources')
   const baseSegment = segments[0]; // Get the first segment
-  console.log("segments", segments);
-
+  // console.log("segments", segments);
   let subOption = segments[1]; // cities, empty-legs etc.
-  if (usCanadaLocations.includes(segments[segments.length - 1])) {
-    subOption = 'us-canada';
-  } else if (internationalLocations.includes(segments[segments.length - 1])) {
-    subOption = 'international';
-  } else {
-    subOption = 'cities';
+  if (subOption == "cities") {
+    if (usCanadaLocations.includes(segments[segments.length - 1])) {
+      subOption = 'us-canada';
+    } else if (internationalLocations.includes(segments[segments.length - 1])) {
+      subOption = 'international';
+    }
   }
 
   segments[1] = subOption;
 
   const hrefArray = segments.slice(1);
 
-  console.log("href", href);
-  console.log("hrefArray", hrefArray);
+  // console.log("href", href);
+  // console.log("hrefArray", hrefArray);
 
   return (
     <div
