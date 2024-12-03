@@ -32,13 +32,13 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
     const toggleSection = () => setIsOpen((prev) => !prev);
 
     // Utility function to wrap plain text titles with <span>
-    const addSpanToTitles = (html: string): string => {
-        // Regular expression to match list items without <a> tags around the title text
-        return html.replace(
-            /<p>(?!<a)(.*?)[–:]/g,
-            '<p><span>$1</span>:'
-        );
-    };
+    // const addSpanToTitles = (html: string): string => {
+    //     // Regular expression to match list items without <a> tags around the title text
+    //     return html.replace(
+    //         /<p>(?!<a)(.*?)[–:]/g,
+    //         '<p><span>$1</span>:'
+    //     );
+    // };
 
     return (
         <section className="border-b py-5">
@@ -142,7 +142,7 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
                                         },
                                     }}
                                 >
-                                    {addSpanToTitles(section.paragraph as string)}
+                                    {section.paragraph as string}
                                 </Markdown>
                             </div>
                         </div>

@@ -9,7 +9,7 @@ const AirportPage = ({ fields }: any) => {
     // console.log("-------------------------", fields.fbo_content.blocks[0].fields?.airport_section_list?.blocks[0].fields.image.assets[0].asset.url)
   return (
     <>
-      <Hero
+      <Hero 
         image="https://jetlevel.com/wp-content/uploads/2023/07/bg-kads.jpg"
         title={fields.hero_content.blocks[0].fields.title.text}
         description={fields.hero_content.blocks[0].fields.paragraph.text}

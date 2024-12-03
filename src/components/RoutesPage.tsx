@@ -65,13 +65,13 @@ const RoutesPage = () => {
                 hasCalculator={true}
             />
             <BrandNames />
-            <section className="flex flex-col lg:flex-row gap-5 px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
-                <div className="min-w-[75%] md:w-full">
+            <section className="flex flex-col lg:flex-row gap-10 px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
+                <div className="min-w-full md:min-w-[72%]">
                     <Breadcrumb />
                     <CollapsibleSection
                         title="Private Jet from Teterboro to Buffalo"
                         content="Traveling by private jet from Teterboro to Buffalo typically takes about 1 hour. Costs vary, generally ranging from $4,000 to $7,000 one-way, depending on the aircraft and services. Common choices for this route include efficient jets like the HondaJet or Cessna Citation Mustang. Flights depart from Teterboro Airport, offering direct and quick access to Buffalo, ideal for business or leisure, providing flexibility, privacy, and a streamlined travel experience."
-                        isDefaultOpen={true}
+                        isDefaultOpen={true} 
                     />
                     <CollapsibleRouteWeatherSection title="Best Airports for Private Jet Charter" items={googleMapsContent} />
                     <CollapsibleSection title="Why Choose a Private Jet?" content={faqContent} />
@@ -79,9 +79,9 @@ const RoutesPage = () => {
                     <CollapsibleRouteWeatherSection title="Weather Insights" items={weatherContent} />
                     <CollapsibleSection title="For Business and Personal Private Jet Travel – Call JetLevel Aviation" content="JetLevel Aviation is your trusted partner for all your private jet needs. With nearly 20 years of experience, we bring safety, comfort, and luxury together to redefine your air travel experience. Discover more about us through our About Us page or find answers to frequently asked questions on our FAQs page. Don’t forget to check out our blog for latest news, tips, and insights into the world of private aviation.<br/>For both business and personal private jet travel, JetLevel Aviation has set the standard in personalized aviation services. Reach out today to experience a new echelon of air travel, backed by the trust and authority of Ricky Gomulka’s nearly 20 years in the industry. Contact us now!" />
                 </div>
-                <div className="min-w-[25%] md:w-fit">
+                <div className="min-w-[24%] md:w-fit">
                     <TopCharteredCities
-                        title="Empty Leg"
+                        title="Routes"
                         cities={[
                             { name: "New York, NY", link: "#" },
                             { name: "Aspen, CO", link: "#" },

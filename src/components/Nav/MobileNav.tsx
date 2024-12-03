@@ -31,7 +31,7 @@ function NavbarDropdown() {
       </div>
       <div
         id="nav-dropdown"
-        className={`fixed top-[4rem] left-0 h-full box-border wsce bg-black flex flex-col pt-5 pl-5 space-y-4 transform transition-transform duration-500 ease-in-out  ${isOpen ? "translate-x-0" : "-translate-x-full"
+        className={`fixed top-[4rem] left-0 w-screen h-full box-border wsce bg-black flex flex-col pt-5 px-7 md:px-12 space-y-4 transform transition-transform duration-500 ease-in-out  ${isOpen ? "translate-x-0" : "-translate-x-full"
           }`}
       >
         <Link href="tel:+18555385383" className="flex items-center gap-3 text-white text-base font-bold">

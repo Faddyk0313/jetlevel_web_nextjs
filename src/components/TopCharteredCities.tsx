@@ -17,7 +17,7 @@ const TopCharteredCities: React.FC<TopCharteredCitiesProps> = ({ title, cities, 
         <div className="bg-white flex flex-col justify-center shadow-card_shadow rounded-md pb-3">
             <div className="bg-blue-background bg-cover text-white text-center rounded-t-md py-4">
                 <h3 className='pb-1'>
-                    Top <span>{title}</span>
+                    Top <span>{title == 'usa_city_pages' ? "US" : title == 'International' ? "International" : title == 'Routes' ? "Routes" : title == 'Empty Leg' ? "Empty Leg" : title == 'Airports For' ? "Airports For" : ""}</span>
                 </h3>
                 <h3>Chartered Cities</h3>
             </div>

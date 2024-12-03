@@ -54,7 +54,7 @@ const CollapsibleAirportSection: React.FC<CollapsibleAirportSectionProps> = ({
       </div>
       <div
         className={`overflow-hidden transition-all duration-500 ease-in-out ${
-          isOpen ? "max-h-[2100px] sm:max-h-[1200px]" : "max-h-0"
+          isOpen ? "max-h-[3000px] sm:max-h-[3000px]" : "max-h-0"
         }`}
       >
         <div className="mt-2 details leading-8 text-gray-700">
