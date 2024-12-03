@@ -37,7 +37,7 @@ export default function RootLayout({
       <body className={`${playfairDisplay.variable} ${montserrat.variable} ${libreBaskerville.variable} max-w-screen overflow-x-hidden`}>
         <Nav />
         {children}
-        <BookYourPrivateJet />
+        {/* <BookYourPrivateJet /> */}
         <ContactMenu />
         <Footer />
       </body>

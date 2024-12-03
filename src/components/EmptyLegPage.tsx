@@ -38,8 +38,8 @@ const EmptyLegPage = async ({ fields }: any) => {
                 hasCalculator={false}
             />
             <BrandNames />
-            <section className="flex flex-col lg:flex-row gap-5 px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
-                <div className="min-w-[75%] md:w-full">
+            <section className="flex flex-col lg:flex-row gap-10 px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
+                <div className="min-w-full md:min-w-[72%]"> 
                     <Breadcrumb />
 
                     <CollapsibleSection title={fields.intoduction.blocks[0].fields.title.text} content={fields.intoduction.blocks[0].fields.paragraph.text} isDefaultOpen={true} />
@@ -52,7 +52,7 @@ const EmptyLegPage = async ({ fields }: any) => {
                     <CollapsibleSection title="Listing of Region-Specific Empty Leg Flights" content={links} />
                     <CollapsibleSection title="Frequently Asked Questions" content={faqContent} />
                 </div>
-                <div className="min-w-[25%] md:w-fit">
+                <div className="min-w-[24%] md:w-fit">
                     <TopCharteredCities
                         title="Empty Leg"
                         cities={[

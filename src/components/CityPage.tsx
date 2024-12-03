@@ -9,7 +9,12 @@ import CollapsibleTableSection from './CollapsibleTableSection';
 import CollapsibleAircraftSection from './CollapsibleAircraftSection';
 import CollapsibleTravelGuideSection from './CollapsibleTravelGuideSection';
 
-const CityPage = ({ fields }: any) => {
+interface Props {
+    fields: any; // Replace `any` with the actual type of `fields` if known
+    region: string;
+}
+
+const CityPage = ({ fields, region }: Props) => {
     const faqContent = fields.faq.blocks[0].fields.answers.list.map((item: { text: string }, index: number) => ({
         question: fields.faq.blocks[0].fields.questions.list[index].text,
         answer: item.text
@@ -74,8 +79,8 @@ const CityPage = ({ fields }: any) => {
                 hasCalculator={true}
             />
             <BrandNames />
-            <section className="flex flex-col lg:flex-row justify-between gap-5 px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
-                <div className="min-w-[74%] md:w-full">
+            <section className="flex flex-col lg:flex-row justify-between gap-10 px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
+                <div className="min-w-full md:min-w-[72%]">
                     <Breadcrumb />
 
                     <CollapsibleSection
@@ -159,9 +164,9 @@ const CityPage = ({ fields }: any) => {
 
                     <CollapsibleTravelGuideSection title={fields.main_heading.text} travelGuideFields={fields2} travelConceirge_EmergencyContacts={otherFields} weatherFields={weatherFields} />
                 </div>
-                <div className="min-w-[24%] md:w-fit">
+                <div className="min-w-[24%] max-w-fit">
                     <TopCharteredCities
-                        title="US"
+                        title={region}
                         cities={[
                             { name: 'New York, NY', link: '#' },
                             { name: 'Aspen, CO', link: '#' },

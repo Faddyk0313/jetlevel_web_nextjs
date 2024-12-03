@@ -55,7 +55,7 @@ const CollapsibleRouteTableSection: React.FC<
       </div>
       <div
         className={`overflow-hidden transition-all duration-500 ease-in-out ${
-          isOpen ? "max-h-[2100px] sm:max-h-[1200px]" : "max-h-0"
+          isOpen ? "max-h-[3000px] sm:max-h-[3000px]" : "max-h-0"
         }`}
       >
         <div>

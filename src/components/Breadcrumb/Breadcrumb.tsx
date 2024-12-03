@@ -4,16 +4,21 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiHome } from "react-icons/fi";
 import styles from "./Breadcrumb.module.css";
+import { internationalLocations, usCanadaLocations } from "../Locations";
 
 const Breadcrumb: React.FC = () => {
   const pathname = usePathname();
   const pathSegments: string[] = pathname?.split("/").filter(Boolean) || [];
 
+  console.log("pathname", pathname);
+  console.log("pathSegments", pathSegments);
+
   // Rewrite mappings (including dynamic routes)
-  const rewriteMapping: { [key: string]: string } = {
+  const rewriteMapping: { [key: string]: string; } = {
     "/jet-charter/us-canada": "/us-canada-chartered-cities",
-    "/jet-charter/us-canada/:location":
-      "/private-jet-charter-flights-to-:location",
+    "/jet-charter/cities/:location": "/private-jet-charter-flights-to-:location",
+    "/jet-charter/us-canada/:location": "/private-jet-charter-flights-to-:location",
+    "/jet-charter/international/:location": "/private-jet-charter-flights-to-:location",
     "/jet-charter/international": "/international-chartered-cities",
     "/jet-charter/popular-routes": "/popular-routes",
     "/jet-charter/popular-routes/:location": "/private-jet-charter-:location",
@@ -56,7 +61,23 @@ const Breadcrumb: React.FC = () => {
   const segments = href.split("/").filter(Boolean); // Remove empty segments
   // Determine the base segment dynamically (e.g., 'jet-charter' or 'charter-resources')
   const baseSegment = segments[0]; // Get the first segment
+  console.log("segments", segments);
+
+  let subOption = segments[1]; // cities, empty-legs etc.
+  if (usCanadaLocations.includes(segments[segments.length - 1])) {
+    subOption = 'us-canada';
+  } else if (internationalLocations.includes(segments[segments.length - 1])) {
+    subOption = 'international';
+  } else {
+    subOption = 'cities';
+  }
+
+  segments[1] = subOption;
+
   const hrefArray = segments.slice(1);
+
+  console.log("href", href);
+  console.log("hrefArray", hrefArray);
 
   return (
     <div
