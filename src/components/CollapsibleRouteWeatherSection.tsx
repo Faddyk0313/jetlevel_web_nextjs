@@ -4,16 +4,23 @@ import { FiPlus } from "react-icons/fi";
 import RouteGoogleMaps from "./RouteGoogleMaps";
 import WeatherWidget from "./WeatherWidget";
 
-interface AirportInfo {
-    name: string;
-    latitude: number;
-    longitude: number;
+interface AirportMarkerInfo {
+    fields: {
+        name: { text: string; };
+        latitude: { number: number; };
+        longitude: { number: number; };
+    };
 }
 
 interface Item {
-    heading: string;
-    widgetHtml?: string;
-    airportsArray?: AirportInfo[];
+    fields: {
+        title?: { text: string; };
+        heading?: { text: string; };
+        google_maps_content?: {
+            blocks: AirportMarkerInfo[];
+        };
+        weather_widget?: { text: string; };
+    };
 }
 
 interface CollapsibleRouteWeatherSectionProps {
@@ -49,8 +56,8 @@ const CollapsibleRouteWeatherSection: React.FC<
                 </h2>
                 <span
                     className={`transition-all duration-200 border-2 rounded-full ${isOpen
-                            ? "rotate-45 text-blue border-blue"
-                            : "text-darkBlue border-darkBlue group-hover:text-blue group-hover:border-blue"
+                        ? "rotate-45 text-blue border-blue"
+                        : "text-darkBlue border-darkBlue group-hover:text-blue group-hover:border-blue"
                         }`}
                 >
                     <FiPlus className="w-7 h-7" />
@@ -64,16 +71,15 @@ const CollapsibleRouteWeatherSection: React.FC<
                     {/* Tab Buttons */}
                     <div className="flex justify-center">
                         {items.map((item, index) => (
-                            <h3>
+                            <h3 key={index}>
                                 <button
-                                    key={index}
                                     className={`px-4 py-2 font-bold ${activeTab === index
-                                            ? "text-blue  border border-[#d5d8dc] border-b-white"
-                                            : "text-darkBlue"
+                                        ? "text-blue  border border-[#d5d8dc] border-b-white"
+                                        : "text-darkBlue"
                                         }`}
                                     onClick={() => setActiveTab(index)}
                                 >
-                                    {item.heading}
+                                    {item.fields.title ? item.fields.title.text : item.fields.heading ? item.fields.heading.text : ""} Airports
                                 </button>
                             </h3>
                         ))}
@@ -86,20 +92,22 @@ const CollapsibleRouteWeatherSection: React.FC<
                                 key={index}
                                 className={`${activeTab === index ? "block" : "hidden"}`}
                             >
-                                {item.airportsArray ? (
+                                {item.fields.google_maps_content?.blocks ? (
                                     <>
                                         <div className="flex items-baseline justify-center gap-2">
-                                            <h4>{item.heading.split(" ")[0]}:</h4>
-                                            {item.airportsArray.map((airport, index) => (
-                                                <p key={index}>{airport.name}</p>
-                                            ))}
+                                            <h4>{item.fields.title ? item.fields.title.text : item.fields.heading ? item.fields.heading.text : ""}:&nbsp;</h4>
+                                            <div>
+                                                {item.fields.google_maps_content?.blocks.map((airport, index) => (
+                                                    <p key={index}>{airport.fields.name.text}</p>
+                                                ))}
+                                            </div>
                                         </div>
-                                        <div key={index}>
-                                            <RouteGoogleMaps airports={item.airportsArray} />
+                                        <div key={index} className="mt-3">
+                                            <RouteGoogleMaps airports={item.fields.google_maps_content?.blocks} />
                                         </div>
                                     </>
-                                ) : item.widgetHtml ? (
-                                    <WeatherWidget widgetHtml={item.widgetHtml} />
+                                ) : item.fields.weather_widget?.text != '' ? (
+                                    <WeatherWidget widgetHtml={item.fields.weather_widget?.text} />
                                 ) : (
                                     ""
                                 )}

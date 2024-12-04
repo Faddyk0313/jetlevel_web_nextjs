@@ -9,7 +9,7 @@ import Markdown from "markdown-to-jsx";
 import { useEffect, useRef } from "react";
 
 interface WeatherWidgetProps {
-    widgetHtml: string; // Accept the HTML string as a prop
+    widgetHtml: string | undefined; // Accept the HTML string as a prop
 }
 
 const WeatherWidget = ({ widgetHtml }: WeatherWidgetProps) => {

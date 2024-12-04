@@ -1,23 +1,23 @@
 "use client";
-import Markdown from "markdown-to-jsx";
+
 import React, { useState } from "react";
 import { FiPlus } from "react-icons/fi";
 
 interface CollapsibleRouteTableSectionProps {
   title: string;
-  item: any;
+  items: {text: string}[];
   isDefaultOpen?: boolean;
 }
 
 const CollapsibleRouteTableSection: React.FC<
   CollapsibleRouteTableSectionProps
-> = ({ title, item, isDefaultOpen = false }) => {
+> = ({ title, items, isDefaultOpen = false }) => {
   const [isOpen, setIsOpen] = useState(isDefaultOpen);
 
   const toggleSection = () => setIsOpen((prev) => !prev);
 
   // Transform data into the desired rows structure
-  const Tablerows = item.map((item: string) => item.split("/"));
+  const Tablerows = items.map((item) => item.text.split("/"));
   let firstTable = {
     headers: [
       "Aircraft Type",
