@@ -45,9 +45,22 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
         }
         return <CityPage fields={content.fields} region={contentType}/>;
     } else if (subOption == "popular-routes") {
+        const content: void | ContentData = await createClient()
+            .getContentBySlug(
+                `private-jet-charter-${cityPage}`,
+                'route_pages'
+            )
+            .catch((err) => {
+                console.log(err);
+            });
+        // console.log("content", content);
+
+        if (!content) {
+            return notFound(); // navigate to a "not found" page if content is missing
+        }
+
         return (
-            // <RoutesPage fields={content.fields} />
-            <RoutesPage />
+            <RoutesPage fields={content.fields} />
         );
     } else if (subOption === "empty-legs") {
         // Access the query parameters

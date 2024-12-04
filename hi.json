@@ -1,0 +1,504 @@
+{
+  "table": {
+    "id": "f_01JE8nK9a2g5wEMXRRY296vYP2",
+    "name": "table",
+    "handle": "table",
+    "help_text": null,
+    "type": "blocks",
+    "blocks": [
+      {
+        "name": "",
+        "sort": 0,
+        "fields": {
+          "rows": {
+            "id": "f_01JBvCfqcyA8C9eWwEHFXXDK4m",
+            "list": [
+              {
+                "sort": 0,
+                "text": "Midsize Jet/$11,850/7-9/1.3 hrs/0"
+              },
+              {
+                "sort": 1,
+                "text": "Super Midsize Jet/$13,500/8-10/1.3 hrs/0"
+              },
+              {
+                "sort": 2,
+                "text": "Heavy Jet/$16,500/10-16/1.3 hrs/0"
+              }
+            ],
+            "name": "rows",
+            "type": "list",
+            "handle": "rows",
+            "help_text": null
+          }
+        },
+        "content_type": {
+          "id": "ct_01JBvcfBMzk5MX4J957etA8nBt",
+          "name": "Tablerows",
+          "handle": "tablerows",
+          "object_type": "block"
+        }
+      }
+    ]
+  },
+  "points": {
+    "id": "f_01Je8q0pbN2HhYB99GPa0v7NNS",
+    "name": "points",
+    "handle": "points",
+    "help_text": null,
+    "type": "blocks",
+    "blocks": [
+      {
+        "name": "",
+        "sort": 0,
+        "fields": {
+          "title": {
+            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+            "name": "Heading",
+            "text": "Quick and Convenient",
+            "type": "text",
+            "handle": "title",
+            "help_text": "Heading (h2)"
+          },
+          "paragraph": {
+            "id": "f_01jbQrN2830RDW6Px709G00xM8",
+            "name": "Paragraph",
+            "text": "<p>For business executives, this route offers unparalleled speed, turning a lengthy commercial flight into a quick jump. You can attend your morning meeting in New York and be in Buffalo well before lunch.</p>",
+            "type": "long_text",
+            "handle": "paragraph",
+            "help_text": "Paragraph (Long Text)"
+          }
+        },
+        "content_type": {
+          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+          "name": "Content Section",
+          "handle": "content_section",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 1,
+        "fields": {
+          "title": {
+            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+            "name": "Heading",
+            "text": "Lavish Comfort",
+            "type": "text",
+            "handle": "title",
+            "help_text": "Heading (h2)"
+          },
+          "paragraph": {
+            "id": "f_01jbQrN2830RDW6Px709G00xM8",
+            "name": "Paragraph",
+            "text": "<p>High-Net-Worth families and individual travelers will find the luxurious amenities of our private jets, including gourmet meals and high-speed Wi-Fi, exceed every expectation.</p>",
+            "type": "long_text",
+            "handle": "paragraph",
+            "help_text": "Paragraph (Long Text)"
+          }
+        },
+        "content_type": {
+          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+          "name": "Content Section",
+          "handle": "content_section",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 2,
+        "fields": {
+          "title": {
+            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+            "name": "Heading",
+            "text": "Safety Above All",
+            "type": "text",
+            "handle": "title",
+            "help_text": "Heading (h2)"
+          },
+          "paragraph": {
+            "id": "f_01jbQrN2830RDW6Px709G00xM8",
+            "name": "Paragraph",
+            "text": "<p>JetLevel Aviation is accredited with the BBB and partners only with NBAA and IS-BAO-registered operators. Your safety is our highest priority.</p>",
+            "type": "long_text",
+            "handle": "paragraph",
+            "help_text": "Paragraph (Long Text)"
+          }
+        },
+        "content_type": {
+          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+          "name": "Content Section",
+          "handle": "content_section",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 3,
+        "fields": {
+          "title": {
+            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+            "name": "Heading",
+            "text": "Personalization at Its Best",
+            "type": "text",
+            "handle": "title",
+            "help_text": "Heading (h2)"
+          },
+          "paragraph": {
+            "id": "f_01jbQrN2830RDW6Px709G00xM8",
+            "name": "Paragraph",
+            "text": "<p>Our services offer secure, private cabins and customization down to the smallest detail for those who value their privacy.</p>",
+            "type": "long_text",
+            "handle": "paragraph",
+            "help_text": "Paragraph (Long Text)"
+          }
+        },
+        "content_type": {
+          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+          "name": "Content Section",
+          "handle": "content_section",
+          "object_type": "block"
+        }
+      }
+    ]
+  },
+  "page_name": {
+    "id": "f_01JDV8G61EjhtP6t17QZg44132",
+    "name": "Page Name",
+    "handle": "page_name",
+    "help_text": null,
+    "type": "text",
+    "text": "Teterboro to Buffalo"
+  },
+  "gmap_section": {
+    "id": "f_01jE8ppDgenskH43QC2C5B62Kt",
+    "name": "Gmap Section",
+    "handle": "gmap_section",
+    "help_text": null,
+    "type": "blocks",
+    "blocks": [
+      {
+        "name": "",
+        "sort": 0,
+        "fields": {
+          "heading": {
+            "id": "f_01Je8PkY8X7v9A8E26pxgq2erB",
+            "name": "heading",
+            "text": "Teterboro",
+            "type": "text",
+            "handle": "heading",
+            "help_text": "Name of location 1"
+          },
+          "google_maps_content": {
+            "id": "f_01JE8pRxbW5JGE9zdPDahK92R5",
+            "name": "Google Maps Content",
+            "type": "blocks",
+            "blocks": [
+              {
+                "name": "",
+                "sort": 0,
+                "fields": {
+                  "name": {
+                    "id": "f_01jE8mvyqkbbkPTSQ1Kgn1g9rx",
+                    "name": "Name",
+                    "text": "Teterboro Airport",
+                    "type": "text",
+                    "handle": "name",
+                    "help_text": null
+                  },
+                  "latitude": {
+                    "id": "f_01je8Mx6yy086cEnwT7dw4M5wr",
+                    "name": "latitude",
+                    "type": "decimal",
+                    "handle": "latitude",
+                    "number": "40.84",
+                    "help_text": "Get from \"https://www.latlong.net/\" website by entering airport's name"
+                  },
+                  "longitude": {
+                    "id": "f_01Je8MXP38m9GwcX2vEnn74GWs",
+                    "name": "longitude",
+                    "type": "decimal",
+                    "handle": "longitude",
+                    "number": "-74.06",
+                    "help_text": "Get from \"https://www.latlong.net/\" website by entering airport's name"
+                  }
+                },
+                "content_type": {
+                  "id": "ct_01je8mtP8N8mv9EwxmeDPc072r",
+                  "name": "Gmap Content",
+                  "handle": "routes_gmap_section",
+                  "object_type": "block"
+                }
+              }
+            ],
+            "handle": "google_maps_content",
+            "help_text": null
+          }
+        },
+        "content_type": {
+          "id": "ct_01JE8Pjj2s6Jb1wW4T4BbHh4r9",
+          "name": "Routes Google Map Section",
+          "handle": "routes_google_map_section",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 1,
+        "fields": {
+          "heading": {
+            "id": "f_01Je8PkY8X7v9A8E26pxgq2erB",
+            "name": "heading",
+            "text": "Buffalo",
+            "type": "text",
+            "handle": "heading",
+            "help_text": "Name of location 1"
+          },
+          "google_maps_content": {
+            "id": "f_01JE8pRxbW5JGE9zdPDahK92R5",
+            "name": "Google Maps Content",
+            "type": "blocks",
+            "blocks": [
+              {
+                "name": "",
+                "sort": 0,
+                "fields": {
+                  "name": {
+                    "id": "f_01jE8mvyqkbbkPTSQ1Kgn1g9rx",
+                    "name": "Name",
+                    "text": "Buffalo Niagara International Airport",
+                    "type": "text",
+                    "handle": "name",
+                    "help_text": null
+                  },
+                  "latitude": {
+                    "id": "f_01je8Mx6yy086cEnwT7dw4M5wr",
+                    "name": "latitude",
+                    "type": "decimal",
+                    "handle": "latitude",
+                    "number": "42.93",
+                    "help_text": "Get from \"https://www.latlong.net/\" website by entering airport's name"
+                  },
+                  "longitude": {
+                    "id": "f_01Je8MXP38m9GwcX2vEnn74GWs",
+                    "name": "longitude",
+                    "type": "decimal",
+                    "handle": "longitude",
+                    "number": "-78.73",
+                    "help_text": "Get from \"https://www.latlong.net/\" website by entering airport's name"
+                  }
+                },
+                "content_type": {
+                  "id": "ct_01je8mtP8N8mv9EwxmeDPc072r",
+                  "name": "Gmap Content",
+                  "handle": "routes_gmap_section",
+                  "object_type": "block"
+                }
+              }
+            ],
+            "handle": "google_maps_content",
+            "help_text": null
+          }
+        },
+        "content_type": {
+          "id": "ct_01JE8Pjj2s6Jb1wW4T4BbHh4r9",
+          "name": "Routes Google Map Section",
+          "handle": "routes_google_map_section",
+          "object_type": "block"
+        }
+      }
+    ]
+  },
+  "hero_content": {
+    "id": "f_01jE8P3s4D7j9EhtjrEf96NkjA",
+    "name": "Hero content",
+    "handle": "hero_content",
+    "help_text": "heading and long paragraph (Do not add tagline '– Elevate Your Journey –')",
+    "type": "blocks",
+    "blocks": [
+      {
+        "name": "",
+        "sort": 0,
+        "fields": {
+          "title": {
+            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+            "name": "Heading",
+            "text": "Teterboro to Buffalo",
+            "type": "text",
+            "handle": "title",
+            "help_text": "Heading (h2)"
+          },
+          "paragraph": {
+            "id": "f_01jbQrN2830RDW6Px709G00xM8",
+            "name": "Paragraph",
+            "text": "<p>Looking to travel from <a href=\"https://jetlevel.com/private-jet-charter-flights-to-teterboro-nj/\">Teterboro</a> to <a href=\"https://jetlevel.com/private-jet-charter-flights-to-buffalo-ny/\">Buffalo</a> in unparalleled luxury and convenience? JetLevel Aviation is your go-to choice for this highly-demanded northeast corridor route. The distance between these two cities is around 300 miles, making it a popular choice for business executives and families alike, who appreciate efficiency alongside exclusivity.</p>",
+            "type": "long_text",
+            "handle": "paragraph",
+            "help_text": "Paragraph (Long Text)"
+          }
+        },
+        "content_type": {
+          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+          "name": "Content Section",
+          "handle": "content_section",
+          "object_type": "block"
+        }
+      }
+    ]
+  },
+  "introduction": {
+    "id": "f_01jE8M8M6w5wM7VZBDh7KgpA2Y",
+    "name": "Introduction",
+    "handle": "introduction",
+    "help_text": null,
+    "type": "blocks",
+    "blocks": [
+      {
+        "name": "",
+        "sort": 0,
+        "fields": {
+          "title": {
+            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+            "name": "Heading",
+            "text": "Private Jet from Teterboro to Buffalo",
+            "type": "text",
+            "handle": "title",
+            "help_text": "Heading (h2)"
+          },
+          "paragraph": {
+            "id": "f_01jbQrN2830RDW6Px709G00xM8",
+            "name": "Paragraph",
+            "text": "<p><strong>Traveling by private jet from Teterboro to Buffalo typically takes about 1 hour. Costs vary, generally ranging from $4,000 to $7,000 one-way, depending on the aircraft and services. Common choices for this route include efficient jets like the HondaJet or Cessna Citation Mustang. Flights depart from Teterboro Airport, offering direct and quick access to Buffalo, ideal for business or leisure, providing flexibility, privacy, and a streamlined travel experience.</strong></p>",
+            "type": "long_text",
+            "handle": "paragraph",
+            "help_text": "Paragraph (Long Text)"
+          }
+        },
+        "content_type": {
+          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+          "name": "Content Section",
+          "handle": "content_section",
+          "object_type": "block"
+        }
+      }
+    ]
+  },
+  "last_section": {
+    "id": "f_01Je8NSMAMyzhvP1VDyvg9RNF7",
+    "name": "Content Section",
+    "handle": "last_section",
+    "help_text": null,
+    "type": "blocks",
+    "blocks": [
+      {
+        "name": "",
+        "sort": 0,
+        "fields": {
+          "title": {
+            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+            "name": "Heading",
+            "text": "For Business and Personal Private Jet Travel – Call JetLevel Aviation",
+            "type": "text",
+            "handle": "title",
+            "help_text": "Heading (h2)"
+          },
+          "paragraph": {
+            "id": "f_01jbQrN2830RDW6Px709G00xM8",
+            "name": "Paragraph",
+            "text": "<p>JetLevel Aviation is your trusted partner for all your private jet needs. With nearly 20 years of experience, we bring safety, comfort, and luxury together to redefine your air travel experience. Discover more about us through our <a href=\"https://jetlevel.com/about-jet-level\">About Us</a> page or find answers to frequently asked questions on our <a href=\"https://jetlevel.com/private-jet-frequently-asked-questions\">FAQs</a> page. Don’t forget to check out our <a href=\"https://jetlevel.com/blog\">blog</a> for latest news, tips, and insights into the world of private aviation.</p>\n\n<p>For both business and personal private jet travel, JetLevel Aviation has set the standard in personalized aviation services. Reach out today to experience a new echelon of air travel, backed by the trust and authority of Ricky Gomulka’s nearly 20 years in the industry. <a href=\"https://jetlevel.com/contact-us\">Contact us now!</a></p>",
+            "type": "long_text",
+            "handle": "paragraph",
+            "help_text": "Paragraph (Long Text)"
+          }
+        },
+        "content_type": {
+          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+          "name": "Content Section",
+          "handle": "content_section",
+          "object_type": "block"
+        }
+      }
+    ]
+  },
+  "weather_data": {
+    "id": "f_01je8Nr303Y9D3Wwnf5Y0QjN5F",
+    "name": "weatherData",
+    "handle": "weather_data",
+    "help_text": null,
+    "type": "blocks",
+    "blocks": [
+      {
+        "name": "Teterboro Weather",
+        "sort": 0,
+        "fields": {
+          "title": {
+            "id": "f_01jbYSm7P2R2cG9aqdEzB0STnz",
+            "name": "weatherHeading",
+            "text": "Teterboro Weather",
+            "type": "text",
+            "handle": "title",
+            "help_text": "weather title/heading \"Weather in [Location]\""
+          },
+          "paragraph": {
+            "id": "f_01jbYtFq1w4v4caJQW6GnzW2w0",
+            "name": "paragraph",
+            "text": "",
+            "type": "long_text",
+            "handle": "paragraph",
+            "help_text": "weather section paragraph"
+          },
+          "weather_widget": {
+            "id": "f_01JBySP7PQcj60akF59kGR1MsP",
+            "name": "weatherWidget",
+            "text": "<a class=\"weatherwidget-io\" href=\"https://forecast7.com/en/40d86n74d06/teterboro/?unit=us\" data-label_1=\"TETERBORO\" data-label_2=\"WEATHER\" data-theme=\"marine\" >TETERBORO WEATHER</a>",
+            "type": "text",
+            "handle": "weather_widget",
+            "help_text": "place only a tag in here (DO NOT NOT PLACE <script> tag)"
+          }
+        },
+        "content_type": {
+          "id": "ct_01jbySm7nm96K9AFwHBP7709H7",
+          "name": "Weather",
+          "handle": "weather",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "Buffalo Weather",
+        "sort": 1,
+        "fields": {
+          "title": {
+            "id": "f_01jbYSm7P2R2cG9aqdEzB0STnz",
+            "name": "weatherHeading",
+            "text": "Buffalo Weather",
+            "type": "text",
+            "handle": "title",
+            "help_text": "weather title/heading \"Weather in [Location]\""
+          },
+          "paragraph": {
+            "id": "f_01jbYtFq1w4v4caJQW6GnzW2w0",
+            "name": "paragraph",
+            "text": "",
+            "type": "long_text",
+            "handle": "paragraph",
+            "help_text": "weather section paragraph"
+          },
+          "weather_widget": {
+            "id": "f_01JBySP7PQcj60akF59kGR1MsP",
+            "name": "weatherWidget",
+            "text": "<a class=\"weatherwidget-io\" href=\"https://forecast7.com/en/42d89n78d88/buffalo/?unit=us\" data-label_1=\"BUFFALO\" data-label_2=\"WEATHER\" data-theme=\"marine\" >BUFFALO WEATHER</a>",
+            "type": "text",
+            "handle": "weather_widget",
+            "help_text": "place only a tag in here (DO NOT NOT PLACE <script> tag)"
+          }
+        },
+        "content_type": {
+          "id": "ct_01jbySm7nm96K9AFwHBP7709H7",
+          "name": "Weather",
+          "handle": "weather",
+          "object_type": "block"
+        }
+      }
+    ]
+  }
+}
