@@ -13,6 +13,7 @@ import MeetOwner from "@/sections/MeetOwner";
 import AvailableAircrafts from "@/sections/AvailableAircrafts";
 import WhatOurClientsSay from "@/sections/WhatOurClientsSay";
 import Faqs from "@/sections/Faqs";
+import BookYourPrivateJet from "@/sections/BookYourPrivateJet";
 
 export default function Home() {
   return (
@@ -32,6 +33,7 @@ export default function Home() {
       <AvailableAircrafts />
       <WhatOurClientsSay />
       <Faqs />
+      {/* <BookYourPrivateJet /> */}
     </>
   );
 }

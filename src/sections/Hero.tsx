@@ -1,6 +1,8 @@
+"use client"
 import React from 'react';
 import IframeEmbed from './Iframe';
 import Markdown from 'markdown-to-jsx';
+import LeadForm  from '@/components/LeadForm';
 
 type HeroProps = {
     image: string;
@@ -42,8 +44,9 @@ const Hero: React.FC<HeroProps> = ({ image, title, subtitle, tagline, descriptio
                     </Markdown>
                 </div>
                 {/* Iframe */}
-                <div className={` ${hasCalculator ? '' : 'hidden'} w-full outline-none h-auto`}>
-                    <IframeEmbed />
+                <div className='w-full outline-none h-auto' id="my-iframe">
+                    {/* <IframeEmbed /> */}
+                    <LeadForm/>
                 </div>
             </div>
         </section>

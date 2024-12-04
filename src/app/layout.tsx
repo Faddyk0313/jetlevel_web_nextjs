@@ -1,5 +1,6 @@
 import { Playfair_Display, Montserrat, Libre_Baskerville } from 'next/font/google';
 import "@/styles/globals.css";
+
 import Nav from '@/sections/Nav';
 import Footer from '@/sections/Footer';
 import ContactMenu from "@/sections/ContactMenu";
@@ -34,6 +35,22 @@ export default function RootLayout({
     <html lang="en">
       <head>
         <link rel="icon" href="https://jetlevel.com/wp-content/uploads/2019/08/cropped-icon-32x32.png" />
+        
+        <Script
+          async
+          src="https://www.googletagmanager.com/gtag/js?id=G-DR3V05H5Q3"
+        ></Script>
+        <Script
+          id="google-analytics"
+          strategy="afterInteractive"
+        >
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-DR3V05H5Q3');
+          `}
+        </Script>
       </head>
       <body className={`${playfairDisplay.variable} ${montserrat.variable} ${libreBaskerville.variable} max-w-screen overflow-x-hidden`}>
         <Script
