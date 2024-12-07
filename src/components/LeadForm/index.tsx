@@ -13,8 +13,7 @@ import 'react-international-phone/style.css';
 import { PhoneNumberUtil } from 'google-libphonenumber';
 import "@/styles/leadForm.css"
 const getPrice = (amount:string) => {
-  let decimalAmount = parseFloat(amount).toFixed(2);
-  decimalAmount = parseFloat(decimalAmount);
+  let decimalAmount = parseFloat(parseFloat(amount).toFixed(2));
   let finalAmount = decimalAmount.toLocaleString("en-US");
   return finalAmount;
 };
@@ -117,7 +116,7 @@ export default function Main() {
   ];
   let { tourType } = form;
 
-  const handleInquiryForm = (index, aircraft) => {
+  const handleInquiryForm = (index:number, aircraft) => {
     setForm((prevfrom) => ({
       ...prevfrom,
       aircraft: aircraft,
@@ -204,7 +203,7 @@ export default function Main() {
     // console.log("Hola", inquiry.isErrorPhone);
   };
 
-  const handleExtraInfo = (type, index) => {
+  const handleExtraInfo = (type:string, index) => {
     if (type === "baggage") {
       if (!extraInfo.baggage.includes(index)) {
         setExtraInfo((prevInfo) => ({
@@ -223,7 +222,7 @@ export default function Main() {
   };
 
 
-  const getTime = (time) => {
+  const getTime = (time:number | string | Date) => {
     const date = new Date(time);
 
     let hours = date.getHours().toString().padStart(2, "0");
@@ -232,7 +231,7 @@ export default function Main() {
     return `${hours}:${minutes}`;
   };
 
-  const getUTCTime = (dateObj) => {
+  const getUTCTime = (dateObj:number | string | Date) => {
     const date = new Date(dateObj);
     // Get the UTC time as a string
     let utcTimeString = date.toUTCString();  // Fri, 20 Sep 2024 18:19:42 GMT
@@ -275,7 +274,33 @@ export default function Main() {
 
 
     try {
-      let extraData = {
+      let extraData:{
+        firstName: string;
+        lastName: string;
+        email: string;
+        phone: string;
+        tourType: string;
+        from: string;
+        to: string;
+        person: number;
+        craftType: number;
+        startDate: {
+            time: string;
+            date: string;
+        };
+        endDate?:{
+          time: string;
+          date: string;
+      };
+      endTimeInUTC?:string;
+        startTimeInUTC: string;
+        isExtraData: boolean;
+        isPet?:boolean;
+      isChild?:boolean;
+      baggage?:string[];
+      youself?:string;
+      requirement?:string
+    } = {
         firstName,
         lastName,
         email,
@@ -302,7 +327,18 @@ export default function Main() {
 
         extraData.endTimeInUTC = getUTCTime(form.endDate);
       }
-      let dataBody = {
+      let dataBody:{
+        firstName: string;
+        lastName: string;
+        email: string;
+        phone: string;
+        custom_properties: {
+            trip_purpose: string | null;
+            baggage: string | null;
+            travelling_with_pets: string | null;
+            travel_with_children_under_3: string | null; 
+        };
+    } = {
         "firstName": firstName,
         "lastName": lastName,
         "email": email,
@@ -337,7 +373,9 @@ export default function Main() {
 
         body: JSON.stringify(dataBody),
       };
-      await fetch("https://hooks.zapier.com/hooks/catch/12611087/2hn9t6v/r.com/hooks/catch/19938427/2tolg6d", options1);
+      if(!process.env?.NEXT_PUBLIC_ZAPIER_SEND_INQUIRY) return
+
+      await fetch(process.env.NEXT_PUBLIC_ZAPIER_SEND_INQUIRY, options1);
 
 
       const options = {
@@ -460,7 +498,8 @@ export default function Main() {
 
         body: JSON.stringify(dataBody),
       };
-      await fetch("https://hooks.zapier.com/hooks/catch/12611087/2hn9t6v", options1);
+      if(!process.env?.NEXT_PUBLIC_ZAPIER_SHOW_PRICE) return
+      await fetch(process.env.NEXT_PUBLIC_ZAPIER_SHOW_PRICE, options1);
 
 
       const options = {
@@ -559,7 +598,6 @@ export default function Main() {
             setForm={setForm}
             loading={loading}
             setLoading={setLoading}
-            data={data}
             setData={setData}
           />
       </div>

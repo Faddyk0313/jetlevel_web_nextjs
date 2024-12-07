@@ -8,7 +8,7 @@ import DateRangeRoundedIcon from "@mui/icons-material/DateRangeRounded";
 import Input from "./input";
 import "@/styles/leadForm.css"
 
-const TourSelect = ({ form, setForm, loading, setLoading, data, setData }) => {
+const TourSelect = ({ form, setForm, loading, setLoading,  setData }) => {
   const [searchResults, setSearchResults] = useState({
     fromLocationArray: [],
     toLocationArray: [],
@@ -86,11 +86,6 @@ const TourSelect = ({ form, setForm, loading, setLoading, data, setData }) => {
         const options = {
           method: "GET",
           params: { query: value },
-          // headers: {
-          //   "X-RapidAPI-Key":
-          //     "146d1310aemsh0f446201add2996p1f7627jsn8a05e29a1300",
-          //   "X-RapidAPI-Host": "flight-time-estimation1.p.rapidapi.com",
-          // },
         };
 
         try {
