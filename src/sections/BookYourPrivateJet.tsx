@@ -1,11 +1,11 @@
-"use client"
+"use client";
 
 import { useEffect, useRef } from 'react';
 import React from 'react';
 import { Player } from '@lordicon/react';
 
-const ICON1 = require('../../public/images/callIcon.json');
-const ICON2 = require('../../public/images/mailIcon.json');
+import  ICON1  from '../../public/images/callIcon.json';
+import  ICON2  from '../../public/images/mailIcon.json';
 
 const BookYourPrivateJet = () => {
     const playerRef1 = useRef<Player>(null);
