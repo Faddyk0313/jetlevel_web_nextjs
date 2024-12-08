@@ -3,8 +3,13 @@ import { OnDemandCharter, GroupCharter, AirAmbulance, Helicopter, EmptyLeg, Indu
 import CustomComponent from '@/components/CustomComponent';
 import { CardInfo } from '@/app/types';
 
-const ExclusiveServices = () => {
-    let heading: string = 'Our Exclusive Services'
+
+interface ExclusiveServicesProps {
+    hasSectionPadding?: boolean;
+}
+
+const ExclusiveServices: React.FC<ExclusiveServicesProps> = ({ hasSectionPadding }) => {
+    let heading: string = 'Our Exclusive Services';
     let para: string = 'JetLevel Aviation specializes in providing exceptional private jet charter services, catering to a variety of travel needs with unparalleled luxury and efficiency.';
 
     const data: CardInfo[] = [
@@ -41,7 +46,7 @@ const ExclusiveServices = () => {
     ];
 
     return (
-        <CustomComponent heading={heading} para={para} background="white" items={data} />
+        <CustomComponent heading={heading} para={para} background="white" items={data} hasPadding={hasSectionPadding} />
     );
 };
 

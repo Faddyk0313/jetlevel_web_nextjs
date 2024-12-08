@@ -83,7 +83,7 @@ function NavOptions() {
                         <NavClickedContent
                             subOptions={[
                                 { name: 'Private Jet Airports', link: '/usa-airport-directory', image: '/navInsideIcons/Private Jet Airports.svg' },
-                                { name: 'Aircraft Types', link: '/charter-resources/aircraft-types', image: '/navInsideIcons/Aircraft Types.svg' },
+                                { name: 'Aircraft Types', link: '/aircraft-charters/', image: '/navInsideIcons/Aircraft Types.svg' },
                                 { name: 'Cost Estimator', link: '/charter-resources/cost-estimator', image: '/navInsideIcons/Cost Estimator.svg' },
                                 { name: 'Flight Tracker', link: '/charter-resources/flight-tracker', image: '/navInsideIcons/Flight Tracker.svg' },
                                 { name: 'Distance Calculator', link: '/charter-resources/distance-calculator', image: '/navInsideIcons/Distance Calculator.svg' },

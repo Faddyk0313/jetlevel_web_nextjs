@@ -3,7 +3,11 @@ import { Routes_DistanceCalculator, CostCalculator, FlightTracker } from '@/svg'
 import CustomComponent from '@/components/CustomComponent';
 import { CardInfo } from '@/app/types';
 
-const SmartTravelTools = () => {
+interface SmartTravelToolsProps {
+    hasSectionPadding?: boolean;
+}
+
+const SmartTravelTools: React.FC<SmartTravelToolsProps> = ({ hasSectionPadding })  => {
 
     let heading: string = 'Smart Travel Tools'
     let para: string = 'Navigate your private jet charter experience with precision and ease using our suite of intuitive tools. From real-time flight tracking to instant cost and distance estimations, we empower you to make informed, confident decisions about your travel. Discover a smarter way to fly, tailored to your needs.';
@@ -27,7 +31,7 @@ const SmartTravelTools = () => {
     ];
 
     return (
-        <CustomComponent heading={heading} para={para} background="white" items={data} />
+        <CustomComponent heading={heading} para={para} background="white" items={data} hasPadding={hasSectionPadding}  />
 
     );
 

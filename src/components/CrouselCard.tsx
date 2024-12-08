@@ -1,5 +1,3 @@
-"use client";
-
 interface CarouselProps {
   item: {icon: any; title: string}; // Accepts an array  of items as a prop
   bgcolor: string; // Background color prop

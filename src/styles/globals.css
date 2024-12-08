@@ -3,10 +3,15 @@
 @tailwind utilities;
 
 :root {
-  --darkBlue : #1A4159;
+  --darkBlue: #1a4159;
 }
 
 @layer utilities {
+  .bg-dotted {
+    background-image: radial-gradient(currentColor 1px, transparent 1px);
+    background-size: 10px 10px; /* Adjust the size for spacing */
+    border: 2px solid transparent; /* Keeps the shape without affecting dots */
+  }
   @keyframes ringing {
     0% {
       transform: rotate(0);
@@ -133,4 +138,65 @@ blockquote {
 
 blockquote {
   font-style: italic;
+}
+
+#aircraftGrid {
+  grid-template-columns: 1;
+}
+
+@media (min-width: 382px) {
+  #aircraftGrid > div {
+    border-right: 2px dashed #d2d2d2;
+    border-bottom: 2px dashed #d2d2d2;
+  }
+  #aircraftGrid {
+    grid-template-columns: repeat(auto-fit, minmax(162px,1fr));
+  }  
+
+  #aircraftGrid > :nth-child(2n) {
+    border-right: 0px;
+  }
+  #aircraftGrid > :nth-child(14) ~ div {
+    border-bottom: 0px;
+  }
+}
+
+
+@media (min-width: 545px) {
+  #aircraftGrid {
+    grid-template-columns: repeat(auto-fit, minmax(33%,1fr)) !important;
+  }
+
+  #aircraftGrid > :nth-child(3n) {
+    border-right: 0px !important;
+  }
+  #aircraftGrid > :nth-child(12) ~ div {
+    border-bottom: 0px !important;
+  }
+  #aircraftGrid > :nth-child(2n) {
+    border-right: 2px dashed #d2d2d2;
+  }
+  #aircraftGrid > :nth-child(14) ~ div {
+    border-bottom: 2px dashed #d2d2d2;
+  }
+}
+
+@media (min-width: 1200px) {
+  div#aircraftGrid {
+    grid-template-columns: repeat(auto-fit, minmax(20%,1fr)) !important;
+  }
+
+  div#aircraftGrid > :nth-child(5n) {
+    border-right: 0px !important;
+  }
+  div#aircraftGrid > :nth-child(10) ~ div {
+    border-bottom: 0px !important;
+  }
+
+  #aircraftGrid > :nth-child(3n) {
+    border-right: 2px dashed #d2d2d2 !important;
+  }
+  #aircraftGrid > :nth-child(12) ~ div {
+    border-bottom: 2px dashed #d2d2d2 !important;
+  }
 }
