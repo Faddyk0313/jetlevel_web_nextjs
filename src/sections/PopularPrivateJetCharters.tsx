@@ -2,7 +2,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-const PopularPrivateJetCharters = () => {
+interface PopularPrivateJetChartersProps {
+  hasSectionPadding?: boolean;
+}
+
+const PopularPrivateJetCharters: React.FC<PopularPrivateJetChartersProps> = ({ hasSectionPadding })  => {
   const cardInfo = [
     {
       imageLink:
@@ -30,7 +34,7 @@ const PopularPrivateJetCharters = () => {
     },
   ];
   return (
-    <section className="flex flex-col items-center max-w-[1800px] mx-auto px-5 md:px-10 lg:px-20">
+    <section className={`flex flex-col items-center max-w-[1800px] mx-auto px-5 md:px-10 lg:px-20   ${hasSectionPadding === false ? '!py-10' : ''}`}>
       <h2 className="mb-8">
         Popular Private Jet Charter Destinations
       </h2>

@@ -1,50 +1,32 @@
 {
-  "table": {
-    "id": "f_01JE8nK9a2g5wEMXRRY296vYP2",
-    "name": "table",
-    "handle": "table",
+  "title": {
+    "id": "f_01jBtrx2HVWtRCrwq74D24R8Cf",
+    "name": "Page Name",
+    "handle": "title",
     "help_text": null,
-    "type": "blocks",
-    "blocks": [
-      {
-        "name": "",
-        "sort": 0,
-        "fields": {
-          "rows": {
-            "id": "f_01JBvCfqcyA8C9eWwEHFXXDK4m",
-            "list": [
-              {
-                "sort": 0,
-                "text": "Midsize Jet/$11,850/7-9/1.3 hrs/0"
-              },
-              {
-                "sort": 1,
-                "text": "Super Midsize Jet/$13,500/8-10/1.3 hrs/0"
-              },
-              {
-                "sort": 2,
-                "text": "Heavy Jet/$16,500/10-16/1.3 hrs/0"
-              }
-            ],
-            "name": "rows",
-            "type": "list",
-            "handle": "rows",
-            "help_text": null
-          }
-        },
-        "content_type": {
-          "id": "ct_01JBvcfBMzk5MX4J957etA8nBt",
-          "name": "Tablerows",
-          "handle": "tablerows",
-          "object_type": "block"
-        }
-      }
-    ]
+    "type": "text",
+    "text": "King Air 350"
   },
-  "points": {
-    "id": "f_01Je8q0pbN2HhYB99GPa0v7NNS",
-    "name": "points",
-    "handle": "points",
+  "heading": {
+    "id": "f_01JejPEgwQ0rcZ0h36Sf6cFHEK",
+    "name": "Heading",
+    "handle": "heading",
+    "help_text": "[Aircraft Name] Charter Overview    example: King Air 350 Charter Overview",
+    "type": "text",
+    "text": "King Air 350 Charter Overview"
+  },
+  "map_heading": {
+    "id": "f_01jBtSV3GX1Tkn6n9FskCa9MX6",
+    "name": "Map Heading",
+    "handle": "map_heading",
+    "help_text": null,
+    "type": "text",
+    "text": "Discover the Global Reach of the King Air 350 Charter"
+  },
+  "sub_section": {
+    "id": "f_01JEjpf83A01AC0qjG4sz7dNEF",
+    "name": "Sub Section",
+    "handle": "sub_section",
     "help_text": null,
     "type": "blocks",
     "blocks": [
@@ -55,7 +37,7 @@
           "title": {
             "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
             "name": "Heading",
-            "text": "Quick and Convenient",
+            "text": "King Air 350 Charter Flight Prices",
             "type": "text",
             "handle": "title",
             "help_text": "Heading (h2)"
@@ -63,7 +45,7 @@
           "paragraph": {
             "id": "f_01jbQrN2830RDW6Px709G00xM8",
             "name": "Paragraph",
-            "text": "<p>For business executives, this route offers unparalleled speed, turning a lengthy commercial flight into a quick jump. You can attend your morning meeting in New York and be in Buffalo well before lunch.</p>",
+            "text": "<p>At JetLevel, prices for a charter flight on the King Air 350 range between $4,300 and $6,600 per hour. Final costs depend on the customer’s departure city, destination, and flight schedule. Contact JetLevel for more information on booking a charter flight.</p>",
             "type": "long_text",
             "handle": "paragraph",
             "help_text": "Paragraph (Long Text)"
@@ -83,7 +65,7 @@
           "title": {
             "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
             "name": "Heading",
-            "text": "Lavish Comfort",
+            "text": "Trusted King Air 350 Charter Services",
             "type": "text",
             "handle": "title",
             "help_text": "Heading (h2)"
@@ -91,7 +73,7 @@
           "paragraph": {
             "id": "f_01jbQrN2830RDW6Px709G00xM8",
             "name": "Paragraph",
-            "text": "<p>High-Net-Worth families and individual travelers will find the luxurious amenities of our private jets, including gourmet meals and high-speed Wi-Fi, exceed every expectation.</p>",
+            "text": "<p>Beechcraft’s Super King Air family has been in production since 1974, making it the longest-running production of any civilian turbo prop plane. And with over 7,000 King Airs in the civil registry, it’s not a surprise that customers of all types enjoy this simple but powerful plane. Additionally, the King Air 350 hasn’t been in a reported accident in the United States since it entered service.</p>",
             "type": "long_text",
             "handle": "paragraph",
             "help_text": "Paragraph (Long Text)"
@@ -111,7 +93,7 @@
           "title": {
             "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
             "name": "Heading",
-            "text": "Safety Above All",
+            "text": "Robust Specs",
             "type": "text",
             "handle": "title",
             "help_text": "Heading (h2)"
@@ -119,7 +101,7 @@
           "paragraph": {
             "id": "f_01jbQrN2830RDW6Px709G00xM8",
             "name": "Paragraph",
-            "text": "<p>JetLevel Aviation is accredited with the BBB and partners only with NBAA and IS-BAO-registered operators. Your safety is our highest priority.</p>",
+            "text": "<p>Powered by two Pratt &amp; Whitney PTA6A-60A engines, the King Air 350 can take off in various conditions, even with full passenger and fuel loads and temperatures up to 126°F. It also doesn’t need much room for take-off, with a minimum runway length of 3,300 feet.</p>\n\n<p>If one of the engines fails, the King Air 350 can adjust on the fly. The engine’s propeller automatically feathers in order to cut down on drag. Meanwhile, the rudder boosts to compensate for the asymmetric thrust. The wing is also certified for infinite life and at 58 feet long, can handle turbulence and ice very well.</p>",
             "type": "long_text",
             "handle": "paragraph",
             "help_text": "Paragraph (Long Text)"
@@ -139,7 +121,7 @@
           "title": {
             "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
             "name": "Heading",
-            "text": "Personalization at Its Best",
+            "text": "High-tech Features for a Smooth King Air 350 Charter",
             "type": "text",
             "handle": "title",
             "help_text": "Heading (h2)"
@@ -147,7 +129,63 @@
           "paragraph": {
             "id": "f_01jbQrN2830RDW6Px709G00xM8",
             "name": "Paragraph",
-            "text": "<p>Our services offer secure, private cabins and customization down to the smallest detail for those who value their privacy.</p>",
+            "text": "<p>The cockpit of the King Air 350 is equipped with Collins Pro Line 21 avionics, an intuitive system that allows pilots to quickly understand the data they’re presented. It also includes dua-screen primary flight displays, central multifunctional displays, and a single flight management system. These high-tech features ensure both safety and efficiency during your charter.</p>",
+            "type": "long_text",
+            "handle": "paragraph",
+            "help_text": "Paragraph (Long Text)"
+          }
+        },
+        "content_type": {
+          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+          "name": "Content Section",
+          "handle": "content_section",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 4,
+        "fields": {
+          "title": {
+            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+            "name": "Heading",
+            "text": "Comfort and Convenience in Every King Air 350 Charter",
+            "type": "text",
+            "handle": "title",
+            "help_text": "Heading (h2)"
+          },
+          "paragraph": {
+            "id": "f_01jbQrN2830RDW6Px709G00xM8",
+            "name": "Paragraph",
+            "text": "<p>The King Air 350’s cabin is fairly large, clocking in at 355 cubic feet. Like many of the other King Air models, the cabin implements a squared oval design to provide your passengers with ample shoulder room. Fourteen cabin windows keep the plane bright, but you can electronically dim them if you wish.</p>\n\n<p>The cabin also comes equipped with hot and cold beverage units, and a tuning fork anti-noise system that keeps the cabin fairly quiet. The seats can swivel and slide into the formation you desire, and work tables fold to the side when not in use. In addition to the netted baggage area, lockers behind the engine provide additional storage space.</p>",
+            "type": "long_text",
+            "handle": "paragraph",
+            "help_text": "Paragraph (Long Text)"
+          }
+        },
+        "content_type": {
+          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+          "name": "Content Section",
+          "handle": "content_section",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 5,
+        "fields": {
+          "title": {
+            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+            "name": "Heading",
+            "text": "Fast and Efficient Travel with King Air 350 Charter",
+            "type": "text",
+            "handle": "title",
+            "help_text": "Heading (h2)"
+          },
+          "paragraph": {
+            "id": "f_01jbQrN2830RDW6Px709G00xM8",
+            "name": "Paragraph",
+            "text": "<p>The King Air 350 boasts a cruising speed of 310 ktas, much faster than other turbo props on the market. This speed guarantees that you’ll get to your destination fairly quickly without having to invest in a more expensive model such as a jet.</p>",
             "type": "long_text",
             "handle": "paragraph",
             "help_text": "Paragraph (Long Text)"
@@ -162,343 +200,486 @@
       }
     ]
   },
-  "page_name": {
-    "id": "f_01JDV8G61EjhtP6t17QZg44132",
-    "name": "Page Name",
-    "handle": "page_name",
+  "grid_content": {
+    "id": "f_01JEjpStzrJZ26P8Wrb2Xy448E",
+    "name": "Grid Content",
+    "handle": "grid_content",
     "help_text": null,
+    "type": "blocks",
+    "blocks": [
+      {
+        "name": "",
+        "sort": 0,
+        "fields": {
+          "value": {
+            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
+            "name": "value",
+            "text": "Textron Aviation",
+            "type": "text",
+            "handle": "value",
+            "help_text": null
+          },
+          "heading": {
+            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
+            "name": "heading",
+            "text": "Manufacturer",
+            "type": "text",
+            "handle": "heading",
+            "help_text": null
+          }
+        },
+        "content_type": {
+          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
+          "name": "Aircraft Grid Item Content",
+          "handle": "aircraft_grid_item_content",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 1,
+        "fields": {
+          "value": {
+            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
+            "name": "value",
+            "text": "Turbo Prop",
+            "type": "text",
+            "handle": "value",
+            "help_text": null
+          },
+          "heading": {
+            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
+            "name": "heading",
+            "text": "Class",
+            "type": "text",
+            "handle": "heading",
+            "help_text": null
+          }
+        },
+        "content_type": {
+          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
+          "name": "Aircraft Grid Item Content",
+          "handle": "aircraft_grid_item_content",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 2,
+        "fields": {
+          "value": {
+            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
+            "name": "value",
+            "text": "9-11",
+            "type": "text",
+            "handle": "value",
+            "help_text": null
+          },
+          "heading": {
+            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
+            "name": "heading",
+            "text": "Seating",
+            "type": "text",
+            "handle": "heading",
+            "help_text": null
+          }
+        },
+        "content_type": {
+          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
+          "name": "Aircraft Grid Item Content",
+          "handle": "aircraft_grid_item_content",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 3,
+        "fields": {
+          "value": {
+            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
+            "name": "value",
+            "text": "No",
+            "type": "text",
+            "handle": "value",
+            "help_text": null
+          },
+          "heading": {
+            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
+            "name": "heading",
+            "text": "Enclosed Lavatory",
+            "type": "text",
+            "handle": "heading",
+            "help_text": null
+          }
+        },
+        "content_type": {
+          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
+          "name": "Aircraft Grid Item Content",
+          "handle": "aircraft_grid_item_content",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 4,
+        "fields": {
+          "value": {
+            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
+            "name": "value",
+            "text": "1550 nm",
+            "type": "text",
+            "handle": "value",
+            "help_text": null
+          },
+          "heading": {
+            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
+            "name": "heading",
+            "text": "Maximum range",
+            "type": "text",
+            "handle": "heading",
+            "help_text": null
+          }
+        },
+        "content_type": {
+          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
+          "name": "Aircraft Grid Item Content",
+          "handle": "aircraft_grid_item_content",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 5,
+        "fields": {
+          "value": {
+            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
+            "name": "value",
+            "text": "2500 Lb",
+            "type": "text",
+            "handle": "value",
+            "help_text": null
+          },
+          "heading": {
+            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
+            "name": "heading",
+            "text": "Max payload",
+            "type": "text",
+            "handle": "heading",
+            "help_text": null
+          }
+        },
+        "content_type": {
+          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
+          "name": "Aircraft Grid Item Content",
+          "handle": "aircraft_grid_item_content",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 6,
+        "fields": {
+          "value": {
+            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
+            "name": "value",
+            "text": "3300 ft",
+            "type": "text",
+            "handle": "value",
+            "help_text": null
+          },
+          "heading": {
+            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
+            "name": "heading",
+            "text": "Take off distance",
+            "type": "text",
+            "handle": "heading",
+            "help_text": null
+          }
+        },
+        "content_type": {
+          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
+          "name": "Aircraft Grid Item Content",
+          "handle": "aircraft_grid_item_content",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 7,
+        "fields": {
+          "value": {
+            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
+            "name": "value",
+            "text": "2700 fpm",
+            "type": "text",
+            "handle": "value",
+            "help_text": null
+          },
+          "heading": {
+            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
+            "name": "heading",
+            "text": "Climb rate",
+            "type": "text",
+            "handle": "heading",
+            "help_text": null
+          }
+        },
+        "content_type": {
+          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
+          "name": "Aircraft Grid Item Content",
+          "handle": "aircraft_grid_item_content",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 8,
+        "fields": {
+          "value": {
+            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
+            "name": "value",
+            "text": "310 kts",
+            "type": "text",
+            "handle": "value",
+            "help_text": null
+          },
+          "heading": {
+            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
+            "name": "heading",
+            "text": "Cruise speed",
+            "type": "text",
+            "handle": "heading",
+            "help_text": null
+          }
+        },
+        "content_type": {
+          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
+          "name": "Aircraft Grid Item Content",
+          "handle": "aircraft_grid_item_content",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 9,
+        "fields": {
+          "value": {
+            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
+            "name": "value",
+            "text": "35,000 ft",
+            "type": "text",
+            "handle": "value",
+            "help_text": null
+          },
+          "heading": {
+            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
+            "name": "heading",
+            "text": "Cruise altitude",
+            "type": "text",
+            "handle": "heading",
+            "help_text": null
+          }
+        },
+        "content_type": {
+          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
+          "name": "Aircraft Grid Item Content",
+          "handle": "aircraft_grid_item_content",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 10,
+        "fields": {
+          "value": {
+            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
+            "name": "value",
+            "text": "4 ft 10 in",
+            "type": "text",
+            "handle": "value",
+            "help_text": null
+          },
+          "heading": {
+            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
+            "name": "heading",
+            "text": "Cabin Height",
+            "type": "text",
+            "handle": "heading",
+            "help_text": null
+          }
+        },
+        "content_type": {
+          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
+          "name": "Aircraft Grid Item Content",
+          "handle": "aircraft_grid_item_content",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 11,
+        "fields": {
+          "value": {
+            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
+            "name": "value",
+            "text": "4 ft 6 in",
+            "type": "text",
+            "handle": "value",
+            "help_text": null
+          },
+          "heading": {
+            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
+            "name": "heading",
+            "text": "Cabin Width",
+            "type": "text",
+            "handle": "heading",
+            "help_text": null
+          }
+        },
+        "content_type": {
+          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
+          "name": "Aircraft Grid Item Content",
+          "handle": "aircraft_grid_item_content",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 12,
+        "fields": {
+          "value": {
+            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
+            "name": "value",
+            "text": "19 ft 2 in",
+            "type": "text",
+            "handle": "value",
+            "help_text": null
+          },
+          "heading": {
+            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
+            "name": "heading",
+            "text": "Cabin Length",
+            "type": "text",
+            "handle": "heading",
+            "help_text": null
+          }
+        },
+        "content_type": {
+          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
+          "name": "Aircraft Grid Item Content",
+          "handle": "aircraft_grid_item_content",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 13,
+        "fields": {
+          "value": {
+            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
+            "name": "value",
+            "text": "355 cu ft",
+            "type": "text",
+            "handle": "value",
+            "help_text": null
+          },
+          "heading": {
+            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
+            "name": "heading",
+            "text": "Cabin Volume",
+            "type": "text",
+            "handle": "heading",
+            "help_text": null
+          }
+        },
+        "content_type": {
+          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
+          "name": "Aircraft Grid Item Content",
+          "handle": "aircraft_grid_item_content",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 14,
+        "fields": {
+          "value": {
+            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
+            "name": "value",
+            "text": "56 cu ft (internal), 16 cu ft (external)",
+            "type": "text",
+            "handle": "value",
+            "help_text": null
+          },
+          "heading": {
+            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
+            "name": "heading",
+            "text": "Baggage Capacity",
+            "type": "text",
+            "handle": "heading",
+            "help_text": null
+          }
+        },
+        "content_type": {
+          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
+          "name": "Aircraft Grid Item Content",
+          "handle": "aircraft_grid_item_content",
+          "object_type": "block"
+        }
+      }
+    ]
+  },
+  "hero_section": {
+    "id": "f_01JBTRyJBw57y00DBw36Q3wK77",
+    "name": "Hero Section",
+    "handle": "hero_section",
+    "help_text": null,
+    "type": "blocks",
+    "blocks": [
+      {
+        "name": "",
+        "sort": 0,
+        "fields": {
+          "title": {
+            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+            "name": "Heading",
+            "text": "King Air 350 Charter Services",
+            "type": "text",
+            "handle": "title",
+            "help_text": "Heading (h2)"
+          },
+          "paragraph": {
+            "id": "f_01jbQrN2830RDW6Px709G00xM8",
+            "name": "Paragraph",
+            "text": "<p>Part of the longest-running civilian turbo prop family, chartering the King Air 350 provides a safe and comfortable flight at a relatively low cost. You also won’t sacrifice time, with a speed faster than most competitors.</p>",
+            "type": "long_text",
+            "handle": "paragraph",
+            "help_text": "Paragraph (Long Text)"
+          }
+        },
+        "content_type": {
+          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+          "name": "Content Section",
+          "handle": "content_section",
+          "object_type": "block"
+        }
+      }
+    ]
+  },
+  "range_distance": {
+    "id": "f_01jEjP9k0142W3ApF7sm0fF6hN",
+    "name": "Range Distance",
+    "handle": "range_distance",
+    "help_text": null,
+    "type": "decimal",
+    "number": "1550"
+  },
+  "compare_heading": {
+    "id": "f_01jBTsZj083NHeZxe3tN9eqTEY",
+    "name": "Compare Heading",
+    "handle": "compare_heading",
+    "help_text": "If not present then write like this - \"Compare Other Private Jets to a [Aircraft Full Name]\"",
     "type": "text",
-    "text": "Teterboro to Buffalo"
-  },
-  "gmap_section": {
-    "id": "f_01jE8ppDgenskH43QC2C5B62Kt",
-    "name": "Gmap Section",
-    "handle": "gmap_section",
-    "help_text": null,
-    "type": "blocks",
-    "blocks": [
-      {
-        "name": "",
-        "sort": 0,
-        "fields": {
-          "heading": {
-            "id": "f_01Je8PkY8X7v9A8E26pxgq2erB",
-            "name": "heading",
-            "text": "Teterboro",
-            "type": "text",
-            "handle": "heading",
-            "help_text": "Name of location 1"
-          },
-          "google_maps_content": {
-            "id": "f_01JE8pRxbW5JGE9zdPDahK92R5",
-            "name": "Google Maps Content",
-            "type": "blocks",
-            "blocks": [
-              {
-                "name": "",
-                "sort": 0,
-                "fields": {
-                  "name": {
-                    "id": "f_01jE8mvyqkbbkPTSQ1Kgn1g9rx",
-                    "name": "Name",
-                    "text": "Teterboro Airport",
-                    "type": "text",
-                    "handle": "name",
-                    "help_text": null
-                  },
-                  "latitude": {
-                    "id": "f_01je8Mx6yy086cEnwT7dw4M5wr",
-                    "name": "latitude",
-                    "type": "decimal",
-                    "handle": "latitude",
-                    "number": "40.84",
-                    "help_text": "Get from \"https://www.latlong.net/\" website by entering airport's name"
-                  },
-                  "longitude": {
-                    "id": "f_01Je8MXP38m9GwcX2vEnn74GWs",
-                    "name": "longitude",
-                    "type": "decimal",
-                    "handle": "longitude",
-                    "number": "-74.06",
-                    "help_text": "Get from \"https://www.latlong.net/\" website by entering airport's name"
-                  }
-                },
-                "content_type": {
-                  "id": "ct_01je8mtP8N8mv9EwxmeDPc072r",
-                  "name": "Gmap Content",
-                  "handle": "routes_gmap_section",
-                  "object_type": "block"
-                }
-              }
-            ],
-            "handle": "google_maps_content",
-            "help_text": null
-          }
-        },
-        "content_type": {
-          "id": "ct_01JE8Pjj2s6Jb1wW4T4BbHh4r9",
-          "name": "Routes Google Map Section",
-          "handle": "routes_google_map_section",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 1,
-        "fields": {
-          "heading": {
-            "id": "f_01Je8PkY8X7v9A8E26pxgq2erB",
-            "name": "heading",
-            "text": "Buffalo",
-            "type": "text",
-            "handle": "heading",
-            "help_text": "Name of location 1"
-          },
-          "google_maps_content": {
-            "id": "f_01JE8pRxbW5JGE9zdPDahK92R5",
-            "name": "Google Maps Content",
-            "type": "blocks",
-            "blocks": [
-              {
-                "name": "",
-                "sort": 0,
-                "fields": {
-                  "name": {
-                    "id": "f_01jE8mvyqkbbkPTSQ1Kgn1g9rx",
-                    "name": "Name",
-                    "text": "Buffalo Niagara International Airport",
-                    "type": "text",
-                    "handle": "name",
-                    "help_text": null
-                  },
-                  "latitude": {
-                    "id": "f_01je8Mx6yy086cEnwT7dw4M5wr",
-                    "name": "latitude",
-                    "type": "decimal",
-                    "handle": "latitude",
-                    "number": "42.93",
-                    "help_text": "Get from \"https://www.latlong.net/\" website by entering airport's name"
-                  },
-                  "longitude": {
-                    "id": "f_01Je8MXP38m9GwcX2vEnn74GWs",
-                    "name": "longitude",
-                    "type": "decimal",
-                    "handle": "longitude",
-                    "number": "-78.73",
-                    "help_text": "Get from \"https://www.latlong.net/\" website by entering airport's name"
-                  }
-                },
-                "content_type": {
-                  "id": "ct_01je8mtP8N8mv9EwxmeDPc072r",
-                  "name": "Gmap Content",
-                  "handle": "routes_gmap_section",
-                  "object_type": "block"
-                }
-              }
-            ],
-            "handle": "google_maps_content",
-            "help_text": null
-          }
-        },
-        "content_type": {
-          "id": "ct_01JE8Pjj2s6Jb1wW4T4BbHh4r9",
-          "name": "Routes Google Map Section",
-          "handle": "routes_google_map_section",
-          "object_type": "block"
-        }
-      }
-    ]
-  },
-  "hero_content": {
-    "id": "f_01jE8P3s4D7j9EhtjrEf96NkjA",
-    "name": "Hero content",
-    "handle": "hero_content",
-    "help_text": "heading and long paragraph (Do not add tagline '– Elevate Your Journey –')",
-    "type": "blocks",
-    "blocks": [
-      {
-        "name": "",
-        "sort": 0,
-        "fields": {
-          "title": {
-            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
-            "name": "Heading",
-            "text": "Teterboro to Buffalo",
-            "type": "text",
-            "handle": "title",
-            "help_text": "Heading (h2)"
-          },
-          "paragraph": {
-            "id": "f_01jbQrN2830RDW6Px709G00xM8",
-            "name": "Paragraph",
-            "text": "<p>Looking to travel from <a href=\"https://jetlevel.com/private-jet-charter-flights-to-teterboro-nj/\">Teterboro</a> to <a href=\"https://jetlevel.com/private-jet-charter-flights-to-buffalo-ny/\">Buffalo</a> in unparalleled luxury and convenience? JetLevel Aviation is your go-to choice for this highly-demanded northeast corridor route. The distance between these two cities is around 300 miles, making it a popular choice for business executives and families alike, who appreciate efficiency alongside exclusivity.</p>",
-            "type": "long_text",
-            "handle": "paragraph",
-            "help_text": "Paragraph (Long Text)"
-          }
-        },
-        "content_type": {
-          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
-          "name": "Content Section",
-          "handle": "content_section",
-          "object_type": "block"
-        }
-      }
-    ]
-  },
-  "introduction": {
-    "id": "f_01jE8M8M6w5wM7VZBDh7KgpA2Y",
-    "name": "Introduction",
-    "handle": "introduction",
-    "help_text": null,
-    "type": "blocks",
-    "blocks": [
-      {
-        "name": "",
-        "sort": 0,
-        "fields": {
-          "title": {
-            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
-            "name": "Heading",
-            "text": "Private Jet from Teterboro to Buffalo",
-            "type": "text",
-            "handle": "title",
-            "help_text": "Heading (h2)"
-          },
-          "paragraph": {
-            "id": "f_01jbQrN2830RDW6Px709G00xM8",
-            "name": "Paragraph",
-            "text": "<p><strong>Traveling by private jet from Teterboro to Buffalo typically takes about 1 hour. Costs vary, generally ranging from $4,000 to $7,000 one-way, depending on the aircraft and services. Common choices for this route include efficient jets like the HondaJet or Cessna Citation Mustang. Flights depart from Teterboro Airport, offering direct and quick access to Buffalo, ideal for business or leisure, providing flexibility, privacy, and a streamlined travel experience.</strong></p>",
-            "type": "long_text",
-            "handle": "paragraph",
-            "help_text": "Paragraph (Long Text)"
-          }
-        },
-        "content_type": {
-          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
-          "name": "Content Section",
-          "handle": "content_section",
-          "object_type": "block"
-        }
-      }
-    ]
-  },
-  "last_section": {
-    "id": "f_01Je8NSMAMyzhvP1VDyvg9RNF7",
-    "name": "Content Section",
-    "handle": "last_section",
-    "help_text": null,
-    "type": "blocks",
-    "blocks": [
-      {
-        "name": "",
-        "sort": 0,
-        "fields": {
-          "title": {
-            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
-            "name": "Heading",
-            "text": "For Business and Personal Private Jet Travel – Call JetLevel Aviation",
-            "type": "text",
-            "handle": "title",
-            "help_text": "Heading (h2)"
-          },
-          "paragraph": {
-            "id": "f_01jbQrN2830RDW6Px709G00xM8",
-            "name": "Paragraph",
-            "text": "<p>JetLevel Aviation is your trusted partner for all your private jet needs. With nearly 20 years of experience, we bring safety, comfort, and luxury together to redefine your air travel experience. Discover more about us through our <a href=\"https://jetlevel.com/about-jet-level\">About Us</a> page or find answers to frequently asked questions on our <a href=\"https://jetlevel.com/private-jet-frequently-asked-questions\">FAQs</a> page. Don’t forget to check out our <a href=\"https://jetlevel.com/blog\">blog</a> for latest news, tips, and insights into the world of private aviation.</p>\n\n<p>For both business and personal private jet travel, JetLevel Aviation has set the standard in personalized aviation services. Reach out today to experience a new echelon of air travel, backed by the trust and authority of Ricky Gomulka’s nearly 20 years in the industry. <a href=\"https://jetlevel.com/contact-us\">Contact us now!</a></p>",
-            "type": "long_text",
-            "handle": "paragraph",
-            "help_text": "Paragraph (Long Text)"
-          }
-        },
-        "content_type": {
-          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
-          "name": "Content Section",
-          "handle": "content_section",
-          "object_type": "block"
-        }
-      }
-    ]
-  },
-  "weather_data": {
-    "id": "f_01je8Nr303Y9D3Wwnf5Y0QjN5F",
-    "name": "weatherData",
-    "handle": "weather_data",
-    "help_text": null,
-    "type": "blocks",
-    "blocks": [
-      {
-        "name": "Teterboro Weather",
-        "sort": 0,
-        "fields": {
-          "title": {
-            "id": "f_01jbYSm7P2R2cG9aqdEzB0STnz",
-            "name": "weatherHeading",
-            "text": "Teterboro Weather",
-            "type": "text",
-            "handle": "title",
-            "help_text": "weather title/heading \"Weather in [Location]\""
-          },
-          "paragraph": {
-            "id": "f_01jbYtFq1w4v4caJQW6GnzW2w0",
-            "name": "paragraph",
-            "text": "",
-            "type": "long_text",
-            "handle": "paragraph",
-            "help_text": "weather section paragraph"
-          },
-          "weather_widget": {
-            "id": "f_01JBySP7PQcj60akF59kGR1MsP",
-            "name": "weatherWidget",
-            "text": "<a class=\"weatherwidget-io\" href=\"https://forecast7.com/en/40d86n74d06/teterboro/?unit=us\" data-label_1=\"TETERBORO\" data-label_2=\"WEATHER\" data-theme=\"marine\" >TETERBORO WEATHER</a>",
-            "type": "text",
-            "handle": "weather_widget",
-            "help_text": "place only a tag in here (DO NOT NOT PLACE <script> tag)"
-          }
-        },
-        "content_type": {
-          "id": "ct_01jbySm7nm96K9AFwHBP7709H7",
-          "name": "Weather",
-          "handle": "weather",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "Buffalo Weather",
-        "sort": 1,
-        "fields": {
-          "title": {
-            "id": "f_01jbYSm7P2R2cG9aqdEzB0STnz",
-            "name": "weatherHeading",
-            "text": "Buffalo Weather",
-            "type": "text",
-            "handle": "title",
-            "help_text": "weather title/heading \"Weather in [Location]\""
-          },
-          "paragraph": {
-            "id": "f_01jbYtFq1w4v4caJQW6GnzW2w0",
-            "name": "paragraph",
-            "text": "",
-            "type": "long_text",
-            "handle": "paragraph",
-            "help_text": "weather section paragraph"
-          },
-          "weather_widget": {
-            "id": "f_01JBySP7PQcj60akF59kGR1MsP",
-            "name": "weatherWidget",
-            "text": "<a class=\"weatherwidget-io\" href=\"https://forecast7.com/en/42d89n78d88/buffalo/?unit=us\" data-label_1=\"BUFFALO\" data-label_2=\"WEATHER\" data-theme=\"marine\" >BUFFALO WEATHER</a>",
-            "type": "text",
-            "handle": "weather_widget",
-            "help_text": "place only a tag in here (DO NOT NOT PLACE <script> tag)"
-          }
-        },
-        "content_type": {
-          "id": "ct_01jbySm7nm96K9AFwHBP7709H7",
-          "name": "Weather",
-          "handle": "weather",
-          "object_type": "block"
-        }
-      }
-    ]
+    "text": "Compare Other Private Jets to a King Air 350"
   }
 }

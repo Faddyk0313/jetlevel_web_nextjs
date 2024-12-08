@@ -1,6 +1,10 @@
 import React from 'react';
 
-const WhatOurClientsSay = () => {
+interface WhatOurClientsSayProps {
+    hasSectionPadding?: boolean;
+  }
+
+const WhatOurClientsSay: React.FC<WhatOurClientsSayProps> = ({ hasSectionPadding })  => {
     const testimonials = [
         {
             text: "We had an amazing experience with JetLevel! Ricky was very accommodating and prompt in responding. The jets were clean and right on time for our flight. There was a car waiting for us when we landed - I can't believe everything was settled having had so few calls with the company. They took care of everything. If time is always critical then these guys are perfect for you. They never disappoint!",
@@ -24,7 +28,7 @@ const WhatOurClientsSay = () => {
         } 
     ];
     return (
-        <section className="overlay bg-[url(https://jetlevel.com/wp-content/uploads/2021/01/In-Flight-Productivity.jpg)] flex flex-col items-center justify-center">
+        <section className={`overlay bg-[url(https://jetlevel.com/wp-content/uploads/2021/01/In-Flight-Productivity.jpg)] flex flex-col items-center justify-center ${hasSectionPadding === false ? '!py-10' : ''}`}>
             <div className='max-w-[1800px] mx-auto px-5 md:px-10 lg:px-20'>
                 <h2 className="text-center text-white pb-7">What Our Clients Say</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">

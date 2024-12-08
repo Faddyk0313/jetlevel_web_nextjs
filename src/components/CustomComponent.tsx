@@ -17,6 +17,7 @@ interface CustomComponentProps {
     title: string;
     description: string;
   }>;
+  hasPadding?: boolean;
 }
 
 const CustomComponent: React.FC<CustomComponentProps> = ({
@@ -24,6 +25,7 @@ const CustomComponent: React.FC<CustomComponentProps> = ({
   para,
   background,
   items,
+  hasPadding
 }) => {
   // Create a simplified array for the carousel
   const carouselItems: CarouselItem2[] = items.map(({ icon, title }) => ({
@@ -32,7 +34,7 @@ const CustomComponent: React.FC<CustomComponentProps> = ({
   }));
 
   return (
-    <section className={`flex flex-col justify-center ${background === "white" ? "max-w-[1800px] mx-auto px-5 md:px-10 lg:px-20" : "overflow-hidden bg-aboutUs-background overlay bg-cover bg-fixed"}`}>
+    <section className={`flex flex-col justify-center ${background === "white" ? "max-w-[1800px] mx-auto px-5 md:px-10 lg:px-20" : "overflow-hidden bg-aboutUs-background overlay bg-cover bg-fixed"}  ${hasPadding === false ? '!py-10' : ''}`}>
       <div className={`${background === "white" ? "" : "lg:max-w-[1800px] lg:mx-auto px-5 md:px-10 lg:px-20"}`}>
         <div
           className={`mb-10 ${background === "white" ? "text-left" : "text-center text-white"} `}

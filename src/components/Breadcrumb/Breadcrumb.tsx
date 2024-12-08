@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiHome } from "react-icons/fi";
 import styles from "./Breadcrumb.module.css";
-import { internationalLocations, usCanadaLocations } from "../Locations";
+import { aircrafts, airports, internationalLocations, usCanadaLocations } from "../Locations";
 
 const Breadcrumb: React.FC = () => {
   const pathname = usePathname();
@@ -16,16 +16,19 @@ const Breadcrumb: React.FC = () => {
   // Rewrite mappings (including dynamic routes)
   const rewriteMapping: { [key: string]: string; } = {
     "/jet-charter/us-canada": "/us-canada-chartered-cities",
+    "/jet-charter/international": "/international-chartered-cities",
     "/jet-charter/cities/:location": "/private-jet-charter-flights-to-:location",
     "/jet-charter/us-canada/:location": "/private-jet-charter-flights-to-:location",
     "/jet-charter/international/:location": "/private-jet-charter-flights-to-:location",
-    "/jet-charter/international": "/international-chartered-cities",
     "/jet-charter/popular-routes": "/popular-routes",
     "/jet-charter/popular-routes/:location": "/private-jet-charter-:location",
     "/jet-charter/empty-legs": "/empty-leg-flights",
     "/jet-charter/empty-legs/:location": "/empty-leg-flights-:location",
     "/charter-resources/private-jet-airports": "/usa-airport-directory",
+    "/charter-resources/aircraft-types": "/aircraft-charters",
+    "/charter-resources/airports-aircrafts/:location": "/:location",
     "/charter-resources/private-jet-airports/:location": "/:location",
+    "/charter-resources/aircraft-charters/:location": "/:location",
   };
 
   // Helper function to apply rewrite rules based on dynamic segments
@@ -69,10 +72,18 @@ const Breadcrumb: React.FC = () => {
     } else if (internationalLocations.includes(segments[segments.length - 1])) {
       subOption = 'international';
     }
+    segments[1] = subOption;
+
+  } else if (subOption == "airports-aircrafts") {
+    if (aircrafts.includes(segments[segments.length - 1])) {
+      subOption = 'aircraft-types';
+    } else if (airports.includes(segments[segments.length - 1])) {
+      subOption = 'private-jet-airports';
+    }
+    segments[1] = subOption;
+
   }
-
-  segments[1] = subOption;
-
+  
   const hrefArray = segments.slice(1);
 
   // console.log("href", href);

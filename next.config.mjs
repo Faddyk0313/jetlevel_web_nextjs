@@ -35,8 +35,17 @@ const nextConfig = {
         destination: '/charter-resources/private-jet-airports',
       },
       {
+        source: '/aircraft-charters',
+        destination: '/charter-resources/aircraft-types',
+      },
+      {
         source: '/:location',
         destination: '/charter-resources/private-jet-airports/:location',
+      },
+      
+      {
+        source: '/:location/',
+        destination: '/charter-resources/aircraft-types/:location',
       },
     ];
   },

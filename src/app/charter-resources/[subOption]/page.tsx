@@ -9,7 +9,7 @@ type PageProps = {
 };
 
 // Define page content based on `subOption`
-const pageContent: Record<string, { title: string }> = {
+const pageContent: Record<string, { title: string; }> = {
   "private-jet-airports": { title: "Private Jet Airports" },
   "aircraft-types": { title: "Aircraft Types" },
   "cost-estimator": { title: "Cost Estimator" },
@@ -39,7 +39,7 @@ const CharterResources = async ({ params }: PageProps) => {
   if (subOption === "private-jet-airports") {
     contentType = "airport_pages";
   } else if (subOption === "aircraft-types") {
-    contentType = "international_city_pages";
+    contentType = "aircraft_pages";
   } else if (subOption === "cost-estimator") {
     contentType = "route_pages";
   } else if (subOption === "flight-tracker") {
@@ -71,9 +71,6 @@ const CharterResources = async ({ params }: PageProps) => {
   return (
     <div className="p-6 max-w-4xl mx-auto text-center">
       <h1 className="font-bold my-4">{title}</h1>
-      {/* <Link className="hover:text-blue" href="/addison-airport-kads">
-                Addison Airport (KADS)
-            </Link> */}
       <ul>
         {content?.map((item, key) => (
           <li key={key}>
