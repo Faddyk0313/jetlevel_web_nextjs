@@ -4,8 +4,8 @@ import { useEffect, useRef } from 'react';
 import React from 'react';
 import { Player } from '@lordicon/react';
 
-import  ICON1  from '../../public/images/callIcon.json';
-import  ICON2  from '../../public/images/mailIcon.json';
+import  ICON1  from '../styles/callIcon.json';
+import  ICON2  from '../styles/mailIcon.json';
 
 const BookYourPrivateJet = () => {
     const playerRef1 = useRef<Player>(null);

@@ -1,7 +1,7 @@
 import React from 'react';
 // import IframeEmbed from './Iframe';
 import Markdown from 'markdown-to-jsx';
-import LeadForm  from '@/components/LeadForm';
+import LeadForm from '@/components/LeadForm';
 
 type HeroProps = {
     image: string;
@@ -42,9 +42,14 @@ const Hero: React.FC<HeroProps> = ({ image, title, subtitle, tagline, descriptio
                         {description as string}
                     </Markdown>
                 </div>
-                <div className='w-full outline-none h-auto' id="my-iframe">
-                    <LeadForm/>
-                </div>
+                {
+                    hasCalculator ?
+                        <div className='w-full outline-none h-auto' id="my-iframe">
+                            <LeadForm />
+                        </div>
+                        : ""
+                }
+
             </div>
         </section>
     );
