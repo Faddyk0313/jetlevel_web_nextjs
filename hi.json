@@ -1,32 +1,16 @@
 {
   "title": {
-    "id": "f_01jBtrx2HVWtRCrwq74D24R8Cf",
-    "name": "Page Name",
+    "id": "f_01jenmG58588H0Ed6cDnQ4EmdK",
+    "name": "Title",
     "handle": "title",
-    "help_text": null,
+    "help_text": "",
     "type": "text",
-    "text": "King Air 350"
+    "text": "Who Should Consider Empty Leg Flights?"
   },
-  "heading": {
-    "id": "f_01JejPEgwQ0rcZ0h36Sf6cFHEK",
-    "name": "Heading",
-    "handle": "heading",
-    "help_text": "[Aircraft Name] Charter Overview    example: King Air 350 Charter Overview",
-    "type": "text",
-    "text": "King Air 350 Charter Overview"
-  },
-  "map_heading": {
-    "id": "f_01jBtSV3GX1Tkn6n9FskCa9MX6",
-    "name": "Map Heading",
-    "handle": "map_heading",
-    "help_text": null,
-    "type": "text",
-    "text": "Discover the Global Reach of the King Air 350 Charter"
-  },
-  "sub_section": {
-    "id": "f_01JEjpf83A01AC0qjG4sz7dNEF",
-    "name": "Sub Section",
-    "handle": "sub_section",
+  "sections": {
+    "id": "f_01jENmNz5K9T5ZEn1Sd6TtaQWm",
+    "name": "sections",
+    "handle": "sections",
     "help_text": null,
     "type": "blocks",
     "blocks": [
@@ -37,7 +21,7 @@
           "title": {
             "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
             "name": "Heading",
-            "text": "King Air 350 Charter Flight Prices",
+            "text": "Who Should Consider Empty Leg Flights?",
             "type": "text",
             "handle": "title",
             "help_text": "Heading (h2)"
@@ -45,7 +29,7 @@
           "paragraph": {
             "id": "f_01jbQrN2830RDW6Px709G00xM8",
             "name": "Paragraph",
-            "text": "<p>At JetLevel, prices for a charter flight on the King Air 350 range between $4,300 and $6,600 per hour. Final costs depend on the customer’s departure city, destination, and flight schedule. Contact JetLevel for more information on booking a charter flight.</p>",
+            "text": "<p>Empty leg flights occur when a private jet needs to return to its base or move to another location for its next charter flight, flying without passengers. This situation offers an excellent opportunity for savvy travelers to book these flights at significantly reduced rates. At JetLevel Aviation, we’ve made it a point to offer these exclusive deals, ensuring our clients enjoy the luxury of private jet travel without the full expense.</p>",
             "type": "long_text",
             "handle": "paragraph",
             "help_text": "Paragraph (Long Text)"
@@ -65,7 +49,7 @@
           "title": {
             "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
             "name": "Heading",
-            "text": "Trusted King Air 350 Charter Services",
+            "text": "Unlock Exclusive Deals with Empty Leg Flights",
             "type": "text",
             "handle": "title",
             "help_text": "Heading (h2)"
@@ -73,7 +57,7 @@
           "paragraph": {
             "id": "f_01jbQrN2830RDW6Px709G00xM8",
             "name": "Paragraph",
-            "text": "<p>Beechcraft’s Super King Air family has been in production since 1974, making it the longest-running production of any civilian turbo prop plane. And with over 7,000 King Airs in the civil registry, it’s not a surprise that customers of all types enjoy this simple but powerful plane. Additionally, the King Air 350 hasn’t been in a reported accident in the United States since it entered service.</p>",
+            "text": "<p>Empty leg flights occur when a private jet needs to return to its base or move to another location for its next charter flight, flying without passengers. This situation offers an excellent opportunity for savvy travelers to book these flights at significantly reduced rates. At JetLevel Aviation, we’ve made it a point to offer these exclusive deals, ensuring our clients enjoy the luxury of private jet travel without the full expense. </p>\n\n<p><strong>HOW TO SAVE ON LUXURY TRAVEL WITH EMPTY LEG FLIGHTS</strong> Empty leg flights offer savvy travelers a chance to enjoy the luxury of private jet travel at significantly reduced rates. These occur when jets return to base or move for the next charter, flying without passengers. This unique opportunity allows you to experience the exclusivity and comfort of private flying while saving up to 75% compared to standard charter flights.</p>",
             "type": "long_text",
             "handle": "paragraph",
             "help_text": "Paragraph (Long Text)"
@@ -93,7 +77,7 @@
           "title": {
             "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
             "name": "Heading",
-            "text": "Robust Specs",
+            "text": "Business Travelers Cut Costs, Not Corners",
             "type": "text",
             "handle": "title",
             "help_text": "Heading (h2)"
@@ -101,7 +85,7 @@
           "paragraph": {
             "id": "f_01jbQrN2830RDW6Px709G00xM8",
             "name": "Paragraph",
-            "text": "<p>Powered by two Pratt &amp; Whitney PTA6A-60A engines, the King Air 350 can take off in various conditions, even with full passenger and fuel loads and temperatures up to 126°F. It also doesn’t need much room for take-off, with a minimum runway length of 3,300 feet.</p>\n\n<p>If one of the engines fails, the King Air 350 can adjust on the fly. The engine’s propeller automatically feathers in order to cut down on drag. Meanwhile, the rudder boosts to compensate for the asymmetric thrust. The wing is also certified for infinite life and at 58 feet long, can handle turbulence and ice very well.</p>",
+            "text": "<p>Imagine heading to an important meeting or conference in style, prepared, and relaxed, without the hassle of commercial travel. Business travelers find great value in empty leg flights, as they offer a quiet, private space to work or unwind while en route. I recall a client who utilized an empty leg flight for an unexpected meeting in New York. The cost efficiency and time savings turned what could have been a stressful trip into a seamless, productive journey. Benefits of Empty Leg flights include: </p>\n\n<ul><li><p><strong>Cost Efficiency: </strong>Save up to 75% compared to standard charter flights.</p></li><li><p><strong>Privacy and Comfort:</strong> Enjoy the unmatched privacy and comfort of a private jet at a fraction of the cost.</p></li><li><p><strong>Flexibility: </strong>Tailor your travel schedule with greater flexibility and convenience.</p></li></ul>",
             "type": "long_text",
             "handle": "paragraph",
             "help_text": "Paragraph (Long Text)"
@@ -121,7 +105,7 @@
           "title": {
             "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
             "name": "Heading",
-            "text": "High-tech Features for a Smooth King Air 350 Charter",
+            "text": "Spontaneous Vacationers Rejoice in Last-Minute Luxuries",
             "type": "text",
             "handle": "title",
             "help_text": "Heading (h2)"
@@ -129,7 +113,7 @@
           "paragraph": {
             "id": "f_01jbQrN2830RDW6Px709G00xM8",
             "name": "Paragraph",
-            "text": "<p>The cockpit of the King Air 350 is equipped with Collins Pro Line 21 avionics, an intuitive system that allows pilots to quickly understand the data they’re presented. It also includes dua-screen primary flight displays, central multifunctional displays, and a single flight management system. These high-tech features ensure both safety and efficiency during your charter.</p>",
+            "text": "<p>For those who live by spontaneity, empty leg flights are a dream come true. These flights enable spontaneous vacationers to embark on luxury getaways without the need for extensive planning. One memorable instance was when a couple celebrated their anniversary with a last-minute trip to Aspen, snagging an empty leg flight that made their celebration all the more special.</p>",
             "type": "long_text",
             "handle": "paragraph",
             "help_text": "Paragraph (Long Text)"
@@ -149,7 +133,7 @@
           "title": {
             "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
             "name": "Heading",
-            "text": "Comfort and Convenience in Every King Air 350 Charter",
+            "text": "Jet-Setting Families Discover Affordable Luxury",
             "type": "text",
             "handle": "title",
             "help_text": "Heading (h2)"
@@ -157,7 +141,7 @@
           "paragraph": {
             "id": "f_01jbQrN2830RDW6Px709G00xM8",
             "name": "Paragraph",
-            "text": "<p>The King Air 350’s cabin is fairly large, clocking in at 355 cubic feet. Like many of the other King Air models, the cabin implements a squared oval design to provide your passengers with ample shoulder room. Fourteen cabin windows keep the plane bright, but you can electronically dim them if you wish.</p>\n\n<p>The cabin also comes equipped with hot and cold beverage units, and a tuning fork anti-noise system that keeps the cabin fairly quiet. The seats can swivel and slide into the formation you desire, and work tables fold to the side when not in use. In addition to the netted baggage area, lockers behind the engine provide additional storage space.</p>",
+            "text": "<p>Families looking to travel in comfort and style can greatly benefit from empty leg flights. The convenience and space offered by a private jet make family trips more enjoyable, turning the journey itself into part of the vacation. A family I once helped was thrilled to find an empty leg flight to Orlando, making their Disney World trip unforgettable from start to finish. </p>\n\n<p><strong>PRIVATE JET TRAVEL FOR FAMILIES: MAKING LUXURY AFFORDABLE WITH EMPTY LEG FLIGHTS</strong> Families looking to travel in style can greatly benefit from empty leg flights, offering the convenience and space of a private jet at a fraction of the cost. These flights make family vacations more enjoyable by turning the journey itself into part of the vacation, enhancing the travel experience from start to finish.</p>",
             "type": "long_text",
             "handle": "paragraph",
             "help_text": "Paragraph (Long Text)"
@@ -177,7 +161,7 @@
           "title": {
             "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
             "name": "Heading",
-            "text": "Fast and Efficient Travel with King Air 350 Charter",
+            "text": "Entrepreneurs Elevate Networking Opportunities",
             "type": "text",
             "handle": "title",
             "help_text": "Heading (h2)"
@@ -185,7 +169,7 @@
           "paragraph": {
             "id": "f_01jbQrN2830RDW6Px709G00xM8",
             "name": "Paragraph",
-            "text": "<p>The King Air 350 boasts a cruising speed of 310 ktas, much faster than other turbo props on the market. This speed guarantees that you’ll get to your destination fairly quickly without having to invest in a more expensive model such as a jet.</p>",
+            "text": "<p>For entrepreneurs, every interaction can be a networking opportunity, even in the air. Empty leg flights offer a unique setting for meeting like-minded individuals or even hosting impromptu meetings. The privacy and exclusivity of these flights create an ideal environment for fostering meaningful connections.</p>",
             "type": "long_text",
             "handle": "paragraph",
             "help_text": "Paragraph (Long Text)"
@@ -195,183 +179,6 @@
           "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
           "name": "Content Section",
           "handle": "content_section",
-          "object_type": "block"
-        }
-      }
-    ]
-  },
-  "grid_content": {
-    "id": "f_01JEjpStzrJZ26P8Wrb2Xy448E",
-    "name": "Grid Content",
-    "handle": "grid_content",
-    "help_text": null,
-    "type": "blocks",
-    "blocks": [
-      {
-        "name": "",
-        "sort": 0,
-        "fields": {
-          "value": {
-            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
-            "name": "value",
-            "text": "Textron Aviation",
-            "type": "text",
-            "handle": "value",
-            "help_text": null
-          },
-          "heading": {
-            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
-            "name": "heading",
-            "text": "Manufacturer",
-            "type": "text",
-            "handle": "heading",
-            "help_text": null
-          }
-        },
-        "content_type": {
-          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
-          "name": "Aircraft Grid Item Content",
-          "handle": "aircraft_grid_item_content",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 1,
-        "fields": {
-          "value": {
-            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
-            "name": "value",
-            "text": "Turbo Prop",
-            "type": "text",
-            "handle": "value",
-            "help_text": null
-          },
-          "heading": {
-            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
-            "name": "heading",
-            "text": "Class",
-            "type": "text",
-            "handle": "heading",
-            "help_text": null
-          }
-        },
-        "content_type": {
-          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
-          "name": "Aircraft Grid Item Content",
-          "handle": "aircraft_grid_item_content",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 2,
-        "fields": {
-          "value": {
-            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
-            "name": "value",
-            "text": "9-11",
-            "type": "text",
-            "handle": "value",
-            "help_text": null
-          },
-          "heading": {
-            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
-            "name": "heading",
-            "text": "Seating",
-            "type": "text",
-            "handle": "heading",
-            "help_text": null
-          }
-        },
-        "content_type": {
-          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
-          "name": "Aircraft Grid Item Content",
-          "handle": "aircraft_grid_item_content",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 3,
-        "fields": {
-          "value": {
-            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
-            "name": "value",
-            "text": "No",
-            "type": "text",
-            "handle": "value",
-            "help_text": null
-          },
-          "heading": {
-            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
-            "name": "heading",
-            "text": "Enclosed Lavatory",
-            "type": "text",
-            "handle": "heading",
-            "help_text": null
-          }
-        },
-        "content_type": {
-          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
-          "name": "Aircraft Grid Item Content",
-          "handle": "aircraft_grid_item_content",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 4,
-        "fields": {
-          "value": {
-            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
-            "name": "value",
-            "text": "1550 nm",
-            "type": "text",
-            "handle": "value",
-            "help_text": null
-          },
-          "heading": {
-            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
-            "name": "heading",
-            "text": "Maximum range",
-            "type": "text",
-            "handle": "heading",
-            "help_text": null
-          }
-        },
-        "content_type": {
-          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
-          "name": "Aircraft Grid Item Content",
-          "handle": "aircraft_grid_item_content",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 5,
-        "fields": {
-          "value": {
-            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
-            "name": "value",
-            "text": "2500 Lb",
-            "type": "text",
-            "handle": "value",
-            "help_text": null
-          },
-          "heading": {
-            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
-            "name": "heading",
-            "text": "Max payload",
-            "type": "text",
-            "handle": "heading",
-            "help_text": null
-          }
-        },
-        "content_type": {
-          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
-          "name": "Aircraft Grid Item Content",
-          "handle": "aircraft_grid_item_content",
           "object_type": "block"
         }
       },
@@ -379,271 +186,10 @@
         "name": "",
         "sort": 6,
         "fields": {
-          "value": {
-            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
-            "name": "value",
-            "text": "3300 ft",
-            "type": "text",
-            "handle": "value",
-            "help_text": null
-          },
-          "heading": {
-            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
-            "name": "heading",
-            "text": "Take off distance",
-            "type": "text",
-            "handle": "heading",
-            "help_text": null
-          }
-        },
-        "content_type": {
-          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
-          "name": "Aircraft Grid Item Content",
-          "handle": "aircraft_grid_item_content",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 7,
-        "fields": {
-          "value": {
-            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
-            "name": "value",
-            "text": "2700 fpm",
-            "type": "text",
-            "handle": "value",
-            "help_text": null
-          },
-          "heading": {
-            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
-            "name": "heading",
-            "text": "Climb rate",
-            "type": "text",
-            "handle": "heading",
-            "help_text": null
-          }
-        },
-        "content_type": {
-          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
-          "name": "Aircraft Grid Item Content",
-          "handle": "aircraft_grid_item_content",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 8,
-        "fields": {
-          "value": {
-            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
-            "name": "value",
-            "text": "310 kts",
-            "type": "text",
-            "handle": "value",
-            "help_text": null
-          },
-          "heading": {
-            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
-            "name": "heading",
-            "text": "Cruise speed",
-            "type": "text",
-            "handle": "heading",
-            "help_text": null
-          }
-        },
-        "content_type": {
-          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
-          "name": "Aircraft Grid Item Content",
-          "handle": "aircraft_grid_item_content",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 9,
-        "fields": {
-          "value": {
-            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
-            "name": "value",
-            "text": "35,000 ft",
-            "type": "text",
-            "handle": "value",
-            "help_text": null
-          },
-          "heading": {
-            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
-            "name": "heading",
-            "text": "Cruise altitude",
-            "type": "text",
-            "handle": "heading",
-            "help_text": null
-          }
-        },
-        "content_type": {
-          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
-          "name": "Aircraft Grid Item Content",
-          "handle": "aircraft_grid_item_content",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 10,
-        "fields": {
-          "value": {
-            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
-            "name": "value",
-            "text": "4 ft 10 in",
-            "type": "text",
-            "handle": "value",
-            "help_text": null
-          },
-          "heading": {
-            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
-            "name": "heading",
-            "text": "Cabin Height",
-            "type": "text",
-            "handle": "heading",
-            "help_text": null
-          }
-        },
-        "content_type": {
-          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
-          "name": "Aircraft Grid Item Content",
-          "handle": "aircraft_grid_item_content",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 11,
-        "fields": {
-          "value": {
-            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
-            "name": "value",
-            "text": "4 ft 6 in",
-            "type": "text",
-            "handle": "value",
-            "help_text": null
-          },
-          "heading": {
-            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
-            "name": "heading",
-            "text": "Cabin Width",
-            "type": "text",
-            "handle": "heading",
-            "help_text": null
-          }
-        },
-        "content_type": {
-          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
-          "name": "Aircraft Grid Item Content",
-          "handle": "aircraft_grid_item_content",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 12,
-        "fields": {
-          "value": {
-            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
-            "name": "value",
-            "text": "19 ft 2 in",
-            "type": "text",
-            "handle": "value",
-            "help_text": null
-          },
-          "heading": {
-            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
-            "name": "heading",
-            "text": "Cabin Length",
-            "type": "text",
-            "handle": "heading",
-            "help_text": null
-          }
-        },
-        "content_type": {
-          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
-          "name": "Aircraft Grid Item Content",
-          "handle": "aircraft_grid_item_content",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 13,
-        "fields": {
-          "value": {
-            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
-            "name": "value",
-            "text": "355 cu ft",
-            "type": "text",
-            "handle": "value",
-            "help_text": null
-          },
-          "heading": {
-            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
-            "name": "heading",
-            "text": "Cabin Volume",
-            "type": "text",
-            "handle": "heading",
-            "help_text": null
-          }
-        },
-        "content_type": {
-          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
-          "name": "Aircraft Grid Item Content",
-          "handle": "aircraft_grid_item_content",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 14,
-        "fields": {
-          "value": {
-            "id": "f_01jEjpr9rN415c0td5GsM8jcHQ",
-            "name": "value",
-            "text": "56 cu ft (internal), 16 cu ft (external)",
-            "type": "text",
-            "handle": "value",
-            "help_text": null
-          },
-          "heading": {
-            "id": "f_01JEJPQvg9pyf2BYnG5AFv93gv",
-            "name": "heading",
-            "text": "Baggage Capacity",
-            "type": "text",
-            "handle": "heading",
-            "help_text": null
-          }
-        },
-        "content_type": {
-          "id": "ct_01jEjPQ7nT2b8j72RNtMJ4esJd",
-          "name": "Aircraft Grid Item Content",
-          "handle": "aircraft_grid_item_content",
-          "object_type": "block"
-        }
-      }
-    ]
-  },
-  "hero_section": {
-    "id": "f_01JBTRyJBw57y00DBw36Q3wK77",
-    "name": "Hero Section",
-    "handle": "hero_section",
-    "help_text": null,
-    "type": "blocks",
-    "blocks": [
-      {
-        "name": "",
-        "sort": 0,
-        "fields": {
           "title": {
             "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
             "name": "Heading",
-            "text": "King Air 350 Charter Services",
+            "text": "Adventure Seekers Explore More for Less",
             "type": "text",
             "handle": "title",
             "help_text": "Heading (h2)"
@@ -651,7 +197,63 @@
           "paragraph": {
             "id": "f_01jbQrN2830RDW6Px709G00xM8",
             "name": "Paragraph",
-            "text": "<p>Part of the longest-running civilian turbo prop family, chartering the King Air 350 provides a safe and comfortable flight at a relatively low cost. You also won’t sacrifice time, with a speed faster than most competitors.</p>",
+            "text": "<p>Adventure enthusiasts who crave new experiences can leverage empty leg flights to reach remote or less-accessible destinations. These flights often provide a more direct and flexible route, allowing adventurers to spend less time traveling and more time exploring.</p>",
+            "type": "long_text",
+            "handle": "paragraph",
+            "help_text": "Paragraph (Long Text)"
+          }
+        },
+        "content_type": {
+          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+          "name": "Content Section",
+          "handle": "content_section",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 7,
+        "fields": {
+          "title": {
+            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+            "name": "Heading",
+            "text": "The Smart Choice for Eco-Conscious Flyers",
+            "type": "text",
+            "handle": "title",
+            "help_text": "Heading (h2)"
+          },
+          "paragraph": {
+            "id": "f_01jbQrN2830RDW6Px709G00xM8",
+            "name": "Paragraph",
+            "text": "<p>By booking empty leg flights, eco-conscious travelers can reduce their carbon footprint. These flights are already scheduled to operate, so filling them up helps minimize the environmental impact of flying empty. It’s a win-win for the planet and the passenger. </p>\n\n<p><strong>BENEFITS OF BOOKING EMPTY LEG FLIGHTS FOR SPONTANEOUS VACATIONS</strong> For those who love spontaneity, empty leg flights are a dream come true, enabling last-minute luxury getaways without the need for extensive planning. They provide cost efficiency, privacy, and the flexibility to tailor travel schedules, making spontaneous vacations more special and affordable.</p>",
+            "type": "long_text",
+            "handle": "paragraph",
+            "help_text": "Paragraph (Long Text)"
+          }
+        },
+        "content_type": {
+          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+          "name": "Content Section",
+          "handle": "content_section",
+          "object_type": "block"
+        }
+      },
+      {
+        "name": "",
+        "sort": 8,
+        "fields": {
+          "title": {
+            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+            "name": "Heading",
+            "text": "Experience the Difference with JetLevel Aviation",
+            "type": "text",
+            "handle": "title",
+            "help_text": "Heading (h2)"
+          },
+          "paragraph": {
+            "id": "f_01jbQrN2830RDW6Px709G00xM8",
+            "name": "Paragraph",
+            "text": "<p>At JetLevel Aviation, we pride ourselves on offering a seamless and luxurious travel experience. Our platform makes finding and booking empty leg flights easy, giving you access to exclusive deals and unparalleled luxury. Whether you’re a business traveler, a spontaneous vacationer, a family on the go, an entrepreneur, an adventure seeker, or an eco-conscious flyer, we invite you to explore the world of empty leg flights with us. Ready to discover how empty leg flights can elevate your travel experience? Request a quote today at <a href=\"https://jetlevel.com/instant-private-jet-quotes/\">JetLevel Aviation</a> and let us take care of the rest. Your next luxury journey awaits. For more detailed insights on the cost of chartering a private jet, including empty leg options, visit our dedicated pages on <a href=\"https://jetlevel.com/cost-of-chartering-a-private-jet/\">the cost of chartering</a>, <a href=\"https://jetlevel.com/request-a-quote/\">request a quote</a>, <a href=\"https://jetlevel.com/charter-flights-cost-calculator/\">charter flights cost calculator</a>, and <a href=\"https://jetlevel.com/empty-leg-flights/\">empty leg flights</a>. Discover the world of luxury travel with JetLevel Aviation, where every journey is an experience to cherish.</p>",
             "type": "long_text",
             "handle": "paragraph",
             "help_text": "Paragraph (Long Text)"
@@ -666,20 +268,55 @@
       }
     ]
   },
-  "range_distance": {
-    "id": "f_01jEjP9k0142W3ApF7sm0fF6hN",
-    "name": "Range Distance",
-    "handle": "range_distance",
+  "hero_image": {
+    "id": "f_01JeNMKn9xp5pWRheQTmFMj217",
+    "name": "Hero Image",
+    "handle": "hero_image",
     "help_text": null,
-    "type": "decimal",
-    "number": "1550"
+    "type": "assets",
+    "assets": [
+      {
+        "sort": 0,
+        "asset": {
+          "id": "a_01jenMwMPZb9He2NgK5kAq1Vc2",
+          "url": "https://assets.contento.io/assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/who-should-consider-empty-legs-flight.jpg",
+          "name": "Who Should Consider Empty Legs Flight",
+          "path": "assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/who-should-consider-empty-legs-flight.jpg",
+          "size": "48.9 KB",
+          "width": "2560",
+          "height": "1637",
+          "is_image": true,
+          "extension": "jpg",
+          "mime_type": "image/jpeg",
+          "created_at": "2024-12-09T12:04:17+00:00",
+          "updated_at": "2024-12-09T12:04:17+00:00",
+          "description": null
+        }
+      }
+    ]
   },
-  "compare_heading": {
-    "id": "f_01jBTsZj083NHeZxe3tN9eqTEY",
-    "name": "Compare Heading",
-    "handle": "compare_heading",
-    "help_text": "If not present then write like this - \"Compare Other Private Jets to a [Aircraft Full Name]\"",
+  "starting_text": {
+    "id": "f_01JeNNM7VM5Q3kp5VrB66QY1s8",
+    "name": "Starting Text",
+    "handle": "starting_text",
+    "help_text": "Go to first section of blog and enter first 12-15 words from it's paragraph and then 3 dots (...) example: In this section we will look at ...",
     "type": "text",
-    "text": "Compare Other Private Jets to a King Air 350"
+    "text": "Empty leg flights occur when a private jet needs to return to its base or..."
+  },
+  "next_post_link": {
+    "id": "f_01jENMrw0HfAfVCs2hTEaGhGck",
+    "name": "Next Post Link",
+    "handle": "next_post_link",
+    "help_text": null,
+    "type": "text",
+    "text": "https://jetlevel.com/customizing-your-flight-experience/"
+  },
+  "next_post_heading": {
+    "id": "f_01JEnMs7CDzC7FC41t75a0s1P2",
+    "name": "Next Post Heading",
+    "handle": "next_post_heading",
+    "help_text": null,
+    "type": "text",
+    "text": "Customizing Your Flight Experience"
   }
 }

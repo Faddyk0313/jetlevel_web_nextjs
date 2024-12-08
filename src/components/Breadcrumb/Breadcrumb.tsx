@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiHome } from "react-icons/fi";
 import styles from "./Breadcrumb.module.css";
-import { aircrafts, airports, internationalLocations, usCanadaLocations } from "../Locations";
+import { aircrafts, airports, blogs, internationalLocations, usCanadaLocations } from "../Locations";
 
 const Breadcrumb: React.FC = () => {
   const pathname = usePathname();
@@ -26,9 +26,15 @@ const Breadcrumb: React.FC = () => {
     "/jet-charter/empty-legs/:location": "/empty-leg-flights-:location",
     "/charter-resources/private-jet-airports": "/usa-airport-directory",
     "/charter-resources/aircraft-types": "/aircraft-charters",
+    "/company/blogs": "/blog",
+
     "/charter-resources/airports-aircrafts/:location": "/:location",
     "/charter-resources/private-jet-airports/:location": "/:location",
     "/charter-resources/aircraft-charters/:location": "/:location",
+    "/company/blogs/:topic": "/:topic",
+
+
+
   };
 
   // Helper function to apply rewrite rules based on dynamic segments
@@ -79,11 +85,13 @@ const Breadcrumb: React.FC = () => {
       subOption = 'aircraft-types';
     } else if (airports.includes(segments[segments.length - 1])) {
       subOption = 'private-jet-airports';
+    } else if (blogs.includes(segments[segments.length - 1])) {
+      subOption = 'blog';
     }
     segments[1] = subOption;
 
   }
-  
+
   const hrefArray = segments.slice(1);
 
   // console.log("href", href);
