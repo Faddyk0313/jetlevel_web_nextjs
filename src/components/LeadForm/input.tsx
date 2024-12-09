@@ -1,4 +1,3 @@
-"use client"
 import React from "react";
 import PlaceIcon from "@mui/icons-material/Place";
 import "@/styles/leadForm.css"

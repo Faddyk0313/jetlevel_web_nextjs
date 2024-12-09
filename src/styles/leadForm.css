@@ -102,6 +102,14 @@
   background-color: #f2f2f2;
 }
 
+.aircraft-list-container {
+  /* box-shadow: 0px 2px 6px 3px #ededed; */
+  /* border-radius: 10px; */
+  color: black;
+  padding: 0px 8px 8px 8px;
+  background-color: #f2f2f2;
+}
+
 .location-dropdown {
   position: relative;
   width: 31%;

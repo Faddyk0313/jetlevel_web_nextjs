@@ -10,6 +10,7 @@ import { PhoneInput } from 'react-international-phone';
 import { PhoneNumberUtil } from 'google-libphonenumber';
 const phoneUtil = PhoneNumberUtil.getInstance();
 import { useSearchParams } from 'next/navigation';
+import LeadForm from '@/components/LeadForm'
 
 import {convertTimeFormat,getTime,getCurrentTime,getPrice,getUTCTime,getNext15Minutes} from "./helper"
 
@@ -90,15 +91,22 @@ export default function AirCraftList() {
     const from = searchParams.get('from');
     const to = searchParams.get('to');
     const tourType = searchParams.get('tourType');
+    const startDate = searchParams.get('startDate') as Date|null;
+    
+    const counter = searchParams.get('counter') as number | null;
 
-    if (from && to && tourType) {
-      handleSubmit(from, to, tourType);
+    if (from && to && tourType && startDate  && counter) {
+      handleSubmit(from, to, tourType,counter,startDate);
     }
   }, [searchParams]);
 
-  const handleSubmit = async (from:string, to:string, tourType:string) => {
+  const handleSubmit = async (from:string, to:string, tourType:string,counter:number,startDate:Date) => {
     try {
-        setForm((prevForm) => ({ ...prevForm, tourType,fromLocation:from,toLocation:to }));
+      setForm((prevForm:any) => ({ ...prevForm, tourType,fromLocation:from,toLocation:to,startDate,counter }));
+      if(tourType == "roundTrip" ){
+        const endDate = searchParams.get('endDate') 
+        setForm((prevForm:any) => ({ ...prevForm, endDate}))
+      }
 
       setLoading(true);
 
@@ -147,7 +155,7 @@ export default function AirCraftList() {
         }
     
         if (inquiry.touchedPhone == false && name === "phone") {
-          setInquiry((prevForm) => ({ ...prevForm }));
+          setInquiry((prevForm:any) => ({ ...prevForm }));
           return;
         }
     
@@ -158,19 +166,19 @@ export default function AirCraftList() {
     
     
         if (name === "firstName") {
-          setInquiry((prevForm) => ({ ...prevForm, isErrorFirstName: value === "" }));
+          setInquiry((prevForm:any) => ({ ...prevForm, isErrorFirstName: value === "" }));
         }
     
         if (name === "lastName") {
-          setInquiry((prevForm) => ({ ...prevForm, isErrorLastName: value === "" }));
+          setInquiry((prevForm:any) => ({ ...prevForm, isErrorLastName: value === "" }));
         }
     
         if (name === "email") {
-          setInquiry((prevForm) => ({ ...prevForm, isErrorEmail: value === "" }));
+          setInquiry((prevForm:any) => ({ ...prevForm, isErrorEmail: value === "" }));
         }
     
         if (name === "phone") {
-          setInquiry((prevForm) => ({ ...prevForm, isErrorPhone: !(isPhoneValid(value)) }));
+          setInquiry((prevForm:any) => ({ ...prevForm, isErrorPhone: !(isPhoneValid(value)) }));
         }
       };
 
@@ -180,24 +188,24 @@ export default function AirCraftList() {
     let { lastName, firstName, email, phone, desc } = inquiry;
 
     if (firstName === "") {
-      setInquiry((prevForm) => ({ ...prevForm, isErrorFirstName: true }));
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorFirstName: true }));
     } else {
-      setInquiry((prevForm) => ({ ...prevForm, isErrorFirstName: false }));
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorFirstName: false }));
     }
     if (lastName === "") {
-      setInquiry((prevForm) => ({ ...prevForm, isErrorLastName: true }));
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorLastName: true }));
     } else {
-      setInquiry((prevForm) => ({ ...prevForm, isErrorLastName: false }));
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorLastName: false }));
     }
     if (email === "") {
-      setInquiry((prevForm) => ({ ...prevForm, isErrorEmail: true }));
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorEmail: true }));
     } else {
-      setInquiry((prevForm) => ({ ...prevForm, isErrorEmail: false }));
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorEmail: false }));
     }
     if (!(isPhoneValid(inquiry.phone))) {
-      setInquiry((prevForm) => ({ ...prevForm, isErrorPhone: true }));
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorPhone: true }));
     } else {
-      setInquiry((prevForm) => ({ ...prevForm, isErrorPhone: false }));
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorPhone: false }));
     }
 
     if (lastName === "" || firstName === "" || email === "" || !(isPhoneValid(inquiry.phone))) {
@@ -307,7 +315,7 @@ export default function AirCraftList() {
 
         body: JSON.stringify(dataBody),
       };
-      if(!process.env?.NEXT_PUBLIC_ZAPIER_SEND_INQUIRY) return
+      if(!process.env.NEXT_PUBLIC_ZAPIER_SEND_INQUIRY) return
 
       await fetch(process.env.NEXT_PUBLIC_ZAPIER_SEND_INQUIRY, options1);
 
@@ -342,28 +350,29 @@ export default function AirCraftList() {
   const showPrice = async (priceArr:any) => {
     let { email, lastName, firstName, phone, desc } = inquiry;
     if (email === "") {
-      setInquiry((prevForm) => ({ ...prevForm, isErrorEmail: true }));
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorEmail: true }));
     } else {
-      setInquiry((prevForm) => ({ ...prevForm, isErrorEmail: false }));
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorEmail: false }));
     }
     if (firstName === "") {
-      setInquiry((prevForm) => ({ ...prevForm, isErrorFirstName: true }));
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorFirstName: true }));
     } else {
-      setInquiry((prevForm) => ({ ...prevForm, isErrorFirstName: false }));
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorFirstName: false }));
     }
     if (lastName === "") {
-      setInquiry((prevForm) => ({ ...prevForm, isErrorLastName: true }));
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorLastName: true }));
     } else {
-      setInquiry((prevForm) => ({ ...prevForm, isErrorLastName: false }));
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorLastName: false }));
     }
     if (!(isPhoneValid(inquiry.phone))) {
-      setInquiry((prevForm) => ({ ...prevForm, isErrorPhone: true }));
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorPhone: true }));
     } else {
-      setInquiry((prevForm) => ({ ...prevForm, isErrorPhone: false }));
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorPhone: false }));
     }
     if (email === "" || lastName === "" || firstName === "" || !(isPhoneValid(inquiry.phone))) {
       return;
     }
+    
     let extraData:{
       firstName: string;
       lastName: string;
@@ -463,14 +472,13 @@ export default function AirCraftList() {
         };
       }
 
-
-
+      
       const options1 = {
         method: "POST",
-
+        
         body: JSON.stringify(dataBody),
       };
-      if(!process.env?.NEXT_PUBLIC_ZAPIER_SHOW_PRICE) return
+      if(!process.env.NEXT_PUBLIC_ZAPIER_SHOW_PRICE) {return}
       await fetch(process.env.NEXT_PUBLIC_ZAPIER_SHOW_PRICE, options1);
 
 
@@ -545,7 +553,9 @@ export default function AirCraftList() {
   };
     
   return (
-    <div>
+    <>
+      <LeadForm />
+    <div className="aircraft-list-container">
           {data &&
             data.map((item:any, index:any) => (
               <section key={index} className="jet-section">
@@ -877,6 +887,7 @@ export default function AirCraftList() {
               </section>
             ))}
         </div>
+        </>
   )    
 }
 

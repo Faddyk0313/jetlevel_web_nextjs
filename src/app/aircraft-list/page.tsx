@@ -4,13 +4,10 @@ import "@/styles/leadForm.css"
 
 
 function page() {
-  
   return (
-    <Suspense fallback={<p>Loading...</p>}>
-
-    <AirCraftList/>
+    <Suspense fallback={<div className="search-form__loader"></div>}>
+      <AirCraftList />
     </Suspense>
-
   )
 }
 

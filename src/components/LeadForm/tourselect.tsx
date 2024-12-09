@@ -9,13 +9,12 @@ import DateRangeRoundedIcon from "@mui/icons-material/DateRangeRounded";
 import Input from "./input";
 import "@/styles/leadForm.css"
 import {AirportResponse} from "./types"
-import {filterPassedTime, getNext15Minutes} from "./helper"
+import {filterPassedTime} from "./helper"
 import { useRouter } from 'next/navigation';
 import ReactDatePicker from "react-datepicker";
 export default function TourSelect (props:any) {
-  const {tourType } = props
+  const {formInfo,setFormInfo } = props
   const router = useRouter();
-  const [loading, setLoading] = useState(false);
 
   const [searchResults, setSearchResults] = useState({
     fromLocationArray: [],
@@ -27,16 +26,7 @@ export default function TourSelect (props:any) {
   const datePickerRef1 = useRef<ReactDatePicker>(null);
   const datePickerRef2 = useRef<ReactDatePicker>(null);
 
-  const [formInfo, setFormInfo] = useState({
-    fromLocation: "",
-    toLocation: "",
-    startDate: getNext15Minutes(),
-    endDate: getNext15Minutes(),
-    counter: 2,
-    tourType: tourType,
-    calenderCounter: 1,
-    isErrorFrom:false,
-  });
+  
   useEffect(() => {
     if (formInfo.fromLocation.length === 0) {
       setSearchResults((prevSearc) => ({
@@ -103,9 +93,9 @@ export default function TourSelect (props:any) {
           ...prevSearc,
           fromLocationArray: [],
         }));
-        setFormInfo((prevForm) => ({ ...prevForm, isErrorFrom: true }));
+        setFormInfo((prevForm:any) => ({ ...prevForm, isErrorFrom: true }));
       } else {
-        setFormInfo((prevForm) => ({ ...prevForm, isErrorFrom: false }));
+        setFormInfo((prevForm:any) => ({ ...prevForm, isErrorFrom: false }));
       }
       if (value.length >= 3) {
       
@@ -142,9 +132,9 @@ export default function TourSelect (props:any) {
           ...prevSearc,
           ToLocationArray: [],
         }));
-        setFormInfo((prevForm) => ({ ...prevForm, isErrorTo: true }));
+        setFormInfo((prevForm:any) => ({ ...prevForm, isErrorTo: true }));
       } else {
-        setFormInfo((prevForm) => ({ ...prevForm, isErrorTo: false }));
+        setFormInfo((prevForm:any) => ({ ...prevForm, isErrorTo: false }));
       }
       if (value.length >= 3) {
         const options = {
@@ -183,22 +173,22 @@ export default function TourSelect (props:any) {
   const handleCounter = (type:any, counterType:any) => {
     if (type === "add") {
       counterType === "counter"
-        ? setFormInfo((prevForm) => ({
+        ? setFormInfo((prevForm:any) => ({
           ...prevForm,
           counter: prevForm.counter + 1,
         }))
-        : setFormInfo((prevForm) => ({
+        : setFormInfo((prevForm:any) => ({
           ...prevForm,
           calenderCounter: prevForm.calenderCounter + 1,
         }));
     } else {
       if (formInfo.counter > 0) {
         counterType === "counter"
-          ? setFormInfo((prevForm) => ({
+          ? setFormInfo((prevForm:any) => ({
             ...prevForm,
             counter: prevForm.counter - 1,
           }))
-          : setFormInfo((prevForm) => ({
+          : setFormInfo((prevForm:any) => ({
             ...prevForm,
             calenderCounter: prevForm.calenderCounter - 1,
           }));
@@ -209,7 +199,7 @@ export default function TourSelect (props:any) {
 
   const handleSaveAirport = (name:any, type:any) => {
     if (type === "fromLocation") {
-      setFormInfo((prevForm) => ({
+      setFormInfo((prevForm:any) => ({
         ...prevForm,
         fromLocation: name,
       }));
@@ -218,7 +208,7 @@ export default function TourSelect (props:any) {
         fromLocationArray: [],
       }));
     } else {
-      setFormInfo((prevForm) => ({
+      setFormInfo((prevForm:any) => ({
         ...prevForm,
         toLocation: name,
       }));
@@ -229,21 +219,6 @@ export default function TourSelect (props:any) {
       datePickerRef1.current!.setOpen(true);
     }
   };
-
-  const CustomInput = React.forwardRef((arg:any, ref:any) => (
-    <div className="custom-input" onClick={arg.onClick} ref={ref}>
-      <div className="icon">
-        <DateRangeRoundedIcon />
-      </div>
-      <div className="date-input">
-        <div className="date">{arg.value.split("|")[0]}</div>
-        <div className="time">{arg.value.split("|")[1]}</div>
-      </div>
-    </div>
-  ));
-
-
-
   // Handle date and time selection
   const handleChange = () => {
     if (isMobile) {
@@ -258,18 +233,30 @@ export default function TourSelect (props:any) {
   };
 
   const handleDatePicker1Close = () => {
-    if (tourType === "roundTrip") {
+    if (formInfo.tourType === "roundTrip") {
       datePickerRef2.current!.setOpen(true); // Open the second DatePicker
     }
   };
 
-  const handleSubmit = ()=>{
-    setLoading(true) 
-   
-     
-    router.push(`/aircraft-list?from=${formInfo.fromLocation}&to=${formInfo.toLocation}&tourType=${tourType}`);
-    setLoading(false) 
+  const handleSearch = ()=>{  
+    let route = `/aircraft-list?from=${formInfo.fromLocation}&to=${formInfo.toLocation}&tourType=${formInfo.tourType}&counter=${formInfo.counter}&startDate=${new Date(formInfo.startDate).getTime()}`
+    if(formInfo.tourType == "roundTrip"){
+      route += `&endDate=${new Date(formInfo.endDate).getTime()}`
+    }
+    router.push(route);
   }
+
+  const CustomInput = React.forwardRef((arg:any, ref:any) => (
+    <div className="custom-input" onClick={arg.onClick} ref={ref}>
+      <div className="icon">
+        <DateRangeRoundedIcon />
+      </div>
+      <div className="date-input">
+        <div className="date">{arg.value.split("|")[0]}</div>
+        <div className="time">{arg.value.split("|")[1]}</div>
+      </div>
+    </div>
+  ));
 
   return (
     <>
@@ -310,7 +297,7 @@ export default function TourSelect (props:any) {
               }}
             />
           </div>
-          {tourType === "roundTrip" && (
+          {formInfo.tourType === "roundTrip" && (
             <div
               id="roundTripDatePicker"
               className="date-time-picker"
@@ -356,9 +343,10 @@ export default function TourSelect (props:any) {
       <div className="search-btn">
         <button
           className="btn"
-          onClick={handleSubmit}
+          onClick={handleSearch}
         >
-          {loading ? <div className="search-form__loader"></div> : ""} Search{" "}
+          {/* {loading ? <div className="search-form__loader"></div> : ""} */}
+           Search{" "}
         </button>
       </div>
     </>

@@ -38,7 +38,10 @@ export const getPrice = (amount:string) => {
   };
   
   export  const getUTCTime = (dateObj:number | string | Date) => {
-    const date = new Date(dateObj);
+    console.log(dateObj)
+    const date = new Date(Number(dateObj));
+    console.log(date)
+
     // Get the UTC time as a string
     let utcTimeString = date.toUTCString();  // Fri, 20 Sep 2024 18:19:42 GMT
   
