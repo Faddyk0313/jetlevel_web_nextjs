@@ -1,16 +1,48 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import TourSelect from "./tourselect";
 
 import "react-datepicker/dist/react-datepicker.css";
 import "@/styles/leadForm.css"
+import { getNext15Minutes } from "./helper";
+import { useSearchParams } from "next/navigation";
 
 export default function Index() {
-  const [tourType, setTourType] = useState("oneWay");
-  const handleTourChange = (type:"roundTrip"|"oneWay") => {
-    setTourType(type);
-  };
+ 
 
+    const [formInfo, setFormInfo] = useState({
+      fromLocation: "",
+      toLocation: "",
+      startDate: getNext15Minutes(),
+      endDate: getNext15Minutes(),
+      counter: 2,
+      tourType: "oneWay",
+      calenderCounter: 1,
+      isErrorFrom:false,
+    });
+
+    const handleTourChange = (type:"roundTrip"|"oneWay") => {
+      setFormInfo((prevForm:any) => ({ ...prevForm, tourType:type}));
+  };
+  const searchParams = useSearchParams();
+
+  useEffect(() => {
+    const from = searchParams.get('from');
+    const to = searchParams.get('to');
+    const tourType = searchParams.get('tourType');
+    const startDate = searchParams.get('startDate') 
+    const endDate =  searchParams.get('endDate')
+    if(tourType == "roundTrip" && endDate) {
+    
+    setFormInfo((prevForm:any) => ({ ...prevForm,endDate:new Date(Number(endDate))}));
+    } 
+    const counter = searchParams.get('counter') as number | null;
+
+    if (from && to && tourType && startDate  && counter) {
+      setFormInfo((prevForm:any) => ({ ...prevForm,fromLocation:from, toLocation:to,startDate:new Date(Number(startDate)), tourType,counter}));
+      
+    }
+  }, [searchParams]);
 
 
   return (
@@ -20,7 +52,7 @@ export default function Index() {
           <div className="tour-tabs">
             <p
               className={
-                tourType === "oneWay"
+                formInfo.tourType === "oneWay"
                   ? "active-tab mr-10"
                   : "not-active-tab mr-10"
               }
@@ -30,7 +62,7 @@ export default function Index() {
             </p>
             <p
               className={
-                tourType === "roundTrip"
+                formInfo.tourType === "roundTrip"
                   ? "active-tab mr-10"
                   : "not-active-tab mr-10"
               }
@@ -41,7 +73,7 @@ export default function Index() {
           </div>
         </div>
 
-          <TourSelect tourType={tourType}/>
+          <TourSelect formInfo={formInfo} setFormInfo={setFormInfo}/>
       </div>
    
     </div>

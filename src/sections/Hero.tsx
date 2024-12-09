@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Suspense } from 'react';
 // import IframeEmbed from './Iframe';
 import Markdown from 'markdown-to-jsx';
 import LeadForm  from '@/components/LeadForm';
@@ -43,7 +43,10 @@ const Hero: React.FC<HeroProps> = ({ image, title, subtitle, tagline, descriptio
                     </Markdown>
                 </div>
                 <div className='w-full outline-none h-auto' id="my-iframe">
+                <Suspense fallback={<div className="search-form__loader"></div>}>
+
                     <LeadForm/>
+                    </Suspense>
                 </div>
             </div>
         </section>
