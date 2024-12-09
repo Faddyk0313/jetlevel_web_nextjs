@@ -5,228 +5,50 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 import DatePicker from "react-datepicker";
 import DateRangeRoundedIcon from "@mui/icons-material/DateRangeRounded";
+
 import Input from "./input";
 import "@/styles/leadForm.css"
+import {AirportResponse} from "./types"
+import {filterPassedTime, getNext15Minutes} from "./helper"
+import { useRouter } from 'next/navigation';
+import ReactDatePicker from "react-datepicker";
+export default function TourSelect (props:any) {
+  const {tourType } = props
+  const router = useRouter();
+  const [loading, setLoading] = useState(false);
 
-const TourSelect = ({ form, setForm, loading, setLoading,  setData }) => {
   const [searchResults, setSearchResults] = useState({
     fromLocationArray: [],
     toLocationArray: [],
   });
+  const [showTime, setShowTime] = useState(false); // State to toggle between date and time picker
+  const [isMobile, setIsMobile] = useState(false); // State to track screen width
 
+  const datePickerRef1 = useRef<ReactDatePicker>(null);
+  const datePickerRef2 = useRef<ReactDatePicker>(null);
+
+  const [formInfo, setFormInfo] = useState({
+    fromLocation: "",
+    toLocation: "",
+    startDate: getNext15Minutes(),
+    endDate: getNext15Minutes(),
+    counter: 2,
+    tourType: tourType,
+    calenderCounter: 1,
+    isErrorFrom:false,
+  });
   useEffect(() => {
-    if (form.fromLocation.length === 0) {
+    if (formInfo.fromLocation.length === 0) {
       setSearchResults((prevSearc) => ({
         ...prevSearc,
         fromLocationArray: [],
       }));
     }
-    if (form.toLocation.length === 0) {
+    if (formInfo.toLocation.length === 0) {
       setSearchResults((prevSearc) => ({ ...prevSearc, toLocation: [] }));
     }
-  }, [form.fromLocation, form.toLocation]);
+  }, [formInfo.fromLocation, formInfo.toLocation]);
 
-  const handleInputChange = async (event) => {
-    const { name, value } = event.target;
-    setForm({
-      ...form,
-      [name]: value,
-    });
-
-    if (event.target.name === "fromLocation") {
-      if (value === "") {
-        setSearchResults((prevSearc) => ({
-          ...prevSearc,
-          fromLocationArray: [],
-        }));
-        setForm((prevForm) => ({ ...prevForm, isErrorFrom: true }));
-      } else {
-        setForm((prevForm) => ({ ...prevForm, isErrorFrom: false }));
-      }
-      if (value.length >= 3) {
-      
-        const options = {
-          method: "GET",
-          params: { query: value },
-         
-        };
-        try {
-          let response = await fetch(
-            `${process.env.NEXT_PUBLIC_BACKEND_URL}/search?` +
-            new URLSearchParams({ query: value }),
-            options
-          );
-          response = await response.json();
-          setSearchResults((prevSearc) => ({
-            ...prevSearc,
-            fromLocationArray: response && response.search,
-          }));
-        } catch (error) {
-          console.error(error);
-        }
-      } else {
-        setSearchResults((prevSearc) => ({
-          ...prevSearc,
-          fromLocationArray: [],
-        }));
-      }
-    }
-
-    if (event.target.name === "toLocation") {
-      if (value === "") {
-        setSearchResults((prevSearc) => ({
-          ...prevSearc,
-          ToLocationArray: [],
-        }));
-        setForm((prevForm) => ({ ...prevForm, isErrorTo: true }));
-      } else {
-        setForm((prevForm) => ({ ...prevForm, isErrorTo: false }));
-      }
-      if (value.length >= 3) {
-        const options = {
-          method: "GET",
-          params: { query: value },
-        };
-
-        try {
-          let response = await fetch(
-            `${process.env.NEXT_PUBLIC_BACKEND_URL}/search?` +
-            new URLSearchParams({ query: value }),
-            options
-          );
-          response = await response.json();
-          console.log(response);
-          setSearchResults((prevSearc) => ({
-            ...prevSearc,
-            toLocationArray: response && response.search,
-          }));
-        } catch (error) {
-          console.error(error);
-        }
-      } else {
-        setSearchResults((prevSearc) => ({
-          ...prevSearc,
-          toLocationArray: [],
-        }));
-      }
-    }
-  };
-
-  const handleCounter = (type, counterType) => {
-    if (type === "add") {
-      counterType === "counter"
-        ? setForm((prevForm) => ({
-          ...prevForm,
-          counter: prevForm.counter + 1,
-        }))
-        : setForm((prevForm) => ({
-          ...prevForm,
-          calenderCounter: prevForm.calenderCounter + 1,
-        }));
-    } else {
-      if (form.counter > 0) {
-        counterType === "counter"
-          ? setForm((prevForm) => ({
-            ...prevForm,
-            counter: prevForm.counter - 1,
-          }))
-          : setForm((prevForm) => ({
-            ...prevForm,
-            calenderCounter: prevForm.calenderCounter - 1,
-          }));
-      }
-    }
-  };
-  const datePickerRef1 = useRef(null);
-  const datePickerRef2 = useRef(null);
-
-
-  const handleSaveAirport = (name, municipality, nameAirport, type) => {
-    if (type === "fromLocation") {
-      setForm((prevForm) => ({
-        ...prevForm,
-        fromLocation: name,
-        fromMunicipality: municipality,
-        fromAirPort: nameAirport,
-      }));
-      setSearchResults((prevSearch) => ({
-        ...prevSearch,
-        fromLocationArray: [],
-      }));
-    } else {
-      setForm((prevForm) => ({
-        ...prevForm,
-        toLocation: name,
-        toMunicipality: municipality,
-        toAirPort: nameAirport,
-      }));
-      setSearchResults((prevSearch) => ({
-        ...prevSearch,
-        toLocationArray: [],
-      }));
-      datePickerRef1.current.setOpen(true);
-    }
-  };
-
-  const CustomInput = React.forwardRef(({ value, onClick }, ref) => (
-    <div className="custom-input" onClick={onClick} ref={ref}>
-      <div className="icon">
-        <DateRangeRoundedIcon />
-      </div>
-      <div className="date-input">
-        <div className="date">{value.split("|")[0]}</div>
-        <div className="time">{value.split("|")[1]}</div>
-      </div>
-    </div>
-  ));
-
-  const handleSubmit = async () => {
-    try {
-      if (form.fromLocation === "") {
-        setForm((prevForm) => ({ ...prevForm, isErrorFrom: true }));
-      } else {
-        setForm((prevForm) => ({ ...prevForm, isErrorFrom: false }));
-      }
-      if (form.toLocation === "") {
-        setForm((prevForm) => ({ ...prevForm, isErrorTo: true }));
-      } else {
-        setForm((prevForm) => ({ ...prevForm, isErrorTo: false }));
-      }
-      if (
-        form.toLocation === "" ||
-        form.fromLocation === "" ||
-        Number(form.counter) === 0
-      ) {
-        return;
-      }
-
-      setLoading(true);
-      const options = {
-        method: "GET",
-      };
-      let response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/getAllJetInfo/${form.fromLocation}/${form.toLocation}/${form.tourType}`,
-        options
-      );
-      response = await response.json();
-      setData(response.data);
-      setLoading(false);
-    } catch (error) {
-      // setError(error);
-      setLoading(false);
-    }
-  };
-
-  const filterPassedTime = (time) => {
-    const currentDate = new Date();
-    const selectedDate = new Date(time);
-
-    return currentDate.getTime() < selectedDate.getTime();
-  };
-
-
-  const [showTime, setShowTime] = useState(false); // State to toggle between date and time picker
-  const [isMobile, setIsMobile] = useState(false); // State to track screen width
 
 
   useEffect(() => {
@@ -249,7 +71,7 @@ const TourSelect = ({ form, setForm, loading, setLoading,  setData }) => {
 
   useEffect(() => {
     const updatePopperStyle = () => {
-      const popper = document.querySelector(".react-datepicker-popper");
+      const popper: HTMLElement|null = document.querySelector(".react-datepicker-popper");
       if (popper) {
         popper.style.display = showTime ? "block" : "none";
       }
@@ -267,13 +89,168 @@ const TourSelect = ({ form, setForm, loading, setLoading,  setData }) => {
 
   }, [showTime]);
 
+
+  const handleInputChange = async (event:any) => {
+    const { name, value } = event.target; 
+    setFormInfo({
+      ...formInfo,
+      [name]: value,
+    });
+
+    if (name === "fromLocation") {
+      if (value === "") {
+        setSearchResults((prevSearc) => ({
+          ...prevSearc,
+          fromLocationArray: [],
+        }));
+        setFormInfo((prevForm) => ({ ...prevForm, isErrorFrom: true }));
+      } else {
+        setFormInfo((prevForm) => ({ ...prevForm, isErrorFrom: false }));
+      }
+      if (value.length >= 3) {
+      
+        const options = {
+          method: "GET",
+          params: { query: value },
+         
+        };
+        try {
+          const response = await fetch(
+            `${process.env.NEXT_PUBLIC_BACKEND_URL}/search?` +
+            new URLSearchParams({ query: value }),
+            options
+          );
+          const data = await response.json();
+          setSearchResults((prevSearc) => ({
+            ...prevSearc,
+            fromLocationArray: data && data.search,
+          }));
+        } catch (error) {
+          console.error(error);
+        }
+      } else {
+        setSearchResults((prevSearc) => ({
+          ...prevSearc,
+          fromLocationArray: [],
+        }));
+      }
+    }
+
+    if (name === "toLocation") {
+      if (value === "") {
+        setSearchResults((prevSearc) => ({
+          ...prevSearc,
+          ToLocationArray: [],
+        }));
+        setFormInfo((prevForm) => ({ ...prevForm, isErrorTo: true }));
+      } else {
+        setFormInfo((prevForm) => ({ ...prevForm, isErrorTo: false }));
+      }
+      if (value.length >= 3) {
+        const options = {
+          method: "GET",
+          params: { query: value },
+        };
+
+        try {
+          const response = await fetch(
+            `${process.env.NEXT_PUBLIC_BACKEND_URL}/search?` +
+            new URLSearchParams({ query: value }),
+            options
+          );
+    if (!response.ok) {
+     console.error(`Fetch error: ${response.statusText}`);
+     return
+    }
+    const data: AirportResponse = await response.json();
+
+          setSearchResults((prevSearc:any) => ({
+            ...prevSearc,
+            toLocationArray: data && data.search,
+          }));
+        } catch (error) {
+          console.error(error);
+        }
+      } else {
+        setSearchResults((prevSearc) => ({
+          ...prevSearc,
+          toLocationArray: [],
+        }));
+      }
+    }
+  };
+
+  const handleCounter = (type:any, counterType:any) => {
+    if (type === "add") {
+      counterType === "counter"
+        ? setFormInfo((prevForm) => ({
+          ...prevForm,
+          counter: prevForm.counter + 1,
+        }))
+        : setFormInfo((prevForm) => ({
+          ...prevForm,
+          calenderCounter: prevForm.calenderCounter + 1,
+        }));
+    } else {
+      if (formInfo.counter > 0) {
+        counterType === "counter"
+          ? setFormInfo((prevForm) => ({
+            ...prevForm,
+            counter: prevForm.counter - 1,
+          }))
+          : setFormInfo((prevForm) => ({
+            ...prevForm,
+            calenderCounter: prevForm.calenderCounter - 1,
+          }));
+      }
+    }
+  };
+
+
+  const handleSaveAirport = (name:any, type:any) => {
+    if (type === "fromLocation") {
+      setFormInfo((prevForm) => ({
+        ...prevForm,
+        fromLocation: name,
+      }));
+      setSearchResults((prevSearch) => ({
+        ...prevSearch,
+        fromLocationArray: [],
+      }));
+    } else {
+      setFormInfo((prevForm) => ({
+        ...prevForm,
+        toLocation: name,
+      }));
+      setSearchResults((prevSearch) => ({
+        ...prevSearch,
+        toLocationArray: [],
+      }));
+      datePickerRef1.current!.setOpen(true);
+    }
+  };
+
+  const CustomInput = React.forwardRef((arg:any, ref:any) => (
+    <div className="custom-input" onClick={arg.onClick} ref={ref}>
+      <div className="icon">
+        <DateRangeRoundedIcon />
+      </div>
+      <div className="date-input">
+        <div className="date">{arg.value.split("|")[0]}</div>
+        <div className="time">{arg.value.split("|")[1]}</div>
+      </div>
+    </div>
+  ));
+
+
+
   // Handle date and time selection
   const handleChange = () => {
     if (isMobile) {
       if (!showTime) {
         setShowTime(true); // Switch to time picker after selecting the date
         // To show timeBox on right side of datepicker input 
-        document.querySelector(".react-datepicker-popper").style.cssText += " left: calc(100% - 87px) !important;";
+        (document.querySelector(".react-datepicker-popper") as HTMLElement).style.cssText += " left: calc(100% - 87px) !important;";
       } else {
         setShowTime(false); // After selecting time, close the picker
       }
@@ -281,28 +258,36 @@ const TourSelect = ({ form, setForm, loading, setLoading,  setData }) => {
   };
 
   const handleDatePicker1Close = () => {
-    if (form.tourType === "roundTrip") {
-      datePickerRef2.current.setOpen(true); // Open the second DatePicker
+    if (tourType === "roundTrip") {
+      datePickerRef2.current!.setOpen(true); // Open the second DatePicker
     }
   };
+
+  const handleSubmit = ()=>{
+    setLoading(true) 
+   
+     
+    router.push(`/aircraft-list?from=${formInfo.fromLocation}&to=${formInfo.toLocation}&tourType=${tourType}`);
+    setLoading(false) 
+  }
 
   return (
     <>
       <section className="p-0">
         <div className="tour-select-fields">
           <Input
-            form={form}
+            form={formInfo}
             handleSaveAirport={handleSaveAirport}
             handleInputChange={handleInputChange}
             searchResults={searchResults}
           />
           <div className="date-time-picker">
             <DatePicker
-              selected={form.startDate}
+              selected={formInfo.startDate}
               ref={datePickerRef1}
               onCalendarClose={handleDatePicker1Close} 
               onChange={(date) => {
-                setForm((prevForm) => ({ ...prevForm, startDate: date }));
+                setFormInfo((prevForm:any) => ({ ...prevForm, startDate: date }));
                 handleChange();
               }}
               name="startDate"
@@ -325,16 +310,16 @@ const TourSelect = ({ form, setForm, loading, setLoading,  setData }) => {
               }}
             />
           </div>
-          {form.tourType === "roundTrip" && (
+          {tourType === "roundTrip" && (
             <div
               id="roundTripDatePicker"
               className="date-time-picker"
             >
               <DatePicker
-                selected={form.endDate}
+                selected={formInfo.endDate}
                 ref={datePickerRef2}
                 onChange={(date) => {
-                  setForm((prevForm) => ({ ...prevForm, endDate: date }));
+                  setFormInfo((prevForm:any) => ({ ...prevForm, endDate: date }));
                   handleChange();
                 }}
                 name="endDate"
@@ -362,7 +347,7 @@ const TourSelect = ({ form, setForm, loading, setLoading,  setData }) => {
             <PersonIcon />
             <div className="counter">
               <RemoveIcon onClick={() => handleCounter("sub", "counter")} />
-              <p>{form.counter}</p>
+              <p>{formInfo.counter}</p>
               <AddIcon onClick={() => handleCounter("add", "counter")} />
             </div>
           </div>
@@ -371,9 +356,7 @@ const TourSelect = ({ form, setForm, loading, setLoading,  setData }) => {
       <div className="search-btn">
         <button
           className="btn"
-          onClick={() => {
-            handleSubmit();
-          }}
+          onClick={handleSubmit}
         >
           {loading ? <div className="search-form__loader"></div> : ""} Search{" "}
         </button>
@@ -382,4 +365,3 @@ const TourSelect = ({ form, setForm, loading, setLoading,  setData }) => {
   );
 };
 
-export default TourSelect;
