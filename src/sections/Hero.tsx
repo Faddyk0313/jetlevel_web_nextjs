@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 // import IframeEmbed from './Iframe';
 import Markdown from 'markdown-to-jsx';
-import LeadForm  from '@/components/LeadForm';
+import LeadForm from '@/components/LeadForm';
 
 type HeroProps = {
     image: string;
@@ -42,12 +42,23 @@ const Hero: React.FC<HeroProps> = ({ image, title, subtitle, tagline, descriptio
                         {description as string}
                     </Markdown>
                 </div>
+<<<<<<< HEAD
                 <div className='w-full outline-none h-auto' id="my-iframe">
                 <Suspense fallback={<div className="search-form__loader"></div>}>
 
                     <LeadForm/>
                     </Suspense>
                 </div>
+=======
+                {
+                    hasCalculator ?
+                        <div className='w-full outline-none h-auto' id="my-iframe">
+                            <LeadForm />
+                        </div>
+                        : ""
+                }
+
+>>>>>>> f4efa832478cdf0a6604707b019204b2223264c6
             </div>
         </section>
     );

@@ -10,18 +10,18 @@ import { notFound } from "next/navigation";
 type PageProps = {
     params: {
         subOption: string;
-        cityPage: string;
+        location: string;
     };
 };
 
 const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
-    const { subOption, cityPage } = params;
+    const { subOption, location } = params;
 
     if (subOption === "cities") {
         let contentType;
-        if (usCanadaLocations.includes(cityPage)) {
+        if (usCanadaLocations.includes(location)) {
             contentType = 'usa_city_pages';
-        } else if (internationalLocations.includes(cityPage)) {
+        } else if (internationalLocations.includes(location)) {
             contentType = '	international_city_pages';
         } else {
             return (
@@ -32,7 +32,7 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
         }
         const content: void | ContentData = await createClient()
             .getContentBySlug(
-                `private-jet-charter-flights-to-${cityPage}`,
+                `private-jet-charter-flights-to-${location}`,
                 contentType
             )
             .catch((err) => {
@@ -47,7 +47,7 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
     } else if (subOption == "popular-routes") {
         const content: void | ContentData = await createClient()
             .getContentBySlug(
-                `private-jet-charter-${cityPage}`,
+                `private-jet-charter-${location}`,
                 'route_pages'
             )
             .catch((err) => {
@@ -66,7 +66,7 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
         // Access the query parameters
         const content: void | ContentData = await createClient()
             // .getContentBySlug('empty-leg-flights-aspen', 'empty_leg_flights')
-            .getContentBySlug(`empty-leg-flights-${cityPage}`, "empty_leg_flights")
+            .getContentBySlug(`empty-leg-flights-${location}`, "empty_leg_flights")
             .catch((err) => {
                 console.log(err);
                 notFound();

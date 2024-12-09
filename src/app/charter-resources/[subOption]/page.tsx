@@ -1,4 +1,7 @@
+import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
 import { createClient } from "@/lib/contento";
+import BrandNames from "@/sections/BrandNames";
+import Hero from "@/sections/Hero";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -41,11 +44,11 @@ const CharterResources = async ({ params }: PageProps) => {
   } else if (subOption === "aircraft-types") {
     contentType = "aircraft_pages";
   } else if (subOption === "cost-estimator") {
-    contentType = "route_pages";
+    contentType = "www";
   } else if (subOption === "flight-tracker") {
-    contentType = "empty_leg_flights";
+    contentType = "www";
   } else if (subOption === "distance-calculator") {
-    contentType = "empty_leg_flights";
+    contentType = "www";
   } else {
     notFound();
     return null;
@@ -69,18 +72,25 @@ const CharterResources = async ({ params }: PageProps) => {
   // console.log("Total content items:", content.length);
 
   return (
-    <div className="p-6 max-w-4xl mx-auto text-center">
-      <h1 className="font-bold my-4">{title}</h1>
-      <ul>
-        {content?.map((item, key) => (
-          <li key={key}>
-            <Link className="hover:text-blue" href={"/" + item.slug}>
-              {item.name}
-            </Link>
-          </li>
-        ))}
-      </ul>
-    </div>
+    <>
+    <Hero title="USA & Canada's Premier Chartered Cities" image="https://jetlevel.com/wp-content/uploads/2023/07/iStock-628648350.jpg" hasCalculator={false} />
+    <BrandNames />
+    <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
+      <Breadcrumb />
+      <div className="">
+        <ul>
+          {content?.map((item, key) => (
+            <li key={key}>
+              <Link className="hover:text-blue" href={"/" + item.slug}>
+                {item.name}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </section>
+
+  </>
   );
 };
 
