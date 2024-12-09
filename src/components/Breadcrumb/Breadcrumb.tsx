@@ -27,12 +27,12 @@ const Breadcrumb: React.FC = () => {
 
     "/charter-resources/private-jet-airports": "/usa-airport-directory",
     "/charter-resources/aircraft-types": "/aircraft-charters",
-    "/company/blogs": "/blog",
+    "/company/blog": "/blog",
 
     "/charter-resources/airports-aircrafts/:location": "/:location",
     "/charter-resources/private-jet-airports/:location": "/:location",
     "/charter-resources/aircraft-charters/:location": "/:location",
-    "/company/blogs/:topic": "/:topic",
+    "/company/blog/:topic": "/:topic",
 
 
 
@@ -70,7 +70,6 @@ const Breadcrumb: React.FC = () => {
   const href = getRewritePath(pathSegments.slice(0, 1));
   const segments = href.split("/").filter(Boolean); // Remove empty segments
   // Determine the base segment dynamically (e.g., 'jet-charter' or 'charter-resources')
-  const baseSegment = segments[0]; // Get the first segment
   // console.log("segments", segments);
   let subOption = segments[1]; // cities, empty-legs etc.
   if (subOption == "cities") {
@@ -88,10 +87,12 @@ const Breadcrumb: React.FC = () => {
       subOption = 'private-jet-airports';
     } else if (blogs.includes(segments[segments.length - 1])) {
       subOption = 'blog';
+      segments[0] = 'company'
     }
     segments[1] = subOption;
-
   }
+  const baseSegment = segments[0]; // Get the first segment
+
 
   const hrefArray = segments.slice(1);
 
