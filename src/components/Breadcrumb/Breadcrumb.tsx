@@ -24,11 +24,13 @@ const Breadcrumb: React.FC = () => {
     "/jet-charter/popular-routes/:location": "/private-jet-charter-:location",
     "/jet-charter/empty-legs": "/empty-leg-flights",
     "/jet-charter/empty-legs/:location": "/empty-leg-flights-:location",
+
     "/charter-resources/private-jet-airports": "/usa-airport-directory",
     "/charter-resources/aircraft-types": "/aircraft-charters",
     "/charter-resources/airports-aircrafts/:location": "/:location",
     "/charter-resources/private-jet-airports/:location": "/:location",
     "/charter-resources/aircraft-charters/:location": "/:location",
+    
   };
 
   // Helper function to apply rewrite rules based on dynamic segments
