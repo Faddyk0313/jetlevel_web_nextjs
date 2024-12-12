@@ -4,7 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { FiHome } from "react-icons/fi";
 import styles from "./Breadcrumb.module.css";
-import { aircrafts, airports, internationalLocations, usCanadaLocations } from "../Locations";
+import { aircrafts, airports, blogs, internationalLocations, usCanadaLocations } from "../Locations";
 
 const Breadcrumb: React.FC = () => {
   const pathname = usePathname();
@@ -24,11 +24,18 @@ const Breadcrumb: React.FC = () => {
     "/jet-charter/popular-routes/:location": "/private-jet-charter-:location",
     "/jet-charter/empty-legs": "/empty-leg-flights",
     "/jet-charter/empty-legs/:location": "/empty-leg-flights-:location",
+
     "/charter-resources/private-jet-airports": "/usa-airport-directory",
     "/charter-resources/aircraft-types": "/aircraft-charters",
+    "/company/blog": "/blog",
+
     "/charter-resources/airports-aircrafts/:location": "/:location",
     "/charter-resources/private-jet-airports/:location": "/:location",
     "/charter-resources/aircraft-charters/:location": "/:location",
+    "/company/blog/:topic": "/:topic",
+
+
+
   };
 
   // Helper function to apply rewrite rules based on dynamic segments
@@ -63,7 +70,6 @@ const Breadcrumb: React.FC = () => {
   const href = getRewritePath(pathSegments.slice(0, 1));
   const segments = href.split("/").filter(Boolean); // Remove empty segments
   // Determine the base segment dynamically (e.g., 'jet-charter' or 'charter-resources')
-  const baseSegment = segments[0]; // Get the first segment
   // console.log("segments", segments);
   let subOption = segments[1]; // cities, empty-legs etc.
   if (subOption == "cities") {
@@ -79,11 +85,15 @@ const Breadcrumb: React.FC = () => {
       subOption = 'aircraft-types';
     } else if (airports.includes(segments[segments.length - 1])) {
       subOption = 'private-jet-airports';
+    } else if (blogs.includes(segments[segments.length - 1])) {
+      subOption = 'blog';
+      segments[0] = 'company'
     }
     segments[1] = subOption;
-
   }
-  
+  const baseSegment = segments[0]; // Get the first segment
+
+
   const hrefArray = segments.slice(1);
 
   // console.log("href", href);

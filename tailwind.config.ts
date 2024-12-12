@@ -29,6 +29,8 @@ const config: Config = {
 		},
   		boxShadow: {
 			card_shadow: '0px 5px 12px 0px rgb(0,0,0,0.4)',
+			card_shadow_blog: '0px 0px 12px 0px rgb(0,0,0,0.4)',
+			card_shadow_blog2: '0px 0px 20px 0px rgb(0,0,0,0.4)',
 		}
   	}
   },

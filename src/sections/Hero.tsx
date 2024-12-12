@@ -1,7 +1,7 @@
 import React, { Suspense } from 'react';
 // import IframeEmbed from './Iframe';
 import Markdown from 'markdown-to-jsx';
-import LeadForm  from '@/components/LeadForm';
+import LeadForm from '@/components/LeadForm';
 
 type HeroProps = {
     image: string;

@@ -108,7 +108,7 @@ function NavOptions() {
                             subOptions={[
                                 { name: 'About Us', link: '/company/about-us', image: '/navInsideIcons/About Us.svg' },
                                 { name: 'Contact Us', link: '/company/contact-us', image: '/navInsideIcons/Contact Us.svg' },
-                                { name: 'Blogs', link: '/company/blogs', image: '/navInsideIcons/On-Demand Charter.svg' },
+                                { name: 'Blogs', link: '/blog', image: '/navInsideIcons/On-Demand Charter.svg' },
                                 { name: 'Charter FAQs', link: '/company/charter-faqs', image: '/navInsideIcons/Charter FAQs.svg' },
                                 { name: 'Our Team', link: '/company/our-team', image: '/navInsideIcons/Our Team.svg' },
                             ]}
