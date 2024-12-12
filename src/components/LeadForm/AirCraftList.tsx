@@ -52,7 +52,6 @@ export default function AirCraftList() {
     endDate: getNext15Minutes(),
     counter: 2,
     tourType: "oneWay",
-    calenderCounter: 1,
     currency: "USD",
     showInquiryForm: -1,
     aircraft: "",
