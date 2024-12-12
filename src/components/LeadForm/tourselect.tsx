@@ -170,28 +170,20 @@ export default function TourSelect (props:any) {
     }
   };
 
-  const handleCounter = (type:any, counterType:any) => {
+  const handleCounter = (type:string) => {
     if (type === "add") {
-      counterType === "counter"
-        ? setFormInfo((prevForm:any) => ({
+      setFormInfo((prevForm:any) => ({
           ...prevForm,
-          counter: prevForm.counter + 1,
+          counter: Number(prevForm.counter) + 1,
         }))
-        : setFormInfo((prevForm:any) => ({
-          ...prevForm,
-          calenderCounter: prevForm.calenderCounter + 1,
-        }));
+       
     } else {
       if (formInfo.counter > 0) {
-        counterType === "counter"
-          ? setFormInfo((prevForm:any) => ({
+           setFormInfo((prevForm:any) => ({
             ...prevForm,
-            counter: prevForm.counter - 1,
+            counter: Number(prevForm.counter) - 1,
           }))
-          : setFormInfo((prevForm:any) => ({
-            ...prevForm,
-            calenderCounter: prevForm.calenderCounter - 1,
-          }));
+         
       }
     }
   };
@@ -333,9 +325,9 @@ export default function TourSelect (props:any) {
           <div className="person-counter">
             <PersonIcon />
             <div className="counter">
-              <RemoveIcon onClick={() => handleCounter("sub", "counter")} />
+              <RemoveIcon onClick={() => handleCounter("sub")} />
               <p>{formInfo.counter}</p>
-              <AddIcon onClick={() => handleCounter("add", "counter")} />
+              <AddIcon onClick={() => handleCounter("add")} />
             </div>
           </div>
         </div>

@@ -17,7 +17,6 @@ export default function Index() {
       endDate: getNext15Minutes(),
       counter: 2,
       tourType: "oneWay",
-      calenderCounter: 1,
       isErrorFrom:false,
     });
 
