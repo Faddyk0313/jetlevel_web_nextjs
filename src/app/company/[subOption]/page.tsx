@@ -1,7 +1,11 @@
+import AboutUsPage from '@/components/AboutUsPage';
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
+import ContactUsPage from '@/components/ContactUsPage';
+import OurTeamPage from '@/components/OurTeamPage';
 import TopCharteredCities from "@/components/TopCharteredCities";
 import { createClient } from "@/lib/contento";
 import Markdown from "markdown-to-jsx";
+import { Tilt_Neon } from 'next/font/google';
 import Image from "next/image";
 import Link from "next/link";
 
@@ -17,7 +21,7 @@ const pageContent: Record<string, { title: string; }> = {
   'contact-us': { title: 'Contact Us' },
   'blogs': { title: 'Level Up Blog' },
   'charter-faqs': { title: 'Charter FAQs' },
-  'our-team': { title: 'Out Team' },
+  'our-team': { title: 'Our Team' },
 };
 
 // This function generates static parameters for known paths
@@ -59,8 +63,6 @@ const JetCharter = async ({ params }: PageProps) => {
     return content.substring(0, length) + "…";
   }
 
-
-
   return (
     <>
       <div className="bg-[url('/images/blog-hero-image.jpg')] bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-center justify-center">
@@ -93,8 +95,15 @@ const JetCharter = async ({ params }: PageProps) => {
               </div>
             ))
           }
+          {
+            title === 'About Us'?
+            <AboutUsPage />:
+            title === 'Our Team' ?
+            <OurTeamPage />:
+            <ContactUsPage />
+          }
         </div>
-        <div className="min-w-[24%] max-w-fit  mt-[76px]">
+        <div className="min-w-[24%] max-w-fit  mt-[76px] max-[650px]:mt-0">
           <TopCharteredCities
             title="Airports For"
             cities={[
