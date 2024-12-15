@@ -219,3 +219,17 @@ blockquote {
 #next-post:hover::after {
   opacity: 0; /* Remove the overlay on hover */
 }
+
+.social-icons:hover path {
+  fill: black;
+  animation: move-down 0.1s ease-in-out forwards;
+}
+
+@keyframes move-down {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(0);
+  }
+}

@@ -1,4 +1,6 @@
+import AboutUsPage from '@/components/AboutUsPage';
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
+import ContactUsPage from '@/components/ContactUsPage';
 import TopCharteredCities from "@/components/TopCharteredCities";
 import { createClient } from "@/lib/contento";
 import Markdown from "markdown-to-jsx";
@@ -59,8 +61,6 @@ const JetCharter = async ({ params }: PageProps) => {
     return content.substring(0, length) + "…";
   }
 
-
-
   return (
     <>
       <div className="bg-[url('/images/blog-hero-image.jpg')] bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-center justify-center">
@@ -93,8 +93,13 @@ const JetCharter = async ({ params }: PageProps) => {
               </div>
             ))
           }
+          {
+            title === 'About Us'?
+            <AboutUsPage />:
+            <ContactUsPage />
+          }
         </div>
-        <div className="min-w-[24%] max-w-fit  mt-[76px]">
+        <div className="min-w-[24%] max-w-fit  mt-[76px] max-[650px]:mt-0">
           <TopCharteredCities
             title="Airports For"
             cities={[

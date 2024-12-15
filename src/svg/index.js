@@ -22,6 +22,9 @@ import CostCalculator from "./costCalculator.svg";
 import FlightTracker from "./flightTracker.svg";
 import SafetyFirst from "./safetyFirst.svg";
 import TailoredLuxury from "./tailoredLuxury.svg";
+import Facebook from './facebook.svg';
+import Linkedin from './Linkedin.svg';
+import Twitter from './Twitter.svg';
 
 export { Aircraft, Airports, InternationalCities, Routes_DistanceCalculator, UsCanadaCities };
 export { OnDemandCharter, ProvenSafetyRecords, Reliability, Transparency, Testimonials };
@@ -29,4 +32,4 @@ export { GroupCharter, AirAmbulance, Helicopter, EmptyLeg, IndustrySpecific };
 export { OurOfficesSvg };
 export { RequestQuote, ReceiveCharterProposal, ConfirmAircraft, ReceiveFlightBrief };
 export { CostCalculator, FlightTracker };
-export { SafetyFirst, TailoredLuxury };
+export { SafetyFirst, TailoredLuxury, Facebook, Linkedin,Twitter };
