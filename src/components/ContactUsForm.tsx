@@ -47,7 +47,7 @@ const ContactUsForm: React.FC = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit} className='w-full flex flex-col gap-y-[25px] items-start'>
+    <form onSubmit={handleSubmit} className='w-full flex flex-col gap-y-[25px] '>
       <div className='flex-col flex w-full'>
         <label htmlFor="name">Name:</label>
         <input
@@ -87,7 +87,7 @@ const ContactUsForm: React.FC = () => {
         {errors.message && <span style={{ color: "red" }}>{errors.message}</span>}
       </div>
 
-      <div className='flex flex w-full items-center gap-x-2'>
+      <div className='flex w-full items-center gap-x-2'>
         <label htmlFor="message">12+ 48 =</label>
         <input
           type="text"

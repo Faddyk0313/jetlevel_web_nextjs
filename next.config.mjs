@@ -43,6 +43,18 @@ const nextConfig = {
         destination: '/company/blogs',
       },
       {
+        source: "/about-jet-level",
+        destination: "/company/about-us",
+      },
+      {
+        source: "/contact-us",
+        destination: "/company/contact-us",
+      },
+      {
+        source: "/our-team",
+        destination: "/company/our-team",
+      },
+      {
         source: '/:location',
         destination: '/charter-resources/private-jet-airports/:location',
       },

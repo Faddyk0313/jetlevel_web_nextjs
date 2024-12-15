@@ -34,6 +34,7 @@ const ResourcesPage: React.FC<PageProps> = async ({ params }: PageProps) => {
         if (contentType == 'airport_pages') subOption = 'usa-airport-directory';
         else if (contentType == 'aircraft_pages') subOption = 'aircraft-charters';
         else if (contentType == 'blogs') subOption = 'blog';
+        
 
         const content: void | ContentData = await createClient()
             .getContentBySlug(
