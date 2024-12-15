@@ -13,7 +13,7 @@ const Events = () => {
           <div className='flex gap-x-[25px] mt-6 flex-wrap gap-y-[30px] mb-[50px]'>
             {
               items.content.map((data) =>
-                <div className='w-[22%] max-[650px]:w-full'>
+                <div className='w-[30%] max-[650px]:w-full'>
                    <Image
                     src={data.image}
                     alt={data.heading}

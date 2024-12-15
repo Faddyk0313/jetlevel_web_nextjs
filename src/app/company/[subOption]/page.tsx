@@ -1,9 +1,11 @@
 import AboutUsPage from '@/components/AboutUsPage';
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
 import ContactUsPage from '@/components/ContactUsPage';
+import OurTeamPage from '@/components/OurTeamPage';
 import TopCharteredCities from "@/components/TopCharteredCities";
 import { createClient } from "@/lib/contento";
 import Markdown from "markdown-to-jsx";
+import { Tilt_Neon } from 'next/font/google';
 import Image from "next/image";
 import Link from "next/link";
 
@@ -19,7 +21,7 @@ const pageContent: Record<string, { title: string; }> = {
   'contact-us': { title: 'Contact Us' },
   'blogs': { title: 'Level Up Blog' },
   'charter-faqs': { title: 'Charter FAQs' },
-  'our-team': { title: 'Out Team' },
+  'our-team': { title: 'Our Team' },
 };
 
 // This function generates static parameters for known paths
@@ -96,6 +98,8 @@ const JetCharter = async ({ params }: PageProps) => {
           {
             title === 'About Us'?
             <AboutUsPage />:
+            title === 'Our Team' ?
+            <OurTeamPage />:
             <ContactUsPage />
           }
         </div>

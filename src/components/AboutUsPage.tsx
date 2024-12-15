@@ -10,7 +10,7 @@ const AboutUsPage = () => {
           alt="About usImage"
           width={400} // Adjust according to the image size
           height={600} // Adjust according to the image size
-          className="w-full h-full max-w-[500px] max-h-[780px] object-cover h-[377px] max-[650px]:mb-6"
+          className="w-full max-w-[500px] max-h-[780px] object-cover h-[377px] max-[650px]:mb-6"
         />
         <div>
           <h2 className='text-black'>About Us</h2>
@@ -19,7 +19,7 @@ const AboutUsPage = () => {
         </div>
       </div>
 
-    <div className='flex item-center justify-between mt-10 flex-wrap max-[650px]:gap-y-[40px]'>
+    <div className='flex item-center justify-between mt-[40px] flex-wrap max-[650px]:gap-y-[40px]'>
       <div className='w-[32%] max-[650px]:w-full max-[650px]:text-center'>
         <h3 className='font-bold'>Safety Above All</h3>
         <p>At JetLevel we take your safety very seriously. All operators in our preferred network must adhere to very strict safety standards and participate in third party safety audits to ensure the data we collect is accurate. Rest assured that when you book a Private Jet with JetLevel Aviation you will be flying on the safest and most reliable aircraft in the industry.</p>
