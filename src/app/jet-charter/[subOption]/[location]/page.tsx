@@ -1,7 +1,8 @@
 
+import Airport_Aircraft_Blog_Page from "@/components/Airport_Aircraft_Blog_Page";
 import CityPage from "@/components/CityPage";
 import EmptyLegPage from "@/components/EmptyLegPage";
-import { internationalLocations, usCanadaLocations } from "@/components/Locations";
+import { blogs, internationalLocations, usCanadaLocations } from "@/components/Locations";
 import RoutesPage from "@/components/RoutesPage";
 import { createClient } from "@/lib/contento";
 import { ContentData } from "@gocontento/client";
@@ -15,10 +16,43 @@ type PageProps = {
 };
 
 const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
-    const { subOption, location } = params;
+    let { subOption, location } = params;
+    let contentType;
 
-    if (subOption === "cities") {
-        let contentType;
+    if (blogs.includes(location)) { // This condition will only be true for those blog pages whose url starts with 'empty-leg-flights-'.
+        contentType = 'blogs';
+        subOption = 'blog';
+        const content: void | ContentData = await createClient()
+            .getContentBySlug(
+                `empty-leg-flights-${location}`,
+                contentType
+            )
+            .catch((err) => {
+                console.log(err);
+            });
+        if (!content) {
+            return (
+                <div className="p-6 max-w-4xl mx-auto text-center">
+                    <h2 className="font-bold my-4">Fetch failed in location</h2>
+                </div>
+            );
+        }
+        // Convert to JavaScript Date object
+        const dateObj = new Date(content.updated_at);
+
+        // Extract day, month, and year
+        const day = dateObj.getDate().toString().padStart(2, '0');  // Ensure two digits
+        const month = (dateObj.getMonth() + 1).toString().padStart(2, '0');  // Month is 0-indexed
+        const year = dateObj.getFullYear();
+
+        // Format the date as 'date-month-year'
+        const formattedDate = `${day}-${month}-${year}`;
+
+        // console.log("formattedDate---------------------", formattedDate);  // Output: 09-12-2024
+        // const date = content.updated_at ? content.updated_at : content.created_at
+        return <Airport_Aircraft_Blog_Page fields={content.fields} date={formattedDate} region={contentType} />;
+    }
+    else if (subOption === "cities") {
         if (usCanadaLocations.includes(location)) {
             contentType = 'usa_city_pages';
         } else if (internationalLocations.includes(location)) {
@@ -38,12 +72,16 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
             .catch((err) => {
                 console.log(err);
             });
-        // console.log("content", content);
+        console.log("subOption, Location, contentType----------------", subOption, location, contentType);
 
         if (!content) {
-            return notFound(); // navigate to a "not found" page if content is missing
+            return (
+                <div className="p-6 max-w-4xl mx-auto text-center">
+                    <h2 className="font-bold my-4">Page Not Found</h2>
+                </div>
+            )
         }
-        return <CityPage fields={content.fields} region={contentType}/>;
+        return <CityPage fields={content.fields} region={contentType} />;
     } else if (subOption == "popular-routes") {
         const content: void | ContentData = await createClient()
             .getContentBySlug(

@@ -7,8 +7,8 @@ const Events = () => {
   return (
     <div>
       {
-        events.event.map((items) => 
-        <div>
+        events.event.map((items, index) => 
+        <div key={index}>
           <h2 className='mt-[20px] text-[30px]'>{items.name}</h2>
           <div className='flex gap-x-[25px] mt-6 flex-wrap gap-y-[30px] mb-[50px]'>
             {

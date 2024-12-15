@@ -234,7 +234,6 @@ export const usCanadaLocations = [
     "san-luis-obispo-ca",
     "santa-ana-ca",
     "santa-ana-california",
-    "santa-ana-california",
     "santa-barbara-ca",
     "santa-clara-ca",
     "santa-cruz-ca",
@@ -710,6 +709,7 @@ export const aircrafts = [
 
 export const blogs = [
     "empty-leg-flights-a-guide-to-luxury-travel-at-a-fraction-of-the-cost",
+    "a-guide-to-luxury-travel-at-a-fraction-of-the-cost",
     "who-should-consider-empty-leg-flights",
     "customizing-your-flight-experience",
     "eco-tourism-destinations-via-empty-leg-flights",
