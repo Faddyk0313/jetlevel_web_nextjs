@@ -15,7 +15,6 @@ const OurTeamPage = () => {
         </div>
       </div>
 
-      <div>
         <h2 className='text-black text-center mb-[30px]'>Leadership</h2>
         <div className='flex items-center justify-between flex-wrap'>
         <div className="w-[32%] max-[700px]:w-full bg-[#EEEEEE] h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
@@ -42,6 +41,7 @@ const OurTeamPage = () => {
             <Facebook className="w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white" />
             <Twitter className="w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white" />
           </div>
+        </div>
 
 
         <div className="w-[32%] max-[700px]:w-full bg-[#EEEEEE] h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
@@ -66,6 +66,7 @@ const OurTeamPage = () => {
             <Facebook className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
             <Twitter className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
           </div>
+        </div>
 
         <div className="w-[32%] max-[700px]:w-full bg-[#EEEEEE] h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
           <Image
@@ -89,9 +90,8 @@ const OurTeamPage = () => {
             <Facebook className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
             <Twitter className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
           </div>
-
         </div>
-      </div>
+    </div>
     </section>
   );
 };
