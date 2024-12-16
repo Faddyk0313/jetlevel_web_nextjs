@@ -28,13 +28,15 @@ const Breadcrumb: React.FC = () => {
     "/charter-resources/private-jet-airports": "/usa-airport-directory",
     "/charter-resources/aircraft-types": "/aircraft-charters",
     "/company/blog": "/blog",
+    "/company/about-us": "/about-jet-level",
+    "/company/contact-us": "/contact-us",
+    "/company/our-team": "/our-team",
 
     "/charter-resources/airports-aircrafts/:location": "/:location",
     "/charter-resources/private-jet-airports/:location": "/:location",
-    "/charter-resources/aircraft-charters/:location": "/:location",
+    "/charter-resources/aircraft-types/:location": "/:location",
     "/company/blog/:topic": "/:topic",
-
-
+    
 
   };
 
@@ -68,11 +70,21 @@ const Breadcrumb: React.FC = () => {
     applyRewrite(actualPath, true);
 
   const href = getRewritePath(pathSegments.slice(0, 1));
+  // console.log("href", href);
   const segments = href.split("/").filter(Boolean); // Remove empty segments
   // Determine the base segment dynamically (e.g., 'jet-charter' or 'charter-resources')
   // console.log("segments", segments);
   let subOption = segments[1]; // cities, empty-legs etc.
-  if (subOption == "cities") {
+
+
+  if (blogs.includes(segments[segments.length - 1])) {// This condition will only be true for those blog pages whose url starts with 'empty-leg-flights-' for eg. '/empty-leg-flights-a-guide-to-luxury-travel-at-a-fraction-of-the-cost'
+    segments[0] = 'company';
+    if (segments[1] == 'empty-legs') {
+      segments[segments.length - 1] = 'empty-leg-flights-' + segments[segments.length - 1];
+    }
+    segments[1] = 'blog';
+  }
+  else if (subOption == "cities") {
     if (usCanadaLocations.includes(segments[segments.length - 1])) {
       subOption = 'us-canada';
     } else if (internationalLocations.includes(segments[segments.length - 1])) {
@@ -87,7 +99,7 @@ const Breadcrumb: React.FC = () => {
       subOption = 'private-jet-airports';
     } else if (blogs.includes(segments[segments.length - 1])) {
       subOption = 'blog';
-      segments[0] = 'company'
+      segments[0] = 'company';
     }
     segments[1] = subOption;
   }

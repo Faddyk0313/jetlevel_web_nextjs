@@ -14,7 +14,7 @@ const ContactUsPage = () => {
           loading="lazy" 
           className='w-full h-[200px] mt-6'
         />
-        <h3 className='font-bold mt-6 mb-2'>VISIT OUR OCALA OFFICE AT SHELTAIR</h3>
+        <h3 className='font-bold mt-10 mb-2'>VISIT OUR OCALA OFFICE AT SHELTAIR</h3>
         <p className='text-[#666666] text-lg'>1770 SW 60th Ave Suite 400, Ocala, FL 34474</p>
         <iframe 
           src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d13934.999791492923!2d-82.219953!3d29.17204!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x88e87ff6b10c3f93%3A0x302d9abd2e4e2ac5!2sSheltair%20Aviation%20OCF!5e0!3m2!1sen!2sus!4v1734257292468!5m2!1sen!2sus"

@@ -53,7 +53,7 @@ function NavOptions() {
                 )}
             </div>
 
-            {/* Repeat for other dropdowns */} 
+            {/* Repeat for other dropdowns */}
             {/* JET CHARTER Dropdown */}
             <div onClick={() => { handleClick('jet-charter'); }}>
                 <span className="flex items-center cursor-pointer gap-2 mx-2 text-white text-nowrap  hover:text-blue transition-all duration-100">
@@ -106,11 +106,11 @@ function NavOptions() {
                     <div onClick={(e) => e.stopPropagation()}>
                         <NavClickedContent
                             subOptions={[
-                                { name: 'About Us', link: '/company/about-us', image: '/navInsideIcons/About Us.svg' },
-                                { name: 'Contact Us', link: '/company/contact-us', image: '/navInsideIcons/Contact Us.svg' },
+                                { name: 'About Us', link: '/about-jet-level', image: '/navInsideIcons/About Us.svg' },
+                                { name: 'Contact Us', link: '/contact-us', image: '/navInsideIcons/Contact Us.svg' },
                                 { name: 'Blogs', link: '/blog', image: '/navInsideIcons/On-Demand Charter.svg' },
                                 { name: 'Charter FAQs', link: '/company/charter-faqs', image: '/navInsideIcons/Charter FAQs.svg' },
-                                { name: 'Our Team', link: '/company/our-team', image: '/navInsideIcons/Our Team.svg' },
+                                { name: 'Our Team', link: '/our-team', image: '/navInsideIcons/Our Team.svg' },
                             ]}
                             closeDropdown={closeDropdown} // Pass the closeDropdown function here
                         />

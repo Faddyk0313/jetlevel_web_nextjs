@@ -1,20 +1,20 @@
-import Breadcrumb from '@/components/Breadcrumb/Breadcrumb'
-import TopCharteredCities from '@/components/TopCharteredCities'
-import Hero from '@/sections/Hero'
-import { Facebook, Linkedin, Twitter } from '@/svg'
-import Image from 'next/image'
-import React from 'react'
+import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
+import TopCharteredCities from '@/components/TopCharteredCities';
+import Hero from '@/sections/Hero';
+import { Facebook, Linkedin, Twitter } from '@/svg';
+import Image from 'next/image';
+import React from 'react';
 
 const OurTeamPage = () => {
   return (
-    <section>
+    <section className='py-12'>
       <div className='flex justify-between'>
         <div className='w-full max-[650px]:w-full text-center'>
-          <h2 className='text-[45px] text-black mb-5 mt-6'>MEET OUR TEAM MEMBERS</h2>
-          <p className='text-[#727982] text-md mb-4 text-center mb-[50px]'>At JetLevel Aviation, our expert team is devoted to setting the gold standard in private jet travel. From your initial inquiry to your final destination, each member’s goal is to deliver unparalleled safety and personalized service. We distinguish ourselves through our boutique approach, pairing industry-leading safety credentials with a keen attention to each client’s unique needs. Experience for yourself why JetLevel is redefining the private jet charter industry.</p>
+          <h2 className='mb-5 mt-6'>MEET OUR TEAM MEMBERS</h2>
+          <p className='text-[#727982] text-md text-center mb-[50px]'>At JetLevel Aviation, our expert team is devoted to setting the gold standard in private jet travel. From your initial inquiry to your final destination, each member’s goal is to deliver unparalleled safety and personalized service. We distinguish ourselves through our boutique approach, pairing industry-leading safety credentials with a keen attention to each client’s unique needs. Experience for yourself why JetLevel is redefining the private jet charter industry.</p>
         </div>
       </div>
-        
+
       <div>
         <h2 className='text-black text-center mb-[30px]'>Leadership</h2>
         <div className='flex items-center justify-between flex-wrap'>
@@ -42,7 +42,6 @@ const OurTeamPage = () => {
             <Facebook className="w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white" />
             <Twitter className="w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white" />
           </div>
-        </div>
 
 
         <div className="w-[32%] max-[700px]:w-full bg-[#EEEEEE] h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
@@ -67,7 +66,6 @@ const OurTeamPage = () => {
             <Facebook className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
             <Twitter className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
           </div>
-        </div>
 
         <div className="w-[32%] max-[700px]:w-full bg-[#EEEEEE] h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
           <Image
@@ -91,12 +89,11 @@ const OurTeamPage = () => {
             <Facebook className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
             <Twitter className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
           </div>
-        </div>
 
         </div>
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default OurTeamPage
+export default OurTeamPage;
