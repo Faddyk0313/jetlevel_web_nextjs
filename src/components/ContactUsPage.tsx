@@ -3,8 +3,8 @@ import ContactUsForm from './ContactUsForm'
 
 const ContactUsPage = () => {
   return (
-    <div className='flex justify-between mt-6 flex-wrap max-[650px]:block'>
-      <div className='w-[48%] max-[650px]:w-full'>
+    <div className='flex justify-between mt-6 flex-wrap max-[750px]:block'>
+      <div className='w-[48%] max-[750px]:w-full'>
         <h3 className='font-bold'>VISIT OUR ORLANDO OFFICE</h3>
         <p className='text-[#666666] text-lg'>3505 Lake Lynda Dr Suite 200 Orlando,FL 32817</p>
         <iframe 
@@ -24,7 +24,7 @@ const ContactUsPage = () => {
          className='w-full h-[200px] mt-4'
         />
       </div>
-      <div className='w-[48%] max-[650px]:w-full max-[650px]:mt-[30px]'>
+      <div className='w-[48%] max-[750px]:w-full max-[750px]:mt-[30px]'>
         <ContactUsForm />
       </div>
     </div>
