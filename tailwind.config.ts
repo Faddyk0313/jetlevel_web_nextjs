@@ -21,7 +21,8 @@ const config: Config = {
   		fontFamily: {
   			playfair: ['var(--font-playfair-display)', 'serif'],
   			libre: ['var(--font-libre-baskerville)', 'serif'],
-  			montserrat: ['var(--font-montserrat)', 'serif']
+  			montserrat: ['var(--font-montserrat)', 'serif'],
+				georgia: ['Georgia', 'Sans-serif'],
   		},
 		screens:{
 			carousel: '900px',

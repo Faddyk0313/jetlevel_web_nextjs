@@ -100,11 +100,6 @@ const ContactUsForm: React.FC = () => {
         {errors.message && <span style={{ color: "red" }}>{errors.message}</span>}
       </div>
       <button className='bg-[#0071BA] p-3 text-lg text-white font-bold w-[30%]'>Send</button>
-      {/* <button
-        type="submit"
-      >
-        Submit
-      </button> */}
     </form>
   );
 };

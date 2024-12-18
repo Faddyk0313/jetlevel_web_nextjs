@@ -1,3 +1,5 @@
+import OnDemandCharterPage from '@/components/OnDemandCharterPage';
+
 type PageProps = {
     params: {
       subOption: string;
@@ -27,8 +29,12 @@ type PageProps = {
     };
   
     return (
-      <div className="p-6 max-w-4xl mx-auto text-center">
-        <h1 className="font-bold my-4">{title}</h1>
+      <div>
+        {
+          title === 'On-Demand Charter' ?
+          <OnDemandCharterPage />
+          :null
+        }
       </div>
     );
   };

@@ -11,9 +11,10 @@ type HeroProps = {
     description?: string;
     hasOverlay?: boolean;
     hasCalculator?: boolean;
+    showCalculator?:boolean
 };
 
-const Hero: React.FC<HeroProps> = ({ image, title, subtitle, tagline, description, hasOverlay, hasCalculator }) => {
+const Hero: React.FC<HeroProps> = ({ image, title, subtitle, tagline, description, hasOverlay, hasCalculator, showCalculator = true }) => {
     return (
         <section className={`flex flex-col min-h-[65vh] md:min-h-[75vh]  ${hasCalculator ? "justify-end xl:pb-5 pt-5" : "justify-end pb-5 sm:pb-10"}  ${hasOverlay ? "overlay" : ""} bg-center bg-cover text-center text-white bg-no-repeat `}
             style={{ backgroundImage: `url(${image})` }}>
@@ -42,12 +43,15 @@ const Hero: React.FC<HeroProps> = ({ image, title, subtitle, tagline, descriptio
                         {description as string}
                     </Markdown>
                 </div>
+                {
+                showCalculator &&
                 <div className='w-full outline-none h-auto' id="my-iframe">
                 <Suspense fallback={<div className="search-form__loader"></div>}>
 
                     <LeadForm/>
-                    </Suspense>
+                </Suspense>
                 </div>
+                }
             </div>
         </section>
     );
