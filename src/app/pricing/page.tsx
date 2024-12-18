@@ -423,6 +423,9 @@ const EventsPage = () => {
                 isOpen={openIndex === index}
                 onClick={() => handleToggle(index)} 
                 backgroundColor='#0071BA'
+                classNames='text-white'
+                questionClassName='text-white'
+                iconColor="text-white"
               />
             ))
           }

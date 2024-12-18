@@ -13,6 +13,7 @@ interface FAQDropdownProps {
   classNames?: string;
   answerClassName?: string;
   questionClassName?: string;
+  iconColor?: string;
 }
 
 const FAQDropdown: React.FC<FAQDropdownProps> = ({
@@ -25,7 +26,8 @@ const FAQDropdown: React.FC<FAQDropdownProps> = ({
   backgroundColor,
   classNames,
   answerClassName,
-  questionClassName
+  questionClassName,
+  iconColor
 }) => {
   const renderIcon = () => {
     if (iconStyle === 'caret') {
@@ -42,7 +44,7 @@ const FAQDropdown: React.FC<FAQDropdownProps> = ({
       >
         {iconPosition === 'start' && <span className="mr-2">{renderIcon()}</span>}
         <span className={`flex-grow ${questionClassName || ''}`}>{question}</span>
-        {iconPosition === 'end' && <span className="ml-2">{renderIcon()}</span>}
+        {iconPosition === 'end' && <span className={`ml-2 ${iconColor}`}>{renderIcon()}</span>}
       </div>
       {isOpen && (
         <div className={`${answerClassName || ''} p-[30px_35px_31px_32px] text-[#555]`}>
