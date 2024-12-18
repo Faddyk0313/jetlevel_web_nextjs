@@ -225,6 +225,13 @@ blockquote {
   animation: move-down 0.3s ease-in-out forwards;
 }
 
+span{
+  color: #0071BA;
+  font-weight: 600;
+}
+.slick-prev:before, .slick-next:before{
+  color: lightgray;
+}
 @keyframes move-down {
   from {
     transform: translateY(-100%);
