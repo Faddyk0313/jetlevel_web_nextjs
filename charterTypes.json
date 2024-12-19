@@ -1,0 +1,39 @@
+{
+  "charterTypes":[
+    {
+      "name":"Corporate Jet Charter",
+      "url":"corporate-jet-charter",
+      "image":"https://jetlevel.com/wp-content/uploads/2024/04/Corporate-jet-charter.webp"
+    },
+    {
+      "name":"Event Charter Services",
+      "url":"events-private-jet-charter",
+      "image":"https://jetlevel.com/wp-content/uploads/2024/04/Events-private-jet-charter.webp"
+    },
+    {
+      "name":"Sports Team Charter",
+      "url":"sports-team-charter",
+      "image":"https://jetlevel.com/wp-content/uploads/2024/04/Sport-and-athletes-charter.webp"
+    },
+    {
+      "name":"Oil and Gas Industry Charter",
+      "url":"oil-and-gas-industry-charter",
+      "image":"https://jetlevel.com/wp-content/uploads/2024/04/Oil-gas-private-charter.webp"
+    },
+    {
+      "name":"Government Air Charter",
+      "url":"government-air-charter",
+      "image":"https://jetlevel.com/wp-content/uploads/2024/04/Government-charters.webp"
+    },
+    {
+      "name":"Film Industry Charter",
+      "url":"film-industry-charter",
+      "image":"https://jetlevel.com/wp-content/uploads/2024/04/Film-industry-charter.webp"
+    },
+    {
+      "name":"Music Industry Charter",
+      "url":"music-industry-charter",
+      "image":"https://jetlevel.com/wp-content/uploads/2024/04/Music-Industry-Private-jet-charter.webp"
+    }
+  ]
+}

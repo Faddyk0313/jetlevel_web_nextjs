@@ -25,6 +25,13 @@ import TailoredLuxury from "./tailoredLuxury.svg";
 import Facebook from './facebook.svg';
 import Linkedin from './Linkedin.svg';
 import Twitter from './Twitter.svg';
+import TimeEfficient from './time-efficinet.svg';
+import Productivity from './productivity.svg';
+import TravelSoltution from './travelSolution.svg';
+import Diamond from './diamond.svg';
+import Privacy from './privacy.svg';
+import  Accessibility  from './accessbility.svg';
+import Shuffle from './shuffle.svg';
 
 export { Aircraft, Airports, InternationalCities, Routes_DistanceCalculator, UsCanadaCities };
 export { OnDemandCharter, ProvenSafetyRecords, Reliability, Transparency, Testimonials };
@@ -33,3 +40,4 @@ export { OurOfficesSvg };
 export { RequestQuote, ReceiveCharterProposal, ConfirmAircraft, ReceiveFlightBrief };
 export { CostCalculator, FlightTracker };
 export { SafetyFirst, TailoredLuxury, Facebook, Linkedin,Twitter };
+export { TimeEfficient, Productivity, TravelSoltution, Diamond, Privacy, Accessibility, Shuffle }
