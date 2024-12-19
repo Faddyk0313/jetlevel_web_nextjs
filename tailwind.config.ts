@@ -23,6 +23,7 @@ const config: Config = {
   			libre: ['var(--font-libre-baskerville)', 'serif'],
   			montserrat: ['var(--font-montserrat)', 'serif'],
 				georgia: ['Georgia', 'Sans-serif'],
+				calibari:["Calibari", 'Sans-serif']
   		},
 		screens:{
 			carousel: '900px',

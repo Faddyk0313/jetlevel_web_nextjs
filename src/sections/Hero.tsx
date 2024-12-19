@@ -23,9 +23,9 @@ const Hero: React.FC<HeroProps> = ({ image, title, subtitle, tagline, descriptio
                 <h1 className='mb-5'>{title}</h1>
                 <p className={`${tagline ? 'TitleTtagline mb-5 ' : 'hidden'}`}>{tagline}</p>
                 <div className={`${description ? 'mb-5 ' : 'hidden'}`}>
-                    {/* {description} */}
                     <Markdown
                         options={{
+                            forceBlock: true,
                             overrides: {
                                 p: {
                                     props: {
@@ -34,7 +34,7 @@ const Hero: React.FC<HeroProps> = ({ image, title, subtitle, tagline, descriptio
                                 },
                                 a: {
                                     props: {
-                                        className: 'TitleTtagline text-blue',
+                                        className: `TitleTtagline text-white`,
                                     },
                                 },
                             },
