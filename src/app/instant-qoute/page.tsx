@@ -77,8 +77,8 @@ const RequestQuotePage = () => {
          
          <div className='mt-[50px]'>
           <h2 className='mb-8'>What Sets Our Quotes Apart</h2>
-            <div className='w-full h-[700px]'>
-              <Image src={bookingSlot} alt='image' width={100} height={100} className='w-full h-full object-cover' />
+            <div className='w-full h-[1000px] object-cover'>
+              <Image unoptimized src={bookingSlot} alt='image' width={100} height={100} className='w-full h-full object-contain' />
             </div>
             <p className='mb-[50px] mt-6'>When it comes to private jet charter quotes, it’s not just about the price; it’s about the entire package. What sets JetLevel Aviation’s quotes apart?</p>
             <p className='mb-6'><span className='text-[#0071ba] font-bold'> Aircraft Options:</span> We offer a wide variety of jet types to fit every need and preference.</p>
@@ -106,8 +106,8 @@ const RequestQuotePage = () => {
               <p className='mb-8'>Open Safari and navigate to <Link className='text-[#0071BA]' href='/request-quote'>Jetlevel Instant Quote.</Link></p>
               <p>Tap Share, then select “Add to Home Screen.” Name it and confirm to view it on your home screen.</p>
             </div>
-            <div className='w-[70%]'>
-              <Image src={'https://jetlevel.com/wp-content/uploads/2023/09/iphone-scaled.webp'} alt='image' width={100} height={100} className='w-full h-full object-cover' />
+            <div className='w-[68%]'>
+              <Image unoptimized src={'https://jetlevel.com/wp-content/uploads/2023/09/iphone-scaled.webp'} alt='image' width={100} height={100} className='w-full h-full object-cover' />
             </div>
           </div>
          </div>
@@ -118,8 +118,8 @@ const RequestQuotePage = () => {
               <p className='mb-8'>Open Chrome and go to <Link className='text-[#0071BA]' href='/request-quote'>Jetlevel Instant Quote.</Link></p>
               <p>Tap on the three dots in the upper right corner, then select “Add to Home Screen.” Name it, confirm, and it will appear on your home screen.</p>
             </div>
-            <div className='w-[70%]'>
-             <Image src={'https://jetlevel.com/wp-content/uploads/2023/09/android-scaled.webp'} alt='image' width={100} height={100} className='w-full h-full object-cover' />
+            <div className='w-[68%]'>
+             <Image unoptimized src={'https://jetlevel.com/wp-content/uploads/2023/09/android-scaled.webp'} alt='image' width={100} height={100} className='w-full h-full object-cover' />
             </div>
           </div>
           <p className='mt-6'>By integrating our Private Jet Calculator into your daily life, you can effortlessly obtain accurate trip estimates wherever you are, whenever you need them.</p>
@@ -154,10 +154,10 @@ const RequestQuotePage = () => {
           </div>
           
           <div className='mt-[50px]'>
-            <h2>Customer Testimonials</h2>
-            <p className='mt-[30px] mb-[60px]'>Don’t just take our word for it. Here’s what our clients have to say about our private flight quote and charter flight quotes services:</p>
+            {/* <h2>Customer Testimonials</h2> */}
+            {/* <p className='mt-[30px] mb-[60px]'>Don’t just take our word for it. Here’s what our clients have to say about our private flight quote and charter flight quotes services:</p> */}
 
-            <p className='ml-8 text-[40px] w-[85%] mb-10'>"The instant quote system at JetLevel is unparalleled. It's quick and precise, making my frequent trips a breeze to plan." - A Satisfied Client</p>
+            {/* <p className='ml-8 text-[40px] w-[85%] mb-10'>"The instant quote system at JetLevel is unparalleled. It's quick and precise, making my frequent trips a breeze to plan." - A Satisfied Client</p> */}
             <p className='text-center mb-8 w-[85%] m-[0_auto]'>JetLevel Aviation has simplified the air charter quote and charter plane quote process to offer you a hassle-free experience. Our instant quotes are designed to provide you with the information you need swiftly and accurately. Why wait? Get your quote today and soar to new heights of luxury and convenience.</p>
             <h2 className='text-center w-[85%] m-[0_auto] text-[30px]'>Ready to experience the difference? Get your charter flight quote or online private jet quote now.</h2>
             <div className='text-center mt-[40px]'>
@@ -167,7 +167,7 @@ const RequestQuotePage = () => {
          
         </div>
       </div>
-      <RequestQuoteBanner />
+      {/* <RequestQuoteBanner /> */}
     </div>
   );
 };
