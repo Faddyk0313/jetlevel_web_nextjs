@@ -20,8 +20,6 @@ const EventDetailPage = ({ params }: PageProps) => {
   const singleEvent = mergeEvents.find((event) => 
     event.heading.toLowerCase() === params.subOption.replace(/-/g, ' ').toLowerCase()
   );
-  console.log('singleEvent',singleEvent);
-
   return (
     <div>
        <Hero title={singleEvent?.heading || ''} description="Get Your Private Jet Quote Instantly and Fly in Ultimate Luxury" image="https://jetlevel.com/wp-content/uploads/2024/08/Untitled-design-17.png" hasCalculator={false} />

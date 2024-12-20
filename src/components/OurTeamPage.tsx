@@ -15,85 +15,83 @@ const OurTeamPage = () => {
         </div>
       </div>
 
-      <div>
-        <h2 className='text-center mb-[30px]'>Leadership</h2>
-        <div className='flex items-center justify-between'>
-          <div className="w-[32%] bg-[#EEEEEE] h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300 ">
-            <Image
-              src="https://jetlevel.com/wp-content/uploads/2023/09/Ricky-Gomulka-Jet-Level-CEO-e1702364418323.png"
-              alt="Ceo Photo"
-              width={200}
-              height={200}
-              className="w-[160px] h-[160px] rounded-full"
-            />
-            <h3 className="font-bold mt-4 mb-2 group-hover:text-white">
-              Ricky Gomulka
-            </h3>
-            <span className="text-[#777777] mb-4 text-[14px] group-hover:text-white">
-              Founder & Managing Partner
-            </span>
-            <p className="text-center group-hover:text-white text-[15px]">
-              Ricky brings extensive industry knowledge and strategic vision to JetLevel
-              Aviation. As a co-founder and managing partner, his expertise in private
-              aviation is instrumental in steering the company towards new heights.
-            </p>
-            <div className='flex gap-x-[30px] mt-[30px]'>
-              <Linkedin className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
-              <Facebook className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
-              <Twitter className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
-            </div>
+        <h2 className='text-black text-center mb-[30px]'>Leadership</h2>
+        <div className='flex items-center justify-between flex-wrap'>
+        <div className="w-[32%] max-[700px]:w-full bg-[#EEEEEE] h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
+          <Image
+            src="https://jetlevel.com/wp-content/uploads/2023/09/Ricky-Gomulka-Jet-Level-CEO-e1702364418323.png"
+            alt="Ceo Photo"
+            width={200}
+            height={200}
+            className="w-[160px] h-[160px] rounded-full"
+          />
+          <h4 className="text-[20px] font-bold mt-4 mb-4 group-hover:text-white">
+            Ricky Gomulka
+          </h4>
+          <span className="text-[#777777] mb-5 text-[12px] group-hover:text-white">
+            Founder & Managing Partner
+          </span>
+          <p className="text-center group-hover:text-white text-[15px]">
+            Ricky brings extensive industry knowledge and strategic vision to JetLevel
+            Aviation. As a co-founder and managing partner, his expertise in private
+            aviation is instrumental in steering the company towards new heights.
+          </p>
+          <div className="flex gap-x-[30px] mt-[30px]">
+            <Linkedin className="w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white" />
+            <Facebook className="w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white" />
+            <Twitter className="w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white" />
           </div>
-
-          <div className="w-[32%] h-[500px] bg-[#EEEEEE] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
-            <Image
-              src="https://jetlevel.com/wp-content/uploads/2023/10/1690029198597-jpeg.webp"
-              alt="President Photo"
-              width={200}
-              height={200}
-              className="w-[160px] h-[160px] rounded-full"
-            />
-            <h3 className="font-bold mt-4 mb-2 group-hover:text-white">
-              Kevin Bales
-            </h3>
-            <span className="text-[#777777] mb-4 text-[14px] group-hover:text-white">
-              Vice President
-            </span>
-            <p className="text-center group-hover:text-white text-[15px]">
-              Kevin's role as Vice President is pivotal in driving JetLevel Aviation's growth. His leadership and in-depth understanding of the aviation market ensure operational excellence and client satisfaction.
-            </p>
-            <div className='flex gap-x-[30px] mt-[30px]'>
-              <Linkedin className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
-              <Facebook className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
-              <Twitter className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
-            </div>
-          </div>
-
-          <div className="w-[32%] h-[500px] bg-[#EEEEEE] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
-            <Image
-              src="https://jetlevel.com/wp-content/uploads/2023/12/1698440487069-jpeg.webp"
-              alt="Ceo Photo"
-              width={200}
-              height={200}
-              className="w-[160px] h-[160px] rounded-full"
-            />
-            <h3 className="font-bold mt-4 mb-2 group-hover:text-white">
-              Erin Melder
-            </h3>
-            <span className="text-[#777777] mb-4 text-[14px] group-hover:text-white">
-              Flight Support & Client Services
-            </span>
-            <p className="text-center group-hover:text-white text-[15px]">
-              With 20 years of experience in corporate aviation, Erin, an FAA Licensed Aircraft Dispatcher, excels in providing top-notch flight support and client services, ensuring safe and efficient operations for JetLevel Aviation.
-            </p>
-            <div className='flex gap-x-[30px] mt-[30px]'>
-              <Linkedin className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
-              <Facebook className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
-              <Twitter className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
-            </div>
-          </div>
-
         </div>
-      </div>
+
+
+        <div className="w-[32%] max-[700px]:w-full bg-[#EEEEEE] h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
+          <Image
+            src="https://jetlevel.com/wp-content/uploads/2023/10/1690029198597-jpeg.webp"
+            alt="President Photo"
+            width={200}
+            height={200}
+            className="w-[160px] h-[160px] rounded-full"
+          />
+          <h4 className="text-[20px] font-bold mt-4 mb-4 group-hover:text-white">
+            Kevin Bales
+          </h4>
+          <span className="text-[#777777] mb-5 text-[12px] group-hover:text-white">
+          Vice President
+          </span>
+          <p className="text-center group-hover:text-white text-[15px]">
+          Kevin's role as Vice President is pivotal in driving JetLevel Aviation's growth. His leadership and in-depth understanding of the aviation market ensure operational excellence and client satisfaction.
+          </p>
+          <div className='flex gap-x-[30px] mt-[30px]'>
+            <Linkedin className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
+            <Facebook className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
+            <Twitter className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
+          </div>
+        </div>
+
+        <div className="w-[32%] max-[700px]:w-full bg-[#EEEEEE] h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
+          <Image
+            src="https://jetlevel.com/wp-content/uploads/2023/12/1698440487069-jpeg.webp"
+            alt="Ceo Photo"
+            width={200}
+            height={200}
+            className="w-[160px] h-[160px] rounded-full"
+          />
+          <h4 className="text-[20px] font-bold mt-4 mb-4 group-hover:text-white">
+            Erin Melder
+          </h4>
+          <span className="text-[#777777] mb-5 text-[12px] group-hover:text-white">
+            Flight Support & Client Services
+          </span>
+          <p className="text-center group-hover:text-white text-[15px]">
+            With 20 years of experience in corporate aviation, Erin, an FAA Licensed Aircraft Dispatcher, excels in providing top-notch flight support and client services, ensuring safe and efficient operations for JetLevel Aviation.
+          </p>
+          <div className='flex gap-x-[30px] mt-[30px]'>
+            <Linkedin className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
+            <Facebook className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
+            <Twitter className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
+          </div>
+        </div>
+    </div>
     </section>
   );
 };

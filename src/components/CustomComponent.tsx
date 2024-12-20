@@ -47,7 +47,7 @@ const CustomComponent: React.FC<CustomComponentProps> = ({
           style={{ gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))` }}
         >
           {items.map((item, index) => (
-            <Card key={index} icon={item.icon} title={item.title} description={item.description} bgcolor={background} />
+          <Card key={index} icon={item.icon} title={item.title} description={item.description} bgcolor={background} />
           ))}
         </div>
         {/* Carousel Section */}
