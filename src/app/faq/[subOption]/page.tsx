@@ -75,10 +75,20 @@ const FaqDetailPage = () => {
 
         <h2>Public and Private Charter Flight</h2>
         <p className='mt-2 leading-7 text-md'>In a public charter an organization or travel agency rents an aircraft to transport a group of people, usually for holidays or events. It’s cheaper than private jets but still offers some level of exclusivity compared to commercial airlines. A public charter is not the same as a private charter flight which offers a more exclusive and bespoke travel experience.</p>
+
+        <h2>Public and Private Charter Flight</h2>
+        <p className='mt-2 leading-7 text-md'>In a public charter an organization or travel agency rents an aircraft to transport a group of people, usually for holidays or events. It’s cheaper than private jets but still offers some level of exclusivity compared to commercial airlines. A public charter is not the same as a private charter flight which offers a more exclusive and bespoke travel experience.</p>
+
+        <h2>Public and Private Charter Flight</h2>
+        <p className='mt-2 leading-7 text-md'>In a public charter an organization or travel agency rents an aircraft to transport a group of people, usually for holidays or events. It’s cheaper than private jets but still offers some level of exclusivity compared to commercial airlines. A public charter is not the same as a private charter flight which offers a more exclusive and bespoke travel experience.</p>
+        <h2>Public and Private Charter Flight</h2>
+        <p className='mt-2 leading-7 text-md'>In a public charter an organization or travel agency rents an aircraft to transport a group of people, usually for holidays or events. It’s cheaper than private jets but still offers some level of exclusivity compared to commercial airlines. A public charter is not the same as a private charter flight which offers a more exclusive and bespoke travel experience.</p>
+        <h2>Public and Private Charter Flight</h2>
+        <p className='mt-2 leading-7 text-md'>In a public charter an organization or travel agency rents an aircraft to transport a group of people, usually for holidays or events. It’s cheaper than private jets but still offers some level of exclusivity compared to commercial airlines. A public charter is not the same as a private charter flight which offers a more exclusive and bespoke travel experience.</p>
       </div>
 
 
-      <div className='w-[28%] mt-8'>
+      <div className='w-[28%] mt-8 sticky top-0 h-full'>
         <h3 className='font-bold text-xl mb-4'>Related Questions</h3>
         <div className='mb-7'>
           {
