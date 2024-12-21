@@ -32,12 +32,20 @@ import Diamond from './diamond.svg';
 import Privacy from './privacy.svg';
 import  Accessibility  from './accessbility.svg';
 import Shuffle from './shuffle.svg';
+import Airplane from './Airplane.svg';
+import Terminal from './terminal.svg';
+import Broker from './Broker.svg';
+import Charter from './Charter.svg';
+import Price from './price.svg';
+import Service from './Service.svg';
+import Search from './search.svg';
 
 export { Aircraft, Airports, InternationalCities, Routes_DistanceCalculator, UsCanadaCities };
 export { OnDemandCharter, ProvenSafetyRecords, Reliability, Transparency, Testimonials };
 export { GroupCharter, AirAmbulance, Helicopter, EmptyLeg, IndustrySpecific };
 export { OurOfficesSvg };
 export { RequestQuote, ReceiveCharterProposal, ConfirmAircraft, ReceiveFlightBrief };
-export { CostCalculator, FlightTracker };
+export { CostCalculator, FlightTracker, Search };
 export { SafetyFirst, TailoredLuxury, Facebook, Linkedin,Twitter };
-export { TimeEfficient, Productivity, TravelSoltution, Diamond, Privacy, Accessibility, Shuffle }
+export { TimeEfficient, Productivity, TravelSoltution, Diamond, Privacy, Accessibility, Shuffle };
+export { Airplane, Terminal, Broker, Charter, Price, Service }
