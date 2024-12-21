@@ -7,7 +7,7 @@ interface FAQDropdownProps {
   answer: string | ReactNode;
   iconStyle?: 'caret' | 'arrow';
   iconPosition?: 'start' | 'end';
-  isOpen: boolean;
+  isOpen?: boolean;
   onClick: () => void;
   backgroundColor?: string;
   classNames?: string;
@@ -48,7 +48,7 @@ const FAQDropdown: React.FC<FAQDropdownProps> = ({
       </div>
       {isOpen && (
         <div className={`${answerClassName || ''} p-[30px_35px_31px_32px] text-[#555]`}>
-          {typeof answer === 'string' ? <p className="text-md text-black">{answer}</p> : answer}
+          {typeof answer === 'string' ? <p className="text-md">{answer}</p> : answer}
         </div>
       )}
     </div>
