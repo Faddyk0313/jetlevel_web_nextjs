@@ -8,7 +8,7 @@ interface FAQDropdownProps {
   iconStyle?: 'caret' | 'arrow';
   iconPosition?: 'start' | 'end';
   isOpen?: boolean;
-  onClick: () => void;
+  onClick?: () => void;
   backgroundColor?: string;
   classNames?: string;
   answerClassName?: string;
