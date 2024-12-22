@@ -4,9 +4,10 @@ import Breadcrumb from '@/components/Breadcrumb/Breadcrumb'
 import TopCharteredCities from '@/components/TopCharteredCities'
 import BrandNames from '@/sections/BrandNames'
 import Hero from '@/sections/Hero'
-import React from 'react'
+import React, { useState } from 'react'
 import events from '../../../../events.json';
 import AvailableAircrafts from '@/sections/AvailableAircrafts';
+import Collapsible from '@/components/Collapsible'
 
 type PageProps = {
   params: {
@@ -15,11 +16,17 @@ type PageProps = {
 };
 
 const EventDetailPage = ({ params }: PageProps) => {
-  console.log('params',params);
   const mergeEvents = events.event.flatMap(item => item.content);
   const singleEvent = mergeEvents.find((event) => 
     event.heading.toLowerCase() === params.subOption.replace(/-/g, ' ').toLowerCase()
   );
+  console.log('singleEvent',singleEvent);
+
+  const [openIndex, setOpenIndex] = useState<number | null>(null);
+    
+  const handleToggle = (index: number) => {
+    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
+  };
   return (
     <div>
        <Hero title={singleEvent?.heading || ''} description="Get Your Private Jet Quote Instantly and Fly in Ultimate Luxury" image="https://jetlevel.com/wp-content/uploads/2024/08/Untitled-design-17.png" hasCalculator={false} />
@@ -30,8 +37,37 @@ const EventDetailPage = ({ params }: PageProps) => {
           <div className='w-[73%] max-[650px]:w-full'>
             <h1 className='text-[45px] text-[#0071BA] mb-5 mt-6'>{singleEvent?.heading}</h1>
             <p className='text-[#727982] text-md mb-4 text-justify'>{singleEvent?.description || ''}</p>
+
+            <div className='mt-8'>
+            {singleEvent?.content?.map((faq, index) => (
+              <Collapsible
+                key={index}
+                question={faq.name}
+                answer={
+                  <div>
+                    <p className='mb-4'>{faq.description}</p>
+                    <ul>
+                      {faq?.list?.map((item, idx) => (
+                        <li className='mb-2' key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                      ))}
+                    </ul>
+                  </div>
+                }
+                iconStyle="caret"
+                iconPosition="end"
+                isOpen={openIndex === index}
+                onClick={() => handleToggle(index)}
+                classNames="bg-[#F7F9FB] mb-4"
+                backgroundColor="#F7F9FB"
+                answerClassName="!p-6"
+                questionClassName="text-lg text-black"
+                iconColor="text-black"
+              />
+            ))}
           </div>
-          
+
+          </div>
+
           <div className="min-w-[24%] max-w-fit  mt-[76px] max-[650px]:hidden">
             <TopCharteredCities
               title="Airports For"

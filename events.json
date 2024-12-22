@@ -18,6 +18,33 @@
                 "<span>Lebanon Municipal Airport, M54</span>, Lebanon, Tennessee (29 miles)",
                 "<span>Shelbyville Municipal Airport, SYI,</span> Shelbyville, Tennessee (56 miles)"
               ]
+            },
+            {
+              "name":"What To Expect",
+              "description":"The Country Music Awards is an evening of glitz, glamour, and great music. The event features performances from top country music artists, heartfelt acceptance speeches, and special tributes to legends of the genre. Expect a star-studded red carpet where artists showcase their unique styles. \n The ceremony typically lasts about three hours and includes numerous award presentations in various categories, including Entertainer of the Year, Album of the Year, and New Artist of the Year. The audience is a mix of industry professionals, celebrities, and enthusiastic fans."
+            },
+            {
+              "name":"How It Started",
+              "description":"The Country Music Awards were first held in 1967, organized by the Country Music Association to recognize the achievements of country music artists and promote the genre. The inaugural event was a simple banquet, but it quickly grew in popularity and prestige, becoming one of the most anticipated events in the music industry."
+            },
+            {
+              "name":"Tips For Going",
+              "list":[
+                "<span>Dress Code:</span> The CMA is a formal event. Dress to impress with evening gowns and suits, but add a touch of country flair.",
+                "<span>Arrive Early:</span> Traffic around the venue can be heavy. Arriving early ensures you get a good spot and enjoy the red carpet arrivals.",
+                "<span>Tickets:</span> Purchase your tickets well in advance. The event often sells out quickly.",
+                "<span>Stay Hydrated and Eat:</span> The excitement and long duration can be exhausting. Keep hydrated and have a meal before the event."
+              ]
+            },
+            {
+              "name":"Tips For Going",
+              "list":[
+                "<span>Country Music Hall of Fame and Museum:</span> Explore the history of country music, with exhibits featuring artifacts, recordings, and memorabilia from the genre’s biggest stars.",
+                "<span>Grand Ole Opry:</span> Attend a live show at this historic venue, known as the home of American music.",
+                "<span>The Johnny Cash Museum:</span> A tribute to the legendary Man in Black, featuring artifacts, memorabilia, and interactive exhibits.",
+                "<span>Stay Hydrated and Eat:</span> Enjoy the vibrant nightlife on this famous street, lined with honky-tonks, bars, and live music venues."
+              ],
+              "description":"Experience the magic of the Country Music Awards and immerse yourself in the rich culture of Nashville. Whether you’re a lifelong country music fan or new to the genre, this event is a must-see celebration of talent and tradition."
             }
           ]
         },
