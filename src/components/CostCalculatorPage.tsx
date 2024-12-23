@@ -111,7 +111,9 @@ const CostCalculatorPage = () => {
             <section className='pb-0'>
               <h2>Downloadable Resources</h2>
               <p>For more comprehensive information on charter flight costs, we offer downloadable PDF guides. These resources delve deeper into cost structures, types of aircraft, and more.</p>
-              <button className='p-3 bg-[#0071BA] text-white mt-8'>Click here to download</button>
+              <a href='https://jetlevel.com/wp-content/uploads/2023/09/The-Comprehensive-Guide-to-Chartering-a-Private-Jet.pdf' download>
+                <button className='p-3 bg-[#0071BA] text-white mt-8'>Click here to download</button>
+              </a>
             </section>
         </div>
       </div>

@@ -8,7 +8,6 @@ import Image from 'next/image';
 import bookingSlot from '../../../public/images/booking-slot.webp';
 import Link from 'next/link';
 import Collapsible from '@/components/Collapsible'
-import RequestQuoteBanner from '@/components/RequestQuoteBanner';
 
 const RequestQuotePage = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -77,8 +76,15 @@ const RequestQuotePage = () => {
          
          <div className='mt-[50px]'>
           <h2 className='mb-8'>What Sets Our Quotes Apart</h2>
-            <div className='w-full h-[1000px] object-cover'>
-              <Image unoptimized src={bookingSlot} alt='image' width={100} height={100} className='w-full h-full object-contain' />
+            <div className='w-full h-[1000px] max-[700px]:h-[500px] object-cover'>
+              <Image 
+                unoptimized 
+                src={bookingSlot} 
+                alt='image' 
+                width={100} 
+                height={100} 
+                className='w-full h-full object-contain' 
+              />
             </div>
             <p className='mb-[50px] mt-6'>When it comes to private jet charter quotes, it’s not just about the price; it’s about the entire package. What sets JetLevel Aviation’s quotes apart?</p>
             <p className='mb-6'><span className='text-[#0071ba] font-bold'> Aircraft Options:</span> We offer a wide variety of jet types to fit every need and preference.</p>
@@ -100,25 +106,25 @@ const RequestQuotePage = () => {
          <h2 className='mb-8'>How to Save the Private Jet Calculator on Your Phone for Easy Access</h2>
           <p className='mb-4'>We recognize that time is invaluable, especially for our busy clients. That’s why we’ve made it simple to save the Private Jet Calculator on your mobile phone’s homepage for quick and convenient access:</p>
 
-          <div className='flex items-center justify-between'>
-            <div className='w-[28%]'>
+          <div className='flex flex-wrap items-center justify-between'>
+            <div className='w-[28%] max-[700px]:w-full'>
               <p className='mb-4'>For iPhone Users:</p>
               <p className='mb-8'>Open Safari and navigate to <Link className='text-[#0071BA]' href='/request-quote'>Jetlevel Instant Quote.</Link></p>
               <p>Tap Share, then select “Add to Home Screen.” Name it and confirm to view it on your home screen.</p>
             </div>
-            <div className='w-[68%]'>
+            <div className='w-[68%] max-[700px]:w-full max-[700px]:mt-8'>
               <Image unoptimized src={'https://jetlevel.com/wp-content/uploads/2023/09/iphone-scaled.webp'} alt='image' width={100} height={100} className='w-full h-full object-cover' />
             </div>
           </div>
          </div>
 
-          <div className='flex items-start justify-between flex-row-reverse mt-[40px]'>
-            <div className='w-[28%]'>
+          <div className='flex flex-wrap  items-start justify-between flex-row-reverse mt-[40px]'>
+            <div className='w-[28%] max-[700px]:w-full'>
               <p className='mb-4'> For Android Users:</p>
               <p className='mb-8'>Open Chrome and go to <Link className='text-[#0071BA]' href='/request-quote'>Jetlevel Instant Quote.</Link></p>
               <p>Tap on the three dots in the upper right corner, then select “Add to Home Screen.” Name it, confirm, and it will appear on your home screen.</p>
             </div>
-            <div className='w-[68%]'>
+            <div className='w-[68%] max-[700px]:w-full max-[700px]:mt-8'>
              <Image unoptimized src={'https://jetlevel.com/wp-content/uploads/2023/09/android-scaled.webp'} alt='image' width={100} height={100} className='w-full h-full object-cover' />
             </div>
           </div>

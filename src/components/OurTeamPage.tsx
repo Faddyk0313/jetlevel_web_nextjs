@@ -17,7 +17,7 @@ const OurTeamPage = () => {
 
         <h2 className='text-black text-center mb-[30px]'>Leadership</h2>
         <div className='flex items-center justify-between flex-wrap'>
-        <div className="w-[32%] max-[700px]:w-full bg-[#EEEEEE] h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
+        <div className="w-[32%] mb-6 max-[700px]:w-full bg-[#EEEEEE] h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
           <Image
             src="https://jetlevel.com/wp-content/uploads/2023/09/Ricky-Gomulka-Jet-Level-CEO-e1702364418323.png"
             alt="Ceo Photo"
@@ -44,7 +44,7 @@ const OurTeamPage = () => {
         </div>
 
 
-        <div className="w-[32%] max-[700px]:w-full bg-[#EEEEEE] h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
+        <div className="w-[32%] mb-6 max-[700px]:w-full bg-[#EEEEEE] h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
           <Image
             src="https://jetlevel.com/wp-content/uploads/2023/10/1690029198597-jpeg.webp"
             alt="President Photo"
@@ -68,7 +68,7 @@ const OurTeamPage = () => {
           </div>
         </div>
 
-        <div className="w-[32%] max-[700px]:w-full bg-[#EEEEEE] h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
+        <div className="w-[32%] mb-6 max-[700px]:w-full bg-[#EEEEEE] h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
           <Image
             src="https://jetlevel.com/wp-content/uploads/2023/12/1698440487069-jpeg.webp"
             alt="Ceo Photo"

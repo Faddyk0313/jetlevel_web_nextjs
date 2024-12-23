@@ -24,8 +24,8 @@ const SubscribeUs: React.FC = () => {
           <h2 className="text-4xl text-white font-bold mb-4">Flights straight to your inbox          </h2>
           <p className="mb-6 mt-8">Sign up to receive weekly empty leg flights deals.</p>
           
-          <form onSubmit={handleSubmit} className="flex gap-x-[10px] pt-6 rounded-lg justify-center">
-            <div className="mb-4 w-[32%]">
+          <form onSubmit={handleSubmit} className="flex flex-wrap gap-x-[10px] pt-6 rounded-lg justify-center">
+            <div className="mb-4 w-[32%] max-[700px]:w-full">
               <input 
                 type="text" 
                 placeholder="Your Name" 
@@ -35,7 +35,7 @@ const SubscribeUs: React.FC = () => {
                 required 
               />
             </div>
-            <div className="mb-4 w-[32%]">
+            <div className="mb-4 w-[32%] max-[700px]:w-full">
               <input 
                 type="email" 
                 placeholder="Your Email" 

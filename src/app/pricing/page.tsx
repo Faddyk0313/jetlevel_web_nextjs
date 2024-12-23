@@ -170,8 +170,8 @@ const EventsPage = () => {
     {
 			heading:'',
 			accessor: '',
-      Cell: ({ row }: { row: Record<string, any> }) => <div className='font-bold text-white'>
-      <button>Enquire</button>
+      Cell: ({ row }: { row: Record<string, any> }) => <div className='font-bold text-black hover:text-white w-full h-full'>
+      <button className='w-full h-full'>Enquire</button>
       </div>
 		},
 	]; 
@@ -416,6 +416,7 @@ const EventsPage = () => {
         <Breadcrumb />
         <CompanyOverview />
         <AvailableAircrafts />
+
         <section className='px-5 md:px-10 lg:px-20 pb-0'>
         <h2 className='text-center mb-4'>Popular Flights Routes & Estimates</h2>
           <div className='flex items-center justify-between bg-[#0071BA] text-white p-4 rounded-[20px_20px_0px_0px]'>
@@ -435,7 +436,7 @@ const EventsPage = () => {
         <SmartTravelTools />
 
         <section className='flex relative justify-between pb-[60px] px-5 md:px-10 lg:px-20 pb-0'>
-          <div className='w-[65%] mt-6 flex flex-col gap-y-[70px]'>
+          <div className='w-[65%] max-[700px]:w-full mt-6 flex flex-col gap-y-[90px]'>
           <Collapsible  
               key={1}
               question={'General Cost Breakdown'}
@@ -468,7 +469,7 @@ const EventsPage = () => {
               onClick={() => toggleSection('general-cost-breakdown')} 
               backgroundColor='#0071BA'
               classNames='text-white '
-              answerClassName='bg-[#F9F9F9] mb-[60px]'
+              answerClassName='bg-[#F9F9F9]'
               questionClassName='text-white p-1 !text-[25px]'
               iconColor="text-white"
           />
@@ -1693,7 +1694,7 @@ const EventsPage = () => {
           />
           </div>
           
-          <div className='w-[29%] sticky h-[500px] top-[100px]'>
+          <div className='w-[29%] max-[700px]:hidden sticky h-[500px] top-[100px]'>
             <h2 className='mb-8 border-b pb-4 '>On This Page</h2>
             <p 
               onClick={() => scrollToSection('general-cost-breakdown')}
@@ -1710,7 +1711,8 @@ const EventsPage = () => {
         </section>
 
         <WhatOurClientsSay />
-        <div className='mt-6 flex flex-col gap-y-[15px]'>
+
+        <div className='mt-8 flex  flex-col gap-y-[15px] w-[90%] m-[30px_auto]'>
           {
             faqData.map((faq,index) => (
               <Collapsible  
@@ -1728,7 +1730,7 @@ const EventsPage = () => {
               />
             ))
           }
-          <RequestQuoteBanner />
+          {/* <RequestQuoteBanner /> */}
         </div>
     </div>
   )

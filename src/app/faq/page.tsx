@@ -252,13 +252,13 @@ const FaqPage = () => {
           <div className='w-full max-[650px]:w-full'>
             
             <h1 className='text-[45px] text-[#0071BA] text-center mb-5 mt-6'>Frequently Asked Questions</h1>
-            <div className='flex relative mt-10'>
-              <div className='flex flex-col gap-y-8 w-[30%] items-center sticky top-[105px] h-[400px]'>
+            <div className='flex relative mt-10 max-[700px]:w-full max-[700px]:flex-col'>
+              <div className='flex flex-col gap-y-8 gap-x-8 max-[700px]:overflow-y-hidden max-[700px]:overflow-x-auto  w-[30%] max-[700px]:w-full max-[700px]:flex-row items-center max-[700px]:relative sticky max-[700px]:top-0 top-[105px] max-[700px]:h-[80px] h-[400px]'>
                 {
                   sidebar.map((item) => (
                     <div 
                       key={item.id}
-                      className='flex items-center gap-x-4 gap-y-4 cursor-pointer'  
+                      className='flex max-[700px]:flex-col max-[700px]:gap-x-[10px] max-[700px]:justify-between items-center gap-x-4 gap-y-4 cursor-pointer'  
                       onClick={() => scrollToSection(item.id)}
                     >
                       <div className='w-[40] h-[40px]'>
@@ -270,7 +270,7 @@ const FaqPage = () => {
                 }
               </div>
 
-              <div className='w-[68%] mt-6'>
+              <div className='w-[68%] max-[700px]:w-full max-[700px]:mt-[50px] mt-6'>
                 {
                   faqData.map((faq,index) => (
                    <div key={index} id={faq.id}>
@@ -285,7 +285,7 @@ const FaqPage = () => {
                           iconPosition="start"
                           isOpen={openIndex === index}
                           onClick={() => handleToggle(index)} 
-                          classNames={`${openIndex === index ? 'border border-b-0 font-bold':''} bg-white mb-[14px]`}
+                          classNames={`${openIndex === index ? 'border border-b-0 font-bold':''} bg-white`}
                           backgroundColor="#F7F9FB"
                           answerClassName={`${openIndex === index ? 'border-r border-l border-b':''} !p-3 font-bold !text-[#0573BD] text-[17px] !pl-10`}
                           questionClassName={`text-lg text-black  ${openIndex === index ? 'font-bold':' font-[400]'}`}

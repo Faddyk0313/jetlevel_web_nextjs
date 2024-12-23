@@ -93,7 +93,6 @@ h2 {
   font-family: var(--font-playfair-display);
   font-size: 2.375rem; /* 32px */
   font-weight: 700;
-  letter-spacing: 1px;
   color: var(--darkBlue);
   @media (min-width: 765px) {
     font-size: 2.5rem; /* 40px */
@@ -108,7 +107,6 @@ h3 {
 h4 {
   font-size: 1rem /* 16px */;
   line-height: 1rem /* 16px */;
-  letter-spacing: 1px;
 }
 
 p.details {
@@ -223,6 +221,9 @@ blockquote {
 .social-icons:hover path {
   fill: black;
   animation: move-down 0.3s ease-in-out forwards;
+}
+.button-hover button:hover{
+  color: white;
 }
 
 span{

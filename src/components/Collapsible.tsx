@@ -37,7 +37,7 @@ const FAQDropdown: React.FC<FAQDropdownProps> = ({
   };
 
   return (
-    <div className="max-w-[1350px] w-full m-[0_auto]">
+    <div className="">
       <div
         onClick={onClick}
         className={`${classNames || ''} flex items-center cursor-pointer ${iconPosition === 'end' ? 'justify-between' : 'justify-start'} bg-[${backgroundColor}] pl-6 pt-4 pr-5 pb-4 text-white font-bold text-sm`}

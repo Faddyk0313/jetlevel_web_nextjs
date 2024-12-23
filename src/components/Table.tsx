@@ -31,6 +31,7 @@ const Table: React.FC<TableProps> = ({ data, column, button, border }) => {
                 ))}
               </tr>
             </thead>
+
             <tbody>
               {data && data.length > 0 ? (
                 data.map((row, rowIndex) => (
@@ -43,9 +44,9 @@ const Table: React.FC<TableProps> = ({ data, column, button, border }) => {
                     {column.map((header, colIndex) => (
                       <td
                         key={colIndex}
-                        className={`px-6 [&:nth-child(1)]:pl-[2.3rem] text-center py-4 font-medium whitespace-nowrap dark:text-black ${
+                        className={`px-6 [&:nth-child(1)]:pl-[2.3rem] text-center py-4 font-medium whitespace-nowrap ${
                           button && colIndex === column.length - 1
-                            ? 'bg-[#F8F8F8] hover:bg-black hover:text-white'
+                            ? 'bg-[#F8F8F8] hover:bg-black cursor-pointer button-hover hover:text-white'
                             : ''
                         } ${border ? 'border-2 border-[#0071BA]' : ''}`}
                       >
@@ -58,8 +59,11 @@ const Table: React.FC<TableProps> = ({ data, column, button, border }) => {
                     ))}
                   </tr>
                 ))
-              ) : null}
+              ) : 
+              null
+            }
             </tbody>
+
           </table>
         </div>
       </div>

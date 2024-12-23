@@ -35,7 +35,7 @@ export default function IndustoryCharter(): JSX.Element {
       <SmartTravelTools />
       <PopularPrivateJetCharters />
       <WhatOurClientsSay />
-      <RequestQuoteBanner />
+      {/* <RequestQuoteBanner /> */}
     </>
   );
 }
