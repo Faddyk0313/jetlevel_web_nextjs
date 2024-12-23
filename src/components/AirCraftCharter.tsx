@@ -23,18 +23,18 @@ type AirCraftCharterProps = {
 
 const AirCraftCharter: React.FC<AirCraftCharterProps> = ({ contentColor,header, description, iconsArray, aircraftArray, backgroundImage }) => {
   return (
-    <div style={{ backgroundImage:`url(${backgroundImage})` }} className={`p-[60px] pb-0`}>
-      <div className='w-[65%] m-[0_auto]'>
+    <div style={{ backgroundImage:`url(${backgroundImage})` }} className={`p-[60px] max-[700px]:p-[30px] max-[700px]:pb-0 pb-0`}>
+      <div className='w-[65%] max-[700px]:w-full m-[0_auto]'>
         <h2 className={`${contentColor} text-center`}>{header}</h2>
-        <p className={`text-lg text-center mt-4 w-[65%] m-[0_auto] ${contentColor}`}>{description}</p>
+        <p className={`text-lg text-center mt-4 w-[65%] max-[700px]:w-full m-[0_auto] ${contentColor}`}>{description}</p>
 
-        <div className='flex items-center justify-between mt-[40px]'>
+        <div className='flex flex-wrap items-center justify-between mt-[40px] max-[700px]:gap-y-8'>
           {
             iconsArray.map((icon, index) => (
             <div
               key={index}
-              className={`flex flex-col justify-center items-center w-[25%] ${
-                index !== iconsArray.length - 1 ? 'border-r-2 border-dotted border-black pr-10 mr-10' : ''
+              className={`flex flex-col justify-center items-center w-[23%] max-[700px]:w-[46%] ${
+                index !== iconsArray.length - 1 ? 'max-[700px]:border-0 border-r-2 border-dotted border-black max-[700px]:pr-0 pr-10 mr-10' : ''
               }`}
             >
               <img
@@ -49,11 +49,11 @@ const AirCraftCharter: React.FC<AirCraftCharterProps> = ({ contentColor,header, 
           ))}
         </div>
       </div>
-      <div className='flex mt-[70px] justify-between w-[75%] m-[0_auto]'>
+      <div className='flex mt-[70px] justify-between max-[700px]:gap-y-4 max-[700px]:gap-x-2 max-[700px]:justify-start max-[700px]:w-full w-[75%] m-[0_auto] flex-wrap'>
         {aircraftArray.map((aircraft, index) => (
           <div
             key={index}
-            className='relative bg-white p-[8px] pb-3 w-[19%]'
+            className='relative bg-white p-[8px] pb-3 w-[19%] max-[700px]:w-[31%]'
           >
              <div 
               className='relative h-[130px] group after:content-"" after:absolute after:bottom-0 after:left-0 after:w-full after:h-10 after:bg-gradient-to-t after:from-white after:via-white/0 after:to-transparent

@@ -64,31 +64,30 @@ const FaqDetailPage = () => {
   ]
   return (
     <div className='md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto'>
-      <div className='flex justify-between'>
-      <div className='w-[67%] text-justify'>
-        <h2>Can I charter a helicopter along with a jet?</h2>
-        <p className='mt-2 leading-7 text-md'>A charter flight is a non-scheduled flight booked by an individual, group, or company for private use. Unlike commercial airlines which follow set routes and schedules, a charter flight is tailored to your needs. You can choose your destination, departure time and even the type of aircraft. Whether you’re flying for business, pleasure, or transporting cargo, charter flights offer flexibility and comfort you can’t get on a commercial flight.</p>
-        <p className='mt-2 leading-7 text-md'>Charter flights can be for short or long haul, skip the crowds, and long security queues. They are popular with high-profile individuals, businesses, and those who want a more luxurious and exclusive travel experience. Ultimately a charter flight is about creating a bespoke flying experience that puts the passenger first.</p>
+      <div className='flex justify-between flex-wrap'>
+      <div className='w-[67%] max-[700px]:w-[90%] max-[700px]:m-[0_auto] text-justify'>
+        <h2 className='mt-4'>Can I charter a helicopter along with a jet?</h2>
+        <p className='mt-4 leading-7 text-md'>A charter flight is a non-scheduled flight booked by an individual, group, or company for private use. Unlike commercial airlines which follow set routes and schedules, a charter flight is tailored to your needs. You can choose your destination, departure time and even the type of aircraft. Whether you’re flying for business, pleasure, or transporting cargo, charter flights offer flexibility and comfort you can’t get on a commercial flight.</p>
+        <p className='mt-4 leading-7 text-md'>Charter flights can be for short or long haul, skip the crowds, and long security queues. They are popular with high-profile individuals, businesses, and those who want a more luxurious and exclusive travel experience. Ultimately a charter flight is about creating a bespoke flying experience that puts the passenger first.</p>
 
-        <h2>Types of Charter Flights</h2>
-        <p className='mt-2 leading-7 text-md'>Charter flights come in many forms depending on the purpose and client. Below are the main</p>
+        <h2 className='mt-4'>Types of Charter Flights</h2>
+        <p className='mt-4 leading-7 text-md'>Charter flights come in many forms depending on the purpose and client. Below are the main</p>
 
-        <h2>Public and Private Charter Flight</h2>
-        <p className='mt-2 leading-7 text-md'>In a public charter an organization or travel agency rents an aircraft to transport a group of people, usually for holidays or events. It’s cheaper than private jets but still offers some level of exclusivity compared to commercial airlines. A public charter is not the same as a private charter flight which offers a more exclusive and bespoke travel experience.</p>
+        <h2 className='mt-4'>Public and Private Charter Flight</h2>
+        <p className='mt-4 leading-7 text-md'>In a public charter an organization or travel agency rents an aircraft to transport a group of people, usually for holidays or events. It’s cheaper than private jets but still offers some level of exclusivity compared to commercial airlines. A public charter is not the same as a private charter flight which offers a more exclusive and bespoke travel experience.</p>
 
-        <h2>Public and Private Charter Flight</h2>
-        <p className='mt-2 leading-7 text-md'>In a public charter an organization or travel agency rents an aircraft to transport a group of people, usually for holidays or events. It’s cheaper than private jets but still offers some level of exclusivity compared to commercial airlines. A public charter is not the same as a private charter flight which offers a more exclusive and bespoke travel experience.</p>
+        <h2 className='mt-4'>Public and Private Charter Flight</h2>
+        <p className='mt-4 leading-7 text-md'>In a public charter an organization or travel agency rents an aircraft to transport a group of people, usually for holidays or events. It’s cheaper than private jets but still offers some level of exclusivity compared to commercial airlines. A public charter is not the same as a private charter flight which offers a more exclusive and bespoke travel experience.</p>
 
-        <h2>Public and Private Charter Flight</h2>
-        <p className='mt-2 leading-7 text-md'>In a public charter an organization or travel agency rents an aircraft to transport a group of people, usually for holidays or events. It’s cheaper than private jets but still offers some level of exclusivity compared to commercial airlines. A public charter is not the same as a private charter flight which offers a more exclusive and bespoke travel experience.</p>
-        <h2>Public and Private Charter Flight</h2>
-        <p className='mt-2 leading-7 text-md'>In a public charter an organization or travel agency rents an aircraft to transport a group of people, usually for holidays or events. It’s cheaper than private jets but still offers some level of exclusivity compared to commercial airlines. A public charter is not the same as a private charter flight which offers a more exclusive and bespoke travel experience.</p>
-        <h2>Public and Private Charter Flight</h2>
-        <p className='mt-2 leading-7 text-md'>In a public charter an organization or travel agency rents an aircraft to transport a group of people, usually for holidays or events. It’s cheaper than private jets but still offers some level of exclusivity compared to commercial airlines. A public charter is not the same as a private charter flight which offers a more exclusive and bespoke travel experience.</p>
+        <h2 className='mt-4'>Public and Private Charter Flight</h2>
+        <p className='mt-4 leading-7 text-md'>In a public charter an organization or travel agency rents an aircraft to transport a group of people, usually for holidays or events. It’s cheaper than private jets but still offers some level of exclusivity compared to commercial airlines. A public charter is not the same as a private charter flight which offers a more exclusive and bespoke travel experience.</p>
+        <h2 className='mt-4'>Public and Private Charter Flight</h2>
+        <p className='mt-4 leading-7 text-md'>In a public charter an organization or travel agency rents an aircraft to transport a group of people, usually for holidays or events. It’s cheaper than private jets but still offers some level of exclusivity compared to commercial airlines. A public charter is not the same as a private charter flight which offers a more exclusive and bespoke travel experience.</p>
+        <h2 className='mt-4'>Public and Private Charter Flight</h2>
+        <p className='mt-4 leading-7 text-md'>In a public charter an organization or travel agency rents an aircraft to transport a group of people, usually for holidays or events. It’s cheaper than private jets but still offers some level of exclusivity compared to commercial airlines. A public charter is not the same as a private charter flight which offers a more exclusive and bespoke travel experience.</p>
       </div>
 
-
-      <div className='w-[28%] mt-8 sticky top-0 h-full'>
+      <div className='w-[28%] max-[700px]:w-[90%] max-[700px]:m-[30px_auto] mt-8 sticky top-[100px] h-full'>
         <h3 className='font-bold text-xl mb-4'>Related Questions</h3>
         <div className='mb-7'>
           {

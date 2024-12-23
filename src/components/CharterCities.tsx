@@ -9,7 +9,7 @@ interface CharterCityProps {
 const CharterCity: React.FC<CharterCityProps> = ({ img, heading, link }) => {
   return (
     <div
-      className="bg-[#0071BA] w-[24%] shadow-[3px_2px_6px_3px_lightgray] cursor-pointer"
+      className="bg-[#0071BA] w-[24%] max-[700px]:w-full shadow-[3px_2px_6px_3px_lightgray] cursor-pointer"
     >
       <div
         className="w-full h-[218px] bg-cover bg-center"

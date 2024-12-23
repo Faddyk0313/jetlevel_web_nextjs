@@ -19,7 +19,7 @@ const ChartersTypes: React.FC<ChartersTypesProps> = ({ charterType }) => {
           charterType?.map((charter, index,array) => (
           <div
             key={index}
-            className={`${array?.length === 6 ? 'w-[32%]': 'w-[14%]'} h-[270px] cursor-pointer group border-2 border-[#0071BA] bg-cover rounded-lg relative hover:border-black`}
+            className={`${array?.length === 6 ? 'w-[32%] max-[700px]:w-full': 'w-[14%] max-[700px]:w-full'} h-[270px] cursor-pointer group border-2 border-[#0071BA] bg-cover rounded-lg relative hover:border-black`}
             style={{ backgroundImage: `url(${charter.image})` }}
           >
             <div className="absolute inset-0 bg-black opacity-50 rounded-lg group-hover:opacity-60"></div>

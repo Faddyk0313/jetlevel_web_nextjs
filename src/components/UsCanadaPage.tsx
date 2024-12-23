@@ -131,7 +131,7 @@ const UsCanadaPage = () => {
   return (
     <div>
       <section>
-        <h2 className="text-center">
+        <h2 className="text-center max-[700px]:text-[30px]">
           Explore our featured cities or Inquire about a quote for travel to/from any destination worldwide.
         </h2>
         <div className="text-center pt-8">
@@ -144,10 +144,10 @@ const UsCanadaPage = () => {
           value={searchTerm}
           onChange={handleSearch}
           placeholder="Browse your dream destination"
-          className="pl-[20px] font-bold focus:outline-transparent w-[96%] rounded-[30px_0px_0px_30px]"
+          className="pl-[20px] font-bold focus:outline-transparent w-[96%] max-[700px]:w-[90%] rounded-[30px_0px_0px_30px]"
           type="text"
         />
-        <div className="bg-[#0071BA] w-[4%] p-3 rounded-[0px_40px_40px_0px] text-center">
+        <div className="bg-[#0071BA] w-[4%] max-[700px]:w-[10%] p-3 rounded-[0px_40px_40px_0px] text-center">
           <Search />
         </div>
       </div>
