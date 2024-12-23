@@ -2,7 +2,7 @@ export const getPrice = (amount:string) => {
     let decimalAmount = parseFloat(parseFloat(amount).toFixed(2));
     let finalAmount = decimalAmount.toLocaleString("en-US");
     return finalAmount;
-  };
+  }; 
   export   const filterPassedTime = (time:number | string | Date) => {
     const currentDate = new Date();
     const selectedDate = new Date(time);
