@@ -7,7 +7,7 @@ import RoutesPage from "@/components/RoutesPage";
 import { createClient } from "@/lib/contento";
 import { ContentData } from "@gocontento/client";
 import { notFound } from "next/navigation";
-
+ 
 type PageProps = {
     params: {
         subOption: string;
