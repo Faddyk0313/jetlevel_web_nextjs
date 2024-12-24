@@ -79,14 +79,14 @@ const CompanyPage = async ({ params }: PageProps) => {
                 {blogContent.slug ? (
                   <Link href={blogContent.slug}>
                     <Image
-                      src={blogContent.fields.hero_image.assets[0].asset.url}
+                      src={blogContent.fields.hero_image?.assets[0]?.asset?.url}
                       width={
-                        blogContent.fields.hero_image.assets[0].asset.width
+                        blogContent.fields.hero_image?.assets[0]?.asset?.width
                       }
                       height={
-                        blogContent.fields.hero_image.assets[0].asset.height
+                        blogContent.fields.hero_image?.assets[0]?.asset?.height
                       }
-                      alt={blogContent.fields.hero_image.assets[0].asset.name}
+                      alt={blogContent.fields.hero_image?.assets[0]?.asset?.name}
                       className="max-h-dvh w-auto h-auto"
                     />
                   </Link>
