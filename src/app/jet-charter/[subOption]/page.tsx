@@ -1,7 +1,9 @@
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
+import UsCanadaPage from '@/components/UsCanadaPage';
 import { createClient } from "@/lib/contento";
 import BrandNames from "@/sections/BrandNames";
 import Hero from "@/sections/Hero";
+import { UsCanadaCities } from '@/svg';
 import Link from "next/link";
 import { notFound } from "next/navigation";
 
@@ -68,7 +70,13 @@ const JetCharter = async ({ params }: PageProps) => {
       <BrandNames />
       <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
         <Breadcrumb />
-        <div className="">
+        {
+          title === 'US Canada' ? 
+          <UsCanadaPage />
+          :
+          null
+        }
+        {/* <div className="">
           <ul>
             {content?.map((item, key) => (
               <li key={key}>
@@ -78,7 +86,7 @@ const JetCharter = async ({ params }: PageProps) => {
               </li>
             ))}
           </ul>
-        </div>
+        </div> */}
       </section>
 
     </>

@@ -123,7 +123,7 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
             singleIndustory?.advantages?.contents?.map((content,index,array) => {
               const Icon = iconMapping[content.icon] ;
               return(
-                <div key ={index} className={`${array?.length === 6 ? 'w-[33%]' : 'w-[48%]'}`}>
+                <div key ={index} className={`${array?.length === 6 ? 'w-[33%] max-[700px]:w-full' : 'w-[48%] max-[700px]:w-full'}`}>
                   <CharterAdvantages icon={<Icon />} heading={content?.title} description={content?.para}  />
                 </div>
               )
@@ -132,7 +132,7 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
         </div>
       </section>
 
-      <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
+      <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto max-[700px]:hidden">
         <h2>{singleIndustory?.aviationSolutions?.heading || ''}</h2>
         <div className='flex justify-between mt-[40px] mb-[40px]'> 
           {
@@ -148,31 +148,34 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
         </div>
       </section>
 
-      <section style={{ backgroundImage: `url('https://jetlevel.com/wp-content/uploads/2022/08/R-29.jpg')`}} className="px-5 md:px-10 mt-[50px] mb-[50px] xl:px-20 py-7 max-w-[1800px] mx-auto relative bg-center pt-[70px] bg-cover h-[500px] pb-[70px]">
+      <section 
+        style={{ backgroundImage: `url('https://jetlevel.com/wp-content/uploads/2022/08/R-29.jpg')`}} 
+        className="px-5 md:px-10 mt-[50px] mb-[50px] xl:px-20 py-7 max-w-[1800px] mx-auto relative bg-center pt-[70px] bg-cover max-[700px]:h-full h-[500px] pb-[70px]"
+      >
         <div className='absolute inset-0 bg-black opacity-50 group-hover:opacity-60'></div>
-        <div className='flex relative justify-between'>
-          <div className='w-[48%]'>
-            <h3 className='text-white text-[40px] font-calibari font-bold'>{singleIndustory?.whyChooseJet?.heading || ''}</h3>
+        <div className='flex relative flex-wrap justify-between'>
+          <div className='w-[48%] max-[700px]:w-full'>
+            <h3 className='text-white max-[700px]:mb-8 text-[40px] font-calibari font-bold max-[700px]:text-[25px]'>{singleIndustory?.whyChooseJet?.heading || ''}</h3>
           </div>
-          <div className='flex flex-wrap w-[48%] justify-between gap-y-6 items-center'>
+          <div className='flex flex-wrap max-[700px]:w-full max-[700px]:mb-8 w-[48%] justify-between gap-y-6 items-center'>
             {
               singleIndustory?.whyChooseJet?.items.map((item) => (
-                <div className='w-[48%]'>
+                <div className='w-[48%] max-[700px]:w-full'>
                   <h4 className='text-white font-bold mb-4'>{item?.title}</h4>
                   <p className='text-white text-sm'>{item?.description}</p>
                 </div>
               ))
             }
-            <div className='w-[48%]'>
+            <div className='w-[48%] max-[700px]:w-full max-[700px]:text-end max-[700px]:mt-8'>
               <button className='bg-[#0071BA] p-2 text-white rounded-md'>Book Corporate Charter</button>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="w-[80%] m-[0_auto]">
+      <section className="w-[80%] max-[700px]:w-[95%] m-[0_auto]">
         <div 
-          className="h-[500px] p-[90px] text-center text-white flex flex-col rounded-2xl justify-center items-center relative overflow-hidden bg-black"
+          className="h-[500px] max-[700px]:p-[50px] p-[90px] text-center text-white flex flex-col rounded-2xl justify-center items-center relative overflow-hidden bg-black"
         >
           <div 
             style={{
@@ -187,7 +190,7 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
           ></div>
 
           <div className="relative z-10">
-            <h2 className="text-[45px] font-bold mb-4 text-white font-calibari">Elevate your Corporate Travel</h2>
+            <h2 className="text-[45px] font-bold mb-4 text-white font-calibari max-[700px]:text-[25px]">Elevate your Corporate Travel</h2>
             <p className="text-md mb-4">
               Elevate your corporate travel with JetLevel Aviation’s specialized jet charter services. Contact us today to discuss your business travel needs and discover how we can help you achieve more with every flight.
             </p>
@@ -204,7 +207,7 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
       <SmartTravelTools />
       <PopularPrivateJetCharters />
       <WhatOurClientsSay />
-      <RequestQuoteBanner />
+      {/* <RequestQuoteBanner /> */}
     </div>
   )
 }

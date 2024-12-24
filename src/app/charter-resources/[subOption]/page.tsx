@@ -1,8 +1,10 @@
+import AircraftCharterPage from '@/components/AircraftCharterPage';
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
+import CostCalculatorPage from '@/components/CostCalculatorPage';
+import UsaAirportPage from '@/components/UsaAirportPage';
 import { createClient } from "@/lib/contento";
 import BrandNames from "@/sections/BrandNames";
 import Hero from "@/sections/Hero";
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 type PageProps = {
@@ -77,7 +79,7 @@ const CharterResources = async ({ params }: PageProps) => {
     <BrandNames />
     <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
       <Breadcrumb />
-      <div className="">
+      {/* <div className="">
         <ul>
           {content?.map((item, key) => (
             <li key={key}>
@@ -87,9 +89,16 @@ const CharterResources = async ({ params }: PageProps) => {
             </li>
           ))}
         </ul>
-      </div>
+      </div> */}
     </section>
-
+    {
+      title === 'Private Jet Airports' ?
+      <UsaAirportPage />:
+      title === 'Aircraft Types' ?
+      <AircraftCharterPage />:
+      title === 'Cost Estimator' ?
+      <CostCalculatorPage /> : null
+    }
   </>
   );
 };

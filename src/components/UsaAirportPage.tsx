@@ -93,30 +93,44 @@ const UsaAirportPage = () => {
   ]
   return (
     <div>
-      <Hero title="JetLevel Airport Directory Guide" description="JetLevel offers flights to and from almost anywhere in the world. Learn more about some of the airports we fly into with our airport directory guide below." image="https://jetlevel.com/wp-content/uploads/2022/11/Airport-Runway-Aerial-1.jpg" hasCalculator={false} />
-      <BrandNames />
-      <section className="flex flex-col lg:flex-row gap-10 px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
-        <div className='min-w-full md:min-w-[72%]'>
-          <Breadcrumb />
-        </div>
-      </section>
       <div className='bg-[#0071BA] flex flex-col justify-center gap-y-[20px] p-8'>
         <div className='px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto'>
           <h2 className='text-center text-white text-[30px]'>Select Your Airport</h2>
           <p className='text-center text-white mt-[40px] mb-[50px] text-sm'>Our services include designing customized air travel itineraries for each client and our advisors can help you to select a destination, aircraft, ground transportation, and hotel for your journey. Browse our airport directory guide below to learn more about some of the airports we fly into and the transportation and hotel options available.</p>
-            <div className='flex justify-center'>
+            <div className='flex justify-center relative h-full'>
               <Image 
                 src="https://jetlevel.com/wp-content/uploads/2022/12/image-background-airport.png" 
                 alt="airports" 
                 width={950} 
                 height={300} 
+                className='w-[900px] h-full'
               />
+              <Link href={'/king-county-international-airport-kbfi'} className='max-[700px]:hidden absolute top-[6px] left-[24%] w-[80px] h-[40px]'></Link>
+              <Link href={'/centennial-airport-kapa/'} className='max-[700px]:hidden absolute top-[40%] left-[38%] w-[80px] h-[40px]'></Link>
+              <Link href={'/will-rogers-world-airport-kokc/'} className='max-[700px]:hidden absolute top-[56%] left-[45%] w-[80px] h-[40px]'></Link>
+              <Link href={'/wiley-post-airport-kpwa'} className='max-[700px]:hidden absolute top-[56%] left-[52%] w-[80px] h-[40px]'></Link>
+              <Link href={'/midland-international-air-space-port-kmaf/'} className='max-[700px]:hidden absolute top-[68%] left-[41%] w-[80px] h-[40px]'></Link>
+              <Link href={'/addison-airport-kads/'} className='max-[700px]:hidden absolute top-[66%] left-[51%] w-[80px] h-[40px]'></Link>
+              <Link href={'/austin-bergstrom-international-airport-kaus/'} className='max-[700px]:hidden absolute top-[75%] left-[50%] w-[80px] h-[40px]'></Link>
+              <Link href={'/spirit-of-st-louis-airport-ksus/'} className='max-[700px]:hidden absolute top-[44%] left-[57%] w-[80px] h-[40px]'></Link>
+              <Link href={'/chicago-executive-airport-kpwk/'} className='max-[700px]:hidden absolute top-[31%] left-[60%] w-[80px] h-[40px]'></Link>
+              <Link href={'/dekalb-peachtree-airport-kpdk'} className='max-[700px]:hidden absolute top-[59%] left-[63%] w-[80px] h-[40px]'></Link>
+              <Link href={'/boston-logan-international-airport-kbos'} className='max-[700px]:hidden absolute top-[19%] left-[78%] w-[80px] h-[40px]'></Link>
+              <Link href={'/westchester-county-airport-khpn/'} className='max-[700px]:hidden absolute top-[27%] left-[75%] w-[80px] h-[40px]'></Link>
+              <Link href={'/dulles-international-airport-kiad'} className='max-[700px]:hidden absolute top-[39%] left-[71%] w-[80px] h-[40px]'></Link>
+              <Link href={'/raleigh-durham-international-airport-krdu/'} className='max-[700px]:hidden absolute top-[49%] left-[71%] w-[80px] h-[40px]'></Link>
+              <Link href={'/charleston-international-airport-kchs'} className='max-[700px]:hidden absolute top-[62%] left-[71%] w-[80px] h-[40px]'></Link>
+              <Link href={'/st-pete-clearwater-international-airport-kpie'} className='max-[700px]:hidden absolute top-[81%] left-[65%] w-[80px] h-[40px]'></Link>
+              <Link href={'/orlando-international-airport-kmco'} className='max-[700px]:hidden absolute top-[77%] left-[71%] w-[80px] h-[40px]'></Link>
+              <Link href={'/naples-airport-kapf/'} className='max-[700px]:hidden absolute top-[87%] left-[66%] w-[80px] h-[40px]'></Link>
+              <Link href={'/miami-opa-locka-executive-airport-kopf'} className='max-[700px]:hidden absolute top-[86%] left-[72.5%] w-[37px] h-[52px]'></Link>
+              <Link href={'/leonard-thompson-airport-myam'} className='max-[700px]:hidden absolute top-[86%] left-[75%] w-[80px] h-[40px]'></Link>
             </div>
         </div>
       </div>
       <section className="px-5 md:px-10 xl:px-20 py-7 mt-[40px] max-w-[1800px] mx-auto">
         <div className="flex flex-wrap">
-          <div className="flex-1 text-center">
+          <div className="w-[50%] max-[700px]:w-full text-center">
             {usaAirportList.slice(0, 10).map((airport) => (
               <div key={airport.key} className="mb-4">
                 <Link href={`/usa-airport/${airport.key}`} className='hover:underline text-[#0071BA] text-lg'>
@@ -125,7 +139,7 @@ const UsaAirportPage = () => {
               </div>
             ))}
           </div>
-          <div className="flex-1 text-center">
+          <div className="w-[50%] max-[700px]:w-full max-[700px]:mt-8 text-center">
             {usaAirportList.slice(10, 20).map((airport) => (
               <div key={airport.key} className="mb-4">
                 <Link href={`/usa-airport/${airport.key}`} className='hover:underline text-[#0071BA] text-lg'>
@@ -136,7 +150,7 @@ const UsaAirportPage = () => {
           </div>
         </div>
       </section>
-      <RequestQuoteBanner />
+      {/* <RequestQuoteBanner /> */}
     </div>
   );
 };

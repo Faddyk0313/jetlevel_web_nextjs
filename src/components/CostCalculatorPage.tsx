@@ -31,13 +31,6 @@ const CostCalculatorPage = () => {
   ]
   return (
     <div>
-      <Hero title="Charter Flights Cost Calculator" description="Get instant comprehensive breakdown of the estimated cost and aircraft type" image="https://jetlevel.com/wp-content/uploads/2019/10/iStock-1073242590-e1687592795610.jpg" hasOverlay={true} hasCalculator={true} showCalculator={false} />
-      <BrandNames />
-      <section className="flex flex-col lg:flex-row gap-10 px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
-        <div className='min-w-full md:min-w-[72%]'>
-          <Breadcrumb />
-        </div>
-      </section>
       <div className='flex flex-col justify-center gap-y-[20px] p-8'>
         <div className='px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto'>
           <h2 className='text-center'>Thank you for your interest in JetLevel Aviation!</h2>
@@ -111,7 +104,9 @@ const CostCalculatorPage = () => {
             <section className='pb-0'>
               <h2>Downloadable Resources</h2>
               <p>For more comprehensive information on charter flight costs, we offer downloadable PDF guides. These resources delve deeper into cost structures, types of aircraft, and more.</p>
-              <button className='p-3 bg-[#0071BA] text-white mt-8'>Click here to download</button>
+              <a href='https://jetlevel.com/wp-content/uploads/2023/09/The-Comprehensive-Guide-to-Chartering-a-Private-Jet.pdf' download>
+                <button className='p-3 bg-[#0071BA] text-white mt-8'>Click here to download</button>
+              </a>
             </section>
         </div>
       </div>
