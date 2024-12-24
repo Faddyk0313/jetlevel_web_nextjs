@@ -108,24 +108,20 @@ const AircraftCharterPage = () => {
   ]
   return (
     <div>
-      <Hero title="Private Jet Charter Aircraft Flights & Costs" description='Explore JetLevel Aviation’s private jet aircraft charters options tailored to your needs. From light jets to long-range aircraft, we offer competitive costs and flexible solutions. Get a customized quote today for your next luxurious and efficient flight.' image="https://jetlevel.com/wp-content/uploads/2022/09/bg-hero.jpg" hasCalculator={false} />
-      <div>
-        {
-          aircraftsCharters.map((aircraft,index) =>(
-            <div key={index}>
-              <AirCraftCharter 
-                contentColor={aircraft.colors}
-                backgroundImage={aircraft.backgroundImage}
-                header={aircraft.header} 
-                description={aircraft.description}
-                iconsArray={aircraft.icons}
-                aircraftArray={aircraft.aircraftArray}
-              />
-            </div>
-          ))
-        }
-        
-      </div>
+      {
+        aircraftsCharters.map((aircraft,index) =>(
+          <div key={index}>
+            <AirCraftCharter 
+              contentColor={aircraft.colors}
+              backgroundImage={aircraft.backgroundImage}
+              header={aircraft.header} 
+              description={aircraft.description}
+              iconsArray={aircraft.icons}
+              aircraftArray={aircraft.aircraftArray}
+            />
+          </div>
+        ))
+      }
     </div>
   )
 }

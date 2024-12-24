@@ -93,13 +93,6 @@ const UsaAirportPage = () => {
   ]
   return (
     <div>
-      <Hero title="JetLevel Airport Directory Guide" description="JetLevel offers flights to and from almost anywhere in the world. Learn more about some of the airports we fly into with our airport directory guide below." image="https://jetlevel.com/wp-content/uploads/2022/11/Airport-Runway-Aerial-1.jpg" hasCalculator={false} />
-      <BrandNames />
-      <section className="flex flex-col lg:flex-row gap-10 px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
-        <div className='min-w-full md:min-w-[72%]'>
-          <Breadcrumb />
-        </div>
-      </section>
       <div className='bg-[#0071BA] flex flex-col justify-center gap-y-[20px] p-8'>
         <div className='px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto'>
           <h2 className='text-center text-white text-[30px]'>Select Your Airport</h2>
