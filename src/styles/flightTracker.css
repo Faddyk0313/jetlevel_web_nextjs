@@ -1,0 +1,271 @@
+
+@media only screen and (max-width: 768px) {
+  .flight-tracker-results-inner .ft-results-2 {
+    padding: 0px;
+  }
+}
+.flight-tracker-results-inner .ft-results-2 {
+  padding-top: 0px;
+}
+
+@media only screen and (max-width: 768px) {
+  .flight-tracker-results-inner .ft-results-2 {
+    padding: 0px;
+  }
+}
+.flight-tracker-results-inner .ft-results-2 {
+  padding-top: 0px;
+}
+
+/* For mobile devices */
+@media (max-width: 768px) {
+  .ft-map img {
+    width: 100%; /* Adjust the width to your needs */
+    height: auto;
+  }
+}
+
+/* For desktop devices */
+@media (min-width: 769px) {
+  .ft-map img {
+    width: 1000px;
+    height: 600px;
+  }
+}
+
+
+
+
+  .tracker-form-wrap {
+    max-width: 650px;
+    background-color: #fff;
+    padding: 40px 60px;
+    margin: 0 auto;
+    border-radius: 4px;
+    box-shadow: 0 0 29px -8px rgba(0,0,0,.41);
+}   
+.tracker-form-wrap .flight-tracker-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+h1, h2, h3, p, span, form, table, a {
+    line-height: 1.3 !important;
+}
+.tracker-form-wrap .flight-tracker-form .flight-tracker-form-left {
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-align: left;
+    padding-top: 10px;
+}
+.tracker-form-wrap .flight-tracker-form .flight-tracker-form-right {
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-align: left;
+}
+.tracker-form-wrap .flight-tracker-form .flight-tracker-form-left h4 {
+    font-family: "Raleway", sans-serif !important;
+    font-weight: 700;
+    font-size: 16px;
+    color: #000;
+}
+.tracker-form-wrap .flight-tracker-form .flight-tracker-form-left p {
+    font-weight: 500;
+    font-size: 12px;
+    color: #000;
+}
+.tracker-form-wrap .flight-tracker-form .flight-tracker-form-right label {
+    font-weight: 700;
+    font-size: 10px;
+}
+.tracker-form-wrap .flight-tracker-form .flight-tracker-form-right .flight-tracker-form-input {
+    display: flex;
+    border-radius: 2px;
+}
+
+
+
+
+.tracker-form-wrap .flight-tracker-form .flight-tracker-form-right .flight-tracker-form-input input {
+    height: 33px;
+    border: unset;
+    border-radius: 2px 0 0 2px;
+    border-left: 1px solid #838383;
+    border-bottom: 1px solid #838383;
+    border-top: 1px solid #838383;
+    padding: 0 10px;
+    color: #000;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 14px;
+    width: 100%;
+}
+.tracker-form-wrap .flight-tracker-form .flight-tracker-form-right .flight-tracker-form-input button {
+    border: unset;
+    background-color: #e47813;
+    border-bottom: 1px solid #838383;
+    border-right: 1px solid #838383;
+    border-top: 1px solid #838383;
+    border-radius: 0 2px 2px 0;
+}
+@media only screen and (max-width: 768px){
+.tracker-form-wrap {
+    padding: 30px 0;
+    max-width: 350px;
+}
+}
+@media only screen and (max-width: 768px){
+.tracker-form-wrap .flight-tracker-form .flight-tracker-form-left {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+}
+}
+
+@media only screen and (max-width: 768px){
+.tracker-form-wrap .flight-tracker-form .flight-tracker-form-right {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+}
+}
+
+
+@media only screen and (max-width: 768px){
+.tracker-form-wrap .flight-tracker-form .flight-tracker-form-right label {
+    padding: 8px 0;
+    font-size: 12px;
+}}
+
+@media only screen and (max-width: 768px){
+.tracker-form-wrap .flight-tracker-form .flight-tracker-form-right .flight-tracker-form-input {
+    justify-content: center;
+    margin: 0 15px;
+}}
+
+.img-search-flight-icon  {
+  vertical-align: middle;
+}
+
+.flight-tracker-results-inner .ft-results-2 {
+    display: flex;
+    padding-top: 20px;
+}
+
+* {
+    box-sizing: border-box;
+}
+.flight-tracker-results-inner .ft-results-2 .ft-results-2-left {
+    padding-right: 25px;
+}
+
+.flight-tracker-results-inner .ft-results-2 .ft-results-2-left, .flight-tracker-results-inner .ft-results-2 .ft-results-2-right {
+    flex: 0 0 50%;
+    max-width: 50%;
+    text-align: left;
+}
+.flight-tracker-results-inner .ft-results-2 .ft-results-2-left h4, .flight-tracker-results-inner .ft-results-2 .ft-results-2-right h4 {
+    font-family: "Raleway", sans-serif !important;
+    color: #000000;
+    font-weight: 600;
+    font-size: 12px;
+    padding-bottom: 10px;
+    position: relative;
+}
+
+.flight-tracker-results-inner .ft-results-2 .ft-results-2-left .ft-results-col-inner {
+    display: flex;
+}
+
+.flight-tracker-results-inner .ft-results-2 .ft-results-2-left .ft-results-col-inner .ft-results-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.flight-tracker-results-inner .ft-results-2 .ft-results-2-left .ft-results-col-inner .ft-results-col p {
+    font-weight: 400;
+    font-size: 10px;
+    color: black;
+    padding-bottom: 5px;
+}
+.flight-tracker-results-inner .ft-results-2 .ft-results-2-left .ft-results-col-inner .ft-results-col .departure-time, .flight-tracker-results-inner .ft-results-2 .ft-results-2-left .ft-results-col-inner .ft-results-col .landing-time {
+    font-weight: 500;
+    font-size: 14px;
+    color: #000000;
+    padding-bottom: 0;
+}
+.flight-tracker-results-inner .ft-results-2 .ft-results-2-left .ft-results-col-inner .ft-results-col .scheduled-text {
+    padding-top: 10px;
+}
+
+.flight-tracker-results-inner .ft-results-2 .ft-results-2-left .ft-results-col-inner .ft-results-col p {
+    font-weight: 400;
+    font-size: 10px;
+    color: black;
+    padding-bottom: 5px;
+}
+
+.flight-tracker-results-inner .ft-results-2 .ft-results-2-left .ft-results-col-inner .ft-results-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.flight-tracker-results-inner .ft-results-2 .ft-results-2-left .ft-results-col-inner .ft-results-col p {
+    font-weight: 400;
+    font-size: 10px;
+    color: black;
+    padding-bottom: 5px;
+}
+.flight-tracker-results-inner .ft-results-2 .ft-results-2-left .ft-results-col-inner .ft-results-col p {
+    font-weight: 400;
+    font-size: 10px;
+    color: black;
+    padding-bottom: 5px;
+}
+.flight-tracker-results-inner .ft-results-2 .ft-results-2-left .ft-results-highlight, .flight-tracker-results-inner .ft-results-2 .ft-results-2-right .ft-results-highlight {
+    background: #eeeeee;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 4px;
+    margin: 5px 0;
+}
+
+
+.flight-tracker-results-inner .ft-results-2 .ft-results-2-left .ft-results-col-inner {
+    display: flex;
+}
+.flight-tracker-results-inner .ft-results-2 .ft-results-2-left .ft-results-col-inner .ft-results-col {
+    flex: 0 0 50%;
+    max-width: 50%;
+}
+.flight-tracker-results-inner .ft-results-2 .ft-results-2-right .ft-results-highlight {
+    background: #eeeeee;
+    font-weight: 500;
+    font-size: 12px;
+    padding: 4px;
+    margin: 5px 0;
+}
+.flight-tracker-results-inner .ft-results-2 .ft-results-2-right .ft-results-col-full {
+    font-weight: 400;
+    font-size: 10px;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+}
+.flight-tracker-results-inner .ft-results-2 .ft-results-2-right .ft-results-col-full {
+    font-weight: 400;
+    font-size: 10px;
+    color: #000000;
+    display: flex;
+    justify-content: space-between;
+}
+.ft-map img {
+    width: 100% !important;
+}
+
+img {
+    vertical-align: middle;
+}
+img {
+    border: 0;
+}
+

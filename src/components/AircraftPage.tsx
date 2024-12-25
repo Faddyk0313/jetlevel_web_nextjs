@@ -49,7 +49,7 @@ const AircraftPage = ({ fields }: any) => {
   return (
     <>
       <Hero
-        image="https://jetlevel.com/wp-content/uploads/2023/07/bg-kads.jpg"
+        image={fields.hero_image.assets[0].asset.url}
         title={fields.hero_section.blocks[0].fields.title.text}
         description={fields.hero_section.blocks[0].fields.paragraph.text}
         hasCalculator={true}
@@ -58,9 +58,9 @@ const AircraftPage = ({ fields }: any) => {
       <section className="flex flex-col lg:flex-row gap-10 px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
         <div className="min-w-full md:min-w-[72%]">
           <Breadcrumb />
-          <CollapsibleAircraftGridSection title='Aircraft Specifications' content={fields.grid_content.blocks} isDefaultOpen={true} />
+          <CollapsibleAircraftGridSection title='Aircraft Specifications' content={fields.grid_content.list} isDefaultOpen={true} />
           <CollapsibleAircraftOverviewSection title={fields.map_heading.text} content={fields.range_distance.number} />
-          <CollapsibleAircraftOverviewSection title={fields.heading.text} content={fields.sub_section.blocks} />
+          <CollapsibleAircraftOverviewSection title={fields.heading.text} content={fields.other_section.text} />
           {/* Aircraft Comparison Iframe */}
           <CollapsibleAvinodeCalculatorSection title={fields.compare_heading.text}  />
           {/* <iframe id="comparison-iframe" className="border-none w-full h-auto" src="https://app.jetlevel.com/aircraftComparison" ></iframe> */}
