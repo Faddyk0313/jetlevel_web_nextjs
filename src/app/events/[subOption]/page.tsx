@@ -36,7 +36,7 @@ const EventDetailPage = ({ params }: PageProps) => {
         <div className='flex justify-between'>
           <div className='w-[73%] max-[650px]:w-full'>
             <h1 className='text-[45px] text-[#0071BA] mb-5 mt-6'>{singleEvent?.heading}</h1>
-            <p className='text-[#727982] text-md mb-4 text-justify'>{singleEvent?.description || ''}</p>
+            <p className='text-[#727982] text-md mb-4 text-justify details'>{singleEvent?.description || ''}</p>
 
             <div className='mt-8'>
             {singleEvent?.content?.map((faq, index) => (
@@ -45,10 +45,10 @@ const EventDetailPage = ({ params }: PageProps) => {
                 question={faq.name}
                 answer={
                   <div>
-                    <p className='mb-4'>{faq.description}</p>
+                    <p className='mb-4 details'>{faq.description}</p>
                     <ul>
                       {faq?.list?.map((item, idx) => (
-                        <li className='mb-2' key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                        <li className='mb-2 details' key={idx} dangerouslySetInnerHTML={{ __html: item }} />
                       ))}
                     </ul>
                   </div>

@@ -57,7 +57,7 @@ const PrivacyPolicyPage = () => {
     <div className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
       <div className="shadow-xl p-[70px_50px_70px_50px] rounded-lg">
         <h2>PRIVACY POLICY</h2>
-        <p>Last updated June 10, 2019</p>
+        <p className='details'>Last updated June 10, 2019</p>
 
         {
           termConditions.map((terms, index) => (
@@ -65,12 +65,12 @@ const PrivacyPolicyPage = () => {
             <h2 className="pb-4">{terms.heading}</h2>
             {Array.isArray(terms.content) ? (
               terms.content.map((item, idx) => (
-                <p key={idx} className="pb-6 leading-7">
+                <p key={idx} className="pb-6 leading-7 details">
                   {item}
                 </p>
               ))
             ) : (
-              <p className="pb-6 leading-7">{terms.content}</p>
+              <p className="pb-6 leading-7 details">{terms.content}</p>
             )}
             {terms.list && (
               <ul className="list-decimal pl-5">

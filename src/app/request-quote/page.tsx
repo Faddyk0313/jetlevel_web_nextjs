@@ -17,7 +17,7 @@ const RequestQuotePage = () => {
       <div className='flex flex-col justify-center gap-y-[20px] p-8'>
         <div className='px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto'>
           <h2 className='text-center'>Thank you for your interest in JetLevel Aviation!</h2>
-          <p className='text-black text-center mt-[40px] mb-[50px] text-md'>Fill out the form for a free personalized estimate for your private jet quotes. Book directly or contact our sales team for assistance. Plan your journey hassle-free with our <span className='text-[#0071BA]'>Free instant quotation Tool</span></p>
+          <p className='text-black text-center mt-[40px] mb-[50px] text-md details'>Fill out the form for a free personalized estimate for your private jet quotes. Book directly or contact our sales team for assistance. Plan your journey hassle-free with our <span className='text-[#0071BA]'>Free instant quotation Tool</span></p>
             <div className='flex justify-center'>
                <div className='w-full outline-none h-auto' id="my-iframe">
                   <Suspense fallback={<div className="search-form__loader"></div>}>
@@ -28,7 +28,7 @@ const RequestQuotePage = () => {
 
             <section className='pt-[40px] py-0'>
               <h2 className='text-center mb-3'>About the Charter Flight Quote</h2>
-              <p className='text-md text-black mb-5'>Upon filling up the form with the desired information, users will receive a comprehensive breakdown of the estimated flight time and aircraft type for their charter flight. The breakdown will include the following details:</p>
+              <p className='text-md text-black mb-5 details'>Upon filling up the form with the desired information, users will receive a comprehensive breakdown of the estimated flight time and aircraft type for their charter flight. The breakdown will include the following details:</p>
               <ul className='list-disc ml-5'>
                 <li><span className='text-[#0071ba] font-bold'>Aircraft Recommendation:</span>  Based on the number of passengers or any other relevant criteria, this tool will recommend a suitable aircraft type for their trip. It could be a turbo prop, light jet, midsize jet, or any other appropriate option.</li>
                 <li><span className='text-[#0071ba] font-bold'>Estimated Flight Time:</span>  This tool will provide an estimated flight duration for the selected route. This information helps users plan their travel schedule more effectively.</li>

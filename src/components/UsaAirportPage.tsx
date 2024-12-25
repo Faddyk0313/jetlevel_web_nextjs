@@ -96,7 +96,7 @@ const UsaAirportPage = () => {
       <div className='bg-[#0071BA] flex flex-col justify-center gap-y-[20px] p-8'>
         <div className='px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto'>
           <h2 className='text-center text-white text-[30px]'>Select Your Airport</h2>
-          <p className='text-center text-white mt-[40px] mb-[50px] text-sm'>Our services include designing customized air travel itineraries for each client and our advisors can help you to select a destination, aircraft, ground transportation, and hotel for your journey. Browse our airport directory guide below to learn more about some of the airports we fly into and the transportation and hotel options available.</p>
+          <p className='text-center text-white mt-[40px] mb-[50px] details'>Our services include designing customized air travel itineraries for each client and our advisors can help you to select a destination, aircraft, ground transportation, and hotel for your journey. Browse our airport directory guide below to learn more about some of the airports we fly into and the transportation and hotel options available.</p>
             <div className='flex justify-center relative h-full'>
               <Image 
                 src="https://jetlevel.com/wp-content/uploads/2022/12/image-background-airport.png" 

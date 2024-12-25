@@ -274,7 +274,7 @@ const FaqPage = () => {
                 {
                   faqData.map((faq,index) => (
                    <div key={index} id={faq.id}>
-                    <h3 className='bg-[#F9F9F9] p-3 mb-4'>{faq.heading}</h3>
+                    <h3 className='bg-[#F9F9F9] p-3 mb-6 mt-6'>{faq.heading}</h3>
                     {
                       faq.content.map((content,index) =>(
                         <Collapsible  

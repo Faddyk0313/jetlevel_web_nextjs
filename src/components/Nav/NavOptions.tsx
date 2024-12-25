@@ -94,7 +94,7 @@ function NavOptions() {
                 )}
             </div>
 
-            <Link href="/pricing" className="flex items-center text-white text-nowrap  hover:text-blue transition-all duration-100">
+            <Link href="/pricing" className="flex items-center text-white text-nowrap  hover:text-blue transition-all duration-100 text-[16px]">
                 PRICING
             </Link>
 

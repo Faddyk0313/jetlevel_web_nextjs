@@ -105,10 +105,16 @@ h3 {
   }
 }
 h4 {
+  margin-bottom: 1rem;
   font-size: 1rem /* 16px */;
   line-height: 1rem /* 16px */;
 }
-
+h2{
+  margin-bottom: 1rem;
+}
+h3{
+  margin-bottom: 1rem;
+}
 p.details {
   font-size: 1.188rem /* 19px */;
   font-weight: 300;
@@ -226,6 +232,10 @@ blockquote {
   color: white;
 }
 
+li{
+  font-size: 1.188rem;
+  margin-bottom: 1rem;
+}
 span{
   color: #0071BA;
   font-weight: 600;
