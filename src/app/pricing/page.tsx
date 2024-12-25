@@ -170,7 +170,7 @@ const EventsPage = () => {
     {
 			heading:'',
 			accessor: '',
-      Cell: ({ row }: { row: Record<string, any> }) => <div className='font-bold text-black hover:text-white w-full h-full'>
+      Cell: ({ row }: { row: Record<string, any> }) => <div className='relative font-bold text-black hover:text-white w-full h-full'>
       <button className='w-full h-full'>Enquire</button>
       </div>
 		},

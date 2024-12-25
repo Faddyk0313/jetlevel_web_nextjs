@@ -77,7 +77,6 @@ const CostCalculatorPage = () => {
                   onClick={() => handleToggle(index)} 
                   classNames='bg-[#F7F9FB] mb-4'
                   backgroundColor="#F7F9FB"
-                  answerClassName='!p-6'
                   questionClassName='text-lg text-black'
                   iconColor={'text-black'}
                 />

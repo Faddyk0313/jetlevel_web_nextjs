@@ -155,7 +155,7 @@ const RequestQuotePage = () => {
                   onClick={() => handleToggle(index)} 
                   backgroundColor="white"
                   classNames='!text-[#0071BA]  border'
-                  answerClassName='!p-4 border-r border-l'
+                  answerClassName='border-r border-l'
                   questionClassName='text-lg'
                 />
               ))

@@ -29,7 +29,7 @@ const EventDetailPage = ({ params }: PageProps) => {
   };
   return (
     <div>
-       <Hero title={singleEvent?.heading || ''} description="Get Your Private Jet Quote Instantly and Fly in Ultimate Luxury" image="https://jetlevel.com/wp-content/uploads/2024/08/Untitled-design-17.png" hasCalculator={false} />
+       <Hero title={singleEvent?.heading || ''} description="Get Your Private Jet Quote Instantly and Fly in Ultimate Luxury" image="https://jetlevel.com/wp-content/uploads/2024/08/Untitled-design-17.png" hasOverlay={true} hasCalculator={false} />
        <BrandNames />
        <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
        <Breadcrumb />
@@ -59,7 +59,6 @@ const EventDetailPage = ({ params }: PageProps) => {
                 onClick={() => handleToggle(index)}
                 classNames="bg-[#F7F9FB] mb-4"
                 backgroundColor="#F7F9FB"
-                answerClassName="!p-6"
                 questionClassName="text-lg text-black"
                 iconColor="text-black"
               />

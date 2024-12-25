@@ -49,7 +49,7 @@ const FAQDropdown: React.FC<FAQDropdownProps> = ({
         {iconPosition === "end" && <span className={`ml-2 ${iconColor}`}>{renderIcon()}</span>}
       </div>
       <div
-        className={`overflow-hidden transition-all duration-300 ease-in-out ${
+        className={`overflow-hidden transition-all duration-300 overflow-hidden ease-in-out ${
           isOpen ? "max-h-[500px] p-[30px_35px_31px_32px]" : "max-h-0 p-0"
         } ${answerClassName || ""} text-[#555] details`}
         style={{ maxHeight: isOpen ? "500px" : "0" }}
