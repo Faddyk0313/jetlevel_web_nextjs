@@ -1,6 +1,6 @@
 "use client";
 import React, { useState } from "react";
-import { Button } from './ui/button';
+import Button from '@/components/Button';
 
 interface ContactFormValues {
   name: string;
@@ -99,7 +99,11 @@ const ContactUsForm: React.FC = () => {
         />
         {errors.message && <span style={{ color: "red" }}>{errors.message}</span>}
       </div>
-      <button className='bg-[#0071BA] p-3 text-lg text-white font-bold w-[30%]'>Send</button>
+      <Button
+        text='Send'
+        variant='primary'
+        className='w-[30%]'
+      />
     </form>
   );
 };

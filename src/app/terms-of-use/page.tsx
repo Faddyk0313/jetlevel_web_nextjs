@@ -55,12 +55,12 @@ const TermOfUsePage = () => {
             <h2 className="pb-4">{terms.heading}</h2>
             {Array.isArray(terms.content) ? (
               terms.content.map((item, idx) => (
-                <p key={idx} className="pb-6 leading-7">
+                <p key={idx} className="pb-6 leading-7 details">
                   {item}
                 </p>
               ))
             ) : (
-              <p className="pb-6 leading-7">{terms.content}</p>
+              <p className="pb-6 leading-7 details">{terms.content}</p>
             )}
             {terms.list && (
               <ul className="list-decimal pl-5">

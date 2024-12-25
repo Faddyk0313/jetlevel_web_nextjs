@@ -1,5 +1,5 @@
-// SubscribeUs.tsx
 import React, { useState } from 'react';
+import Button from '@/components/Button';
 
 const SubscribeUs: React.FC = () => {
   const [name, setName] = useState('');
@@ -46,12 +46,11 @@ const SubscribeUs: React.FC = () => {
               />
             </div>
             <div>
-              <button 
-                type="submit" 
-                className="w-full bg-[#222222] p-[20px_30px_20px_30px] text-white"
-              >
-                Subscribe Now
-              </button>
+             
+              <Button 
+                text="Subscribe Now" 
+                className="w-full bg-[#222222] rounded-lg mt-0 mb-0 p-[20px_30px_20px_30px] text-white"
+              />
             </div>
           </form>
         </div>

@@ -28,12 +28,12 @@ const AirCraftCharter: React.FC<AirCraftCharterProps> = ({ contentColor,header, 
         <h2 className={`${contentColor} text-center`}>{header}</h2>
         <p className={`text-lg text-center mt-4 w-[65%] max-[700px]:w-full m-[0_auto] ${contentColor}`}>{description}</p>
 
-        <div className='flex flex-wrap items-center justify-between mt-[40px] max-[700px]:gap-y-8'>
+        <div className='flex flex-wrap items-center justify-between mt-[50px] max-[700px]:gap-y-8'>
           {
             iconsArray.map((icon, index) => (
             <div
               key={index}
-              className={`flex flex-col justify-center items-center w-[23%] max-[700px]:w-[46%] ${
+              className={`flex flex-col justify-center items-center w-[23%] max-[700px]:w-[40%] ${
                 index !== iconsArray.length - 1 ? 'max-[700px]:border-0 border-r-2 border-dotted border-black max-[700px]:pr-0 pr-10 mr-10' : ''
               }`}
             >
@@ -56,10 +56,10 @@ const AirCraftCharter: React.FC<AirCraftCharterProps> = ({ contentColor,header, 
             className='relative bg-white p-[8px] pb-3 w-[19%] max-[700px]:w-[31%]'
           >
              <div 
-              className='relative h-[130px] group after:content-"" after:absolute after:bottom-0 after:left-0 after:w-full after:h-10 after:bg-gradient-to-t after:from-white after:via-white/0 after:to-transparent
+              className='relative h-[130px] group
                 hover:scale-105 transition-transform duration-300 ease-in-out'
               style={{
-                backgroundImage: `url(${aircraft.backgroundImage})`,
+                backgroundImage: `linear-gradient(to bottom, transparent 35%, white), url(${aircraft.backgroundImage})`,
                 backgroundSize: 'cover',
                 backgroundPosition: 'center',
               }}

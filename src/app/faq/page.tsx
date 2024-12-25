@@ -274,7 +274,7 @@ const FaqPage = () => {
                 {
                   faqData.map((faq,index) => (
                    <div key={index} id={faq.id}>
-                    <h3 className='bg-[#F9F9F9] p-3 mb-4'>{faq.heading}</h3>
+                    <h3 className='bg-[#F9F9F9] p-3 mb-6 mt-6'>{faq.heading}</h3>
                     {
                       faq.content.map((content,index) =>(
                         <Collapsible  
@@ -287,7 +287,7 @@ const FaqPage = () => {
                           onClick={() => handleToggle(index)} 
                           classNames={`${openIndex === index ? 'border border-b-0 font-bold':''} bg-white`}
                           backgroundColor="#F7F9FB"
-                          answerClassName={`${openIndex === index ? 'border-r border-l border-b':''} !p-3 font-bold !text-[#0573BD] text-[17px] !pl-10`}
+                          answerClassName={`${openIndex === index ? 'border-r border-l border-b':''} font-bold !text-[#0573BD] text-[17px] !pl-10`}
                           questionClassName={`text-lg text-black  ${openIndex === index ? 'font-bold':' font-[400]'}`}
                           iconColor={'text-black'}
                         />

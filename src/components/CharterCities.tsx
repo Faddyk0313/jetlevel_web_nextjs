@@ -16,7 +16,7 @@ const CharterCity: React.FC<CharterCityProps> = ({ img, heading, link }) => {
         style={{ backgroundImage: img ? `url(${img})` : 'none' }}
       >
       </div>
-      <h4 className="text-white p-3 pt-6 pb-6 font-bold">{heading}</h4>
+      <h4 className="text-white p-3 pt-6 font-bold">{heading}</h4>
     </div>
   );
 };

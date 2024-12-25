@@ -50,6 +50,7 @@ import {
   Accessibility,
   Shuffle
 } from "@/svg"; 
+import Button from '@/components/Button';
 
 const iconMapping: { [key: string]: string } = {
   Aircraft,
@@ -167,7 +168,10 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
               ))
             }
             <div className='w-[48%] max-[700px]:w-full max-[700px]:text-end max-[700px]:mt-8'>
-              <button className='bg-[#0071BA] p-2 text-white rounded-md'>Book Corporate Charter</button>
+              <Button
+                text='Book Corporate Charter'
+                variant='primary'
+              />
             </div>
           </div>
         </div>
@@ -194,7 +198,10 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
             <p className="text-md mb-4">
               Elevate your corporate travel with JetLevel Aviation’s specialized jet charter services. Contact us today to discuss your business travel needs and discover how we can help you achieve more with every flight.
             </p>
-            <button className="bg-[#0071BA] p-2 text-white rounded-md">Book Corporate Charter</button>
+            <Button
+              text='Book Corporate Charter'
+              variant='primary'
+            />
           </div>
         </div>
       </section>

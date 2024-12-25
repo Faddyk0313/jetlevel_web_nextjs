@@ -91,8 +91,8 @@ const AvailableAircrafts = () => {
                         <div className="p-4 box-border bg-blue-background h-64 lg:h-[300px] xl:h-64 flex flex-col justify-between bg-cover bg-no-repeat">
                             <div>
                                 <h3 className="text-white font-bold mb-4">{jet.type}</h3>
-                                <p className="mb-3 font-bold text-white">{jet.name}</p>
-                                <p className="mb-4 text-gray-300">{jet.description}</p>
+                                <p className="mb-3 font-bold text-white text-[16px]">{jet.name}</p>
+                                <p className="mb-4 text-gray-300 text-base">{jet.description}</p>
                             </div>
                             <div className='flex flex-col md:flex-row items-center justify-center md:justify-start text-xs md:text-sm gap-3  '>
                                 <Link href='https://jetlevel.com/request-a-quote' className="text-white px-3 py-2 md:py-3 min-w-fit w-2/5  md:w-[35%] rounded-full bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1 text-center text-xs sm:text-sm hover:shadow-card_shadow">GET A QUOTE &nbsp;→</Link>

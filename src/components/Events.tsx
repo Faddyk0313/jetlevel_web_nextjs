@@ -22,7 +22,7 @@ const Events = () => {
                     className="object-cover h-[170px] w-full max-[650px]:mb-6"
                   />
                   <Link href={`/events/${data.heading.replace(/ /g, '-').toLowerCase()}`}>
-                    <h3 className='font-bold text-[#54595F] text-[16px] mt-4 hover:underline'>{data.heading}</h3>
+                    <h3 className='font-bold text-[#54595F] text-[17px] mt-4 hover:underline'>{data.heading}</h3>
                   </Link>
                 </div>
               )

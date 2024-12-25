@@ -3,7 +3,7 @@ import ContactUsForm from './ContactUsForm'
 
 const ContactUsPage = () => {
   return (
-    <div className='flex justify-between mt-6 flex-wrap max-[750px]:block'>
+    <div className='flex justify-between mt-6 flex-wrap mb-10 max-[750px]:block'>
       <div className='w-[48%] max-[750px]:w-full'>
         <h3 className='font-bold'>VISIT OUR ORLANDO OFFICE</h3>
         <p className='text-[#666666] text-lg'>3505 Lake Lynda Dr Suite 200 Orlando,FL 32817</p>

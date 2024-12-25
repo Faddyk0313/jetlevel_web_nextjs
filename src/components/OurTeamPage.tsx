@@ -11,7 +11,7 @@ const OurTeamPage = () => {
       <div className='flex justify-between'>
         <div className='w-full max-[650px]:w-full text-center'>
           <h2 className='mb-5 mt-6'>MEET OUR TEAM MEMBERS</h2>
-          <p className='text-[#727982] text-md text-center mb-[50px]'>At JetLevel Aviation, our expert team is devoted to setting the gold standard in private jet travel. From your initial inquiry to your final destination, each member’s goal is to deliver unparalleled safety and personalized service. We distinguish ourselves through our boutique approach, pairing industry-leading safety credentials with a keen attention to each client’s unique needs. Experience for yourself why JetLevel is redefining the private jet charter industry.</p>
+          <p className='text-[#727982] text-md text-center mb-[50px] details'>At JetLevel Aviation, our expert team is devoted to setting the gold standard in private jet travel. From your initial inquiry to your final destination, each member’s goal is to deliver unparalleled safety and personalized service. We distinguish ourselves through our boutique approach, pairing industry-leading safety credentials with a keen attention to each client’s unique needs. Experience for yourself why JetLevel is redefining the private jet charter industry.</p>
         </div>
       </div>
 
