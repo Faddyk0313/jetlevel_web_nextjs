@@ -13,14 +13,60 @@ import MeetOwner from "@/sections/MeetOwner";
 import AvailableAircrafts from "@/sections/AvailableAircrafts";
 import WhatOurClientsSay from "@/sections/WhatOurClientsSay";
 import Faqs from "@/sections/Faqs";
-import BookYourPrivateJet from "@/sections/BookYourPrivateJet";
 
 export default function Home() {
+
+  const IconsItems = [
+    {
+      icon:'Routes_DistanceCalculator',
+      title:'Routes',
+      description:'Explore diverse routes for your travel needs.',
+      bgcolor:'white'
+    },
+    {
+      icon:'UsCanadaCities',
+      title:'US & Canada Cities',
+      description:'Connect to major cities across US and Canada.',
+      bgcolor:'white'
+    },
+    {
+      icon:'InternationalCities',
+      title:'International Cities',
+      description:'Fly globally to various international destinations.',
+      bgcolor:'white'
+    }, {
+      icon:'Aircraft',
+      title:'Aircraft',
+      description:'Choose from a wide range of luxury jets.',
+      bgcolor:'white'
+    }, {
+      icon:'Airports',
+      title:'Airports',
+      description:'Access convenient airports for your journey.',
+      bgcolor:'white'
+    },
+  ]
   return (
     <>
       <Hero image={"https://fly.jetlevel.com/assets/Private%20jet%20interior%20bg%20.webp"} title={"Get Instant Quote and Charter Your Private Jet Today"} subtitle={"Fly with Confidence!"} tagline={"Fly in 2-4 hours. No hidden fees."} hasCalculator={true} hasOverlay={false}/>
       <BrandNames />
-      <CompanyOverview />
+      <CompanyOverview heading='Our Story, Mission, and Values at Jetlevel Aviation.' description={
+        <>
+        <p className='hidden xl:block details leading-relaxed'>
+          At JetLevel Aviation, we're redefining the private jet charter experience by prioritizing safety, reliability, and transparency. Founded in 2019, we've established ourselves as a trusted global advisor in the aviation industry. Our mission is to provide high-quality aircraft and competitive pricing, backed by leading customer service to deliver the best value. We are committed to core values of reliability, safety, and transparency, ensuring client satisfaction for both frequent travels and special occasions. Fly across the US, Canada, and beyond with our diverse network of aircraft and convenient departure points. Choose JetLevel Aviation for a seamless, worry-free journey every time—elevating your travel experiences to new heights. <br />
+            <span className="my-2 text-darkBlue font-bold italic">
+                Fly with <span className='border-b-2 border-darkBlue'>
+                    Confidence!
+                </span>
+            </span>
+        </p>
+        <p className='details leading-relaxed xl:hidden'>
+            At JetLevel Aviation, we're redefining the private jet charter experience by prioritizing safety, reliability, and transparency. Founded in 2019, we've established ourselves as a trusted global advisor in the aviation industry. Our mission is to provide high-quality aircraft and competitive pricing, backed by leading customer service to deliver the best value. We are committed to core values of reliability, safety, and transparency, ensuring client satisfaction for both frequent travels and special occasions.
+        </p>
+        </>
+        } 
+        IconsItems={IconsItems}
+      />
       <AboutUs />
       <ExclusiveServices />
       <OurOffices />
@@ -30,7 +76,7 @@ export default function Home() {
       <OurComitment />
       <PopularPrivateJetCharters />
       <FourMetrics />
-      <AvailableAircrafts />
+      <AvailableAircrafts heading='Available Private Jets' subHeading='We Offer Hundreds of Private Jets to Choose from in various Jet Sizes, Explore some of them below.' />
       <WhatOurClientsSay />
       <Faqs />
       {/* <BookYourPrivateJet /> */}

@@ -47,14 +47,24 @@ const RequestQuotePage = () => {
         <div className='flex flex-col justify-center gap-y-[20px] p-8'>
           <div>
             <p className=''>In the fast-paced world of private aviation, time is often as valuable as comfort. That’s why at JetLevel Aviation, we’ve revolutionized the way you can quote private jet services. With our instant private jet quotes, you can discover the cost of your next luxurious journey within minutes. But why are instant quotes so crucial in today’s market?</p>
-            <div className='pt-[50px]'>
-              <h2 className='text-start'>The Importance of Instant Quotes in Private Aviation</h2>
-              <p className='text-black text-start mt-[30px] mb-[50px] text-md '>Navigating through the myriad of jet charter quotes and charter quotes used to be a cumbersome process. With our state-of-the-art system, you no longer have to wait or haggle. Instant quotes provide you with the speed, accuracy, and transparency you need to make an informed decision. You get to compare different options, ensuring you select the charter that’s right for you.</p>
-            </div>
+            <Collapsible
+              key={33}
+              question="The Importance of Instant Quotes in Private Aviation"
+              answer={
+                <div>
+                  <p className='text-black text-start text-md '>Navigating through the myriad of jet charter quotes and charter quotes used to be a cumbersome process. With our state-of-the-art system, you no longer have to wait or haggle. Instant quotes provide you with the speed, accuracy, and transparency you need to make an informed decision. You get to compare different options, ensuring you select the charter that’s right for you.</p>
+                </div>
+              }
+              isOpen={openIndex === 33}
+              onClick={() => handleToggle(33)}
+            />
 
-            <div>
-                <h2 className='text-start'>How to Get an Instant Quote with JetLevel Aviation</h2>
-                <p className='text-black text-start mt-[30px] text-md '>At JetLevel Aviation, obtaining your instant private jet quote is more than just a quick process; it’s a comprehensive experience designed for your convenience and specificity. Here’s how it works:</p>
+            <Collapsible
+              key={34}
+              question="How to Get an Instant Quote with JetLevel Aviation"
+              answer={
+                <div>
+                <p className='text-black text-start text-[#0071ba] text-md '>At JetLevel Aviation, obtaining your instant private jet quote is more than just a quick process; it’s a comprehensive experience designed for your convenience and specificity. Here’s how it works:</p>
                 <ul className='pt-3'>
                   <li className='mb-6'><span className='text-[#0071ba] font-bold'> -Choose Your Aircraft Type:</span> Our quoting tool categorizes aircraft into six different types—turboprop, very <a href='https://en.wikipedia.org/wiki/Very_light_jet' target='_blank'>light jet</a>, light jet, mid-size jet, super mid-size jet, and heavy jet. This enables you to tailor your journey according to your preferences.</li>
                   <li className='mb-6'><span className='text-[#0071ba] font-bold'> -Detailed Aircraft Information:</span> For each aircraft type, we provide valuable data including passenger capacity, estimated flight time, as well as interior and exterior pictures of the jet.</li>
@@ -74,99 +84,121 @@ const RequestQuotePage = () => {
                     variant='primary'
                   />
                 </div>
-            </div>
-          
-          <div className='mt-[50px]'>
-            <h2 className='mb-8'>What Sets Our Quotes Apart</h2>
-              <div className='w-full h-[1000px] max-[700px]:h-[500px] object-cover'>
-                <Image 
-                  unoptimized 
-                  src={bookingSlot} 
-                  alt='image' 
-                  width={100} 
-                  height={100} 
-                  className='w-full h-full object-contain' 
-                />
-              </div>
-              <p className='mb-[50px] mt-6 '>When it comes to private jet charter quotes, it’s not just about the price; it’s about the entire package. What sets JetLevel Aviation’s quotes apart?</p>
-              <p className='mb-6 '><span className='text-[#0071ba] font-bold'> Aircraft Options:</span> We offer a wide variety of jet types to fit every need and preference.</p>
-              <p className='mb-6 '><span className='text-[#0071ba] font-bold'> In-Depth Information:</span> Our quotes aren’t just numbers; they include specifics like passenger capacity, estimated flight time, and even visual aids like photos.</p>
-              <p className='mb-6 '><span className='text-[#0071ba] font-bold'> Personalized Service:</span> Our optional questions allow you to customize your quote further for a truly unique flight experience.</p>
-
-              <p className='mt-[50px] '>Once your inquiry is submitted, one of our Aviation Agents, who are standing by 24/7, will give you a call to assist with any additional queries or requirements.</p>
-          </div>
-          
-            <div className='mt-[50px]'>
-              <h2 className='mb-8'>Instant Private Jet Charter Quotes at Your Fingertips</h2>
-              <p className='mb-6 '>In our mission to offer the highest level of convenience and customization to our valued clients, we proudly present the all-new Private Jet Calculator. Here’s why you’ll find this tool indispensable:</p>
-              <p className='mb-6 '><span className='text-[#0071ba] font-bold'>Instant Quotes:</span> No more waiting. Get immediate, accurate cost estimates for your private jet charters.</p>
-              <p className='mb-6 '><span className='text-[#0071ba] font-bold'>Ease of Use:</span> Navigate through an intuitive and user-friendly interface that simplifies the quoting process.</p>
-              <p className='mb-6 '><span className='text-[#0071ba] font-bold'>Highly Accurate:</span> Leveraging a sophisticated algorithm, our Private Jet Calculator considers multiple factors such as distance, jet type, and additional services to deliver the most precise estimates.</p>
-            </div>
-          
-          <div className='mt-[50px]'>
-          <h2 className='mb-8'>How to Save the Private Jet Calculator on Your Phone for Easy Access</h2>
-            <p className='mb-4 '>We recognize that time is invaluable, especially for our busy clients. That’s why we’ve made it simple to save the Private Jet Calculator on your mobile phone’s homepage for quick and convenient access:</p>
-
-            <div className='flex flex-wrap items-center justify-between'>
-              <div className='w-[28%] max-[700px]:w-full'>
-                <p className='mb-4 '>For iPhone Users:</p>
-                <p className='mb-8 '>Open Safari and navigate to <Link className='text-[#0071BA]' href='/request-quote'>Jetlevel Instant Quote.</Link></p>
-                <p className=''>Tap Share, then select “Add to Home Screen.” Name it and confirm to view it on your home screen.</p>
-              </div>
-              <div className='w-[68%] max-[700px]:w-full max-[700px]:mt-8'>
-                <Image unoptimized src={'https://jetlevel.com/wp-content/uploads/2023/09/iphone-scaled.webp'} alt='image' width={100} height={100} className='w-full h-full object-cover' />
-              </div>
-            </div>
-          </div>
-
-            <div className='flex flex-wrap  items-start justify-between flex-row-reverse mt-[40px]'>
-              <div className='w-[28%] max-[700px]:w-full'>
-                <p className='mb-4 '> For Android Users:</p>
-                <p className='mb-8 '>Open Chrome and go to <Link className='text-[#0071BA]' href='/request-quote'>Jetlevel Instant Quote.</Link></p>
-                <p className=''>Tap on the three dots in the upper right corner, then select “Add to Home Screen.” Name it, confirm, and it will appear on your home screen.</p>
-              </div>
-              <div className='w-[68%] max-[700px]:w-full max-[700px]:mt-8'>
-              <Image unoptimized src={'https://jetlevel.com/wp-content/uploads/2023/09/android-scaled.webp'} alt='image' width={100} height={100} className='w-full h-full object-cover' />
-              </div>
-            </div>
-            <p className='mt-6 '>By integrating our Private Jet Calculator into your daily life, you can effortlessly obtain accurate trip estimates wherever you are, whenever you need them.</p>
-
-            <div className='mt-[50px]'>
-              <h2>We Value Your Feedback</h2>
-              <p className='mt-[30px] '>We’ve designed this tool to make your journey with us as smooth as possible. If you find this tool useful—or have suggestions for improvement—please don’t hesitate to reach out. Your feedback drives our continuous innovation.</p>
-            </div>
-
-            <div className='mt-[50px]'>
-              <h2>Frequently Asked Questions about Instant Quotes</h2>
-              <p className='mt-[30px] mb-[25px] '>Have questions about our private jet quotes online or private jet online quote system? Here are some FAQs to guide you:</p>
-              <div className='mb-8'>
-              {
-                faqData.map((faq,index) => (
-                  <Collapsible  
-                    key={index}
-                    question={faq.question}
-                    answer={faq.answer}
-                    iconStyle="caret"
-                    iconPosition="start"
-                    isOpen={openIndex === index}
-                    onClick={() => handleToggle(index)} 
-                    backgroundColor="white"
-                    classNames='!text-[#0071BA]  border'
-                    answerClassName='border-r border-l'
-                    questionClassName='text-lg'
-                  />
-                ))
+             </div>
               }
+              isOpen={openIndex === 34}
+              onClick={() => handleToggle(34)}
+            />    
+          
+          <Collapsible
+              key={35}
+              question="What Sets Our Quotes Apart"
+              answer={
+                <div>
+                  <div className='w-full h-[1000px] max-[700px]:h-[500px] object-cover'>
+                    <Image 
+                      unoptimized 
+                      src={bookingSlot} 
+                      alt='image' 
+                      width={100} 
+                      height={100} 
+                      className='w-full h-full object-contain' 
+                    />
+                  </div>
+                  <p className='mb-[50px] mt-6 '>When it comes to private jet charter quotes, it’s not just about the price; it’s about the entire package. What sets JetLevel Aviation’s quotes apart?</p>
+                  <p className='mb-6 '><span className='text-[#0071ba] font-bold'> Aircraft Options:</span> We offer a wide variety of jet types to fit every need and preference.</p>
+                  <p className='mb-6 '><span className='text-[#0071ba] font-bold'> In-Depth Information:</span> Our quotes aren’t just numbers; they include specifics like passenger capacity, estimated flight time, and even visual aids like photos.</p>
+                  <p className='mb-6 '><span className='text-[#0071ba] font-bold'> Personalized Service:</span> Our optional questions allow you to customize your quote further for a truly unique flight experience.</p>
+    
+                  <p className='mt-[50px] '>Once your inquiry is submitted, one of our Aviation Agents, who are standing by 24/7, will give you a call to assist with any additional queries or requirements.</p>
               </div>
-            </div>
-            
-            <div className='mt-[50px]'>
-              {/* <h2>Customer Testimonials</h2> */}
-              {/* <p className='mt-[30px] mb-[60px]'>Don’t just take our word for it. Here’s what our clients have to say about our private flight quote and charter flight quotes services:</p> */}
+              }
+              isOpen={openIndex === 35}
+              onClick={() => handleToggle(35)}
+            />    
 
-              {/* <p className='ml-8 text-[40px] w-[85%] mb-10'>"The instant quote system at JetLevel is unparalleled. It's quick and precise, making my frequent trips a breeze to plan." - A Satisfied Client</p> */}
-              <p className='text-center mb-8 w-[85%] m-[0_auto] '>JetLevel Aviation has simplified the air charter quote and charter plane quote process to offer you a hassle-free experience. Our instant quotes are designed to provide you with the information you need swiftly and accurately. Why wait? Get your quote today and soar to new heights of luxury and convenience.</p>
+            <Collapsible
+              key={36}
+              question="What Sets Our Quotes Apart"
+              answer={
+                <div className='mt-[50px]'>
+                  <h2 className='mb-8'>Instant Private Jet Charter Quotes at Your Fingertips</h2>
+                  <p className='mb-6 '>In our mission to offer the highest level of convenience and customization to our valued clients, we proudly present the all-new Private Jet Calculator. Here’s why you’ll find this tool indispensable:</p>
+                  <p className='mb-6 '><span className='text-[#0071ba] font-bold'>Instant Quotes:</span> No more waiting. Get immediate, accurate cost estimates for your private jet charters.</p>
+                  <p className='mb-6 '><span className='text-[#0071ba] font-bold'>Ease of Use:</span> Navigate through an intuitive and user-friendly interface that simplifies the quoting process.</p>
+                  <p className='mb-6 '><span className='text-[#0071ba] font-bold'>Highly Accurate:</span> Leveraging a sophisticated algorithm, our Private Jet Calculator considers multiple factors such as distance, jet type, and additional services to deliver the most precise estimates.</p>
+                </div>
+              }
+              isOpen={openIndex === 36}
+              onClick={() => handleToggle(36)}
+            />  
+           
+           <Collapsible
+              key={37}
+              question="How to Save the Private Jet Calculator on Your Phone for Easy Access"
+              answer={
+                <>
+                <div>
+                  <p className='mb-4 '>We recognize that time is invaluable, especially for our busy clients. That’s why we’ve made it simple to save the Private Jet Calculator on your mobile phone’s homepage for quick and convenient access:</p>
+
+                  <div className='flex flex-wrap items-center justify-between'>
+                    <div className='w-[28%] max-[700px]:w-full'>
+                      <p className='mb-4 '>For iPhone Users:</p>
+                      <p className='mb-8 '>Open Safari and navigate to <Link className='text-[#0071BA]' href='/request-quote'>Jetlevel Instant Quote.</Link></p>
+                      <p className=''>Tap Share, then select “Add to Home Screen.” Name it and confirm to view it on your home screen.</p>
+                    </div>
+                    <div className='w-[68%] max-[700px]:w-full max-[700px]:mt-8'>
+                      <Image unoptimized src={'https://jetlevel.com/wp-content/uploads/2023/09/iphone-scaled.webp'} alt='image' width={100} height={100} className='w-full h-full object-cover' />
+                    </div>
+                  </div>
+                </div>
+
+                  <div className='flex flex-wrap  items-start justify-between flex-row-reverse mt-[40px]'>
+                    <div className='w-[28%] max-[700px]:w-full'>
+                      <p className='mb-4 '> For Android Users:</p>
+                      <p className='mb-8 '>Open Chrome and go to <Link className='text-[#0071BA]' href='/request-quote'>Jetlevel Instant Quote.</Link></p>
+                      <p className=''>Tap on the three dots in the upper right corner, then select “Add to Home Screen.” Name it, confirm, and it will appear on your home screen.</p>
+                    </div>
+                    <div className='w-[68%] max-[700px]:w-full max-[700px]:mt-8'>
+                    <Image unoptimized src={'https://jetlevel.com/wp-content/uploads/2023/09/android-scaled.webp'} alt='image' width={100} height={100} className='w-full h-full object-cover' />
+                    </div>
+                  </div>
+                  <p className='mt-6 '>By integrating our Private Jet Calculator into your daily life, you can effortlessly obtain accurate trip estimates wherever you are, whenever you need them.</p>
+                </>
+              }
+              isOpen={openIndex === 37}
+              onClick={() => handleToggle(37)}
+            />  
+
+            <Collapsible
+              key={38}
+              question="We Value Your Feedback"
+              answer={
+                <div>
+                  <p>We’ve designed this tool to make your journey with us as smooth as possible. If you find this tool useful—or have suggestions for improvement—please don’t hesitate to reach out. Your feedback drives our continuous innovation.</p>
+                </div>
+              }
+              isOpen={openIndex === 38}
+              onClick={() => handleToggle(38)}
+            />  
+
+            <Collapsible
+              key={40}
+              question="Frequently Asked Questions about Instant Quotes"
+              answer={
+                <div>
+                <p className='mb-[25px] '>Have questions about our private jet quotes online or private jet online quote system? Here are some FAQs to guide you:</p>
+                <div className='mb-8'>
+                {
+                faqData.map((faq,index) => (
+                  <div key={index} className='pb-6'>
+                    <h3 className='font-bold text-gray-900'>{faq.question}</h3>
+                    <p className='text-gray-700 leading-7 mt-1'>{faq.answer}</p>
+                  </div>
+                ))
+                }
+                </div>
+                <p className='text-center mb-8 w-[85%] m-[0_auto] '>JetLevel Aviation has simplified the air charter quote and charter plane quote process to offer you a hassle-free experience. Our instant quotes are designed to provide you with the information you need swiftly and accurately. Why wait? Get your quote today and soar to new heights of luxury and convenience.</p>
               <h2 className='text-center w-[85%] m-[0_auto] text-[30px]'>Ready to experience the difference? Get your charter flight quote or online private jet quote now.</h2>
               <div className='text-center mt-[40px]'>
                 <Button
@@ -174,8 +206,11 @@ const RequestQuotePage = () => {
                   variant='primary'
                 />
               </div>
-            </div>
-          
+              </div>
+              }
+              isOpen={openIndex === 40}
+              onClick={() => handleToggle(40)}
+            />  
           </div>
         </div>
       </HalfSection>

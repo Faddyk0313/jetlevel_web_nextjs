@@ -63,12 +63,13 @@ const CompanyPage = async ({ params }: PageProps) => {
 
   return (
     <>
-      <div className="bg-[url('/images/blog-hero-image.jpg')] bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-center justify-center">
-        <h1 className="px-5 md:px-10 lg:px-20 max-w-[1800px] w-full mx-auto text-white ">
-          {title}
-        </h1>
-      </div>
       {title === "Level Up Blog" ? (
+        <>
+        <div className="bg-[url('/images/blog-hero-image.jpg')] bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-center justify-center">
+          <h1 className="px-5 md:px-10 lg:px-20 max-w-[1800px] w-full mx-auto text-white ">
+            {title}
+          </h1>
+        </div>
         <section className="flex flex-col lg:flex-row gap-10 px-5 md:px-10 lg:px-20 py-7 max-w-[1800px] mx-auto">
           <div className="min-w-full md:min-w-[72%]">
             <Breadcrumb />
@@ -158,11 +159,10 @@ const CompanyPage = async ({ params }: PageProps) => {
             />
           </div>
         </section>
+      </>
       ) : (
-        <section className="flex flex-col lg:flex-row gap-10 px-5 md:px-10 lg:px-20 py-7 max-w-[1800px] mx-auto">
-          <BrandNames />
+        <>
           <div className="w-full">
-            <Breadcrumb />
             {title === "About Us" ? (
               <AboutUsPage />
             ) : title === "Our Team" ? (
@@ -171,7 +171,7 @@ const CompanyPage = async ({ params }: PageProps) => {
               <ContactUsPage />
             )}
           </div>
-        </section>
+        </>
       )}
     </>
   );

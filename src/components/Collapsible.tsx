@@ -20,7 +20,6 @@ interface FAQDropdownProps {
 const FAQDropdown: React.FC<FAQDropdownProps> = ({
   question,
   answer,
-  iconStyle = "caret",
   iconPosition = "end",
   isOpen,
   onClick,
@@ -30,30 +29,22 @@ const FAQDropdown: React.FC<FAQDropdownProps> = ({
   questionClassName,
   iconColor,
 }) => {
-  const renderIcon = () => {
-    if (iconStyle === "caret") {
-      return isOpen ? "▼" : "▶";
-    }
-    return isOpen ? "↓" : "→";
-  };
-
   return (
     <div className='border-b py-5'>
       <div
         onClick={onClick}
         className={`${classNames || ""} flex items-center cursor-pointer ${
           iconPosition === "end" ? "justify-between" : "justify-start"
-        } bg-[${backgroundColor}] pl-6 pt-4 pr-5 pb-4 text-white font-bold text-lg`}
+        } bg-[${backgroundColor}] pt-4 pr-5 pb-4 text-white font-bold text-lg`}
       >
-        {iconPosition === "start" && <span className="mr-2">{renderIcon()}</span>}
         <h2 className={`transition-colors duration-200 leading-[46px] ${isOpen ? 'text-blue' : 'text-darkBlue group-hover:text-blue'} ${questionClassName}`}>{question}</h2>
           <span className={`transition-all duration-200 border-2 rounded-full ${isOpen ? 'rotate-45 text-blue border-blue' : 'text-darkBlue border-darkBlue group-hover:text-blue group-hover:border-blue'}`}>
-            <FiPlus className="w-7 h-7" />
+            <FiPlus className={`w-7 h-7 ${iconColor}`} />
           </span>
       </div>
       <div
         className={`overflow-hidden transition-all duration-300 overflow-hidden ease-in-out ${
-          isOpen ? "p-[10px_20px_31px_32px]" : "max-h-0 p-0"
+          isOpen ? "p-[6px_20px_31px_0px]" : "max-h-0 p-0"
         } ${answerClassName || ""} text-[#555] `}
       >
         {typeof answer === "string" ? (

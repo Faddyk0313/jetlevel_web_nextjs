@@ -36,7 +36,7 @@ const EventDetailPage = ({ params }: PageProps) => {
         <div className='flex justify-between'>
           <div className='w-[73%] max-[650px]:w-full'>
             <h2 className='text-[45px] text-[#0071BA] mb-5 mt-6'>{singleEvent?.heading}</h2>
-            <p className='text-[#727982] text-md mb-4 text-justify details'>{singleEvent?.description || ''}</p>
+            <p className='text-[#727982] text-md mb-4 text-justify '>{singleEvent?.description || ''}</p>
 
             <div className='mt-8'>
             {singleEvent?.content?.map((faq, index) => (
@@ -45,10 +45,10 @@ const EventDetailPage = ({ params }: PageProps) => {
                 question={faq.name}
                 answer={
                   <div>
-                    <p className='mb-4 details'>{faq.description}</p>
+                    <p className='mb-4'>{faq.description}</p>
                     <ul>
                       {faq?.list?.map((item, idx) => (
-                        <li className='mb-2 details' key={idx} dangerouslySetInnerHTML={{ __html: item }} />
+                        <li className='mb-2 ' key={idx} dangerouslySetInnerHTML={{ __html: item }} />
                       ))}
                     </ul>
                   </div>
@@ -57,10 +57,6 @@ const EventDetailPage = ({ params }: PageProps) => {
                 iconPosition="end"
                 isOpen={openIndex === index}
                 onClick={() => handleToggle(index)}
-                classNames="bg-[#F7F9FB] mb-4"
-                backgroundColor="#F7F9FB"
-                questionClassName="text-lg text-black"
-                iconColor="text-black"
               />
             ))}
           </div>
@@ -88,7 +84,7 @@ const EventDetailPage = ({ params }: PageProps) => {
         </div>
 
         <div>
-         <AvailableAircrafts sectionClass={'pt-20 !pr-0 !pl-0 '} />
+         <AvailableAircrafts sectionClass={'pt-20 !pr-0 !pl-0 '} heading='Available Private Jets' subHeading='We Offer Hundreds of Private Jets to Choose from in various Jet Sizes, Explore some of them below.' />
         </div>
        </section>
     </div>

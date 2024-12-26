@@ -4,8 +4,10 @@ import React from 'react';
 
 type PageProps = {
     sectionClass?: string;
+    heading?: string;
+    subHeading?: string;
 };
-const AvailableAircrafts = ({sectionClass}:PageProps) => {
+const AvailableAircrafts = ({sectionClass,heading,subHeading}:PageProps) => {
     const jets = [
         {
             type: "Turbo Prop",
@@ -70,8 +72,8 @@ const AvailableAircrafts = ({sectionClass}:PageProps) => {
     ];
     return (
         <section className={`max-w-[1800px] mx-auto px-5 md:px-10 lg:px-20 ${sectionClass}`}>
-            <h2 className="text-center mb-2">Available Private Jets</h2>
-            <p className="text-center details leading-relaxed mb-8">We Offer Hundreds of Private Jets to Choose from in various Jet Sizes, Explore some of them below.</p>
+            <h2 className="text-center mb-2">{heading}</h2>
+            <p className="text-center details leading-relaxed mb-8">{subHeading}</p>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
                 {jets.map((jet, index) => (
                     <div key={index} className="border  rounded-lg overflow-hidden shadow-lg">

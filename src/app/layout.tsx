@@ -5,8 +5,6 @@ import Nav from '@/sections/Nav';
 import Footer from '@/sections/Footer';
 import ContactMenu from "@/sections/ContactMenu";
 import Script from 'next/script';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import 'aos/dist/aos.css';
 
 // Configure the fonts with subsets

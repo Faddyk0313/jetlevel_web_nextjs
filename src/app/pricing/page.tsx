@@ -409,13 +409,49 @@ const EventsPage = () => {
     }, 300);
   };  
 
+  const IconsItems = [
+    {
+      icon:'Routes_DistanceCalculator',
+      title:'Breakdown',
+      description:'Itemized expenses of jet chartering.',
+      bgcolor:'white'
+    },
+    {
+      icon:'UsCanadaCities',
+      title:'Factors',
+      description:'Variables influencing flight costs.',
+      bgcolor:'white'
+    },
+    {
+      icon:'InternationalCities',
+      title:'Extras',
+      description:'Cost comparisons across different scenarios.',
+      bgcolor:'white'
+    }, {
+      icon:'Aircraft',
+      title:'Considerations',
+      description:'Key pricing factors for informed choices.',
+      bgcolor:'white'
+    }, {
+      icon:'Airports',
+      title:'Scenarios',
+      description:'Price variations by specific scenarios.',
+      bgcolor:'white'
+    },
+  ]
   return (
     <div>
         <Hero image={"https://fly.jetlevel.com/assets/Private%20jet%20interior%20bg%20.webp"} title={"Cost of Chartering a Private Jet - Flights & Rates"} tagline={"Explore the cost of chartering a private jet flights, including breakdowns, factors, fees, and comparative analyses for informed decision-making"} hasCalculator={true} hasOverlay={false}/>
         <BrandNames />
-        <Breadcrumb />
-        <CompanyOverview />
-        <AvailableAircrafts />
+        <section className='px-5 md:px-10 lg:px-20 pb-0'>
+          <Breadcrumb />
+        </section>
+        <CompanyOverview 
+          heading='How much does a private jet charter cost?' 
+          description='The average cost of chartering a private jet ranges from about $1,800 to $14,000 per flying hour. The price varies based on the jet’s size and type. For example, smaller jets cost around $1,800 to $2,300 per hour, midsize jets range from $6,400 to $8,000 per hour, and larger jets are between $10,000 and $14,000 per hour. Renting a Gulfstream G650 plane costs about $10,000 per hour. For a 5-hour flight, it would be around $50,000. Plus, there are extra charges for landing at airports.'
+          IconsItems={IconsItems}
+        />
+        <AvailableAircrafts heading='Overview of Private Jet Charter Costs' subHeading='Jetlevel Aviation offers private flights on a wide range of aircraft categories. The aircraft types within each category vary by price, range, interior space, passenger capacity, and air speed.' />
 
         <section className='px-5 md:px-10 lg:px-20 pb-0'>
         <h2 className='text-center mb-4'>Popular Flights Routes & Estimates</h2>
