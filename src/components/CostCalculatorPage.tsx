@@ -6,6 +6,10 @@ import Collapsible from '@/components/Collapsible'
 import Button from '@/components/Button';
 import SmartTravelTools from '@/sections/SmartTravelTools';
 import PopularPrivateJetCharters from '@/sections/PopularPrivateJetCharters';
+import Hero from '@/sections/Hero';
+import BrandNames from '@/sections/BrandNames';
+import Breadcrumb from './Breadcrumb/Breadcrumb';
+import HalfSection from './HalfSection';
 
 const CostCalculatorPage = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -31,10 +35,13 @@ const CostCalculatorPage = () => {
   ]
   return (
     <div>
-      <div className='flex flex-col justify-center gap-y-[20px] p-8'>
-        <div className='px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto'>
-          <h2 className='text-center'>Thank you for your interest in JetLevel Aviation!</h2>
-          <p className='text-black text-center mt-[40px] mb-[50px] text-md details'>Try our Charter Flights Cost Calculator. Fill out the form for a free personalized estimate. Book directly or contact our sales team for assistance. Plan your journey hassle-free with our calculator.</p>
+      <Hero title="Charter Flights Cost Calculator" description="Get instant comprehensive breakdown of the estimated cost and aircraft type" image="https://jetlevel.com/wp-content/uploads/2019/10/iStock-1073242590-e1687592795610.jpg" hasOverlay={true} hasCalculator={true} showCalculator={false} />
+      <BrandNames />
+      <HalfSection showBottomContent={true}>
+      <div className='flex flex-col justify-center gap-y-[20px] pt-8'>
+        <div className=''>
+          <h2 className='text-start'>Thank you for your interest in JetLevel Aviation!</h2>
+          <p className='text-black text-center mt-[40px] mb-[50px] text-md '>Try our Charter Flights Cost Calculator. Fill out the form for a free personalized estimate. Book directly or contact our sales team for assistance. Plan your journey hassle-free with our calculator.</p>
             <div className='flex justify-center'>
                <div className='w-full outline-none h-auto' id="my-iframe">
                   <Suspense fallback={<div className="search-form__loader"></div>}>
@@ -46,7 +53,7 @@ const CostCalculatorPage = () => {
 
             <section className='pt-[40px] py-0 pb-0'>
               <h2 className='text-start mb-3'>About the Charter Flights Cost Calculator</h2>
-              <p className='text-md text-black mb-5 details'>Upon filling up the form with the desired information, users will receive a comprehensive breakdown of the estimated cost for their charter flight. The breakdown will include the following details:</p>
+              <p className='text-md text-black mb-5 '>Upon filling up the form with the desired information, users will receive a comprehensive breakdown of the estimated cost for their charter flight. The breakdown will include the following :</p>
               <ul className='list-disc ml-5'>
                 <li><span className='text-[#0071ba] font-bold'>Aircraft Recommendation:</span>  Based on the number of passengers or any other relevant criteria, this tool will recommend a suitable aircraft type for their trip. It could be a turbo prop, light jet, midsize jet, or any other appropriate option.</li>
                 <li><span className='text-[#0071ba] font-bold'>Estimated Flight Time:</span>  This tool will provide an estimated flight duration for the selected route. This information helps users plan their travel schedule more effectively.</li>
@@ -57,12 +64,12 @@ const CostCalculatorPage = () => {
 
             <section className='pb-0'>
               <h2>How to Use the Charter Flights Cost Calculator</h2>
-              <p className='details'>Using our Charter Flights Cost Calculator is straightforward. Start by filling in essential details like departure and destination cities, the number of passengers, and any specific requests you may have. After entering this information, click the “Calculate” button. Within seconds, you’ll receive a breakdown of the estimated cost for your trip. The report will show you an aircraft recommendation, an estimated flight duration, and a comprehensive list of expenses, including taxes and fuel costs. It’s a simple way to get a quick estimation of how much your charter flight might cost.</p>
+              <p className=''>Using our Charter Flights Cost Calculator is straightforward. Start by filling in essential  like departure and destination cities, the number of passengers, and any specific requests you may have. After entering this information, click the “Calculate” button. Within seconds, you’ll receive a breakdown of the estimated cost for your trip. The report will show you an aircraft recommendation, an estimated flight duration, and a comprehensive list of expenses, including taxes and fuel costs. It’s a simple way to get a quick estimation of how much your charter flight might cost.</p>
             </section>
 
             <section className='pb-0'>
               <h2>Why Use a Charter Flights Cost Calculator</h2>
-              <p className='details'>Understanding the cost of a charter flight can be complicated due to multiple variables involved. Our Charter Flights Cost Calculator simplifies this by offering instant, personalized estimates. Unlike making a phone call or sending an inquiry via email, which can be time-consuming, the calculator provides immediate results. This convenience allows you to plan your trip more effectively, manage your budget, and make quick decisions without waiting for replies from service providers.</p>
+              <p className=''>Understanding the cost of a charter flight can be complicated due to multiple variables involved. Our Charter Flights Cost Calculator simplifies this by offering instant, personalized estimates. Unlike making a phone call or sending an inquiry via email, which can be time-consuming, the calculator provides immediate results. This convenience allows you to plan your trip more effectively, manage your budget, and make quick decisions without waiting for replies from service providers.</p>
 
               <div className='mt-10'>
               {
@@ -87,7 +94,7 @@ const CostCalculatorPage = () => {
 
             <section className='pb-0'>
               <h2>What Affects Charter Flights Costs</h2>
-              <p className='details'>The cost of chartering a flight can vary due to multiple factors. Firstly, the type of aircraft you choose affects the base rate. Secondly, distance and duration of the flight influence fuel costs. Seasonal demand can also fluctuate prices. If you require extra services like in-flight catering or ground transportation, those will be additional costs. Understanding these variables can help you make more informed decisions when using our calculator.</p>
+              <p className=''>The cost of chartering a flight can vary due to multiple factors. Firstly, the type of aircraft you choose affects the base rate. Secondly, distance and duration of the flight influence fuel costs. Seasonal demand can also fluctuate prices. If you require extra services like in-flight catering or ground transportation, those will be additional costs. Understanding these variables can help you make more informed decisions when using our calculator.</p>
             </section>
 
             <section className='pb-0'>
@@ -102,7 +109,7 @@ const CostCalculatorPage = () => {
 
             <section className='pb-0'>
               <h2>Downloadable Resources</h2>
-              <p className='mb-8 details'>For more comprehensive information on charter flight costs, we offer downloadable PDF guides. These resources delve deeper into cost structures, types of aircraft, and more.</p>
+              <p className='mb-8 '>For more comprehensive information on charter flight costs, we offer downloadable PDF guides. These resources delve deeper into cost structures, types of aircraft, and more.</p>
               <a href='https://jetlevel.com/wp-content/uploads/2023/09/The-Comprehensive-Guide-to-Chartering-a-Private-Jet.pdf' download>
                 <Button
                   text='Click here to download'
@@ -113,9 +120,7 @@ const CostCalculatorPage = () => {
 
         </div>
       </div>
-
-      <SmartTravelTools />
-      <PopularPrivateJetCharters />
+      </HalfSection>
     </div>
   );
 };

@@ -36,21 +36,21 @@ const ContactMenu = () => {
           href={"tel:+18555385383"}
         >
           <IoCall className="hidden md:block text-2xl" />
-          <span className='!text-[#1F2937]'>CALL US</span>
+          <span className='!text-[#1F2937] hover:!text[#2082B8]'>CALL US</span>
         </a>
         <a
           className="flex items-center justify-center gap-2  bg-[#ebecee] text-xs md:text-base font-bold md:font-normal text-gray-800 py-2 text-center hover:text-blue transition-all duration-100"
           href={"mailto:Sales@jetlevel.com"}
         >
           <IoMail className="hidden md:block text-2xl" />
-          <span className='!text-[#1F2937]'>EMAIL US</span>
+          <span className='!text-[#1F2937] hover:!text[#2082B8]'>EMAIL US</span>
         </a>
         <Link
           className="flex items-center justify-center gap-2 bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8]  text-xs md:text-base font-bold md:font-normal text-white py-2 text-center hover:text-darkBlue transition-all duration-100"
           href={"https://jetlevel.com/request-a-quote"}
         >
           <IoIosAirplane className="hidden md:block text-2xl" />
-          <span className='!text-[#1F2937]'>INQUIRE NOW</span>
+          <span className='!text-[#1F2937] hover:!text[#2082B8]'>INQUIRE NOW</span>
         </Link>
       </div>
     </section>

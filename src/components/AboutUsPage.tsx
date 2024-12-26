@@ -12,7 +12,6 @@ const AboutUsPage = () => {
             width={400}
             height={600}
             className="object-cover w-full"
-
           />
         </div>
         <div>

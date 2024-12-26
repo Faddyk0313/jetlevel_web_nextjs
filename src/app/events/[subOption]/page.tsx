@@ -35,7 +35,7 @@ const EventDetailPage = ({ params }: PageProps) => {
        <Breadcrumb />
         <div className='flex justify-between'>
           <div className='w-[73%] max-[650px]:w-full'>
-            <h1 className='text-[45px] text-[#0071BA] mb-5 mt-6'>{singleEvent?.heading}</h1>
+            <h2 className='text-[45px] text-[#0071BA] mb-5 mt-6'>{singleEvent?.heading}</h2>
             <p className='text-[#727982] text-md mb-4 text-justify details'>{singleEvent?.description || ''}</p>
 
             <div className='mt-8'>
@@ -86,7 +86,10 @@ const EventDetailPage = ({ params }: PageProps) => {
             />
           </div>
         </div>
-        <AvailableAircrafts />
+
+        <div>
+         <AvailableAircrafts sectionClass={'pt-20 !pr-0 !pl-0 '} />
+        </div>
        </section>
     </div>
   )

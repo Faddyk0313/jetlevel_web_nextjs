@@ -155,8 +155,8 @@ const UsCanadaPage = () => {
       </div>
 
       <section className="flex gap-x-4 flex-wrap gap-y-4">
-        {currentCities.map((city) => (
-          <CharterCity img={city.img} heading={city.heading} link={city.link} key={city.link} />
+        {currentCities.map((city,index) => (
+          <CharterCity img={city.img} heading={city.heading} link={city.link} key={index} />
         ))}
       </section>
 
@@ -171,7 +171,7 @@ const UsCanadaPage = () => {
                   currentPage === number
                     ? 'bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] text-white'
                     : 'bg-white text-[#0071BA]'
-                } px-4 py-2 rounded-full`}
+                } px-4 py-2 rounded-full flex items-center justify-center  w-[43px] h-[43px]`}
               />
             </li>
           ))}

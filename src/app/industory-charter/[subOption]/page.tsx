@@ -140,7 +140,7 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
             singleIndustory?.aviationSolutions?.aviationIcons.map((icon,index) => {
               const Icon = iconMapping[icon.icons] ;
               return (
-                <div key={index} className='w-[24%]'>
+                <div key={index} className='w-[24%] h-[320px]'>
                 <Card icon={<Icon />} title={icon?.heading} description={icon?.description} bgcolor={'white'} />
                 </div>
               )
@@ -214,7 +214,6 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
       <SmartTravelTools />
       <PopularPrivateJetCharters />
       <WhatOurClientsSay />
-      {/* <RequestQuoteBanner /> */}
     </div>
   )
 }

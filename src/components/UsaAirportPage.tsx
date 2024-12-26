@@ -7,6 +7,7 @@ import Hero from '@/sections/Hero';
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
+import HalfSection from './HalfSection';
 
 const UsaAirportPage = () => {
   const usaAirportList = [
@@ -93,11 +94,14 @@ const UsaAirportPage = () => {
   ]
   return (
     <div>
-      <div className='bg-[#0071BA] flex flex-col justify-center gap-y-[20px] p-8'>
-        <div className='px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto'>
-          <h2 className='text-center text-white text-[30px]'>Select Your Airport</h2>
-          <p className='text-center text-white mt-[40px] mb-[50px] details'>Our services include designing customized air travel itineraries for each client and our advisors can help you to select a destination, aircraft, ground transportation, and hotel for your journey. Browse our airport directory guide below to learn more about some of the airports we fly into and the transportation and hotel options available.</p>
-            <div className='flex justify-center relative h-full'>
+      <Hero title="JetLevel Airport Directory Guide" description="JetLevel offers flights to and from almost anywhere in the world. Learn more about some of the airports we fly into with our airport directory guide below." image="https://jetlevel.com/wp-content/uploads/2022/11/Airport-Runway-Aerial-1.jpg" hasCalculator={false} />
+      <BrandNames />
+      <HalfSection showBottomContent={true}>
+      <div className='flex flex-col justify-center gap-y-[20px] mt-8'>
+        <div>
+          <h2 className='text-start'>Select Your Airport</h2>
+          <p className='mb-[50px]'>Our services include designing customized air travel itineraries for each client and our advisors can help you to select a destination, aircraft, ground transportation, and hotel for your journey. Browse our airport directory guide below to learn more about some of the airports we fly into and the transportation and hotel options available.</p>
+            <div className='bg-[#0071BA] flex justify-center relative h-full p-6 rounded-md'>
               <Image 
                 src="https://jetlevel.com/wp-content/uploads/2022/12/image-background-airport.png" 
                 alt="airports" 
@@ -128,7 +132,7 @@ const UsaAirportPage = () => {
             </div>
         </div>
       </div>
-      <section className="px-5 md:px-10 xl:px-20 py-7 mt-[40px] max-w-[1800px] mx-auto">
+      <section className="pt-[40px] mt-[40px] max-w-[1800px] mx-auto">
         <div className="flex flex-wrap">
           <div className="w-[50%] max-[700px]:w-full text-center">
             {usaAirportList.slice(0, 10).map((airport) => (
@@ -150,6 +154,8 @@ const UsaAirportPage = () => {
           </div>
         </div>
       </section>
+      </HalfSection>
+      
       {/* <RequestQuoteBanner /> */}
     </div>
   );

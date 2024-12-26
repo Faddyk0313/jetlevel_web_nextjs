@@ -4,6 +4,7 @@ import ContactUsPage from "@/components/ContactUsPage";
 import OurTeamPage from "@/components/OurTeamPage";
 import TopCharteredCities from "@/components/TopCharteredCities";
 import { createClient } from "@/lib/contento";
+import BrandNames from '@/sections/BrandNames';
 import Markdown from "markdown-to-jsx";
 import Image from "next/image";
 import Link from "next/link";
@@ -159,6 +160,7 @@ const CompanyPage = async ({ params }: PageProps) => {
         </section>
       ) : (
         <section className="flex flex-col lg:flex-row gap-10 px-5 md:px-10 lg:px-20 py-7 max-w-[1800px] mx-auto">
+          <BrandNames />
           <div className="w-full">
             <Breadcrumb />
             {title === "About Us" ? (

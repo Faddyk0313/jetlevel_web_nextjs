@@ -22,6 +22,7 @@ type AirCraftCharterProps = {
 };
 
 const AirCraftCharter: React.FC<AirCraftCharterProps> = ({ contentColor,header, description, iconsArray, aircraftArray, backgroundImage }) => {
+  console.log('contentColor',contentColor);
   return (
     <div style={{ backgroundImage:`url(${backgroundImage})` }} className={`p-[60px] max-[700px]:p-[30px] max-[700px]:pb-0 pb-0`}>
       <div className='w-[65%] max-[700px]:w-full m-[0_auto]'>
@@ -34,7 +35,7 @@ const AirCraftCharter: React.FC<AirCraftCharterProps> = ({ contentColor,header, 
             <div
               key={index}
               className={`flex flex-col justify-center items-center w-[23%] max-[700px]:w-[40%] ${
-                index !== iconsArray.length - 1 ? 'max-[700px]:border-0 border-r-2 border-dotted border-black max-[700px]:pr-0 pr-10 mr-10' : ''
+                index !== iconsArray.length - 1 ? `max-[700px]:border-0 border-r-2 border-dotted border-${contentColor === 'text-white'? 'white' : 'black'} max-[700px]:pr-0 pr-10 mr-10` : ''
               }`}
             >
               <img
