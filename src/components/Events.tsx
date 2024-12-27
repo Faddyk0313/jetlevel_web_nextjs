@@ -10,10 +10,10 @@ const Events = () => {
         events.event.map((items, index) => 
         <div key={index}>
           <h2 className='mt-[20px] text-[30px]'>{items.name}</h2>
-          <div className='flex gap-x-[25px] mt-6 flex-wrap gap-y-[30px] mb-[50px]'>
+          <div className='flex gap-x-[33px] mt-6 flex-wrap gap-y-[30px] mb-[50px]'>
             {
               items.content.map((data) =>
-                <div className='w-[30%] max-[650px]:w-full'>
+                <div className='w-[31%] max-[650px]:w-full'>
                    <Image
                     src={data.image}
                     alt={data.heading}

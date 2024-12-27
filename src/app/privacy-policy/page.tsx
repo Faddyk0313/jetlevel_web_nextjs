@@ -61,7 +61,7 @@ const PrivacyPolicyPage = () => {
 
         {
           termConditions.map((terms, index) => (
-          <section key={index} className="pb-0">
+          <section key={index} className="pb-0 pt-[30px]">
             <h2 className="pb-4">{terms.heading}</h2>
             {Array.isArray(terms.content) ? (
               terms.content.map((item, idx) => (
@@ -75,7 +75,7 @@ const PrivacyPolicyPage = () => {
             {terms.list && (
               <ul className="list-decimal pl-5">
                 {terms.list.map((listItem, idx) => (
-                  <li className='pb-4' key={idx}>{listItem}</li>
+                  <li className='pb-4 text-[19px]' key={idx}>{listItem}</li>
                 ))}
               </ul>
             )}

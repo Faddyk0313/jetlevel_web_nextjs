@@ -1,5 +1,6 @@
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
 import TopCharteredCities from '@/components/TopCharteredCities';
+import BrandNames from '@/sections/BrandNames';
 import Hero from '@/sections/Hero';
 import { Facebook, Linkedin, Twitter } from '@/svg';
 import Image from 'next/image';
@@ -7,7 +8,17 @@ import React from 'react';
 
 const OurTeamPage = () => {
   return (
-    <section className='py-12'>
+    <>
+    <div className="bg-[url('https://jetlevel.com/wp-content/uploads/2023/09/ban_jets-jpg.webp')] overlay bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-center justify-center">
+        <h1 className="px-5 md:px-10 lg:px-20 max-w-[1800px] w-full mx-auto text-white ">
+          Our Team
+        </h1>
+      </div>
+      <BrandNames />
+      <section className="flex flex-col lg:flex-row gap-10 px-5 md:px-10 lg:px-20 py-7 pb-0 max-w-[1800px] mx-auto">
+        <Breadcrumb />
+      </section>
+      <section className="px-5 md:px-10 lg:px-20 py-7 max-w-[1800px] mx-auto">
       <div className='flex justify-between'>
         <div className='w-full max-[650px]:w-full text-center'>
           <h2 className='mb-5 mt-6'>MEET OUR TEAM MEMBERS</h2>
@@ -17,7 +28,7 @@ const OurTeamPage = () => {
 
         <h2 className='text-black text-center mb-[30px]'>Leadership</h2>
         <div className='flex items-center justify-between flex-wrap'>
-        <div className="w-[32%] mb-6 max-[700px]:w-full bg-[#EEEEEE] h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
+        <div className="w-[32%] mb-6 max-[700px]:w-full text-white border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-[#333333] transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
           <Image
             src="https://jetlevel.com/wp-content/uploads/2023/09/Ricky-Gomulka-Jet-Level-CEO-e1702364418323.png"
             alt="Ceo Photo"
@@ -43,8 +54,7 @@ const OurTeamPage = () => {
           </div>
         </div>
 
-
-        <div className="w-[32%] mb-6 max-[700px]:w-full bg-[#EEEEEE] h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
+        <div className="w-[32%] mb-6 max-[700px]:w-full text-white border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-[#333333] transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
           <Image
             src="https://jetlevel.com/wp-content/uploads/2023/10/1690029198597-jpeg.webp"
             alt="President Photo"
@@ -68,7 +78,7 @@ const OurTeamPage = () => {
           </div>
         </div>
 
-        <div className="w-[32%] mb-6 max-[700px]:w-full bg-[#EEEEEE] h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6 hover:bg-[#0071BA] text-[#333333] hover:text-white transition-colors duration-300">
+        <div className="w-[32%] mb-6 max-[700px]:w-full text-white border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-[#333333] transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
           <Image
             src="https://jetlevel.com/wp-content/uploads/2023/12/1698440487069-jpeg.webp"
             alt="Ceo Photo"
@@ -93,6 +103,8 @@ const OurTeamPage = () => {
         </div>
     </div>
     </section>
+    </>
+  
   );
 };
 

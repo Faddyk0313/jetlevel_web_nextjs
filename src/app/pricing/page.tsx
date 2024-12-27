@@ -409,13 +409,49 @@ const EventsPage = () => {
     }, 300);
   };  
 
+  const IconsItems = [
+    {
+      icon:'Routes_DistanceCalculator',
+      title:'Breakdown',
+      description:'Itemized expenses of jet chartering.',
+      bgcolor:'white'
+    },
+    {
+      icon:'UsCanadaCities',
+      title:'Factors',
+      description:'Variables influencing flight costs.',
+      bgcolor:'white'
+    },
+    {
+      icon:'InternationalCities',
+      title:'Extras',
+      description:'Cost comparisons across different scenarios.',
+      bgcolor:'white'
+    }, {
+      icon:'Aircraft',
+      title:'Considerations',
+      description:'Key pricing factors for informed choices.',
+      bgcolor:'white'
+    }, {
+      icon:'Airports',
+      title:'Scenarios',
+      description:'Price variations by specific scenarios.',
+      bgcolor:'white'
+    },
+  ]
   return (
     <div>
         <Hero image={"https://fly.jetlevel.com/assets/Private%20jet%20interior%20bg%20.webp"} title={"Cost of Chartering a Private Jet - Flights & Rates"} tagline={"Explore the cost of chartering a private jet flights, including breakdowns, factors, fees, and comparative analyses for informed decision-making"} hasCalculator={true} hasOverlay={false}/>
         <BrandNames />
-        <Breadcrumb />
-        <CompanyOverview />
-        <AvailableAircrafts />
+        <section className='px-5 md:px-10 lg:px-20 pb-0'>
+          <Breadcrumb />
+        </section>
+        <CompanyOverview 
+          heading='How much does a private jet charter cost?' 
+          description='The average cost of chartering a private jet ranges from about $1,800 to $14,000 per flying hour. The price varies based on the jet’s size and type. For example, smaller jets cost around $1,800 to $2,300 per hour, midsize jets range from $6,400 to $8,000 per hour, and larger jets are between $10,000 and $14,000 per hour. Renting a Gulfstream G650 plane costs about $10,000 per hour. For a 5-hour flight, it would be around $50,000. Plus, there are extra charges for landing at airports.'
+          IconsItems={IconsItems}
+        />
+        <AvailableAircrafts heading='Overview of Private Jet Charter Costs' subHeading='Jetlevel Aviation offers private flights on a wide range of aircraft categories. The aircraft types within each category vary by price, range, interior space, passenger capacity, and air speed.' />
 
         <section className='px-5 md:px-10 lg:px-20 pb-0'>
         <h2 className='text-center mb-4'>Popular Flights Routes & Estimates</h2>
@@ -436,33 +472,32 @@ const EventsPage = () => {
           />
         </section>
       
-        <SmartTravelTools />
 
         <section className='flex relative justify-between pb-[60px] px-5 md:px-10 lg:px-20 pb-0'>
-          <div className='w-[65%] max-[700px]:w-full mt-6 flex flex-col gap-y-[90px]'>
+          <div className='w-[65%] max-[700px]:w-full mt-6 flex flex-col gap-y-[30px]'>
           <Collapsible  
               key={1}
               question={'General Cost Breakdown'}
               answer={
                 <div id='general-cost-breakdown'>
                   <h3 className='font-bold text-black'>Billable Flight Time</h3>
-                  <p className='mb-6 mt-8 details'>Billable flight time refers to the duration for which clients are charged for the use of an aircraft. It starts from the moment the aircraft begins to move for takeoff and concludes when it comes to a stop after landing. While there’s a standard practice in the aviation industry to charge a minimum of 2 hours per day for aircraft rental and charter services, this is particularly prevalent in Jet Card programs. In the on-demand charter world, operators often rely on system-generated flight times for billing. They provide some flexibility, typically not charging extra if the actual flight time slightly exceeds the estimate, and similarly, not reducing charges for marginally shorter flights.</p>
+                  <p className='mb-6 mt-8 '>Billable flight time refers to the duration for which clients are charged for the use of an aircraft. It starts from the moment the aircraft begins to move for takeoff and concludes when it comes to a stop after landing. While there’s a standard practice in the aviation industry to charge a minimum of 2 hours per day for aircraft rental and charter services, this is particularly prevalent in Jet Card programs. In the on-demand charter world, operators often rely on system-generated flight times for billing. They provide some flexibility, typically not charging extra if the actual flight time slightly exceeds the estimate, and similarly, not reducing charges for marginally shorter flights.</p>
                   
                   <h3 className='font-bold text-black'>Fuel Surcharge</h3>
-                  <p className='mb-6 mt-8 details'>A fuel surcharge becomes applicable when there’s a notable rise in aviation fuel prices. This additional cost, reflecting current market fluctuations, can vary between $200 to $2,250 per hour, sometimes even higher, depending on the size and type of the aircraft. At Jetlevel Aviation, we prioritize transparency and client convenience. Therefore, we include any potential fuel surcharges directly in our initial quotes.</p>
+                  <p className='mb-6 mt-8 '>A fuel surcharge becomes applicable when there’s a notable rise in aviation fuel prices. This additional cost, reflecting current market fluctuations, can vary between $200 to $2,250 per hour, sometimes even higher, depending on the size and type of the aircraft. At Jetlevel Aviation, we prioritize transparency and client convenience. Therefore, we include any potential fuel surcharges directly in our initial quotes.</p>
                 
                   <h3 className='font-bold text-black'>Crew Fees</h3>
-                  <p className='mb-6 mt-8 details'>Crew fees go beyond basic salaries, reflecting the expertise and experience necessary for safe, efficient flight operations. These fees, generally ranging from $600 for domestic locations to $2,000 for larger crews and international destinations, basically vary according to the flight’s duration, route intricacy, and specific demands of each journey. Notably, longer or more complex routes may involve higher fees due to the increased workload and expertise required from the crew.</p>
+                  <p className='mb-6 mt-8 '>Crew fees go beyond basic salaries, reflecting the expertise and experience necessary for safe, efficient flight operations. These fees, generally ranging from $600 for domestic locations to $2,000 for larger crews and international destinations, basically vary according to the flight’s duration, route intricacy, and specific demands of each journey. Notably, longer or more complex routes may involve higher fees due to the increased workload and expertise required from the crew.</p>
                 
                   <h3 className='font-bold text-black'>Federal Excise Tax (FET)</h3>
-                  <p className='mb-6 mt-8 details'>Federal Excise Tax (FET) is an essential component of the costs associated with private jet charters in the United States. Levied by the federal government, FET is 7.5% of the air transportation charges. This tax is not only applicable to domestic journeys but also extends to segments of international flights traversing U.S. airspace. A key aspect to remember is the additional segment fee, charged per leg of the flight, which varies depending on the route and aircraft type.At JetLevel Aviation, this tax is accounted for in the overall cost of the private jet charter, ensuring our clients receive a transparent and all-inclusive quote that reflects the total expense, including FET, without any hidden fees.</p>
+                  <p className='mb-6 mt-8 '>Federal Excise Tax (FET) is an essential component of the costs associated with private jet charters in the United States. Levied by the federal government, FET is 7.5% of the air transportation charges. This tax is not only applicable to domestic journeys but also extends to segments of international flights traversing U.S. airspace. A key aspect to remember is the additional segment fee, charged per leg of the flight, which varies depending on the route and aircraft type.At JetLevel Aviation, this tax is accounted for in the overall cost of the private jet charter, ensuring our clients receive a transparent and all-inclusive quote that reflects the total expense, including FET, without any hidden fees.</p>
 
 
                   <h3 className='font-bold text-black'>Segment Fees</h3>
-                  <p className='mb-6 mt-8 details'>Segment fees are a government tax charge for passengers, typically applied per leg in the itinerary. In the U.S. These fees are often around $4.30 per segment for each passenger. They’re used to fund Federal Aviation Administration (FAA) costs, and it’s an addition to the 7.5% Federal Excise Tax (FET).</p>
+                  <p className='mb-6 mt-8 '>Segment fees are a government tax charge for passengers, typically applied per leg in the itinerary. In the U.S. These fees are often around $4.30 per segment for each passenger. They’re used to fund Federal Aviation Administration (FAA) costs, and it’s an addition to the 7.5% Federal Excise Tax (FET).</p>
                   
                   <h3 className='font-bold text-black'>Additional Concierge Services</h3>
-                  <p className='mb-6 mt-8 details'>Additional concierge services in private jet charter, like bespoke travel arrangements or special requests, add a personalized touch but also impact the overall cost. These services can include anything from booking luxury ground transportation, securing reservations at exclusive restaurants, to arranging event tickets or special on-board amenities. The cost varies greatly depending on the nature and complexity of the services, potentially ranging from a few hundred to several thousand dollars.</p>
+                  <p className='mb-6 mt-8 '>Additional concierge services in private jet charter, like bespoke travel arrangements or special requests, add a personalized touch but also impact the overall cost. These services can include anything from booking luxury ground transportation, securing reservations at exclusive restaurants, to arranging event tickets or special on-board amenities. The cost varies greatly depending on the nature and complexity of the services, potentially ranging from a few hundred to several thousand dollars.</p>
                  
                 </div>
               }
@@ -470,11 +505,6 @@ const EventsPage = () => {
               iconPosition="end"
               isOpen={faqSection === 'general-cost-breakdown'}
               onClick={() => toggleSection('general-cost-breakdown')} 
-              backgroundColor='#0071BA'
-              classNames='text-white '
-              answerClassName='bg-[#F9F9F9]'
-              questionClassName='text-white p-1 !text-[25px]'
-              iconColor="text-white"
           />
 
           <Collapsible  
@@ -483,22 +513,22 @@ const EventsPage = () => {
               answer={
                 <div id='factors-affecting-charter-costs'>
                   <h3 className='font-bold text-black'>Flight Time & Distance</h3>
-                  <p className='mb-6 mt-8 details'>The cost to charter a private jet can vary significantly based on flight time and distance. Shorter flights might cost around $1,800 to $3,800 per hour, while longer, intercontinental journeys can escalate to $14,000 per hour or more. This is due to factors like fuel consumption, crew expenses, and aircraft type. For instance, a flight from New York(KJFK) to Los Angeles(KLAX) can cost approximately $45,000, while a shorter hop like New York(KJFK) to Miami(KMIA) might be around $20,000. These costs are approximate and depend on specific aircraft and journey details.</p>
+                  <p className='mb-6 mt-8 '>The cost to charter a private jet can vary significantly based on flight time and distance. Shorter flights might cost around $1,800 to $3,800 per hour, while longer, intercontinental journeys can escalate to $14,000 per hour or more. This is due to factors like fuel consumption, crew expenses, and aircraft type. For instance, a flight from New York(KJFK) to Los Angeles(KLAX) can cost approximately $45,000, while a shorter hop like New York(KJFK) to Miami(KMIA) might be around $20,000. These costs are approximate and depend on specific aircraft and journey .</p>
                   
                   <h3 className='font-bold text-black'>Charter Destination</h3>
-                  <p className='mb-6 mt-8 details'>The destination of your private jet charter significantly influences the cost. Popular destinations might offer more competitive pricing due to higher demand and availability of aircraft. For example, a charter flight to a major city like Las Vegas or New York could be more cost-effective compared to remote or less frequented locations. International destinations generally increase the cost, with factors like international fees and longer flight durations playing a role.</p>
-                  <p className='mb-6 mt-8 details'><span>A private jet charter from the USA to Europe</span>, for instance, A heavy jet like Falcon 900EX from Orlando(KMCO) to Barcelona(KBCN) can cost about $120,000 or more.</p>
+                  <p className='mb-6 mt-8 '>The destination of your private jet charter significantly influences the cost. Popular destinations might offer more competitive pricing due to higher demand and availability of aircraft. For example, a charter flight to a major city like Las Vegas or New York could be more cost-effective compared to remote or less frequented locations. International destinations generally increase the cost, with factors like international fees and longer flight durations playing a role.</p>
+                  <p className='mb-6 mt-8 '><span>A private jet charter from the USA to Europe</span>, for instance, A heavy jet like Falcon 900EX from Orlando(KMCO) to Barcelona(KBCN) can cost about $120,000 or more.</p>
                 
                   <h3 className='font-bold text-black'>Aircraft Type</h3>
-                  <p className='mb-6 mt-8 details'>The <span>type of aircraft</span> chosen for a private jet charter greatly impacts the cost. Smaller, light jets suitable for short trips may cost around $5,400 to $6,300 per hour. Mid-size jets, offering more space and longer range, typically range from $6,000 to $8,000 per hour. For larger groups or long-haul flights, heavy jets are ideal, with costs ranging from $10,000 to $14,000 per hour. Ultra-long-range jets, providing the utmost in luxury and distance capabilities like transatlantic flight, can exceed $14,000 per hour.</p>
+                  <p className='mb-6 mt-8 '>The <span>type of aircraft</span> chosen for a private jet charter greatly impacts the cost. Smaller, light jets suitable for short trips may cost around $5,400 to $6,300 per hour. Mid-size jets, offering more space and longer range, typically range from $6,000 to $8,000 per hour. For larger groups or long-haul flights, heavy jets are ideal, with costs ranging from $10,000 to $14,000 per hour. Ultra-long-range jets, providing the utmost in luxury and distance capabilities like transatlantic flight, can exceed $14,000 per hour.</p>
                 
                   <h3 className='font-bold text-black'>Age of Aircraft</h3>
-                  <p className='mb-6 mt-8 details'>The age of the aircraft is a crucial factor in determining private jet charter costs. Newer jets, often featuring the latest in technology and luxury amenities, command higher prices, potentially adding thousands to the hourly rate. For example, the latest model, a brand new heavy jet like Gulfstream 700, might cost around $18,000 per hour. In contrast, older models, while still safe and comfortable like Gulfstream G-IV, can be more budget-friendly, with hourly rates possibly around $14,000.</p>
+                  <p className='mb-6 mt-8 '>The age of the aircraft is a crucial factor in determining private jet charter costs. Newer jets, often featuring the latest in technology and luxury amenities, command higher prices, potentially adding thousands to the hourly rate. For example, the latest model, a brand new heavy jet like Gulfstream 700, might cost around $18,000 per hour. In contrast, older models, while still safe and comfortable like Gulfstream G-IV, can be more budget-friendly, with hourly rates possibly around $14,000.</p>
 
                   <Image src="https://jetlevel.com/wp-content/uploads/2024/04/6212eee9fff9e69d53cf3e655e70c987.jpg" width={100} height={100} alt='plane' className='w-full h-[500px] mt-5 mb-6' unoptimized />
 
                   <h3 className='font-bold text-black'>Peak Demand Scheduling</h3>
-                  <p className='mb-6 mt-8 details'>During peak demand periods, the cost of chartering a private jet typically increases due to higher demand and limited availability of aircraft. These periods often include holidays, major events, or business seasons. For instance, chartering a jet during Christmas or the Super Bowl can be significantly more expensive, sometimes by 20% to 50%, compared to off-peak times.</p>
+                  <p className='mb-6 mt-8 '>During peak demand periods, the cost of chartering a private jet typically increases due to higher demand and limited availability of aircraft. These periods often include holidays, major events, or business seasons. For instance, chartering a jet during Christmas or the Super Bowl can be significantly more expensive, sometimes by 20% to 50%, compared to off-peak times.</p>
 
                   <p className='font-bold mb-6'>Expert Tip from Ricky Gomulka, Founder and Managing Partner</p>
                   <div>
@@ -510,11 +540,6 @@ const EventsPage = () => {
               iconPosition="end"
               isOpen={faqSection === 'factors-affecting-charter-costs'}
               onClick={() => toggleSection('factors-affecting-charter-costs')} 
-              backgroundColor='#0071BA'
-              classNames='text-white'
-              answerClassName='bg-[#F9F9F9]'
-              questionClassName='text-white !text-[25px] p-1'
-              iconColor="text-white"
           />
 
           <Collapsible  
@@ -524,40 +549,40 @@ const EventsPage = () => {
                 <div id='additional-costs-and-fees'>
                   <h3 className='font-bold text-black pb-2'>In-flight Phone Usage</h3>
                   <span className='text-lg'>($5 to $11 per minute)</span>
-                  <p className='mb-6 mt-8 details'>In-flight phone use on private jets can be costly, often ranging from $5 to $8 per minute domestically, while for international flights it can cost between $8 to $11 per minute. Charges are based on usage, so longer calls or data use can significantly increase costs. It’s wise to check rates and consider alternatives like Wi-Fi for calls to manage expenses.</p>
+                  <p className='mb-6 mt-8 '>In-flight phone use on private jets can be costly, often ranging from $5 to $8 per minute domestically, while for international flights it can cost between $8 to $11 per minute. Charges are based on usage, so longer calls or data use can significantly increase costs. It’s wise to check rates and consider alternatives like Wi-Fi for calls to manage expenses.</p>
                   
                   <h3 className='font-bold text-black pb-2'>De-icing</h3>
                   <span>($1,500 to $10,000)</span>
-                  <p className='mb-6 mt-8 details'>De-icing is a crucial safety measure for private jet charters in cold weather. The process involves removing ice and snow from the aircraft with a de-icing fluid, ensuring safe operation. The cost of de-icing varies depending on the size of the jet and the amount of ice build-up, ranging from $1,500 to $10,000 or more. For smaller jets like light jets it can cost around $1,500 while larger jets like airliners can cost more then $10,000 since they require more de-icing fluid.</p>
+                  <p className='mb-6 mt-8 '>De-icing is a crucial safety measure for private jet charters in cold weather. The process involves removing ice and snow from the aircraft with a de-icing fluid, ensuring safe operation. The cost of de-icing varies depending on the size of the jet and the amount of ice build-up, ranging from $1,500 to $10,000 or more. For smaller jets like light jets it can cost around $1,500 while larger jets like airliners can cost more then $10,000 since they require more de-icing fluid.</p>
                 
                   <h3 className='font-bold text-black pb-2'>Airport Landing Fees</h3>
                   <span>($100 to $1,500 per flight)</span>
-                  <p className='mb-6 mt-8 details'>Airport landing fees are a standard charge for private jet charters,ranging from $100 to $1,500 per flight and varying based on the airport’s size and location. Smaller airports might charge a few hundred dollars, while major international hubs can charge several thousand. These fees cover the use of airport facilities and services. It’s important to factor these into the overall cost of your charter, as they can add a significant amount to the total, especially for multi-leg trips as they involve multiple landing.</p>
+                  <p className='mb-6 mt-8 '>Airport landing fees are a standard charge for private jet charters,ranging from $100 to $1,500 per flight and varying based on the airport’s size and location. Smaller airports might charge a few hundred dollars, while major international hubs can charge several thousand. These fees cover the use of airport facilities and services. It’s important to factor these into the overall cost of your charter, as they can add a significant amount to the total, especially for multi-leg trips as they involve multiple landing.</p>
                 
                   <h3 className='font-bold text-black pb-2'>Hangar Rentals</h3>
                   <span>($500 to $1,500 per day)</span>
-                  <p className='mb-6 mt-8 details'>This is like renting a garage for your car but for jets. It’s the cost for storing the aircraft in a hangar, particularly important for protecting the jet from harsh weather. If your jet stays overnight or for several days at an airport, it might be kept in a hangar, leading to rental charges. These fees depend on the airport and the size of the aircraft. It’s wise to consider these as extra parking costs when planning your jet charter, especially for longer stays as they are calculated per day.</p>
+                  <p className='mb-6 mt-8 '>This is like renting a garage for your car but for jets. It’s the cost for storing the aircraft in a hangar, particularly important for protecting the jet from harsh weather. If your jet stays overnight or for several days at an airport, it might be kept in a hangar, leading to rental charges. These fees depend on the airport and the size of the aircraft. It’s wise to consider these as extra parking costs when planning your jet charter, especially for longer stays as they are calculated per day.</p>
 
                   <h3 className='font-bold text-black pb-2'>Ramp and Handling Fees</h3>
                   <span>($100 to $500 per visit)</span>
-                  <p className='mb-6 mt-8 details'>These are more like the valet services for your jet. They cover the costs of services provided on the ground, such as parking the jet on the airport ramp (which is basically the jet parking lot), servicing the aircraft, and any ground support needed while the aircraft is at the airport. These fees can vary based on the airport’s size and the level of service they provide, and are charged by the fixed-base operator (FBO).</p>
+                  <p className='mb-6 mt-8 '>These are more like the valet services for your jet. They cover the costs of services provided on the ground, such as parking the jet on the airport ramp (which is basically the jet parking lot), servicing the aircraft, and any ground support needed while the aircraft is at the airport. These fees can vary based on the airport’s size and the level of service they provide, and are charged by the fixed-base operator (FBO).</p>
 
                   <h3 className='font-bold text-black pb-2'>Overnight Accommodation</h3>
                   <span>($150 to $300 per crew member)</span>
-                  <p className='mb-6 mt-8 details'>Overnight accommodation costs for the crew can impact the overall price of a private jet charter. If your trip requires the crew to stay overnight or for multiple nights, you’ll need to cover their hotel and possibly meal expenses. These costs can vary greatly depending on the location and duration of the stay. For example, a night’s stay in a standard hotel might add approximately $150 to $300 per crew member, while upscale locations could be higher.</p>
+                  <p className='mb-6 mt-8 '>Overnight accommodation costs for the crew can impact the overall price of a private jet charter. If your trip requires the crew to stay overnight or for multiple nights, you’ll need to cover their hotel and possibly meal expenses. These costs can vary greatly depending on the location and duration of the stay. For example, a night’s stay in a standard hotel might add approximately $150 to $300 per crew member, while upscale locations could be higher.</p>
 
                   <h3 className='font-bold text-black pb-2'>Short Leg Fees (Applied on under 1-2 hour flight time)</h3>
-                  <p className='mb-6 mt-8 details'>Short leg fees are added costs on private jet charters for exceptionally brief flights, often applied when a trip is below a certain mileage or time threshold, like under 1 hour or 2 hours of flight time. These fees compensate for the operational costs not covered by the minimum billing. For example, a jet might have a 2-hour minimum charge, so a 1-hour flight could still incur the cost of 2 hours.</p>
+                  <p className='mb-6 mt-8 '>Short leg fees are added costs on private jet charters for exceptionally brief flights, often applied when a trip is below a certain mileage or time threshold, like under 1 hour or 2 hours of flight time. These fees compensate for the operational costs not covered by the minimum billing. For example, a jet might have a 2-hour minimum charge, so a 1-hour flight could still incur the cost of 2 hours.</p>
                   
                   <h3 className='font-bold text-black pb-2'>Aircraft Positioning Fees</h3>
-                  <p className='mb-6 mt-8 details'>A charter client will pay aircraft positioning fees in scenarios where the chosen jet isn’t located at the departure airport. For example, if you’re flying out of Los Angeles but the jet is based in San Francisco, the jet needs to be flown, or ‘positioned,’ to Los Angeles for your trip. This positioning involves additional flight time, fuel, crew, and maintenance costs, all of which contribute to the fee. Essentially, it’s like a delivery charge for bringing the jet to your starting point. Aircraft positioning fees typically cost less than the standard charter rate that a broker quotes for the actual flight. These fees are meant to cover the operational costs of moving the aircraft to your departure point.</p>
+                  <p className='mb-6 mt-8 '>A charter client will pay aircraft positioning fees in scenarios where the chosen jet isn’t located at the departure airport. For example, if you’re flying out of Los Angeles but the jet is based in San Francisco, the jet needs to be flown, or ‘positioned,’ to Los Angeles for your trip. This positioning involves additional flight time, fuel, crew, and maintenance costs, all of which contribute to the fee. Essentially, it’s like a delivery charge for bringing the jet to your starting point. Aircraft positioning fees typically cost less than the standard charter rate that a broker quotes for the actual flight. These fees are meant to cover the operational costs of moving the aircraft to your departure point.</p>
                   
                   <h3 className='font-bold text-black pb-2'>Cleaning Fees</h3>
                   <span>($150 to $350 per charter)</span>
-                  <p className='mb-6 mt-8 details'>Cleaning fees for private jet charters cover the cost of cleaning and sanitizing the aircraft before and after each flight. These fees have become particularly significant in maintaining high hygiene standards after COVID-19. Depending on the size of the jet and the level of service, cleaning fees can range from $150 to $350 per charter.</p>
+                  <p className='mb-6 mt-8 '>Cleaning fees for private jet charters cover the cost of cleaning and sanitizing the aircraft before and after each flight. These fees have become particularly significant in maintaining high hygiene standards after COVID-19. Depending on the size of the jet and the level of service, cleaning fees can range from $150 to $350 per charter.</p>
                   
                   <h3 className='font-bold text-black pb-2'>Aircraft Daily Minimums</h3>
-                  <p className='mb-6 mt-8 details'>Aircraft daily minimums in private jet charter typically refer to a required minimum number of billable flight hours per day when booking a charter. Most aircraft have a 2-hour daily minimum. For instance, if you book a 3-day round-trip, the cost might reflect 6 hours of billable flight time (3 days x 2 hours) even if the actual flight time is less. This daily minimum ensures revenue for aircraft owners for the days the aircraft is reserved, even if the actual flying time is shorter.</p>
+                  <p className='mb-6 mt-8 '>Aircraft daily minimums in private jet charter typically refer to a required minimum number of billable flight hours per day when booking a charter. Most aircraft have a 2-hour daily minimum. For instance, if you book a 3-day round-trip, the cost might reflect 6 hours of billable flight time (3 days x 2 hours) even if the actual flight time is less. This daily minimum ensures revenue for aircraft owners for the days the aircraft is reserved, even if the actual flying time is shorter.</p>
                   
                   <Table 
                     border={true}
@@ -588,10 +613,10 @@ const EventsPage = () => {
                   />
                   <h3 className='font-bold text-black pb-2 mt-6'>Cost of Medical Evacuation Services</h3>
                   <span>($10,000 to $100,000+)</span>
-                  <p className='mb-6 mt-8 details'>The cost of medical evacuation services via private jet can be substantial, reflecting the specialized nature of these flights. Prices typically start around $10,000 and can exceed $100,000, depending on factors like the distance of the flight, the type of aircraft required, and the level of medical care needed. For instance, a medevac flight within the United States may be on the lower end of the scale, while international medical repatriation can be much more expensive due to longer distances and additional logistical complexities.</p>
+                  <p className='mb-6 mt-8 '>The cost of medical evacuation services via private jet can be substantial, reflecting the specialized nature of these flights. Prices typically start around $10,000 and can exceed $100,000, depending on factors like the distance of the flight, the type of aircraft required, and the level of medical care needed. For instance, a medevac flight within the United States may be on the lower end of the scale, while international medical repatriation can be much more expensive due to longer distances and additional logistical complexities.</p>
                   
                   <h3 className='font-bold text-black pb-2'>Refueling</h3>
-                  <p className='mb-6 mt-8 details'>Refueling costs are a key component of private jet charter expenses. The cost depends on the aircraft’s fuel consumption rate and the current price of jet fuel. For instance, refueling a light jet might cost between $2,000 to $3,000, while larger jets could incur $5,000 to $10,000 or more per refueling. These costs vary with fuel price fluctuations and the specific fuel needs of the aircraft. It’s important to note that longer flights requiring multiple refueling stops can substantially increase the total charter cost.</p>
+                  <p className='mb-6 mt-8 '>Refueling costs are a key component of private jet charter expenses. The cost depends on the aircraft’s fuel consumption rate and the current price of jet fuel. For instance, refueling a light jet might cost between $2,000 to $3,000, while larger jets could incur $5,000 to $10,000 or more per refueling. These costs vary with fuel price fluctuations and the specific fuel needs of the aircraft. It’s important to note that longer flights requiring multiple refueling stops can substantially increase the total charter cost.</p>
                   
                   <Table 
                   border={true}
@@ -634,11 +659,11 @@ const EventsPage = () => {
                   />
 
                   <h3 className='font-bold text-black pb-2 mt-6'>Unscheduled Itinerary Changes</h3>
-                  <p className='mb-6 mt-8 details'>Making changes to your flight plan, especially last minute, can incur additional fees. For instance, altering the destination might result in rerouting fees, additional fuel costs, and possibly crew accommodation expenses, potentially adding thousands to your bill. Similarly, changing departure times could lead to crew overtime charges or overnight fees for the aircraft.</p>
+                  <p className='mb-6 mt-8 '>Making changes to your flight plan, especially last minute, can incur additional fees. For instance, altering the destination might result in rerouting fees, additional fuel costs, and possibly crew accommodation expenses, potentially adding thousands to your bill. Similarly, changing departure times could lead to crew overtime charges or overnight fees for the aircraft.</p>
 
                   <h3 className='font-bold text-black pb-2'>International Charges</h3>
                   <span>($1,000 to $10,000)</span>
-                  <p className='mb-6 mt-8 details'>International charges can include international handling fees, customs and immigration services, and potentially higher landing and parking fees at international airports. For example, a transatlantic flight might incur additional costs ranging from $1,000 to $10,000 or more, depending on the destination, length of stay, and airport fees. Overflight permits and navigation charges also contribute to these costs.</p>
+                  <p className='mb-6 mt-8 '>International charges can include international handling fees, customs and immigration services, and potentially higher landing and parking fees at international airports. For example, a transatlantic flight might incur additional costs ranging from $1,000 to $10,000 or more, depending on the destination, length of stay, and airport fees. Overflight permits and navigation charges also contribute to these costs.</p>
 
                 </div>
               }
@@ -646,11 +671,6 @@ const EventsPage = () => {
               iconPosition="end"
               isOpen={faqSection === 'additional-costs-and-fees'}
               onClick={() => toggleSection('additional-costs-and-fees')} 
-              backgroundColor='#0071BA'
-              classNames='text-white'
-              answerClassName='bg-[#F9F9F9]'
-              questionClassName='text-white !text-[25px] p-1'
-              iconColor="text-white"
           />
 
           <Collapsible  
@@ -659,11 +679,11 @@ const EventsPage = () => {
               answer={
                 <div id='comparative-cost-analysis'>
                   <h3 className='font-bold text-black pb-2'>How Much Do Private Jets of Different Sizes Cost?</h3>
-                  <p className='mb-6 mt-8 details'>Aircraft for private jet charter are differentiated by size, each suited to specific travel needs based on range, passenger capacity, and luggage space. Typically, the larger the jet, the longer the range it can cover and the more passengers and baggage it can accommodate. Correspondingly, the hourly rental rates increase with the size of the aircraft.</p>
-                  <p className='mb-6 mt-8 details'>The cost of chartering a private jet is influenced by multiple factors including the jet’s size, model, and age. It’s essential to select an aircraft not just by its size, but also by its ability to reach your destination efficiently. For example, opting for a smaller jet might seem cost-effective due to lower hourly rates, but if it requires additional fuel stops, this could extend your travel time and add unforeseen expenses. In some cases, a larger aircraft, despite a higher hourly rate, could offer better overall value by eliminating the need for refueling stops and reducing total travel time. This balance between size, range, and cost is a key consideration when planning your private jet charter.</p>
+                  <p className='mb-6 mt-8 '>Aircraft for private jet charter are differentiated by size, each suited to specific travel needs based on range, passenger capacity, and luggage space. Typically, the larger the jet, the longer the range it can cover and the more passengers and baggage it can accommodate. Correspondingly, the hourly rental rates increase with the size of the aircraft.</p>
+                  <p className='mb-6 mt-8 '>The cost of chartering a private jet is influenced by multiple factors including the jet’s size, model, and age. It’s essential to select an aircraft not just by its size, but also by its ability to reach your destination efficiently. For example, opting for a smaller jet might seem cost-effective due to lower hourly rates, but if it requires additional fuel stops, this could extend your travel time and add unforeseen expenses. In some cases, a larger aircraft, despite a higher hourly rate, could offer better overall value by eliminating the need for refueling stops and reducing total travel time. This balance between size, range, and cost is a key consideration when planning your private jet charter.</p>
                   
                   <h3 className='font-bold text-black pb-2'>Turboprops</h3>
-                  <p className='mb-6 mt-8 details'>Turboprops are an efficient choice for shorter journeys, featuring turbine propeller engines that offer a unique blend of performance and convenience. Typically seating between 5 to 11 passengers, these aircraft boast an average cabin height of about 4.8 feet, ensuring a comfortable travel experience. With their capability to cover ranges of 3 to 6 hours, turboprops are ideal for trips under 1,000 miles, especially advantageous for accessing airports with shorter runways.</p>
+                  <p className='mb-6 mt-8 '>Turboprops are an efficient choice for shorter journeys, featuring turbine propeller engines that offer a unique blend of performance and convenience. Typically seating between 5 to 11 passengers, these aircraft boast an average cabin height of about 4.8 feet, ensuring a comfortable travel experience. With their capability to cover ranges of 3 to 6 hours, turboprops are ideal for trips under 1,000 miles, especially advantageous for accessing airports with shorter runways.</p>
 
                   <Table 
                     border={false}
@@ -737,10 +757,10 @@ const EventsPage = () => {
                     button={false}
                   />
 
-                  <p className='mb-6 mt-8 details'>For example, a trip from Aspen to Denver in a modern Pilatus PC-12NG, carrying 8 passengers, would take roughly 45 minutes. With an average hourly rate of about $2,300, this journey would cost approximately $1,725. In another scenario, flying from Martha’s Vineyard to Boston in a Beechcraft King Air 250, ideal for 7 passengers, the estimated flight time is 35 minutes. Given an hourly rate of $2,300, the total cost for this route would be around $1,340. Lastly, a journey from Napa Valley to Los Angeles in a sleek TBM 930, accommodating 6 passengers, can be expected to take about 1 hour and 20 minutes. At an hourly rate of $2,500, this flight would approximate $3,300. These examples showcase the efficiency and cost-effectiveness of turboprops for shorter, regional travel.</p>
+                  <p className='mb-6 mt-8 '>For example, a trip from Aspen to Denver in a modern Pilatus PC-12NG, carrying 8 passengers, would take roughly 45 minutes. With an average hourly rate of about $2,300, this journey would cost approximately $1,725. In another scenario, flying from Martha’s Vineyard to Boston in a Beechcraft King Air 250, ideal for 7 passengers, the estimated flight time is 35 minutes. Given an hourly rate of $2,300, the total cost for this route would be around $1,340. Lastly, a journey from Napa Valley to Los Angeles in a sleek TBM 930, accommodating 6 passengers, can be expected to take about 1 hour and 20 minutes. At an hourly rate of $2,500, this flight would approximate $3,300. These examples showcase the efficiency and cost-effectiveness of turboprops for shorter, regional travel.</p>
 
                   <h3 className='font-bold text-black pb-2'>Very Light Jet</h3>
-                  <p className='mb-6 mt-8 details'>Very Light Jets (VLJs) represent a revolution in air travel, offering an economical yet comfortable option for short-haul flights. These jets typically seat 4 to 7 passengers and are powered by modern, efficient engines. Renowned for their cost-effectiveness and lower operational costs, VLJs are an ideal solution for small groups and individuals traveling on shorter routes, up to about 1,500 miles. They provide a cozy cabin space, perfect for quick business trips or weekend getaways, without the larger footprint of traditional private jets.</p>
+                  <p className='mb-6 mt-8 '>Very Light Jets (VLJs) represent a revolution in air travel, offering an economical yet comfortable option for short-haul flights. These jets typically seat 4 to 7 passengers and are powered by modern, efficient engines. Renowned for their cost-effectiveness and lower operational costs, VLJs are an ideal solution for small groups and individuals traveling on shorter routes, up to about 1,500 miles. They provide a cozy cabin space, perfect for quick business trips or weekend getaways, without the larger footprint of traditional private jets.</p>
                   
                   <Table 
                     border={false}
@@ -814,10 +834,10 @@ const EventsPage = () => {
                     button={false}
                   />
 
-                  <p className='mb-6 mt-8 details'>For example, a flight from Boston to Washington D.C. in a Cessna Citation Mustang, which comfortably seats 4 passengers, would take about 1 hour and 30 minutes. Considering the average hourly rate of $3,000 for VLJs, this trip would amount to approximately $4,500. Another scenario could be a journey from Las Vegas to Los Angeles in an Eclipse 500, known for its efficiency and speed, accommodating 4 passengers. This flight would last around 1 hour and 10 minutes, and with an hourly rate of $4,200, the estimated cost would be about $4,900. VLJs like these offer an accessible entry point into private jet travel, combining convenience, affordability, and the luxury of private aviation.</p>
+                  <p className='mb-6 mt-8 '>For example, a flight from Boston to Washington D.C. in a Cessna Citation Mustang, which comfortably seats 4 passengers, would take about 1 hour and 30 minutes. Considering the average hourly rate of $3,000 for VLJs, this trip would amount to approximately $4,500. Another scenario could be a journey from Las Vegas to Los Angeles in an Eclipse 500, known for its efficiency and speed, accommodating 4 passengers. This flight would last around 1 hour and 10 minutes, and with an hourly rate of $4,200, the estimated cost would be about $4,900. VLJs like these offer an accessible entry point into private jet travel, combining convenience, affordability, and the luxury of private aviation.</p>
                   
                   <h3 className='font-bold text-black pb-2'>Light Jet</h3>
-                  <p className='mb-6 mt-8 details'>Light jets, distinguishable by their sleek design and advanced jet engines, cater superbly to small groups seeking speed and efficiency. Typically seating 6 to 9 passengers, these jets offer a compact yet luxurious cabin environment, ideal for short to medium-range flights. With an impressive cruising speed of around ~450 mph and a range of 1,700 to 2,300 nautical miles, light jets are perfect for quick city hops or efficient business trips. They provide a harmonious blend of comfort, speed, and functionality, making them a preferred choice for travelers looking for a step above turboprops in both performance and luxury.</p>
+                  <p className='mb-6 mt-8 '>Light jets, distinguishable by their sleek design and advanced jet engines, cater superbly to small groups seeking speed and efficiency. Typically seating 6 to 9 passengers, these jets offer a compact yet luxurious cabin environment, ideal for short to medium-range flights. With an impressive cruising speed of around ~450 mph and a range of 1,700 to 2,300 nautical miles, light jets are perfect for quick city hops or efficient business trips. They provide a harmonious blend of comfort, speed, and functionality, making them a preferred choice for travelers looking for a step above turboprops in both performance and luxury.</p>
 
                   <Table 
                     border={false}
@@ -891,10 +911,10 @@ const EventsPage = () => {
                     button={false}
                   />
 
-                  <p className='mb-6 mt-8 details'>For instance, a flight from Miami to New York in a sleek Embraer Phenom 300, accommodating 7 passengers, would take around 2 hours and 30 minutes. At an average hourly rate of $5,400 for light jets, this journey would cost approximately $13,500. Alternatively, a trip from San Francisco to Seattle in a HondaJet, known for its innovative design and efficient performance, carrying 6 passengers, would last about 2 hours. With an hourly rate of $4,900, the total cost for this route would be roughly $9,800. Light jets like these combine efficiency, luxury, and speed, making them a fantastic choice for travelers seeking a comfortable and swift journey.</p>
+                  <p className='mb-6 mt-8 '>For instance, a flight from Miami to New York in a sleek Embraer Phenom 300, accommodating 7 passengers, would take around 2 hours and 30 minutes. At an average hourly rate of $5,400 for light jets, this journey would cost approximately $13,500. Alternatively, a trip from San Francisco to Seattle in a HondaJet, known for its innovative design and efficient performance, carrying 6 passengers, would last about 2 hours. With an hourly rate of $4,900, the total cost for this route would be roughly $9,800. Light jets like these combine efficiency, luxury, and speed, making them a fantastic choice for travelers seeking a comfortable and swift journey.</p>
 
                   <h3 className='font-bold text-black pb-2'>Midsize Jet</h3>
-                  <p className='mb-6 mt-8 details'>Midsize jets stand out as the versatile choice for longer domestic or short international flights, offering a comfortable balance between range and luxury. Typically accommodating 7 to 9 passengers, these jets provide more cabin space, enabling passengers to stand up and move around with ease. With an average range of about 2,100 to 3,200 nautical miles and a cruising speed of around ~500 mph, midsize jets are ideal for travelers seeking enhanced comfort without venturing into the larger, more costly jet categories. They often feature amenities like WiFi, enhanced soundproofing, and superior in-flight entertainment systems, making them suitable for both business and leisure travel.</p>
+                  <p className='mb-6 mt-8 '>Midsize jets stand out as the versatile choice for longer domestic or short international flights, offering a comfortable balance between range and luxury. Typically accommodating 7 to 9 passengers, these jets provide more cabin space, enabling passengers to stand up and move around with ease. With an average range of about 2,100 to 3,200 nautical miles and a cruising speed of around ~500 mph, midsize jets are ideal for travelers seeking enhanced comfort without venturing into the larger, more costly jet categories. They often feature amenities like WiFi, enhanced soundproofing, and superior in-flight entertainment systems, making them suitable for both business and leisure travel.</p>
 
                   <Table 
                     border={false}
@@ -968,10 +988,10 @@ const EventsPage = () => {
                     button={false}
                   />
 
-                  <p className='mb-6 mt-8 details'>Consider a trip from New York to Miami in a Learjet 60, known for its spacious cabin and high performance, carrying 8 passengers. The estimated flight time for this route is around 3 hours. At an average hourly rate of $6,400 for midsize jets, the cost for this journey would be approximately $19,200. In another scenario, flying from Los Angeles to Toronto in a Hawker 800XP, which offers a blend of range and comfort for 9 passengers, the flight would take about 4 hours and 30 minutes. With an hourly rate of $6,900, the total cost for this flight would be around $31,000. Midsize jets, with their optimal balance of comfort, range, and cost, are a popular choice for those seeking a more luxurious travel experience without the extravagance of larger jets.</p>
+                  <p className='mb-6 mt-8 '>Consider a trip from New York to Miami in a Learjet 60, known for its spacious cabin and high performance, carrying 8 passengers. The estimated flight time for this route is around 3 hours. At an average hourly rate of $6,400 for midsize jets, the cost for this journey would be approximately $19,200. In another scenario, flying from Los Angeles to Toronto in a Hawker 800XP, which offers a blend of range and comfort for 9 passengers, the flight would take about 4 hours and 30 minutes. With an hourly rate of $6,900, the total cost for this flight would be around $31,000. Midsize jets, with their optimal balance of comfort, range, and cost, are a popular choice for those seeking a more luxurious travel experience without the extravagance of larger jets.</p>
                   
                   <h3 className='font-bold text-black pb-2'>Super-Midsize Jet</h3>
-                  <p className='mb-6 mt-8 details'>Super-midsize jets elevate the private flying experience, blending the spaciousness of a large jet with the efficiency of a midsize model. Seating typically ranges from 8 to 10 passengers, with cabins spacious enough for standing and moving about comfortably. These jets are ideal for longer-range flights, boasting ranges of approximately 2,800 to 3,400 nautical miles and cruising speeds close to 525 mph. Super-midsize jets often feature enhanced amenities such as full stand-up cabins, more luxurious seating, advanced entertainment systems, and full-service galleys, catering to both business and leisure travelers seeking a higher level of comfort and luxury.</p>
+                  <p className='mb-6 mt-8 '>Super-midsize jets elevate the private flying experience, blending the spaciousness of a large jet with the efficiency of a midsize model. Seating typically ranges from 8 to 10 passengers, with cabins spacious enough for standing and moving about comfortably. These jets are ideal for longer-range flights, boasting ranges of approximately 2,800 to 3,400 nautical miles and cruising speeds close to 525 mph. Super-midsize jets often feature enhanced amenities such as full stand-up cabins, more luxurious seating, advanced entertainment systems, and full-service galleys, catering to both business and leisure travelers seeking a higher level of comfort and luxury.</p>
 
                   <Table 
                     border={false}
@@ -1045,10 +1065,10 @@ const EventsPage = () => {
                     button={false}
                   />
 
-                  <p className='mb-6 mt-8 details'>For instance, a flight from San Francisco to New York in a Challenger 350, renowned for its elegant interiors and range capabilities, accommodating 9 passengers, would take about 5 hours and 30 minutes. With an average hourly rate of $9,500 for super-midsize jets, this journey would cost approximately $52,250. Alternatively, a trip from Seattle to Miami in a Cessna Citation X, one of the fastest business jets, carrying 8 passengers, is estimated to take around 6 hours. At an hourly rate of $10,000, the total cost for this route would be around $60,000. Super-midsize jets, with their combination of luxury, range, and comfort, are an excellent choice for those requiring a bit more space and luxury for their long-haul flights.</p>
+                  <p className='mb-6 mt-8 '>For instance, a flight from San Francisco to New York in a Challenger 350, renowned for its elegant interiors and range capabilities, accommodating 9 passengers, would take about 5 hours and 30 minutes. With an average hourly rate of $9,500 for super-midsize jets, this journey would cost approximately $52,250. Alternatively, a trip from Seattle to Miami in a Cessna Citation X, one of the fastest business jets, carrying 8 passengers, is estimated to take around 6 hours. At an hourly rate of $10,000, the total cost for this route would be around $60,000. Super-midsize jets, with their combination of luxury, range, and comfort, are an excellent choice for those requiring a bit more space and luxury for their long-haul flights.</p>
 
                   <h3 className='font-bold text-black pb-2'>Heavy Jet</h3>
-                  <p className='mb-6 mt-8 details'>Heavy jets are the epitome of luxury and range in private aviation, designed for long-haul travel and larger groups. These aircraft typically accommodate 8 to 16 passengers, offering ample cabin space that includes areas for dining, relaxation, and even sleeping quarters in some models. With a range of about 3,000 to 6,000 nautical miles and cruising speeds of around ~525 mph, heavy jets are perfect for transcontinental and international journeys, providing unmatched comfort and amenities like high-speed WiFi, gourmet catering facilities, and entertainment systems.</p>
+                  <p className='mb-6 mt-8 '>Heavy jets are the epitome of luxury and range in private aviation, designed for long-haul travel and larger groups. These aircraft typically accommodate 8 to 16 passengers, offering ample cabin space that includes areas for dining, relaxation, and even sleeping quarters in some models. With a range of about 3,000 to 6,000 nautical miles and cruising speeds of around ~525 mph, heavy jets are perfect for transcontinental and international journeys, providing unmatched comfort and amenities like high-speed WiFi, gourmet catering facilities, and entertainment systems.</p>
                   
                   <Table 
                     border={false}
@@ -1122,17 +1142,17 @@ const EventsPage = () => {
                     button={false}
                   />
 
-                  <p className='mb-6 mt-8 details'>Take, for example, a journey from Los Angeles to London in a Gulfstream G450. This aircraft, known for its spacious and luxurious cabin, can comfortably transport 14 passengers. The estimated flight time for this route is about 10 hours. At an average hourly rate of $12,000 for heavy jets, the cost for this transatlantic trip would be approximately $120,000. In another scenario, traveling from New York to Dubai in a Bombardier Global 6000, which offers a blend of luxury, range, and cabin comfort for 12 passengers, the flight duration is around 12 hours. With an hourly rate of $14,000, the total cost for this long-haul flight would be around $168,000. Heavy jets, with their superior range, spaciousness, and luxurious amenities, are ideal for travelers seeking the ultimate in comfort and style for their long-distance travels.</p>
+                  <p className='mb-6 mt-8 '>Take, for example, a journey from Los Angeles to London in a Gulfstream G450. This aircraft, known for its spacious and luxurious cabin, can comfortably transport 14 passengers. The estimated flight time for this route is about 10 hours. At an average hourly rate of $12,000 for heavy jets, the cost for this transatlantic trip would be approximately $120,000. In another scenario, traveling from New York to Dubai in a Bombardier Global 6000, which offers a blend of luxury, range, and cabin comfort for 12 passengers, the flight duration is around 12 hours. With an hourly rate of $14,000, the total cost for this long-haul flight would be around $168,000. Heavy jets, with their superior range, spaciousness, and luxurious amenities, are ideal for travelers seeking the ultimate in comfort and style for their long-distance travels.</p>
                  
                   <h3 className='font-bold text-black pb-2'>Regional Private Jet Cost Comparison</h3>
                   <h3 className='font-bold text-black pb-2'>USA, UK & Europe, Canada, South America, Asia</h3>
-                  <p className='mb-6 mt-8 details'>Comparing the cost of chartering the same type of private jet across different regions highlights how geographic location can significantly influence pricing. For this comparison, let’s use a midsize jet, a popular choice for its balance of comfort, range, and cost, and examine how its rental rates vary across various global regions.</p>
-                  <p className='mb-6 mt-8 details'>North America: Chartering a midsize jet like the Hawker 800XP from New York to Miami might cost around $20,400 for a 3-hour flight, based on an average hourly rate of $6,800. North America, with its well-developed aviation infrastructure, offers competitive pricing due to the high availability of aircraft.</p>
-                  <p className='mb-6 mt-8 details'>Europe: The same midsize jet, for instance, a Citation XLS, flying from London to Rome, a journey of approximately 4 hours, could cost about $28,000, with an average hourly rate of €7,000. Europe’s dense airspace and varying operational costs across countries can make charter prices slightly higher.</p>
-                  <p className='mb-6 mt-8 details'>Asia: In Asia, chartering a similar jet, like a Bombardier Challenger 350, for a flight from Dubai to Singapore (approximately 7 hours), could cost upwards of $70,000, with hourly rates around $10,000. Higher operational costs and less availability of private jets in certain areas of Asia often result in higher charter rates.</p>
-                  <p className='mb-6 mt-8 details'>Middle East: A flight from Dubai to Beirut in a midsize jet, say a Gulfstream G200, lasting around 3 hours, might cost around $30,000, at an average hourly rate of $10,000. The Middle East’s strategic location and the luxurious preferences of travelers can influence the higher pricing.</p>
-                  <p className='mb-6 mt-8 details'>Australia: Flying from Sydney to Perth in a midsize jet like a Learjet 60, which takes around 5 hours, could cost approximately $35,000, considering an hourly rate of $7,000. The vast distances and lower density of airports can affect charter prices in this region.</p>
-                  <p className='mb-6 mt-8 details'>This comparison illustrates how the same type of aircraft can vary in cost depending on the region, influenced by factors like availability, demand, operational costs, and regional economic conditions.</p>
+                  <p className='mb-6 mt-8 '>Comparing the cost of chartering the same type of private jet across different regions highlights how geographic location can significantly influence pricing. For this comparison, let’s use a midsize jet, a popular choice for its balance of comfort, range, and cost, and examine how its rental rates vary across various global regions.</p>
+                  <p className='mb-6 mt-8 '>North America: Chartering a midsize jet like the Hawker 800XP from New York to Miami might cost around $20,400 for a 3-hour flight, based on an average hourly rate of $6,800. North America, with its well-developed aviation infrastructure, offers competitive pricing due to the high availability of aircraft.</p>
+                  <p className='mb-6 mt-8 '>Europe: The same midsize jet, for instance, a Citation XLS, flying from London to Rome, a journey of approximately 4 hours, could cost about $28,000, with an average hourly rate of €7,000. Europe’s dense airspace and varying operational costs across countries can make charter prices slightly higher.</p>
+                  <p className='mb-6 mt-8 '>Asia: In Asia, chartering a similar jet, like a Bombardier Challenger 350, for a flight from Dubai to Singapore (approximately 7 hours), could cost upwards of $70,000, with hourly rates around $10,000. Higher operational costs and less availability of private jets in certain areas of Asia often result in higher charter rates.</p>
+                  <p className='mb-6 mt-8 '>Middle East: A flight from Dubai to Beirut in a midsize jet, say a Gulfstream G200, lasting around 3 hours, might cost around $30,000, at an average hourly rate of $10,000. The Middle East’s strategic location and the luxurious preferences of travelers can influence the higher pricing.</p>
+                  <p className='mb-6 mt-8 '>Australia: Flying from Sydney to Perth in a midsize jet like a Learjet 60, which takes around 5 hours, could cost approximately $35,000, considering an hourly rate of $7,000. The vast distances and lower density of airports can affect charter prices in this region.</p>
+                  <p className='mb-6 mt-8 '>This comparison illustrates how the same type of aircraft can vary in cost depending on the region, influenced by factors like availability, demand, operational costs, and regional economic conditions.</p>
                   
                   <Table 
                     border={false}
@@ -1207,21 +1227,16 @@ const EventsPage = () => {
                   />
 
                   <h3 className='font-bold text-black pb-2 pt-6'>Price Comparison with First-Class Commercial Flights</h3>
-                  <p className='mb-6 mt-8 details'>Comparing the cost of private jet charter with first-class commercial flights reveals distinct differences. While first-class seats on commercial flights are more affordable, private jet charter offer unparalleled privacy, convenience, and flexibility. For example, a first-class commercial ticket might cost between $5,000 to $10,000 for a transcontinental flight in the U.S., whereas a private jet charter for the same route could range from $20,000 to $35,000, depending on the aircraft type and amenities.</p>
+                  <p className='mb-6 mt-8 '>Comparing the cost of private jet charter with first-class commercial flights reveals distinct differences. While first-class seats on commercial flights are more affordable, private jet charter offer unparalleled privacy, convenience, and flexibility. For example, a first-class commercial ticket might cost between $5,000 to $10,000 for a transcontinental flight in the U.S., whereas a private jet charter for the same route could range from $20,000 to $35,000, depending on the aircraft type and amenities.</p>
                   
                   <h3 className='font-bold text-black pb-2'>Membership or Subscription Models</h3>
-                  <p className='mb-6 mt-8 details'>Membership or subscription models in private jet chartering are innovative programs where clients pay a regular fee for access to a fleet of jets, often at preferential rates. These models can provide cost savings and added convenience for frequent flyers, offering a range of benefits like guaranteed availability, fixed hourly rates, and reduced overall travel costs. Currently, JetLevel Aviation is excited to explore the potential of introducing such a membership or subscription model. While we don’t offer this service yet, we’re working towards providing this option to our clients soon, enhancing the flexibility and benefits of flying with JetLevel Aviation. Stay tuned for updates on this forthcoming feature!</p>
+                  <p className='mb-6 mt-8 '>Membership or subscription models in private jet chartering are innovative programs where clients pay a regular fee for access to a fleet of jets, often at preferential rates. These models can provide cost savings and added convenience for frequent flyers, offering a range of benefits like guaranteed availability, fixed hourly rates, and reduced overall travel costs. Currently, JetLevel Aviation is excited to explore the potential of introducing such a membership or subscription model. While we don’t offer this service yet, we’re working towards providing this option to our clients soon, enhancing the flexibility and benefits of flying with JetLevel Aviation. Stay tuned for updates on this forthcoming feature!</p>
                 </div>
               }
               iconStyle="caret"
               iconPosition="end"
               isOpen={faqSection === 'comparative-cost-analysis'}
               onClick={() => toggleSection('comparative-cost-analysis')} 
-              backgroundColor='#0071BA'
-              classNames='text-white'
-              answerClassName='bg-[#F9F9F9]'
-              questionClassName='text-white !text-[25px] p-1'
-              iconColor="text-white"
           />
 
           <Collapsible  
@@ -1230,7 +1245,7 @@ const EventsPage = () => {
               answer={
                 <div id='additional-considerations-in-charter-pricing'>
                   <h3 className='font-bold text-black'>Customization Costs</h3>
-                  <p className='mb-6 mt-8 details'>Customization costs in private jet charters can vary widely, depending on the extent and nature of the customization requested. These could include specific catering requests, onboard amenities, or particular cabin configurations. Simple requests, like preferred meals or specific beverages, may have minimal additional costs, possibly ranging from a few hundred to a couple of thousand dollars. More elaborate customizations, such as specialized interior fittings or high-tech equipment installations, can significantly increase the cost.</p>
+                  <p className='mb-6 mt-8 '>Customization costs in private jet charters can vary widely, depending on the extent and nature of the customization requested. These could include specific catering requests, onboard amenities, or particular cabin configurations. Simple requests, like preferred meals or specific beverages, may have minimal additional costs, possibly ranging from a few hundred to a couple of thousand dollars. More elaborate customizations, such as specialized interior fittings or high-tech equipment installations, can significantly increase the cost.</p>
                   
                   <h3 className='font-bold text-black'>Availability and Cost of Wi-Fi/High-Speed Internet</h3>
                   <p className='mb-6 mt-8'>Wi-Fi on private jets typically costs between $4 to $8 per megabyte, depending on the provider and data usage. Some aircraft include Wi-Fi in the charter fee, while others charge separately. Wi-Fi is standard in most newer models.</p>
@@ -1253,11 +1268,6 @@ const EventsPage = () => {
               iconPosition="end"
               isOpen={faqSection === 'additional-considerations-in-charter-pricing'}
               onClick={() => toggleSection('additional-considerations-in-charter-pricing')} 
-              backgroundColor='#0071BA'
-              classNames='text-white '
-              answerClassName='bg-[#F9F9F9] mb-[60px]'
-              questionClassName='text-white p-1 !text-[25px]'
-              iconColor="text-white"
           />
 
           <Collapsible  
@@ -1689,11 +1699,6 @@ const EventsPage = () => {
               iconPosition="end"
               isOpen={faqSection === 'scenario-based-cost-analysis'}
               onClick={() => toggleSection('scenario-based-cost-analysis')} 
-              backgroundColor='#0071BA'
-              classNames='text-white '
-              answerClassName='bg-[#F9F9F9] mb-[60px]'
-              questionClassName='text-white p-1 !text-[25px]'
-              iconColor="text-white"
           />
           </div>
           
@@ -1712,10 +1717,11 @@ const EventsPage = () => {
             <p onClick={() => scrollToSection('scenario-based-cost-analysis')} className='mb-8 ml-4 text-xl hover:text-[#0071BA] hover:border-l-2 hover:border-[#0071BA] cursor-pointer hover:pl-3'>Scenario-Based Cost Analysis</p>
           </div>
         </section>
-
+        
+        <SmartTravelTools />
         <WhatOurClientsSay />
 
-        <div className='mt-8 flex  flex-col gap-y-[15px] w-[90%] m-[30px_auto]'>
+        <div className='mt-14 flex flex-col gap-y-[15px] w-[90%] m-[30px_auto]'>
           {
             faqData.map((faq,index) => (
               <Collapsible  
@@ -1726,10 +1732,6 @@ const EventsPage = () => {
                 iconPosition="end"
                 isOpen={openIndex === index}
                 onClick={() => handleToggle(index)} 
-                backgroundColor='#0071BA'
-                classNames='text-white'
-                questionClassName='text-white'
-                iconColor="text-white"
               />
             ))
           }

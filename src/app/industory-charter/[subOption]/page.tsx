@@ -12,82 +12,9 @@ import ChartersTypes from '@/components/ChartersTypes';
 import SmartTravelTools from '@/sections/SmartTravelTools';
 import PopularPrivateJetCharters from '@/sections/PopularPrivateJetCharters';
 import WhatOurClientsSay from '@/sections/WhatOurClientsSay';
-import RequestQuoteBanner from '@/components/RequestQuoteBanner';
-import charterTypes from '../../../../charterTypes.json';
-import {
-  Aircraft,
-  Airports,
-  InternationalCities,
-  Routes_DistanceCalculator,
-  UsCanadaCities,
-  OnDemandCharter,
-  ProvenSafetyRecords,
-  Reliability,
-  Transparency,
-  Testimonials,
-  GroupCharter,
-  AirAmbulance,
-  Helicopter,
-  EmptyLeg,
-  IndustrySpecific,
-  OurOfficesSvg,
-  RequestQuote,
-  ReceiveCharterProposal,
-  ConfirmAircraft,
-  ReceiveFlightBrief,
-  CostCalculator,
-  FlightTracker,
-  SafetyFirst,
-  TailoredLuxury,
-  Facebook,
-  Linkedin,
-  Twitter,
-  TimeEfficient,
-  Productivity,
-  TravelSoltution,
-  Diamond,
-  Privacy,
-  Accessibility,
-  Shuffle
-} from "@/svg"; 
+import charterTypes from '../../../../charterTypes.json'; 
 import Button from '@/components/Button';
-
-const iconMapping: { [key: string]: string } = {
-  Aircraft,
-  Airports,
-  InternationalCities,
-  Routes_DistanceCalculator,
-  UsCanadaCities,
-  OnDemandCharter,
-  ProvenSafetyRecords,
-  Reliability,
-  Transparency,
-  Testimonials,
-  GroupCharter,
-  AirAmbulance,
-  Helicopter,
-  EmptyLeg,
-  IndustrySpecific,
-  OurOfficesSvg,
-  RequestQuote,
-  ReceiveCharterProposal,
-  ConfirmAircraft,
-  ReceiveFlightBrief,
-  CostCalculator,
-  FlightTracker,
-  SafetyFirst,
-  TailoredLuxury,
-  Facebook,
-  Linkedin,
-  Twitter,
-  TimeEfficient,
-  Productivity,
-  TravelSoltution,
-  Diamond,
-  Privacy,
-  Accessibility,
-  Shuffle
-};
+import { iconMapping } from '@/lib/constant';
 
 type PageProps = {
   params: {
@@ -140,7 +67,7 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
             singleIndustory?.aviationSolutions?.aviationIcons.map((icon,index) => {
               const Icon = iconMapping[icon.icons] ;
               return (
-                <div key={index} className='w-[24%]'>
+                <div key={index} className='w-[24%] h-[320px]'>
                 <Card icon={<Icon />} title={icon?.heading} description={icon?.description} bgcolor={'white'} />
                 </div>
               )
@@ -214,7 +141,6 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
       <SmartTravelTools />
       <PopularPrivateJetCharters />
       <WhatOurClientsSay />
-      {/* <RequestQuoteBanner /> */}
     </div>
   )
 }

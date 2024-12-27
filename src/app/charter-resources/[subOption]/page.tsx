@@ -75,22 +75,6 @@ const CharterResources = async ({ params }: PageProps) => {
 
   return (
     <>
-    <Hero title="USA & Canada's Premier Chartered Cities" image="https://jetlevel.com/wp-content/uploads/2023/07/iStock-628648350.jpg" hasCalculator={false} />
-    <BrandNames />
-    <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
-      <Breadcrumb />
-      {/* <div className="">
-        <ul>
-          {content?.map((item, key) => (
-            <li key={key}>
-              <Link className="hover:text-blue" href={"/" + item.slug}>
-                {item.name}
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </div> */}
-    </section>
     {
       title === 'Private Jet Airports' ?
       <UsaAirportPage />:
