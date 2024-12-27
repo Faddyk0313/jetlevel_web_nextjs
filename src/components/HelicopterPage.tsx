@@ -106,7 +106,7 @@ const faqDataHelicopter = [
                 </div>
                 <div className="w-[35%] max-[700px]:w-full max-[700px]:mb-6">
                   <Image
-                    src="https://jetlevel.com/wp-content/uploads/2022/10/iStock-664704040-scaled.jpg"
+                    src="/images/helicopter image.avif"
                     alt="Private Jet"
                     width={500}
                     height={250}
