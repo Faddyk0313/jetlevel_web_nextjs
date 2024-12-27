@@ -94,7 +94,7 @@ const FaqPage = () => {
         <div className='mb-7'>
           {
             relatedQuestion.map((question,index) => (
-              <Link href={`/faq/${question.id}`}>
+              <Link key={index} href={`/faq/${question.id}`}>
                <p className='text-[#6EC1E4] text-[16px] font-medium hover:underline curdor-pointer mb-4' key={index}>{question.question}</p>
               </Link>
             ))
@@ -105,10 +105,10 @@ const FaqPage = () => {
           <h3 className='font-bold text-xl mb-4'>GO TO CATEGORY:</h3>
           <div className='flex flex-col gap-y-4 w-[30%] items-center sticky top-[105px] h-[400px]'>
             {
-              sidebar.map((item) => (
+              sidebar.map((item,index) => (
                 <Link 
                   href={`/faq/#${item.id}`}
-                  key={item.id}
+                  key={index}
                   className='flex items-center gap-x-4 gap-y-4 cursor-pointer'  
                 >
                   <div className='w-[40] h-[40px]'>

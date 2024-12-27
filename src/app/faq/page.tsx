@@ -271,9 +271,9 @@ const FaqPage = () => {
             <div className='flex relative mt-10 max-[700px]:w-full max-[700px]:flex-col'>
               <div className='flex flex-col gap-y-8 gap-x-8 max-[700px]:overflow-y-hidden max-[700px]:overflow-x-auto  w-[20%] max-[700px]:w-full max-[700px]:flex-row items-start max-[700px]:relative sticky max-[700px]:top-0 top-[105px] max-[700px]:h-[80px] h-[400px]'>
                 {
-                  sidebar.map((item) => (
+                  sidebar.map((item,index) => (
                     <div 
-                      key={item.id}
+                      key={index}
                       className='flex max-[700px]:flex-col max-[700px]:gap-x-[10px] max-[700px]:justify-between items-center gap-x-4 gap-y-4 cursor-pointer'  
                       onClick={() => scrollToSection(item.id)}
                     >

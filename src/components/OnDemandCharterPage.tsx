@@ -99,7 +99,7 @@ const OnDemandCharterPage = () => {
       <div className='flex flex-col justify-center gap-y-[20px] pt-8'>
         <div className='max-w-[1800px] mx-auto w-full'>
         <Collapsible
-          key={30}
+          key={1}
           question="On-Demand Luxury, Unparalleled and Unmatched"
           answer={
             <div className="mb-8">
@@ -128,12 +128,12 @@ const OnDemandCharterPage = () => {
               </p>
             </div>
           }
-          isOpen={openIndex === 30}
-          onClick={() => handleToggle(30)}
+          isOpen={openIndex === 1}
+          onClick={() => handleToggle(1)}
         />
 
         <Collapsible
-          key={31}
+          key={2}
           question="How It Works"
           answer={
             <div className='mb-8'>
@@ -143,12 +143,12 @@ const OnDemandCharterPage = () => {
             <p className='mb-8 leading-7 text-[16px] text-[#727982] '><span>Step 3 –</span>Confirm and Fly: After you give us the green light, we prepare your jet and provide all the necessary . All you need to do is arrive and enjoy your flight.</p>
            </div>
           }
-          isOpen={openIndex === 31}
-          onClick={() => handleToggle(31)}
+          isOpen={openIndex === 2}
+          onClick={() => handleToggle(2)}
         />
         
         <Collapsible
-          key={32}
+          key={3}
           question="Unique Value Proposition"
           answer={
             <div className='mb-8 flex flex-wrap justify-between'>
@@ -162,12 +162,12 @@ const OnDemandCharterPage = () => {
             </div>
            </div>
           }
-          isOpen={openIndex === 32}
-          onClick={() => handleToggle(32)}
+          isOpen={openIndex === 3}
+          onClick={() => handleToggle(3)}
         />
 
         <Collapsible
-          key={33}
+          key={4}
           question="Benefits of On-Demand Private Jet Charter Service"
           answer={
             <div className='mb-8'>
@@ -179,12 +179,12 @@ const OnDemandCharterPage = () => {
               <p className='leading-7 text-[16px] text-[#727982] mb-8 '><span>Privacy –</span> Discreet travel for those seeking privacy.</p>
            </div>
           }
-          isOpen={openIndex === 33}
-          onClick={() => handleToggle(33)}
+          isOpen={openIndex === 4}
+          onClick={() => handleToggle(4)}
         />
         
         <Collapsible
-          key={34}
+          key={5}
           question="On-Demand Private Jet Charter Prices Estimation"
           answer={
             <div className='mb-8'>
@@ -193,12 +193,12 @@ const OnDemandCharterPage = () => {
             <p className='italic mt-10 text-[#727982] text-center text-md'>Please be aware that the prices listed above are only approximate values; the actual cost for each trip can vary based on numerous factors, and we cannot guarantee these exact amounts for every individual flight</p>
            </div>
           }
-          isOpen={openIndex === 34}
-          onClick={() => handleToggle(34)}
+          isOpen={openIndex === 5}
+          onClick={() => handleToggle(5)}
         />
 
         <Collapsible
-          key={34}
+          key={6}
           question="Who Owns The Planes?"
           answer={
             <div className='mb-8 flex flex-wrap justify-between items-center'>
@@ -210,77 +210,77 @@ const OnDemandCharterPage = () => {
             </div>
            </div>
           }
-          isOpen={openIndex === 34}
-          onClick={() => handleToggle(34)}
+          isOpen={openIndex === 6}
+          onClick={() => handleToggle(6)}
         />
         
         <Collapsible
-          key={35}
+          key={7}
           question="How Are Planes Paired with Trips?"
           answer={
             <div className='mb-8'>
               <p className='leading-7 text-[18px] text-[#727982] mb-8 '>Our expert team at JetLevel evaluates your specific requirements, including the number of passengers, the amount of luggage, travel distance, and any personal preferences you may have. Based on these , we suggest the most suitable aircraft from our extensive fleet to ensure your journey is comfortable, convenient, and perfectly tailored to your needs.</p>
             </div>
           }
-          isOpen={openIndex === 35}
-          onClick={() => handleToggle(35)}
+          isOpen={openIndex === 7}
+          onClick={() => handleToggle(7)}
         />
 
         <Collapsible
-          key={36}
+          key={8}
           question="What are the Safety Standards of the Aircraft Used?"
           answer={
             <div className='mb-8'>
               <p className='leading-7 text-[18px] text-[#727982] mb-8 '>Safety is our utmost priority at JetLevel. All aircraft used in our on demand private jet charter service adhere to rigorous safety standards. Our partners maintain their planes in accordance with the highest industry standards, and we routinely conduct safety audits. Additionally, all flights are operated by highly trained and experienced pilots for your peace of mind.</p>
             </div>
           }
-          isOpen={openIndex === 36}
-          onClick={() => handleToggle(36)}
+          isOpen={openIndex === 8}
+          onClick={() => handleToggle(8)}
         />
 
         <Collapsible
-          key={37}
+          key={9}
           question="What are the Safety Standards of the Aircraft Used?"
           answer={
             <div className='mb-8'>
               <p className='leading-7 text-[18px] text-[#727982] mb-8 '>Safety is our utmost priority at JetLevel. All aircraft used in our on demand private jet charter service adhere to rigorous safety standards. Our partners maintain their planes in accordance with the highest industry standards, and we routinely conduct safety audits. Additionally, all flights are operated by highly trained and experienced pilots for your peace of mind.</p>
             </div>
           }
-          isOpen={openIndex === 37}
-          onClick={() => handleToggle(37)}
+          isOpen={openIndex === 9}
+          onClick={() => handleToggle(9)}
         />
 
           <div className='flex items-center flex-wrap justify-between mt-10 mb-8'>
             <div className='w-[48%] max-[700px]:w-full'>
             <Collapsible
-                key={38}
+                key={10}
                 question="Peak Season Charter Flights"
                 answer={
                   <>
                      <p className='leading-7 text-[18px] text-[#727982] mb-8 text-justify '>During peak travel seasons, demand for private jets increases. Our on-demand private jet charter service ensures you can always travel in luxury, comfort, and style, even during the busiest times. Book ahead or reach out to our team to discuss the best options for peak-season travel.</p>
                   </>
                 }
-                isOpen={openIndex === 38}
-                onClick={() => handleToggle(38)}
+                isOpen={openIndex === 10}
+                onClick={() => handleToggle(10)}
               />
             </div>
             <div className='w-[48%] max-[700px]:w-full'>
               <Collapsible
-                  key={39}
+                  key={11}
                   question="Last Minute Charter Flights"
                   answer={
                     <>
                     <p className='leading-7 text-[18px] text-[#727982] mb-8 text-justify '>We understand that sometimes, you need to fly at a moment’s notice. That’s why our on-demand private jet service includes options for last-minute bookings. Depending on aircraft availability and your destination, we can often arrange a flight for you within just a few hours. Please contact our team for more information or to arrange a last-minute charter flight.</p>
                     </>
                   }
-                  isOpen={openIndex === 39}
-                  onClick={() => handleToggle(39)}
+                  isOpen={openIndex === 11}
+                  onClick={() => handleToggle(11)}
                 />
             </div>
           </div>
 
           <Collapsible
-            key={40}
+            key={12}
             question="Frequently Asked Questions about Instant Quotes"
             answer={
               <div className='mb-8'>
@@ -297,8 +297,8 @@ const OnDemandCharterPage = () => {
               </div>
             </div>
             }
-            isOpen={openIndex === 40}
-            onClick={() => handleToggle(40)}
+            isOpen={openIndex === 12}
+            onClick={() => handleToggle(12)}
           />
         </div>
       </div>

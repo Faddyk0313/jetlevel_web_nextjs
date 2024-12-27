@@ -44,23 +44,23 @@ const RequestQuotePage = () => {
       <BrandNames />
 
       <HalfSection>
-        <div className='flex flex-col justify-center gap-y-[20px] p-8'>
+        <div className='flex flex-col justify-center gap-y-[20px] pt-8'>
           <div>
             <p className=''>In the fast-paced world of private aviation, time is often as valuable as comfort. That’s why at JetLevel Aviation, we’ve revolutionized the way you can quote private jet services. With our instant private jet quotes, you can discover the cost of your next luxurious journey within minutes. But why are instant quotes so crucial in today’s market?</p>
             <Collapsible
-              key={33}
+              key={1}
               question="The Importance of Instant Quotes in Private Aviation"
               answer={
                 <div>
                   <p className='text-black text-start text-md '>Navigating through the myriad of jet charter quotes and charter quotes used to be a cumbersome process. With our state-of-the-art system, you no longer have to wait or haggle. Instant quotes provide you with the speed, accuracy, and transparency you need to make an informed decision. You get to compare different options, ensuring you select the charter that’s right for you.</p>
                 </div>
               }
-              isOpen={openIndex === 33}
-              onClick={() => handleToggle(33)}
+              isOpen={openIndex === 1}
+              onClick={() => handleToggle(1)}
             />
 
             <Collapsible
-              key={34}
+              key={2}
               question="How to Get an Instant Quote with JetLevel Aviation"
               answer={
                 <div>
@@ -86,12 +86,12 @@ const RequestQuotePage = () => {
                 </div>
              </div>
               }
-              isOpen={openIndex === 34}
-              onClick={() => handleToggle(34)}
+              isOpen={openIndex === 2}
+              onClick={() => handleToggle(2)}
             />    
           
           <Collapsible
-              key={35}
+              key={3}
               question="What Sets Our Quotes Apart"
               answer={
                 <div>
@@ -113,12 +113,12 @@ const RequestQuotePage = () => {
                   <p className='mt-[50px] '>Once your inquiry is submitted, one of our Aviation Agents, who are standing by 24/7, will give you a call to assist with any additional queries or requirements.</p>
               </div>
               }
-              isOpen={openIndex === 35}
-              onClick={() => handleToggle(35)}
+              isOpen={openIndex === 3}
+              onClick={() => handleToggle(3)}
             />    
 
             <Collapsible
-              key={36}
+              key={4}
               question="What Sets Our Quotes Apart"
               answer={
                 <div className='mt-[50px]'>
@@ -129,12 +129,12 @@ const RequestQuotePage = () => {
                   <p className='mb-6 '><span className='text-[#0071ba] font-bold'>Highly Accurate:</span> Leveraging a sophisticated algorithm, our Private Jet Calculator considers multiple factors such as distance, jet type, and additional services to deliver the most precise estimates.</p>
                 </div>
               }
-              isOpen={openIndex === 36}
-              onClick={() => handleToggle(36)}
+              isOpen={openIndex === 4}
+              onClick={() => handleToggle(4)}
             />  
            
            <Collapsible
-              key={37}
+              key={5}
               question="How to Save the Private Jet Calculator on Your Phone for Easy Access"
               answer={
                 <>
@@ -166,24 +166,24 @@ const RequestQuotePage = () => {
                   <p className='mt-6 '>By integrating our Private Jet Calculator into your daily life, you can effortlessly obtain accurate trip estimates wherever you are, whenever you need them.</p>
                 </>
               }
-              isOpen={openIndex === 37}
-              onClick={() => handleToggle(37)}
+              isOpen={openIndex === 5}
+              onClick={() => handleToggle(5)}
             />  
 
             <Collapsible
-              key={38}
+              key={6}
               question="We Value Your Feedback"
               answer={
                 <div>
                   <p>We’ve designed this tool to make your journey with us as smooth as possible. If you find this tool useful—or have suggestions for improvement—please don’t hesitate to reach out. Your feedback drives our continuous innovation.</p>
                 </div>
               }
-              isOpen={openIndex === 38}
-              onClick={() => handleToggle(38)}
+              isOpen={openIndex === 6}
+              onClick={() => handleToggle(6)}
             />  
 
             <Collapsible
-              key={40}
+              key={7}
               question="Frequently Asked Questions about Instant Quotes"
               answer={
                 <div>
@@ -208,14 +208,13 @@ const RequestQuotePage = () => {
               </div>
               </div>
               }
-              isOpen={openIndex === 40}
-              onClick={() => handleToggle(40)}
+              isOpen={openIndex === 7}
+              onClick={() => handleToggle(7)}
             />  
           </div>
         </div>
       </HalfSection>
      
-      {/* <RequestQuoteBanner /> */}
     </div>
   );
 };
