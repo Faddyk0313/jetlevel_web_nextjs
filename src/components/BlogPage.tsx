@@ -11,7 +11,7 @@ interface BlogPageProps {
 }
 
 const BlogPage = ({ fields, date }: BlogPageProps) => {
-  console.log("Fields----------------------", fields);
+  // console.log("Fields----------------------", fields);
   return (
     <>
       <div className="px-5 md:px-10 lg:px-20 pt-10 max-w-[1800px] mx-auto ">

@@ -28,9 +28,9 @@ const OurTeamPage = () => {
 
         <h2 className='text-black text-center mb-[30px]'>Leadership</h2>
         <div className='flex items-center justify-between flex-wrap'>
-        <div className="w-[32%] mb-6 max-[700px]:w-full text-white border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-[#333333] transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
+        <div className="w-[32%] mb-6 max-[700px]:w-full border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-[#333333] transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
           <Image
-            src="https://jetlevel.com/wp-content/uploads/2023/09/Ricky-Gomulka-Jet-Level-CEO-e1702364418323.png"
+            src="/images/Ricky-Gomulka-Jet-Level-CEO-With Wife.png"
             alt="Ceo Photo"
             width={200}
             height={200}
@@ -54,9 +54,9 @@ const OurTeamPage = () => {
           </div>
         </div>
 
-        <div className="w-[32%] mb-6 max-[700px]:w-full text-white border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-[#333333] transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
+        <div className="w-[32%] mb-6 max-[700px]:w-full border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-[#333333] transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
           <Image
-            src="https://jetlevel.com/wp-content/uploads/2023/10/1690029198597-jpeg.webp"
+            src="/images/President Photo.webp"
             alt="President Photo"
             width={200}
             height={200}
@@ -78,9 +78,9 @@ const OurTeamPage = () => {
           </div>
         </div>
 
-        <div className="w-[32%] mb-6 max-[700px]:w-full text-white border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-[#333333] transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
+        <div className="w-[32%] mb-6 max-[700px]:w-full border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-[#333333] transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
           <Image
-            src="https://jetlevel.com/wp-content/uploads/2023/12/1698440487069-jpeg.webp"
+            src="/images/Ceo Photo.webp"
             alt="Ceo Photo"
             width={200}
             height={200}

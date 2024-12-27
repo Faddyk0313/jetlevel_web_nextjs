@@ -4,7 +4,7 @@ import Button from '@/components/Button'
 const RequestQuoteBanner = () => {
   return (
     <div 
-      style={{ backgroundImage: `url(${'https://jetlevel.com/wp-content/uploads/2023/05/private-jet-charter-services-1.jpg'})`}}
+      style={{ backgroundImage: `url('/images/request-quote-banner.jpg)`}}
       className='h-[550px] w-full bg-cover bg-center flex items-center justify-center'
     >
      <div className='flex flex-col items-center justify-center gap-y-[10px]'>

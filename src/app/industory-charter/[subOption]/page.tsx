@@ -67,8 +67,8 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
             singleIndustory?.aviationSolutions?.aviationIcons.map((icon,index) => {
               const Icon = iconMapping[icon.icons] ;
               return (
-                <div key={index} className='w-[24%] h-[320px]'>
-                <Card icon={<Icon />} title={icon?.heading} description={icon?.description} bgcolor={'white'} />
+                <div key={index} className='w-[24%]'>
+                <Card link='' icon={<Icon />} title={icon?.heading} description={icon?.description} bgcolor={'white'} />
                 </div>
               )
             })
@@ -77,7 +77,7 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
       </section>
 
       <section 
-        style={{ backgroundImage: `url('https://jetlevel.com/wp-content/uploads/2022/08/R-29.jpg')`}} 
+        style={{ backgroundImage: `url('/images/About us Hero Image.jpg')`}} 
         className="px-5 md:px-10 mt-[50px] mb-[50px] xl:px-20 py-7 max-w-[1800px] mx-auto relative bg-center pt-[70px] bg-cover max-[700px]:h-full h-[500px] pb-[70px]"
       >
         <div className='absolute inset-0 bg-black opacity-50 group-hover:opacity-60'></div>
@@ -110,7 +110,7 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
         >
           <div 
             style={{
-              backgroundImage: `url('https://jetlevel.com/wp-content/uploads/2024/03/logo-1-e1710877312297.png')`,
+              backgroundImage: `url('/images/Logo.png')`,
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
               backgroundSize: '80% 200px',

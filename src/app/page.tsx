@@ -48,7 +48,7 @@ export default function Home() {
   ]
   return (
     <>
-      <Hero image={"https://fly.jetlevel.com/assets/Private%20jet%20interior%20bg%20.webp"} title={"Get Instant Quote and Charter Your Private Jet Today"} subtitle={"Fly with Confidence!"} tagline={"Fly in 2-4 hours. No hidden fees."} hasCalculator={true} hasOverlay={false}/>
+      <Hero image={"/images/Private jet interior bg .webp"} title={"Get Instant Quote and Charter Your Private Jet Today"} subtitle={"Fly with Confidence!"} tagline={"Fly in 2-4 hours. No hidden fees."} hasCalculator={true} hasOverlay={false}/>
       <BrandNames />
       <CompanyOverview heading='Our Story, Mission, and Values at Jetlevel Aviation.' description={
         <>

@@ -119,7 +119,7 @@ const CollapsibleTravelGuideSection: React.FC<CollapsibleTravelGuideSectionProps
                                 {travelConceirge_EmergencyContacts[0].paragraph as string}
                             </Markdown>
                         </div>
-                        <Image width={1100} height={750} src="https://jetlevel.com/wp-content/uploads/2022/10/iStock-664704040-scaled.jpg" alt="Concierge Services" className="w-full mt-4 shadow-lg max-w-[1000px] max-h-[750px]" />
+                        <Image width={1100} height={750} src="/images/travel concierge services image.jpg" alt="Concierge Services" className="w-full mt-4 shadow-lg max-w-[1000px] max-h-[750px]" />
                     </div>
 
                     {travelGuideFields.map((section, sectionIndex) => (

@@ -13,26 +13,31 @@ const AboutUs = () => {
             icon: <OnDemandCharter />,
             title: "On Demand Charter",
             description: "Flexible scheduling for your immediate travel plans",
+            link: '/private-jet-charter'
         },
         {
             icon: <ProvenSafetyRecords />,
             title: "Proven Safety Records",
             description: "Experience safe journeys with our impeccable record",
+            link: ''
         },
         {
             icon: <Reliability />,
             title: "Reliability",
             description: "Dependable service, available anytime, anywhere",
+            link: ''
         },
         {
             icon: <Transparency />,
             title: "Transparency",
             description: "Clear, honest pricing for your peace of mind	",
+            link: ''
         },
         {
             icon: <Testimonials />,
             title: "Testimonials",
             description: "Hear from our satisfied clients about their experiences",
+            link: ''
         }
     ];
 

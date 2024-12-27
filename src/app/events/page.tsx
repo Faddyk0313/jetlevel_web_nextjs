@@ -8,7 +8,7 @@ import React from 'react';
 const EventsPage = () => {
   return (
     <div>
-      <Hero title="Events" hasOverlay={true} description="Get Your Private Jet Quote Instantly and fly to any event in the world." image="https://jetlevel.com/wp-content/uploads/2024/08/Untitled-design-17.png" hasCalculator={false} />
+      <Hero title="Events" hasOverlay={true} description="Get Your Private Jet Quote Instantly and fly to any event in the world." image="/images/Events Hero Image.png" hasCalculator={false} />
       <BrandNames />
       <section className="flex flex-col lg:flex-row gap-10 px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
         <div className='min-w-full md:min-w-[72%]'>

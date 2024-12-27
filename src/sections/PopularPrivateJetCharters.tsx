@@ -10,27 +10,31 @@ const PopularPrivateJetCharters: React.FC<PopularPrivateJetChartersProps> = ({ h
   const cardInfo = [
     {
       imageLink:
-        "https://jetlevel.com/wp-content/uploads/elementor/thumbs/Beach-cover-photo-qm2ppfokm5zh5tctslkcozex8mxqdlj0u7c21fslac.jpg",
+        "/images/Miami Hero Image.jpg",
       name: "Miami",
       altText: "Aerial view of Miami beach with skyscrapers and ocean",
+      pageLink: '/private-jet-miami/'
     },
     {
       imageLink:
-        "https://jetlevel.com/wp-content/uploads/elementor/thumbs/lasvegas-1-qloz91rmigljb3esjs83kckntorydm876gxpvylrr8.jpg",
+        "/images/Las Vegas Hero Image.jpg",
       name: "Las Vegas",
       altText: "Las Vegas welcome sign at night with bright lights",
+      pageLink: '/private-jet-charter-flights-to-las-vegas-nv/'
     },
     {
       imageLink:
-        "https://jetlevel.com/wp-content/uploads/elementor/thumbs/Los-Angeles-jpg-1-qm2ripl37zcbeyjgmtbnuifabx7cwwnz5a9xt70d6s.jpg",
+        "/images/Los Angeles Hero Image.jpg",
       name: "Los Angeles",
       altText: "Aerial view of Los Angeles with sunset",
+      pageLink: '/private-jet-charter-flights-to-los-angeles-ca/'
     },
     {
       imageLink:
-        "https://jetlevel.com/wp-content/uploads/elementor/thumbs/newyork-scaled-1-qloz9dzizb29i0x1kfi8yrhnjp3q5okpk5f14k3nic.jpg",
+        "/images/New York Hero Image.jpg",
       name: "New York",
       altText: "Statue of Liberty with New York City skyline in the background",
+      pageLink: '/private-jet-charter-flights-to-new-york-ny/'
     },
   ];
   return (
@@ -40,7 +44,7 @@ const PopularPrivateJetCharters: React.FC<PopularPrivateJetChartersProps> = ({ h
       </h2>
       <div className="grid grid-cols-2 md:grid-cols-4 w-full gap-4 mb-8">
         {cardInfo.map((card, index) => (
-          <div key={index} className="cursor-pointer rounded-2xl border-[3px]  overflow-hidden transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue  hover:shadow-card_shadow">
+          <Link href={card.pageLink} key={index} className="cursor-pointer rounded-2xl border-[3px]  overflow-hidden transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue  hover:shadow-card_shadow">
             <Image
               src={card.imageLink}
               width={280}
@@ -51,10 +55,10 @@ const PopularPrivateJetCharters: React.FC<PopularPrivateJetChartersProps> = ({ h
             <div className="p-4 text-white text-center bg-blue-background bg-cover">
               <h3 className="">{card.name}</h3>
             </div>
-          </div>
+          </Link>
         ))}
       </div>
-      <Link href="#" className='text-white px-10 py-2 my-2 rounded-full text-lg bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1 hover:shadow-card_shadow'>View All</Link>
+      <Link href="/us-canada-chartered-cities" className='text-white px-10 py-2 my-2 rounded-full text-lg bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1 hover:shadow-card_shadow'>View All</Link>
     </section>
   );
 };

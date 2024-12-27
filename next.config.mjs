@@ -3,6 +3,22 @@ const nextConfig = {
   async rewrites() {
     return [
       {
+        source: '/private-jet-charter',
+        destination: '/our-services/on-demand-charter',
+      },
+      {
+        source: '/group-charter-flight',
+        destination: '/our-services/group-charter',
+      },
+      {
+        source: '/medical-flight-transport',
+        destination: '/our-services/air-ambulance',
+      },
+      {
+        source: '/Helicopter-Charter-Flight',
+        destination: '/our-services/helicopter',
+      },
+      {
         source: '/us-canada-chartered-cities',
         destination: '/jet-charter/us-canada',
       },
@@ -39,8 +55,16 @@ const nextConfig = {
         destination: '/charter-resources/aircraft-types',
       },
       {
-        source: '/blog',
-        destination: '/company/blogs',
+        source: '/charter-flights-cost-calculator',
+        destination: '/charter-resources/cost-estimator',
+      },
+      {
+        source: '/flight-tracker',
+        destination: '/charter-resources/flight-tracker',
+      },
+      {
+        source: '/distance-calculator',
+        destination: '/charter-resources/distance-calculator',
       },
       {
         source: "/about-jet-level",
@@ -51,9 +75,18 @@ const nextConfig = {
         destination: "/company/contact-us",
       },
       {
+        source: '/blog',
+        destination: '/company/blogs',
+      },
+      {
+        source: '/private-jet-frequently-asked-questions',
+        destination: '/faq',
+      },
+      {
         source: "/our-team",
         destination: "/company/our-team",
       },
+      
       {
         source: '/:location',
         destination: '/charter-resources/private-jet-airports/:location',

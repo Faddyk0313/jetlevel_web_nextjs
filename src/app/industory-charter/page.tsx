@@ -15,7 +15,7 @@ export default function IndustoryCharter(): JSX.Element {
     <>
       <Hero
         image={
-          "https://fly.jetlevel.com/assets/Private%20jet%20interior%20bg%20.webp"
+          "/images/Private jet interior bg .webp"
         }
         title={"Fly with Confidence!"}
         tagline={
