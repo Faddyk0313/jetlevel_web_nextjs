@@ -441,7 +441,7 @@ const EventsPage = () => {
   ]
   return (
     <div>
-        <Hero image={"https://fly.jetlevel.com/assets/Private%20jet%20interior%20bg%20.webp"} title={"Cost of Chartering a Private Jet - Flights & Rates"} tagline={"Explore the cost of chartering a private jet flights, including breakdowns, factors, fees, and comparative analyses for informed decision-making"} hasCalculator={true} hasOverlay={false}/>
+        <Hero image={"/images/Private jet interior bg .webp"} title={"Cost of Chartering a Private Jet - Flights & Rates"} tagline={"Explore the cost of chartering a private jet flights, including breakdowns, factors, fees, and comparative analyses for informed decision-making"} hasCalculator={true} hasOverlay={false}/>
         <BrandNames />
         <section className='px-5 md:px-10 lg:px-20 pb-0'>
           <Breadcrumb />
@@ -473,7 +473,7 @@ const EventsPage = () => {
         </section>
       
 
-        <section className='flex relative justify-between pb-[60px] px-5 md:px-10 lg:px-20 pb-0'>
+        <section className='flex relative justify-between px-5 md:px-10 lg:px-20 pb-0'>
           <div className='w-[65%] max-[700px]:w-full mt-6 flex flex-col gap-y-[30px]'>
           <Collapsible  
               key={1}
@@ -1735,7 +1735,7 @@ const EventsPage = () => {
               />
             ))
           }
-          {/* <RequestQuoteBanner /> */}
+          {/* < /> */}
         </div>
     </div>
   )

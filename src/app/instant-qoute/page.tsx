@@ -40,7 +40,7 @@ const RequestQuotePage = () => {
   ]
   return (
     <div>
-      <Hero title="Instant Private Jet Quotes with JetLevel Aviation" description="Get Your Private Jet Quote Instantly and Fly in Ultimate Luxury" image="https://jetlevel.com/wp-content/uploads/2023/09/cover-jpg.webp" hasOverlay={true} hasCalculator={true} />
+      <Hero title="Instant Private Jet Quotes with JetLevel Aviation" description="Get Your Private Jet Quote Instantly and Fly in Ultimate Luxury" image="/images/Instant Qoute-jpg.webp" hasOverlay={true} hasCalculator={true} />
       <BrandNames />
 
       <HalfSection>
@@ -64,7 +64,7 @@ const RequestQuotePage = () => {
               question="How to Get an Instant Quote with JetLevel Aviation"
               answer={
                 <div>
-                <p className='text-black text-start text-[#0071ba] text-md '>At JetLevel Aviation, obtaining your instant private jet quote is more than just a quick process; it’s a comprehensive experience designed for your convenience and specificity. Here’s how it works:</p>
+                <p className='text-start text-[#0071ba] text-md '>At JetLevel Aviation, obtaining your instant private jet quote is more than just a quick process; it’s a comprehensive experience designed for your convenience and specificity. Here’s how it works:</p>
                 <ul className='pt-3'>
                   <li className='mb-6'><span className='text-[#0071ba] font-bold'> -Choose Your Aircraft Type:</span> Our quoting tool categorizes aircraft into six different types—turboprop, very <a href='https://en.wikipedia.org/wiki/Very_light_jet' target='_blank'>light jet</a>, light jet, mid-size jet, super mid-size jet, and heavy jet. This enables you to tailor your journey according to your preferences.</li>
                   <li className='mb-6'><span className='text-[#0071ba] font-bold'> -Detailed Aircraft Information:</span> For each aircraft type, we provide valuable data including passenger capacity, estimated flight time, as well as interior and exterior pictures of the jet.</li>

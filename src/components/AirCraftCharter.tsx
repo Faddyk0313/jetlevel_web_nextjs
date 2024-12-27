@@ -22,7 +22,7 @@ type AirCraftCharterProps = {
 };
 
 const AirCraftCharter: React.FC<AirCraftCharterProps> = ({ contentColor,header, description, iconsArray, aircraftArray, backgroundImage }) => {
-  console.log('contentColor',contentColor);
+  // console.log('contentColor',contentColor);
   return (
     <div style={{ backgroundImage:`url(${backgroundImage})` }} className={`p-[60px] max-[700px]:p-[30px] max-[700px]:pb-0 pb-0`}>
       <div className='w-[65%] max-[700px]:w-full m-[0_auto]'>

@@ -16,6 +16,7 @@ export interface CustomComponentProps {
 export type CarouselItem2 = {
     icon: any;
     title: string;
+    link: string
   };
 
 
@@ -23,4 +24,5 @@ export type CardInfo = {
     icon: any;
     title: string;
     description: string;
+    link:string;
 };

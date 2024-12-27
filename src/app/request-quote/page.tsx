@@ -8,7 +8,7 @@ import HalfSection from '@/components/HalfSection';
 const RequestQuotePage = () => {
   return (
     <div>
-      <Hero title="Private Jet Charter Request a Quote" description="Experience Personalized Service and Hassle-Free Booking" image="https://jetlevel.com/wp-content/uploads/2019/10/iStock-1073242590-e1687592795610.jpg" hasOverlay={true} hasCalculator={true} showCalculator={true} />
+      <Hero title="Private Jet Charter Request a Quote" description="Experience Personalized Service and Hassle-Free Booking" image="/images/Request A Quote Hero.jpg" hasOverlay={true} hasCalculator={true} showCalculator={false} />
       <BrandNames />
      
      <HalfSection>

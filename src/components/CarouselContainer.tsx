@@ -10,6 +10,7 @@ import CarouselCard from "./CrouselCard";
 interface CarouselItems_A {
     icon: React.ReactNode;
     title: string;
+    link: string;
 }
 
 interface CarouselContainerProps {

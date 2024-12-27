@@ -10,7 +10,7 @@ const AirportPage = ({ fields }: any) => {
   return (
     <>
       <Hero 
-        image="https://jetlevel.com/wp-content/uploads/2023/07/bg-kads.jpg"
+        image="/images/Airport Hero Image.jpg"
         title={fields.hero_content.blocks[0].fields.title.text}
         description={fields.hero_content.blocks[0].fields.paragraph.text}
         hasCalculator={true}

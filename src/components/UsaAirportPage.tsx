@@ -103,7 +103,7 @@ const UsaAirportPage = () => {
           <p className='mb-[50px]'>Our services include designing customized air travel itineraries for each client and our advisors can help you to select a destination, aircraft, ground transportation, and hotel for your journey. Browse our airport directory guide below to learn more about some of the airports we fly into and the transportation and hotel options available.</p>
             <div className='bg-[#0071BA] flex justify-center relative h-full p-6 rounded-md'>
               <Image 
-                src="https://jetlevel.com/wp-content/uploads/2022/12/image-background-airport.png" 
+                src="/images/airports-background-image.png" 
                 alt="airports" 
                 width={950} 
                 height={300} 

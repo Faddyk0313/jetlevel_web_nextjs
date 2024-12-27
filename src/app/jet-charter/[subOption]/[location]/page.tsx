@@ -72,7 +72,7 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
             .catch((err) => {
                 console.log(err);
             });
-        console.log("subOption, Location, contentType----------------", subOption, location, contentType);
+        // console.log("subOption, Location, contentType----------------", subOption, location, contentType);
 
         if (!content) {
             return (

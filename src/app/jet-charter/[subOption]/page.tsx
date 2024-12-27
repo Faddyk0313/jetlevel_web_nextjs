@@ -13,11 +13,11 @@ type PageProps = {
   };
 };
 
-const pageContent: Record<string, { title: string; }> = {
-  "us-canada": { title: "US Canada" },
-  'international': { title: "International" },
-  "popular-routes": { title: "Popular Routes" },
-  "empty-legs": { title: "Empty Legs" },
+const pageContent: Record<string, { title: string; link: string }> = {
+  "us-canada": { title: "USA & Canada's Premier Chartered Cities" , link: "/images/Hero Image for directory Page.webp"},
+  'international': { title: "International Chartered Cities", link: "/images/Hero Image for directory Page.webp" },
+  "popular-routes": { title: "Premier Chartered Routes", link: "/images/Hero Image for directory Page.webp" },
+  "empty-legs": { title: "Empty Leg Flights", link: "/images/Empty-Legs Hero Image.avif" },
 };
 
 // This function generates static parameters for known paths
@@ -28,7 +28,7 @@ export async function generateStaticParams() {
 const JetCharter = async ({ params }: PageProps) => {
   const { subOption } = params;
 
-  const { title } = pageContent[subOption] || {
+  const { title, link } = pageContent[subOption] || {
     title: "Page Not Found",
   };
 
@@ -66,7 +66,7 @@ const JetCharter = async ({ params }: PageProps) => {
 
   return (
     <>
-      <Hero title="USA & Canada's Premier Chartered Cities" image="https://jetlevel.com/wp-content/uploads/2023/07/iStock-628648350.jpg" hasCalculator={false} />
+      <Hero title={title} image={link} hasCalculator={false} />
       <BrandNames />
       <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
         <Breadcrumb />

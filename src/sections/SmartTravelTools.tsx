@@ -17,16 +17,19 @@ const SmartTravelTools: React.FC<SmartTravelToolsProps> = ({ hasSectionPadding }
             icon: <CostCalculator />,
             title: "Cost Calculator",
             description: "Instantly estimate your private jet charter cost",
+            link: '/charter-flights-cost-calculator'
         },
         {
             icon: <FlightTracker />,
             title: "Flight Tracker",
             description: "Real-time updates on your charter flight status",
+            link: '/flight-tracker'
         },
         {
             icon: <Routes_DistanceCalculator />,
             title: "Distance Calculator",
             description: "Quickly calculate your charter flight distance",
+            link: '/distance-calculator'
         },
     ];
 

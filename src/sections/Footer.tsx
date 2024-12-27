@@ -128,8 +128,8 @@ const Footer = () => {
                     <div className='flex gap-5 flex-col md:flex-row lg:flex-col text-[11px]'>
                         <div>&copy; 2024 Jetlevel Aviation LLC All rights reserved</div>
                         <div className='flex flex-row gap-3 md:mx-auto lg:mx-0'>
-                            <Link href="#" className='hover:text-blue'>Privacy</Link>
-                            <Link href="#" className='hover:text-blue'>Legal</Link>
+                            <Link href="/privacy-policy" className='hover:text-blue'>Privacy</Link>
+                            <Link href="/jetlevel-aviation-standard-terms-and-conditions" className='hover:text-blue'>Terms of Use</Link>
                         </div>
                     </div>
                     <div className='flex-1 text-[#858585] text-[9px] '>

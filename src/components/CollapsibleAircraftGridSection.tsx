@@ -57,7 +57,7 @@ const CollapsibleAircraftGridSection: React.FC<CollapsibleAircraftGridSectionPro
           }`}
       >
         <div className="text-center w-fit my-7 ">
-          <Link href="https://jetlevel.com/request-a-quote" className='text-sm'>
+          <Link href="/request-a-quote" className='text-sm'>
             <button className="text-white py-3 px-6 w-full rounded-full  bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1 hover:shadow-card_shadow">BOOK THIS AIRCRAFT</button>
           </Link>
 

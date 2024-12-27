@@ -1,3 +1,6 @@
+import AirAmbulance from '@/components/AirAmbulance';
+import GroupCharter from '@/components/GroupCharter';
+import HelicopterPage from '@/components/HelicopterPage';
 import OnDemandCharterPage from '@/components/OnDemandCharterPage';
 
 type PageProps = {
@@ -33,6 +36,15 @@ type PageProps = {
         {
           title === 'On-Demand Charter' ?
           <OnDemandCharterPage />
+          :
+          title === 'Group Charter' ?
+          <GroupCharter />
+          :
+          title === 'Air Ambulance' ?
+          <AirAmbulance />
+          :
+          title === 'Helicopter' ?
+          <HelicopterPage />
           :null
         }
       </div>
