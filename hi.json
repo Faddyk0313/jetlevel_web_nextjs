@@ -1,322 +1,756 @@
-{
-  "title": {
-    "id": "f_01jenmG58588H0Ed6cDnQ4EmdK",
-    "name": "Title",
-    "handle": "title",
-    "help_text": "",
-    "type": "text",
-    "text": "Who Should Consider Empty Leg Flights?"
-  },
-  "sections": {
-    "id": "f_01jENmNz5K9T5ZEn1Sd6TtaQWm",
-    "name": "sections",
-    "handle": "sections",
-    "help_text": null,
-    "type": "blocks",
-    "blocks": [
-      {
-        "name": "",
-        "sort": 0,
-        "fields": {
-          "title": {
-            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
-            "name": "Heading",
-            "text": "Who Should Consider Empty Leg Flights?",
-            "type": "text",
-            "handle": "title",
-            "help_text": "Heading (h2)"
-          },
-          "paragraph": {
-            "id": "f_01jbQrN2830RDW6Px709G00xM8",
-            "name": "Paragraph",
-            "text": "<p>Empty leg flights occur when a private jet needs to return to its base or move to another location for its next charter flight, flying without passengers. This situation offers an excellent opportunity for savvy travelers to book these flights at significantly reduced rates. At JetLevel Aviation, we’ve made it a point to offer these exclusive deals, ensuring our clients enjoy the luxury of private jet travel without the full expense.</p>",
-            "type": "long_text",
-            "handle": "paragraph",
-            "help_text": "Paragraph (Long Text)"
-          }
-        },
-        "content_type": {
-          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
-          "name": "Content Section",
-          "handle": "content_section",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 1,
-        "fields": {
-          "title": {
-            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
-            "name": "Heading",
-            "text": "Unlock Exclusive Deals with Empty Leg Flights",
-            "type": "text",
-            "handle": "title",
-            "help_text": "Heading (h2)"
-          },
-          "paragraph": {
-            "id": "f_01jbQrN2830RDW6Px709G00xM8",
-            "name": "Paragraph",
-            "text": "<p>Empty leg flights occur when a private jet needs to return to its base or move to another location for its next charter flight, flying without passengers. This situation offers an excellent opportunity for savvy travelers to book these flights at significantly reduced rates. At JetLevel Aviation, we’ve made it a point to offer these exclusive deals, ensuring our clients enjoy the luxury of private jet travel without the full expense. </p>\n\n<p><strong>HOW TO SAVE ON LUXURY TRAVEL WITH EMPTY LEG FLIGHTS</strong> Empty leg flights offer savvy travelers a chance to enjoy the luxury of private jet travel at significantly reduced rates. These occur when jets return to base or move for the next charter, flying without passengers. This unique opportunity allows you to experience the exclusivity and comfort of private flying while saving up to 75% compared to standard charter flights.</p>",
-            "type": "long_text",
-            "handle": "paragraph",
-            "help_text": "Paragraph (Long Text)"
-          }
-        },
-        "content_type": {
-          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
-          "name": "Content Section",
-          "handle": "content_section",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 2,
-        "fields": {
-          "title": {
-            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
-            "name": "Heading",
-            "text": "Business Travelers Cut Costs, Not Corners",
-            "type": "text",
-            "handle": "title",
-            "help_text": "Heading (h2)"
-          },
-          "paragraph": {
-            "id": "f_01jbQrN2830RDW6Px709G00xM8",
-            "name": "Paragraph",
-            "text": "<p>Imagine heading to an important meeting or conference in style, prepared, and relaxed, without the hassle of commercial travel. Business travelers find great value in empty leg flights, as they offer a quiet, private space to work or unwind while en route. I recall a client who utilized an empty leg flight for an unexpected meeting in New York. The cost efficiency and time savings turned what could have been a stressful trip into a seamless, productive journey. Benefits of Empty Leg flights include: </p>\n\n<ul><li><p><strong>Cost Efficiency: </strong>Save up to 75% compared to standard charter flights.</p></li><li><p><strong>Privacy and Comfort:</strong> Enjoy the unmatched privacy and comfort of a private jet at a fraction of the cost.</p></li><li><p><strong>Flexibility: </strong>Tailor your travel schedule with greater flexibility and convenience.</p></li></ul>",
-            "type": "long_text",
-            "handle": "paragraph",
-            "help_text": "Paragraph (Long Text)"
-          }
-        },
-        "content_type": {
-          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
-          "name": "Content Section",
-          "handle": "content_section",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 3,
-        "fields": {
-          "title": {
-            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
-            "name": "Heading",
-            "text": "Spontaneous Vacationers Rejoice in Last-Minute Luxuries",
-            "type": "text",
-            "handle": "title",
-            "help_text": "Heading (h2)"
-          },
-          "paragraph": {
-            "id": "f_01jbQrN2830RDW6Px709G00xM8",
-            "name": "Paragraph",
-            "text": "<p>For those who live by spontaneity, empty leg flights are a dream come true. These flights enable spontaneous vacationers to embark on luxury getaways without the need for extensive planning. One memorable instance was when a couple celebrated their anniversary with a last-minute trip to Aspen, snagging an empty leg flight that made their celebration all the more special.</p>",
-            "type": "long_text",
-            "handle": "paragraph",
-            "help_text": "Paragraph (Long Text)"
-          }
-        },
-        "content_type": {
-          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
-          "name": "Content Section",
-          "handle": "content_section",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 4,
-        "fields": {
-          "title": {
-            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
-            "name": "Heading",
-            "text": "Jet-Setting Families Discover Affordable Luxury",
-            "type": "text",
-            "handle": "title",
-            "help_text": "Heading (h2)"
-          },
-          "paragraph": {
-            "id": "f_01jbQrN2830RDW6Px709G00xM8",
-            "name": "Paragraph",
-            "text": "<p>Families looking to travel in comfort and style can greatly benefit from empty leg flights. The convenience and space offered by a private jet make family trips more enjoyable, turning the journey itself into part of the vacation. A family I once helped was thrilled to find an empty leg flight to Orlando, making their Disney World trip unforgettable from start to finish. </p>\n\n<p><strong>PRIVATE JET TRAVEL FOR FAMILIES: MAKING LUXURY AFFORDABLE WITH EMPTY LEG FLIGHTS</strong> Families looking to travel in style can greatly benefit from empty leg flights, offering the convenience and space of a private jet at a fraction of the cost. These flights make family vacations more enjoyable by turning the journey itself into part of the vacation, enhancing the travel experience from start to finish.</p>",
-            "type": "long_text",
-            "handle": "paragraph",
-            "help_text": "Paragraph (Long Text)"
-          }
-        },
-        "content_type": {
-          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
-          "name": "Content Section",
-          "handle": "content_section",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 5,
-        "fields": {
-          "title": {
-            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
-            "name": "Heading",
-            "text": "Entrepreneurs Elevate Networking Opportunities",
-            "type": "text",
-            "handle": "title",
-            "help_text": "Heading (h2)"
-          },
-          "paragraph": {
-            "id": "f_01jbQrN2830RDW6Px709G00xM8",
-            "name": "Paragraph",
-            "text": "<p>For entrepreneurs, every interaction can be a networking opportunity, even in the air. Empty leg flights offer a unique setting for meeting like-minded individuals or even hosting impromptu meetings. The privacy and exclusivity of these flights create an ideal environment for fostering meaningful connections.</p>",
-            "type": "long_text",
-            "handle": "paragraph",
-            "help_text": "Paragraph (Long Text)"
-          }
-        },
-        "content_type": {
-          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
-          "name": "Content Section",
-          "handle": "content_section",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 6,
-        "fields": {
-          "title": {
-            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
-            "name": "Heading",
-            "text": "Adventure Seekers Explore More for Less",
-            "type": "text",
-            "handle": "title",
-            "help_text": "Heading (h2)"
-          },
-          "paragraph": {
-            "id": "f_01jbQrN2830RDW6Px709G00xM8",
-            "name": "Paragraph",
-            "text": "<p>Adventure enthusiasts who crave new experiences can leverage empty leg flights to reach remote or less-accessible destinations. These flights often provide a more direct and flexible route, allowing adventurers to spend less time traveling and more time exploring.</p>",
-            "type": "long_text",
-            "handle": "paragraph",
-            "help_text": "Paragraph (Long Text)"
-          }
-        },
-        "content_type": {
-          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
-          "name": "Content Section",
-          "handle": "content_section",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 7,
-        "fields": {
-          "title": {
-            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
-            "name": "Heading",
-            "text": "The Smart Choice for Eco-Conscious Flyers",
-            "type": "text",
-            "handle": "title",
-            "help_text": "Heading (h2)"
-          },
-          "paragraph": {
-            "id": "f_01jbQrN2830RDW6Px709G00xM8",
-            "name": "Paragraph",
-            "text": "<p>By booking empty leg flights, eco-conscious travelers can reduce their carbon footprint. These flights are already scheduled to operate, so filling them up helps minimize the environmental impact of flying empty. It’s a win-win for the planet and the passenger. </p>\n\n<p><strong>BENEFITS OF BOOKING EMPTY LEG FLIGHTS FOR SPONTANEOUS VACATIONS</strong> For those who love spontaneity, empty leg flights are a dream come true, enabling last-minute luxury getaways without the need for extensive planning. They provide cost efficiency, privacy, and the flexibility to tailor travel schedules, making spontaneous vacations more special and affordable.</p>",
-            "type": "long_text",
-            "handle": "paragraph",
-            "help_text": "Paragraph (Long Text)"
-          }
-        },
-        "content_type": {
-          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
-          "name": "Content Section",
-          "handle": "content_section",
-          "object_type": "block"
-        }
-      },
-      {
-        "name": "",
-        "sort": 8,
-        "fields": {
-          "title": {
-            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
-            "name": "Heading",
-            "text": "Experience the Difference with JetLevel Aviation",
-            "type": "text",
-            "handle": "title",
-            "help_text": "Heading (h2)"
-          },
-          "paragraph": {
-            "id": "f_01jbQrN2830RDW6Px709G00xM8",
-            "name": "Paragraph",
-            "text": "<p>At JetLevel Aviation, we pride ourselves on offering a seamless and luxurious travel experience. Our platform makes finding and booking empty leg flights easy, giving you access to exclusive deals and unparalleled luxury. Whether you’re a business traveler, a spontaneous vacationer, a family on the go, an entrepreneur, an adventure seeker, or an eco-conscious flyer, we invite you to explore the world of empty leg flights with us. Ready to discover how empty leg flights can elevate your travel experience? Request a quote today at <a href=\"https://jetlevel.com/instant-private-jet-quotes/\">JetLevel Aviation</a> and let us take care of the rest. Your next luxury journey awaits. For more detailed insights on the cost of chartering a private jet, including empty leg options, visit our dedicated pages on <a href=\"https://jetlevel.com/cost-of-chartering-a-private-jet/\">the cost of chartering</a>, <a href=\"https://jetlevel.com/request-a-quote/\">request a quote</a>, <a href=\"https://jetlevel.com/charter-flights-cost-calculator/\">charter flights cost calculator</a>, and <a href=\"https://jetlevel.com/empty-leg-flights/\">empty leg flights</a>. Discover the world of luxury travel with JetLevel Aviation, where every journey is an experience to cherish.</p>",
-            "type": "long_text",
-            "handle": "paragraph",
-            "help_text": "Paragraph (Long Text)"
-          }
-        },
-        "content_type": {
-          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
-          "name": "Content Section",
-          "handle": "content_section",
-          "object_type": "block"
-        }
+[
+  {
+    "id": "c_01Jcb67B13j5zH9NC8X02v3E7g",
+    "published_at": "2024-11-10T14:35:50+00:00",
+    "slug": "private-jet-charter-flights-to-grand-canyon-az",
+    "name": "Grand Canyon",
+    "uri": "private-jet-charter-flights-to-grand-canyon-az",
+    "url": "https://jetlevel-web-nextjs-beta.vercel.app/private-jet-charter-flights-to-grand-canyon-az",
+    "language": "en",
+    "created_at": "2024-11-10T14:04:11+00:00",
+    "updated_at": "2024-11-10T14:35:50+00:00",
+    "author": {
+      "id": "u_01JBw2GYKpW7va7P6HF2Ts6QhV",
+      "name": "sidhant",
+      "email": "sidhantjai102@gmail.com",
+      "profile_photo_url": "https://ui-avatars.com/api/?name=s&bold=true&size=256&color=008673&background=00D6B5&font-size=0.4&format=svg"
+    },
+    "content_type": {
+      "id": "ct_01JBsRc04FnEXgrKG4vZwAZGcA",
+      "name": "USA City Pages",
+      "handle": "usa_city_pages",
+      "object_type": "page"
+    },
+    "seo": {
+      "title": "Grand Canyon Private Jet Charter | JetLevel Aviation",
+      "description": "Experience the awe of the Grand Canyon with JetLevel Aviation's tailored private jet charters. Unparalleled luxury and convenience. Contact us for your quote.",
+      "robots": null,
+      "canonical_url": "https://jetlevel-web-nextjs-beta.vercel.app/private-jet-charter-flights-to-grand-canyon-az",
+      "open_graph": {
+        "title": "Grand Canyon Private Jet Charter | JetLevel Aviation",
+        "description": "Experience the awe of the Grand Canyon with JetLevel Aviation's tailored private jet charters. Unparalleled luxury and convenience. Contact us for your quote.",
+        "image_secure_url": null,
+        "image_width": null,
+        "image_height": null,
+        "image_alt": null,
+        "url": "https://jetlevel-web-nextjs-beta.vercel.app/private-jet-charter-flights-to-grand-canyon-az"
       }
-    ]
-  },
-  "hero_image": {
-    "id": "f_01JeNMKn9xp5pWRheQTmFMj217",
-    "name": "Hero Image",
-    "handle": "hero_image",
-    "help_text": null,
-    "type": "assets",
-    "assets": [
-      {
-        "sort": 0,
-        "asset": {
-          "id": "a_01jenMwMPZb9He2NgK5kAq1Vc2",
-          "url": "https://assets.contento.io/assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/who-should-consider-empty-legs-flight.jpg",
-          "name": "Who Should Consider Empty Legs Flight",
-          "path": "assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/who-should-consider-empty-legs-flight.jpg",
-          "size": "48.9 KB",
-          "width": "2560",
-          "height": "1637",
-          "is_image": true,
-          "extension": "jpg",
-          "mime_type": "image/jpeg",
-          "created_at": "2024-12-09T12:04:17+00:00",
-          "updated_at": "2024-12-09T12:04:17+00:00",
-          "description": null
-        }
+    },
+    "fields": {
+      "faq": {
+        "id": "f_01jbTnneMpcKV894CExWRwwNs0",
+        "name": "faq",
+        "handle": "faq",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "answers": {
+                "id": "f_01Jbv2BGF45hbb47X4frz37cQH",
+                "list": [
+                  {
+                    "sort": 0,
+                    "text": "The closest international airport to the Grand Canyon is Phoenix Sky Harbor International Airport in Phoenix, AZ. We can arrange for a seamless transfer from there to Grand Canyon National Park Airport."
+                  },
+                  {
+                    "sort": 1,
+                    "text": "Absolutely! We partner with top tour providers to offer exclusive experiences for our clients. Whether you’re interested in helicopter tours, river rafting, or guided hikes, we can make the arrangements."
+                  },
+                  {
+                    "sort": 2,
+                    "text": "Yes, there are specific regulations set by the FAA for flying over the Grand Canyon to protect its natural beauty and reduce noise pollution. Always ensure your flight plan is compliant with these rules."
+                  },
+                  {
+                    "sort": 3,
+                    "text": "No, private jets cannot land inside the Grand Canyon itself due to regulations. However, they can land at the Grand Canyon National Park Airport, which is conveniently located close to the south rim."
+                  }
+                ],
+                "name": "answers",
+                "type": "list",
+                "handle": "answers",
+                "help_text": null
+              },
+              "questions": {
+                "id": "f_01jbv2B707bzrH3rcWEkqmrWMY",
+                "list": [
+                  {
+                    "sort": 0,
+                    "text": "Are there any international airports nearby for travelers coming from abroad?"
+                  },
+                  {
+                    "sort": 1,
+                    "text": "Can JetLevel Aviation arrange for tours of the Grand Canyon?"
+                  },
+                  {
+                    "sort": 2,
+                    "text": "Are there restrictions on flying over the Grand Canyon?"
+                  },
+                  {
+                    "sort": 3,
+                    "text": "Can I land directly inside the Grand Canyon?"
+                  }
+                ],
+                "name": "questions",
+                "type": "list",
+                "handle": "questions",
+                "help_text": null
+              }
+            },
+            "content_type": {
+              "id": "ct_01JBrbzEN0sE6pFeGF0K9hHbWz",
+              "name": "FAQ Section",
+              "handle": "faq_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "title": {
+        "id": "f_01jbsRC05qfnF8yX36NGrtSy69",
+        "name": "title",
+        "handle": "title",
+        "help_text": null,
+        "type": "text",
+        "text": "Grand Canyon, AZ Private Jet Charters"
+      },
+      "weather": {
+        "id": "f_01JbtnrX3KgM5395EvmbnYrfWR",
+        "name": "Weather",
+        "handle": "weather",
+        "help_text": "weather heading, paragraph and widget code goes here",
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "Weather in Grand Canyon, AZ",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbYSm7P2R2cG9aqdEzB0STnz",
+                "name": "weatherHeading",
+                "text": "Weather in Grand Canyon, AZ",
+                "type": "text",
+                "handle": "title",
+                "help_text": "weather title/heading \"Weather in [Location]\""
+              },
+              "paragraph": {
+                "id": "f_01jbYtFq1w4v4caJQW6GnzW2w0",
+                "name": "paragraph",
+                "text": "<p>The Grand Canyon experiences a semi-arid climate with cold winters and mild summers. Before planning your trip, check out the latest weather forecast for the most accurate information.</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "weather section paragraph"
+              },
+              "weather_widget": {
+                "id": "f_01JBySP7PQcj60akF59kGR1MsP",
+                "name": "weatherWidget",
+                "text": "<a class=\"weatherwidget-io\" href=\"https://forecast7.com/en/36d05n112d14/grand-canyon-village/?unit=us\" data-label_1=\"GRAND CANYON\" data-label_2=\"WEATHER\" data-theme=\"marine\" >GRAND CANYON WEATHER</a>",
+                "type": "text",
+                "handle": "weather_widget",
+                "help_text": "place only a tag in here (DO NOT NOT PLACE <script> tag)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01jbySm7nm96K9AFwHBP7709H7",
+              "name": "Weather",
+              "handle": "weather",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "benefits": {
+        "id": "f_01jbsRc06gy008FYz1w14S2J4z",
+        "name": "subheading",
+        "handle": "benefits",
+        "help_text": "black subheading how much it cost goes here with its paragraph",
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "How much does it cost to charter a flight to or from Grand Canyon?",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p>The <a href=\"https://jetlevel.com/cost-of-chartering-a-private-jet/\">cost to charter a private jet</a> varies depending on flight duration and the aircraft chosen. For instance, a private jet rental from Los Angeles to Grand Canyon might start at $4,900 in a Turboprop.</p>\n\n<p>Here’s a rough pricing guide for private jet charter flights to/from Grand Canyon:</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "overview": {
+        "id": "f_01Jbsrc069VXRmaqJBEXW2Nzk8",
+        "name": "Main Heading",
+        "handle": "overview",
+        "help_text": "Blue Main heading with paragraph",
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Grand Canyon, AZ Airports & Charter Routes",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p>Welcome to the Grand Canyon, one of the world’s most iconic natural wonders. Whether you’re an adventurer seeking a thrilling descent into the canyon, a photographer aiming to capture its stunning beauty, or a traveler looking for a serene escape, JetLevel Aviation offers a bespoke private jet charter experience tailored to your desires.</p>\n\n<p>Gaze at the awe-inspiring vistas of the Grand Canyon from the sky, an unparalleled view exclusive to private jet travelers. With JetLevel Aviation, every flight embodies luxury, comfort, and timeliness. Your safety and convenience always come first.</p>\n\n<p>JetLevel Aviation turns every journey into an unforgettable memory. We provide insights to make the most of your Grand Canyon experience, whether it’s securing a prime spot for the sunrise at Mather Point or planning a helicopter tour over the canyon.</p>\n\n<p>Your journey concludes with a landing at Grand Canyon National Park Airport, known for its efficient services. This allows you to plunge into the Grand Canyon’s splendor without delay.</p>\n\n<p>Though the Grand Canyon may be your chosen destination today, the world awaits your next venture. Dive deeper in our segment on Popular Private Jet Charter Routes from Grand Canyon. Whether it’s the vibrant streets of Las Vegas, the coastal serenity of Malibu, or destinations worldwide, JetLevel Aviation ensures your journey is nothing short of luxurious.</p>\n\n<p>For those considering alternative airports near the Grand Canyon, we extend our services to other facilities. Dive into our section on Alternative Airports in and Around the Grand Canyon for further details.</p>\n\n<p>Ready to start your journey to this majestic natural marvel? JetLevel Aviation is your trusted partner in crafting unforgettable moments. Reach out to us today for a quote or to plan your next <a href=\"https://jetlevel.com/private-jet-charter/\">private jet charter.</a></p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "page_name": {
+        "id": "f_01JbsRC05qfNf8yX36NGrtSY68",
+        "name": "Page name",
+        "handle": "page_name",
+        "help_text": null,
+        "type": "text",
+        "text": "Grand Canyon"
+      },
+      "cost_table": {
+        "id": "f_01JbtmTxMz91QZEjdHYfS7XNaV",
+        "name": "Cost Table",
+        "handle": "cost_table",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "rows": {
+                "id": "f_01JBvCfqcyA8C9eWwEHFXXDK4m",
+                "list": [
+                  {
+                    "sort": 0,
+                    "text": "Los Angeles/Light Jet/6-8/1.0/$6,900"
+                  },
+                  {
+                    "sort": 1,
+                    "text": "Denver/Midsize Jet/7-9/1.5/$11,850"
+                  },
+                  {
+                    "sort": 2,
+                    "text": "Las Vegas/Turboprop/6-8/1.0/$4,900"
+                  },
+                  {
+                    "sort": 3,
+                    "text": "San Francisco/Super Midsize Jet/8-10/2.0/$18,000"
+                  },
+                  {
+                    "sort": 4,
+                    "text": "Phoenix/Very Light Jet/4-5/1.0/$5,400"
+                  }
+                ],
+                "name": "rows",
+                "type": "list",
+                "handle": "rows",
+                "help_text": null
+              }
+            },
+            "content_type": {
+              "id": "ct_01JBvcfBMzk5MX4J957etA8nBt",
+              "name": "Tablerows",
+              "handle": "tablerows",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "hero_image": {
+        "id": "f_01Jbv2Cp6yZkyG151CCgsARqDt",
+        "name": "heroImage",
+        "handle": "hero_image",
+        "help_text": null,
+        "type": "assets",
+        "assets": [
+          {
+            "sort": 0,
+            "asset": {
+              "id": "a_01jcB6bv8A6CF6HXZQ3sjRDtBR",
+              "url": "https://assets.contento.io/assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/Grand-Canyon-AZ.jpg",
+              "name": "Grand Canyon A Z",
+              "path": "assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/Grand-Canyon-AZ.jpg",
+              "size": "129.68 KB",
+              "width": "910",
+              "height": "683",
+              "is_image": true,
+              "extension": "jpg",
+              "mime_type": "image/jpeg",
+              "created_at": "2024-11-10T14:06:38+00:00",
+              "updated_at": "2024-11-10T14:06:38+00:00",
+              "description": null
+            }
+          }
+        ]
+      },
+      "alt_airport": {
+        "id": "f_01jBSrq828Swv5072J2Dc15h8C",
+        "name": "Alt Airport",
+        "handle": "alt_airport",
+        "help_text": "Alternative Airports in and Around [location]",
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Alternative Airports in and Around Grand Canyon",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p>Flagstaff Pulliam Airport (ICAO: KFLG) – Approximately 91 miles southeast of Grand Canyon, it offers amenities like car rentals, dining, and lounges.</p>\n\n<p>Sedona Airport (ICAO: KSEZ) – Located around 114 miles south of Grand Canyon, it provides services like car rentals, fueling, and dining.</p>\n\n<p>Page Municipal Airport (ICAO: KPGA) – About 135 miles northeast of Grand Canyon, facilities include dining, car rentals, and fueling.</p>\n\n<p><strong>Don’t see your itinerary above?</strong></p>\n\n<p><a href=\"https://jetlevel.com/request-a-quote/\">Click here</a> to request a quote using your exact destinations or call us to discuss your routing – <a href=\"tel:8555385383\">1-855-JetLevel</a></p>\n\n<p>For more information on these and other airports, visit our <a href=\"https://jetlevel.com/usa-airport-directory/\">Airport Directory.</a></p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "intoduction": {
+        "id": "f_01jbSrc062n824eYp6w586XaaT",
+        "name": "Intoduction",
+        "handle": "intoduction",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Private Jet to Grand Canyon",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p>Traveling to the Grand Canyon via private jet offers an unparalleled experience of luxury and convenience, allowing you to bypass the crowds and start your adventure with ease. The Grand Canyon National Park Airport, located just south of the park in Tusayan, Arizona, caters specifically to private jets and is the most direct gateway to this natural wonder. This proximity offers a unique opportunity for golf enthusiasts to play at nearby courses in Northern Arizona, enjoying both the sport and the stunning landscapes. The area’s rich cultural heritage can be explored through various visitor centers and museums, such as the Grand Canyon Visitor Center, providing insights into the canyon’s geological and cultural history. While business facilities may be more limited in this natural setting, the serene environment creates a perfect backdrop for retreats and strategic meetings. Dining near the Grand Canyon emphasizes Southwestern cuisine, with options ranging from casual cafes to upscale dining experiences that showcase local flavors. Accommodation options include luxury lodges and hotels like El Tovar Hotel, offering views of the canyon and high-end amenities. Must-see experiences include helicopter tours over the canyon, hiking trails with breathtaking vistas, and the Skywalk at the West Rim, offering a unique perspective of the canyon. The combination of the Grand Canyon’s natural majesty, the exclusivity of private jet travel, and the array of activities available makes it a memorable destination for both leisure and contemplative business engagements.</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "golf_courses": {
+        "id": "f_01jbv35r23922ezBxdDva8a3v4",
+        "name": "GolfCourses",
+        "handle": "golf_courses",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": []
+      },
+      "main_heading": {
+        "id": "f_01jBTnQs8G8z2a75582S7d22d6",
+        "name": "TravelGuideHeading",
+        "handle": "main_heading",
+        "help_text": "Main Blue section heading goes here",
+        "type": "text",
+        "text": "Grand Canyon, AZ Travel Guide"
+      },
+      "popular_routes": {
+        "id": "f_01jBtMqQtY20qvc4pqxJvwg2rt",
+        "name": "Popular Routes",
+        "handle": "popular_routes",
+        "help_text": "Popular Private Jet Charter Routes to [location]",
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Popular Private Jet Charter Routes to Grand Canyon",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p>Los Angeles to Grand Canyon – A 378-mile journey typically covered in 1 hour with a light jet like the <a href=\"https://jetlevel.com/lear-45xr/\">Lear 45XR</a>.</p>\n\n<p>Denver to Grand Canyon – This 435-mile route is usually completed in about 1.5 hours with a midsize jet like the <a href=\"https://jetlevel.com/citation-xls/\">Citation XLS</a>.</p>\n\n<p>Phoenix to Grand Canyon – Covering 230 miles, this trip is best undertaken in roughly 1 hour with a turboprop like the <a href=\"https://jetlevel.com/pilatus-pc12/\">Pilatus PC-12</a>.</p>\n\n<p>San Francisco to Grand Canyon – This 683-mile journey is typically covered in 2 hours with a super midsize jet like the <a href=\"https://jetlevel.com/falcon-50ex/\">Falcon 50EX</a>.</p>\n\n<p>Las Vegas to Grand Canyon – A shorter 277-mile route that is often completed in just under 1 hour with a very light jet like the <a href=\"https://jetlevel.com/vision-jet/\">Vision Jet</a>.</p>\n\n<p><strong>Don’t see your itinerary above?</strong></p>\n\n<p><a href=\"https://jetlevel.com/request-a-quote/\">Click here</a> to request a quote using your exact destinations or call us to discuss your routing – <a href=\"tel:8555385383\">1-855-JetLevel</a></p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "arts_and_culture": {
+        "id": "f_01jBV3508gW3YwRJW8JqeQdtfS",
+        "name": "ArtsAndCulture",
+        "handle": "arts_and_culture",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Arts and Culture Sights of Grand Canyon",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p><a target=\"_blank\" rel=\"noopener\" href=\"https://www.nps.gov/grca/learn/photosmultimedia/colter_hopih_photos.htm\">Hopi House</a> – Designed by Mary Colter in 1904, this location offers Native American arts and crafts for sale. Its architecture and the artistry on display make it a cultural cornerstone of the region.</p>\n\n<p><a target=\"_blank\" rel=\"noopener\" href=\"https://www.nps.gov/grca/planyourvisit/art-exhibits.htm\">Kolb Studio</a> – A historic structure with rotating art exhibits.</p>\n\n<p><a target=\"_blank\" rel=\"noopener\" href=\"https://www.nps.gov/grca/planyourvisit/desert-view.htm\">Desert View Watchtower</a> – Another Mary Colter-designed building, this 70-foot high stone tower provides panoramic views and features murals by Hopi artist Fred Kabotie.</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "top_luxury_hotels": {
+        "id": "f_01JBV315jyEak898cpvCmc84cD",
+        "name": "TopLuxuryHotels",
+        "handle": "top_luxury_hotels",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Top Luxury Hotels in Grand Canyon",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p><a target=\"_blank\" rel=\"noopener\" href=\"https://www.grandcanyonlodges.com/lodging/el-tovar/\"><u>El Tovar Hotel</u></a> – Historic luxury hotel located on the South Rim.</p>\n\n<p><a target=\"_blank\" rel=\"noopener\" href=\"https://www.grandcanyongrandhotel.com/\">The Grand Hotel</a> – Offers a mix of modern amenities and old-world charm.</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "aircraft_available": {
+        "id": "f_01jbtNCfV7hn6JqjRCbtj8EgY4",
+        "name": "Aircraft Available",
+        "handle": "aircraft_available",
+        "help_text": "main section heading and description goes here \"Aircraft Available for Addison Charter\"",
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Aircraft Available for Grand Canyon Charter",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p>Here are some of the aircraft available for charter flights to and from Grand Canyon, AZ:</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "concerts_and_shows": {
+        "id": "f_01Jbv33MARnx6V3T0a012Y2634",
+        "name": "ConcertsAndShows",
+        "handle": "concerts_and_shows",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": []
+      },
+      "emergency_services": {
+        "id": "f_01Jbv36GMtzSkepDpX13Fc3fXv",
+        "name": "EmergencyServices",
+        "handle": "emergency_services",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 2,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Emergency Services and Contacts in Grand Canyon, AZ",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p>In case of emergencies, here are some important contacts:</p>\n\n<p>Medical: Grand Canyon Clinic –<a href=\"http://tel/\"> (928) 638-2551</a></p>\n\n<p>Law Enforcement: <a href=\"http://tel/\">(928) 638-7805</a></p>\n\n<p>Call <a target=\"_blank\" href=\"tel:911\">911</a> for immediate assistance in any emergency situation.</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "top_business_venues": {
+        "id": "f_01JBV32sbhgZr5BfaqKtV83hqf",
+        "name": "TopBusinessVenues",
+        "handle": "top_business_venues",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Top Business Venues in Grand Canyon",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p><a target=\"_blank\" rel=\"noopener\" href=\"https://www.grandcanyonlodges.com/lodging/maswik-lodge/\">Maswik Lodge</a> – Provides a rustic ambiance for meetings and retreats.</p>\n\n<p><a target=\"_blank\" rel=\"noopener\" href=\"https://www.grandcanyonlodges.com/lodging/phantom-ranch/\">Phantom Ranch</a> – While mainly known as a resting point for hikers and rafters, it can be booked for exclusive corporate retreats, providing a unique experience at the base of the canyon.</p>\n\n<p><a target=\"_blank\" rel=\"noopener\" href=\"https://www.grandcanyonlodges.com/lodging/thunderbird-lodge/\">Thunderbird Lodge</a> – Ideal for business retreats with canyon views.</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "high_end_restaurants": {
+        "id": "f_01JBv3265b0r9714c0w2A0kEdC",
+        "name": "HighEndRestaurants",
+        "handle": "high_end_restaurants",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "High-end Restaurants in Grand Canyon",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p><a target=\"_blank\" rel=\"noopener\" href=\"https://www.grandcanyonlodges.com/dine/el-tovar-dining-room-and-lounge/\">El Tovar Dining Room</a> – Fine dining with canyon views.</p>\n\n<p><a target=\"_blank\" rel=\"noopener\" href=\"https://www.tripadvisor.com/Restaurant_Review-g143028-d601240-Reviews-Bright_Angel_Restaurant_Fountain_Bar-Grand_Canyon_National_Park_Arizona.html\">Bright Angel Bistro</a> – A mix of contemporary and classic dishes.</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "must_see_attractions": {
+        "id": "f_01jbv2Zr928A35AHC8csmK0Ncd",
+        "name": "MustSeeAttractions",
+        "handle": "must_see_attractions",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Must-see Attractions & Experiences in Grand Canyon",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p><a target=\"_blank\" rel=\"noopener\" href=\"https://www.nps.gov/grca/planyourvisit/south-rim.htm\">South Rim</a> – The most visited part of the canyon offers breathtaking views.</p>\n\n<p><a target=\"_blank\" rel=\"noopener\" href=\"https://www.nps.gov/places/000/bright-angel-trail.htm\">Bright Angel Trail</a> – A popular hiking trail with spectacular views.</p>\n\n<p><a target=\"_blank\" rel=\"noopener\" href=\"https://www.papillon.com/\">Helicopter Tours</a> – See the Grand Canyon from a unique perspective.</p>\n\n<p><a target=\"_blank\" rel=\"noopener\" href=\"https://www.grandcanyonwhitewater.com/\">Colorado River Rafting</a> – Experience the thrill of the river at the base of the canyon.</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "travel_concierge_services": {
+        "id": "f_01Jbvn862PN48n4yXN0G7Pj8F5",
+        "name": "travel_concierge_services",
+        "handle": "travel_concierge_services",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Travel Concierge Services",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p>Need assistance planning your Grand Canyon journey? From booking accommodations to organizing unique experiences, At <a href=\"https://jetlevel.com/\">JetLevel Aviation</a>, our travel concierge service is here to assist.</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
       }
-    ]
-  },
-  "starting_text": {
-    "id": "f_01JeNNM7VM5Q3kp5VrB66QY1s8",
-    "name": "Starting Text",
-    "handle": "starting_text",
-    "help_text": "Go to first section of blog and enter first 12-15 words from it's paragraph and then 3 dots (...) example: In this section we will look at ...",
-    "type": "text",
-    "text": "Empty leg flights occur when a private jet needs to return to its base or..."
-  },
-  "next_post_link": {
-    "id": "f_01jENMrw0HfAfVCs2hTEaGhGck",
-    "name": "Next Post Link",
-    "handle": "next_post_link",
-    "help_text": null,
-    "type": "text",
-    "text": "https://jetlevel.com/customizing-your-flight-experience/"
-  },
-  "next_post_heading": {
-    "id": "f_01JEnMs7CDzC7FC41t75a0s1P2",
-    "name": "Next Post Heading",
-    "handle": "next_post_heading",
-    "help_text": null,
-    "type": "text",
-    "text": "Customizing Your Flight Experience"
+    }
   }
-}
+]

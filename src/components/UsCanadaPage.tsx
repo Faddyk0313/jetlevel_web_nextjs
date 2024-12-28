@@ -5,107 +5,33 @@ import CharterCity from './CharterCities';
 import { Search } from '@/svg';
 import Button from '@/components/Button';
 
-const UsCanadaPage = () => {
-  const usCities = [
-    {
-      heading: 'Addison Private Jet Charter',
-      link: '/addison-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/07/Addison-TX-1.jpeg',
-    },
-    {
-      heading: 'Albany Private Jet Charter',
-      link: '/albany-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/08/Albany-NY.jpg',
-    },
-    {
-      heading: 'Albuquerque Private Jet Charter',
-      link: '/albuquerque-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Albuquerque-NM-jpg.webp',
-    },
-    {
-      heading: 'Alexandria Private Jet Charter',
-      link: '/alexandria-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Alexandria-Louisiana-jpg.webp',
-    },
-    {
-      heading: 'Addison Private Jet Charter',
-      link: '/addison-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/07/Addison-TX-1.jpeg',
-    },
-    {
-      heading: 'Albany Private Jet Charter',
-      link: '/albany-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/08/Albany-NY.jpg',
-    },
-    {
-      heading: 'Albuquerque Private Jet Charter',
-      link: '/albuquerque-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Albuquerque-NM-jpg.webp',
-    },
-    {
-      heading: 'Alexandria Private Jet Charter',
-      link: '/alexandria-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Alexandria-Louisiana-jpg.webp',
-    },
-    {
-      heading: 'Addison Private Jet Charter',
-      link: '/addison-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/07/Addison-TX-1.jpeg',
-    },
-    {
-      heading: 'Albany Private Jet Charter',
-      link: '/albany-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/08/Albany-NY.jpg',
-    },
-    {
-      heading: 'Albuquerque Private Jet Charter',
-      link: '/albuquerque-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Albuquerque-NM-jpg.webp',
-    },
-    {
-      heading: 'Alexandria Private Jet Charter',
-      link: '/alexandria-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Alexandria-Louisiana-jpg.webp',
-    },
-    {
-      heading: 'Albany Private Jet Charter',
-      link: '/albany-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/08/Albany-NY.jpg',
-    },
-    {
-      heading: 'Albuquerque Private Jet Charter',
-      link: '/albuquerque-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Albuquerque-NM-jpg.webp',
-    },
-    {
-      heading: 'Alexandria Private Jet Charter',
-      link: '/alexandria-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Alexandria-Louisiana-jpg.webp',
-    },
-    {
-      heading: 'Albany Private Jet Charter',
-      link: '/albany-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/08/Albany-NY.jpg',
-    },
-    {
-      heading: 'Albuquerque Private Jet Charter',
-      link: '/albuquerque-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Albuquerque-NM-jpg.webp',
-    },
-    {
-      heading: 'Alexandria Private Jet Charter',
-      link: '/alexandria-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Alexandria-Louisiana-jpg.webp',
-    },
-  ];
+interface UsCanadaPageProps {
+  content: any; // Now expecting an array
+}
+
+export const metadata = {
+  title: 'Explore Our Private Jet Charter Destinations in the US & Canada',
+  description:
+    'Discover top destinations across the US & Canada for private jet charters. Browse featured cities and inquire about a custom quote.',
+};
+// Define the UsCanadaPage component
+const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ content }) => {
+  // console.log("------", content)
+  const cities = content.map((item:any) => {
+    return {
+      heading: item.fields.title?.text || item.name,  // fallback to item.name if no fields.title
+      link: `/${item.slug}`,
+      img: item.fields.hero_image?.assets?.[0]?.asset?.url || '',
+    };
+  });
 
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredCities, setFilteredCities] = useState(usCities);
+  const [filteredCities, setFilteredCities] = useState(cities);
   const [currentPage, setCurrentPage] = useState(1);
   const citiesPerPage = 8; 
 
   const handleSearch = () => {
-    const filtered = usCities.filter((city) =>
+    const filtered = cities.filter((city:any) =>
       city.heading.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredCities(filtered);
@@ -155,7 +81,7 @@ const UsCanadaPage = () => {
       </div>
 
       <section className="flex gap-x-4 flex-wrap gap-y-4">
-        {currentCities.map((city,index) => (
+        {currentCities.map((city:any,index: number) => (
           <CharterCity img={city.img} heading={city.heading} link={city.link} key={index} />
         ))}
       </section>

@@ -1,4 +1,5 @@
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
+import EmptyLegDirectory from "@/components/EmptyLegDirectory";
 import UsCanadaPage from '@/components/UsCanadaPage';
 import { createClient } from "@/lib/contento";
 import BrandNames from "@/sections/BrandNames";
@@ -13,8 +14,8 @@ type PageProps = {
   };
 };
 
-const pageContent: Record<string, { title: string; link: string }> = {
-  "us-canada": { title: "USA & Canada's Premier Chartered Cities" , link: "/images/Hero Image for directory Page.webp"},
+const pageContent: Record<string, { title: string; link: string; }> = {
+  "us-canada": { title: "USA & Canada's Premier Chartered Cities", link: "/images/Hero Image for directory Page.webp" },
   'international': { title: "International Chartered Cities", link: "/images/Hero Image for directory Page.webp" },
   "popular-routes": { title: "Premier Chartered Routes", link: "/images/Hero Image for directory Page.webp" },
   "empty-legs": { title: "Empty Leg Flights", link: "/images/Empty-Legs Hero Image.avif" },
@@ -68,26 +69,26 @@ const JetCharter = async ({ params }: PageProps) => {
     <>
       <Hero title={title} image={link} hasCalculator={false} />
       <BrandNames />
-      <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
-        <Breadcrumb />
-        {
-          title === 'US Canada' ? 
-          <UsCanadaPage />
-          :
-          null
-        }
-        {/* <div className="">
-          <ul>
-            {content?.map((item, key) => (
-              <li key={key}>
-                <Link className="hover:text-blue" href={"/" + item.slug}>
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div> */}
-      </section>
+      {
+        title !== 'Empty Leg Flights' ? (
+        <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
+          <Breadcrumb />
+          {
+
+            title === "USA & Canada's Premier Chartered Cities" ?
+              <UsCanadaPage content={content} />
+              : title === 'International Chartered Cities' ?
+                <UsCanadaPage content={content} />
+                :
+                title === 'Premier Chartered Routes' ?
+                  <UsCanadaPage content={content} />
+                  : null
+          }
+        </section>
+        )
+        :<EmptyLegDirectory />
+      }
+          
 
     </>
   );
