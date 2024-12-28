@@ -1,6 +1,6 @@
 import Card from '@/components/Card';
 import TextCompanyOverview from '@/components/TextCompanyOverview';
-import Image from 'next/image';
+import Image from "next/image";
 import React, { ReactNode } from 'react';
 import { Routes_DistanceCalculator, UsCanadaCities, InternationalCities, Aircraft, Airports } from '@/svg';
 import { iconMapping } from '@/lib/constant';
@@ -42,7 +42,7 @@ const CompanyOverview = ({heading,description,IconsItems}:CompanyOverviewProps) 
     // console.log(carouselItems[0].link);
 
     return (
-        <section className='max-w-[1800px] mx-auto flex flex-col justify-center min-h-screen  lg:pt-2 px-5 md:px-10 lg:px-20'>
+        (<section className='max-w-[1800px] mx-auto flex flex-col justify-center min-h-screen  lg:pt-2 px-5 md:px-10 lg:px-20'>
             <div className="flex flex-col lg:flex-row justify-center gap-1 w-fit">
                 <div className="w-full lg:min-w-[50%] lg:max-w-[50%] lg:pt-7">
                     <h2 className="mb-4">{heading}</h2>
@@ -54,10 +54,18 @@ const CompanyOverview = ({heading,description,IconsItems}:CompanyOverviewProps) 
                     <TextCompanyOverview />
                 </div>
                 <div className="w-full ">
-                    <Image width={600} height={600} className='mx-auto' src="/images/60-years-of-experience.jpg" alt="60 years of experience under one roof with an airplane flying through the number 60" />
+                    <Image
+                        width={600}
+                        height={600}
+                        className='mx-auto'
+                        src="/images/60-years-of-experience.jpg"
+                        alt="60 years of experience under one roof with an airplane flying through the number 60"
+                        style={{
+                            maxWidth: "100%",
+                            height: "auto"
+                        }} />
                 </div>
-            </div>  
-            
+            </div>
             <div className="hidden carousel:grid grid-cols-5 justify-between gap-2 py-3">
                 {
                     // IconsItems?.map((card:any) => {
@@ -89,7 +97,7 @@ const CompanyOverview = ({heading,description,IconsItems}:CompanyOverviewProps) 
                 <CarouselContainer items={carouselItems} bgcolor='white' />
 
             </div>
-        </section>
+        </section>)
     );
 };
 

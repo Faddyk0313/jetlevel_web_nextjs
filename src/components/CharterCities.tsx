@@ -3,7 +3,7 @@ import Link from 'next/link';
 import React from 'react';
 
 interface CharterCityProps {
-  img?: string;
+  img: string;
   heading?: string;
   link: string;
 }
@@ -15,7 +15,7 @@ const CharterCity: React.FC<CharterCityProps> = ({ img, heading, link }) => {
     >
       <div className="relative w-full h-[218px] overflow-hidden">
         <Image
-          src={`${img}`} 
+          src={img} 
           alt="City Image"
           fill          // fill the container
           style={{ objectFit: 'cover' }}

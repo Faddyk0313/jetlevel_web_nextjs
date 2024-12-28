@@ -137,7 +137,7 @@ const UsaAirportPage = () => {
           <div className="w-[50%] max-[700px]:w-full text-center">
             {usaAirportList.slice(0, 10).map((airport) => (
               <div key={airport.key} className="mb-4">
-                <Link href={`/usa-airport/${airport.key}`} className='hover:underline text-[#0071BA] text-lg'>
+                <Link href={`/${airport.key}`} className='hover:underline text-[#0071BA] text-lg'>
                   {airport.name}
                 </Link>
               </div>
@@ -146,7 +146,7 @@ const UsaAirportPage = () => {
           <div className="w-[50%] max-[700px]:w-full max-[700px]:mt-8 text-center">
             {usaAirportList.slice(10, 20).map((airport) => (
               <div key={airport.key} className="mb-4">
-                <Link href={`/usa-airport/${airport.key}`} className='hover:underline text-[#0071BA] text-lg'>
+                <Link href={`/${airport.key}`} className='hover:underline text-[#0071BA] text-lg'>
                   {airport.name}
                 </Link>
               </div>

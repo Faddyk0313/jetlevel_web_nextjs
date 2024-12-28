@@ -6,6 +6,7 @@ import { Search } from '@/svg';
 import Button from '@/components/Button';
 
 interface UsCanadaPageProps {
+  title?: string,
   content: any; // Now expecting an array
 }
 
@@ -15,13 +16,13 @@ export const metadata = {
     'Discover top destinations across the US & Canada for private jet charters. Browse featured cities and inquire about a custom quote.',
 };
 // Define the UsCanadaPage component
-const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ content }) => {
+const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
   // console.log("------", content)
   const cities = content.map((item:any) => {
     return {
       heading: item.fields.title?.text || item.name,  // fallback to item.name if no fields.title
       link: `/${item.slug}`,
-      img: item.fields.hero_image?.assets?.[0]?.asset?.url || '',
+      img:`${title === "Routes" ? "/images/single routes img in directory.png" : item.fields.hero_image?.assets?.[0]?.asset?.url }` || '',
     };
   });
 

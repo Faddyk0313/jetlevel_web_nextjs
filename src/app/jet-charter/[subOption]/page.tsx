@@ -67,7 +67,7 @@ const JetCharter = async ({ params }: PageProps) => {
 
   return (
     <>
-      <Hero title={title} image={link} hasCalculator={false} />
+      <Hero title={title} image={link} hasCalculator={false} hasOverlay={true} />
       <BrandNames />
       {
         title !== 'Empty Leg Flights' ? (
@@ -81,7 +81,7 @@ const JetCharter = async ({ params }: PageProps) => {
                 <UsCanadaPage content={content} />
                 :
                 title === 'Premier Chartered Routes' ?
-                  <UsCanadaPage content={content} />
+                  <UsCanadaPage title="Routes" content={content} />
                   : null
           }
         </section>

@@ -112,9 +112,9 @@ const Breadcrumb: React.FC = () => {
   // console.log("hrefArray", hrefArray);
 
   return (
-    <div
-      className={`${styles.breadcrumbContainer} flex items-center w-fit gap-1 flex-wrap`}
-    >
+    (<div
+        className={`${styles.breadcrumbContainer} flex items-center w-fit gap-1 flex-wrap`}
+      >
       <div className="rounded-lg">
         <Link
           href="/"
@@ -144,7 +144,7 @@ const Breadcrumb: React.FC = () => {
           </div>
         );
       })}
-    </div>
+    </div>)
   );
 };
 

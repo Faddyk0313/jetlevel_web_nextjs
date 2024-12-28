@@ -9,10 +9,14 @@ interface FAQ {
     question: string;
     answer: string;
 }
+interface Links {
+    name: string;
+    url: string;
+}
 
 interface CollapsibleEmptyLegDirectoryProps {
     title: string;
-    content: string | string[] | FAQ[];
+    content: string | Links[] | FAQ[];
     image?: string
     isDefaultOpen?: boolean;
 }
@@ -47,9 +51,20 @@ const CollapsibleEmptyLegDirectory: React.FC<CollapsibleEmptyLegDirectoryProps> 
                 {image && typeof content === 'string' ? 
                 <div className="mb-8">
                 <div className="flex flex-wrap justify-between">
-                  <div className="w-[55%] max-[700px]:w-full">
-                    <p className="leading-7 text-[16px] text-[#727982] mb-4">
-                    {content}</p>
+                  <div className="mt-2 details leading-8 text-gray-700 w-[55%] max-[700px]:w-full">
+                        <Markdown
+                           options={{
+                               overrides: {
+                                   a: {
+                                       props: {
+                                           className: ' text-blue',
+                                       },
+                                   },
+                               },
+                           }}
+                       >
+                           {content as string}
+                       </Markdown>
                   </div>
                   <div className="w-[40%] max-[700px]:w-full max-[700px]:mb-6">
                     <Image
@@ -77,17 +92,18 @@ const CollapsibleEmptyLegDirectory: React.FC<CollapsibleEmptyLegDirectoryProps> 
                     </div>
                 ) : Array.isArray(content) ? (
                     <div className="grid grid-cols-1 gap-y-1 md:gap-x-4 md:gap-y-1 sm:grid-cols-2 lg:grid-cols-3 mt-2 details leading-8 text-gray-700">
-                        {content.map((text, index) => (
+                        {content.map((item, index) => (
                             <Link
-                                key={text + index} // Added index for uniqueness if text is repeated
-                                href="#"
+                                key={item.name + index} // Added index for uniqueness if item is repeated
+                                href={item.url}
                                 className="block leading-8 hover:text-blue"
                             >
-                                {text}
+                                {item.name}
                             </Link>
                         ))}
                     </div>
-                ) : (
+                ) 
+                : (
                     // Render markdown content safely
                     (<div className='mt-2 details leading-8 text-gray-700'>
                         <Markdown

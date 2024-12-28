@@ -35,7 +35,7 @@ const CostCalculatorPage = () => {
   ]
   return (
     <div>
-      <Hero title="Charter Flights Cost Calculator" description="Get instant comprehensive breakdown of the estimated cost and aircraft type" image="https://jetlevel.com/wp-content/uploads/2019/10/iStock-1073242590-e1687592795610.jpg" hasOverlay={true} hasCalculator={true} showCalculator={false} />
+      <Hero title="Charter Flights Cost Calculator" description="Get instant comprehensive breakdown of the estimated cost and aircraft type" image="https://jetlevel.com/wp-content/uploads/2019/10/iStock-1073242590-e1687592795610.jpg" hasOverlay={true} hasCalculator={true} showCalculator='LeadForm'/>
       <BrandNames />
       <HalfSection showBottomContent={true}>
       <div className='flex flex-col justify-center gap-y-[20px] pt-8'>
