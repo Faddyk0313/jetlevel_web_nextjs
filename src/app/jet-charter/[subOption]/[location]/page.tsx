@@ -7,7 +7,7 @@ import RoutesPage from "@/components/RoutesPage";
 import { createClient } from "@/lib/contento";
 import { ContentData } from "@gocontento/client";
 import { notFound } from "next/navigation";
- 
+
 type PageProps = {
     params: {
         subOption: string;
@@ -20,16 +20,31 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
     let contentType;
 
     if (blogs.includes(location)) { // This condition will only be true for those blog pages whose url starts with 'empty-leg-flights-'.
+        console.log("------", subOption);
         contentType = 'blogs';
-        subOption = 'blog';
-        const content: void | ContentData = await createClient()
-            .getContentBySlug(
-                `empty-leg-flights-${location}`,
-                contentType
-            )
-            .catch((err) => {
-                console.log(err);
-            });
+
+        let content: void | ContentData  = undefined;
+        if (subOption == "empty-legs") {
+            subOption = 'blog';
+             content = await createClient()
+                .getContentBySlug(
+                    `empty-leg-flights-${location}`,
+                    contentType
+                )
+                .catch((err) => {
+                    console.log(err);
+                });
+        } else if (subOption == "popular-routes") {
+            subOption = 'blog';
+             content = await createClient()
+                .getContentBySlug(
+                    `private-jet-charter-${location}`,
+                    contentType
+                )
+                .catch((err) => {
+                    console.log(err);
+                });
+        }
         if (!content) {
             return (
                 <div className="p-6 max-w-4xl mx-auto text-center">
@@ -79,7 +94,7 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
                 <div className="p-6 max-w-4xl mx-auto text-center">
                     <h2 className="font-bold my-4">Page Not Found</h2>
                 </div>
-            )
+            );
         }
         return <CityPage fields={content.fields} region={contentType} />;
     } else if (subOption == "popular-routes") {

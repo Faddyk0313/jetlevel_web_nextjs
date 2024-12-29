@@ -29,7 +29,7 @@ const nextConfig = {
       {
         source: '/international-chartered-cities',
         destination: '/jet-charter/international',
-      },
+      }, 
       {
         source: '/popular-routes',
         destination: '/jet-charter/popular-routes',
@@ -85,6 +85,10 @@ const nextConfig = {
       {
         source: "/our-team",
         destination: "/company/our-team",
+      },
+      {
+        source: '/cost-of-chartering-a-private-jet',
+        destination: '/pricing',
       },
       
       {

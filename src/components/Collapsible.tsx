@@ -43,7 +43,7 @@ const FAQDropdown: React.FC<FAQDropdownProps> = ({
           </span>
       </div>
       <div
-        className={`overflow-hidden transition-all duration-300 overflow-hidden ease-in-out ${
+        className={`transition-all duration-300 overflow-hidden ease-in-out ${
           isOpen ? "p-[6px_20px_31px_0px]" : "max-h-0 p-0"
         } ${answerClassName || ""} text-[#555] `}
       >

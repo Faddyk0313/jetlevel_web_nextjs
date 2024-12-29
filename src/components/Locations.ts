@@ -706,7 +706,7 @@ export const aircrafts = [
     "king-air-350",
     "embraer-phenom-300",
 ];
-
+ 
 export const blogs = [
     "empty-leg-flights-a-guide-to-luxury-travel-at-a-fraction-of-the-cost",
     "a-guide-to-luxury-travel-at-a-fraction-of-the-cost",
@@ -714,6 +714,7 @@ export const blogs = [
     "customizing-your-flight-experience",
     "eco-tourism-destinations-via-empty-leg-flights",
     "green-airport-practices-for-private-jets",
+    "cost",
     "private-jet-charter-cost",
     "ultimate-comfort-sleeping-quarters-on-jets",
     "wellness-and-spa-facilities-in-the-sky",
@@ -775,6 +776,7 @@ export const blogs = [
     "flights-to-hawaii-tips-on-flying-private-to-hawaii",
     "ultimate-guide-to-private-jet-models",
     "top-new-years-eve-destinations-you-must-experience-by-private-jet",
+    "vs-first-class",
     "private-jet-charter-vs-first-class",
     "impact-of-seasonal-and-geographical-variations-on-private-jet-costs",
     "ultimate-checklist-for-chartering-a-private-jet",
@@ -782,7 +784,9 @@ export const blogs = [
     "10-private-jet-charter-myths-exposed",
     "gulfstream-g450-vs-falcon-900-aircraft-comparison",
     "8-special-occasions-that-make-flying-private-worth-considering",
+    "during-peak-travel-seasons",
     "private-jet-charter-during-peak-travel-seasons",
+    "beyond-the-luxury-stereotype",
     "private-jet-charter-beyond-the-luxury-stereotype",
     "nbaa-bace-2023-why-its-a-must-attend",
     "travel-guide-to-atlantic-city-new-jersey",
