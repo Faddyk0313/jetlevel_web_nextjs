@@ -42,10 +42,10 @@ function NavOptions() {
                     <div onClick={(e) => e.stopPropagation()}> {/* Prevent the click inside the dropdown from closing it */}
                         <NavClickedContent
                             subOptions={[
-                                { name: 'On-Demand Charter', link: '/our-services/on-demand-charter', image: '/navInsideIcons/On-Demand Charter.svg' },
-                                { name: 'Group Charter', link: '/our-services/group-charter', image: '/navInsideIcons/Group Charter.svg' },
-                                { name: 'Air Ambulance', link: '/our-services/air-ambulance', image: '/navInsideIcons/Air Ambulance.svg' },
-                                { name: 'Helicopter', link: '/our-services/helicopter', image: '/navInsideIcons/Helicopter.svg' },
+                                { name: 'On-Demand Charter', link: '/private-jet-charter', image: '/navInsideIcons/On-Demand Charter.svg' },
+                                { name: 'Group Charter', link: '/group-charter-flight', image: '/navInsideIcons/Group Charter.svg' },
+                                { name: 'Air Ambulance', link: '/medical-flight-transport', image: '/navInsideIcons/Air Ambulance.svg' },
+                                { name: 'Helicopter', link: '/Helicopter-Charter-Flight', image: '/navInsideIcons/Helicopter.svg' },
                             ]}
                             closeDropdown={closeDropdown} // Pass the closeDropdown function here
                         />
@@ -84,9 +84,9 @@ function NavOptions() {
                             subOptions={[
                                 { name: 'Private Jet Airports', link: '/usa-airport-directory', image: '/navInsideIcons/Private Jet Airports.svg' },
                                 { name: 'Aircraft Types', link: '/aircraft-charters/', image: '/navInsideIcons/Aircraft Types.svg' },
-                                { name: 'Cost Estimator', link: '/charter-resources/cost-estimator', image: '/navInsideIcons/Cost Estimator.svg' },
-                                { name: 'Flight Tracker', link: '/charter-resources/flight-tracker', image: '/navInsideIcons/Flight Tracker.svg' },
-                                { name: 'Distance Calculator', link: '/charter-resources/distance-calculator', image: '/navInsideIcons/Distance Calculator.svg' },
+                                { name: 'Cost Estimator', link: '/charter-flights-cost-calculator', image: '/navInsideIcons/Cost Estimator.svg' },
+                                { name: 'Flight Tracker', link: '/flight-tracker', image: '/navInsideIcons/Flight Tracker.svg' },
+                                { name: 'Distance Calculator', link: '/distance-calculator', image: '/navInsideIcons/Distance Calculator.svg' },
                             ]}
                             closeDropdown={closeDropdown} // Pass the closeDropdown function here
                         />
@@ -94,7 +94,7 @@ function NavOptions() {
                 )}
             </div>
 
-            <Link href="/pricing" className="flex items-center text-white text-nowrap  hover:text-blue transition-all duration-100 text-[16px]">
+            <Link href="/cost-of-chartering-a-private-jet" className="flex items-center text-white text-nowrap  hover:text-blue transition-all duration-100 text-[16px]">
                 PRICING
             </Link>
 
@@ -109,7 +109,7 @@ function NavOptions() {
                                 { name: 'About Us', link: '/about-jet-level', image: '/navInsideIcons/About Us.svg' },
                                 { name: 'Contact Us', link: '/contact-us', image: '/navInsideIcons/Contact Us.svg' },
                                 { name: 'Blogs', link: '/blog', image: '/navInsideIcons/On-Demand Charter.svg' },
-                                { name: 'Charter FAQs', link: '/company/charter-faqs', image: '/navInsideIcons/Charter FAQs.svg' },
+                                // { name: 'Charter FAQs', link: '/private-jet-frequently-asked-questions/', image: '/navInsideIcons/Charter FAQs.svg' },
                                 { name: 'Our Team', link: '/our-team', image: '/navInsideIcons/Our Team.svg' },
                             ]}
                             closeDropdown={closeDropdown} // Pass the closeDropdown function here

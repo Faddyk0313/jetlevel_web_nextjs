@@ -23,9 +23,12 @@ type PageProps = {
 };
 
 const IndustoryCharterDetail = ({ params }: PageProps) => {
+  // console.log("params", params);
   const singleIndustory = industory.industory.find((event) => event.id === params.subOption);
   const filterCharters = charterTypes?.charterTypes.filter((charter) => charter.url !== params.subOption);
 
+  // console.log("singleIndustory", singleIndustory);
+  // console.log("filterCharters", filterCharters);
   return (
     <div>
       <Hero 
@@ -67,8 +70,8 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
             singleIndustory?.aviationSolutions?.aviationIcons.map((icon,index) => {
               const Icon = iconMapping[icon.icons] ;
               return (
-                <div key={index} className='w-[24%] h-[320px]'>
-                <Card icon={<Icon />} title={icon?.heading} description={icon?.description} bgcolor={'white'} />
+                <div key={index} className='industrycardContanier w-[24%]'>
+                <Card className={'min-h-[320px]'} link='' icon={<Icon />} title={icon?.heading} description={icon?.description} bgcolor={'white'} />
                 </div>
               )
             })
@@ -77,13 +80,13 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
       </section>
 
       <section 
-        style={{ backgroundImage: `url('https://jetlevel.com/wp-content/uploads/2022/08/R-29.jpg')`}} 
+        style={{ backgroundImage: `url('/images/About us Hero Image.jpg')`}} 
         className="px-5 md:px-10 mt-[50px] mb-[50px] xl:px-20 py-7 max-w-[1800px] mx-auto relative bg-center pt-[70px] bg-cover max-[700px]:h-full h-[500px] pb-[70px]"
       >
         <div className='absolute inset-0 bg-black opacity-50 group-hover:opacity-60'></div>
         <div className='flex relative flex-wrap justify-between'>
           <div className='w-[48%] max-[700px]:w-full'>
-            <h3 className='text-white max-[700px]:mb-8 text-[40px] font-calibari font-bold max-[700px]:text-[25px]'>{singleIndustory?.whyChooseJet?.heading || ''}</h3>
+            <h2 className='text-white max-[700px]:mb-8 text-[40px] font-calibari font-bold max-[700px]:text-[25px]'>{singleIndustory?.whyChooseJet?.heading || ''}</h2>
           </div>
           <div className='flex flex-wrap max-[700px]:w-full max-[700px]:mb-8 w-[48%] justify-between gap-y-6 items-center'>
             {
@@ -110,7 +113,7 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
         >
           <div 
             style={{
-              backgroundImage: `url('https://jetlevel.com/wp-content/uploads/2024/03/logo-1-e1710877312297.png')`,
+              backgroundImage: `url('/images/Logo.png')`,
               backgroundPosition: 'center',
               backgroundRepeat: 'no-repeat',
               backgroundSize: '80% 200px',

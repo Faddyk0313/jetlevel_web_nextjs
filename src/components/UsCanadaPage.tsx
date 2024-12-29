@@ -5,107 +5,34 @@ import CharterCity from './CharterCities';
 import { Search } from '@/svg';
 import Button from '@/components/Button';
 
-const UsCanadaPage = () => {
-  const usCities = [
-    {
-      heading: 'Addison Private Jet Charter',
-      link: '/addison-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/07/Addison-TX-1.jpeg',
-    },
-    {
-      heading: 'Albany Private Jet Charter',
-      link: '/albany-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/08/Albany-NY.jpg',
-    },
-    {
-      heading: 'Albuquerque Private Jet Charter',
-      link: '/albuquerque-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Albuquerque-NM-jpg.webp',
-    },
-    {
-      heading: 'Alexandria Private Jet Charter',
-      link: '/alexandria-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Alexandria-Louisiana-jpg.webp',
-    },
-    {
-      heading: 'Addison Private Jet Charter',
-      link: '/addison-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/07/Addison-TX-1.jpeg',
-    },
-    {
-      heading: 'Albany Private Jet Charter',
-      link: '/albany-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/08/Albany-NY.jpg',
-    },
-    {
-      heading: 'Albuquerque Private Jet Charter',
-      link: '/albuquerque-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Albuquerque-NM-jpg.webp',
-    },
-    {
-      heading: 'Alexandria Private Jet Charter',
-      link: '/alexandria-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Alexandria-Louisiana-jpg.webp',
-    },
-    {
-      heading: 'Addison Private Jet Charter',
-      link: '/addison-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/07/Addison-TX-1.jpeg',
-    },
-    {
-      heading: 'Albany Private Jet Charter',
-      link: '/albany-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/08/Albany-NY.jpg',
-    },
-    {
-      heading: 'Albuquerque Private Jet Charter',
-      link: '/albuquerque-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Albuquerque-NM-jpg.webp',
-    },
-    {
-      heading: 'Alexandria Private Jet Charter',
-      link: '/alexandria-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Alexandria-Louisiana-jpg.webp',
-    },
-    {
-      heading: 'Albany Private Jet Charter',
-      link: '/albany-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/08/Albany-NY.jpg',
-    },
-    {
-      heading: 'Albuquerque Private Jet Charter',
-      link: '/albuquerque-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Albuquerque-NM-jpg.webp',
-    },
-    {
-      heading: 'Alexandria Private Jet Charter',
-      link: '/alexandria-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Alexandria-Louisiana-jpg.webp',
-    },
-    {
-      heading: 'Albany Private Jet Charter',
-      link: '/albany-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/08/Albany-NY.jpg',
-    },
-    {
-      heading: 'Albuquerque Private Jet Charter',
-      link: '/albuquerque-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Albuquerque-NM-jpg.webp',
-    },
-    {
-      heading: 'Alexandria Private Jet Charter',
-      link: '/alexandria-private-jet-charter',
-      img: 'https://jetlevel.com/wp-content/uploads/2023/09/Alexandria-Louisiana-jpg.webp',
-    },
-  ];
+interface UsCanadaPageProps {
+  title?: string,
+  content: any; // Now expecting an array
+}
+
+export const metadata = {
+  title: 'Explore Our Private Jet Charter Destinations in the US & Canada',
+  description:
+    'Discover top destinations across the US & Canada for private jet charters. Browse featured cities and inquire about a custom quote.',
+};
+// Define the UsCanadaPage component
+const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
+  // console.log("------", content)
+  const cities = content.map((item:any) => {
+    return {
+      heading: item.fields.title?.text || item.name,  // fallback to item.name if no fields.title
+      link: `/${item.slug}`,
+      img:`${title === "Routes" ? "/images/single routes img in directory.png" : item.fields.hero_image?.assets?.[0]?.asset?.url }` || '',
+    };
+  });
 
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredCities, setFilteredCities] = useState(usCities);
+  const [filteredCities, setFilteredCities] = useState(cities);
   const [currentPage, setCurrentPage] = useState(1);
   const citiesPerPage = 8; 
 
   const handleSearch = () => {
-    const filtered = usCities.filter((city) =>
+    const filtered = cities.filter((city:any) =>
       city.heading.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredCities(filtered);
@@ -120,12 +47,35 @@ const UsCanadaPage = () => {
     setCurrentPage(pageNumber);
   };
 
-  const totalPages = Math.ceil(filteredCities.length / citiesPerPage);
-  const pageNumbers = [];
-  for (let i = 1; i <= totalPages; i++) {
-    pageNumbers.push(i);
-  }
+  const totalPages = Math.ceil(filteredCities && filteredCities.length / 8);
+  const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+  const maxVisiblePages = 3;
+  let displayedPages = [];
+  if (totalPages <= maxVisiblePages) {
+    displayedPages = pageNumbers;
+  } else {
+    const middleIndex = Math.floor(maxVisiblePages / 2);
+    const minDisplayIndex = Math.max(currentPage - middleIndex, 0);
+    const maxDisplayIndex = Math.min(minDisplayIndex + maxVisiblePages - 1, totalPages - 1);
 
+    if (minDisplayIndex > 0) {
+      displayedPages.push(1);
+      if (minDisplayIndex > 1) {
+        displayedPages.push('...');
+      }
+    }
+
+    for (let i = minDisplayIndex; i <= maxDisplayIndex; i++) {
+      displayedPages.push(i + 1);
+    }
+
+    if (maxDisplayIndex < totalPages - 1) {
+      if (maxDisplayIndex < totalPages - 3) {
+        displayedPages.push('...');
+      }
+      displayedPages.push(totalPages);
+    }
+  }
   return (
     <div>
       <section>
@@ -155,18 +105,18 @@ const UsCanadaPage = () => {
       </div>
 
       <section className="flex gap-x-4 flex-wrap gap-y-4">
-        {currentCities.map((city,index) => (
+        {currentCities.map((city:any,index: number) => (
           <CharterCity img={city.img} heading={city.heading} link={city.link} key={index} />
         ))}
       </section>
 
       <div className="flex justify-center pt-8">
         <ul className="flex space-x-4">
-          {pageNumbers.map((number) => (
+          {displayedPages.map((number) => (
             <li key={number}>
               <Button
                 text={number}
-                onClick={() => handlePageChange(number)}
+                onClick={() => handlePageChange(Number(number))}
                 className={`${
                   currentPage === number
                     ? 'bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] text-white'

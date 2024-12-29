@@ -89,7 +89,7 @@ const Nav = () => {
               <FaPhone className=" animate-ringing" />
               <a href="tel:+18555385383" className="whitespace-nowrap" >(855) 538-5383</a>
             </div>
-            <Link href={'#'} className="cursor-pointer whitespace-nowrap bg-gradient-to-br from-[#a94442] via-[#d9534f] to-[#c9302c] text-white py-2 md:py-2.5 px-2 md:px-3 rounded-full transition-all ease-in duration-300 hover:-translate-y-0.5 ">
+            <Link href='/request-a-qoute' className="cursor-pointer whitespace-nowrap bg-gradient-to-br from-[#a94442] via-[#d9534f] to-[#c9302c] text-white py-2 md:py-2.5 px-2 md:px-3 rounded-full transition-all  duration-300 hover:-translate-y-0.5 ">
               Request a Quote
             </Link>
           </div>

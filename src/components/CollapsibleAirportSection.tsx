@@ -78,13 +78,13 @@ const CollapsibleAirportSection: React.FC<CollapsibleAirportSectionProps> = ({
           <div className="mt-2 flex flex-col gap-2 md:gap-5 pb-2">
             {content.map((option, index) => (
               <div key={index} className="flex gap-10 flex-col md:flex-row">
-                {staticImageName === "" ? (
+                {staticImageName === "" && option.fields.image?.assets[0]?.asset?.url ? (
                   // Render image from option.fields.image for every option when staticImageName is empty
                   <Image
                     width={250}
                     height={150}
-                    src={option.fields.image.assets[0].asset.url}
-                    alt={`${option.fields.heading.text} Image`}
+                    src={option.fields.image?.assets[0]?.asset?.url}
+                    alt={`${option.fields.heading?.text} Image`}
                     className="w-[250px] h-[150px] md:mt-1"
                   />
                 ) : // Render static image for the first option and blank space for others

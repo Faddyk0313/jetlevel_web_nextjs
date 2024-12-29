@@ -332,7 +332,7 @@ export default function AirCraftList({setOpenModal,openModal}:any) {
           'event_label': 'Quote Form',
         });
 
-        window.location.href = "https://jetlevel.com/thank-you/"
+        window.location.href = "/thank-you/"
       }
 
     } catch (error) {

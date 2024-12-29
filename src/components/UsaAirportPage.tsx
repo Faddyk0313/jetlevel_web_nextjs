@@ -99,7 +99,7 @@ const UsaAirportPage = () => {
           <p className='mb-[50px]'>Our services include designing customized air travel itineraries for each client and our advisors can help you to select a destination, aircraft, ground transportation, and hotel for your journey. Browse our airport directory guide below to learn more about some of the airports we fly into and the transportation and hotel options available.</p>
             <div className='bg-[#0071BA] flex justify-center relative h-full p-6 rounded-md'>
               <Image 
-                src="https://jetlevel.com/wp-content/uploads/2022/12/image-background-airport.png" 
+                src="/images/airports-background-image.png" 
                 alt="airports" 
                 width={950} 
                 height={300} 
@@ -133,7 +133,7 @@ const UsaAirportPage = () => {
           <div className="w-[50%] max-[700px]:w-full text-center">
             {usaAirportList.slice(0, 10).map((airport) => (
               <div key={airport.key} className="mb-4">
-                <Link href={`/usa-airport/${airport.key}`} className='hover:underline text-[#0071BA] text-lg'>
+                <Link href={`/${airport.key}`} className='hover:underline text-[#0071BA] text-lg'>
                   {airport.name}
                 </Link>
               </div>
@@ -142,7 +142,7 @@ const UsaAirportPage = () => {
           <div className="w-[50%] max-[700px]:w-full max-[700px]:mt-8 text-center">
             {usaAirportList.slice(10, 20).map((airport) => (
               <div key={airport.key} className="mb-4">
-                <Link href={`/usa-airport/${airport.key}`} className='hover:underline text-[#0071BA] text-lg'>
+                <Link href={`/${airport.key}`} className='hover:underline text-[#0071BA] text-lg'>
                   {airport.name}
                 </Link>
               </div>

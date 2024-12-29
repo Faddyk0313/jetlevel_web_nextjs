@@ -31,7 +31,7 @@ const EmptyLegPage = async ({ fields }: any) => {
     return (
         <>
             <Hero
-                image="https://jetlevel.com/wp-content/uploads/2024/04/Empty-Legs-1.jpg"
+                image="/images/Empty-Legs Hero Image.avif"
                 title={fields.title.text}
                 subtitle={fields.subtitle.text}
                 hasOverlay={true}

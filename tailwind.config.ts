@@ -12,10 +12,10 @@ const config: Config = {
   			lightBlue: '#6ec1e4',
   		},
   		backgroundImage: {
-			'home-background': "url('https://fly.jetlevel.com/assets/Private%20jet%20interior%20bg%20.webp')",
-			'aboutUs-background': "url('https://jetlevel.com/wp-content/uploads/2022/08/R-29.jpg')",
-			'ourOffices-background': "url('https://jetlevel.com/wp-content/uploads/2022/11/pexels-pixabay-236070-scaled.jpeg')",
-			'fourMetrics-OurCommitment-background': "url('https://jetlevel.com/wp-content/uploads/2022/10/iStock-1210052781.jpeg')",
+			'home-background': "url('/images/Private jet interior bg .webp')",
+			'aboutUs-background': "url('/images/About us Hero Image.jpg')",
+			'ourOffices-background': "url('/images/our offices.jpeg')",
+			'fourMetrics-OurCommitment-background': "url('/images/inside jet image.jpeg')",
 			'blue-background': "url('/images/blue-background.png')"
 		},
   		fontFamily: {

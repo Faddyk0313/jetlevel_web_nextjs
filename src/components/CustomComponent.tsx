@@ -6,6 +6,7 @@ import Card from "./Card";
 interface CarouselItem2 {
   icon: React.ReactNode;
   title: string;
+  link: string
 }
 
 interface CustomComponentProps {
@@ -16,6 +17,7 @@ interface CustomComponentProps {
     icon: any;
     title: string;
     description: string;
+    link:string;
   }>;
   hasPadding?: boolean;
 }
@@ -28,9 +30,10 @@ const CustomComponent: React.FC<CustomComponentProps> = ({
   hasPadding
 }) => {
   // Create a simplified array for the carousel
-  const carouselItems: CarouselItem2[] = items.map(({ icon, title }) => ({
+  const carouselItems: CarouselItem2[] = items.map(({ icon, title, link }) => ({
     icon,
     title,
+    link,
   }));
 
   return (
@@ -47,7 +50,7 @@ const CustomComponent: React.FC<CustomComponentProps> = ({
           style={{ gridTemplateColumns: `repeat(${items.length}, minmax(0, 1fr))` }}
         >
           {items.map((item, index) => (
-          <Card key={index} icon={item.icon} title={item.title} description={item.description} bgcolor={background} />
+          <Card key={index} icon={item.icon} title={item.title} description={item.description} link={item.link} bgcolor={background} />
           ))}
         </div>
         {/* Carousel Section */}

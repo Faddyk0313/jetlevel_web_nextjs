@@ -15,30 +15,36 @@ const Breadcrumb: React.FC = () => {
 
   // Rewrite mappings (including dynamic routes)
   const rewriteMapping: { [key: string]: string; } = {
-    "/jet-charter/us-canada": "/us-canada-chartered-cities",
-    "/jet-charter/international": "/international-chartered-cities",
-    "/jet-charter/cities/:location": "/private-jet-charter-flights-to-:location",
-    "/jet-charter/us-canada/:location": "/private-jet-charter-flights-to-:location",
-    "/jet-charter/international/:location": "/private-jet-charter-flights-to-:location",
-    "/jet-charter/popular-routes": "/popular-routes",
-    "/jet-charter/popular-routes/:location": "/private-jet-charter-:location",
-    "/jet-charter/empty-legs": "/empty-leg-flights",
-    "/jet-charter/empty-legs/:location": "/empty-leg-flights-:location",
-
-    "/charter-resources/private-jet-airports": "/usa-airport-directory",
-    "/charter-resources/aircraft-types": "/aircraft-charters",
-    "/company/blog": "/blog",
-    "/company/about-us": "/about-jet-level",
-    "/company/contact-us": "/contact-us",
-    "/company/our-team": "/our-team",
-
-    "/charter-resources/airports-aircrafts/:location": "/:location",
-    "/charter-resources/private-jet-airports/:location": "/:location",
-    "/charter-resources/aircraft-types/:location": "/:location",
-    "/company/blog/:topic": "/:topic",
-    
-
+    '/our-services/on-demand-charter': '/private-jet-charter',
+    '/our-services/group-charter': '/group-charter-flight',
+    '/our-services/air-ambulance': '/medical-flight-transport',
+    '/our-services/helicopter': '/Helicopter-Charter-Flight',
+    '/jet-charter/us-canada': '/us-canada-chartered-cities',
+    '/jet-charter/cities/:location': '/private-jet-charter-flights-to-:location',
+    '/jet-charter/international': '/international-chartered-cities',
+    '/jet-charter/popular-routes': '/popular-routes',
+    '/jet-charter/popular-routes/:location': '/private-jet-charter-:location',
+    '/jet-charter/empty-legs': '/empty-leg-flights',
+    '/jet-charter/empty-legs/:location': '/empty-leg-flights-:location',
+    '/charter-resources/private-jet-airports': '/usa-airport-directory',
+    '/charter-resources/aircraft-types': '/aircraft-charters',
+    '/charter-resources/cost-estimator': '/charter-flights-cost-calculator',
+    '/charter-resources/flight-tracker': '/flight-tracker',
+    '/charter-resources/distance-calculator': '/distance-calculator',
+    '/company/about-us': '/about-jet-level',
+    '/company/contact-us': '/contact-us',
+    '/company/blogs': '/blog',
+    '/faq': '/private-jet-frequently-asked-questions',
+    '/company/our-team': '/our-team',
+    '/pricing': '/cost-of-chartering-a-private-jet',
+    '/industory-charter' : '/industry-specific-charter',
+    '/industory-charter/:location' : '/industry-specific-charter/:location',
+    '/charter-resources/private-jet-airports/:location': '/:location',
+    '/charter-resources/aircraft-types/:location': '/:location',
+    '/company/blogs/:location': '/:location',
   };
+
+
 
   // Helper function to apply rewrite rules based on dynamic segments
   const applyRewrite = (path: string, reverse: boolean = false): string => {
@@ -68,13 +74,22 @@ const Breadcrumb: React.FC = () => {
     applyRewrite("/" + segments.join("/"));
   const getRewrittenHref = (actualPath: string) =>
     applyRewrite(actualPath, true);
+  let href;
+  // console.log(pathSegments.slice(0, 1)[0])
+  if (pathSegments.slice(0, 1)[0] !== "cost-of-chartering-a-private-jet" && pathSegments.slice(0, 1)[0] !== "industry-specific-charter") {
+    href = getRewritePath(pathSegments.slice(0, 1));
+    // console.log("if")
+  }
+  else {
+    href = getRewritePath(pathSegments);
+  }
 
-  const href = getRewritePath(pathSegments.slice(0, 1));
+  // console.log("HREF", href);
   // console.log("href", href);
   const segments = href.split("/").filter(Boolean); // Remove empty segments
   // Determine the base segment dynamically (e.g., 'jet-charter' or 'charter-resources')
   // console.log("segments", segments);
-  let subOption = segments[1]; // cities, empty-legs etc.
+  let subOption = segments[1]; // cities, empty-legs etc.    
 
 
   if (blogs.includes(segments[segments.length - 1])) {// This condition will only be true for those blog pages whose url starts with 'empty-leg-flights-' for eg. '/empty-leg-flights-a-guide-to-luxury-travel-at-a-fraction-of-the-cost'
@@ -104,15 +119,14 @@ const Breadcrumb: React.FC = () => {
     segments[1] = subOption;
   }
   const baseSegment = segments[0]; // Get the first segment
-
-
+// console.log(baseSegment);
   const hrefArray = segments.slice(1);
 
   // console.log("href", href);
   // console.log("hrefArray", hrefArray);
 
   return (
-    <div
+    (<div
       className={`${styles.breadcrumbContainer} flex items-center w-fit gap-1 flex-wrap`}
     >
       <div className="rounded-lg">
@@ -123,28 +137,41 @@ const Breadcrumb: React.FC = () => {
           <FiHome />
         </Link>
       </div>
-      {hrefArray.map((segment, index) => {
-        const hrefPath = `/${[
-          baseSegment,
-          ...hrefArray.slice(0, index + 1),
-        ].join("/")}`;
-        const rewrittenHref = getRewrittenHref(hrefPath);
-        const segmentName = segment.replace(/-/g, " ").toUpperCase();
-        const zIndex = 8 - index;
-
-        return (
-          <div key={`${hrefPath}-${index}`} className="flex items-center">
+      {
+        baseSegment === "pricing" || baseSegment === "faq"  || baseSegment === "industory-charter" ? (
+          <div className="flex items-center">
             <Link
-              href={rewrittenHref}
+              href={`/${baseSegment}`}
               className={`${styles.breadcrumbLink} whitespace-nowrap py-2 pl-7 pr-3`}
-              style={{ zIndex: zIndex }}
-            >
-              {segmentName}
+              style={{ zIndex: 9 }}
+              >
+              {baseSegment === "pricing" ? "Pricing" : baseSegment === "faq" ? "Faqs" : baseSegment === "industory-charter" ? "Industry Charter" : ""}
             </Link>
           </div>
-        );
-      })}
-    </div>
+        ) : ""}
+        {
+          hrefArray.map((segment, index) => {
+            const hrefPath = `/${[
+              baseSegment,
+              ...hrefArray.slice(0, index + 1),
+            ].join("/")}`;
+            const rewrittenHref = getRewrittenHref(hrefPath);
+            const segmentName = segment.replace(/-/g, " ").toUpperCase();
+            const zIndex = 8 - index;
+
+            return (
+              <div key={`${hrefPath}-${index}`} className="flex items-center">
+                <Link
+                  href={rewrittenHref}
+                  className={`${styles.breadcrumbLink} whitespace-nowrap py-2 pl-7 pr-3`}
+                  style={{ zIndex: zIndex }}
+                >
+                  {segmentName}
+                </Link>
+              </div>
+            );
+          })}
+    </div>)
   );
 };
 

@@ -32,7 +32,11 @@ import {
   Diamond,
   Privacy,
   Accessibility,
-  Shuffle
+  Shuffle,
+  Tools,
+  Target,
+  Box,
+  Dietry
 } from "@/svg";
 
 export const iconMapping: { [key: string]: string } = {
@@ -69,5 +73,9 @@ export const iconMapping: { [key: string]: string } = {
   Diamond,
   Privacy,
   Accessibility,
-  Shuffle
+  Shuffle,
+  Tools,
+  Target,
+  Box,
+  Dietry
 };

@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from 'next/image'; // Next.js optimized image component
+import Image from "next/image"; // Next.js optimized image component
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from 'next/link';
@@ -50,7 +50,7 @@ const Footer = () => {
     ];
 
     return (
-        <section className='bg-black pt-5 px-5 md:px-10 lg:px-20 pb-0'>
+        (<section className='bg-black pt-5 px-5 md:px-10 lg:px-20 pb-0'>
             <div className=" max-w-[1800px] mx-auto pt-10 text-[#f0f1f2]">
                 <div className="pb-4 flex flex-col justify-between w-fit mx-auto min-[1180px]:w-full min-[1180px]:m-0  min-[1180px]:flex-row gap-5">
                     <div className='mb-4 min-[1180px]:mb-8 '>
@@ -60,7 +60,10 @@ const Footer = () => {
                             width={790}
                             height={142}
                             className='md:w-72 max-w-72 mx-auto h-auto'
-                        />
+                            style={{
+                                maxWidth: "100%",
+                                height: "auto"
+                            }} />
                     </div>
                     <div className='flex flex-col md:flex-row gap-7 '>
                         <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:h-[54px]">
@@ -128,8 +131,8 @@ const Footer = () => {
                     <div className='flex gap-5 flex-col md:flex-row lg:flex-col text-[11px]'>
                         <div>&copy; 2024 Jetlevel Aviation LLC All rights reserved</div>
                         <div className='flex flex-row gap-3 md:mx-auto lg:mx-0'>
-                            <Link href="#" className='hover:text-blue'>Privacy</Link>
-                            <Link href="#" className='hover:text-blue'>Legal</Link>
+                            <Link href="/privacy-policy" className='hover:text-blue'>Privacy</Link>
+                            <Link href="/jetlevel-aviation-standard-terms-and-conditions" className='hover:text-blue'>Terms of Use</Link>
                         </div>
                     </div>
                     <div className='flex-1 text-[#858585] text-[9px] '>
@@ -138,7 +141,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-        </section>
+        </section>)
     );
 };
 

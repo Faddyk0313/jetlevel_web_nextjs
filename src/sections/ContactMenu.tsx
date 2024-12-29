@@ -46,8 +46,8 @@ const ContactMenu = () => {
           <span className='!text-[#1F2937] !font-[400] group-hover:!text-blue'>EMAIL US</span>
         </a>
         <Link
-          className="flex items-center justify-center gap-2 group bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8]  text-xs md:text-base font-bold md:font-normal text-white py-2 text-center hover:!text-darkBlue transition-all duration-100"
-          href={"https://jetlevel.com/request-a-quote"}
+          className="flex items-center group justify-center gap-2 bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8]  text-xs md:text-base font-bold md:font-normal text-white py-2 text-center hover:text-darkBlue transition-all duration-100"
+          href={"/request-a-quote"}
         >
           <IoIosAirplane className="hidden md:block text-2xl" />
           <span className='!text-white !font-[400] group-hover:!text-darkBlue'>INQUIRE NOW</span>

@@ -1,6 +1,7 @@
+"use client"
 import React, { useState, useEffect } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
-import Input from "../LeadForm/Input";
+import Input from "../LeadForm/input";
 import {convertTimeFormat} from "../LeadForm/helper"
 const DistanceCalculator = () => {
   const [loading, setLoading] = useState(false);
@@ -194,7 +195,7 @@ const DistanceCalculator = () => {
 
 
   return (
-    <div className="main-container">
+    <div className="main-container !w-fit mx-auto">
       <div className="tour-input-container">
         <div className="tour-select-fields">
         <Input 

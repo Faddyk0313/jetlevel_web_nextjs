@@ -15,7 +15,7 @@ export default function IndustoryCharter(): JSX.Element {
     <>
       <Hero
         image={
-          "https://fly.jetlevel.com/assets/Private%20jet%20interior%20bg%20.webp"
+          "/images/Private jet interior bg .webp"
         }
         title={"Fly with Confidence!"}
         tagline={
@@ -25,14 +25,14 @@ export default function IndustoryCharter(): JSX.Element {
         hasOverlay={false}
       />
       <BrandNames />
-      <section className="max-w-[1800px] mx-auto px-5 md:px-10 lg:px-20 pb-0">
+      <div className="max-w-[1800px] mx-auto px-5 md:px-10 lg:px-20 pb-0">
         <Breadcrumb />
         <h2 className='mt-6'>
           We understand that every trip is unique. That's why we offer
           specialised charter solutions
         </h2>
         <ChartersTypes charterType={CharterTypes?.charterTypes || []} />
-      </section>
+      </div>
       <ExclusiveServices />
       <SmartTravelTools />
       <PopularPrivateJetCharters />

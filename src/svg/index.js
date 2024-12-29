@@ -40,6 +40,10 @@ import Price from './price.svg';
 import Service from './Service.svg';
 import Search from './search.svg';
 import Close from './close-icon.svg';
+import Tools from './tools.svg';
+import Target from './target.svg';
+import Box from './box2.svg';
+import Dietry from './Dietry.svg';
 
 export { Aircraft, Airports, InternationalCities, Routes_DistanceCalculator, UsCanadaCities };
 export { OnDemandCharter, ProvenSafetyRecords, Reliability, Transparency, Testimonials };
@@ -49,4 +53,4 @@ export { RequestQuote, ReceiveCharterProposal, ConfirmAircraft, ReceiveFlightBri
 export { CostCalculator, FlightTracker, Search };
 export { SafetyFirst, TailoredLuxury, Facebook, Linkedin,Twitter };
 export { TimeEfficient, Productivity, TravelSoltution, Diamond, Privacy, Accessibility, Shuffle };
-export { Airplane, Terminal, Broker, Charter, Price, Service, Close }
+export { Airplane, Terminal, Broker, Charter, Price, Service, Tools, Target , Box, Dietry, Close}

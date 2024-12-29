@@ -100,7 +100,7 @@ const AvailableAircrafts = ({sectionClass,heading,subHeading}:PageProps) => {
                                 <p className="mb-4 text-gray-300 text-base">{jet.description}</p>
                             </div>
                             <div className='flex flex-col md:flex-row items-center justify-center md:justify-start text-xs md:text-sm gap-3  '>
-                                <Link href='https://jetlevel.com/request-a-quote' className="text-white px-3 py-2 md:py-3 min-w-fit w-2/5  md:w-[35%] rounded-full bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1 text-center text-xs sm:text-sm hover:shadow-card_shadow">GET A QUOTE &nbsp;→</Link>
+                                <Link href='/request-a-quote' className="text-white px-3 py-2 md:py-3 min-w-fit w-2/5  md:w-[35%] rounded-full bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1 text-center text-xs sm:text-sm hover:shadow-card_shadow">GET A QUOTE &nbsp;→</Link>
 
                                 <p className="text-white font-bold">{jet.price}<span className='text-gray-300'>/ Per Hour</span></p>
                             </div>

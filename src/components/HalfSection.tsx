@@ -43,7 +43,7 @@ const HalfSection: React.FC<HalfSectionProps> = ({ children, showBottomContent }
       {
         showBottomContent &&
         <>
-         <SmartTravelTools />
+         <SmartTravelTools hasSectionPadding={false}/>
          <PopularPrivateJetCharters />
         </>
       }

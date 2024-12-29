@@ -1,4 +1,5 @@
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
+import EmptyLegDirectory from "@/components/EmptyLegDirectory";
 import UsCanadaPage from '@/components/UsCanadaPage';
 import { createClient } from "@/lib/contento";
 import BrandNames from "@/sections/BrandNames";
@@ -13,11 +14,11 @@ type PageProps = {
   };
 };
 
-const pageContent: Record<string, { title: string; }> = {
-  "us-canada": { title: "US Canada" },
-  'international': { title: "International" },
-  "popular-routes": { title: "Popular Routes" },
-  "empty-legs": { title: "Empty Legs" },
+const pageContent: Record<string, { title: string; link: string; }> = {
+  "us-canada": { title: "USA & Canada's Premier Chartered Cities", link: "/images/Hero Image for directory Page.webp" },
+  'international': { title: "International Chartered Cities", link: "/images/Hero Image for directory Page.webp" },
+  "popular-routes": { title: "Premier Chartered Routes", link: "/images/Hero Image for directory Page.webp" },
+  "empty-legs": { title: "Empty Leg Flights", link: "/images/Empty-Legs Hero Image.avif" },
 };
 
 // This function generates static parameters for known paths
@@ -28,7 +29,7 @@ export async function generateStaticParams() {
 const JetCharter = async ({ params }: PageProps) => {
   const { subOption } = params;
 
-  const { title } = pageContent[subOption] || {
+  const { title, link } = pageContent[subOption] || {
     title: "Page Not Found",
   };
 
@@ -66,28 +67,28 @@ const JetCharter = async ({ params }: PageProps) => {
 
   return (
     <>
-      <Hero title="USA & Canada's Premier Chartered Cities" image="https://jetlevel.com/wp-content/uploads/2023/07/iStock-628648350.jpg" hasCalculator={false} />
+      <Hero title={title} image={link} hasCalculator={false} hasOverlay={true} />
       <BrandNames />
-      <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
-        <Breadcrumb />
-        {
-          title === 'US Canada' ? 
-          <UsCanadaPage />
-          :
-          null
-        }
-        {/* <div className="">
-          <ul>
-            {content?.map((item, key) => (
-              <li key={key}>
-                <Link className="hover:text-blue" href={"/" + item.slug}>
-                  {item.name}
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </div> */}
-      </section>
+      {
+        title !== 'Empty Leg Flights' ? (
+        <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
+          <Breadcrumb />
+          {
+
+            title === "USA & Canada's Premier Chartered Cities" ?
+              <UsCanadaPage content={content} />
+              : title === 'International Chartered Cities' ?
+                <UsCanadaPage content={content} />
+                :
+                title === 'Premier Chartered Routes' ?
+                  <UsCanadaPage title="Routes" content={content} />
+                  : null
+          }
+        </section>
+        )
+        :<EmptyLegDirectory />
+      }
+          
 
     </>
   );

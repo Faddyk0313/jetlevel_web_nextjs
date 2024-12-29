@@ -296,7 +296,7 @@ async function handleClick(id) {
         <button  onClick={()=>{
           window.parent.postMessage(
             {
-              url: "https://jetlevel.com/request-a-quote/",
+              url: "/request-a-quote/",
               type: "url",
             },
             "*"
