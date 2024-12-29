@@ -106,7 +106,7 @@
   /* box-shadow: 0px 2px 6px 3px #ededed; */
   /* border-radius: 10px; */
   color: black;
-  padding: 0px 8px 8px 8px;
+  padding: 15px 15px 15px 15px;
   background-color: #f2f2f2;
 }
 
@@ -328,7 +328,6 @@
 
 .btn {
   background-color: #4295cf;
-  /* border-radius: 5px; */
   padding: 0.6rem;
   color: white;
   font-size: 15px;
@@ -336,6 +335,25 @@
   justify-content: center !important;
   min-width: 8rem;
   text-align: center;
+}
+.overflow-design::-webkit-scrollbar {
+  width: 0px;
+  height: 20px;
+}
+
+/* Track */
+.overflow-design::-webkit-scrollbar-track {
+  background: #F2F2F2;
+}
+
+/* Handle */
+.overflow-design::-webkit-scrollbar-thumb {
+  background: #F2F2F2;
+}
+
+/* Handle on hover */
+.overflow-design::-webkit-scrollbar-thumb:hover {
+  background: #F2F2F2;
 }
 
 .btn:hover {
@@ -552,6 +570,43 @@
   font-size: 15px !important;
   color: black !important;
   height: 40px !important;
+}
+
+.widget-container{
+  width: 100%;
+  margin-top: 30px !important;
+  border-radius: 10px;
+  background: white;
+}
+.widget-container .react-datepicker__month-container{
+  width: 70.5%;
+}
+.widget-container .tour-tabs{
+  width: 100%;
+}
+.widget-fields{
+  flex-direction: column;
+  row-gap: 20px;
+}
+.widget-fields .location-dropdown{
+  width: 100%;
+}
+.widget-fields .date-time-picker{
+  width: 100%;
+}
+.widget-fields .person-counter{
+  width: 100%;
+}
+.widget-container .search-btn{
+  width: 100%;
+  margin-top: 15px;
+}
+
+.widget-container .search-btn .btn {
+  min-width: 100% !important;
+}
+.widget-fields .person-counter .counter{
+  width: 23%;
 }
 
 @media (max-width: 1000px) {

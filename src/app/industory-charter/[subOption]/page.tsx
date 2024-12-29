@@ -65,13 +65,13 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
 
       <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto max-[700px]:hidden">
         <h2>{singleIndustory?.aviationSolutions?.heading || ''}</h2>
-        <div className='flex justify-between mt-[40px] mb-[40px]'> 
+        <div className='flex gap-x-[20px] mt-[40px] mb-[40px]'> 
           {
             singleIndustory?.aviationSolutions?.aviationIcons.map((icon,index) => {
               const Icon = iconMapping[icon.icons] ;
               return (
                 <div key={index} className='industrycardContanier w-[24%]'>
-                <Card link='' icon={<Icon />} title={icon?.heading} description={icon?.description} bgcolor={'white'} />
+                <Card className={'min-h-[320px]'} link='' icon={<Icon />} title={icon?.heading} description={icon?.description} bgcolor={'white'} />
                 </div>
               )
             })
@@ -124,9 +124,9 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
           ></div>
 
           <div className="relative z-10">
-            <h2 className="text-[45px] font-bold mb-4 text-white font-calibari max-[700px]:text-[25px]">Elevate your Corporate Travel</h2>
+            <h2 className="text-[45px] font-bold mb-4 text-white font-calibari max-[700px]:text-[25px]">{singleIndustory?.corporateTravel?.heading}</h2>
             <p className="text-md mb-4">
-              Elevate your corporate travel with JetLevel Aviation’s specialized jet charter services. Contact us today to discuss your business travel needs and discover how we can help you achieve more with every flight.
+             {singleIndustory?.corporateTravel?.description}
             </p>
             <Button
               text='Book Corporate Charter'

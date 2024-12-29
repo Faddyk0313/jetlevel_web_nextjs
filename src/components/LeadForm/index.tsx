@@ -7,9 +7,10 @@ import "@/styles/leadForm.css"
 import { getNext15Minutes } from "./helper";
 import { useSearchParams } from "next/navigation";
 
-export default function Index() {
- 
-
+type LeadFormProps ={
+  widget?:boolean
+}
+export default function Index({ widget }:LeadFormProps) {
     const [formInfo, setFormInfo] = useState({
       fromLocation: "",
       toLocation: "",
@@ -45,7 +46,7 @@ export default function Index() {
 
 
   return (
-    <div className="main-container">
+    <div className={`${widget ? 'widget-container main-container shadow-card_shadow': 'main-container'}`}>
       <div className="tour-input-container">
         <div className="tour-header">
           <div className="tour-tabs">
@@ -72,7 +73,7 @@ export default function Index() {
           </div>
         </div>
 
-          <TourSelect formInfo={formInfo} setFormInfo={setFormInfo}/>
+          <TourSelect widget={widget} formInfo={formInfo} setFormInfo={setFormInfo}/>
       </div>
    
     </div>

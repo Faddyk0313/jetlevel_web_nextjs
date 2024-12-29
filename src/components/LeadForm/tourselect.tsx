@@ -5,16 +5,20 @@ import RemoveIcon from "@mui/icons-material/Remove";
 import AddIcon from "@mui/icons-material/Add";
 import DatePicker from "react-datepicker";
 import DateRangeRoundedIcon from "@mui/icons-material/DateRangeRounded";
-
+import Modal from '../../components/Modal';
 import Input from "./input";
 import "@/styles/leadForm.css"
 import {AirportResponse} from "./types"
 import {filterPassedTime} from "./helper"
 import { useRouter } from 'next/navigation';
 import ReactDatePicker from "react-datepicker";
+import Button from '../Button';
+import AirCraftList from './AirCraftList';
 export default function TourSelect (props:any) {
-  const {formInfo,setFormInfo } = props
+  const {formInfo,setFormInfo, widget } = props
   const router = useRouter();
+
+  const [openModal,setOpenModal] = useState(false);
 
   const [searchResults, setSearchResults] = useState({
     fromLocationArray: [],
@@ -230,13 +234,41 @@ export default function TourSelect (props:any) {
     }
   };
 
-  const handleSearch = ()=>{  
-    let route = `/aircraft-list?from=${formInfo.fromLocation}&to=${formInfo.toLocation}&tourType=${formInfo.tourType}&counter=${formInfo.counter}&startDate=${new Date(formInfo.startDate).getTime()}`
-    if(formInfo.tourType == "roundTrip"){
-      route += `&endDate=${new Date(formInfo.endDate).getTime()}`
+  const handleSearch = () => {  
+    const currentUrl = new URL(window.location.href);
+  
+    currentUrl.searchParams.set('from', formInfo.fromLocation);
+    currentUrl.searchParams.set('to', formInfo.toLocation);
+    currentUrl.searchParams.set('tourType', formInfo.tourType);
+    currentUrl.searchParams.set('counter', formInfo.counter.toString());
+    currentUrl.searchParams.set('startDate', new Date(formInfo.startDate).getTime().toString());
+  
+    if (formInfo.tourType === 'roundTrip') {
+      currentUrl.searchParams.set('endDate', new Date(formInfo.endDate).getTime().toString());
     }
-    router.push(route);
-  }
+  
+    window.history.pushState(null, '', currentUrl.toString());
+  
+    setOpenModal(true);
+  };
+  
+  const closeModal = () => {
+    console.log("Modal closing...");
+    setOpenModal(false);
+  
+    const currentUrl = new URL(window.location.href);
+    const queryParams = currentUrl.search;
+  
+    console.log("Current URL:", currentUrl.href);
+    console.log("Query Params:", queryParams);
+  
+    if (queryParams) {
+      window.history.pushState({}, '', window.location.pathname); // Removes query parameters
+      console.log("Updated URL:", window.location.href);
+    }
+  };
+  
+  console.log('openModal',openModal);
 
   const CustomInput = React.forwardRef((arg:any, ref:any) => (
     <div className="custom-input" onClick={arg.onClick} ref={ref}>
@@ -253,7 +285,7 @@ export default function TourSelect (props:any) {
   return (
     <>
       <section className="p-0">
-        <div className="tour-select-fields">
+        <div className={`${widget ? 'tour-select-fields widget-fields' : 'tour-select-fields'}`}>
           <Input
             form={formInfo}
             handleSaveAirport={handleSaveAirport}
@@ -333,14 +365,36 @@ export default function TourSelect (props:any) {
         </div>
       </section>
       <div className="search-btn">
+        {
+          widget ? 
+          <Button
+            text={'Search'}
+            variant={'primary'}
+            className='w-full'
+            onClick={handleSearch}
+          />
+        :
         <button
-          className="btn"
+          className={"btn"}
           onClick={handleSearch}
         >
-          {/* {loading ? <div className="search-form__loader"></div> : ""} */}
            Search{" "}
         </button>
+        }
+
+        <Modal 
+          isOpen={openModal} 
+          onClose={closeModal}
+          modalWidth={1000}
+          className='h-[600px]' 
+        >
+          <div className='h-full overflow-auto overflow-design rounded-2xl'>
+            <AirCraftList openModal={openModal} setOpenModal={setOpenModal} />
+          </div>
+        </Modal>
       </div>
+
+      {/* <Modalp */}
     </>
   );
 };

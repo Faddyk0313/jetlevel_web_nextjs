@@ -11,7 +11,6 @@ import { PhoneNumberUtil } from 'google-libphonenumber';
 const phoneUtil = PhoneNumberUtil.getInstance();
 import { useSearchParams } from 'next/navigation';
 import LeadForm from '@/components/LeadForm'
-
 import {convertTimeFormat,getTime,getCurrentTime,getPrice,getUTCTime,getNext15Minutes} from "./helper"
 
 // global.d.ts
@@ -35,10 +34,7 @@ const aboutInfo = [
   "Other",
 ];
 
-
-
-
-export default function AirCraftList() {
+export default function AirCraftList({setOpenModal,openModal}:any) {
   const [form, setForm] = useState({
     fromLocation: "",
     toLocation: "",
@@ -83,7 +79,6 @@ export default function AirCraftList() {
     quiryLoader: false,
   });
 
-
   const searchParams = useSearchParams();
 
   useEffect(() => {
@@ -95,7 +90,10 @@ export default function AirCraftList() {
     const counter = searchParams.get('counter') as number | null;
 
     if (from && to && tourType && startDate  && counter) {
+      setOpenModal(true);
       handleSubmit(from, to, tourType,counter,startDate);
+    }else{
+      setOpenModal(false);
     }
   }, [searchParams]);
 
@@ -125,62 +123,60 @@ export default function AirCraftList() {
     }
   };
 
-  
-      
-      const handleEmailValidation = (e:React.FocusEvent<HTMLInputElement>) => {
-        const email = e.target.value;
-        const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
-    
-        if (email === "") {
-          setInquiry({ ...inquiry, isErrorEmail: true, isEmailInvalid: false });
-        } else if (!emailPattern.test(email)) {
-          setInquiry({ ...inquiry, isErrorEmail: true, isEmailInvalid: true });
-        } else {
-          setInquiry({ ...inquiry, isErrorEmail: false, isEmailInvalid: false });
-        }
-      };
-      const handleInputChange = async (eventOrValue:React.ChangeEvent<HTMLInputElement> | string) => {
-        if (!eventOrValue) return;
-    
-        let name, value;
-    
-        if (typeof eventOrValue === 'string' || typeof eventOrValue === 'number') {
-          name = "phone";
-          value = eventOrValue;
-        } else {
-          const { name: inputName, value: inputValue } = eventOrValue.target;
-          name = inputName;
-          value = inputValue;
-        }
-    
-        if (inquiry.touchedPhone == false && name === "phone") {
-          setInquiry((prevForm:any) => ({ ...prevForm }));
-          return;
-        }
-    
-        setInquiry((prevInquiry) => ({
-          ...prevInquiry,
-          [name]: value,
-        }));
-    
-    
-        if (name === "firstName") {
-          setInquiry((prevForm:any) => ({ ...prevForm, isErrorFirstName: value === "" }));
-        }
-    
-        if (name === "lastName") {
-          setInquiry((prevForm:any) => ({ ...prevForm, isErrorLastName: value === "" }));
-        }
-    
-        if (name === "email") {
-          setInquiry((prevForm:any) => ({ ...prevForm, isErrorEmail: value === "" }));
-        }
-    
-        if (name === "phone") {
-          setInquiry((prevForm:any) => ({ ...prevForm, isErrorPhone: !(isPhoneValid(value)) }));
-        }
-      };
+  const handleEmailValidation = (e:React.FocusEvent<HTMLInputElement>) => {
+    const email = e.target.value;
+    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
 
+    if (email === "") {
+      setInquiry({ ...inquiry, isErrorEmail: true, isEmailInvalid: false });
+    } else if (!emailPattern.test(email)) {
+      setInquiry({ ...inquiry, isErrorEmail: true, isEmailInvalid: true });
+    } else {
+      setInquiry({ ...inquiry, isErrorEmail: false, isEmailInvalid: false });
+    }
+  };
+
+  const handleInputChange = async (eventOrValue:React.ChangeEvent<HTMLInputElement> | string) => {
+    if (!eventOrValue) return;
+
+    let name, value;
+
+    if (typeof eventOrValue === 'string' || typeof eventOrValue === 'number') {
+      name = "phone";
+      value = eventOrValue;
+    } else {
+      const { name: inputName, value: inputValue } = eventOrValue.target;
+      name = inputName;
+      value = inputValue;
+    }
+
+    if (inquiry.touchedPhone == false && name === "phone") {
+      setInquiry((prevForm:any) => ({ ...prevForm }));
+      return;
+    }
+
+    setInquiry((prevInquiry) => ({
+      ...prevInquiry,
+      [name]: value,
+    }));
+
+
+    if (name === "firstName") {
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorFirstName: value === "" }));
+    }
+
+    if (name === "lastName") {
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorLastName: value === "" }));
+    }
+
+    if (name === "email") {
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorEmail: value === "" }));
+    }
+
+    if (name === "phone") {
+      setInquiry((prevForm:any) => ({ ...prevForm, isErrorPhone: !(isPhoneValid(value)) }));
+    }
+  };
 
   const handleSubmitEmail = async (e:React.MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
@@ -211,8 +207,6 @@ export default function AirCraftList() {
       return;
     }
     setInquiry((prevInquiry) => ({ ...prevInquiry, quiryLoader: true }));
-
-
 
     try {
       let extraData:{
@@ -430,8 +424,6 @@ export default function AirCraftList() {
     try {
       setLoading(true);
 
-
-
       let dataBody:{
         firstName: string;
         lastName: string;
@@ -471,7 +463,6 @@ export default function AirCraftList() {
         };
       }
 
-      
       const options1 = {
         method: "POST",
         
@@ -479,7 +470,6 @@ export default function AirCraftList() {
       };
       if(!process.env.NEXT_PUBLIC_ZAPIER_SHOW_PRICE) {return}
       await fetch(process.env.NEXT_PUBLIC_ZAPIER_SHOW_PRICE, options1);
-
 
       const options = {
         method: "POST",
@@ -501,8 +491,6 @@ export default function AirCraftList() {
         });
       }
       
-
-      
       if (typeof window !== 'undefined' && typeof window.gtag === 'function') {
         window.gtag('event', 'submit', {
           event_category: 'Form',
@@ -523,6 +511,7 @@ export default function AirCraftList() {
       showInquiryForm: prevfrom.showInquiryForm === index ? -1 : index,
     }));
   };
+
   const handleExtraInfo = (type:string, index:string|number) => {
     if (type === "baggage" ) {
       if (!extraInfo.baggage.includes(index as never)) {
@@ -540,7 +529,6 @@ export default function AirCraftList() {
      
       setExtraInfo((prevInfo) => ({ ...prevInfo, [type]: index }));
     }
-    
   };
 
   const isPhoneValid = (phone:string) => {
@@ -550,11 +538,35 @@ export default function AirCraftList() {
       return false;
     }
   };
-    
+  
+  const startDateString = searchParams.get('startDate');
+  let formattedDate;
+  if (startDateString) {
+    const timestamp = parseInt(startDateString, 10);
+    const newDate = new Date(timestamp);
+  
+    if (isNaN(newDate.getTime())) {
+      console.log('Invalid date');
+    } else {
+      formattedDate = newDate.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      });
+    }
+  } else {
+    console.log('startDate is null');
+  }
+
   return (
     <>
-      <LeadForm />
-    <div className="aircraft-list-container">
+      {/* <LeadForm /> */}
+        <div className="aircraft-list-container">
+          <div>
+            <h2 className='text-[33px] text-center'>Your Estimates Are Below</h2>
+            <p className='text-center'><span>Please Note:</span> These are not formal quotes. {formattedDate}</p>
+            <p className='text-center'>({searchParams.get('from')}) to ({searchParams.get('to')}) {searchParams.get('counter')} passengers</p>
+          </div>
           {data &&
             data.map((item:any, index:any) => (
               <section key={index} className="jet-section">
@@ -587,7 +599,7 @@ export default function AirCraftList() {
                       className="btn price-btn"
                     >
                       {item.cost && (
-                        <span>
+                        <span className='!text-white'>
                           {getPrice(item.cost[0])} - {getPrice(item.cost[1])}{" "}
                           USD *
                         </span>

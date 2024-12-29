@@ -47,12 +47,35 @@ const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
     setCurrentPage(pageNumber);
   };
 
-  const totalPages = Math.ceil(filteredCities.length / citiesPerPage);
-  const pageNumbers = [];
-  for (let i = 1; i <= totalPages; i++) {
-    pageNumbers.push(i);
-  }
+  const totalPages = Math.ceil(filteredCities && filteredCities.length / 8);
+  const pageNumbers = Array.from({ length: totalPages }, (_, i) => i + 1);
+  const maxVisiblePages = 3;
+  let displayedPages = [];
+  if (totalPages <= maxVisiblePages) {
+    displayedPages = pageNumbers;
+  } else {
+    const middleIndex = Math.floor(maxVisiblePages / 2);
+    const minDisplayIndex = Math.max(currentPage - middleIndex, 0);
+    const maxDisplayIndex = Math.min(minDisplayIndex + maxVisiblePages - 1, totalPages - 1);
 
+    if (minDisplayIndex > 0) {
+      displayedPages.push(1);
+      if (minDisplayIndex > 1) {
+        displayedPages.push('...');
+      }
+    }
+
+    for (let i = minDisplayIndex; i <= maxDisplayIndex; i++) {
+      displayedPages.push(i + 1);
+    }
+
+    if (maxDisplayIndex < totalPages - 1) {
+      if (maxDisplayIndex < totalPages - 3) {
+        displayedPages.push('...');
+      }
+      displayedPages.push(totalPages);
+    }
+  }
   return (
     <div>
       <section>
@@ -89,11 +112,11 @@ const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
 
       <div className="flex justify-center pt-8">
         <ul className="flex space-x-4">
-          {pageNumbers.map((number) => (
+          {displayedPages.map((number) => (
             <li key={number}>
               <Button
                 text={number}
-                onClick={() => handlePageChange(number)}
+                onClick={() => handlePageChange(Number(number))}
                 className={`${
                   currentPage === number
                     ? 'bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] text-white'

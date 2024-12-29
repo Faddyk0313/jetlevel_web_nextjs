@@ -35,7 +35,6 @@ const SmartTravelTools: React.FC<SmartTravelToolsProps> = ({ hasSectionPadding }
 
     return (
         <CustomComponent heading={heading} para={para} background="white" items={data} hasPadding={hasSectionPadding}  />
-
     );
 
 
