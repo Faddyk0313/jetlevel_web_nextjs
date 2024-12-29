@@ -29,7 +29,7 @@ const nextConfig = {
       {
         source: '/international-chartered-cities',
         destination: '/jet-charter/international',
-      },
+      }, 
       {
         source: '/popular-routes',
         destination: '/jet-charter/popular-routes',
