@@ -1,6 +1,7 @@
+"use client"
 import React, { useState } from "react";
 import SearchIcon from '@mui/icons-material/Search';
-import "@/style/flightTracker.css"
+import "@/styles/flightTracker.css"
 const FlightTracker = () => {
   const [image, setImage] = useState();
   const [fightDetails, setFightDetails] = useState();

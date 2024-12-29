@@ -2,6 +2,8 @@ import React, { Suspense } from 'react';
 // import IframeEmbed from './Iframe';
 import Markdown from 'markdown-to-jsx';
 import LeadForm from '@/components/LeadForm';
+import FlightTracker from '@/components/FlightTracker';
+import DistanceCalculator from '@/components/DistanceCalculator';
 
 type HeroProps = {
     image: string;
@@ -11,7 +13,7 @@ type HeroProps = {
     description?: string;
     hasOverlay?: boolean;
     hasCalculator?: boolean;
-    showCalculator?:boolean
+    showCalculator?:string
 };
 
 const Hero: React.FC<HeroProps> = ({ image, title, subtitle, tagline, description, hasOverlay, hasCalculator, showCalculator = true }) => {
@@ -44,13 +46,27 @@ const Hero: React.FC<HeroProps> = ({ image, title, subtitle, tagline, descriptio
                     </Markdown>
                 </div>
                 {
-                showCalculator &&
+                showCalculator == 'LeadForm' ?
                 <div className='w-full outline-none h-auto' id="my-iframe">
                 <Suspense fallback={<div className="search-form__loader"></div>}>
 
                     <LeadForm/>
                 </Suspense>
                 </div>
+                : showCalculator == 'FlightTracker' ?
+                <div className='w-full outline-none h-auto' id="my-iframe">
+                <Suspense fallback={<div className="search-form__loader"></div>}>
+
+                    <FlightTracker/>
+                </Suspense>
+                </div>
+                : showCalculator == 'DistanceCalculator' ?
+                <div className='w-full outline-none h-auto' id="my-iframe">
+                <Suspense fallback={<div className="search-form__loader"></div>}>
+
+                    <DistanceCalculator />
+                </Suspense>
+                </div>  : null
                 }
             </div>
         </section>

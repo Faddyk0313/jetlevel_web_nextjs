@@ -1,6 +1,8 @@
 import AircraftCharterPage from '@/components/AircraftCharterPage';
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
 import CostCalculatorPage from '@/components/CostCalculatorPage';
+import DistanceCalculatorPage from '@/components/DistanceCalculatorPage';
+import FlightTrackerPage from '@/components/FlightTrackerPage';
 import UsaAirportPage from '@/components/UsaAirportPage';
 import { createClient } from "@/lib/contento";
 import BrandNames from "@/sections/BrandNames";
@@ -81,7 +83,11 @@ const CharterResources = async ({ params }: PageProps) => {
       title === 'Aircraft Types' ?
       <AircraftCharterPage />:
       title === 'Cost Estimator' ?
-      <CostCalculatorPage /> : null
+      <CostCalculatorPage /> :
+      title === 'Flight Tracker' ?
+      <FlightTrackerPage /> :
+      title === 'Distance Calculator' ?
+      <DistanceCalculatorPage /> :null
     }
   </>
   );

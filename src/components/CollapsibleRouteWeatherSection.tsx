@@ -71,7 +71,7 @@ const CollapsibleRouteWeatherSection: React.FC<
                     {/* Tab Buttons */}
                     <div className="flex justify-center">
                         {items.map((item, index) => (
-                            <h3 key={index}>
+                            <h3 key={index} className="mb-0">
                                 <button
                                     className={`px-4 py-2 font-bold ${activeTab === index
                                         ? "text-blue  border border-[#d5d8dc] border-b-white"
@@ -95,10 +95,10 @@ const CollapsibleRouteWeatherSection: React.FC<
                                 {item.fields.google_maps_content?.blocks ? (
                                     <>
                                         <div className="flex items-baseline justify-center gap-2">
-                                            <h4>{item.fields.title ? item.fields.title.text : item.fields.heading ? item.fields.heading.text : ""}:&nbsp;</h4>
-                                            <div>
+                                            <h4 className="min-w-[50%] text-end">{item.fields.title ? item.fields.title.text : item.fields.heading ? item.fields.heading.text : ""}:&nbsp;</h4>
+                                            <div className="min-w-[50%]">
                                                 {item.fields.google_maps_content?.blocks.map((airport, index) => (
-                                                    <p key={index}>{airport.fields.name.text}</p>
+                                                    <p key={index} >{airport.fields.name.text}</p>
                                                 ))}
                                             </div>
                                         </div>
