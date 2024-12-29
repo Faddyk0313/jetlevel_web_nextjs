@@ -1,9 +1,9 @@
-import React, { ReactNode } from 'react';
+import React, { ReactNode, Suspense } from 'react';
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
 import TopCharteredCities from '@/components/TopCharteredCities';
 import SmartTravelTools from '@/sections/SmartTravelTools';
 import PopularPrivateJetCharters from '@/sections/PopularPrivateJetCharters';
-
+import LeadForm from '@/components/LeadForm';
 interface HalfSectionProps {
   children: ReactNode; 
   showBottomContent?: boolean;
@@ -35,6 +35,9 @@ const HalfSection: React.FC<HalfSectionProps> = ({ children, showBottomContent }
             ]}
             buttonLink="#"
           />
+          <Suspense fallback={<div className="search-form__loader"></div>}>
+            <LeadForm widget={true} />
+          </Suspense>
         </div>
       </section>
       {

@@ -47,8 +47,7 @@ const Hero: React.FC<HeroProps> = ({ image, title, subtitle, tagline, descriptio
                 showCalculator &&
                 <div className='w-full outline-none h-auto' id="my-iframe">
                 <Suspense fallback={<div className="search-form__loader"></div>}>
-
-                    <LeadForm/>
+                    <LeadForm  />
                 </Suspense>
                 </div>
                 }
