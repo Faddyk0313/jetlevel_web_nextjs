@@ -41,7 +41,7 @@ import Service from './Service.svg';
 import Search from './search.svg';
 import Tools from './tools.svg';
 import Target from './target.svg';
-import Box from './box.svg';
+import Box from './box2.svg';
 import Dietry from './Dietry.svg';
 
 export { Aircraft, Airports, InternationalCities, Routes_DistanceCalculator, UsCanadaCities };
