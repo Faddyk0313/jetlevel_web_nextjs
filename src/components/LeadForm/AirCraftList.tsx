@@ -541,6 +541,11 @@ export default function AirCraftList({setOpenModal}:any) {
     <>
       {/* <LeadForm /> */}
         <div className="aircraft-list-container">
+          {/* <div>
+            <h2>Your Estimates Are Below</h2>
+            <p><span>Please Note:</span>These are not formal quotes.Dec 31 2024</p>
+            <p>Orlando (KMCO) to New York (KJFK) 2 passengers</p>
+          </div> */}
           {data &&
             data.map((item:any, index:any) => (
               <section key={index} className="jet-section">
