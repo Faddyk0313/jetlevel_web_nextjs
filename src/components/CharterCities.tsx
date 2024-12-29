@@ -9,10 +9,10 @@ interface CharterCityProps {
 const CharterCity: React.FC<CharterCityProps> = ({ img, heading, link }) => {
   return (
     <div
-      className="bg-blue-background border-[3px] box-border hover:shadow-card_shadow bg-cover transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue w-[24%] max-[700px]:w-full shadow-[3px_2px_6px_3px_lightgray] cursor-pointer"
+      className="bg-blue-background rounded-2xl border-[3px] box-border hover:shadow-card_shadow bg-cover transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue w-[24%] max-[700px]:w-full cursor-pointer"
     >
       <div
-        className="w-full h-[218px] bg-cover bg-center"
+        className="w-full h-[218px] bg-cover bg-center rounded-[13px_13px_0px_0px]"
         style={{ backgroundImage: img ? `url(${img})` : 'none' }}
       >
       </div>

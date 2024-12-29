@@ -1,7 +1,3 @@
-import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
-import Events from '@/components/Events';
-import RequestQuoteBanner from '@/components/RequestQuoteBanner';
-import TopCharteredCities from '@/components/TopCharteredCities';
 import BrandNames from '@/sections/BrandNames';
 import Hero from '@/sections/Hero';
 import Image from 'next/image';

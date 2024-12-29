@@ -12,7 +12,7 @@ import Button from '@/components/Button';
 import HalfSection from '@/components/HalfSection';
 
 const RequestQuotePage = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(1);
 
   const handleToggle = (index: number) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));

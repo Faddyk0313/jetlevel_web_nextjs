@@ -12,7 +12,7 @@ import Breadcrumb from './Breadcrumb/Breadcrumb';
 import HalfSection from './HalfSection';
 
 const CostCalculatorPage = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(1);
   
   const handleToggle = (index: number) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));

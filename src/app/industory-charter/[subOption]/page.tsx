@@ -121,9 +121,9 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
           ></div>
 
           <div className="relative z-10">
-            <h2 className="text-[45px] font-bold mb-4 text-white font-calibari max-[700px]:text-[25px]">Elevate your Corporate Travel</h2>
+            <h2 className="text-[45px] font-bold mb-4 text-white font-calibari max-[700px]:text-[25px]">{singleIndustory?.corporateTravel?.heading}</h2>
             <p className="text-md mb-4">
-              Elevate your corporate travel with JetLevel Aviation’s specialized jet charter services. Contact us today to discuss your business travel needs and discover how we can help you achieve more with every flight.
+             {singleIndustory?.corporateTravel?.description}
             </p>
             <Button
               text='Book Corporate Charter'
