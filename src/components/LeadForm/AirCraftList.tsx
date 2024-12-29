@@ -34,7 +34,7 @@ const aboutInfo = [
   "Other",
 ];
 
-export default function AirCraftList({setOpenModal}:any) {
+export default function AirCraftList({setOpenModal,openModal}:any) {
   const [form, setForm] = useState({
     fromLocation: "",
     toLocation: "",
@@ -92,6 +92,8 @@ export default function AirCraftList({setOpenModal}:any) {
     if (from && to && tourType && startDate  && counter) {
       setOpenModal(true);
       handleSubmit(from, to, tourType,counter,startDate);
+    }else{
+      setOpenModal(false);
     }
   }, [searchParams]);
 
@@ -536,15 +538,34 @@ export default function AirCraftList({setOpenModal}:any) {
       return false;
     }
   };
-    
+  
+  const startDateString = searchParams.get('startDate');
+  let formattedDate;
+  if (startDateString) {
+    const timestamp = parseInt(startDateString, 10);
+    const newDate = new Date(timestamp);
+  
+    if (isNaN(newDate.getTime())) {
+      console.log('Invalid date');
+    } else {
+      formattedDate = newDate.toLocaleDateString('en-US', {
+        year: 'numeric',
+        month: 'short',
+        day: 'numeric',
+      });
+    }
+  } else {
+    console.log('startDate is null');
+  }
+
   return (
     <>
       {/* <LeadForm /> */}
         <div className="aircraft-list-container">
           <div>
-            <h3>Your Estimates Are Below</h3>
-            <p><span>Please Note:</span> These are not formal quotes.Dec 31 2024</p>
-            <p>({searchParams.get('from')}) to ({searchParams.get('to')}) {searchParams.get('counter')} passengers</p>
+            <h2 className='text-[33px] text-center'>Your Estimates Are Below</h2>
+            <p className='text-center'><span>Please Note:</span> These are not formal quotes. {formattedDate}</p>
+            <p className='text-center'>({searchParams.get('from')}) to ({searchParams.get('to')}) {searchParams.get('counter')} passengers</p>
           </div>
           {data &&
             data.map((item:any, index:any) => (
@@ -578,7 +599,7 @@ export default function AirCraftList({setOpenModal}:any) {
                       className="btn price-btn"
                     >
                       {item.cost && (
-                        <span>
+                        <span className='!text-white'>
                           {getPrice(item.cost[0])} - {getPrice(item.cost[1])}{" "}
                           USD *
                         </span>

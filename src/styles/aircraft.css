@@ -321,15 +321,10 @@ vertical-align: top;
 transform: rotate(180deg);
 }
 
-
-
-
-
 .main {
   display: block;
   unicode-bidi: isolate;
 }
-
 
 .section {
   margin: 0;
@@ -339,7 +334,6 @@ transform: rotate(180deg);
   font-weight: inherit;
   font-style: inherit;
   font-size: 100%;
-  font-family: inherit;
   display: block;
 }
 .compare {

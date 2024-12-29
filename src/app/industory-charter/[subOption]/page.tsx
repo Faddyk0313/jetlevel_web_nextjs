@@ -62,7 +62,7 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
 
       <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto max-[700px]:hidden">
         <h2>{singleIndustory?.aviationSolutions?.heading || ''}</h2>
-        <div className='flex justify-between mt-[40px] mb-[40px]'> 
+        <div className='flex gap-x-[20px] mt-[40px] mb-[40px]'> 
           {
             singleIndustory?.aviationSolutions?.aviationIcons.map((icon,index) => {
               const Icon = iconMapping[icon.icons] ;

@@ -57,7 +57,7 @@ const Nav = () => {
 
           <div id="contact-request" className="flex flex-col text-xs xl:text-sm items-end gap-2 lg:gap-0.5 ">
             <div className="hidden lg:flex items-center gap-1 text-[11px] mr-3">
-            <div className='flex items-center pr-4 cursor-pointer ' onClick={() => setSearchBar(true)}>
+            {/* <div className='flex items-center pr-4 cursor-pointer ' onClick={() => setSearchBar(true)}>
                <Search className='cursor-pointer' />
                 <p>Search</p>
             </div>
@@ -85,7 +85,7 @@ const Nav = () => {
                       />
                     </div>
                 </div>
-                }
+              } */}
               <FaPhone className=" animate-ringing" />
               <a href="tel:+18555385383" className="whitespace-nowrap" >(855) 538-5383</a>
             </div>

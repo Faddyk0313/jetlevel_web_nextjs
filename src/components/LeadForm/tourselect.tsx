@@ -252,6 +252,23 @@ export default function TourSelect (props:any) {
     setOpenModal(true);
   };
   
+  const closeModal = () => {
+    console.log("Modal closing...");
+    setOpenModal(false);
+  
+    const currentUrl = new URL(window.location.href);
+    const queryParams = currentUrl.search;
+  
+    console.log("Current URL:", currentUrl.href);
+    console.log("Query Params:", queryParams);
+  
+    if (queryParams) {
+      window.history.pushState({}, '', window.location.pathname); // Removes query parameters
+      console.log("Updated URL:", window.location.href);
+    }
+  };
+  
+  console.log('openModal',openModal);
 
   const CustomInput = React.forwardRef((arg:any, ref:any) => (
     <div className="custom-input" onClick={arg.onClick} ref={ref}>
@@ -367,12 +384,12 @@ export default function TourSelect (props:any) {
 
         <Modal 
           isOpen={openModal} 
-          onClose={() => setOpenModal((prevModal) => !prevModal)}
+          onClose={closeModal}
           modalWidth={1000}
           className='h-[600px]' 
         >
-          <div className='h-full overflow-auto overflow-design'>
-            <AirCraftList setOpenModal={setOpenModal} />
+          <div className='h-full overflow-auto overflow-design rounded-2xl'>
+            <AirCraftList openModal={openModal} setOpenModal={setOpenModal} />
           </div>
         </Modal>
       </div>

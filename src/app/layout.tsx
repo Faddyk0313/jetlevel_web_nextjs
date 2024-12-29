@@ -6,6 +6,7 @@ import Footer from '@/sections/Footer';
 import ContactMenu from "@/sections/ContactMenu";
 import Script from 'next/script';
 import 'aos/dist/aos.css';
+import "react-datepicker/dist/react-datepicker.css";
 
 // Configure the fonts with subsets
 const playfairDisplay = Playfair_Display({
