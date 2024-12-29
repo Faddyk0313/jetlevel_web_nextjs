@@ -94,7 +94,7 @@ function NavbarDropdown() {
             />
           )}
         </div>
-        <Link href="#" className="text-white text-sm font-bold ">
+        <Link href="/cost-of-chartering-a-private-jet" className="text-white text-sm font-bold ">
           PRICING
         </Link>
         <div onClick={() => handleClick('company')}>

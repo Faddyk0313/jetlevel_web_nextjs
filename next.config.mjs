@@ -86,6 +86,10 @@ const nextConfig = {
         source: "/our-team",
         destination: "/company/our-team",
       },
+      {
+        source: '/cost-of-chartering-a-private-jet',
+        destination: '/pricing',
+      },
       
       {
         source: '/:location',
