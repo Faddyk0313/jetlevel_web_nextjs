@@ -46,7 +46,7 @@ const DistanceCalculatorPage = () => {
               answer={*/}
               <h2 className='text-darkBlue'>Key Benefits</h2>
                 <> 
-                <h3><span className='font-normal'>1. Effortless Planning</span></h3>
+                <h3><span className='font-normal'>Effortless Planning</span></h3>
                 <p className='leading-7 mb-4 '>Skip the guesswork. Our tool does the heavy lifting, offering instant distance calculations.</p>
                 <h3><span className='font-normal'>Time-Saving</span></h3>
                 <p className='leading-7 mb-4 '>Fast results mean more time for what matters - preparing for your luxurious flight.</p>

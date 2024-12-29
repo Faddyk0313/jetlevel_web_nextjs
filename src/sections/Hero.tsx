@@ -16,7 +16,7 @@ type HeroProps = {
     showCalculator?:string
 };
 
-const Hero: React.FC<HeroProps> = ({ image, title, subtitle, tagline, description, hasOverlay, hasCalculator, showCalculator = true }) => {
+const Hero: React.FC<HeroProps> = ({ image, title, subtitle, tagline, description, hasOverlay, hasCalculator, showCalculator = "LeadForm" }) => {
     return (
         <section className={`flex flex-col min-h-[65vh] md:min-h-[75vh]  ${hasCalculator ? "justify-end xl:pb-5 pt-5" : "justify-end pb-5 sm:pb-10"}  ${hasOverlay ? "overlay" : ""} bg-center bg-cover text-center text-white bg-no-repeat `}
             style={{ backgroundImage: `url('${image}')` }}>

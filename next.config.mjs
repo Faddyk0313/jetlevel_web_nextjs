@@ -90,6 +90,15 @@ const nextConfig = {
         source: '/cost-of-chartering-a-private-jet',
         destination: '/pricing',
       },
+      {
+        source: '/industry-specific-charter',
+        destination: '/industory-charter',
+      },
+      {
+        source: '/industry-specific-charter/:location',
+        destination: '/industory-charter/:location',
+      },
+
       
       {
         source: '/:location',

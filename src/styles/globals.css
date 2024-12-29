@@ -250,3 +250,12 @@ span{
     transform: translateY(0);
   }
 }
+
+.industrycardContanier.card * {
+   stroke: white !important;
+}
+
+.blogCard * {
+ color: black !important;
+ font-weight: normal !important;;
+}

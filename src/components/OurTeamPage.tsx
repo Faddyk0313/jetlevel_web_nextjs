@@ -28,7 +28,7 @@ const OurTeamPage = () => {
 
         <h2 className='text-black text-center mb-[30px]'>Leadership</h2>
         <div className='flex items-center justify-between flex-wrap'>
-        <div className="w-[32%] mb-6 max-[700px]:w-full border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-[#333333] transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
+        <div className="w-[32%] mb-6 max-[700px]:w-full border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-white transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
           <Image
             src="/images/Ricky-Gomulka-Jet-Level-CEO-With Wife.png"
             alt="Ceo Photo"
@@ -36,13 +36,13 @@ const OurTeamPage = () => {
             height={200}
             className="w-[160px] h-[160px] rounded-full"
           />
-          <h4 className="text-[20px] font-bold mt-4 mb-4 group-hover:text-white">
+          <h4 className="text-[20px] font-bold mt-4 mb-4 ">
             Ricky Gomulka
           </h4>
-          <span className="text-[#777777] mb-5 text-[12px] group-hover:text-white">
+          <span className=" mb-5 text-[12px] ">
             Founder & Managing Partner
           </span>
-          <p className="text-center group-hover:text-white text-[15px]">
+          <p className="text-center  text-[15px]">
             Ricky brings extensive industry knowledge and strategic vision to JetLevel
             Aviation. As a co-founder and managing partner, his expertise in private
             aviation is instrumental in steering the company towards new heights.
@@ -54,7 +54,7 @@ const OurTeamPage = () => {
           </div>
         </div>
 
-        <div className="w-[32%] mb-6 max-[700px]:w-full border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-[#333333] transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
+        <div className="w-[32%] mb-6 max-[700px]:w-full border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-white transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
           <Image
             src="/images/President Photo.webp"
             alt="President Photo"
@@ -62,13 +62,13 @@ const OurTeamPage = () => {
             height={200}
             className="w-[160px] h-[160px] rounded-full"
           />
-          <h4 className="text-[20px] font-bold mt-4 mb-4 group-hover:text-white">
+          <h4 className="text-[20px] font-bold mt-4 mb-4 ">
             Kevin Bales
           </h4>
-          <span className="text-[#777777] mb-5 text-[12px] group-hover:text-white">
+          <span className=" mb-5 text-[12px] ">
           Vice President
           </span>
-          <p className="text-center group-hover:text-white text-[15px]">
+          <p className="text-center  text-[15px]">
           Kevin's role as Vice President is pivotal in driving JetLevel Aviation's growth. His leadership and in-depth understanding of the aviation market ensure operational excellence and client satisfaction.
           </p>
           <div className='flex gap-x-[30px] mt-[30px]'>
@@ -78,7 +78,7 @@ const OurTeamPage = () => {
           </div>
         </div>
 
-        <div className="w-[32%] mb-6 max-[700px]:w-full border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-[#333333] transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
+        <div className="w-[32%] mb-6 max-[700px]:w-full border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-white transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
           <Image
             src="/images/Ceo Photo.webp"
             alt="Ceo Photo"
@@ -86,13 +86,13 @@ const OurTeamPage = () => {
             height={200}
             className="w-[160px] h-[160px] rounded-full"
           />
-          <h4 className="text-[20px] font-bold mt-4 mb-4 group-hover:text-white">
+          <h4 className="text-[20px] font-bold mt-4 mb-4 ">
             Erin Melder
           </h4>
-          <span className="text-[#777777] mb-5 text-[12px] group-hover:text-white">
+          <span className=" mb-5 text-[12px] ">
             Flight Support & Client Services
           </span>
-          <p className="text-center group-hover:text-white text-[15px]">
+          <p className="text-center  text-[15px]">
             With 20 years of experience in corporate aviation, Erin, an FAA Licensed Aircraft Dispatcher, excels in providing top-notch flight support and client services, ensuring safe and efficient operations for JetLevel Aviation.
           </p>
           <div className='flex gap-x-[30px] mt-[30px]'>

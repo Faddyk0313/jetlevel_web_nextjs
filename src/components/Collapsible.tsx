@@ -15,6 +15,7 @@ interface FAQDropdownProps {
   answerClassName?: string;
   questionClassName?: string;
   iconColor?: string;
+  isfaq?: boolean;
 }
 
 const FAQDropdown: React.FC<FAQDropdownProps> = ({
@@ -28,6 +29,7 @@ const FAQDropdown: React.FC<FAQDropdownProps> = ({
   answerClassName,
   questionClassName,
   iconColor,
+  isfaq = false
 }) => {
   return (
     <div className='border-b py-5'>
@@ -35,9 +37,12 @@ const FAQDropdown: React.FC<FAQDropdownProps> = ({
         onClick={onClick}
         className={`${classNames || ""} flex items-center cursor-pointer ${
           iconPosition === "end" ? "justify-between" : "justify-start"
-        } bg-[${backgroundColor}] pt-4 pr-5 pb-4 text-white font-bold text-lg`}
+        } bg-[${backgroundColor}] ${isfaq ? '':"py-4"} pr-5 text-white font-bold`}
       >
-        <h2 className={`transition-colors duration-200 leading-[46px] ${isOpen ? 'text-blue' : 'text-darkBlue group-hover:text-blue'} ${questionClassName}`}>{question}</h2>
+        {
+          isfaq ? <h3 className={`transition-colors duration-200 m-0 ${isOpen ? 'text-blue' : 'text-darkBlue group-hover:text-blue'} ${questionClassName}`}>{question}</h3> : <h2 className={`transition-colors duration-200 leading-[46px] ${isOpen ? 'text-blue' : 'text-darkBlue group-hover:text-blue'} ${questionClassName}`}>{question}</h2>
+        }
+        
           <span className={`transition-all duration-200 border-2 rounded-full ${isOpen ? 'rotate-45 text-blue border-blue' : 'text-darkBlue border-darkBlue group-hover:text-blue group-hover:border-blue'}`}>
             <FiPlus className={`w-7 h-7 ${iconColor}`} />
           </span>

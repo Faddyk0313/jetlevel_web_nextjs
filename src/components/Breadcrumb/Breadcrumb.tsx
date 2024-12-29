@@ -37,10 +37,13 @@ const Breadcrumb: React.FC = () => {
     '/faq': '/private-jet-frequently-asked-questions',
     '/company/our-team': '/our-team',
     '/pricing': '/cost-of-chartering-a-private-jet',
+    '/industory-charter' : '/industry-specific-charter',
+    '/industory-charter/:location' : '/industry-specific-charter/:location',
     '/charter-resources/private-jet-airports/:location': '/:location',
     '/charter-resources/aircraft-types/:location': '/:location',
     '/company/blogs/:location': '/:location',
   };
+
 
 
   // Helper function to apply rewrite rules based on dynamic segments
@@ -72,8 +75,10 @@ const Breadcrumb: React.FC = () => {
   const getRewrittenHref = (actualPath: string) =>
     applyRewrite(actualPath, true);
   let href;
-  if (pathSegments.slice(0, 1)[0] !== "cost-of-chartering-a-private-jet") {
+  // console.log(pathSegments.slice(0, 1)[0])
+  if (pathSegments.slice(0, 1)[0] !== "cost-of-chartering-a-private-jet" && pathSegments.slice(0, 1)[0] !== "industry-specific-charter") {
     href = getRewritePath(pathSegments.slice(0, 1));
+    // console.log("if")
   }
   else {
     href = getRewritePath(pathSegments);
@@ -114,7 +119,7 @@ const Breadcrumb: React.FC = () => {
     segments[1] = subOption;
   }
   const baseSegment = segments[0]; // Get the first segment
-
+// console.log(baseSegment);
   const hrefArray = segments.slice(1);
 
   // console.log("href", href);
@@ -133,16 +138,18 @@ const Breadcrumb: React.FC = () => {
         </Link>
       </div>
       {
-        baseSegment === "pricing" ? (
+        baseSegment === "pricing" || baseSegment === "faq"  || baseSegment === "industory-charter" ? (
           <div className="flex items-center">
             <Link
-              href="/pricing"
+              href={`/${baseSegment}`}
               className={`${styles.breadcrumbLink} whitespace-nowrap py-2 pl-7 pr-3`}
-            >
-              Pricing
+              style={{ zIndex: 9 }}
+              >
+              {baseSegment === "pricing" ? "Pricing" : baseSegment === "faq" ? "Faqs" : baseSegment === "industory-charter" ? "Industry Charter" : ""}
             </Link>
           </div>
-        ) :
+        ) : ""}
+        {
           hrefArray.map((segment, index) => {
             const hrefPath = `/${[
               baseSegment,

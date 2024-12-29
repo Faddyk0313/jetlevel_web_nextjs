@@ -443,9 +443,9 @@ const EventsPage = () => {
     <div>
         <Hero image={"/images/Private jet interior bg .webp"} title={"Cost of Chartering a Private Jet - Flights & Rates"} tagline={"Explore the cost of chartering a private jet flights, including breakdowns, factors, fees, and comparative analyses for informed decision-making"} hasCalculator={true} hasOverlay={false}/>
         <BrandNames />
-        <section className='px-5 md:px-10 lg:px-20 pb-0'>
+        <div className='px-5 md:px-10 lg:px-20 pb-0'>
           <Breadcrumb />
-        </section>
+        </div>
         <CompanyOverview 
           heading='How much does a private jet charter cost?' 
           description='The average cost of chartering a private jet ranges from about $1,800 to $14,000 per flying hour. The price varies based on the jet’s size and type. For example, smaller jets cost around $1,800 to $2,300 per hour, midsize jets range from $6,400 to $8,000 per hour, and larger jets are between $10,000 and $14,000 per hour. Renting a Gulfstream G650 plane costs about $10,000 per hour. For a 5-hour flight, it would be around $50,000. Plus, there are extra charges for landing at airports.'
