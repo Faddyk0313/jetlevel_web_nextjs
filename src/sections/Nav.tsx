@@ -71,7 +71,7 @@ const Nav = () => {
                   <div onClick={() => setSearchBar(false)} className='relative flex items-end justify-end'>
                     <Close className='cursor-pointer absolute right-0 text-white top-[49px]' />
                   </div>
-                  <div className='w-full h-[43px] flex items-center mb-[10px] bg-white rounded-[10px] pl-4'>
+                  <div className='w-full h-[43px] flex items-center mb-[13px] bg-white rounded-[10px] pl-4'>
                       <div>
                         <Search className='text-black' onClick={highlightText} />
                       </div>
