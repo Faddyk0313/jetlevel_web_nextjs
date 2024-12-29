@@ -79,11 +79,11 @@ const Breadcrumb: React.FC = () => {
     href = getRewritePath(pathSegments);
   }
 
-  console.log("HREF", href);
+  // console.log("HREF", href);
   // console.log("href", href);
   const segments = href.split("/").filter(Boolean); // Remove empty segments
   // Determine the base segment dynamically (e.g., 'jet-charter' or 'charter-resources')
-  console.log("segments", segments);
+  // console.log("segments", segments);
   let subOption = segments[1]; // cities, empty-legs etc.    
 
 
