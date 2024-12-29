@@ -23,9 +23,12 @@ type PageProps = {
 };
 
 const IndustoryCharterDetail = ({ params }: PageProps) => {
+  // console.log("params", params);
   const singleIndustory = industory.industory.find((event) => event.id === params.subOption);
   const filterCharters = charterTypes?.charterTypes.filter((charter) => charter.url !== params.subOption);
 
+  // console.log("singleIndustory", singleIndustory);
+  // console.log("filterCharters", filterCharters);
   return (
     <div>
       <Hero 
@@ -67,7 +70,7 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
             singleIndustory?.aviationSolutions?.aviationIcons.map((icon,index) => {
               const Icon = iconMapping[icon.icons] ;
               return (
-                <div key={index} className='w-[24%]'>
+                <div key={index} className='industrycardContanier w-[24%]'>
                 <Card link='' icon={<Icon />} title={icon?.heading} description={icon?.description} bgcolor={'white'} />
                 </div>
               )
@@ -83,7 +86,7 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
         <div className='absolute inset-0 bg-black opacity-50 group-hover:opacity-60'></div>
         <div className='flex relative flex-wrap justify-between'>
           <div className='w-[48%] max-[700px]:w-full'>
-            <h3 className='text-white max-[700px]:mb-8 text-[40px] font-calibari font-bold max-[700px]:text-[25px]'>{singleIndustory?.whyChooseJet?.heading || ''}</h3>
+            <h2 className='text-white max-[700px]:mb-8 text-[40px] font-calibari font-bold max-[700px]:text-[25px]'>{singleIndustory?.whyChooseJet?.heading || ''}</h2>
           </div>
           <div className='flex flex-wrap max-[700px]:w-full max-[700px]:mb-8 w-[48%] justify-between gap-y-6 items-center'>
             {

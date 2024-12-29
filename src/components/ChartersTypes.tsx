@@ -25,7 +25,7 @@ const ChartersTypes: React.FC<ChartersTypesProps> = ({ charterType }) => {
             <div className="absolute inset-0 bg-black opacity-50 rounded-lg group-hover:opacity-60"></div>
 
             <div className="absolute inset-0 flex items-center justify-center">
-              <Link href={`/industory-charter/${charter.url}`}>
+              <Link href={`/industry-specific-charter/${charter.url}`}>
                 <h4 className="font-bold text-white text-xl text-center">
                   {charter.name}
                 </h4>

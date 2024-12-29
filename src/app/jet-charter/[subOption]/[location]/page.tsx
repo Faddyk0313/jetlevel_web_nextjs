@@ -20,7 +20,7 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
     let contentType;
 
     if (blogs.includes(location)) { // This condition will only be true for those blog pages whose url starts with 'empty-leg-flights-'.
-        console.log("------", subOption);
+        // console.log("------", subOption);
         contentType = 'blogs';
 
         let content: void | ContentData  = undefined;

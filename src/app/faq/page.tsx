@@ -256,18 +256,17 @@ const FaqPage = () => {
   
   return (
     <div>
-       <div className="bg-[url('/images/blog-hero-image.jpg')] bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-start justify-center">
-        <h1 className="px-5 md:px-10 lg:px-20 max-w-[1800px] w-full mx-auto text-white ">
+       <div className="bg-[url('/images/blog-hero-image.jpg')] bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-center justify-center">
+          <h1 className="px-5 md:px-10 lg:px-20 max-w-[1800px] w-full mx-auto text-white ">
           Frequently Asked Questions
-        </h1>
-      </div>
+          </h1>
+        </div>
       <BrandNames />
        <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
        <Breadcrumb />
         <div className='flex justify-between'>
           <div className='w-full max-[650px]:w-full'>
             
-            <h2 className='text-[45px] text-[#0071BA] text-center mb-5 mt-6'>Frequently Asked Questions</h2>
             <div className='flex relative mt-10 max-[700px]:w-full max-[700px]:flex-col'>
               <div className='flex flex-col gap-y-8 gap-x-8 max-[700px]:overflow-y-hidden max-[700px]:overflow-x-auto  w-[20%] max-[700px]:w-full max-[700px]:flex-row items-start max-[700px]:relative sticky max-[700px]:top-0 top-[105px] max-[700px]:h-[80px] h-[400px]'>
                 {
@@ -291,8 +290,8 @@ const FaqPage = () => {
               <div className='w-[80%] max-[700px]:w-full max-[700px]:mt-[50px]'>
                 {
                   faqData.map((faq,index) => (
-                   <div key={index} id={faq.id}>
-                    <h2 className='bg-[#F9F9F9] p-3 mb-6 mt-6'>{faq.heading}</h2>
+                   <div key={index} id={faq.id} className='pb-8'>
+                    <h2 className='bg-[#F9F9F9] p-3 mb-6'>{faq.heading}</h2>
                     {
                       faq.content.map((content,index) =>(
                         <Collapsible  
@@ -303,6 +302,7 @@ const FaqPage = () => {
                           isOpen={openIndex === index}
                           onClick={() => handleToggle(index)} 
                           answerClassName={`font-bold !text-[#0573BD]`}
+                          isfaq={true}
                         />
                       ))
                     }

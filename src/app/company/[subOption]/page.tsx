@@ -70,6 +70,8 @@ const CompanyPage = async ({ params }: PageProps) => {
             {title}
           </h1>
         </div>
+
+        <BrandNames />
         <section className="flex flex-col lg:flex-row gap-10 px-5 md:px-10 lg:px-20 py-7 max-w-[1800px] mx-auto">
           <div className="min-w-full md:min-w-[72%]">
             <Breadcrumb />
@@ -91,7 +93,7 @@ const CompanyPage = async ({ params }: PageProps) => {
                             blogContent.fields.hero_image?.assets[0]?.asset?.height
                           }
                           alt={blogContent.fields.hero_image?.assets[0]?.asset?.name}
-                          className="max-h-dvh w-auto h-auto"
+                          className="w-full h-full object-cover"
                         /> : ""
                     }
 
@@ -109,12 +111,18 @@ const CompanyPage = async ({ params }: PageProps) => {
                   ) : (
                     ""
                   )}
+                  <div className="blogCard">
                   <Markdown
                     options={{
                       overrides: {
                         a: {
                           props: {
                             className: " text-blue",
+                          },
+                        },
+                        span: {
+                          props: {
+                            className: "!text-white !font-normal",
                           },
                         },
                       },
@@ -126,6 +134,7 @@ const CompanyPage = async ({ params }: PageProps) => {
                       ) as string
                     }
                   </Markdown>
+                  </div>
                   {blogContent.slug ? (
                     <Link
                       href={blogContent.slug}

@@ -17,7 +17,7 @@ const Card: React.FC<CardProps> = ({ icon, title, description, link, bgcolor }) 
             `;
     const content = (
         <>
-            <div className="flex justify-center items-center mb-4 bg-blue w-20 h-20 rounded-full">
+            <div className="flex justify-center items-center mb-4 card bg-blue w-20 h-20 rounded-full">
                 {icon}
             </div>
             <h3 className="mb-2">{title}</h3>

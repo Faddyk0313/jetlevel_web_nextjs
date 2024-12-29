@@ -20,7 +20,7 @@ const EventDetailPage = ({ params }: PageProps) => {
   const singleEvent = mergeEvents.find((event) => 
     event.heading.toLowerCase() === params.subOption.replace(/-/g, ' ').toLowerCase()
   );
-  console.log('singleEvent',singleEvent);
+  // console.log('singleEvent',singleEvent);
 
   const [openIndex, setOpenIndex] = useState<number | null>(null);
     
