@@ -1,5 +1,3 @@
-"use client";
-
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb'
 import BrandNames from '@/sections/BrandNames'
 import Hero from '@/sections/Hero'
@@ -23,12 +21,9 @@ type PageProps = {
 };
 
 const IndustoryCharterDetail = ({ params }: PageProps) => {
-  // console.log("params", params);
   const singleIndustory = industory.industory.find((event) => event.id === params.subOption);
   const filterCharters = charterTypes?.charterTypes.filter((charter) => charter.url !== params.subOption);
-
-  // console.log("singleIndustory", singleIndustory);
-  // console.log("filterCharters", filterCharters);
+  
   return (
     <div>
       <Hero 
@@ -54,7 +49,11 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
             singleIndustory?.advantages?.contents?.map((content,index,array) => {
               const Icon = iconMapping[content.icon] ;
               return(
-                <div key ={index} className={`${array?.length === 6 ? 'w-[33%] max-[700px]:w-full' : 'w-[48%] max-[700px]:w-full'}`}>
+                <div key ={index}  className={`${
+                  array?.length === 6 
+                    ? 'w-[33%] max-[900px]:w-[48%] max-[700px]:w-full' 
+                    : 'w-[48%] max-[900px]:w-[48%] max-[700px]:w-full'
+                  }`}>
                   <CharterAdvantages icon={<Icon />} heading={content?.title} description={content?.para}  />
                 </div>
               )
@@ -65,12 +64,12 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
 
       <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto max-[700px]:hidden">
         <h2>{singleIndustory?.aviationSolutions?.heading || ''}</h2>
-        <div className='flex gap-x-[20px] mt-[40px] mb-[40px]'> 
+        <div className='flex gap-x-[20px] mt-[40px] mb-[40px] flex-wrap gap-y-[20px]'> 
           {
             singleIndustory?.aviationSolutions?.aviationIcons.map((icon,index) => {
-              const Icon = iconMapping[icon.icons] ;
+              const Icon = iconMapping[icon.icons];
               return (
-                <div key={index} className='industrycardContanier w-[24%]'>
+                <div key={index} className='industrycardContanier w-[24%] max-[900px]:w-[48%] max-[700px]:w-full'>
                 <Card className={'min-h-[320px]'} link='' icon={<Icon />} title={icon?.heading} description={icon?.description} bgcolor={'white'} />
                 </div>
               )
@@ -81,14 +80,14 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
 
       <section 
         style={{ backgroundImage: `url('/images/About us Hero Image.jpg')`}} 
-        className="px-5 md:px-10 mt-[50px] mb-[50px] xl:px-20 py-7 max-w-[1800px] mx-auto relative bg-center pt-[70px] bg-cover max-[700px]:h-full h-[500px] pb-[70px]"
+        className="px-5 md:px-10 mt-[50px] mb-[50px] xl:px-20 py-7 w-full relative bg-center bg-cover h-full pb-[70px] pt-[70px]"
       >
         <div className='absolute inset-0 bg-black opacity-50 group-hover:opacity-60'></div>
         <div className='flex relative flex-wrap justify-between'>
-          <div className='w-[48%] max-[700px]:w-full'>
-            <h2 className='text-white max-[700px]:mb-8 text-[40px] font-calibari font-bold max-[700px]:text-[25px]'>{singleIndustory?.whyChooseJet?.heading || ''}</h2>
+          <div className='w-[48%] max-[800px]:w-full'>
+            <h2 className='text-white max-[800px]:mb-8 text-[40px] font-calibari font-bold max-[800px]:text-[25px]'>{singleIndustory?.whyChooseJet?.heading || ''}</h2>
           </div>
-          <div className='flex flex-wrap max-[700px]:w-full max-[700px]:mb-8 w-[48%] justify-between gap-y-6 items-center'>
+          <div className='flex flex-wrap max-[800px]:w-full max-[800px]:mb-8 w-[48%] justify-between gap-y-6 items-center'>
             {
               singleIndustory?.whyChooseJet?.items.map((item) => (
                 <div className='w-[48%] max-[700px]:w-full'>
@@ -97,7 +96,7 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
                 </div>
               ))
             }
-            <div className='w-[48%] max-[700px]:w-full max-[700px]:text-end max-[700px]:mt-8'>
+            <div className='w-[48%] max-[800px]:w-full max-[800px]:text-end max-[800px]:mt-8'>
               <Button
                 text='Book Corporate Charter'
                 variant='primary'

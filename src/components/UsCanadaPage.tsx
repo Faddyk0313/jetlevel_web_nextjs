@@ -17,10 +17,9 @@ export const metadata = {
 };
 // Define the UsCanadaPage component
 const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
-  // console.log("------", content)
-  const cities = content.map((item:any) => {
+  const cities = content?.map((item:any) => {
     return {
-      heading: item.fields.title?.text || item.name,  // fallback to item.name if no fields.title
+      heading: item.fields.title?.text || item.name,
       link: `/${item.slug}`,
       img:`${title === "Routes" ? "/images/single routes img in directory.png" : item.fields.hero_image?.assets?.[0]?.asset?.url }` || '',
     };
