@@ -163,9 +163,9 @@ const FlightTrackerPage = () => {
                         <h3 className="font-bold text-gray-900">
                           {faq.question}
                         </h3>
-                        <p className="text-gray-700 leading-7 mt-1">
+                        <div className="text-gray-700 leading-7 mt-1">
                           {faq.answer}
-                        </p>
+                        </div>
                       </div>
                     ))}
                   </div>

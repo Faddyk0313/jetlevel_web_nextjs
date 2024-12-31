@@ -1,5 +1,10 @@
 import React from 'react';
 
+export const metadata = {
+  title: 'Terms and Conditions - JetLevel Private Jet Charter',
+  description: 'Terms and conditions for flight bookings with Jetlevel Aviation. For further information or private flight prices call 1-855-JetLevel.',
+}
+
 const TermOfUsePage = () => {
   const termConditions= [
     {
