@@ -5,7 +5,7 @@ const MeetOwner = () => {
     return (
         <section className="bg-blue-background px-4 flex items-center min-h-screen py-10 bg-no-repeat bg-cover ">
             <div className="flex flex-col md:flex-row items-center justify-center lg:items-start gap-5 max-w-[1800px] m-auto">
-                <div className="mb-5 md:min-w-[570px]">
+                <div className="mb-5 md:min-w-[400px]">
                     <Image
                         src='/images/ricky-photo.webp'
                         alt="Owner Image"

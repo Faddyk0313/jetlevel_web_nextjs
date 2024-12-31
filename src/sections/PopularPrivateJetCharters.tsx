@@ -42,7 +42,7 @@ const PopularPrivateJetCharters: React.FC<PopularPrivateJetChartersProps> = ({ h
       <h2 className="mb-8">
         Popular Private Jet Charter Destinations
       </h2>
-      <div className="grid grid-cols-2 md:grid-cols-4 w-full gap-4 mb-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 w-full gap-4 mb-8">
         {cardInfo.map((card, index) => (
           <Link href={card.pageLink} key={index} className="cursor-pointer rounded-2xl border-[3px]  overflow-hidden transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue  hover:shadow-card_shadow">
             <Image

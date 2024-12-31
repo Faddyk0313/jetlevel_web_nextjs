@@ -91,6 +91,10 @@
                   "description": "Connect globally with access to thousands of airports worldwide, making almost any destination accessible."
               }
           ]
+      },
+      "corporateTravel": {
+        "heading": "Elevate your Corporate Travel",
+        "description": "Elevate your corporate travel with JetLevel Aviation’s specialized jet charter services. Contact us today to discuss your business travel needs and discover how we can help you achieve more with every flight."
       }
   },
   {
@@ -170,6 +174,10 @@
                   "description": "Connect globally with access to thousands of airports worldwide, making almost any destination accessible."
               }
           ]
+      },
+      "corporateTravel": {
+        "heading": "Elevate your Events Travel",
+        "description": "Elevate your next event with JetLevel Aviation’s exclusive events private jet charter services. Connect with us today to plan your seamless, luxurious air travel tailored specifically to your event needs."
       }
   },
   {
@@ -249,6 +257,10 @@
                   "description": "Whether it's a domestic championship or an international tournament, our extensive network makes it easy to get your team where they need to be."
               }
           ]
+      },
+      "corporateTravel": {
+        "heading": "Elevate your Sports Team Travel",
+        "description": "Boost your team’s morale and performance by choosing JetLevel Aviation for your next sports event. Connect with us to customize your travel plans and focus on winning while we handle the journey."
       }
   },
   {
@@ -324,6 +336,10 @@
                   "description": "From multi-leg itineraries to specialized onboard amenities, customize every aspect of your charter to meet your specific operational needs."
               }
           ]
+      },
+      "corporateTravel": {
+        "heading": "Elevate your Oil & Gas Industry Charter",
+        "description": "Connect with JetLevel Aviation today to discuss how our specialized oil and gas industry jet charter services can support your logistical and operational needs, ensuring your projects proceed without delay."
       }
   },
   {
@@ -399,6 +415,10 @@
                   "description": "We offer customizable options that cater to the specific needs and preferences of government officials, including secure communication systems and customized seating arrangements."
               }
           ]
+      },
+      "corporateTravel": {
+        "heading": "Elevate your Government Air Charter Travel",
+        "description": "JetLevel Aviation is committed to providing secure, efficient, and discreet jet charter services to governmental agencies. Contact us today to discover how we can support your governmental travel requirements with utmost professionalism and integrity."
       }
   },
   {
@@ -483,6 +503,10 @@
                   "description": "Connect globally with access to thousands of airports worldwide, making almost any destination accessible."
               }
           ]
+      },
+      "corporateTravel": {
+        "heading": "Elevate your Film Industry Travel",
+        "description": "Let JetLevel Aviation be your trusted partner in film industry charter and film production logistics. Contact us today to discover how we can help keep your film project on track, on budget, and moving smoothly from one location to the next."
       }
   },
   {
@@ -567,6 +591,10 @@
                   "description": "No matter where your music takes you, our extensive network allows you to reach international and remote locations effortlessly."
               }
           ]
+      },
+      "corporateTravel": {
+        "heading": "Elevate your Music Industry Travel",
+        "description": "Elevate your music career with JetLevel Aviation’s expertly tailored jet charter services. Connect with us to make your next tour not only successful but also remarkably smooth and stylish."
       }
   }
 ]

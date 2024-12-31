@@ -546,7 +546,7 @@ export default function AirCraftList({setOpenModal,openModal}:any) {
     const newDate = new Date(timestamp);
   
     if (isNaN(newDate.getTime())) {
-      console.log('Invalid date');
+      // console.log('Invalid date');
     } else {
       formattedDate = newDate.toLocaleDateString('en-US', {
         year: 'numeric',
@@ -555,7 +555,7 @@ export default function AirCraftList({setOpenModal,openModal}:any) {
       });
     }
   } else {
-    console.log('startDate is null');
+    // console.log('startDate is null');
   }
 
   return (

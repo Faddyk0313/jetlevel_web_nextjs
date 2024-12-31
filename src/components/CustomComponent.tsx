@@ -37,7 +37,7 @@ const CustomComponent: React.FC<CustomComponentProps> = ({
   }));
 
   return (
-    <section className={`flex flex-col justify-center ${background === "white" ? "max-w-[1800px] mx-auto md:px-10 lg:px-20" : "overflow-hidden bg-aboutUs-background overlay bg-cover bg-fixed"}  ${hasPadding === false ? '!py-10' : ''}`}>
+    <section className={`flex flex-col justify-center ${background === "white" ? "max-w-[1800px] mx-auto px-5 md:px-10 lg:px-20" : "overflow-hidden bg-[20%] md:bg-left bg-aboutUs-background overlay bg-cover bg-fixed"}  ${hasPadding === false ? '!py-10' : ''}`}>
       <div className={`${background === "white" ? "" : "lg:max-w-[1800px] lg:mx-auto px-5 md:px-10 lg:px-20"}`}>
         <div
           className={`mb-10 ${background === "white" ? "text-left" : "text-center text-white"} `}

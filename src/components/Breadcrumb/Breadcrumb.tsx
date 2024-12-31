@@ -39,12 +39,11 @@ const Breadcrumb: React.FC = () => {
     '/pricing': '/cost-of-chartering-a-private-jet',
     '/industory-charter' : '/industry-specific-charter',
     '/industory-charter/:location' : '/industry-specific-charter/:location',
+    '/charter-resources/airports-aircrafts/:location': '/:location',
     '/charter-resources/private-jet-airports/:location': '/:location',
     '/charter-resources/aircraft-types/:location': '/:location',
     '/company/blogs/:location': '/:location',
   };
-
-
 
   // Helper function to apply rewrite rules based on dynamic segments
   const applyRewrite = (path: string, reverse: boolean = false): string => {
@@ -84,7 +83,6 @@ const Breadcrumb: React.FC = () => {
     href = getRewritePath(pathSegments);
   }
 
-  // console.log("HREF", href);
   // console.log("href", href);
   const segments = href.split("/").filter(Boolean); // Remove empty segments
   // Determine the base segment dynamically (e.g., 'jet-charter' or 'charter-resources')
@@ -107,7 +105,8 @@ const Breadcrumb: React.FC = () => {
     }
     segments[1] = subOption;
 
-  } else if (subOption == "airports-aircrafts") {
+  } 
+  else if (subOption == "airports-aircrafts") {
     if (aircrafts.includes(segments[segments.length - 1])) {
       subOption = 'aircraft-types';
     } else if (airports.includes(segments[segments.length - 1])) {

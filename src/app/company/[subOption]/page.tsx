@@ -5,6 +5,7 @@ import OurTeamPage from "@/components/OurTeamPage";
 import TopCharteredCities from "@/components/TopCharteredCities";
 import { createClient } from "@/lib/contento";
 import BrandNames from '@/sections/BrandNames';
+import { ContentData } from "@gocontento/client";
 import Markdown from "markdown-to-jsx";
 import Image from "next/image";
 import Link from "next/link";
@@ -15,14 +16,30 @@ type PageProps = {
   };
 };
 
-// Define page content based on `subOption`
-const pageContent: Record<string, { title: string; }> = {
-  "about-us": { title: "About Us" },
-  "contact-us": { title: "Contact Us" },
-  blogs: { title: "Level Up Blog" },
-  "charter-faqs": { title: "Charter FAQs" },
-  "our-team": { title: "Our Team" },
+const pageContent: Record<string, { title: string; description?: string }> = {
+  "about-us": { title: "About Our Company - JetLevel Aviation", description: "JetLevel Aviation was founded by a team of industry professionals with over 10 years experience in the Private Jet Charter Industry." },
+  "contact-us": { title: "Contact Us", description: "Get in touch with us today." },
+  blogs: { title: "Blog - JetLevel Private Jet Charter", description: "Our Level Up Blog contains informative articles and topics on Private Jet Charters to multiple destinations." },
+  "charter-faqs": { title: "Charter FAQs", description: "Frequently asked questions about chartering." },
+  "our-team": { title: "Our Team - JetLevel Private Jet Charter", description: "At JetLevel Aviation, our expert team is devoted to setting the gold standard in private jet travel. From your initial inquiry to your final destination, each" },
 };
+
+// Generate metadata dynamically based on `subOption`
+export async function generateMetadata({ params }: PageProps) {
+  const { subOption } = params;
+
+  // Fallback for unknown `subOption`
+  const content = pageContent[subOption] || {
+    title: "Page Not Found",
+    description: "The page you are looking for does not exist.",
+  };
+
+  return {
+    title: content.title,
+    description: content.description,
+  };
+}
+
 
 // This function generates static parameters for known paths
 export async function generateStaticParams() {
@@ -37,21 +54,25 @@ const CompanyPage = async ({ params }: PageProps) => {
     title: "Page Not Found",
     description: "The page you are looking for does not exist.",
   };
-  const client = createClient();
-  const limit = 20; // Set to a reasonable high limit
-  let response = await client.getContentByType({
-    contentType: subOption,
-    sortBy: "published_at",
-    sortDirection: "desc",
-    limit,
-  });
-
-  let content = [...response.content];
-
-  while (response.nextPage) {
-    response = await response.nextPage();
-    content = content.concat(response.content);
+  let content: ContentData[] | null = null;
+  if(title === "Blog - JetLevel Private Jet Charter") {
+    const client = createClient();
+    const limit = 20; // Set to a reasonable high limit
+    let response = await client.getContentByType({
+      contentType: subOption,
+      sortBy: "published_at",
+      sortDirection: "desc",
+      limit,
+    });
+  
+    content = [...response.content];
+  
+    while (response.nextPage) {
+      response = await response.nextPage();
+      content = content.concat(response.content);
+    }
   }
+  
   // console.log("Content:--------------------", content[0].fields.all_sections_content.text);
 
   // utils/getExcerpt.ts
@@ -63,7 +84,7 @@ const CompanyPage = async ({ params }: PageProps) => {
 
   return (
     <>
-      {title === "Level Up Blog" ? (
+      {title === "Blog - JetLevel Private Jet Charter" ? (
         <>
         <div className="bg-[url('/images/blog-hero-image.jpg')] bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-center justify-center">
           <h1 className="px-5 md:px-10 lg:px-20 max-w-[1800px] w-full mx-auto text-white ">
@@ -75,7 +96,7 @@ const CompanyPage = async ({ params }: PageProps) => {
         <section className="flex flex-col lg:flex-row gap-10 px-5 md:px-10 lg:px-20 py-7 max-w-[1800px] mx-auto">
           <div className="min-w-full md:min-w-[72%]">
             <Breadcrumb />
-            {content.map((blogContent, index) => (
+            {content ? content.map((blogContent, index) => (
               <div
                 key={index}
                 className="flex flex-col my-9 text-start shadow-card_shadow_blog transition-all ease-linear hover:-translate-y-1 hover:shadow-card_shadow_blog2"
@@ -147,7 +168,7 @@ const CompanyPage = async ({ params }: PageProps) => {
                   )}
                 </div>
               </div>
-            ))}
+            )): ""}
           </div>
           <div className="min-w-[24%] max-w-fit  mt-[76px] max-[650px]:mt-0">
             <TopCharteredCities
@@ -172,9 +193,9 @@ const CompanyPage = async ({ params }: PageProps) => {
       ) : (
         <>
           <div className="w-full">
-            {title === "About Us" ? (
+            {title === "About Our Company - JetLevel Aviation" ? (
               <AboutUsPage />
-            ) : title === "Our Team" ? (
+            ) : title === "Our Team - JetLevel Private Jet Charter" ? (
               <OurTeamPage />
             ) : (
               <ContactUsPage />

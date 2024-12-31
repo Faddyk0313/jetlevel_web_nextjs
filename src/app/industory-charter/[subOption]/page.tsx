@@ -1,9 +1,7 @@
-"use client";
-
-import Breadcrumb from '@/components/Breadcrumb/Breadcrumb'
-import BrandNames from '@/sections/BrandNames'
-import Hero from '@/sections/Hero'
-import React from 'react'
+import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
+import BrandNames from '@/sections/BrandNames';
+import Hero from '@/sections/Hero';
+import React from 'react';
 import industory from '../../../../industory.json';
 import CharterDescription from '@/components/CharterDescription';
 import CharterAdvantages from '@/components/CharterAdvantages';
@@ -22,24 +20,45 @@ type PageProps = {
   };
 };
 
+// Generate metadata dynamically using title and description from charterTypes.json
+export async function generateMetadata({ params }: PageProps) {
+  const { subOption } = params;
+
+  // Find the matching charter type based on the subOption
+  const charterType = charterTypes.charterTypes.find((charter) => charter.url === subOption);
+  
+  // Provide default values if the subOption does not match any entry
+  const title = charterType?.title;
+  const description = charterType?.description;
+
+  return {
+    title,
+    description,
+  };
+}
+
+// Generate static paths for all subOptions in charterTypes.json
+export async function generateStaticParams() {
+  return charterTypes.charterTypes.map((charter) => ({
+    subOption: charter.url,
+  }));
+}
+
 const IndustoryCharterDetail = ({ params }: PageProps) => {
-  // console.log("params", params);
   const singleIndustory = industory.industory.find((event) => event.id === params.subOption);
   const filterCharters = charterTypes?.charterTypes.filter((charter) => charter.url !== params.subOption);
 
-  // console.log("singleIndustory", singleIndustory);
-  // console.log("filterCharters", filterCharters);
   return (
     <div>
       <Hero 
-      title={singleIndustory?.hereosHeading || ''}
-      description={singleIndustory?.heroDescription || ''}
-      image={"https://fly.jetlevel.com/assets/Private%20jet%20interior%20bg%20.webp"}  
-      hasCalculator={false} 
-    />
+        title={singleIndustory?.hereosHeading || ''}
+        description={singleIndustory?.heroDescription || ''}
+        image={"https://fly.jetlevel.com/assets/Private%20jet%20interior%20bg%20.webp"}  
+        hasCalculator={false} 
+      />
       <BrandNames />
       <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
-      <Breadcrumb />
+        <Breadcrumb />
       </section>
 
       <CharterDescription 
@@ -90,8 +109,8 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
           </div>
           <div className='flex flex-wrap max-[700px]:w-full max-[700px]:mb-8 w-[48%] justify-between gap-y-6 items-center'>
             {
-              singleIndustory?.whyChooseJet?.items.map((item) => (
-                <div className='w-[48%] max-[700px]:w-full'>
+              singleIndustory?.whyChooseJet?.items.map((item, index) => (
+                <div key={index} className='w-[48%] max-[700px]:w-full'>
                   <h4 className='text-white font-bold mb-4'>{item?.title}</h4>
                   <p className='text-white text-sm'>{item?.description}</p>
                 </div>
