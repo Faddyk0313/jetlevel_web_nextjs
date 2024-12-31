@@ -91,6 +91,18 @@ const nextConfig = {
         destination: '/pricing',
       },
       {
+        source: '/request-a-quote',
+        destination: '/request-quote',
+      },
+      {
+        source: '/instant-private-jet-quotes',
+        destination: '/instant-qoute',
+      },
+      {
+        source: '/jetlevel-aviation-standard-terms-and-conditions',
+        destination: '/terms-of-use',
+      },
+      {
         source: '/industry-specific-charter',
         destination: '/industory-charter',
       },
