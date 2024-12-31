@@ -14,6 +14,12 @@ import AvailableAircrafts from "@/sections/AvailableAircrafts";
 import WhatOurClientsSay from "@/sections/WhatOurClientsSay";
 import Faqs from "@/sections/Faqs";
 
+export const metadata = {
+  title: 'Private Jet Charter & Jet Rental Service | JetLevel Aviation',
+  description: 'JetLevel Aviation offers premier 24/7 private jet charter services. Experience unparalleled luxury and flawless travel with us. Elevate your journey today.',
+};
+
+
 export default function Home() {
 
   const IconsItems = [

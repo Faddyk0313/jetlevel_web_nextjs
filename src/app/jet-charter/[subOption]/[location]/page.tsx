@@ -1,12 +1,13 @@
 
-import Airport_Aircraft_Blog_Page from "@/components/Airport_Aircraft_Blog_Page";
+
 import CityPage from "@/components/CityPage";
 import EmptyLegPage from "@/components/EmptyLegPage";
-import { blogs, internationalLocations, usCanadaLocations } from "@/components/Locations";
 import RoutesPage from "@/components/RoutesPage";
+import { blogs, internationalLocations, usCanadaLocations } from "@/components/Locations";
 import { createClient } from "@/lib/contento";
 import { ContentData } from "@gocontento/client";
 import { notFound } from "next/navigation";
+import Airport_Aircraft_Blog_Page from "@/components/Airport_Aircraft_Blog_Page";
 
 type PageProps = {
     params: {
@@ -15,18 +16,70 @@ type PageProps = {
     };
 };
 
+// Shared function to fetch content
+async function fetchContent(subOption: string, location: string) {
+    let content: ContentData | null =   null;
+    let contentType2: string | undefined;
+
+    // Determine content type and fetch content
+    if (subOption === "cities") {
+        if (usCanadaLocations.includes(location)) {
+            contentType2 = "usa_city_pages";
+        } else if (internationalLocations.includes(location)) {
+            contentType2 = "international_city_pages";
+        }
+    } else if (subOption === "popular-routes") {
+        contentType2 = "route_pages";
+    } else if (subOption === "empty-legs") {
+        contentType2 = "empty_leg_flights";
+    }
+
+    if (contentType2) {
+        try {
+            content = await createClient().getContentBySlug(
+                `${subOption === "empty-legs" ? "empty-leg-flights" : subOption == "popular-routes" ? "private-jet-charter" : subOption == "cities" ? "private-jet-charter-flights-to" : ""}-${location}`,
+                contentType2
+            );
+        } catch (err) {
+            console.error("Error fetching content:", err);
+        }
+    }
+    return { content, contentType2 };
+}
+
+// Generate metadata dynamically
+export async function generateMetadata({ params }: PageProps) {
+    const { subOption, location } = params;
+    const { content } = await fetchContent(subOption, location);
+
+    if (content && content.seo) {
+        const title = content.seo.title;
+        const description = content.seo.description;
+
+        return {
+            title: title || "Default Page Title",
+            description: description || "Default page description.",
+        };
+    }
+
+    // Fallback metadata
+    return {
+        title: "Page Not Found",
+        description: "The page you are looking for does not exist.",
+    };
+}
+
 const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
     let { subOption, location } = params;
     let contentType;
-
     if (blogs.includes(location)) { // This condition will only be true for those blog pages whose url starts with 'empty-leg-flights-'.
         // console.log("------", subOption);
         contentType = 'blogs';
 
-        let content: void | ContentData  = undefined;
+        let content: void | ContentData = undefined;
         if (subOption == "empty-legs") {
             subOption = 'blog';
-             content = await createClient()
+            content = await createClient()
                 .getContentBySlug(
                     `empty-leg-flights-${location}`,
                     contentType
@@ -36,7 +89,7 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
                 });
         } else if (subOption == "popular-routes") {
             subOption = 'blog';
-             content = await createClient()
+            content = await createClient()
                 .getContentBySlug(
                     `private-jet-charter-${location}`,
                     contentType
@@ -67,11 +120,24 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
         // const date = content.updated_at ? content.updated_at : content.created_at
         return <Airport_Aircraft_Blog_Page fields={content.fields} date={formattedDate} region={contentType} />;
     }
-    else if (subOption === "cities") {
-        if (usCanadaLocations.includes(location)) {
-            contentType = 'usa_city_pages';
-        } else if (internationalLocations.includes(location)) {
-            contentType = '	international_city_pages';
+
+    
+
+    else {
+        const { content, contentType2 } = await fetchContent(subOption, location);
+        if (!content || !contentType2) {
+            return (
+                <div className="p-6 max-w-4xl mx-auto text-center">
+                    <h2 className="font-bold my-4">Page Not Found</h2>
+                </div>
+            );
+        }
+        if (subOption === "cities") {
+            return <CityPage fields={content.fields} region={contentType2} />;
+        } else if (subOption === "popular-routes") {
+            return <RoutesPage fields={content.fields} />;
+        } else if (subOption === "empty-legs") {
+            return <EmptyLegPage fields={content.fields} />;
         } else {
             return (
                 <div className="p-6 max-w-4xl mx-auto text-center">
@@ -79,62 +145,8 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
                 </div>
             );
         }
-        const content: void | ContentData = await createClient()
-            .getContentBySlug(
-                `private-jet-charter-flights-to-${location}`,
-                contentType
-            )
-            .catch((err) => {
-                console.log(err);
-            });
-        // console.log("subOption, Location, contentType----------------", subOption, location, contentType);
-
-        if (!content) {
-            return (
-                <div className="p-6 max-w-4xl mx-auto text-center">
-                    <h2 className="font-bold my-4">Page Not Found</h2>
-                </div>
-            );
-        }
-        return <CityPage fields={content.fields} region={contentType} />;
-    } else if (subOption == "popular-routes") {
-        const content: void | ContentData = await createClient()
-            .getContentBySlug(
-                `private-jet-charter-${location}`,
-                'route_pages'
-            )
-            .catch((err) => {
-                console.log(err);
-            });
-        // console.log("content", content);
-
-        if (!content) {
-            return notFound(); // navigate to a "not found" page if content is missing
-        }
-
-        return (
-            <RoutesPage fields={content.fields} />
-        );
-    } else if (subOption === "empty-legs") {
-        // Access the query parameters
-        const content: void | ContentData = await createClient()
-            // .getContentBySlug('empty-leg-flights-aspen', 'empty_leg_flights')
-            .getContentBySlug(`empty-leg-flights-${location}`, "empty_leg_flights")
-            .catch((err) => {
-                console.log(err);
-                notFound();
-            });
-        if (!content) {
-            return notFound(); // navigate to a "not found" page if content is missing
-        }
-        return <EmptyLegPage fields={content.fields} />;
-    } else {
-        return (
-            <div className="p-6 max-w-4xl mx-auto text-center">
-                <h2 className="font-bold my-4">Page Not Found</h2>
-            </div>
-        );
     }
+
 };
 
 export default FlightPage;

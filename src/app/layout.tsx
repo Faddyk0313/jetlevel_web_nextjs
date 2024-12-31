@@ -21,12 +21,6 @@ const montserrat = Montserrat({
   variable: '--font-montserrat',
 });
 
-const libreBaskerville = Libre_Baskerville({
-  subsets: ['latin'],
-  weight: ['400'],
-  variable: '--font-libre-baskerville',
-});
-
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -53,7 +47,7 @@ export default function RootLayout({
           `}
         </Script>
       </head>
-      <body className={`${playfairDisplay.variable} ${montserrat.variable} ${libreBaskerville.variable} max-w-screen overflow-x-hidden`}>
+      <body className={`${playfairDisplay.variable} ${montserrat.variable} max-w-screen overflow-x-hidden`}>
         <Script
           src={`https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
           strategy="beforeInteractive"

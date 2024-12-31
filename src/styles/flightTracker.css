@@ -149,9 +149,6 @@
     padding-top: 20px;
 }
 
-* {
-    box-sizing: border-box;
-}
 .flight-tracker-results-inner .ft-results-2 .ft-results-2-left {
     padding-right: 25px;
 }
@@ -256,11 +253,3 @@
 .ft-map img {
     width: 100% !important;
 }
-
-img {
-    vertical-align: middle;
-}
-img {
-    border: 0;
-}
-
