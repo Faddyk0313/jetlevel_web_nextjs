@@ -11,6 +11,7 @@ import WhatOurClientsSay from '@/sections/WhatOurClientsSay';
 import Image from 'next/image';
 import React from 'react';
 import PricingContent from '@/components/PricingContent';
+import Link from 'next/link';
 
 export const metadata = {
   title: "Cost of Chartering a Private Jet - Flights & Rates",
@@ -167,7 +168,7 @@ const Pricing = () => {
       heading: '',
       accessor: '',
       Cell: ({ row }: { row: Record<string, any>; }) => <div className='relative font-bold text-black hover:text-white w-full h-full'>
-        <button className='w-full h-full'>Enquire</button>
+        <Link href='/request-a-qoute'><button className='w-full h-full group-hover:text-white'>Inquire</button></Link>
       </div>
     },
   ];
@@ -238,15 +239,10 @@ const Pricing = () => {
           />
         </section>
 
-
         <PricingContent>
           <SmartTravelTools />
           <WhatOurClientsSay />
         </PricingContent>
-
-
-
-
       </div>
     </>
 

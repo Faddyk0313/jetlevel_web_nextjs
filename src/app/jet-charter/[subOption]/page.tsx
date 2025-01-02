@@ -4,8 +4,6 @@ import UsCanadaPage from '@/components/UsCanadaPage';
 import { createClient } from "@/lib/contento";
 import BrandNames from "@/sections/BrandNames";
 import Hero from "@/sections/Hero";
-import { UsCanadaCities } from '@/svg';
-import Link from "next/link";
 import { notFound } from "next/navigation";
 
 type PageProps = {
@@ -40,35 +38,29 @@ export async function generateMetadata({ params }: PageProps) {
 
 // This function generates static parameters for known paths
 export async function generateStaticParams() {
-  return Object.keys(pageContent).map((subOption) => ({ subOption }));
+  return Object.keys(pageContent).map((subOption) => ({
+    subOption,
+  }));
 }
-// Main Component
-const JetCharter = async ({ params }: PageProps) => {
-  const { subOption } = params;
 
   const { title, link } = pageContent[subOption] || {
     title: "Page Not Found",
   };
 
-  // Determine the contentType based on subOption
-  let contentType;
-  if (subOption === "us-canada") {
-    contentType = "usa_city_pages";
-  } else if (subOption === "international") {
-    contentType = "international_city_pages";
-  } else if (subOption === "popular-routes") {
-    contentType = "route_pages";
-  } else if (subOption === "empty-legs") {
-    contentType = "empty_leg_flights";
-  } else {
-    notFound();
+  const contentType = {
+    "us-canada": "usa_city_pages",
+    international: "international_city_pages",
+    "popular-routes": "route_pages",
+    "empty-legs": "empty_leg_flights",
+  }[subOption];
+
+  if (!contentType) {
     return null;
   }
 
-  const client = createClient();
-  const limit = 100; // Set to a reasonable high limit
+  const limit = 100;
   let response = await client.getContentByType({
-    contentType: contentType,
+    contentType,
     sortBy: "published_at",
     sortDirection: "desc",
     limit,
@@ -80,7 +72,23 @@ const JetCharter = async ({ params }: PageProps) => {
     response = await response.nextPage();
     content = content.concat(response.content);
   }
-  // console.log("Total content items:", content.length);
+
+  return content;
+}
+
+// Main Component
+const JetCharter = async ({ params }: PageProps) => {
+  const { subOption } = params;
+
+  const { title, link } = pageContent[subOption] || {
+    title: "Page Not Found",
+  };
+
+  const content = await fetchContent(subOption);
+
+  if (!content) {
+    notFound();
+  }
 
   return (
     <>
@@ -102,11 +110,9 @@ const JetCharter = async ({ params }: PageProps) => {
                   : null
           }
         </section>
-        )
-        :<EmptyLegDirectory />
-      }
-          
-
+      ) : (
+        <EmptyLegDirectory />
+      )}
     </>
   );
 };

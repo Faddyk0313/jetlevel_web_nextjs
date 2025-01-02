@@ -268,8 +268,6 @@ export default function TourSelect (props:any) {
     }
   };
   
-  // console.log('openModal',openModal);
-
   const CustomInput = React.forwardRef((arg:any, ref:any) => (
     <div className="custom-input" onClick={arg.onClick} ref={ref}>
       <div className="icon">

@@ -27,7 +27,7 @@ const OurTeamPage = () => {
 
         <h2 className=' text-center mb-[30px]'>Leadership</h2>
         <div className='flex items-center justify-between flex-wrap'>
-        <div className="w-[32%] mb-6 max-[700px]:w-full border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-white transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
+        <div className="w-[32%] rounded-2xl mb-6 max-[700px]:w-full border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-white transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
           <Image
             src="/images/Ricky-Gomulka-Jet-Level-CEO-With Wife.png"
             alt="Ceo Photo"
@@ -53,7 +53,7 @@ const OurTeamPage = () => {
           </div>
         </div>
 
-        <div className="w-[32%] mb-6 max-[700px]:w-full border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-white transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
+        <div className="w-[32%] rounded-2xl mb-6 max-[700px]:w-full border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-white transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
           <Image
             src="/images/President Photo.webp"
             alt="President Photo"
@@ -77,7 +77,7 @@ const OurTeamPage = () => {
           </div>
         </div>
 
-        <div className="w-[32%] mb-6 max-[700px]:w-full border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-white transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
+        <div className="w-[32%] rounded-2xl mb-6 max-[700px]:w-full border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-white transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
           <Image
             src="/images/Ceo Photo.webp"
             alt="Ceo Photo"

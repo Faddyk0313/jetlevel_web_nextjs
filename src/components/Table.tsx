@@ -46,7 +46,7 @@ const Table: React.FC<TableProps> = ({ data, column, button, border }) => {
                         key={colIndex}
                         className={`px-6 [&:nth-child(1)]:pl-[2.3rem] text-center py-4 font-medium whitespace-nowrap ${
                           button && colIndex === column.length - 1
-                            ? 'bg-[#F8F8F8] hover:bg-black cursor-pointer button-hover hover:text-white'
+                            ? 'bg-[#F8F8F8] hover:bg-black cursor-pointer button-hover hover:text-white group'
                             : ''
                         } ${border ? 'border-2 border-[#0071BA]' : ''}`}
                       >

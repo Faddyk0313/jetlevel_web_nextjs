@@ -251,7 +251,7 @@ const PricingContent = ({ children }: any) => {
     return (
         <>
             <section className='flex relative justify-between px-5 md:px-10 lg:px-20 pb-0'>
-                <div className='w-[65%] max-[700px]:w-full mt-6 flex flex-col gap-y-[30px]'>
+                <div className='w-[65%] max-[700px]:w-full flex flex-col gap-y-[30px]'>
                     <Collapsible
                         key={1}
                         question={'General Cost Breakdown'}
@@ -280,6 +280,7 @@ const PricingContent = ({ children }: any) => {
                         }
                         iconStyle="caret"
                         iconPosition="end"
+                        classNames='pt-0'
                         isOpen={faqSection === 'general-cost-breakdown'}
                         onClick={() => toggleSection('general-cost-breakdown')}
                     />
@@ -1479,13 +1480,13 @@ const PricingContent = ({ children }: any) => {
                     />
                 </div>
 
-                <div className='w-[29%] max-[700px]:hidden sticky h-[500px] top-[100px]'>
+                <div className='w-[29%] max-[700px]:hidden sticky h-[500px] top-[100px] mt-[19px]'>
                     <h2 className='mb-8 border-b pb-4 '>On This Page</h2>
-                    <p
-                        onClick={() => scrollToSection('general-cost-breakdown')}
-                        className='mb-8 ml-4 text-xl hover:text-[#0071BA] hover:border-l-2 hover:border-[#0071BA] cursor-pointer hover:pl-3'
+                    <p 
+                    onClick={() => scrollToSection('general-cost-breakdown')}
+                    className='mb-8 ml-4 text-xl hover:text-[#0071BA] hover:border-l-2 hover:border-[#0071BA] cursor-pointer hover:pl-3'
                     >
-                        General Cost Breakdown
+                    General Cost Breakdown
                     </p>
                     <p onClick={() => scrollToSection('factors-affecting-charter-costs')} className='mb-8 ml-4 text-xl hover:text-[#0071BA] hover:border-l-2 hover:border-[#0071BA] cursor-pointer hover:pl-3'>Factors Affecting Charter Costs</p>
                     <p onClick={() => scrollToSection('additional-costs-and-fees')} className='mb-8 ml-4 text-xl hover:text-[#0071BA] hover:border-l-2 hover:border-[#0071BA] cursor-pointer hover:pl-3'>Additional Costs and Fees</p>
@@ -1494,22 +1495,28 @@ const PricingContent = ({ children }: any) => {
                     <p onClick={() => scrollToSection('scenario-based-cost-analysis')} className='mb-8 ml-4 text-xl hover:text-[#0071BA] hover:border-l-2 hover:border-[#0071BA] cursor-pointer hover:pl-3'>Scenario-Based Cost Analysis</p>
                 </div>
             </section>
-                        {children}
-            <div className='mt-14 flex flex-col gap-y-[15px] w-[90%] m-[30px_auto]'>
+            {children}
+
+            <div className='mt-14 w-[90%] m-[30px_auto]'>
+            <h2 className='text-center mb-10'>Frequently Asked Questions</h2>
+            <div className='flex flex-col gap-y-[15px]'>
                 {
-                    faqData.map((faq, index) => (
-                        <Collapsible
-                            key={index}
-                            question={faq.question}
-                            answer={faq.answer}
-                            iconStyle="caret"
-                            iconPosition="end"
-                            isOpen={openIndex === index}
-                            onClick={() => handleToggle(index)}
-                        />
-                    ))
+                faqData.map((faq,index) => (
+                    <Collapsible  
+                    key={index}
+                    question={faq.question}
+                    answer={faq.answer}
+                    iconStyle="caret"
+                    isfaq={true}
+                    iconPosition="end"
+                    isOpen={openIndex === index}
+                    onClick={() => handleToggle(index)} 
+                    />
+                ))
                 }
-                {/* < /> */}
+            </div>
+            
+            {/* < /> */}
             </div>
         </>
     );
