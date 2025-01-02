@@ -18,21 +18,21 @@ export const metadata = {
 // Define the UsCanadaPage component
 const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
   // console.log("------", content)
-  const cities = content.map((item:any) => {
+  const cities = content.map((item: any) => {
     return {
-      heading: item.fields.title?.text || item.name,  // fallback to item.name if no fields.title
+      heading: item.fields.page_name?.text || item.name,  // fallback to item.name if no fields.title
       link: `/${item.slug}`,
-      img:`${title === "Routes" ? "/images/single routes img in directory.png" : item.fields.hero_image?.assets?.[0]?.asset?.url }` || '',
+      img: `${title === "Routes" ? "/images/single routes img in directory.png" : item.fields.hero_image?.assets?.[0]?.asset?.url}` || '',
     };
   });
 
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredCities, setFilteredCities] = useState(cities);
   const [currentPage, setCurrentPage] = useState(1);
-  const citiesPerPage = 8; 
+  const citiesPerPage = 8;
 
   const handleSearch = () => {
-    const filtered = cities.filter((city:any) =>
+    const filtered = cities.filter((city: any) =>
       city.heading.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredCities(filtered);
@@ -84,28 +84,30 @@ const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
         </h2>
         <div className="text-center pt-8">
           <Button
-              text='Request a Quote'
-              variant='primary'
+            text='Request a Quote'
+            variant='primary'
           />
         </div>
       </section>
 
-      <div className="shadow-[3px_4px_6px_3px_lightgray] flex justify-between rounded-full">
-        <input
-          onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Browse your dream destination"
-          className="pl-[20px] font-bold focus:outline-transparent w-[96%] max-[700px]:w-[90%] rounded-[30px_0px_0px_30px]"
-          type="text"
-        />
-        <div className="cursor-pointer bg-[#0071BA] w-[4%] max-[700px]:w-[10%] p-3 rounded-[0px_40px_40px_0px] text-center">
-          <Search onClick={handleSearch} />
-        </div>
-      </div>
+      <div className="shadow-[3px_4px_6px_3px_lightgray] flex justify-between rounded-full focus-within:outline focus-within:outline-blue">
+  <input
+    onKeyDown={(e) => e.key === 'Enter' && handleSearch()}
+    value={searchTerm}
+    onChange={(e) => setSearchTerm(e.target.value)}
+    placeholder="Browse your dream destination"
+    className="pl-[20px] font-bold focus:outline-none w-[96%] max-[700px]:w-[90%] rounded-[30px_0px_0px_30px]"
+    type="text"
+  />
+  <div className="cursor-pointer bg-[#0071BA] w-[4%] max-[700px]:w-[10%] p-3 rounded-[0px_40px_40px_0px] text-center">
+    <Search onClick={handleSearch} />
+  </div>
+</div>
+
+
 
       <section className="flex gap-x-4 flex-wrap gap-y-4">
-        {currentCities.map((city:any,index: number) => (
+        {currentCities.map((city: any, index: number) => (
           <CharterCity img={city.img} heading={city.heading} link={city.link} key={index} />
         ))}
       </section>
@@ -117,11 +119,10 @@ const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
               <Button
                 text={number}
                 onClick={() => handlePageChange(Number(number))}
-                className={`${
-                  currentPage === number
+                className={`${currentPage === number
                     ? 'bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] text-white'
                     : 'bg-white text-[#0071BA]'
-                } px-4 py-2 rounded-full flex items-center justify-center  w-[43px] h-[43px]`}
+                  } px-4 py-2 rounded-full flex items-center justify-center  w-[43px] h-[43px]`}
               />
             </li>
           ))}

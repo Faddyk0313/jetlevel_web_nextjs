@@ -1,7 +1,9 @@
 import BrandNames from "@/sections/BrandNames";
 import Hero from "@/sections/Hero";
 import CollapsibleSection from "./CollapsibleSection";
-import TopCharteredCities from "./TopCharteredCities";
+import TopCharteredCities from './TopCharteredCities';
+import { Suspense } from "react";
+import LeadForm from '@/components/LeadForm';
 import Breadcrumb from "./Breadcrumb/Breadcrumb";
 import CollapsibleAvinodeCalculatorSection from "./CollapsibleAvinodeCalculatorSection";
 
@@ -39,11 +41,11 @@ const EmptyLegPage = async ({ fields }: any) => {
             />
             <BrandNames />
             <section className="flex flex-col lg:flex-row gap-10 px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
-                <div className="min-w-full md:min-w-[72%]"> 
+                <div className="min-w-full md:min-w-[72%]">
                     <Breadcrumb />
 
                     <CollapsibleSection title={fields.intoduction.blocks[0].fields.title.text} content={fields.intoduction.blocks[0].fields.paragraph.text} isDefaultOpen={true} />
-                    <CollapsibleAvinodeCalculatorSection title="Browse The Upcoming Featured list of Empty Leg Flights"/>
+                    <CollapsibleAvinodeCalculatorSection title="Browse The Upcoming Featured list of Empty Leg Flights" />
                     <CollapsibleSection title={fields.overview.blocks[0].fields.title.text} content={fields.overview.blocks[0].fields.paragraph.text} />
                     <CollapsibleSection title={fields.benefits.blocks[0].fields.title.text} content={fields.benefits.blocks[0].fields.paragraph.text} />
                     <CollapsibleSection title={fields.finding_and_booking.blocks[0].fields.title.text} content={fields.finding_and_booking.blocks[0].fields.paragraph.text} />
@@ -52,23 +54,60 @@ const EmptyLegPage = async ({ fields }: any) => {
                     <CollapsibleSection title="Listing of Region-Specific Empty Leg Flights" content={links} />
                     <CollapsibleSection title="Frequently Asked Questions" content={faqContent} />
                 </div>
-                <div className="min-w-[24%] md:w-fit">
-                    <TopCharteredCities
-                        title="Empty Leg"
-                        cities={[
-                            { name: 'New York, NY', link: '#' },
-                            { name: 'Aspen, CO', link: '#' },
-                            { name: 'Los Angeles, CA', link: '#' },
-                            { name: 'San Francisco, CA', link: '#' },
-                            { name: 'Miami, FL', link: '#' },
-                            { name: 'Chicago, IL', link: '#' },
-                            { name: 'Houston, TX', link: '#' },
-                            { name: 'Dallas, TX', link: '#' },
-                            { name: 'Las Vegas, NV', link: '#' },
-                            { name: 'Denver, CO', link: '#' },
-                        ]}
-                        buttonLink="#"
-                    />
+                <div className="min-w-[24%] sm:flex sm:flex-wrap justify-between gap-5 ">
+                    <div className="w-fit lg:w-auto sm:min-w-[324px]">
+                        <Suspense fallback={<div className="search-form__loader"></div>}>
+                            <LeadForm widget={true} />
+                        </Suspense>
+                    </div>
+                    <div className="w-fit lg:w-auto sm:min-w-[324px] ">
+                        <TopCharteredCities
+                            title="Popular Empty Legs Flights"
+                            cities={[
+                                {
+                                    name: 'Aspen, CO',
+                                    link: '/empty-leg-flights-aspen'
+                                },
+                                {
+                                    name: 'Las Vegas, NV',
+                                    link: '/empty-leg-flights-las-vegas-nv'
+                                },
+                                {
+                                    name: 'Miami, FL',
+                                    link: '/empty-leg-flights-miami-fl'
+                                },
+                                {
+                                    name: 'Los Angeles, CA',
+                                    link: '/empty-leg-flights-los-angeles-ca'
+                                },
+                                {
+                                    name: 'New York, NY',
+                                    link: '/empty-leg-flights-new-york-ny'
+                                },
+                                {
+                                    name: 'Chicago, IL',
+                                    link: '/empty-leg-flights-chicago-il'
+                                },
+                                {
+                                    name: 'Dallas, TX',
+                                    link: '/empty-leg-flights-dallas-tx'
+                                },
+                                {
+                                    name: 'Denver, CO',
+                                    link: '/empty-leg-flights-denver-co'
+                                },
+                                {
+                                    name: 'Houston, TX',
+                                    link: '/empty-leg-flights-houston-tx'
+                                },
+                                {
+                                    name: 'Orlando, FL',
+                                    link: '/empty-leg-flights-orlando'
+                                },
+                            ]}
+                            buttonLink="#"
+                        />
+                    </div>
                 </div>
             </section>
             {/* <BookYourPrivateJet /> */}

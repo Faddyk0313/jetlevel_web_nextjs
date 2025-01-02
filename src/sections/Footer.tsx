@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 type Section = {
     title: string;
-    links: string[];
+    links: { title: string, link: string; }[];
 };
 
 const Footer = () => {
@@ -15,36 +15,167 @@ const Footer = () => {
         {
             title: "Featured Routes",
             links: [
-                "Miami to Las Vegas: Private Jet Rental",
-                "Los Angeles to Cabo San Lucas: Private Jet Rental",
-                "New York to London: Private Jet Rental",
-                "New York to/from Los Angeles: Private Jet Rental",
-                "New York to Miami: Private Jet Rental",
-                "Toronto to New York: Private Jet Rental"
+                {
+                    title: "Van Nuys to Las Vegas – Private Jet Charter",
+                    link: "/private-jet-charter-los-angeles-to-las-vegas"
+                },
+                {
+                    title: "Los Angeles to San Francisco – Private Jet Charter",
+                    link: "/private-jet-charter-los-angeles-to-san-francisco"
+                },
+                {
+                    title: "Dallas to Houston – Private Jet Charter",
+                    link: "/private-jet-charter-dallas-to-houston"
+                },
+                {
+                    title: "Atlanta to Miami – Private Jet Charter",
+                    link: "/private-jet-charter-atlanta-to-miami"
+                },
+                {
+                    title: "Aspen to Dallas – Private Jet Charter",
+                    link: "/private-jet-charter-aspen-to-dallas"
+                },
+                {
+                    title: "Chicago to Fort Lauderdale – Private Jet Charter",
+                    link: "/private-jet-charter-chicago-to-fort-lauderdale"
+                },
+                {
+                    title: "Teterboro to Miami – Private Jet Charter",
+                    link: "/private-jet-charter-teterboro-to-miami"
+                }
+
             ]
         },
         {
             title: "Featured Cities",
             links: [
-                "New York", "Los Angeles", "Dallas", "Chicago", "Houston", "London", "Dubai", "Toronto", "Montreal", "Nice"
+                {
+                    title: "Van Nuys to Las Vegas – Private Jet Charter",
+                    link: "/private-jet-charter-los-angeles-to-las-vegas"
+                },
+                {
+                    title: "Los Angeles to San Francisco – Private Jet Charter",
+                    link: "/private-jet-charter-los-angeles-to-san-francisco"
+                },
+                {
+                    title: "Dallas to Houston – Private Jet Charter",
+                    link: "/private-jet-charter-dallas-to-houston"
+                },
+                {
+                    title: "Atlanta to Miami – Private Jet Charter",
+                    link: "/private-jet-charter-atlanta-to-miami"
+                },
+                {
+                    title: "Aspen to Dallas – Private Jet Charter",
+                    link: "/private-jet-charter-aspen-to-dallas"
+                },
+                {
+                    title: "Chicago to Fort Lauderdale – Private Jet Charter",
+                    link: "/private-jet-charter-chicago-to-fort-lauderdale"
+                },
+                {
+                    title: "Teterboro to Miami – Private Jet Charter",
+                    link: "/private-jet-charter-teterboro-to-miami"
+                }
+
             ]
         },
         {
             title: "Featured Airports",
             links: [
-                "Teterboro Airport", "Palm Beach International Airport", "Love Field Airport", "Westchester County Airport", "Van Nuys Airport", "McCarran International Airport"
+                {
+                    title: "Boston Logan International Airport",
+                    link: "/boston-logan-international-airport-kbos"
+                },
+                {
+                    title: "Orlando International Airport",
+                    link: "/orlando-international-airport-kmco"
+                },
+                {
+                    title: "Naples Airport",
+                    link: "/naples-airport-kapf"
+                },
+                {
+                    title: "Addison Airport",
+                    link: "/addison-airport-kads"
+                },
+                {
+                    title: "Chicago Executive Airport",
+                    link: "/chicago-executive-airport-kpwk"
+                },
+                {
+                    title: "Miami-Opa Locka Executive Airport",
+                    link: "/miami-opa-locka-executive-airport-kopf"
+                },
+                {
+                    title: "Westchester County Airport",
+                    link: "/westchester-county-airport-khpn"
+                },
+
             ]
         },
         {
             title: "Services",
             links: [
-                "Jet Card Membership", "Private Jet Charter", "Business Jet Charter", "Group Charter", "Helicopter Rental", "Traveling With Pets", "VIP Airliner", "Medical Flight", "Empty Leg Flights", "Private Flights"
+                {
+                    title: "On-Demand Charter",
+                    link: "/private-jet-charter"
+                },
+                {
+                    title: "Sports Team Charter",
+                    link: "/industry-specific-charter/sports-team-charter"
+                },
+                {
+                    title: "Oil and Gas Industry Charter",
+                    link: "/industry-specific-charter/oil-and-gas-industry-charter"
+                },
+                {
+                    title: "Music Industry Charter",
+                    link: "/industry-specific-charter/music-industry-charter"
+                },
+                {
+                    title: "Empty Leg Flights",
+                    link: "/empty-leg-flights"
+                },
+                {
+                    title: "Corporate Jet Charter",
+                    link: "/industry-specific-charter/corporate-jet-charter"
+                },
+                {
+                    title: "Government Air Charter",
+                    link: "/industry-specific-charter/government-air-charter"
+                }
+
             ]
         },
         {
             title: "Resources",
             links: [
-                "Company", "Private Jets", "Destinations", "Private Jet Comparison", "Blog", "Safety", "Pricing", "Clean Air Initiative"
+                {
+                    title: "Private Jet Airports",
+                    link: "/usa-airport-directory"
+                },
+                {
+                    title: "Private Jet Types",
+                    link: "/aircraft-charters"
+                },
+                {
+                    title: "Pricing Guide",
+                    link: "/cost-of-chartering-a-private-jet"
+                },
+                {
+                    title: "Intant Cost Estimator",
+                    link: "/charter-flights-cost-calculator"
+                },
+                {
+                    title: "Flight Tracker",
+                    link: "/flight-tracker"
+                },
+                {
+                    title: "Distance Calculator",
+                    link: "/distance-calculator"
+                },
+
             ]
         }
     ];
@@ -60,7 +191,7 @@ const Footer = () => {
                             width={790}
                             height={142}
                             className='md:w-72 max-w-72 mx-auto h-auto'
-                             />
+                        />
                     </div>
                     <div className='flex flex-col md:flex-row gap-7 '>
                         <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:h-[54px]">
@@ -102,18 +233,18 @@ const Footer = () => {
                         <div className='lg:w-1/4 pb-4'>
                             <h4 className="font-playfair tracking-widest text-[15px] lg:w-fit px-8 lg:pl-[25%] lg:pr-0">{section.title}</h4>
                         </div>
-                        <ul className='list-none lg:w-3/4 px-8  lg:pr-12 lg:pl-0  text-sm'>
+                        <ul className='list-none lg:w-3/4 pl-8 pr-4  lg:pr-12 lg:pl-0  text-sm'>
                             {section.links.map((link, linkIndex) => (
                                 <li key={linkIndex} className='inline'>
                                     <Link
-                                        href="#"
+                                        href={link.link}
                                         // Will cause weird wrapping of li if not inline flex
-                                        className={`text-[#858585] leading-7 hover:text-blue mr-4 ${index !== 0 ? "inline-flex" : ""}`}
+                                        className={`text-[#858585] leading-7 hover:text-blue mr-2  inline-flex`}
                                     >
-                                        {link}
+                                        {link.title}
                                     </Link>
                                     {linkIndex !== section.links.length - 1 && (
-                                        <span className="text-[#858585] mr-2">•</span>
+                                        <span className="text-[#858585] mr-2 hidden sm:inline">|</span>
                                     )}
                                 </li>
                             ))}
@@ -123,7 +254,7 @@ const Footer = () => {
 
             </div>
             <div className="relative">
-                <hr className='-ml-5 md:-ml-20 border-[#858585] absolute w-[calc(100%_+40px)] md:w-[calc(100%_+120px)] lg:w-[calc(100%_+160px)]'/>
+                <hr className='-ml-5 md:-ml-20 border-[#858585] absolute w-[calc(100%_+40px)] md:w-[calc(100%_+120px)] lg:w-[calc(100%_+160px)]' />
                 <div className='max-w-[1800px] mx-auto flex flex-col lg:flex-row text-[#f0f1f2] gap-5 mt-8 py-4'>
                     <div className='flex gap-5 flex-col md:flex-row lg:flex-col text-[11px]'>
                         <div>&copy; 2024 Jetlevel Aviation LLC All rights reserved</div>
@@ -132,10 +263,9 @@ const Footer = () => {
                             <Link href="/jetlevel-aviation-standard-terms-and-conditions" className='hover:text-blue'>Terms of Use</Link>
                         </div>
                     </div>
-                    <div className='flex-1 text-[#858585] text-[9px] '>
+                    <p className='flex-1 text-[#858585] text-[9px] '>
                         All Aircraft and Air Carriers selected by JetLevel Aviation, LLC are fully certified by The Federal Aviation Administration and The U.S Department of Transportation under Part 135 regulations. Carriers are solely responsible for the air transportation arranged on behalf of JetLevel Aviation, LLC. JetLevel Aviation, LLC does not own or operate any aircraft. JetLevel Aviation, LLC is not a direct or indirect air carrier. All flights chartered through JetLevel Aviation, LLC are operated by Part 135 Air Carriers or Foreign Civil Aviation Authority (CAA) equivalent that operate and exercise full operational control over those flights at all times.
-                        <span className='text-blue'>&nbsp; Full Disclaimer.</span>
-                    </div>
+                    </p>
                 </div>
             </div>
         </section>)

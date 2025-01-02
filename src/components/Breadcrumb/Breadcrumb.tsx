@@ -126,8 +126,8 @@ const Breadcrumb: React.FC = () => {
     hrefArray = segments.slice(1);
   }
 
-  console.log("href", href);
-  console.log("hrefArray", hrefArray);
+  // console.log("href", href);
+  // console.log("hrefArray", hrefArray);
 
   return (
     (<div
