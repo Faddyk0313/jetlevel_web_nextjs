@@ -12,6 +12,7 @@ import SmartTravelTools from '@/sections/SmartTravelTools'
 import WhatOurClientsSay from '@/sections/WhatOurClientsSay'
 import Image from 'next/image'
 import React, { useState } from 'react'
+import Link from 'next/link';
 
 const EventsPage = () => {
   const [faqSection,setFaqSection] = useState<string | null>('general-cost-breakdown');
@@ -171,7 +172,7 @@ const EventsPage = () => {
 			heading:'',
 			accessor: '',
       Cell: ({ row }: { row: Record<string, any> }) => <div className='relative font-bold text-black hover:text-white w-full h-full'>
-      <button className='w-full h-full group-hover:text-white'>Inquire</button>
+      <Link href='/request-a-qoute'><button className='w-full h-full group-hover:text-white'>Inquire</button></Link>
       </div>
 		},
 	]; 
@@ -1723,7 +1724,7 @@ const EventsPage = () => {
         <WhatOurClientsSay />
 
         <div className='mt-14 w-[90%] m-[30px_auto]'>
-          <h1 className='text-center mb-10'>Frequently Asked Questions</h1>
+          <h2 className='text-center mb-10'>Frequently Asked Questions</h2>
           <div className='flex flex-col gap-y-[15px] '>
             {
               faqData.map((faq,index) => (
@@ -1732,6 +1733,7 @@ const EventsPage = () => {
                   question={faq.question}
                   answer={faq.answer}
                   iconStyle="caret"
+                  isfaq={true}
                   iconPosition="end"
                   isOpen={openIndex === index}
                   onClick={() => handleToggle(index)} 
