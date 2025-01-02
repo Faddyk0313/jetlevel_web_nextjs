@@ -119,7 +119,8 @@ const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
               <Button
                 text={number}
                 onClick={() => handlePageChange(Number(number))}
-                className={`${currentPage === number
+                className={`${
+                  currentPage === number
                     ? 'bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] text-white'
                     : 'bg-white text-[#0071BA]'
                   } px-4 py-2 rounded-full flex items-center justify-center  w-[43px] h-[43px]`}

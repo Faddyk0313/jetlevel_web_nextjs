@@ -12,6 +12,7 @@ const FaqPage = () => {
   const handleToggle = (index: number) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
   };
+  
   const sidebar = [
     {
       name:'Aircraft',
@@ -313,7 +314,6 @@ const FaqPage = () => {
             </div>
           </div>
         </div>
-        
        </section>
     </div>
   )
