@@ -191,19 +191,19 @@ const Footer = () => {
                             width={790}
                             height={142}
                             className='md:w-72 max-w-72 mx-auto h-auto'
-                             />
+                        />
                     </div>
                     <div className='flex flex-col md:flex-row gap-7 '>
                         <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:h-[54px]">
                             <h4 className="text-lg flex-1 min-w-36 lg:max-w-36 text-center">Get the Latest Updates</h4>
-                            <form action="mailto:kingshahbaz0313@gmail.com" method="post" className='flex max-w-72 h-14 p-2 border-[#858585] border rounded-2xl'>
+                            <form action="mailto:kingshahbaz0313@gmail.com" method="post" className='flex max-w-72'>
                                 <input
                                     type="email"
                                     placeholder="Enter your email"
-                                    className="w-full text-sm placeholder-[#858585] bg-black outline-none"
+                                    className="py-4 w-full px-3 h-14 text-sm border border-r-0 placeholder-[#858585] border-[#858585] bg-black outline-none rounded-sm"
                                     required
                                 />
-                                <button type='submit' className='cursor-pointer text-xl pr-4 text-[#858585] hover:text-white transition-all duration-150'>→</button>
+                                <button type='submit' className='cursor-pointer text-xl border border-l-0 border-[#858585] pr-4 text-[#858585] hover:text-white transition-all duration-150'>→</button>
                             </form>
                         </div>
                         <div className='flex flex-col lg:flex-row lg:items-center lg:h-[54px] gap-4 pb-0 lg:pb-0 '>
@@ -229,39 +229,28 @@ const Footer = () => {
 
                 {/* Loop through the sections array and generate each section */}
                 {sections.map((section, index) => (
-                    <div
-                        key={index}
-                        className={`bg-[#202020] py-8 border-b border-black lg:flex items-baseline ${
-                        index === 0 ? "rounded-[20px_20px_0px_0px]" : ""
-                        } ${
-                        index === sections.length - 1 ? "rounded-[0px_0px_20px_20px]" : ""
-                        }`}
-                    >
-                        <div className="lg:w-1/4 pb-4">
-                        <h4 className="font-playfair tracking-widest text-[15px] lg:w-fit px-8 lg:pl-[25%] lg:pr-0">
-                            {section.title}
-                        </h4>
+                    <div key={index} className="bg-[#202020] py-8 border-b border-black lg:flex items-baseline">
+                        <div className='lg:w-1/4 pb-4'>
+                            <h4 className="font-playfair tracking-widest text-[15px] lg:w-fit px-8 lg:pl-[25%] lg:pr-0">{section.title}</h4>
                         </div>
-                        <ul className="list-none lg:w-3/4 px-8 lg:pr-12 lg:pl-0 text-sm">
-                        {section.links.map((link, linkIndex) => (
-                            <li key={linkIndex} className="inline">
-                            <Link
-                                href="#"
-                                className={`text-[#858585] leading-7 hover:text-blue mr-4 ${
-                                index !== 0 ? "inline-flex" : ""
-                                }`}
-                            >
-                                {link}
-                            </Link>
-                            {linkIndex !== section.links.length - 1 && (
-                                <span className="text-[#858585] mr-2">•</span>
-                            )}
-                            </li>
-                        ))}
+                        <ul className='list-none lg:w-3/4 pl-8 pr-4  lg:pr-12 lg:pl-0  text-sm'>
+                            {section.links.map((link, linkIndex) => (
+                                <li key={linkIndex} className='inline'>
+                                    <Link
+                                        href={link.link}
+                                        // Will cause weird wrapping of li if not inline flex
+                                        className={`text-[#858585] leading-7 hover:text-blue mr-2  inline-flex`}
+                                    >
+                                        {link.title}
+                                    </Link>
+                                    {linkIndex !== section.links.length - 1 && (
+                                        <span className="text-[#858585] mr-2 hidden sm:inline">|</span>
+                                    )}
+                                </li>
+                            ))}
                         </ul>
                     </div>
                 ))}
-
 
             </div>
             <div className="relative">
