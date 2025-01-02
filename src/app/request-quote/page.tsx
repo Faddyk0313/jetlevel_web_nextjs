@@ -5,6 +5,11 @@ import React, { Suspense } from 'react';
 import LeadForm from '@/components/LeadForm';
 import HalfSection from '@/components/HalfSection';
 
+export const metadata = {
+  title: 'Request a Quote​ | JetLevel Aviation',
+  description: 'Luxury and convenience in the skies with our Charter Flights request a quote tool. Fill out this form and get our expert aviation advisor to assist you.',
+}
+
 const RequestQuotePage = () => {
   return (
     <div>

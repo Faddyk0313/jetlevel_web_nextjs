@@ -1,5 +1,10 @@
 import React from 'react';
 
+export const metadata = {
+  title: 'Privacy Policy - JetLevel Private Jet Charter',
+  description: 'This Privacy Policy describes how JetLevel Aviation protect your data, What data breach procedures we have in place.',
+}
+
 const PrivacyPolicyPage = () => {
   const termConditions= [
     {

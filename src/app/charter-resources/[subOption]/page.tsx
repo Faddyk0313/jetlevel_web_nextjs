@@ -16,13 +16,47 @@ type PageProps = {
 };
 
 // Define page content based on `subOption`
-const pageContent: Record<string, { title: string; }> = {
-  "private-jet-airports": { title: "Private Jet Airports" },
-  "aircraft-types": { title: "Aircraft Types" },
-  "cost-estimator": { title: "Cost Estimator" },
-  "flight-tracker": { title: "Flight Tracker" },
-  "distance-calculator": { title: "Distance Calculator" },
+const pageContent: Record<string, { title: string; description: string }> = {
+  "private-jet-airports": { 
+    title: "Airport Directory | Private Jet Charter | Executive Airports", 
+    description: "Browse our USA Airport Directory for executive airports across the country flying with JetLevel Aviation. Book your private jet charter: 1-855-JETLEVEL" 
+  },
+  "aircraft-types": { 
+    title: "Private Aircraft Charters | Private Jet Planes for Hire", 
+    description: "Discover JetLevel Aviation's private charter aircraft options. From light jets to long-range planes find aircraft charters & get personalize quote to next flight." 
+  },
+  "cost-estimator": { 
+    title: "Charter Flights Cost Calculator​ | JetLevel Aviation", 
+    description: "With our advance Charter Flights Cost Calculator get accurate estimates based on historical rates. Book or contact us for assistance." 
+  },
+  "flight-tracker": { 
+    title: "Private Flight Tracker and Status| JetLevel Aviation", 
+    description: "Use JetLevel Aviation's flight tracker for real-time flight status updates. Monitor route, ETA, aircraft details & weather for precise tracking & peace of mind." 
+  },
+  "distance-calculator": { 
+    title: "Distance Calculator​ | JetLevel Aviation", 
+    description: "Plan with precision using our Flight Time and Distance Calculator. Get accurate flight charter distances for your luxury travel. Book or contact us for more." 
+  },
 };
+
+// Generate metadata dynamically
+export async function generateMetadata({ params }: PageProps) {
+  const { subOption } = params;
+  const content = pageContent[subOption];
+
+  if (content) {
+    return {
+      title: content.title,
+      description: content.description,
+    };
+  }
+
+  return {
+    title: "Page Not Found",
+    description: "The page you are looking for does not exist.",
+  };
+}
+
 
 // This function generates static parameters for known paths
 export async function generateStaticParams() {
@@ -78,15 +112,15 @@ const CharterResources = async ({ params }: PageProps) => {
   return (
     <>
     {
-      title === 'Private Jet Airports' ?
+      title === 'Airport Directory | Private Jet Charter | Executive Airports' ?
       <UsaAirportPage />:
-      title === 'Aircraft Types' ?
+      title === 'Private Aircraft Charters | Private Jet Planes for Hire' ?
       <AircraftCharterPage />:
-      title === 'Cost Estimator' ?
+      title === 'Charter Flights Cost Calculator​ | JetLevel Aviation' ?
       <CostCalculatorPage /> :
-      title === 'Flight Tracker' ?
+      title === 'Private Flight Tracker and Status| JetLevel Aviation' ?
       <FlightTrackerPage /> :
-      title === 'Distance Calculator' ?
+      title === 'Distance Calculator​ | JetLevel Aviation' ?
       <DistanceCalculatorPage /> :null
     }
   </>

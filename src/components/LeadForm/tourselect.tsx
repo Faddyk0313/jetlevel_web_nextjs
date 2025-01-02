@@ -253,18 +253,18 @@ export default function TourSelect (props:any) {
   };
   
   const closeModal = () => {
-    console.log("Modal closing...");
+    // console.log("Modal closing...");
     setOpenModal(false);
   
     const currentUrl = new URL(window.location.href);
     const queryParams = currentUrl.search;
   
-    console.log("Current URL:", currentUrl.href);
-    console.log("Query Params:", queryParams);
+    // console.log("Current URL:", currentUrl.href);
+    // console.log("Query Params:", queryParams);
   
     if (queryParams) {
       window.history.pushState({}, '', window.location.pathname); // Removes query parameters
-      console.log("Updated URL:", window.location.href);
+      // console.log("Updated URL:", window.location.href);
     }
   };
   

@@ -12,15 +12,31 @@ type PageProps = {
   };
 };
 
-// Static page metadata
-const pageContent: Record<string, { title: string; link: string }> = {
-  "us-canada": { title: "USA & Canada's Premier Chartered Cities", link: "/images/Hero Image for directory Page.webp" },
-  international: { title: "International Chartered Cities", link: "/images/Hero Image for directory Page.webp" },
-  "popular-routes": { title: "Premier Chartered Routes", link: "/images/Hero Image for directory Page.webp" },
-  "empty-legs": { title: "Empty Leg Flights", link: "/images/Empty-Legs Hero Image.avif" },
+const pageContent: Record<string, { title: string; description:string; link: string; }> = {
+  "us-canada": { title: "US & Canada​ | JetLevel Aviation", description: "JetLevel Aviation is a global provider of private travel solutions. View our featured US & Canada locations or request a flight to/from anywhere in the world.", link: "/images/Hero Image for directory Page.webp" },
+  'international': { title: "International Private Jet Charter​ | JetLevel Aviation", description: "JetLevel Aviation is a global provider of private travel solutions. View our featured International locations or request a flight to/from anywhere in the world.", link: "/images/Hero Image for directory Page.webp" },
+  "popular-routes": { title: "Popular Routes​ | JetLevel Aviation", description: "Discover the most sought-after private jet routes. Our curated selection provides quick access to popular destinations, ensuring a seamless and luxurious journey every time.", link: "/images/Hero Image for directory Page.webp" },
+  "empty-legs": { title: "Empty Leg Flights​ | JetLevel Aviation", description: "Score big savings with Empty Leg Flights. Luxurious, private, and cost-effective - your perfect flight solution is just a click away.", link: "/images/Empty-Legs Hero Image.avif" },
 };
 
-// Generate static parameters
+// Dynamic metadata generation
+export async function generateMetadata({ params }: PageProps) {
+  const { subOption } = params;
+
+  // Get metadata based on `subOption`, or fallback for unknown paths
+  const { title, description } = pageContent[subOption] || {
+    title: 'Page Not Found',
+    description: 'The page you are looking for does not exist.',
+  };
+
+  return {
+    title,
+    description,
+  };
+}
+
+
+// This function generates static parameters for known paths
 export async function generateStaticParams() {
   return Object.keys(pageContent).map((subOption) => ({
     subOption,
@@ -76,17 +92,23 @@ const JetCharter = async ({ params }: PageProps) => {
 
   return (
     <>
-      <Hero title={title} image={link} hasCalculator={false} hasOverlay={true} />
+      <Hero title={`${title == 'US & Canada​ | JetLevel Aviation' ? "USA & Canada's Premier Chartered Cities" :title == 'International Private Jet Charter​ | JetLevel Aviation' ? "International Chartered Cities" :title == 'Popular Routes​ | JetLevel Aviation' ? "Premier Chartered Routes" :title == 'Empty Leg Flights​ | JetLevel Aviation' ? "Empty Leg Flights" : ""  }`} description={`${title == 'Empty Leg Flights​ | JetLevel Aviation' ? "Search, Compare, and Book Seamlessly" : ""}`} image={link} hasCalculator={false} hasOverlay={true} />
       <BrandNames />
-      {title !== "Empty Leg Flights" ? (
+      {
+        title !== 'Empty Leg Flights​ | JetLevel Aviation' ? (
         <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
           <Breadcrumb />
-          {title === "USA & Canada's Premier Chartered Cities" ||
-          title === "International Chartered Cities" ? (
-            <UsCanadaPage content={content} />
-          ) : title === "Premier Chartered Routes" ? (
-            <UsCanadaPage title="Routes" content={content} />
-          ) : null}
+          {
+
+            title === "US & Canada​ | JetLevel Aviation" ?
+              <UsCanadaPage content={content} />
+              : title === 'International Private Jet Charter​ | JetLevel Aviation' ?
+                <UsCanadaPage content={content} />
+                :
+                title === 'Popular Routes​ | JetLevel Aviation' ?
+                  <UsCanadaPage title="Routes" content={content} />
+                  : null
+          }
         </section>
       ) : (
         <EmptyLegDirectory />

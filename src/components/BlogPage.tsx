@@ -23,11 +23,11 @@ const BlogPage = ({ fields, date }: BlogPageProps) => {
         <div className="min-w-full md:min-w-[72%]">
           <Breadcrumb />
           <Image
-            className="my-9"
-            src={fields.hero_image.assets[0].asset.url}
-            width={fields.hero_image.assets[0].asset.width}
-            height={fields.hero_image.assets[0].asset.height}
-            alt={fields.hero_image.assets[0].asset.name}
+            className="my-9 w-full"
+            src={fields.hero_image?.assets[0]?.asset?.url}
+            width={fields.hero_image?.assets[0]?.asset?.width}
+            height={fields.hero_image?.assets[0]?.asset?.height}
+            alt={fields.hero_image?.assets[0]?.asset?.name}
           />
           <div className="pb-8">
             <Markdown
@@ -90,10 +90,10 @@ const BlogPage = ({ fields, date }: BlogPageProps) => {
       >
         <Image
           className="object-cover w-full h-auto min-h-72 left-0 sm:-top-[60px] md:-top-[140px] lg:-top-[220px] xl:-top-[300px] opacity-100 absolute group-hover:scale-110 transition-all duration-&lsqb;0.4s&rsqb; ease-&lsqb;cubic-bezier(0.05,0.2,0.1,1)&rsqb; delay-&lsqb;0s&rsqb; -z-10"
-          src={fields.next_post_image.assets[0].asset.url}
-          width={fields.next_post_image.assets[0].asset.width}
-          height={fields.next_post_image.assets[0].asset.height}
-          alt={fields.next_post_image.assets[0].asset.name}
+          src={fields.next_post_image.assets[0]?.asset?.url}
+          width={fields.next_post_image.assets[0]?.asset?.width}
+          height={fields.next_post_image.assets[0]?.asset?.height}
+          alt={fields.next_post_image.assets[0]?.asset?.name}
         />
         <div className="flex flex-col justify-center items-center h-72 border-l border-l-white transition-all duration-&lsqb;0.4s&rsqb; ease-&lsqb;cubic-bezier(0.05,0.2,0.1,1)&rsqb; delay-&lsqb;0s&rsqb; z-10">
           <span

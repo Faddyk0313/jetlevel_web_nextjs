@@ -10,6 +10,12 @@ import ChartersTypes from "@/components/ChartersTypes";
 import CharterTypes from "../../../charterTypes.json";
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
 
+export const metadata = {
+  title: 'Industry Specific Charter | Jetlevel Aviation',
+  description: 'Explore our charter solutions tailored for every unique trip, including corporate, event, sports team, oil and gas, government, film, and music industry charter..',
+};
+
+
 export default function IndustoryCharter(): JSX.Element {
   return (
     <>

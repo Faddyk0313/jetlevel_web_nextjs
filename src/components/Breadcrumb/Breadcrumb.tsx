@@ -37,14 +37,15 @@ const Breadcrumb: React.FC = () => {
     '/faq': '/private-jet-frequently-asked-questions',
     '/company/our-team': '/our-team',
     '/pricing': '/cost-of-chartering-a-private-jet',
-    '/industory-charter' : '/industry-specific-charter',
-    '/industory-charter/:location' : '/industry-specific-charter/:location',
+    '/industory-charter': '/industry-specific-charter',
+    '/request-quote': '/request-a-quote',
+    '/instant-qoute': '/instant-private-jet-quotes',
+    '/industory-charter/:location': '/industry-specific-charter/:location',
+    '/charter-resources/airports-aircrafts/:location': '/:location',
     '/charter-resources/private-jet-airports/:location': '/:location',
     '/charter-resources/aircraft-types/:location': '/:location',
     '/company/blogs/:location': '/:location',
   };
-
-
 
   // Helper function to apply rewrite rules based on dynamic segments
   const applyRewrite = (path: string, reverse: boolean = false): string => {
@@ -84,7 +85,6 @@ const Breadcrumb: React.FC = () => {
     href = getRewritePath(pathSegments);
   }
 
-  // console.log("HREF", href);
   // console.log("href", href);
   const segments = href.split("/").filter(Boolean); // Remove empty segments
   // Determine the base segment dynamically (e.g., 'jet-charter' or 'charter-resources')
@@ -107,7 +107,8 @@ const Breadcrumb: React.FC = () => {
     }
     segments[1] = subOption;
 
-  } else if (subOption == "airports-aircrafts") {
+  }
+  else if (subOption == "airports-aircrafts") {
     if (aircrafts.includes(segments[segments.length - 1])) {
       subOption = 'aircraft-types';
     } else if (airports.includes(segments[segments.length - 1])) {
@@ -119,11 +120,14 @@ const Breadcrumb: React.FC = () => {
     segments[1] = subOption;
   }
   const baseSegment = segments[0]; // Get the first segment
-// console.log(baseSegment);
-  const hrefArray = segments.slice(1);
+  // console.log(baseSegment);
+  let hrefArray = segments;
+  if (hrefArray.length != 1 && hrefArray[0] != "industory-charter") {
+    hrefArray = segments.slice(1);
+  }
 
-  // console.log("href", href);
-  // console.log("hrefArray", hrefArray);
+  console.log("href", href);
+  console.log("hrefArray", hrefArray);
 
   return (
     (<div
@@ -138,39 +142,27 @@ const Breadcrumb: React.FC = () => {
         </Link>
       </div>
       {
-        baseSegment === "pricing" || baseSegment === "faq"  || baseSegment === "industory-charter" ? (
-          <div className="flex items-center">
-            <Link
-              href={`/${baseSegment}`}
-              className={`${styles.breadcrumbLink} whitespace-nowrap py-2 pl-7 pr-3`}
-              style={{ zIndex: 9 }}
-              >
-              {baseSegment === "pricing" ? "Pricing" : baseSegment === "faq" ? "Faqs" : baseSegment === "industory-charter" ? "Industry Charter" : ""}
-            </Link>
-          </div>
-        ) : ""}
-        {
-          hrefArray.map((segment, index) => {
-            const hrefPath = `/${[
-              baseSegment,
-              ...hrefArray.slice(0, index + 1),
-            ].join("/")}`;
-            const rewrittenHref = getRewrittenHref(hrefPath);
-            const segmentName = segment.replace(/-/g, " ").toUpperCase();
-            const zIndex = 8 - index;
+        hrefArray.map((segment, index) => {
+          const hrefPath = `/${[
+            baseSegment,
+            ...hrefArray.slice(0, index + 1),
+          ].join("/")}`;
+          const rewrittenHref = getRewrittenHref(hrefPath);
+          const segmentName = segment.replace(/-/g, " ").toUpperCase();
+          const zIndex = 8 - index;
 
-            return (
-              <div key={`${hrefPath}-${index}`} className="flex items-center">
-                <Link
-                  href={rewrittenHref}
-                  className={`${styles.breadcrumbLink} whitespace-nowrap py-2 pl-7 pr-3`}
-                  style={{ zIndex: zIndex }}
-                >
-                  {segmentName}
-                </Link>
-              </div>
-            );
-          })}
+          return (
+            <div key={`${hrefPath}-${index}`} className="flex items-center">
+              <Link
+                href={rewrittenHref}
+                className={`${styles.breadcrumbLink} whitespace-nowrap py-2 pl-7 pr-3`}
+                style={{ zIndex: zIndex }}
+              >
+                {segmentName}
+              </Link>
+            </div>
+          );
+        })}
     </div>)
   );
 };

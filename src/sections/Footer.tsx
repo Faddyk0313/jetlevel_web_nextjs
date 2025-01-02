@@ -60,10 +60,7 @@ const Footer = () => {
                             width={790}
                             height={142}
                             className='md:w-72 max-w-72 mx-auto h-auto'
-                            style={{
-                                maxWidth: "100%",
-                                height: "auto"
-                            }} />
+                             />
                     </div>
                     <div className='flex flex-col md:flex-row gap-7 '>
                         <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:h-[54px]">

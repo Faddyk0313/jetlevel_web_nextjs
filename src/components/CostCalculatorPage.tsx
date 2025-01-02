@@ -101,7 +101,7 @@ const CostCalculatorPage = () => {
                     faqData.map((faq,index) => (
                       <div key={index} className='pb-6'>
                         <h3 className='font-bold text-gray-900'>{faq.question}</h3>
-                        <p className='text-gray-700 leading-7 mt-1'>{faq.answer}</p>
+                        <div className='text-gray-700 leading-7 mt-1'>{faq.answer}</div>
                       </div>
                     ))
                     }

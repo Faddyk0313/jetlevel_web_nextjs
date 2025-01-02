@@ -1,5 +1,10 @@
 import React from 'react';
 
+export const metadata = {
+    title: 'Thank You - JetLevel Private Jet Charter',
+    description: '1. A charter sales rep will contact you to go over your trip details.',
+  }
+
 const page = () => {
     return (
         <div className="flex flex-col items-center p-4">
