@@ -69,8 +69,8 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
             singleIndustory?.aviationSolutions?.aviationIcons.map((icon,index) => {
               const Icon = iconMapping[icon.icons];
               return (
-                <div key={index} className='industrycardContanier w-[24%] max-[900px]:w-[48%] max-[700px]:w-full'>
-                <Card className={'min-h-[320px]'} link='' icon={<Icon />} title={icon?.heading} description={icon?.description} bgcolor={'white'} />
+                <div key={index} className='industrycardContanier w-[23%] max-[900px]:w-[48%] max-[700px]:w-full'>
+                <Card className={'min-h-[100%]'} link='' icon={<Icon />} title={icon?.heading} description={icon?.description} bgcolor={'white'} />
                 </div>
               )
             })

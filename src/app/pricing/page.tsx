@@ -171,7 +171,7 @@ const EventsPage = () => {
 			heading:'',
 			accessor: '',
       Cell: ({ row }: { row: Record<string, any> }) => <div className='relative font-bold text-black hover:text-white w-full h-full'>
-      <button className='w-full h-full'>Enquire</button>
+      <button className='w-full h-full group-hover:text-white'>Inquire</button>
       </div>
 		},
 	]; 
@@ -461,7 +461,7 @@ const EventsPage = () => {
             <p>Dive into our exclusive collection of popular private jet charter routes.</p>
           </div>
           <Button
-            text='Enquire Now'
+            text='Inquire Now'
             variant='primary'
           />
           </div>
@@ -474,7 +474,7 @@ const EventsPage = () => {
       
 
         <section className='flex relative justify-between px-5 md:px-10 lg:px-20 pb-0'>
-          <div className='w-[65%] max-[700px]:w-full mt-6 flex flex-col gap-y-[30px]'>
+          <div className='w-[65%] max-[700px]:w-full flex flex-col gap-y-[30px]'>
           <Collapsible  
               key={1}
               question={'General Cost Breakdown'}
@@ -502,6 +502,7 @@ const EventsPage = () => {
                 </div>
               }
               iconStyle="caret"
+              classNames='pt-0'
               iconPosition="end"
               isOpen={faqSection === 'general-cost-breakdown'}
               onClick={() => toggleSection('general-cost-breakdown')} 
@@ -1702,7 +1703,7 @@ const EventsPage = () => {
           />
           </div>
           
-          <div className='w-[29%] max-[700px]:hidden sticky h-[500px] top-[100px]'>
+          <div className='w-[29%] max-[700px]:hidden sticky h-[500px] top-[100px] mt-[19px]'>
             <h2 className='mb-8 border-b pb-4 '>On This Page</h2>
             <p 
               onClick={() => scrollToSection('general-cost-breakdown')}
@@ -1721,20 +1722,24 @@ const EventsPage = () => {
         <SmartTravelTools />
         <WhatOurClientsSay />
 
-        <div className='mt-14 flex flex-col gap-y-[15px] w-[90%] m-[30px_auto]'>
-          {
-            faqData.map((faq,index) => (
-              <Collapsible  
-                key={index}
-                question={faq.question}
-                answer={faq.answer}
-                iconStyle="caret"
-                iconPosition="end"
-                isOpen={openIndex === index}
-                onClick={() => handleToggle(index)} 
-              />
-            ))
-          }
+        <div className='mt-14 w-[90%] m-[30px_auto]'>
+          <h1 className='text-center mb-10'>Frequently Asked Questions</h1>
+          <div className='flex flex-col gap-y-[15px] '>
+            {
+              faqData.map((faq,index) => (
+                <Collapsible  
+                  key={index}
+                  question={faq.question}
+                  answer={faq.answer}
+                  iconStyle="caret"
+                  iconPosition="end"
+                  isOpen={openIndex === index}
+                  onClick={() => handleToggle(index)} 
+                />
+              ))
+            }
+          </div>
+          
           {/* < /> */}
         </div>
     </div>

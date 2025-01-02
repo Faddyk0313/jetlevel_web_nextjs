@@ -19,7 +19,7 @@ export const metadata = {
 const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
   const cities = content?.map((item:any) => {
     return {
-      heading: item.fields.title?.text || item.name,
+      heading: item.fields.title?.text || item.page.name,
       link: `/${item.slug}`,
       img:`${title === "Routes" ? "/images/single routes img in directory.png" : item.fields.hero_image?.assets?.[0]?.asset?.url }` || '',
     };
@@ -98,12 +98,12 @@ const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
           className="pl-[20px] font-bold focus:outline-transparent w-[96%] max-[700px]:w-[90%] rounded-[30px_0px_0px_30px]"
           type="text"
         />
-        <div className="cursor-pointer bg-[#0071BA] w-[4%] max-[700px]:w-[10%] p-3 rounded-[0px_40px_40px_0px] text-center">
-          <Search onClick={handleSearch} />
+        <div className="cursor-pointer bg-[#0071BA] w-[4%] max-[1000px]:w-[9%] max-[700px]:w-[10%] p-3 rounded-[0px_40px_40px_0px] text-center">
+          <Search onClick={handleSearch} className='w-[80%] max-[900px]:w-[100%]' />
         </div>
       </div>
 
-      <section className="flex gap-x-4 flex-wrap gap-y-4">
+      <section className="flex gap-x-4 flex-wrap gap-y-4 gap-x-[17px]">
         {currentCities.map((city:any,index: number) => (
           <CharterCity img={city.img} heading={city.heading} link={city.link} key={index} />
         ))}

@@ -15,16 +15,7 @@ const AboutUsPage = () => {
       <BrandNames />
       <HalfSection showBottomContent={true}>
         <section className='py-12'>
-        <div className='flex gap-x-6 min-[900px]:items-center  flex-row max-[900px]:flex-col'>
-          <div className='min-w-[45%] xl:min-w-[44%]'>
-            <Image
-              src='/images/about-us.webp'
-              alt="About us Image"
-              width={400}
-              height={600}
-              className="object-cover w-full"
-            />
-          </div>
+        <div className='flex gap-x-6 min-[900px]:items-center flex-row max-[900px]:flex-col'>
           <div>
             <h2>About Us</h2>
             <p className=''>JetLevel Aviation was founded by a team of industry professionals with over 10 years experience in the Private Jet Charter Industry. With access to over 5000 aircraft globally we can provide customized solutions for all of your Private Jet Charter needs.</p>
