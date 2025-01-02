@@ -18,13 +18,13 @@ const HalfSection: React.FC<HalfSectionProps> = ({ children, showBottomContent }
           {children}
         </div>
 
-        <div className="min-w-[24%] sm:flex sm:flex-wrap justify-between gap-5 ">
-          <div className="w-fit lg:w-auto sm:min-w-[324px]">
+        <div className="min-w-[24%] lg:min-w-fit lg:block sm:flex sm:flex-wrap justify-start gap-5 h-fit">
+          <div className="w-fit lg:w-auto sm:min-w-[324px] lg:min-w-fit sm:flex-1 lg:flex-none">
             <Suspense fallback={<div className="search-form__loader"></div>}>
               <LeadForm widget={true} />
             </Suspense>
           </div>
-          <div className="w-fit lg:w-auto sm:min-w-[324px] ">
+          <div className="w-fit lg:w-auto sm:min-w-[324px] lg:min-w-fit sm:flex-1 lg:flex-none ">
             <TopCharteredCities
               title="Top USA Chartered Cities"
               cities={[
