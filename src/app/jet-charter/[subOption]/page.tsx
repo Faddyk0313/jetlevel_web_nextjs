@@ -43,24 +43,31 @@ export async function generateStaticParams() {
   }));
 }
 
-// Fetch data for a given subOption
-async function fetchContent(subOption: string) {
-  const client = createClient();
 
+type SubOptions = 
+
+"us-canada"|
+"international"|
+"popular-routes"|
+"empty-legs"
+// Fetch data for a given subOption
+async function fetchContent(subOption: SubOptions) {
+  const client = createClient();
+  console.log('Fetching content',subOption)
   const contentType = {
     "us-canada": "usa_city_pages",
-    international: "international_city_pages",
+    "international": "international_city_pages",
     "popular-routes": "route_pages",
     "empty-legs": "empty_leg_flights",
-  }[subOption];
+  }
 
   if (!contentType) {
-    return null;
+    return null ;
   }
 
   const limit = 100;
   let response = await client.getContentByType({
-    contentType,
+    contentType:contentType[subOption],
     sortBy: "published_at",
     sortDirection: "desc",
     limit,
@@ -84,12 +91,12 @@ const JetCharter = async ({ params }: PageProps) => {
     title: "Page Not Found",
   };
 
-  const content = await fetchContent(subOption);
+  const content = await fetchContent(subOption as SubOptions);
 
   if (!content) {
     notFound();
   }
-  console.log('content',content)
+  console.log('content',content.length)
 
   return (
     <>
