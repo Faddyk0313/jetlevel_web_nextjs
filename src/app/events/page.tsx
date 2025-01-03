@@ -1,9 +1,11 @@
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
 import Events from '@/components/Events';
-import TopCharteredCities from '@/components/TopCharteredCities';
 import BrandNames from '@/sections/BrandNames';
 import Hero from '@/sections/Hero';
 import events from '../../../events.json';
+import React from 'react';
+import { Suspense } from "react";
+import LeadForm from '@/components/LeadForm';
 
 const EventsPage = () => {
   return (
@@ -28,22 +30,9 @@ const EventsPage = () => {
         </div>
 
         <div className="min-w-[24%] max-w-fit">
-          <TopCharteredCities
-            title="Airports For"
-            cities={[
-              { name: "New York, NY", link: "#" },
-              { name: "Aspen, CO", link: "#" },
-              { name: "Los Angeles, CA", link: "#" },
-              { name: "San Francisco, CA", link: "#" },
-              { name: "Miami, FL", link: "#" },
-              { name: "Chicago, IL", link: "#" },
-              { name: "Houston, TX", link: "#" },
-              { name: "Dallas, TX", link: "#" },
-              { name: "Las Vegas, NV", link: "#" },
-              { name: "Denver, CO", link: "#" },
-            ]}
-            buttonLink="#"
-          />
+        <Suspense fallback={<div className="search-form__loader"></div>}>
+            <LeadForm widget={true} />
+          </Suspense>
         </div>
       </section>
     </div>

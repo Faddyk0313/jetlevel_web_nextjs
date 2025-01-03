@@ -1,7 +1,5 @@
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
-import TopCharteredCities from '@/components/TopCharteredCities';
 import BrandNames from '@/sections/BrandNames';
-import Hero from '@/sections/Hero';
 import { Facebook, Linkedin, Twitter } from '@/svg';
 import Image from 'next/image';
 import React from 'react';
@@ -26,7 +24,7 @@ const OurTeamPage = () => {
         </div>
       </div>
 
-        <h2 className='text-black text-center mb-[30px]'>Leadership</h2>
+        <h2 className=' text-center mb-[30px]'>Leadership</h2>
         <div className='flex items-center justify-between flex-wrap'>
         <div className="w-[32%] max-[900px]:w-[48%] rounded-2xl mb-6 max-[700px]:w-full border-[3px] bg-blue-background hover:shadow-card_shadow bg-cover h-[500px] flex flex-col group justify-center items-center gap-x-[15px] p-6  text-white transition-all ease-in duration-100 hover:-translate-y-2 hover:border-blue">
           <Image
@@ -39,7 +37,7 @@ const OurTeamPage = () => {
           <h4 className="text-[20px] font-bold mt-4 mb-4 ">
             Ricky Gomulka
           </h4>
-          <span className=" mb-5 text-[12px] ">
+          <span className=" mb-5 text-[12px] text-white">
             Founder & Managing Partner
           </span>
           <p className="text-center  text-[15px]">
@@ -65,7 +63,7 @@ const OurTeamPage = () => {
           <h4 className="text-[20px] font-bold mt-4 mb-4 ">
             Kevin Bales
           </h4>
-          <span className=" mb-5 text-[12px] ">
+          <span className=" mb-5 text-[12px] text-white">
           Vice President
           </span>
           <p className="text-center  text-[15px]">
@@ -89,7 +87,7 @@ const OurTeamPage = () => {
           <h4 className="text-[20px] font-bold mt-4 mb-4 ">
             Erin Melder
           </h4>
-          <span className=" mb-5 text-[12px] ">
+          <span className=" mb-5 text-[12px] text-white">
             Flight Support & Client Services
           </span>
           <p className="text-center  text-[15px]">

@@ -3,15 +3,15 @@ import TextCompanyOverview from '@/components/TextCompanyOverview';
 import Image from "next/image";
 import React, { ReactNode } from 'react';
 import { Routes_DistanceCalculator, UsCanadaCities, InternationalCities, Aircraft, Airports } from '@/svg';
-import { iconMapping } from '@/lib/constant';
 import CarouselContainer from '@/components/CarouselContainer';
 
-type CompanyOverviewProps ={
+type CompanyOverviewProps = {
     heading: string,
-    description: string | ReactNode,
-    IconsItems:any
-}
-const CompanyOverview = ({heading,description,IconsItems}:CompanyOverviewProps) => {
+    collapseText: boolean,
+    description: string,
+    IconsItems: any;
+};
+const CompanyOverview = ({ heading, description, collapseText = true, IconsItems }: CompanyOverviewProps) => {
     interface CarouselItem3 {
         icon: any | string;
         title: string;
@@ -32,12 +32,12 @@ const CompanyOverview = ({heading,description,IconsItems}:CompanyOverviewProps) 
     ];
 
     const carouselItems2: CarouselItem4[] = [
-        {icon: <Routes_DistanceCalculator />, title: "Routes", description: 'Explore diverse routes for your travel needs.', link: '/popular-routes' },
-        {icon: <UsCanadaCities />, title: "US & Canada Cities" , description: 'Connect to major cities across US and Canada.', link: '/us-canada-chartered-cities'},
-        {icon: <InternationalCities />, title: "International Cities" , description: 'Fly globally to various international destinations.', link: '/international-chartered-cities'},
-        {icon: <Aircraft />, title: "Aircraft" , description: 'Choose from a wide range of luxury jets.', link: '/aircraft-charters'},
-        {icon: <Airports />, title: "Airports", description: 'Access convenient airports for your journey.', link: '/usa-airport-directory' }
-        ];
+        { icon: <Routes_DistanceCalculator />, title: "Routes", description: 'Explore diverse routes for your travel needs.', link: '/popular-routes' },
+        { icon: <UsCanadaCities />, title: "US & Canada Cities", description: 'Connect to major cities across US and Canada.', link: '/us-canada-chartered-cities' },
+        { icon: <InternationalCities />, title: "International Cities", description: 'Fly globally to various international destinations.', link: '/international-chartered-cities' },
+        { icon: <Aircraft />, title: "Aircraft", description: 'Choose from a wide range of luxury jets.', link: '/aircraft-charters' },
+        { icon: <Airports />, title: "Airports", description: 'Access convenient airports for your journey.', link: '/usa-airport-directory' }
+    ];
 
     // console.log(carouselItems[0].link);
 
@@ -46,12 +46,29 @@ const CompanyOverview = ({heading,description,IconsItems}:CompanyOverviewProps) 
             <div className="flex flex-col lg:flex-row justify-center gap-1 w-fit">
                 <div className="w-full lg:min-w-[50%] lg:max-w-[50%] lg:pt-7">
                     <h2 className="mb-4">{heading}</h2>
-                    {typeof description === "string" ? (
-                        <p className='hidden xl:block details leading-relaxed details'>{description}</p>
-                        ) : (
-                        description
-                    )}
-                    <TextCompanyOverview />
+                    <p className={`${collapseText ? 'xl:block hidden' : ""} details leading-relaxed details`}>
+                        {description} <br />
+                        {
+                            collapseText ?
+                                <span className="my-2 text-darkBlue font-bold italic">
+                                    Fly with <span className='border-b-2 border-darkBlue text-inherit'>
+                                        Confidence!
+                                    </span>
+                                </span>
+                                : ""
+                        }
+
+                    </p>
+
+                    {
+                        collapseText ?
+                            <>
+                                <p className={`block xl:hidden details leading-relaxed details`}>
+                                    At JetLevel Aviation, we're redefining the private jet charter experience by prioritizing safety, reliability, and transparency. Founded in 2019, we've established ourselves as a trusted global advisor in the aviation industry. Our mission is to provide high-quality aircraft and competitive pricing, backed by leading customer service to deliver the best value. We are committed to core values of reliability, safety, and transparency, ensuring client satisfaction for both frequent travels and special occasions.
+                                    <TextCompanyOverview />
+                                </p>
+                            </> : ""
+                    }
                 </div>
                 <div className="w-full ">
                     <Image

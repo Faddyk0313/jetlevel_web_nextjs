@@ -17,7 +17,7 @@ const TextCompanyOverview = () => {
                     <p className='details leading-relaxed'>
                         Fly across the US, Canada, and beyond with our diverse network of aircraft and convenient departure points. Choose JetLevel Aviation for a seamless, worry-free journey every time—elevating your travel experiences to new heights. <br />
                         <span className="my-2 text-blue font-bold italic">
-                            Fly with <span className='border-b-2 border-blue'>
+                            Fly with <span className='border-b-2 border-blue text-inherit'>
                                 Confidence!
                             </span>
                             <br />

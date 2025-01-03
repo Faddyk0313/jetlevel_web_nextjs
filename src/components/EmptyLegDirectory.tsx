@@ -3,6 +3,8 @@ import CollapsibleEmptyLegDirectory from './CollapsibleEmptyLegDirectory';
 import CollapsibleAvinodeCalculatorSection from './CollapsibleAvinodeCalculatorSection';
 import Breadcrumb from './Breadcrumb/Breadcrumb';
 import TopCharteredCities from './TopCharteredCities';
+import { Suspense } from "react";
+import LeadForm from '@/components/LeadForm';
 
 const EmptyLegDirectory = () => {
   const links = [
@@ -49,7 +51,7 @@ const EmptyLegDirectory = () => {
     { name: 'Empty Leg Flights to Seattle, WA', url: '/empty-leg-flights-seattle-wa' },
     { name: 'Empty Leg Flights to Vail', url: '/empty-leg-flights-vail' },
     { name: 'Empty Leg Flights to Washington, D.C.', url: '/empty-leg-flights-washington-dc' },
-];
+  ];
 
   const faqContent = [
     {
@@ -98,23 +100,60 @@ const EmptyLegDirectory = () => {
         <CollapsibleEmptyLegDirectory title="Listing of Region-Specific Empty Leg Flights" content={links} />
         <CollapsibleEmptyLegDirectory title="Frequently Asked Questions" content={faqContent} />
       </div>
-      <div className="min-w-[24%] md:w-fit">
-        <TopCharteredCities
-          title="Empty Leg"
-          cities={[
-            { name: 'New York, NY', link: '#' },
-            { name: 'Aspen, CO', link: '#' },
-            { name: 'Los Angeles, CA', link: '#' },
-            { name: 'San Francisco, CA', link: '#' },
-            { name: 'Miami, FL', link: '#' },
-            { name: 'Chicago, IL', link: '#' },
-            { name: 'Houston, TX', link: '#' },
-            { name: 'Dallas, TX', link: '#' },
-            { name: 'Las Vegas, NV', link: '#' },
-            { name: 'Denver, CO', link: '#' },
-          ]}
-          buttonLink="#"
-        />
+      <div className="min-w-[24%] sm:flex sm:flex-wrap justify-between gap-5 ">
+        <div className="w-fit lg:w-auto sm:min-w-[324px]">
+          <Suspense fallback={<div className="search-form__loader"></div>}>
+            <LeadForm widget={true} />
+          </Suspense>
+        </div>
+        <div className="w-fit lg:w-auto sm:min-w-[324px] ">
+          <TopCharteredCities
+            title="Popular Empty Legs Flights"
+            cities={[
+              {
+                name: 'Aspen, CO',
+                link: '/empty-leg-flights-aspen'
+              },
+              {
+                name: 'Las Vegas, NV',
+                link: '/empty-leg-flights-las-vegas-nv'
+              },
+              {
+                name: 'Miami, FL',
+                link: '/empty-leg-flights-miami-fl'
+              },
+              {
+                name: 'Los Angeles, CA',
+                link: '/empty-leg-flights-los-angeles-ca'
+              },
+              {
+                name: 'New York, NY',
+                link: '/empty-leg-flights-new-york-ny'
+              },
+              {
+                name: 'Chicago, IL',
+                link: '/empty-leg-flights-chicago-il'
+              },
+              {
+                name: 'Dallas, TX',
+                link: '/empty-leg-flights-dallas-tx'
+              },
+              {
+                name: 'Denver, CO',
+                link: '/empty-leg-flights-denver-co'
+              },
+              {
+                name: 'Houston, TX',
+                link: '/empty-leg-flights-houston-tx'
+              },
+              {
+                name: 'Orlando, FL',
+                link: '/empty-leg-flights-orlando'
+              },
+            ]}
+            buttonLink="#"
+          />
+        </div>
       </div>
     </section>
   );

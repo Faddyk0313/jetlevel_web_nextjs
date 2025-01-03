@@ -17,21 +17,22 @@ export const metadata = {
 };
 // Define the UsCanadaPage component
 const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
-  const cities = content?.map((item:any) => {
+  // console.log("------", content)
+  const cities = content.map((item: any) => {
     return {
-      heading: item.fields.title?.text || item.page.name,
+      heading: item.fields.page_name?.text || item.name,  // fallback to item.name if no fields.title
       link: `/${item.slug}`,
-      img:`${title === "Routes" ? "/images/single routes img in directory.png" : item.fields.hero_image?.assets?.[0]?.asset?.url }` || '',
+      img: `${title === "Routes" ? "/images/single routes img in directory.png" : item.fields.hero_image?.assets?.[0]?.asset?.url}` || '',
     };
   });
 
   const [searchTerm, setSearchTerm] = useState('');
   const [filteredCities, setFilteredCities] = useState(cities);
   const [currentPage, setCurrentPage] = useState(1);
-  const citiesPerPage = 8; 
+  const citiesPerPage = 8;
 
   const handleSearch = () => {
-    const filtered = cities.filter((city:any) =>
+    const filtered = cities.filter((city: any) =>
       city.heading.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredCities(filtered);
@@ -83,8 +84,8 @@ const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
         </h2>
         <div className="text-center pt-8">
           <Button
-              text='Request a Quote'
-              variant='primary'
+            text='Request a Quote'
+            variant='primary'
           />
         </div>
       </section>
@@ -120,7 +121,7 @@ const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
                   currentPage === number
                     ? 'bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] text-white'
                     : 'bg-white text-[#0071BA]'
-                } px-4 py-2 rounded-full flex items-center justify-center  w-[43px] h-[43px]`}
+                  } px-4 py-2 rounded-full flex items-center justify-center  w-[43px] h-[43px]`}
               />
             </li>
           ))}

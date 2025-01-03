@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import BrandNames from '@/sections/BrandNames';
 import Hero from '@/sections/Hero';
 import React from 'react';
@@ -11,6 +11,8 @@ import SmartTravelTools from '@/sections/SmartTravelTools';
 import PopularPrivateJetCharters from '@/sections/PopularPrivateJetCharters';
 import WhatOurClientsSay from '@/sections/WhatOurClientsSay';
 import CollapsibleAvinodeCalculatorSection from './CollapsibleAvinodeCalculatorSection';
+import { Suspense } from "react";
+import LeadForm from '@/components/LeadForm';
 
 const overviewContent = [
   {
@@ -62,27 +64,65 @@ const AircraftPage = ({ fields }: any) => {
           <CollapsibleAircraftOverviewSection title={fields.map_heading.text} content={fields.range_distance.number} />
           <CollapsibleAircraftOverviewSection title={fields.heading.text} content={fields.other_section.text} />
           {/* Aircraft Comparison Iframe */}
-          <CollapsibleAvinodeCalculatorSection title={fields.compare_heading.text}  />
+          <CollapsibleAvinodeCalculatorSection title={fields.compare_heading.text} />
           {/* <iframe id="comparison-iframe" className="border-none w-full h-auto" src="https://app.jetlevel.com/aircraftComparison" ></iframe> */}
 
         </div>
-        <div className="min-w-[24%] max-w-fit">
-          <TopCharteredCities
-            title="Airports For"
-            cities={[
-              { name: "New York, NY", link: "#" },
-              { name: "Aspen, CO", link: "#" },
-              { name: "Los Angeles, CA", link: "#" },
-              { name: "San Francisco, CA", link: "#" },
-              { name: "Miami, FL", link: "#" },
-              { name: "Chicago, IL", link: "#" },
-              { name: "Houston, TX", link: "#" },
-              { name: "Dallas, TX", link: "#" },
-              { name: "Las Vegas, NV", link: "#" },
-              { name: "Denver, CO", link: "#" },
-            ]}
-            buttonLink="#"
-          />
+        <div className="min-w-[24%] sm:flex sm:flex-wrap justify-between gap-5 ">
+          <div className="w-fit lg:w-auto sm:min-w-[324px]">
+            <Suspense fallback={<div className="search-form__loader"></div>}>
+              <LeadForm widget={true} />
+            </Suspense>
+          </div>
+          <div className="w-fit lg:w-auto sm:min-w-[324px] ">
+            <TopCharteredCities
+              title="Premier Aircraft for Charter"
+              cities={[
+                {
+                  name: "King Air 350",
+                  link: "/king-air-350"
+                },
+                {
+                  name: "Pilatus PC-12",
+                  link: "/pilatus-pc12"
+                },
+                {
+                  name: "Citation M2",
+                  link: "/citation-m2"
+                },
+                {
+                  name: "Phenom 100",
+                  link: "/embraer-phenom-100"
+                },
+                {
+                  name: "Phenom 300",
+                  link: "/embraer-phenom-300"
+                },
+                {
+                  name: "Citation CJ3",
+                  link: "/citation-cj3"
+                },
+                {
+                  name: "Hawker 900XP",
+                  link: "/hawker-900xp"
+                },
+                {
+                  name: "Challenger 300",
+                  link: "/challenger-300"
+                },
+                {
+                  name: "Gulfstream G600",
+                  link: "/gulfstream-givsp"
+                },
+                {
+                  name: "Falcon 900",
+                  link: "/falcon-900"
+                },
+              ]}
+              buttonLink="#"
+            />
+
+          </div>
         </div>
       </section>
       <ExclusiveServices hasSectionPadding={false} />

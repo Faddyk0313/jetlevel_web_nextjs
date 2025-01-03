@@ -5,7 +5,7 @@ import SmartTravelTools from '@/sections/SmartTravelTools';
 import PopularPrivateJetCharters from '@/sections/PopularPrivateJetCharters';
 import LeadForm from '@/components/LeadForm';
 interface HalfSectionProps {
-  children: ReactNode; 
+  children: ReactNode;
   showBottomContent?: boolean;
 }
 
@@ -18,33 +18,67 @@ const HalfSection: React.FC<HalfSectionProps> = ({ children, showBottomContent }
           {children}
         </div>
 
-        <div className="min-w-[24%] max-w-fit">
-          <TopCharteredCities
-            title="Airports For"
-            cities={[
-              { name: "New York, NY", link: "#" },
-              { name: "Aspen, CO", link: "#" },
-              { name: "Los Angeles, CA", link: "#" },
-              { name: "San Francisco, CA", link: "#" },
-              { name: "Miami, FL", link: "#" },
-              { name: "Chicago, IL", link: "#" },
-              { name: "Houston, TX", link: "#" },
-              { name: "Dallas, TX", link: "#" },
-              { name: "Las Vegas, NV", link: "#" },
-              { name: "Denver, CO", link: "#" },
-            ]}
-            buttonLink="#"
-          />
-          <Suspense fallback={<div className="search-form__loader"></div>}>
-            <LeadForm widget={true} />
-          </Suspense>
+        <div className="min-w-[24%] sm:flex sm:flex-wrap justify-between gap-5 ">
+          <div className="w-fit lg:w-auto sm:min-w-[324px]">
+            <Suspense fallback={<div className="search-form__loader"></div>}>
+              <LeadForm widget={true} />
+            </Suspense>
+          </div>
+          <div className="w-fit lg:w-auto sm:min-w-[324px] ">
+            <TopCharteredCities
+              title="Top USA Chartered Cities"
+              cities={[
+                {
+                  name: 'Van Nuys',
+                  link: '/private-jet-charter-flights-to-van-nuys-ca/'
+                },
+                {
+                  name: 'Los Angeles',
+                  link: '/private-jet-charter-flights-to-los-angeles-ca'
+                },
+                {
+                  name: 'Miami',
+                  link: '/private-jet-miami/'
+                },
+                {
+                  name: 'Chicago',
+                  link: '/private-jet-chicago/'
+                },
+                {
+                  name: 'Dallas',
+                  link: '/private-jet-charter-flights-to-dallas-tx'
+                },
+                {
+                  name: 'Las Vegas',
+                  link: '/private-jet-charter-flights-to-las-vegas-nv'
+                },
+                {
+                  name: 'San Francisco',
+                  link: '/private-jet-charter-flights-to-san-francisco-ca/'
+                },
+                {
+                  name: 'Nashville',
+                  link: '/private-jet-charter-flights-to-nashville-tn/'
+                },
+                {
+                  name: 'Seattle',
+                  link: '/private-jet-charter-flights-to-seattle-wa/'
+                },
+                {
+                  name: 'Teterboro',
+                  link: '/private-jet-charter-flights-to-teterboro-nj'
+                },
+              ]}
+              buttonLink="#"
+            />
+          </div>
         </div>
       </section>
       {
         showBottomContent &&
         <>
-         <SmartTravelTools hasSectionPadding={false}/>
-         <PopularPrivateJetCharters />
+          <SmartTravelTools hasSectionPadding={false} />
+          <PopularPrivateJetCharters />
         </>
       }
     </div>

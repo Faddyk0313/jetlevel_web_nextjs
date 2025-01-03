@@ -1,9 +1,11 @@
 "use client";
 import React from "react";
 import Breadcrumb from "./Breadcrumb/Breadcrumb";
-import TopCharteredCities from "./TopCharteredCities";
 import Image from "next/image";
 import Markdown from "markdown-to-jsx";
+
+import { Suspense } from "react";
+import LeadForm from '@/components/LeadForm';
 
 interface BlogPageProps {
   fields: any;
@@ -15,7 +17,7 @@ const BlogPage = ({ fields, date }: BlogPageProps) => {
   return (
     <>
       <div className="px-5 md:px-10 lg:px-20 pt-10 max-w-[1800px] mx-auto ">
-        <h1 className="w-full md:max-w-[800px] pb-1">{fields.title.text} </h1>
+        <h1 className="w-full md:max-w-[800px] pb-1 " style={{ textShadow: "none" }}>{fields.title.text} </h1>
         <span className="text-xs pb-7 text-gray-700 block">updated {date}</span>
         <hr />
       </div>
@@ -65,23 +67,10 @@ const BlogPage = ({ fields, date }: BlogPageProps) => {
             </Markdown>
           </div>
         </div>
-        <div className="min-w-[24%]  max-w-fit mt-[76px]">
-          <TopCharteredCities
-            title="Airports For"
-            cities={[
-              { name: "New York, NY", link: "#" },
-              { name: "Aspen, CO", link: "#" },
-              { name: "Los Angeles, CA", link: "#" },
-              { name: "San Francisco, CA", link: "#" },
-              { name: "Miami, FL", link: "#" },
-              { name: "Chicago, IL", link: "#" },
-              { name: "Houston, TX", link: "#" },
-              { name: "Dallas, TX", link: "#" },
-              { name: "Las Vegas, NV", link: "#" },
-              { name: "Denver, CO", link: "#" },
-            ]}
-            buttonLink="#"
-          />
+        <div className="min-w-[24%]   max-w-fit mt-[76px]">
+          <Suspense fallback={<div className="search-form__loader"></div>}>
+            <LeadForm widget={true} />
+          </Suspense>
         </div>
       </section>
       <div

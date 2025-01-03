@@ -2,13 +2,14 @@ import AboutUsPage from "@/components/AboutUsPage";
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
 import ContactUsPage from "@/components/ContactUsPage";
 import OurTeamPage from "@/components/OurTeamPage";
-import TopCharteredCities from "@/components/TopCharteredCities";
 import { createClient } from "@/lib/contento";
 import BrandNames from '@/sections/BrandNames';
 import { ContentData } from "@gocontento/client";
 import Markdown from "markdown-to-jsx";
 import Image from "next/image";
 import Link from "next/link";
+import { Suspense } from "react";
+import LeadForm from '@/components/LeadForm';
 
 type PageProps = {
   params: {
@@ -171,22 +172,9 @@ const CompanyPage = async ({ params }: PageProps) => {
             )): ""}
           </div>
           <div className="min-w-[24%] max-w-fit  mt-[76px] max-[650px]:mt-0">
-            <TopCharteredCities
-              title="Airports For"
-              cities={[
-                { name: "New York, NY", link: "#" },
-                { name: "Aspen, CO", link: "#" },
-                { name: "Los Angeles, CA", link: "#" },
-                { name: "San Francisco, CA", link: "#" },
-                { name: "Miami, FL", link: "#" },
-                { name: "Chicago, IL", link: "#" },
-                { name: "Houston, TX", link: "#" },
-                { name: "Dallas, TX", link: "#" },
-                { name: "Las Vegas, NV", link: "#" },
-                { name: "Denver, CO", link: "#" },
-              ]}
-              buttonLink="#"
-            />
+            <Suspense fallback={<div className="search-form__loader"></div>}>
+            <LeadForm widget={true} />
+          </Suspense>
           </div>
         </section>
       </>

@@ -7,6 +7,7 @@ import ContactMenu from "@/sections/ContactMenu";
 import Script from 'next/script';
 import 'aos/dist/aos.css';
 import "react-datepicker/dist/react-datepicker.css";
+import BookYourPrivateJet from '@/sections/BookYourPrivateJet';
 
 // Configure the fonts with subsets
 const playfairDisplay = Playfair_Display({
@@ -54,7 +55,7 @@ export default function RootLayout({
         />
         <Nav />
         {children}
-        {/* <BookYourPrivateJet /> */}
+        <BookYourPrivateJet />
         <ContactMenu />
         <Footer />
       </body>
