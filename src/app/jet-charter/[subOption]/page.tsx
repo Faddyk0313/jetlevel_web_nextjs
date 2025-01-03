@@ -50,6 +50,8 @@ type SubOptions =
 "international"|
 "popular-routes"|
 "empty-legs"
+
+let content = [];
 // Fetch data for a given subOption
 async function fetchContent(subOption: SubOptions) {
   const client = createClient();
@@ -65,7 +67,7 @@ async function fetchContent(subOption: SubOptions) {
     return null ;
   }
 
-  const limit = 100;
+  const limit = 10;
   let response = await client.getContentByType({
     contentType:contentType[subOption],
     sortBy: "published_at",
@@ -73,13 +75,12 @@ async function fetchContent(subOption: SubOptions) {
     limit,
   });
 
-  let content = [...response.content];
+  content = [...response.content];
 
-  while (response.nextPage) {
-    response = await response.nextPage();
-    content = content.concat(response.content);
-  }
-
+  // if (response.nextPage) {
+  //   response = await response.nextPage();
+  //   content = content.concat(response.content);
+  // }
   return content;
 }
 
