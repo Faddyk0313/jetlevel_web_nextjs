@@ -5,7 +5,6 @@ import ExclusiveServices from "@/sections/ExclusiveServices";
 import SmartTravelTools from "@/sections/SmartTravelTools";
 import PopularPrivateJetCharters from "@/sections/PopularPrivateJetCharters";
 import WhatOurClientsSay from "@/sections/WhatOurClientsSay";
-import RequestQuoteBanner from "@/components/RequestQuoteBanner";
 import ChartersTypes from "@/components/ChartersTypes";
 import CharterTypes from "../../../charterTypes.json";
 import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
@@ -14,7 +13,6 @@ export const metadata = {
   title: 'Industry Specific Charter | Jetlevel Aviation',
   description: 'Explore our charter solutions tailored for every unique trip, including corporate, event, sports team, oil and gas, government, film, and music industry charter..',
 };
-
 
 export default function IndustoryCharter(): JSX.Element {
   return (
@@ -43,7 +41,6 @@ export default function IndustoryCharter(): JSX.Element {
       <SmartTravelTools />
       <PopularPrivateJetCharters />
       <WhatOurClientsSay />
-      {/* <RequestQuoteBanner /> */}
     </>
   );
 }

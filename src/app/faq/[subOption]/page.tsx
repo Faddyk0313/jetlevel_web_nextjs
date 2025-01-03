@@ -125,6 +125,7 @@ const FaqPage = () => {
       
       <SmartTravelTools />
       <PopularPrivateJetCharters />
+      
       <section>
         <h2 className='text-center mb-6'>Use our quote calculator to estimate private jet charter prices</h2>
         <div className='w-[90%] m-[0_auto] outline-none h-auto' id="my-iframe">

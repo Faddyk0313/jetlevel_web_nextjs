@@ -89,6 +89,7 @@ const JetCharter = async ({ params }: PageProps) => {
   if (!content) {
     notFound();
   }
+  console.log('content',content)
 
   return (
     <>

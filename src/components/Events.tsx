@@ -1,19 +1,20 @@
 import React from 'react'
-import events from '../../events.json';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Events = () => {
+const Events = ({eventsData}:any) => {
+  console.log('eventsData',eventsData);
+
   return (
     <div>
       {
-        events.event.map((items, index) => 
+        eventsData?.map((items:any, index:number) => 
         <div key={index}>
           <h2 className='mt-[20px] text-[30px]'>{items.name}</h2>
           <div className='flex gap-x-[33px] mt-6 flex-wrap gap-y-[30px] mb-[50px]'>
             {
-              items.content.map((data) =>
-                <div className='w-[31%] max-[650px]:w-full'>
+              items.content.map((data:any,index:number) =>
+                <div key={index} className='w-[31%] max-[650px]:w-full'>
                    <Image
                     src={data.image}
                     alt={data.heading}
