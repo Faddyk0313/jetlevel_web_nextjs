@@ -1,13 +1,15 @@
 "use client";
 
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import CharterCity from './CharterCities';
-import { Search } from '@/svg';
+import { NextIcon, Search } from '@/svg';
 import Button from '@/components/Button';
+import { createClient } from '@/lib/contento';
+import Spinner from '@/components/Spinner';
 
 interface UsCanadaPageProps {
   title?: string,
-  content: any; // Now expecting an array
+  subOption?:any;
 }
 
 export const metadata = {
@@ -15,24 +17,38 @@ export const metadata = {
   description:
     'Discover top destinations across the US & Canada for private jet charters. Browse featured cities and inquire about a custom quote.',
 };
-// Define the UsCanadaPage component
-const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
-  // console.log("------", content)
-  const cities = content.map((item: any) => {
-    return {
-      heading: item.fields.page_name?.text || item.name,  // fallback to item.name if no fields.title
-      link: `/${item.slug}`,
-      img: `${title === "Routes" ? "/images/single routes img in directory.png" : item.fields.hero_image?.assets?.[0]?.asset?.url}` || '',
-    };
-  });
 
+type SubOptions = 
+"us-canada"|
+"international"|
+"popular-routes"|
+"empty-legs"
+
+type City = {
+  heading: string;
+  link: string;
+  img: string;
+}
+
+type Response = {
+  nextPage: () => Promise<Response>;
+  content: any[];
+}
+
+// Define the UsCanadaPage component
+const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title ,subOption }) => {
+  const [loader,setLoader] = useState(false);
+  const [response, setResponse] = useState<Response | null>(null);
   const [searchTerm, setSearchTerm] = useState('');
-  const [filteredCities, setFilteredCities] = useState(cities);
+  const [cities, setCitites] = useState([]);
+  const [filteredCities, setFilteredCities] = useState<City[]>([]);
   const [currentPage, setCurrentPage] = useState(1);
+  const [loadMoreData,setLoadMoreData] = useState(false);
+
   const citiesPerPage = 8;
 
   const handleSearch = () => {
-    const filtered = cities.filter((city: any) =>
+    const filtered = cities?.filter((city: any) =>
       city.heading.toLowerCase().includes(searchTerm.toLowerCase())
     );
     setFilteredCities(filtered);
@@ -45,6 +61,81 @@ const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
 
   const handlePageChange = (pageNumber: number) => {
     setCurrentPage(pageNumber);
+  };
+
+  useEffect(()=>{
+    if(!subOption) return
+    fetchContent();
+  },[subOption]);
+
+  const fetchContent = async () => {
+    try{
+      setLoader(true);
+      const client = createClient();
+      const contentType = {
+        "us-canada": "usa_city_pages",
+        "international": "international_city_pages",
+        "popular-routes": "route_pages",
+        "empty-legs": "empty_leg_flights",
+      }
+      
+      const limit = 16;
+      let contentoResponse:any = await client.getContentByType({
+        contentType:contentType[subOption as SubOptions],
+        sortBy: "published_at",
+        sortDirection: "desc",
+        limit,
+      });
+
+      if(contentoResponse.content){
+        const filterCities:any = contentoResponse.content.map((item: any) => {
+          return {
+            heading: item.fields.page_name?.text || item.name,
+            link: `/${item.slug}`,
+            img: `${title === "Routes" ? "/images/single routes img in directory.png" : item.fields.hero_image?.assets?.[0]?.asset?.url}` || '',
+          };
+        });
+        setCitites(filterCities);
+        setFilteredCities(filterCities);
+        setResponse(contentoResponse);
+        setLoader(false);
+      }
+    }catch (err) {
+      setLoader(false);
+      console.log('err',err);
+    }
+  }
+
+  const loadMore = async () => {
+    try{
+      if (!response) {
+        setLoadMoreData(false);
+        return
+      };
+      setLoadMoreData(true);
+  
+      let ResponseData;
+      if(response.nextPage){
+        ResponseData = await response?.nextPage();
+      }else{
+        setLoadMoreData(false);
+      }
+      if(ResponseData){
+        const updateResponse = ResponseData?.content?.map((item: any) => {
+          return {
+            heading: item.fields.page_name?.text || item.name, 
+            link: `/${item.slug}`,
+            img: `${title === "Routes" ? "/images/single routes img in directory.png" : item.fields.hero_image?.assets?.[0]?.asset?.url}` || '',
+          };
+        });
+        setFilteredCities((prevCities) => [...prevCities,...updateResponse]);
+        setResponse(ResponseData);
+        setLoadMoreData(false);
+      }
+    }catch(err){
+      setLoadMoreData(false);
+      console.log('err',err);
+    }
   };
 
   const totalPages = Math.ceil(filteredCities && filteredCities.length / 8);
@@ -104,31 +195,57 @@ const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
         </div>
       </div>
 
-      <section className="flex gap-x-4 flex-wrap gap-y-4 gap-x-[17px]">
-        {currentCities.map((city:any,index: number) => (
-          <CharterCity img={city.img} heading={city.heading} link={city.link} key={index} />
-        ))}
-      </section>
-
-      <div className="flex justify-center pt-8">
-        <ul className="flex space-x-4">
-          {displayedPages.map((number) => (
-            <li key={number}>
-              <Button
-                text={number}
-                onClick={() => handlePageChange(Number(number))}
-                className={`${
-                  currentPage === number
-                    ? 'bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] text-white'
-                    : 'bg-white text-[#0071BA]'
-                  } px-4 py-2 rounded-full flex items-center justify-center  w-[43px] h-[43px]`}
-              />
-            </li>
-          ))}
-        </ul>
+      <div className='min-h-[400px] relative'>
+      {
+        loader ?
+        <Spinner style={{position:'absolute'}} />
+        :
+        <div>
+         <section className="flex gap-x-4 flex-wrap gap-y-4 gap-x-[17px]">
+          {
+            currentCities.map((city:any,index: number) => (
+            <CharterCity img={city.img} heading={city.heading} link={city.link} key={index} />
+            ))
+          }
+        </section>
+        
+        <div className='relative'>
+        {
+          (loadMoreData && currentCities?.length > 0) ?
+          <Spinner style={{position:'absolute'}} />
+          :
+          <div className="flex justify-center pt-8">
+          <ul className="flex space-x-4">
+            {displayedPages.map((number) => (
+              <li key={number}>
+                <Button
+                  text={number}
+                  onClick={() => handlePageChange(Number(number))}
+                  className={`${
+                    currentPage === number
+                      ? 'bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] text-white'
+                      : 'bg-white text-[#0071BA]'
+                    } px-4 py-2 rounded-full flex items-center justify-center w-[43px] h-[43px]`}
+                />
+              </li>
+            ))}
+              {
+                (displayedPages?.length > 0 && response) &&
+                <NextIcon 
+                  className='text-white cursor-pointer w-[43px] h-[43px] bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] px-4 py-2 my-2 rounded-full text-lg transition-all ease-linear hover:-translate-y-1 hover:shadow-card_shadow' 
+                  onClick={loadMore}
+                />
+              }
+          </ul>
+          </div>
+        }
+        </div>
+        </div>
+      }
       </div>
+     
     </div>
   );
 };
 
-export default UsCanadaPage;
+export default React.memo(UsCanadaPage);

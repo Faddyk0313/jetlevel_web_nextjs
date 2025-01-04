@@ -51,38 +51,38 @@ type SubOptions =
 "popular-routes"|
 "empty-legs"
 
-let content = [];
+// let content = [];
 // Fetch data for a given subOption
-async function fetchContent(subOption: SubOptions) {
-  const client = createClient();
-  console.log('Fetching content',subOption)
-  const contentType = {
-    "us-canada": "usa_city_pages",
-    "international": "international_city_pages",
-    "popular-routes": "route_pages",
-    "empty-legs": "empty_leg_flights",
-  }
+// async function fetchContent(subOption: SubOptions) {
+//   const client = createClient();
+//   console.log('Fetching content',subOption)
+//   const contentType = {
+//     "us-canada": "usa_city_pages",
+//     "international": "international_city_pages",
+//     "popular-routes": "route_pages",
+//     "empty-legs": "empty_leg_flights",
+//   }
 
-  if (!contentType) {
-    return null ;
-  }
+//   if (!contentType) {
+//     return null ;
+//   }
 
-  const limit = 10;
-  let response = await client.getContentByType({
-    contentType:contentType[subOption],
-    sortBy: "published_at",
-    sortDirection: "desc",
-    limit,
-  });
+//   const limit = 10;
+//   let response = await client.getContentByType({
+//     contentType:contentType[subOption],
+//     sortBy: "published_at",
+//     sortDirection: "desc",
+//     limit,
+//   });
 
-  content = [...response.content];
+//   content = [...response.content];
 
-  // if (response.nextPage) {
-  //   response = await response.nextPage();
-  //   content = content.concat(response.content);
-  // }
-  return content;
-}
+//   // while (response.nextPage) {
+//   //   response = await response.nextPage();
+//   //   content = content.concat(response.content);
+//   // }
+//   return content;
+// }
 
 // Main Component
 const JetCharter = async ({ params }: PageProps) => {
@@ -92,12 +92,13 @@ const JetCharter = async ({ params }: PageProps) => {
     title: "Page Not Found",
   };
 
-  const content = await fetchContent(subOption as SubOptions);
+  console.log('subOption',params);
+  // const content = await fetchContent(subOption as SubOptions);
 
-  if (!content) {
-    notFound();
-  }
-  console.log('content',content.length)
+  // if (!content) {
+  //   notFound();
+  // }
+  // console.log('content',content.length)
 
   return (
     <>
@@ -110,12 +111,12 @@ const JetCharter = async ({ params }: PageProps) => {
           {
 
             title === "US & Canada​ | JetLevel Aviation" ?
-              <UsCanadaPage content={content} />
+              <UsCanadaPage subOption={subOption} />
               : title === 'International Private Jet Charter​ | JetLevel Aviation' ?
-                <UsCanadaPage content={content} />
+                <UsCanadaPage subOption={subOption} />
                 :
                 title === 'Popular Routes​ | JetLevel Aviation' ?
-                  <UsCanadaPage title="Routes" content={content} />
+                  <UsCanadaPage subOption={subOption} title="Routes" />
                   : null
           }
         </section>
