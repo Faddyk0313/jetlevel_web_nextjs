@@ -4,6 +4,7 @@ import Markdown from 'markdown-to-jsx';
 import LeadForm from '@/components/LeadForm';
 import FlightTracker from '@/components/FlightTracker';
 import DistanceCalculator from '@/components/DistanceCalculator';
+import AvinodeSearchApp from '@/components/AvinodeSearchApp';
 
 type HeroProps = {
     image: string;
@@ -46,7 +47,9 @@ const Hero: React.FC<HeroProps> = ({ image, title, subtitle, tagline, descriptio
                     </Markdown>
                 </div>
                 {
-                showCalculator == 'LeadForm' ?
+                showCalculator == 'AvinodeLeadForm' ?
+                    <AvinodeSearchApp />
+                : showCalculator == 'LeadForm' ?
                 <div className='w-full outline-none h-auto' id="my-iframe">
                 <Suspense fallback={<div className="search-form__loader"></div>}>
                     <LeadForm  />

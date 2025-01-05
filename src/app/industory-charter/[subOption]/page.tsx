@@ -13,6 +13,7 @@ import WhatOurClientsSay from '@/sections/WhatOurClientsSay';
 import charterTypes from '../../../../charterTypes.json'; 
 import Button from '@/components/Button';
 import { iconMapping } from '@/lib/constant';
+import Link from 'next/link';
 
 type PageProps = {
   params: {
@@ -120,10 +121,12 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
               ))
             }
             <div className='w-[48%] max-[800px]:w-full max-[800px]:text-end max-[800px]:mt-8'>
-              <Button
-                text='Book Corporate Charter'
+            <Link href="/request-a-quote">
+            <Button
+                text={singleIndustory?.buttonName}
                 variant='primary'
               />
+            </Link>
             </div>
           </div>
         </div>
@@ -150,10 +153,13 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
             <p className="text-md mb-4">
              {singleIndustory?.corporateTravel?.description}
             </p>
+            <Link href="/request-a-quote">
             <Button
-              text='Book Corporate Charter'
+                text={singleIndustory?.buttonName}
               variant='primary'
             />
+            </Link>
+            
           </div>
         </div>
       </section>

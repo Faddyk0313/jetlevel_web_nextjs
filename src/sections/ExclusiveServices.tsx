@@ -6,9 +6,10 @@ import { CardInfo } from '@/app/types';
 
 interface ExclusiveServicesProps {
     hasSectionPadding?: boolean;
+    hasInlinePadding?: boolean;
 }
 
-const ExclusiveServices: React.FC<ExclusiveServicesProps> = ({ hasSectionPadding }) => {
+const ExclusiveServices: React.FC<ExclusiveServicesProps> = ({ hasSectionPadding, hasInlinePadding = true }) => {
     let heading: string = 'Our Exclusive Services';
     let para: string = 'JetLevel Aviation specializes in providing exceptional private jet charter services, catering to a variety of travel needs with unparalleled luxury and efficiency.';
 
@@ -52,7 +53,7 @@ const ExclusiveServices: React.FC<ExclusiveServicesProps> = ({ hasSectionPadding
     ];
 
     return (
-        <CustomComponent heading={heading} para={para} background="white" items={data} hasPadding={hasSectionPadding} />
+        <CustomComponent heading={heading} para={para} background="white" items={data} hasPadding={hasSectionPadding} hasInlinePadding={hasInlinePadding} />
     );
 };
 

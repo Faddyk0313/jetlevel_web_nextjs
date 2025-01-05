@@ -20,6 +20,7 @@ interface CustomComponentProps {
     link:string;
   }>;
   hasPadding?: boolean;
+  hasInlinePadding?: boolean;
 }
 
 const CustomComponent: React.FC<CustomComponentProps> = ({
@@ -27,7 +28,8 @@ const CustomComponent: React.FC<CustomComponentProps> = ({
   para,
   background,
   items,
-  hasPadding
+  hasPadding,
+  hasInlinePadding = true
 }) => {
   // Create a simplified array for the carousel
   const carouselItems: CarouselItem2[] = items.map(({ icon, title, link }) => ({
@@ -37,7 +39,7 @@ const CustomComponent: React.FC<CustomComponentProps> = ({
   }));
 
   return (
-    <section className={`flex flex-col justify-center ${background === "white" ? "max-w-[1800px] mx-auto px-5 md:px-10 lg:px-20" : "overflow-hidden bg-[20%] md:bg-left bg-aboutUs-background overlay bg-cover bg-fixed"}  ${hasPadding === false ? '!py-10' : ''}`}>
+    <section className={`flex flex-col justify-center ${background === "white" ? `max-w-[1800px] mx-auto ${hasInlinePadding ? "px-5 md:px-10 lg:px-20" : ""} ` : "overflow-hidden bg-[20%] md:bg-left bg-aboutUs-background overlay bg-cover bg-fixed"}  ${hasPadding === false ? '!py-10' : ''}`}>
       <div className={`${background === "white" ? "" : "lg:max-w-[1800px] lg:mx-auto px-5 md:px-10 lg:px-20"}`}>
         <div
           className={`mb-10 ${background === "white" ? "text-left" : "text-center text-white"} `}

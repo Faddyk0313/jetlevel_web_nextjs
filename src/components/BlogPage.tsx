@@ -17,7 +17,7 @@ const BlogPage = ({ fields, date }: BlogPageProps) => {
   return (
     <>
       <div className="px-5 md:px-10 lg:px-20 pt-10 max-w-[1800px] mx-auto ">
-        <h1 className="w-full md:max-w-[800px] pb-1 " style={{ textShadow: "none" }}>{fields.title.text} </h1>
+        <h1 className="w-full md:max-w-[1000px] pb-1 " style={{ textShadow: "none" }}>{fields.title.text} </h1>
         <span className="text-xs pb-7 text-gray-700 block">updated {date}</span>
         <hr />
       </div>
@@ -67,7 +67,7 @@ const BlogPage = ({ fields, date }: BlogPageProps) => {
             </Markdown>
           </div>
         </div>
-        <div className="min-w-[24%]   max-w-fit mt-[76px]">
+        <div className="min-w-[24%] max-w-fit  mt-[76px] max-[650px]:mt-0 sticky top-[90px] h-fit">
           <Suspense fallback={<div className="search-form__loader"></div>}>
             <LeadForm widget={true} />
           </Suspense>

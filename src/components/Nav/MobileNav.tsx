@@ -48,6 +48,7 @@ function NavbarDropdown() {
               subOptions={[
                 { name: 'On-Demand Charter', link: '/private-jet-charter', image: '/navInsideIcons/On-Demand Charter.svg' },
                 { name: 'Group Charter', link: '/group-charter-flight', image: '/navInsideIcons/Group Charter.svg' },
+                { name: 'Industry Specific', link: '/industory-charter', image: '/navInsideIcons/industry_specific_charter.svg' },
                 { name: 'Air Ambulance', link: '/medical-flight-transport', image: '/navInsideIcons/Air Ambulance.svg' },
                 { name: 'Helicopter', link: '/Helicopter-Charter-Flight', image: '/navInsideIcons/Helicopter.svg' },
               ]}

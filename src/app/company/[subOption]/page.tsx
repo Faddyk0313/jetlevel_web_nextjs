@@ -17,7 +17,7 @@ type PageProps = {
   };
 };
 
-const pageContent: Record<string, { title: string; description?: string }> = {
+const pageContent: Record<string, { title: string; description?: string; }> = {
   "about-us": { title: "About Our Company - JetLevel Aviation", description: "JetLevel Aviation was founded by a team of industry professionals with over 10 years experience in the Private Jet Charter Industry." },
   "contact-us": { title: "Contact Us", description: "Get in touch with us today." },
   blogs: { title: "Blog - JetLevel Private Jet Charter", description: "Our Level Up Blog contains informative articles and topics on Private Jet Charters to multiple destinations." },
@@ -56,7 +56,7 @@ const CompanyPage = async ({ params }: PageProps) => {
     description: "The page you are looking for does not exist.",
   };
   let content: ContentData[] | null = null;
-  if(title === "Blog - JetLevel Private Jet Charter") {
+  if (title === "Blog - JetLevel Private Jet Charter") {
     const client = createClient();
     const limit = 20; // Set to a reasonable high limit
     let response = await client.getContentByType({
@@ -65,15 +65,15 @@ const CompanyPage = async ({ params }: PageProps) => {
       sortDirection: "desc",
       limit,
     });
-  
+
     content = [...response.content];
-  
+
     while (response.nextPage) {
       response = await response.nextPage();
       content = content.concat(response.content);
     }
   }
-  
+
   // console.log("Content:--------------------", content[0].fields.all_sections_content.text);
 
   // utils/getExcerpt.ts
@@ -87,97 +87,97 @@ const CompanyPage = async ({ params }: PageProps) => {
     <>
       {title === "Blog - JetLevel Private Jet Charter" ? (
         <>
-        <div className="bg-[url('/images/blog-hero-image.jpg')] bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-center justify-center">
-          <h1 className="px-5 md:px-10 lg:px-20 max-w-[1800px] w-full mx-auto text-white ">
-            {title}
-          </h1>
-        </div>
+          <div className="bg-[url('/images/blog-hero-image.jpg')] bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-center justify-center">
+            <h1 className="px-5 md:px-10 lg:px-20 max-w-[1800px] w-full mx-auto text-white ">
+              {title}
+            </h1>
+          </div>
 
-        <BrandNames />
-        <section className="flex flex-col lg:flex-row gap-10 px-5 md:px-10 lg:px-20 py-7 max-w-[1800px] mx-auto">
-          <div className="min-w-full md:min-w-[72%]">
-            <Breadcrumb />
-            {content ? content.map((blogContent, index) => (
-              <div
-                key={index}
-                className="flex flex-col my-9 text-start shadow-card_shadow_blog transition-all ease-linear hover:-translate-y-1 hover:shadow-card_shadow_blog2"
-              >
-                {blogContent.slug ? (
-                  <Link href={blogContent.slug}>
-                    {
-                      blogContent.fields.hero_image?.assets[0]?.asset?.url ?
-                        <Image
-                          src={blogContent.fields.hero_image?.assets[0]?.asset?.url}
-                          width={
-                            blogContent.fields.hero_image?.assets[0]?.asset?.width
-                          }
-                          height={
-                            blogContent.fields.hero_image?.assets[0]?.asset?.height
-                          }
-                          alt={blogContent.fields.hero_image?.assets[0]?.asset?.name}
-                          className="w-full h-full object-cover"
-                        /> : ""
-                    }
-
-                  </Link>
-                ) : (
-                  ""
-                )}
-                <div className="flex flex-col gap-3 px-11 pb-9 ">
+          <BrandNames />
+          <section className="flex flex-col lg:flex-row gap-10 px-5 md:px-10 lg:px-20 py-7 max-w-[1800px] mx-auto">
+            <div className="min-w-full md:min-w-[72%]">
+              <Breadcrumb />
+              {content ? content.map((blogContent, index) => (
+                <div
+                  key={index}
+                  className="flex flex-col my-9 text-start shadow-card_shadow_blog transition-all ease-linear hover:-translate-y-1 hover:shadow-card_shadow_blog2"
+                >
                   {blogContent.slug ? (
                     <Link href={blogContent.slug}>
-                      <h2 className="text-2xl md:text-[40px] md:leading-[54px] box-border pt-9">
-                        {blogContent.fields.title.text}
-                      </h2>
+                      {
+                        blogContent.fields.hero_image?.assets[0]?.asset?.url ?
+                          <Image
+                            src={blogContent.fields.hero_image?.assets[0]?.asset?.url}
+                            width={
+                              blogContent.fields.hero_image?.assets[0]?.asset?.width
+                            }
+                            height={
+                              blogContent.fields.hero_image?.assets[0]?.asset?.height
+                            }
+                            alt={blogContent.fields.hero_image?.assets[0]?.asset?.name}
+                            className="w-full h-full object-cover"
+                          /> : ""
+                      }
+
                     </Link>
                   ) : (
                     ""
                   )}
-                  <div className="blogCard">
-                  <Markdown
-                    options={{
-                      overrides: {
-                        a: {
-                          props: {
-                            className: " text-blue",
+                  <div className="flex flex-col gap-3 px-11 pb-9 ">
+                    {blogContent.slug ? (
+                      <Link href={blogContent.slug}>
+                        <h2 className="text-2xl md:text-[40px] md:leading-[54px] box-border pt-9">
+                          {blogContent.fields.title.text}
+                        </h2>
+                      </Link>
+                    ) : (
+                      ""
+                    )}
+                    <div className="blogCard">
+                      <Markdown
+                        options={{
+                          overrides: {
+                            a: {
+                              props: {
+                                className: " text-blue",
+                              },
+                            },
+                            span: {
+                              props: {
+                                className: "!text-white !font-normal",
+                              },
+                            },
                           },
-                        },
-                        span: {
-                          props: {
-                            className: "!text-white !font-normal",
-                          },
-                        },
-                      },
-                    }}
-                  >
-                    {
-                      getExcerpt(
-                        blogContent.fields.all_sections_content.text
-                      ) as string
-                    }
-                  </Markdown>
+                        }}
+                      >
+                        {
+                          getExcerpt(
+                            blogContent.fields.all_sections_content.text
+                          ) as string
+                        }
+                      </Markdown>
+                    </div>
+                    {blogContent.slug ? (
+                      <Link
+                        href={blogContent.slug}
+                        className="w-fit text-white px-5 py-2 rounded-full bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1 hover:shadow-card_shadow"
+                      >
+                        Continue Reading
+                      </Link>
+                    ) : (
+                      ""
+                    )}
                   </div>
-                  {blogContent.slug ? (
-                    <Link
-                      href={blogContent.slug}
-                      className="w-fit text-white px-5 py-2 rounded-full bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] transition-all ease-linear hover:-translate-y-1 hover:shadow-card_shadow"
-                    >
-                      Continue Reading
-                    </Link>
-                  ) : (
-                    ""
-                  )}
                 </div>
-              </div>
-            )): ""}
-          </div>
-          <div className="min-w-[24%] max-w-fit  mt-[76px] max-[650px]:mt-0">
-            <Suspense fallback={<div className="search-form__loader"></div>}>
-            <LeadForm widget={true} />
-          </Suspense>
-          </div>
-        </section>
-      </>
+              )) : ""}
+            </div>
+            <div className="min-w-[24%] max-w-fit  mt-[76px] max-[650px]:mt-0 sticky top-[90px] h-fit">
+              <Suspense fallback={<div className="search-form__loader"></div>}>
+                <LeadForm widget={true} />
+              </Suspense>
+            </div>
+          </section>
+        </>
       ) : (
         <>
           <div className="w-full">

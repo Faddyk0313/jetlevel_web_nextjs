@@ -1,0 +1,183 @@
+{
+  "title": {
+    "id": "f_01jBtrx2HVWtRCrwq74D24R8Cf",
+    "name": "Page Name",
+    "handle": "title",
+    "help_text": null,
+    "type": "text",
+    "text": "Pilatus PC12"
+  },
+  "heading": {
+    "id": "f_01JejPEgwQ0rcZ0h36Sf6cFHEK",
+    "name": "Overview Heading",
+    "handle": "heading",
+    "help_text": "[Aircraft Name] Charter Overview    example: King Air 350 Charter Overview",
+    "type": "text",
+    "text": "Pilatus PC12 Charter Overview"
+  },
+  "hero_image": {
+    "id": "f_01jEjTyf44JJbN1Cz1p8aXn2S6",
+    "name": "Hero Image",
+    "handle": "hero_image",
+    "help_text": null,
+    "type": "assets",
+    "assets": [
+      {
+        "sort": 0,
+        "asset": {
+          "id": "a_01JfJCTBDNz6D6hpjy9s1PegzV",
+          "url": "https://assets.contento.io/assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/jet-charter-pilatus-pc-12-(2).jpg",
+          "name": "Jet Charter Pilatus Pc 12 (2)",
+          "path": "assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/jet-charter-pilatus-pc-12-(2).jpg",
+          "size": "280.41 KB",
+          "width": "1500",
+          "height": "837",
+          "is_image": true,
+          "extension": "jpg",
+          "mime_type": "image/jpeg",
+          "created_at": "2024-12-20T16:01:12+00:00",
+          "updated_at": "2024-12-20T16:01:12+00:00",
+          "description": null
+        }
+      }
+    ]
+  },
+  "map_heading": {
+    "id": "f_01jBtSV3GX1Tkn6n9FskCa9MX6",
+    "name": "Map Heading",
+    "handle": "map_heading",
+    "help_text": null,
+    "type": "text",
+    "text": "Discover the Global Reach of the Pilatus PC12 Charter"
+  },
+  "grid_content": {
+    "id": "f_01JFjcYHYH4GfE0rndTFCEt324",
+    "name": "Grid Content",
+    "handle": "grid_content",
+    "help_text": null,
+    "type": "list",
+    "list": [
+      {
+        "sort": 0,
+        "text": "Pilatus Aircraft"
+      },
+      {
+        "sort": 1,
+        "text": "Turbo Prop"
+      },
+      {
+        "sort": 2,
+        "text": "6-8"
+      },
+      {
+        "sort": 3,
+        "text": "Yes"
+      },
+      {
+        "sort": 4,
+        "text": "1,803 nm"
+      },
+      {
+        "sort": 5,
+        "text": "2257 lb"
+      },
+      {
+        "sort": 6,
+        "text": "2,485 ft"
+      },
+      {
+        "sort": 7,
+        "text": "1,920 fpm"
+      },
+      {
+        "sort": 8,
+        "text": "268 ktas"
+      },
+      {
+        "sort": 9,
+        "text": "30,000 ft"
+      },
+      {
+        "sort": 10,
+        "text": "4.8 ft"
+      },
+      {
+        "sort": 11,
+        "text": "5 ft"
+      },
+      {
+        "sort": 12,
+        "text": "16.9 ft"
+      },
+      {
+        "sort": 13,
+        "text": "356 cu ft"
+      },
+      {
+        "sort": 14,
+        "text": "40 cu ft (internal)"
+      }
+    ]
+  },
+  "hero_section": {
+    "id": "f_01JBTRyJBw57y00DBw36Q3wK77",
+    "name": "Hero Section",
+    "handle": "hero_section",
+    "help_text": null,
+    "type": "blocks",
+    "blocks": [
+      {
+        "name": "",
+        "sort": 0,
+        "fields": {
+          "title": {
+            "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+            "name": "Heading",
+            "text": "Pilatus PC12 Charter Services",
+            "type": "text",
+            "handle": "title",
+            "help_text": "Heading (h2)"
+          },
+          "paragraph": {
+            "id": "f_01jbQrN2830RDW6Px709G00xM8",
+            "name": "Paragraph",
+            "text": "<p>The best-selling single-engine turbo prop plane in the world, the Pilatus PC12 demonstrates extraordinary reliability at a low cost. Its impressive range and fuel efficiency set it apart in the turboprop category, making it a top choice for those looking to charter a Pilatus PC12.</p>",
+            "type": "long_text",
+            "handle": "paragraph",
+            "help_text": "Paragraph (Long Text)"
+          }
+        },
+        "content_type": {
+          "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+          "name": "Content Section",
+          "handle": "content_section",
+          "object_type": "block"
+        }
+      }
+    ]
+  },
+  "other_section": {
+    "id": "f_01JFJe9Xxhp2kVDaR3jfmx475c",
+    "name": "Other section",
+    "handle": "other_section",
+    "help_text": null,
+    "type": "long_text",
+    "text": ""
+  },
+  "range_distance": {
+    "id": "f_01jEjP9k0142W3ApF7sm0fF6hN",
+    "name": "Range Distance",
+    "handle": "range_distance",
+    "help_text": null,
+    "type": "decimal",
+    "number": "1803"
+  },
+  "compare_heading": {
+    "id": "f_01jBTsZj083NHeZxe3tN9eqTEY",
+    "name": "Compare Heading",
+    "handle": "compare_heading",
+    "help_text": "If not present then write like this - \"Compare Other Private Jets to a [Aircraft Full Name]\"",
+    "type": "text",
+    "text": "Compare Other Private Jets to a Pilatus PC12"
+  }
+}

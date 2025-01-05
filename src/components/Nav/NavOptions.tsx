@@ -44,6 +44,7 @@ function NavOptions() {
                             subOptions={[
                                 { name: 'On-Demand Charter', link: '/private-jet-charter', image: '/navInsideIcons/On-Demand Charter.svg' },
                                 { name: 'Group Charter', link: '/group-charter-flight', image: '/navInsideIcons/Group Charter.svg' },
+                                { name: 'Industry Specific', link: '/industory-charter', image: '/navInsideIcons/industry_specific_charter.svg' },
                                 { name: 'Air Ambulance', link: '/medical-flight-transport', image: '/navInsideIcons/Air Ambulance.svg' },
                                 { name: 'Helicopter', link: '/Helicopter-Charter-Flight', image: '/navInsideIcons/Helicopter.svg' },
                             ]}
@@ -82,7 +83,7 @@ function NavOptions() {
                     <div onClick={(e) => e.stopPropagation()}>
                         <NavClickedContent
                             subOptions={[
-                                { name: 'Private Jet Airports', link: '/usa-airport-directory', image: '/navInsideIcons/Private Jet Airports.svg' },
+                                { name: 'Private Jet Airports', link: '/usa-airport-directory', image: '/navInsideIcons/Private jet Airports.svg' },
                                 { name: 'Aircraft Types', link: '/aircraft-charters/', image: '/navInsideIcons/Aircraft Types.svg' },
                                 { name: 'Cost Estimator', link: '/charter-flights-cost-calculator', image: '/navInsideIcons/Cost Estimator.svg' },
                                 { name: 'Flight Tracker', link: '/flight-tracker', image: '/navInsideIcons/Flight Tracker.svg' },
@@ -106,7 +107,7 @@ function NavOptions() {
                     <div onClick={(e) => e.stopPropagation()}>
                         <NavClickedContent
                             subOptions={[
-                                { name: 'About Us', link: '/about-jet-level', image: '/navInsideIcons/About Us.svg' },
+                                { name: 'About Us', link: '/about-jet-level', image: '/navInsideIcons/About us.svg' },
                                 { name: 'Contact Us', link: '/contact-us', image: '/navInsideIcons/Contact Us.svg' },
                                 { name: 'Blogs', link: '/blog', image: '/navInsideIcons/On-Demand Charter.svg' },
                                 // { name: 'Charter FAQs', link: '/private-jet-frequently-asked-questions/', image: '/navInsideIcons/Charter FAQs.svg' },

@@ -15,9 +15,9 @@ interface TopCharteredCitiesProps {
 
 const TopCharteredCities: React.FC<TopCharteredCitiesProps> = ({ title, cities, buttonLink }) => {
     return (
-        <div className="bg-white flex flex-col  shadow-card_shadow rounded-md pb-3 justify-start !min-h-[400px] mt-[30px] min-w-[300px]">
-            <div className="bg-blue-background bg-cover text-white text-center rounded-t-md py-8 flex justify-center ">
-                <h3 className='m-0 px-3'>{title}</h3>
+        <div className="bg-white flex flex-col  shadow-card_shadow rounded-md pb-3 justify-start !min-h-[400px]">
+            <div className="bg-blue-background bg-cover text-white text-center rounded-t-md py-5">
+                <h3 className='m-0 px-2'>{title}</h3>
             </div>
             <div className='px-1'>
                 <div className="px- text-center text-gray-700">

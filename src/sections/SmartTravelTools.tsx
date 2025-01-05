@@ -5,9 +5,10 @@ import { CardInfo } from '@/app/types';
 
 interface SmartTravelToolsProps {
     hasSectionPadding?: boolean;
+    hasInlinePadding?: boolean;
 }
 
-const SmartTravelTools: React.FC<SmartTravelToolsProps> = ({ hasSectionPadding })  => {
+const SmartTravelTools: React.FC<SmartTravelToolsProps> = ({ hasSectionPadding, hasInlinePadding= true })  => {
 
     let heading: string = 'Smart Travel Tools'
     let para: string = 'Navigate your private jet charter experience with precision and ease using our suite of intuitive tools. From real-time flight tracking to instant cost and distance estimations, we empower you to make informed, confident decisions about your travel. Discover a smarter way to fly, tailored to your needs.';
@@ -34,7 +35,7 @@ const SmartTravelTools: React.FC<SmartTravelToolsProps> = ({ hasSectionPadding }
     ];
 
     return (
-        <CustomComponent heading={heading} para={para} background="white" items={data} hasPadding={hasSectionPadding}  />
+        <CustomComponent heading={heading} para={para} background="white" items={data} hasPadding={hasSectionPadding} hasInlinePadding={hasInlinePadding}  />
     );
 
 

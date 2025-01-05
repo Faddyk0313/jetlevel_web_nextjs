@@ -4,6 +4,7 @@ import React, { useState } from 'react';
 import CharterCity from './CharterCities';
 import { Search } from '@/svg';
 import Button from '@/components/Button';
+import Link from 'next/link';
 
 interface UsCanadaPageProps {
   title?: string,
@@ -83,10 +84,13 @@ const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
           Explore our featured cities or Inquire about a quote for travel to/from any destination worldwide.
         </h2>
         <div className="text-center pt-8">
-          <Button
-            text='Request a Quote'
-            variant='primary'
-          />
+          <Link href="/request-a-quote">
+            <Button
+              text='Request a Quote'
+              variant='primary'
+            />
+          </Link>
+          
         </div>
       </section>
 

@@ -10,6 +10,7 @@ import CollapsibleAircraftSection from './CollapsibleAircraftSection';
 import CollapsibleTravelGuideSection from './CollapsibleTravelGuideSection';
 import { Suspense } from "react";
 import LeadForm from '@/components/LeadForm';
+import Widgets_30Percent_Section from './Widgets_30Percent_Section';
 
 interface Props {
     fields: any; // Replace `any` with the actual type of `fields` if known
@@ -166,16 +167,8 @@ const CityPage = ({ fields, region }: Props) => {
 
                     <CollapsibleTravelGuideSection title={fields.main_heading.text} travelGuideFields={fields2} travelConceirge_EmergencyContacts={otherFields} weatherFields={weatherFields} />
                 </div>
-                <div className="min-w-[24%] sm:flex sm:flex-wrap justify-between gap-5 ">
-                    <div className="w-fit lg:w-auto sm:min-w-[324px]">
-                        <Suspense fallback={<div className="search-form__loader"></div>}>
-                            <LeadForm widget={true} />
-                        </Suspense>
-                    </div>
-                    <div className="w-fit lg:w-auto sm:min-w-[324px] ">
-                        <TopCharteredCities
-                            title="Top USA Chartered Cities"
-                            cities={[
+                
+                <Widgets_30Percent_Section widgetTitle='Top USA Chartered Cities' widgetContent={[
                                 {
                                     name: 'Van Nuys',
                                     link: '/private-jet-charter-flights-to-van-nuys-ca/'
@@ -216,11 +209,7 @@ const CityPage = ({ fields, region }: Props) => {
                                     name: 'Teterboro',
                                     link: '/private-jet-charter-flights-to-teterboro-nj'
                                 },
-                            ]}
-                            buttonLink="#"
-                        />
-                    </div>
-                </div>
+                            ]} widgetButtonLink='/us-canada-chartered-cities' />
             </section>
             {/* <BookYourPrivateJet /> */}
         </>

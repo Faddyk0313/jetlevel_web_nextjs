@@ -156,7 +156,7 @@ const AircraftCharterPage = () => {
         url: `/citation-cj3`
       },
       {
-        backgroundImage: '/aircraftImages/jet-charter-phenom-300-thumbnail.jpeg',
+        backgroundImage: '/aircraftImages/jet-charter-embraer-phenom-300-thumbnail.jpg',
         title: 'Phenom 300',
         url: `/embraer-phenom-300`
       },

@@ -210,16 +210,16 @@ const Footer = () => {
                             <h4 className="text-lg min-w-24 lg:max-w-24 text-center">Connect with us</h4>
                             <div className="flex gap-6 items-center mx-auto">
                                 {/* Add proper href values for each social media link */}
-                                <a className='border border-[#858585] rounded-full p-2 text-[#858585]' href="#" aria-label="Facebook" >
+                                <a className='border border-[#858585] rounded-full p-2 text-[#858585]' href="https://www.facebook.com/flyjetlevel/" aria-label="Facebook" >
                                     <FaFacebookF />
                                 </a>
-                                <a className='border border-[#858585] rounded-full p-2 text-[#858585]' href="#" aria-label="Twitter" >
+                                <a className='border border-[#858585] rounded-full p-2 text-[#858585]' href="https://x.com/flyjetlevel" aria-label="Twitter" >
                                     <FaXTwitter />
                                 </a>
-                                <a className='border border-[#858585] rounded-full p-2 text-[#858585]' href="#" aria-label="Instagram" >
+                                <a className='border border-[#858585] rounded-full p-2 text-[#858585]' href="https://www.instagram.com/flyjetlevel/?hl=en" aria-label="Instagram" >
                                     <FaInstagram />
                                 </a>
-                                <a className='border border-[#858585] rounded-full p-2 text-[#858585]' href="#" aria-label="LinkedIn" >
+                                <a className='border border-[#858585] rounded-full p-2 text-[#858585]' href="https://www.linkedin.com/company/flyjetlevel/" aria-label="LinkedIn" >
                                     <FaLinkedinIn />
                                 </a>
                             </div>

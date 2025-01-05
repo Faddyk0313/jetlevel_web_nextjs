@@ -13,6 +13,7 @@ import WhatOurClientsSay from '@/sections/WhatOurClientsSay';
 import CollapsibleAvinodeCalculatorSection from './CollapsibleAvinodeCalculatorSection';
 import { Suspense } from "react";
 import LeadForm from '@/components/LeadForm';
+import Widgets_30Percent_Section from './Widgets_30Percent_Section';
 
 const overviewContent = [
   {
@@ -47,7 +48,6 @@ const overviewContent = [
 
 const AircraftPage = ({ fields }: any) => {
 
-  // console.log("----------------------", fields)
   return (
     <>
       <Hero
@@ -61,74 +61,64 @@ const AircraftPage = ({ fields }: any) => {
         <div className="min-w-full md:min-w-[72%]">
           <Breadcrumb />
           <CollapsibleAircraftGridSection title='Aircraft Specifications' content={fields.grid_content.list} isDefaultOpen={true} />
-          <CollapsibleAircraftOverviewSection title={fields.map_heading.text} content={fields.range_distance.number} />
+          <CollapsibleAircraftOverviewSection title={fields.map_heading.text} content={parseFloat(fields.range_distance.number)} />
           <CollapsibleAircraftOverviewSection title={fields.heading.text} content={fields.other_section.text} />
           {/* Aircraft Comparison Iframe */}
           <CollapsibleAvinodeCalculatorSection title={fields.compare_heading.text} />
           {/* <iframe id="comparison-iframe" className="border-none w-full h-auto" src="https://app.jetlevel.com/aircraftComparison" ></iframe> */}
 
         </div>
-        <div className="min-w-[24%] sm:flex sm:flex-wrap justify-between gap-5 ">
-          <div className="w-fit lg:w-auto sm:min-w-[324px]">
-            <Suspense fallback={<div className="search-form__loader"></div>}>
-              <LeadForm widget={true} />
-            </Suspense>
-          </div>
-          <div className="w-fit lg:w-auto sm:min-w-[324px] ">
-            <TopCharteredCities
-              title="Premier Aircraft for Charter"
-              cities={[
-                {
-                  name: "King Air 350",
-                  link: "/king-air-350"
-                },
-                {
-                  name: "Pilatus PC-12",
-                  link: "/pilatus-pc12"
-                },
-                {
-                  name: "Citation M2",
-                  link: "/citation-m2"
-                },
-                {
-                  name: "Phenom 100",
-                  link: "/embraer-phenom-100"
-                },
-                {
-                  name: "Phenom 300",
-                  link: "/embraer-phenom-300"
-                },
-                {
-                  name: "Citation CJ3",
-                  link: "/citation-cj3"
-                },
-                {
-                  name: "Hawker 900XP",
-                  link: "/hawker-900xp"
-                },
-                {
-                  name: "Challenger 300",
-                  link: "/challenger-300"
-                },
-                {
-                  name: "Gulfstream G600",
-                  link: "/gulfstream-givsp"
-                },
-                {
-                  name: "Falcon 900",
-                  link: "/falcon-900"
-                },
-              ]}
-              buttonLink="#"
-            />
-
-          </div>
-        </div>
+        <Widgets_30Percent_Section widgetTitle='Premier Aircraft for Charter' widgetContent={[
+          {
+            name: "King Air 350",
+            link: "/king-air-350"
+          },
+          {
+            name: "Pilatus PC-12",
+            link: "/pilatus-pc12"
+          },
+          {
+            name: "Citation M2",
+            link: "/citation-m2"
+          },
+          {
+            name: "Phenom 100",
+            link: "/embraer-phenom-100"
+          },
+          {
+            name: "Phenom 300",
+            link: "/embraer-phenom-300"
+          },
+          {
+            name: "Citation CJ3",
+            link: "/citation-cj3"
+          },
+          {
+            name: "Hawker 900XP",
+            link: "/hawker-900xp"
+          },
+          {
+            name: "Challenger 300",
+            link: "/challenger-300"
+          },
+          {
+            name: "Gulfstream G600",
+            link: "/gulfstream-givsp"
+          },
+          {
+            name: "Falcon 900",
+            link: "/falcon-900"
+          },
+        ]} widgetButtonLink='/aircraft-charters' />
       </section>
-      <ExclusiveServices hasSectionPadding={false} />
-      <SmartTravelTools hasSectionPadding={false} />
-      <PopularPrivateJetCharters hasSectionPadding={false} />
-      <WhatOurClientsSay hasSectionPadding={false} />
+      <div className='px-5 md:px-10 xl:px-20 max-w-[1800px] mx-auto'>
+        <ExclusiveServices hasSectionPadding={false} hasInlinePadding={false} />
+        <SmartTravelTools hasSectionPadding={false} hasInlinePadding={false} />
+        <PopularPrivateJetCharters hasSectionPadding={false} hasInlinePadding={false} />
+      </div>
+      <div>
+        <WhatOurClientsSay hasSectionPadding={true} hasInlinePadding={false} />
+      </div>
     </>
   );
 };

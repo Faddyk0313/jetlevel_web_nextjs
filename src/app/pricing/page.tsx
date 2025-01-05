@@ -168,7 +168,7 @@ const Pricing = () => {
       heading: '',
       accessor: '',
       Cell: ({ row }: { row: Record<string, any>; }) => <div className='relative font-bold text-black hover:text-white w-full h-full'>
-        <Link href='/request-a-qoute'><button className='w-full h-full group-hover:text-white'>Inquire</button></Link>
+        <Link href='/request-a-quote'><button className='w-full h-full group-hover:text-white'>Inquire</button></Link>
       </div>
     },
   ];
@@ -227,10 +227,13 @@ const Pricing = () => {
               <h3>Popular Private Jet Charter Flights Routes</h3>
               <p>Dive into our exclusive collection of popular private jet charter routes.</p>
             </div>
+            <Link href={'/trequest-a-quote'}>
             <Button
               text='Enquire Now'
               variant='primary'
             />
+            </Link>
+            
           </div>
           <Table
             data={data}

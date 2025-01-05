@@ -6,6 +6,7 @@ import { Suspense } from "react";
 import LeadForm from '@/components/LeadForm';
 import Breadcrumb from "./Breadcrumb/Breadcrumb";
 import CollapsibleAvinodeCalculatorSection from "./CollapsibleAvinodeCalculatorSection";
+import Widgets_30Percent_Section from "./Widgets_30Percent_Section";
 
 // import { EmptyLegFlightResponse, fetcher } from '@/lib/fetcher';
 // type EmptyLegProps = {
@@ -54,16 +55,7 @@ const EmptyLegPage = async ({ fields }: any) => {
                     <CollapsibleSection title="Listing of Region-Specific Empty Leg Flights" content={links} />
                     <CollapsibleSection title="Frequently Asked Questions" content={faqContent} />
                 </div>
-                <div className="min-w-[24%] sm:flex sm:flex-wrap justify-between gap-5 ">
-                    <div className="w-fit lg:w-auto sm:min-w-[324px]">
-                        <Suspense fallback={<div className="search-form__loader"></div>}>
-                            <LeadForm widget={true} />
-                        </Suspense>
-                    </div>
-                    <div className="w-fit lg:w-auto sm:min-w-[324px] ">
-                        <TopCharteredCities
-                            title="Popular Empty Legs Flights"
-                            cities={[
+                <Widgets_30Percent_Section widgetTitle="Popular Empty Legs Flights" widgetContent={[
                                 {
                                     name: 'Aspen, CO',
                                     link: '/empty-leg-flights-aspen'
@@ -104,11 +96,7 @@ const EmptyLegPage = async ({ fields }: any) => {
                                     name: 'Orlando, FL',
                                     link: '/empty-leg-flights-orlando'
                                 },
-                            ]}
-                            buttonLink="#"
-                        />
-                    </div>
-                </div>
+                            ]} widgetButtonLink="/empty-leg-flights#listing" />
             </section>
             {/* <BookYourPrivateJet /> */}
         </>

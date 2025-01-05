@@ -36,6 +36,11 @@
     }
   }
 
+  html {
+    scroll-behavior: smooth;
+  }
+  
+
   .animate-ringing {
     animation: ringing 1.5s infinite; /* 0.5s for ringing, 2s pause */
   }
