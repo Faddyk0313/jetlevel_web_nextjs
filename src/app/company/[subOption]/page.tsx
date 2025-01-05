@@ -61,8 +61,8 @@ const CompanyPage = async ({ params }: PageProps) => {
     const limit = 20; // Set to a reasonable high limit
     let response = await client.getContentByType({
       contentType: subOption,
-      sortBy: "published_at",
-      sortDirection: "desc",
+      sortBy: "name",
+      sortDirection: "asc",
       limit,
     });
 
@@ -88,9 +88,7 @@ const CompanyPage = async ({ params }: PageProps) => {
       {title === "Blog - JetLevel Private Jet Charter" ? (
         <>
           <div className="bg-[url('/images/blog-hero-image.jpg')] bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-center justify-center">
-            <h1 className="px-5 md:px-10 lg:px-20 max-w-[1800px] w-full mx-auto text-white ">
-              {title}
-            </h1>
+            <h1 className="px-5 md:px-10 lg:px-20 max-w-[1800px] w-full mx-auto text-white ">Level Up Blog</h1>
           </div>
 
           <BrandNames />

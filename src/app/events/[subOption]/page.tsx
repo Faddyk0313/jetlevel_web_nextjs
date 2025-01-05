@@ -58,10 +58,6 @@ export async function generateMetadata({ params }: PageProps) {
 
 const EventDetailPage = async ({ params }: PageProps) => {
   const { subOption } = params;
-  const mergeEvents = events.event.flatMap(item => item.content);
-  const singleEvent = mergeEvents.find((event) =>
-    event.heading.toLowerCase() === params.subOption.replace(/-/g, ' ').toLowerCase()
-  );
   // console.log('singleEvent',singleEvent);
 
   const { content } = await fetchContent(subOption);

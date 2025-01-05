@@ -8,6 +8,9 @@ import Script from 'next/script';
 import 'aos/dist/aos.css';
 import "react-datepicker/dist/react-datepicker.css";
 import BookYourPrivateJet from '@/sections/BookYourPrivateJet';
+import { Analytics } from "@vercel/analytics/react"
+import { SpeedInsights } from "@vercel/speed-insights/next"
+
 
 // Configure the fonts with subsets
 const playfairDisplay = Playfair_Display({
@@ -105,6 +108,8 @@ export default function RootLayout({
         {/* <BookYourPrivateJet /> */}
         <ContactMenu />
         <Footer />
+        <Analytics />
+        <SpeedInsights />
       </body>
     </html>
   );

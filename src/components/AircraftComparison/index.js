@@ -1,4 +1,4 @@
-import "@/style/aircraft.css";
+import "./aircraft.css";
 import React, { useEffect, useState } from "react";
 
 const AircraftComparison = () => {

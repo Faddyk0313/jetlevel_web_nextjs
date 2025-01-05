@@ -64,7 +64,7 @@ const AircraftPage = ({ fields }: any) => {
           <CollapsibleAircraftOverviewSection title={fields.map_heading.text} content={parseFloat(fields.range_distance.number)} />
           <CollapsibleAircraftOverviewSection title={fields.heading.text} content={fields.other_section.text} />
           {/* Aircraft Comparison Iframe */}
-          <CollapsibleAvinodeCalculatorSection title={fields.compare_heading.text} />
+          <CollapsibleAvinodeCalculatorSection title={fields.compare_heading.text} calculatorName='CompareCalculator' />
           {/* <iframe id="comparison-iframe" className="border-none w-full h-auto" src="https://app.jetlevel.com/aircraftComparison" ></iframe> */}
 
         </div>

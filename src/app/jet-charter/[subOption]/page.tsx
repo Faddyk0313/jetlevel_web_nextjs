@@ -69,8 +69,8 @@ const JetCharter = async ({ params }: PageProps) => {
   const limit = 100; // Set to a reasonable high limit
   let response = await client.getContentByType({
     contentType: contentType,
-    sortBy: "published_at",
-    sortDirection: "desc",
+    sortBy: "name",
+    sortDirection: "asc",
     limit,
   });
 

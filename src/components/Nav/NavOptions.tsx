@@ -110,7 +110,7 @@ function NavOptions() {
                                 { name: 'About Us', link: '/about-jet-level', image: '/navInsideIcons/About us.svg' },
                                 { name: 'Contact Us', link: '/contact-us', image: '/navInsideIcons/Contact Us.svg' },
                                 { name: 'Blogs', link: '/blog', image: '/navInsideIcons/On-Demand Charter.svg' },
-                                // { name: 'Charter FAQs', link: '/private-jet-frequently-asked-questions/', image: '/navInsideIcons/Charter FAQs.svg' },
+                                { name: 'Charter FAQs', link: '/private-jet-frequently-asked-questions', image: '/navInsideIcons/Charter FAQs.svg' },
                                 { name: 'Our Team', link: '/our-team', image: '/navInsideIcons/Our Team.svg' },
                             ]}
                             closeDropdown={closeDropdown} // Pass the closeDropdown function here
