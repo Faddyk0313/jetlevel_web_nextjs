@@ -2,9 +2,10 @@ import React from 'react';
 
 interface WhatOurClientsSayProps {
     hasSectionPadding?: boolean;
+    hasInlinePadding?: boolean;
   }
 
-const WhatOurClientsSay: React.FC<WhatOurClientsSayProps> = ({ hasSectionPadding })  => {
+const WhatOurClientsSay: React.FC<WhatOurClientsSayProps> = ({ hasSectionPadding, hasInlinePadding = true })  => {
     const testimonials = [
         {
             text: "We had an amazing experience with JetLevel! Ricky was very accommodating and prompt in responding. The jets were clean and right on time for our flight. There was a car waiting for us when we landed - I can't believe everything was settled having had so few calls with the company. They took care of everything. If time is always critical then these guys are perfect for you. They never disappoint!",
@@ -29,7 +30,7 @@ const WhatOurClientsSay: React.FC<WhatOurClientsSayProps> = ({ hasSectionPadding
     ];
     return (
         <section className={`overlay bg-[url(/images/In-Flight-Productivity.webp)] bg-center bg-cover flex flex-col items-center min-h-screen justify-center ${hasSectionPadding === false ? '!py-10' : ''}`}>
-            <div className='max-w-[1800px] mx-auto px-5 md:px-10 lg:px-20'>
+            <div className={`max-w-[1800px] mx-auto ${hasInlinePadding ? "px-5 md:px-10 lg:px-20" : "px-5 md:px-10 xl:px-20" } `}>
                 <h2 className="text-center text-white pb-7">What Our Clients Say</h2>
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
                     {testimonials.map((testimonial, index) => (

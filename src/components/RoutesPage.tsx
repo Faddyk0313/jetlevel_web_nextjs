@@ -11,6 +11,7 @@ import CollapsibleRouteWeatherSection from "./CollapsibleRouteWeatherSection";
 import CollapsibleRoutesPointsSection from "./CollapsibleRoutesPointsSection";
 import { Suspense } from "react";
 import LeadForm from '@/components/LeadForm';
+import Widgets_30Percent_Section from "./Widgets_30Percent_Section";
 
 const RoutesPage = ({ fields }: any) => {
   //   console.log("-------------------------", fields.gmap_section.blocks)
@@ -57,16 +58,8 @@ const RoutesPage = ({ fields }: any) => {
             content={fields.last_section.blocks[0].fields.paragraph.text}
           />
         </div>
-        <div className="min-w-[24%] sm:flex sm:flex-wrap justify-between gap-5 ">
-          <div className="w-fit lg:w-auto sm:min-w-[324px]">
-            <Suspense fallback={<div className="search-form__loader"></div>}>
-              <LeadForm widget={true} />
-            </Suspense>
-          </div>
-          <div className="w-fit lg:w-auto sm:min-w-[324px] ">
-            <TopCharteredCities
-              title="Popular Chartered Routes"
-              cities={[
+        
+        <Widgets_30Percent_Section widgetTitle="Popular Chartered Routes" widgetContent={[
                 {
                   name: "Van Nuys to Las Vegas – Private Jet Charter",
                   link: "/private-jet-charter-los-angeles-to-las-vegas"
@@ -87,11 +80,7 @@ const RoutesPage = ({ fields }: any) => {
                   name: "Teterboro to Miami – Private Jet Charter",
                   link: "/private-jet-charter-chicago-to-fort-lauderdale"
                 },
-              ]}
-              buttonLink="#"
-            />
-          </div>
-        </div>
+              ]} widgetButtonLink="/popular-routes" />
       </section>
     </>
   );

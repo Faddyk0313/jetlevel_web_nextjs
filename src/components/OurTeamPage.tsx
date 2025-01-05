@@ -3,6 +3,7 @@ import BrandNames from '@/sections/BrandNames';
 import Hero from '@/sections/Hero';
 import { Facebook, Linkedin, Twitter } from '@/svg';
 import Image from 'next/image';
+import Link from 'next/link';
 import React from 'react';
 
 const OurTeamPage = () => {
@@ -47,9 +48,7 @@ const OurTeamPage = () => {
             aviation is instrumental in steering the company towards new heights.
           </p>
           <div className="flex gap-x-[30px] mt-[30px]">
-            <Linkedin className="w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white" />
-            <Facebook className="w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white" />
-            <Twitter className="w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white" />
+            <Link href={'https://www.linkedin.com/in/ricky-gomulka-98879212/'}><Linkedin className="w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white" /></Link>
           </div>
         </div>
 
@@ -71,9 +70,7 @@ const OurTeamPage = () => {
           Kevin's role as Vice President is pivotal in driving JetLevel Aviation's growth. His leadership and in-depth understanding of the aviation market ensure operational excellence and client satisfaction.
           </p>
           <div className='flex gap-x-[30px] mt-[30px]'>
-            <Linkedin className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
-            <Facebook className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
-            <Twitter className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
+            <Link href={'https://www.linkedin.com/in/kevin-g-b-50a29327/'} ><Linkedin className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' /></Link>
           </div>
         </div>
 
@@ -95,9 +92,7 @@ const OurTeamPage = () => {
             With 20 years of experience in corporate aviation, Erin, an FAA Licensed Aircraft Dispatcher, excels in providing top-notch flight support and client services, ensuring safe and efficient operations for JetLevel Aviation.
           </p>
           <div className='flex gap-x-[30px] mt-[30px]'>
-            <Linkedin className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
-            <Facebook className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
-            <Twitter className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' />
+            <Link href={'https://www.linkedin.com/in/erin-melder-50a538b9/'} ><Linkedin className='w-[30px] bg-black rounded-full h-[30px] p-[5px] social-icons hover:bg-white' /></Link>
           </div>
         </div>
     </div>

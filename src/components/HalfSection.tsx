@@ -4,6 +4,7 @@ import TopCharteredCities from '@/components/TopCharteredCities';
 import SmartTravelTools from '@/sections/SmartTravelTools';
 import PopularPrivateJetCharters from '@/sections/PopularPrivateJetCharters';
 import LeadForm from '@/components/LeadForm';
+import Widgets_30Percent_Section from './Widgets_30Percent_Section';
 interface HalfSectionProps {
   children: ReactNode;
   showBottomContent?: boolean;
@@ -17,17 +18,7 @@ const HalfSection: React.FC<HalfSectionProps> = ({ children, showBottomContent }
           <Breadcrumb />
           {children}
         </div>
-
-        <div className="min-w-[24%] sm:flex sm:flex-wrap justify-between gap-5 ">
-          <div className="w-fit lg:w-auto sm:min-w-[324px]">
-            <Suspense fallback={<div className="search-form__loader"></div>}>
-              <LeadForm widget={true} />
-            </Suspense>
-          </div>
-          <div className="w-fit lg:w-auto sm:min-w-[324px] ">
-            <TopCharteredCities
-              title="Top USA Chartered Cities"
-              cities={[
+        <Widgets_30Percent_Section widgetTitle='Top USA Chartered Cities' widgetContent={[
                 {
                   name: 'Van Nuys',
                   link: '/private-jet-charter-flights-to-van-nuys-ca/'
@@ -68,11 +59,7 @@ const HalfSection: React.FC<HalfSectionProps> = ({ children, showBottomContent }
                   name: 'Teterboro',
                   link: '/private-jet-charter-flights-to-teterboro-nj'
                 },
-              ]}
-              buttonLink="#"
-            />
-          </div>
-        </div>
+              ]} widgetButtonLink={"/us-canada-chartered-cities"}  />
       </section>
       {
         showBottomContent &&

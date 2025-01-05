@@ -69,8 +69,8 @@ const JetCharter = async ({ params }: PageProps) => {
   const limit = 100; // Set to a reasonable high limit
   let response = await client.getContentByType({
     contentType: contentType,
-    sortBy: "published_at",
-    sortDirection: "desc",
+    sortBy: "name",
+    sortDirection: "asc",
     limit,
   });
 
@@ -84,7 +84,7 @@ const JetCharter = async ({ params }: PageProps) => {
 
   return (
     <>
-      <Hero title={`${title == 'US & Canada​ | JetLevel Aviation' ? "USA & Canada's Premier Chartered Cities" :title == 'International Private Jet Charter​ | JetLevel Aviation' ? "International Chartered Cities" :title == 'Popular Routes​ | JetLevel Aviation' ? "Premier Chartered Routes" :title == 'Empty Leg Flights​ | JetLevel Aviation' ? "Empty Leg Flights" : ""  }`} description={`${title == 'Empty Leg Flights​ | JetLevel Aviation' ? "Search, Compare, and Book Seamlessly" : ""}`} image={link} hasCalculator={false} hasOverlay={true} />
+      <Hero title={`${title == 'US & Canada​ | JetLevel Aviation' ? "USA & Canada's Premier Chartered Cities" :title == 'International Private Jet Charter​ | JetLevel Aviation' ? "International Jet Charter" :title == 'Popular Routes​ | JetLevel Aviation' ? "Premier Private Jet Charter Routes" :title == 'Empty Leg Flights​ | JetLevel Aviation' ? "Empty Leg Flights" : ""  }`} description={`${title == 'Empty Leg Flights​ | JetLevel Aviation' ? "Search, Compare, and Book Seamlessly" : ""}`} image={link} hasCalculator={false} hasOverlay={true} />
       <BrandNames />
       {
         title !== 'Empty Leg Flights​ | JetLevel Aviation' ? (

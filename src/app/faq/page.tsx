@@ -1,322 +1,70 @@
-"use client";
-import Breadcrumb from '@/components/Breadcrumb/Breadcrumb'
-import { Airplane, Broker, Terminal, Charter, Price, Service } from '@/svg'
-import React, { useState } from 'react'
-import Collapsible from '@/components/Collapsible'
+
+import Breadcrumb from '@/components/Breadcrumb/Breadcrumb';
+import { Airplane, Broker, Terminal, Charter, Price, Service } from '@/svg';
+import React, { useState } from 'react';
+import Collapsible from '@/components/Collapsible';
 import Link from 'next/link';
 import BrandNames from '@/sections/BrandNames';
+import FaqContent from '@/components/FaqContent';
+import { ContentData, ContentoClient } from '@gocontento/client';
+import { createClient } from '@/lib/contento';
 
-const FaqPage = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
-    
-  const handleToggle = (index: number) => {
-    setOpenIndex((prevIndex) => (prevIndex === index ? null : index));
-  };
-  
-  const sidebar = [
-    {
-      name:'Aircraft',
-      icon:<Airplane />,
-      id:'aircraft'
-    },
-    {
-      name:'Airport',
-      icon:<Terminal />,
-      id:'airports'
-    },
-    {
-      name:'Broker',
-      icon:<Broker />,
-      id:'broker'
-    },
-    {
-      name:'Charter',
-      icon:<Charter />,
-      id:'charter'
-    },
-    {
-      name:'Price',
-      icon:<Price />,
-      id:'price'
-    },
-    {
-      name:'Service',
-      icon:<Service />,
-      id:'service'
-    }
-  ]
-  const faqData = [
-    {
-      heading:'Aircraft',
-      id:'aircraft',
-      content:[
-        {
-          question:'Can I charter a helicopter along with a jet?',
-          id:'can-i-charter-a-helicopter-along-with-a-jet',
-          answer:<div>
-            <Link href={`/faq/can-i-charter-a-helicopter-along-with-a-jet`}><p>Read more</p></Link>
-          </div>
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          answer:'Read more'
-        }
-      ]
-    },
-    {
-      heading:'Airports',
-      id:'airports',
-      content:[
-        {
-          question:'Can I charter a helicopter along with a jet?',
-          id:'can-i-charter-a-helicopter-along-with-a-jet',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        }
-      ]
-    },
-    {
-      heading:'Broker',
-      id:'broker',
-      content:[
-        {
-          question:'Can I charter a helicopter along with a jet?',
-          id:'can-i-charter-a-helicopter-along-with-a-jet',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        }
-      ]
-    },
-    {
-      heading:'Charter',
-      id:'charter',
-      content:[
-        {
-          question:'Can I charter a helicopter along with a jet?',
-          id:'can-i-charter-a-helicopter-along-with-a-jet',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        }
-      ]
-    },
-    {
-      heading:'Price',
-      id:'price',
-      content:[
-        {
-          question:'Can I charter a helicopter along with a jet?',
-          id:'can-i-charter-a-helicopter-along-with-a-jet',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        }
-      ]
-    },
-    {
-      heading:'Service',
-      id:'service',
-      content:[
-        {
-          question:'Can I charter a helicopter along with a jet?',
-          id:'can-i-charter-a-helicopter-along-with-a-jet',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        },
-        {
-          question:'What are the differences between light, midsize, and heavy jets?',
-          id:'what-are-the-differences-between-light-midsize-and-heavy-jets',
-          answer:'Read more'
-        }
-      ]
-    }
-  ]
+export const metadata = {
+  title: 'Frequently Asked Questions',
+  description: 'Find answers to common questions about private jet charters, including booking processes, flight flexibility, destinations, and cancellation policies.',
+};
 
-  const scrollToSection = (id: string) => {
-    const section = document.getElementById(id);
-    const headerOffset = 80;
-    if (section) {
-      const elementPosition = section.getBoundingClientRect().top;
-      const offsetPosition = elementPosition + window.scrollY - headerOffset;
-  
-      const hash = window.location.hash.slice(1); 
-      if (hash && hash === id) {
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth",
-        });
-        return; 
+async function fetchAllContent(contentArray: {content_link: string}[], client: ContentoClient) {
+  // Create an empty array to store the fetched content
+  const fetchedContentArray = [];
+
+  // Iterate over the array of content links
+  for (const item of contentArray) {
+      // Extract the ID by removing 'ref:' prefix from content_link
+      const id = item.content_link.replace('ref:', '');
+
+      try {
+          // Fetch content using client.getContentById and add it to the array
+          const content = await client.getContentById(id);
+          fetchedContentArray.push(content);
+      } catch (error) {
+          console.error(`Error fetching content for ID: ${id}`, error);
       }
-  
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: "smooth",
-      });
-    }
-  };
-  
-  return (
-    <div>
-       <div className="bg-[url('/images/blog-hero-image.jpg')] bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-center justify-center">
-          <h1 className="px-5 md:px-10 lg:px-20 max-w-[1800px] w-full mx-auto text-white ">
-          Frequently Asked Questions
-          </h1>
-        </div>
-      <BrandNames />
-       <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
-       <Breadcrumb />
-        <div className='flex justify-between'>
-          <div className='w-full max-[650px]:w-full'>
-            
-            <div className='flex relative mt-10 max-[700px]:w-full max-[700px]:flex-col'>
-              <div className='flex flex-col gap-y-8 gap-x-8 max-[700px]:overflow-y-hidden max-[700px]:overflow-x-auto  w-[20%] max-[700px]:w-full max-[700px]:flex-row items-start max-[700px]:relative sticky max-[700px]:top-0 top-[105px] max-[700px]:h-[80px] h-[400px]'>
-                {
-                  sidebar.map((item,index) => (
-                    <div 
-                      key={index}
-                      className='flex max-[700px]:flex-col max-[700px]:gap-x-[10px] max-[700px]:justify-between items-center gap-x-4 gap-y-4 cursor-pointer'  
-                      onClick={() => scrollToSection(item.id)}
-                    >
-                      <div className='w-[30%] h-[40px]'>
-                        {item.icon}
-                      </div>
-                      <div className='w-[68%]'>
-                        <p className='text-[18px] font-bold'>{item.name}</p>
-                      </div>
-                    </div>
-                  ))
-                }
-              </div>
+  }
 
-              <div className='w-[80%] max-[700px]:w-full max-[700px]:mt-[50px]'>
-                {
-                  faqData.map((faq,index) => (
-                   <div key={index} id={faq.id} className='pb-8'>
-                    <h2 className='bg-[#F9F9F9] p-3 mb-6'>{faq.heading}</h2>
-                    {
-                      faq.content.map((content,index) =>(
-                        <Collapsible  
-                          key={index}
-                          question={content.question}
-                          answer={content.answer}
-                          iconStyle="caret"
-                          isOpen={openIndex === index}
-                          onClick={() => handleToggle(index)} 
-                          answerClassName={`font-bold !text-[#0573BD]`}
-                          isfaq={true}
-                        />
-                      ))
-                    }
-                   </div>
-                  ))
-                }
-              </div>
-            </div>
-          </div>
-        </div>
-       </section>
-    </div>
-  )
+  // Return the array containing all fetched content
+  return fetchedContentArray;
 }
 
-export default FaqPage
+
+const FaqPage = async () => {
+
+  const client = createClient();
+  let response = await client.getContentById("c_01jgRD1057Zs55Y9T7pJt8qEvD");
+  const faqLinkArray = response.fields.faq_single_entry.content_links
+
+  let result = await fetchAllContent(faqLinkArray, client)
+
+  return (
+    <div>
+      <div className="bg-[url('/images/blog-hero-image.jpg')] bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-center justify-center">
+        <h1 className="px-5 md:px-10 lg:px-20 max-w-[1800px] w-full mx-auto text-white ">
+          Frequently Asked Questions
+        </h1>
+      </div>
+      <BrandNames />
+      <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
+        <Breadcrumb />
+        <div className='flex justify-between'>
+          <div className='w-full max-[650px]:w-full'>
+
+            <FaqContent content={result} />
+
+          </div>
+        </div>
+      </section>
+    </div>
+  );
+};
+
+export default FaqPage;

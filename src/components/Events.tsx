@@ -3,7 +3,9 @@ import events from '../../events.json';
 import Image from 'next/image';
 import Link from 'next/link';
 
-const Events = () => {
+const Events = ({eventsData}:any) => {
+  // console.log('eventsData',eventsData);
+
   return (
     <div>
       {

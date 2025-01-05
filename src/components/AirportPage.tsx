@@ -7,6 +7,7 @@ import CollapsibleAirportSection from "./CollapsibleAirportSection";
 
 import { Suspense } from "react";
 import LeadForm from '@/components/LeadForm';
+import Widgets_30Percent_Section from "./Widgets_30Percent_Section";
 
 const AirportPage = ({ fields }: any) => {
   // console.log("-------------------------", fields.fbo_content.blocks[0].fields?.airport_section_list?.blocks[0].fields.image.assets[0].asset.url)
@@ -62,16 +63,7 @@ const AirportPage = ({ fields }: any) => {
             staticImageName="special amenities"
           />
         </div>
-        <div className="min-w-[24%] sm:flex sm:flex-wrap justify-between gap-5 ">
-          <div className="w-fit lg:w-auto sm:min-w-[324px]">
-            <Suspense fallback={<div className="search-form__loader"></div>}>
-              <LeadForm widget={true} />
-            </Suspense>
-          </div>
-          <div className="w-fit lg:w-auto sm:min-w-[324px] ">
-            <TopCharteredCities
-              title="Top Private Jet Hubs"
-              cities={[
+        <Widgets_30Percent_Section widgetTitle="Top Private Jet Hubs" widgetContent={[
                 {
                   name: "Will Rogers World Airport",
                   link: "/will-rogers-world-airport-kokc"
@@ -112,11 +104,7 @@ const AirportPage = ({ fields }: any) => {
                   name: "Westchester County Airport",
                   link: "/westchester-county-airport-khpn"
                 },
-              ]}
-              buttonLink="#"
-            />
-          </div>
-        </div>
+              ]} widgetButtonLink="/usa-airport-directory" />
       </section >
     </>
   );

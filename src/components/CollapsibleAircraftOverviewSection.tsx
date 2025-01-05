@@ -2,17 +2,11 @@
 import React, { useState, useEffect } from "react";
 import { FiPlus } from "react-icons/fi";
 import AircraftGoogleMaps from "./AircraftGoogleMaps";
-
-interface OverviewHeading {
-  fields: {
-    title: { text: string; };
-    paragraph: { text: string; };
-  };
-}
+import Markdown from "markdown-to-jsx";
 
 interface CollapsibleAircraftOverviewSectionProps {
   title: string;
-  content: OverviewHeading[] | number;
+  content: string | number;
   isDefaultOpen?: boolean;
 }
 
@@ -26,6 +20,8 @@ const CollapsibleAircraftOverviewSection: React.FC<
   }, [isDefaultOpen]);
 
   const toggleSection = () => setIsOpen((prev) => !prev);
+
+  console.log("content", typeof content)
   return (
     <section className="border-b py-5">
       <div
@@ -52,14 +48,41 @@ const CollapsibleAircraftOverviewSection: React.FC<
         className={`overflow-hidden transition-all duration-500 ease-in-out ${isOpen ? "max-h-[3000px] sm:max-h-[3000px]" : "max-h-0"
           }`}
       >
-        {typeof content == "object" ? (
+        {typeof content != "number" ? (
           <div className="flex flex-col gap-2">
-            {content.map((item, index) => (
-              <div key={index} className="my-3 flex flex-col gap-2">
-                <h3>{item.fields.title.text}</h3>
-                <p className="text-slate-900">{item.fields.paragraph.text}</p>
-              </div>
-            ))}
+            <Markdown
+              options={{
+                overrides: {
+                  h2: {
+                    props: {
+                      className: "pb-2",
+                    },
+                  },
+                  p: {
+                    props: {
+                      className: "leading-7",
+                    },
+                  },
+                  li: {
+                    props: {
+                      className: "py-1",
+                    },
+                  },
+                  blockquote: {
+                    props: {
+                      className: "not-italic",
+                    },
+                  },
+                  a: {
+                    props: {
+                      className: " text-blue",
+                    },
+                  },
+                },
+              }}
+            >
+              {content as string}
+            </Markdown>
           </div>
         ) : (
           <div className="mt-5">

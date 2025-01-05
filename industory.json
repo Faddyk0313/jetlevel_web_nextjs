@@ -3,6 +3,7 @@
       "id": "corporate-jet-charter",
       "hereosHeading": "Corporate Jet Charter Services & Private Flights",
       "heroDescription": "Enhance your business travel with JetLevel Aviation’s elite corporate jet charter services. Tailored to meet the dynamic needs of modern executives and corporations, our service promises efficiency, flexibility, and unparalleled luxury. Experience the next level of corporate travel designed to maximize your productivity and manage your time more effectively.",
+      "buttonName": "Book Corporate Charter",
       "industoryDescription": {
           "heading": "Discover Our Corporate Jet Charter Service",
           "description": "<div><p className='text-center leading-6 details'>At JetLevel Aviation, we understand that time is your most valuable asset. Our Corporate Jet Charter and Private helicopter charter services are specifically designed to optimize your travel efficiency and enhance your productivity on the move. With our bespoke aviation solutions, you can transform travel time into an integrated part of your <a href='https://www.wikihow.life/Plan-Your-Business-Travel' target='_blank' rel='noopener noreferrer'><span>business strategy.</span></a></p></div>"
@@ -101,6 +102,7 @@
       "id": "events-private-jet-charter",
       "hereosHeading": "Special Events Private Jet Charter Flights",
       "heroDescription": "Elevate your event experience with JetLevel Aviation's bespoke events private jet charter services. Designed to cater to the needs of event planners and corporate clients, our services offer unmatched luxury, convenience, and flexibility. Discover the JetLevel difference and make your next event truly unforgettable.",
+      "buttonName": "Book Event Charter",
       "industoryDescription": {
           "heading": "Explore JetLevel Aviation's Private Jet Charter Services for Events",
           "description": "<div><p className='text-center leading-6 details'>At JetLevel Aviation, we recognize the unique challenges and demands of organizing special events. Whether it&rsquo;s a sports event, music festival, conference, or luxury wedding, our events private jet charter services are tailored to ensure seamless travel logistics combined with supreme comfort and style. <br> For a detailed list of upcoming events and how we can assist you in getting there, visit our <a href=''https://jetlevel.com/events/ target='_blank' rel='noopener noreferrer'><span>Events page.</span></a></p></div>"
@@ -184,6 +186,7 @@
       "id": "sports-team-charter",
       "hereosHeading": "Sports Team Private Jet Charter Flights",
       "heroDescription": "Elevate your team's performance with JetLevel Aviation's specialized Sports Team Charter private jet flights services for sports team groups. Our dedication to precision, comfort, and flexibility ensures that athletes arrive ready to compete and win. Experience the JetLevel advantage and take your team’s travel to the next level.",
+      "buttonName": "Book Sports Charter",
       "industoryDescription": {
           "heading": "Explore JetLevel Aviation's Private Jet Charter Service for Sports Teams",
           "description": "<div><p className='text-center leading-6 details'>At JetLevel Aviation, we understand the critical needs of sports teams and athletes when traveling for competitions, tournaments, and training camps. Our  <a href='https://jetlevel.com/private-jet-charter/' target='_blank' rel='noopener noreferrer'><span>Private Jet</span></a> services are crafted to provide timely, comfortable, and efficient travel, enabling teams to maintain peak performance.</p></div>"
@@ -267,6 +270,7 @@
       "id": "oil-and-gas-industry-charter",
       "hereosHeading": "Oil & Gas Industry Jet Charter",
       "heroDescription": "Optimize your operations and ensure timely project execution with JetLevel Aviation's specialized jet charter service for the oil and gas industry charter needs. Experience unmatched efficiency and reliability, tailored to meet the demanding travel needs of this sector.",
+      "buttonName": "Book Oil & Gas Industry Charter",
       "industoryDescription": {
           "heading": "Explore JetLevel Aviation’s Jet Charter Service for the Oil & Gas Industry",
           "description": "<div><p className='text-center leading-6 details'>At <a href='https://jetlevel.com/' target='_blank' rel='noopener noreferrer'><span>JetLevel AviationÍ</span></a>, we understand the complexities and urgent demands of the oil and gas industry charter. Whether it’s flying out teams to remote drilling sites or managing a series of investor tours, our jet charter services are designed to provide swift, efficient, and safe travel solutions.</p></div>"
@@ -346,6 +350,7 @@
       "id": "government-air-charter",
       "hereosHeading": "Government Air Charter Service",
       "heroDescription": "Experience unparalleled reliability and security with JetLevel Aviation's government air charter service. We specialize in providing sensitive, discreet, and efficient air transport for government officials and dignitaries. Trust JetLevel Aviation to meet the stringent demands of governmental travel with precision and professionalism. ",
+      "buttonName": "Book Government Charter",
       "industoryDescription": {
           "heading": "Explore JetLevel Aviation's Government Air Charter Capabilities",
           "description": "<div><p className='text-center leading-6 details'>At JetLevel Aviation, we understand the unique requirements of government-related travel. Our tailored charter services ensure secure, private, and timely travel solutions for officials at all levels of government. From domestic affairs to international <a href='https://en.wikipedia.org/wiki/Diplomacy' target='_blank' rel='noopener noreferrer'><span>diplomacy</span></a>, JetLevel Aviation is equipped to facilitate all aspects of governmental air transportation.</p></div>"
@@ -425,6 +430,7 @@
       "id": "film-industry-charter",
       "hereosHeading": "Film Industry Private Jet Charter",
       "heroDescription": "Elevate your film production with JetLevel Aviation’s elite Film Industry Charter services. Tailored to meet the dynamic needs of the entertainment industry, our service promises efficiency, flexibility, and unparalleled luxury. Experience the next level of travel designed to maximize productivity and ensure seamless logistics for your cast and crew.",
+      "buttonName": "Book Film Industry Charter",
       "industoryDescription": {
           "heading": "Discover JetLevel Aviation’s Jet Service for the Film Industry Charter",
           "description": "<div><p className='text-center leading-6 details'>At JetLevel Aviation, we understand the dynamic and demanding nature of the film industry. Our film industry charter services are designed to provide rapid, reliable, and flexible jet travel solutions, ensuring that your <a href='https://en.wikipedia.org/wiki/Filmmaking' target='_blank' rel='noopener noreferrer'><span>production</span></a> moves smoothly and stays on schedule—no matter where your filming takes you. </p></div>"
@@ -513,6 +519,7 @@
       "id": "music-industry-charter",
       "hereosHeading": "Touring & Music Industry Jet Charter Flights",
       "heroDescription": "Take your music tours to new heights with JetLevel Aviation's Music industry charter services. Experience unparalleled ease, comfort, and efficiency, whether you're on a world tour or heading to a single exclusive performance. Let JetLevel Aviation be your partner in ensuring smooth skies from takeoff to landing.",
+      "buttonName": "Book Music Industry Charter",
       "industoryDescription": {
           "heading": "Experience the Harmony of Travel with JetLevel Aviation's Music Industry Charter",
           "description": "<div><p className='text-center leading-6 details'>At JetLevel Aviation, we understand the fast-paced and demanding nature of the music industry charter. Our jet charter services are designed to provide artists,<a href='https://en.wikipedia.org/wiki/Talent_manager' target='_blank' rel='noopener noreferrer'><span>management</span></a> teams, and event coordinators with a stress-free travel experience, allowing you to focus solely on the performance and not the journey. </p></div>"

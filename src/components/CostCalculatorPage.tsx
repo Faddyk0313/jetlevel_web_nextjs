@@ -45,14 +45,14 @@ const CostCalculatorPage = () => {
               answer={
                 <>
                  <p className='text-black text-center mb-[50px] text-md '>Try our Charter Flights Cost Calculator. Fill out the form for a free personalized estimate. Book directly or contact our sales team for assistance. Plan your journey hassle-free with our calculator.</p>
-                  <div className='flex justify-center'>
+                  {/* <div className='flex justify-center'>
                     <div className='w-full outline-none h-auto' id="my-iframe">
                         <Suspense fallback={<div className="search-form__loader"></div>}>
         
                             <LeadForm/>
                         </Suspense>
                       </div>
-                  </div>
+                  </div> */}
                 </>
               }
               isOpen={openIndex === 1}

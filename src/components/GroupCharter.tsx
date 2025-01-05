@@ -9,7 +9,7 @@ import Table from "./Table";
 import HalfSection from "./HalfSection";
 
 const OnDemandCharterPage = () => {
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(1);
 
   const handleToggle = (index: number) => {
     setOpenIndex((prevIndex) => (prevIndex === index ? null : index));

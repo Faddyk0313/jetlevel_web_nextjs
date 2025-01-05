@@ -63,10 +63,10 @@ const CompanyOverview = ({ heading, description, collapseText = true, IconsItems
                     {
                         collapseText ?
                             <>
-                                <p className={`block xl:hidden details leading-relaxed details`}>
-                                    At JetLevel Aviation, we're redefining the private jet charter experience by prioritizing safety, reliability, and transparency. Founded in 2019, we've established ourselves as a trusted global advisor in the aviation industry. Our mission is to provide high-quality aircraft and competitive pricing, backed by leading customer service to deliver the best value. We are committed to core values of reliability, safety, and transparency, ensuring client satisfaction for both frequent travels and special occasions.
+                                <div className={`block xl:hidden details leading-relaxed details`}>
+                                    <p>At JetLevel Aviation, we're redefining the private jet charter experience by prioritizing safety, reliability, and transparency. Founded in 2019, we've established ourselves as a trusted global advisor in the aviation industry. Our mission is to provide high-quality aircraft and competitive pricing, backed by leading customer service to deliver the best value. We are committed to core values of reliability, safety, and transparency, ensuring client satisfaction for both frequent travels and special occasions.</p>
                                     <TextCompanyOverview />
-                                </p>
+                                </div>
                             </> : ""
                     }
                 </div>

@@ -4,9 +4,10 @@ import React from "react";
 
 interface PopularPrivateJetChartersProps {
   hasSectionPadding?: boolean;
+  hasInlinePadding?: boolean;
 }
 
-const PopularPrivateJetCharters: React.FC<PopularPrivateJetChartersProps> = ({ hasSectionPadding })  => {
+const PopularPrivateJetCharters: React.FC<PopularPrivateJetChartersProps> = ({ hasSectionPadding, hasInlinePadding= true })  => {
   const cardInfo = [
     {
       imageLink:
@@ -38,7 +39,7 @@ const PopularPrivateJetCharters: React.FC<PopularPrivateJetChartersProps> = ({ h
     },
   ];
   return (
-    <section className={`flex flex-col items-center max-w-[1800px] mx-auto px-5 md:px-10 lg:px-20   ${hasSectionPadding === false ? '!py-10' : ''}`}>
+    <section className={`flex flex-col items-center max-w-[1800px] mx-auto ${hasInlinePadding ? "px-5 md:px-10 lg:px-20" : ""}    ${hasSectionPadding === false ? '!py-10' : ''}`}>
       <h2 className="mb-8">
         Popular Private Jet Charter Destinations
       </h2>

@@ -6,6 +6,12 @@ import React from 'react';
 import { Suspense } from "react";
 import LeadForm from '@/components/LeadForm';
 
+export const metadata = {
+  title: 'Events - Jetlevel Aviation',
+  description: 'Experience seamless travel to events worldwide with JetLevel Aviation. Charter private jets anywhere with luxury services, ground transport, and 24/7 availability.',
+};
+
+
 const EventsPage = () => {
   return (
     <div>
@@ -23,8 +29,8 @@ const EventsPage = () => {
           <Events />
         </div>
 
-        <div className="min-w-[24%] max-w-fit">
-        <Suspense fallback={<div className="search-form__loader"></div>}>
+        <div className="min-w-[24%] max-w-fit  max-[650px]:mt-0 sticky top-[90px] h-fit">
+          <Suspense fallback={<div className="search-form__loader"></div>}>
             <LeadForm widget={true} />
           </Suspense>
         </div>

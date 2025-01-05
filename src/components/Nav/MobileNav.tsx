@@ -48,6 +48,7 @@ function NavbarDropdown() {
               subOptions={[
                 { name: 'On-Demand Charter', link: '/private-jet-charter', image: '/navInsideIcons/On-Demand Charter.svg' },
                 { name: 'Group Charter', link: '/group-charter-flight', image: '/navInsideIcons/Group Charter.svg' },
+                { name: 'Industry Specific', link: '/industory-charter', image: '/navInsideIcons/industry_specific_charter.svg' },
                 { name: 'Air Ambulance', link: '/medical-flight-transport', image: '/navInsideIcons/Air Ambulance.svg' },
                 { name: 'Helicopter', link: '/Helicopter-Charter-Flight', image: '/navInsideIcons/Helicopter.svg' },
               ]}
@@ -108,7 +109,7 @@ function NavbarDropdown() {
                 { name: 'About Us', link: '/about-jet-level', image: '/navInsideIcons/About Us.svg' },
                 { name: 'Contact Us', link: '/contact-us', image: '/navInsideIcons/Contact Us.svg' },
                 { name: 'Blogs', link: '/blog', image: '/navInsideIcons/On-Demand Charter.svg' },
-                // { name: 'Charter FAQs', link: '/private-jet-frequently-asked-questions/', image: '/navInsideIcons/Charter FAQs.svg' },
+                { name: 'Charter FAQs', link: '/private-jet-frequently-asked-questions/', image: '/navInsideIcons/Charter FAQs.svg' },
                 { name: 'Our Team', link: '/our-team', image: '/navInsideIcons/Our Team.svg' },
               ]}
               closeDropdown={closeDropdown} // Pass the closeDropdown function here
