@@ -127,23 +127,27 @@ const Pricing = () => {
       heading: 'Route',
       accessor: 'route',
       Cell: ({ row }: { row: Record<string, any>; }) =>
-        <div className='flex items-center gap-x-[80px]'>
-          <Image
-            src='https://jetlevel.com/wp-content/uploads/2024/03/take-off.svg'
-            width={100}
-            height={100}
-            alt='Plane'
-            className='w-[40px]'
-          />
-          <p className='w-[100px]'>{row.route.arrival}</p>
-          <Image
-            src='https://jetlevel.com/wp-content/uploads/2024/03/Landing.svg'
-            width={100}
-            height={100}
-            alt='Plane'
-            className='w-[40px]'
-          />
-          <p className='w-[100px]'>{row.route.departure}</p>
+        <div className="flex items-center justify-between">
+          <div className="flex items-center gap-x-[20px]">
+            <Image
+              src="https://jetlevel.com/wp-content/uploads/2024/03/take-off.svg"
+              width={100}
+              height={100}
+              alt="Plane"
+              className="w-[40px]"
+            />
+            <p className="w-[100px] text-center max-[700px]:w-[137px]">{row.route.arrival}</p>
+          </div>
+          <div className="flex items-center gap-x-[20px]">
+            <Image
+              src="https://jetlevel.com/wp-content/uploads/2024/03/Landing.svg"
+              width={100}
+              height={100}
+              alt="Plane"
+              className="w-[40px]"
+            />
+            <p className="w-[100px] text-center">{row.route.departure}</p>
+          </div>
         </div>
     },
     {
@@ -166,7 +170,7 @@ const Pricing = () => {
       heading: '',
       accessor: '',
       Cell: ({ row }: { row: Record<string, any>; }) => <div className='relative font-bold text-black hover:text-white w-full h-full'>
-        <Link href='/request-a-qoute'><button className='w-full h-full group-hover:text-white'>Inquire</button></Link>
+        <Link href='/request-a-quote'><button className='w-full h-full group-hover:text-white'>Inquire</button></Link>
       </div>
     },
   ];

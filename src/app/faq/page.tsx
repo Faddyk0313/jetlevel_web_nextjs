@@ -277,7 +277,7 @@ const FaqPage = () => {
                       className='flex max-[700px]:flex-col max-[700px]:gap-x-[10px] max-[700px]:justify-between items-center gap-x-4 gap-y-4 cursor-pointer'  
                       onClick={() => scrollToSection(item.id)}
                     >
-                      <div className='w-[30%] h-[40px]'>
+                      <div className={`w-[30%] h-[40px] ${index === sidebar.length - 1 ? 'ml-[-6px]' : ''}`}>
                         {item.icon}
                       </div>
                       <div className='w-[68%]'>
