@@ -118,17 +118,23 @@ const UsCanadaPage: React.FC<UsCanadaPageProps> = ({ title, content }) => {
 
       <div className="flex justify-center pt-8">
         <ul className="flex space-x-4">
-          {displayedPages.map((number) => (
-            <li key={number}>
-              <Button
-                text={number}
-                onClick={() => handlePageChange(Number(number))}
-                className={`${
-                  currentPage === number
-                    ? 'bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] text-white'
-                    : 'bg-white text-[#0071BA]'
-                  } px-4 py-2 rounded-full flex items-center justify-center  w-[43px] h-[43px]`}
-              />
+        {displayedPages.map((number, index) => (
+            <li key={index}>
+              {number === '...' ? (
+                <span className="px-4 py-2 text-[#0071BA] rounded-full flex items-center justify-center pt-[14px]">
+                  ...
+                </span>
+              ) : (
+                <Button
+                  text={number.toString()}
+                  onClick={() => handlePageChange(Number(number))}
+                  className={`${
+                    currentPage === number
+                      ? 'bg-gradient-to-r from-[#59a6c8] via-[#6cc3e8] to-[#4f94b8] text-white'
+                      : 'bg-white text-[#0071BA]'
+                  } px-4 py-2 rounded-full flex items-center justify-center w-[43px] h-[43px]`}
+                />
+              )}
             </li>
           ))}
         </ul>
