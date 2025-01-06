@@ -21,7 +21,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
     // console.log("content--------------------", content);
     const routeEntries: MetadataRoute.Sitemap = content.map(({slug, updated_at}) => ({
-        url: `https://jetlevel.com/${slug}`,
+        url: `https://www.jetlevel.com/${slug}`,
         lastModified: new Date(updated_at)
     }))
 

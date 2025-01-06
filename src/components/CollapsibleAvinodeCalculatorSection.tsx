@@ -1,19 +1,23 @@
 "use client";
-import React, { Suspense, useState } from "react";
+import React, { Suspense, useEffect, useState } from "react";
 import { FiPlus } from "react-icons/fi";
 import AvinodeCalculator from "./AvinodeEmptyLegCalculator";
 import AircraftComparison from "@/components/AircraftComparison";
 interface CollapsibleSectionProps {
     title: string;
     calculatorName?: string;
+    isDefaultOpen?: boolean;
 }
 
 const CollapsibleAvinodeCalculatorSection: React.FC<
     CollapsibleSectionProps
-> = ({ title, calculatorName = "" }) => {
+> = ({ title, calculatorName = "", isDefaultOpen = true }) => {
     const [isOpen, setIsOpen] = useState(false);
 
     const toggleSection = () => setIsOpen((prev) => !prev);
+    useEffect(() => {
+        setIsOpen(isDefaultOpen);
+    }, [isDefaultOpen]);
 
     return (
         <section className="border-b py-5">

@@ -44,7 +44,7 @@ const generateStaticSitemap = () => {
       .map(
           (page) => `
   <url>
-    <loc>https://jetlevel.com${page}</loc>
+    <loc>https://www.jetlevel.com${page}</loc>
   </url>`
       )
       .join("")}

@@ -73,8 +73,8 @@ const EmptyLegDirectory = () => {
       <div className="min-w-full md:min-w-[72%]">
         <Breadcrumb />
 
-        <CollapsibleEmptyLegDirectory title='Empty Leg Flights' content="<p>An empty leg flight, also known as a deadhead flight, occurs when a private jet flies one way without passengers. This can happen when a jet returns to its base after a charter, needs to relocate for service, or is positioning to pick up passengers following a one-way booking. Empty leg flights offer a cost-effective option for luxury travel, allowing passengers to experience private jet travel at a reduced price due to the aircraft needing to fly the route regardless.</p>" isDefaultOpen={true} />
-        <CollapsibleAvinodeCalculatorSection title="Browse The Upcoming Featured list of Empty Leg Flights" />
+        <CollapsibleAvinodeCalculatorSection title="Browse The Upcoming Featured list of Empty Leg Flights" isDefaultOpen={true}  />
+        <CollapsibleEmptyLegDirectory title='Empty Leg Flights' content="<p>An empty leg flight, also known as a deadhead flight, occurs when a private jet flies one way without passengers. This can happen when a jet returns to its base after a charter, needs to relocate for service, or is positioning to pick up passengers following a one-way booking. Empty leg flights offer a cost-effective option for luxury travel, allowing passengers to experience private jet travel at a reduced price due to the aircraft needing to fly the route regardless.</p>" />
         <CollapsibleEmptyLegDirectory title='Understanding Empty Leg Flights' content={`<p>Often referred to as ‘ferry flights’ or ‘deadhead flights’, empty leg flights come into play when an aircraft is scheduled to fly from Point A to Point B with no passengers onboard. These flights typically occur when a private jet is returning to its base after dropping off passengers or is going to another location to pick up passengers. </p> <br> <p>Empty leg flights are a unique opportunity for savvy travelers to experience the luxury and convenience of private jet travel at a fraction of the cost. Both jet card members and on-demand charter clients often take advantage of these flights, offering optimal pricing and flexibility. </p>
         `} image='/images/Private jet.webp' />
         <CollapsibleEmptyLegDirectory title='The Art of Finding and Booking Empty Leg Flights' content={`<p>Our platform, JetLevel, provides a user-friendly and intuitive interface to effortlessly browse and book empty leg flights. Not only does JetLevel give you direct access to these flights, but it also provides the flexibility of booking “near-match” flights that have similar routings, subject to additional positioning fees. <br> <br> For instance, if there’s an empty leg flight listed from New York to Miami, you could utilize this for a trip from New York to Orlando or DC to Palm Beach. It may cost slightly more than a direct match but it’s still a more economical choice compared to booking a round trip.</p>`} />
@@ -141,7 +141,7 @@ const EmptyLegDirectory = () => {
                 name: 'Orlando, FL',
                 link: '/empty-leg-flights-orlando'
               },
-            ]} widgetButtonLink='#listing' />
+            ]} widgetButtonLink='#listing' showCostCalculator={false} />
     </section>
   );
 };
