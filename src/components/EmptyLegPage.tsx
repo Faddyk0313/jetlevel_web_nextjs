@@ -39,14 +39,15 @@ const EmptyLegPage = async ({ fields }: any) => {
                 subtitle={fields.subtitle.text}
                 hasOverlay={true}
                 hasCalculator={false}
+                showCalculator=""
             />
             <BrandNames />
             <section className="flex flex-col lg:flex-row gap-10 px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
                 <div className="min-w-full md:min-w-[72%]">
                     <Breadcrumb />
 
-                    <CollapsibleSection title={fields.intoduction.blocks[0].fields.title.text} content={fields.intoduction.blocks[0].fields.paragraph.text} isDefaultOpen={true} />
-                    <CollapsibleAvinodeCalculatorSection title="Browse The Upcoming Featured list of Empty Leg Flights" />
+                    <CollapsibleAvinodeCalculatorSection title="Browse The Upcoming Featured list of Empty Leg Flights" isDefaultOpen={true} />
+                    <CollapsibleSection title={fields.intoduction.blocks[0].fields.title.text} content={fields.intoduction.blocks[0].fields.paragraph.text}  />
                     <CollapsibleSection title={fields.overview.blocks[0].fields.title.text} content={fields.overview.blocks[0].fields.paragraph.text} />
                     <CollapsibleSection title={fields.benefits.blocks[0].fields.title.text} content={fields.benefits.blocks[0].fields.paragraph.text} />
                     <CollapsibleSection title={fields.finding_and_booking.blocks[0].fields.title.text} content={fields.finding_and_booking.blocks[0].fields.paragraph.text} />
