@@ -15,7 +15,7 @@ const SubscribeUs: React.FC = () => {
   return (
     <div 
       className="relative w-full h-[550px] bg-fixed bg-cover bg-center" 
-      style={{ backgroundImage: 'url(https://jetlevel.com/wp-content/uploads/2023/05/private-jet-charter-services.jpg)' }}
+      style={{ backgroundImage: 'url(/images/private-jet-charter-services.jpg)' }}
     >
       <div className="absolute top-0 left-0 w-full h-full bg-black opacity-50"></div>
       

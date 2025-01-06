@@ -9,7 +9,7 @@ import React from 'react';
 const OurTeamPage = () => {
   return (
     <>
-    <div className="bg-[url('https://jetlevel.com/wp-content/uploads/2023/09/ban_jets-jpg.webp')] overlay bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-center justify-center">
+    <div className="bg-[url('/images2/ban_jets-jpg.webp')] overlay bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-center justify-center">
         <h1 className="px-5 md:px-10 lg:px-20 max-w-[1800px] w-full mx-auto text-white ">
           Our Team
         </h1>

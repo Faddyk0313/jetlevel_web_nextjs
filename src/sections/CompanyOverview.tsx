@@ -83,7 +83,7 @@ const CompanyOverview = ({ heading, description, collapseText = true, IconsItems
                         }} />
                 </div>
             </div>
-            <div className="hidden carousel:grid grid-cols-5 justify-between gap-2 py-3">
+            <div className="hidden carousel:grid grid-cols-5 justify-between gap-2 py-4">
                 {
                     // IconsItems?.map((card:any) => {
                     //     const Icon = iconMapping[card.icon] ;
@@ -110,7 +110,7 @@ const CompanyOverview = ({ heading, description, collapseText = true, IconsItems
                     ))
                 }
             </div>
-            <div className='block carousel:hidden'>
+            <div className='block carousel:hidden py-7'>
                 <CarouselContainer items={carouselItems} bgcolor='white' />
 
             </div>

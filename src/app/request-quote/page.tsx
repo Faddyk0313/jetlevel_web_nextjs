@@ -10,6 +10,9 @@ export const metadata = {
   description: 'Luxury and convenience in the skies with our Charter Flights request a quote tool. Fill out this form and get our expert aviation advisor to assist you.',
 }
 
+export const dynamic = 'force-static';
+export const revalidate = false;
+
 const RequestQuotePage = () => {
   return (
     <div>

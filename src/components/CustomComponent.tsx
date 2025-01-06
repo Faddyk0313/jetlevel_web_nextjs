@@ -56,7 +56,7 @@ const CustomComponent: React.FC<CustomComponentProps> = ({
           ))}
         </div>
         {/* Carousel Section */}
-        <div className="block carousel:hidden">
+        <div className="block carousel:hidden py-5">
           <CarouselContainer items={carouselItems} bgcolor={background} />
         </div>
       </div>

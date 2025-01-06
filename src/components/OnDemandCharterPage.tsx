@@ -114,7 +114,7 @@ const OnDemandCharterPage = () => {
                 </div>
                 <div className="w-[35%] max-[700px]:w-full max-[700px]:mb-6">
                   <Image
-                    src="https://jetlevel.com/wp-content/uploads/2022/10/iStock-664704040-scaled.jpg"
+                    src="/images/travel concierge services image.jpg"
                     alt="Private Jet"
                     width={500}
                     height={250}
@@ -158,7 +158,7 @@ const OnDemandCharterPage = () => {
               <p className='mb-8 leading-7 text-[16px] text-[#727982] '><span>Wide Aircraft Selection – </span>From light jets to large airliners, we’ve got you covered.</p>
             </div>
             <div className='w-[35%] max-[700px]:w-full' >
-              <Image unoptimized src={'https://jetlevel.com/wp-content/uploads/2024/08/private-jet-charter-pilot-and-passengers-arrive-in-kauai.jpeg'} alt='image' width={100} height={100} className='w-full h-full object-cover' />
+              <Image unoptimized src={'/images/private-jet-charter-pilot-and-passengers-arrive-in-kauai image.jpeg'} alt='image' width={100} height={100} className='w-full h-full object-cover' />
             </div>
            </div>
           }
@@ -206,7 +206,7 @@ const OnDemandCharterPage = () => {
               <p className='leading-7 text-[18px] text-[#727982] mb-8 '>At JetLevel, we work with a network of trusted and reputable partners who maintain operation of the aircraft. This extensive network allows us to provide a wide variety of aircraft options for our on demand private jet charter service, ensuring you always have the best option for your travel needs.</p>
             </div>
             <div className='w-[48%] max-[700px]:w-full' >
-              <Image unoptimized src={'https://jetlevel.com/wp-content/uploads/2022/08/private-jet-privacy-cabin.jpeg'} alt='image' width={100} height={100} className='w-full h-full object-cover' />
+              <Image unoptimized src={'/images/private-jet-privacy-cabin.jpeg'} alt='image' width={100} height={100} className='w-full h-full object-cover' />
             </div>
            </div>
           }

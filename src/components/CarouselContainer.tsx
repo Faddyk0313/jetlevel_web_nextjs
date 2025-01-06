@@ -31,7 +31,7 @@ const CarouselContainer: React.FC<CarouselContainerProps> = ({ items, bgcolor })
                     {items.map((item, index) => (
                         <CarouselItem
                             key={index}
-                            className="basis-[42%]"
+                            className="basis-[65%]"
                         >
                             <CarouselCard item={item} bgcolor={bgcolor} />
                         </CarouselItem>
