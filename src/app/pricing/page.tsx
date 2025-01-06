@@ -132,7 +132,7 @@ const Pricing = () => {
         <div className="flex items-center justify-between">
           <div className="flex items-center gap-x-[20px]">
             <Image
-              src="https://jetlevel.com/wp-content/uploads/2024/03/take-off.svg"
+              src="/images2/take-off.svg"
               width={100}
               height={100}
               alt="Plane"
@@ -142,7 +142,7 @@ const Pricing = () => {
           </div>
           <div className="flex items-center gap-x-[20px]">
             <Image
-              src="https://jetlevel.com/wp-content/uploads/2024/03/Landing.svg"
+              src="/images2/Landing.svg"
               width={100}
               height={100}
               alt="Plane"

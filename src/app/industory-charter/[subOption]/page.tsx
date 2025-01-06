@@ -53,7 +53,7 @@ const IndustoryCharterDetail = ({ params }: PageProps) => {
       <Hero 
         title={singleIndustory?.hereosHeading || ''}
         description={singleIndustory?.heroDescription || ''}
-        image={"https://fly.jetlevel.com/assets/Private%20jet%20interior%20bg%20.webp"}  
+        image={"/images/Private jet interior bg .webp"}  
         hasCalculator={false} 
       />
       <BrandNames />

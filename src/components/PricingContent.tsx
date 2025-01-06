@@ -303,7 +303,7 @@ const PricingContent = ({ children }: any) => {
                                 <h3 className='font-bold text-black'>Age of Aircraft</h3>
                                 <p className='mb-6 mt-8 '>The age of the aircraft is a crucial factor in determining private jet charter costs. Newer jets, often featuring the latest in technology and luxury amenities, command higher prices, potentially adding thousands to the hourly rate. For example, the latest model, a brand new heavy jet like Gulfstream 700, might cost around $18,000 per hour. In contrast, older models, while still safe and comfortable like Gulfstream G-IV, can be more budget-friendly, with hourly rates possibly around $14,000.</p>
 
-                                <Image src="https://jetlevel.com/wp-content/uploads/2024/04/6212eee9fff9e69d53cf3e655e70c987.jpg" width={100} height={100} alt='plane' className='w-full h-[500px] mt-5 mb-6' unoptimized />
+                                <Image src="/images2/HEro banner.jpg" width={100} height={100} alt='plane' className='w-full h-[500px] mt-5 mb-6' unoptimized />
 
                                 <h3 className='font-bold text-black'>Peak Demand Scheduling</h3>
                                 <p className='mb-6 mt-8 '>During peak demand periods, the cost of chartering a private jet typically increases due to higher demand and limited availability of aircraft. These periods often include holidays, major events, or business seasons. For instance, chartering a jet during Christmas or the Super Bowl can be significantly more expensive, sometimes by 20% to 50%, compared to off-peak times.</p>
@@ -1058,7 +1058,7 @@ const PricingContent = ({ children }: any) => {
                                 <h3 className='font-bold text-black mb-6'>Private Flight Scenario 1: Business Day Trip</h3>
 
                                 <Image
-                                    src='https://jetlevel.com/wp-content/uploads/2024/04/flight-route-from-Teterboro-Airport-to-Chicago-Executive-Airport.webp'
+                                    src='/images2/flight-route-from-Teterboro-Airport-to-Chicago-Executive-Airport.webp'
                                     alt='map'
                                     width={100}
                                     height={100}
@@ -1163,7 +1163,7 @@ const PricingContent = ({ children }: any) => {
                                 <h3 className='font-bold text-black'>Private Flight Scenario 2: Family Vacation</h3>
 
                                 <Image
-                                    src='https://jetlevel.com/wp-content/uploads/2024/04/the-route-from-Los-Angeles-to-Cabo-San-Lucas-to-Van-Nuys-Airport-and-then-back-to-Los-Angeles-to-Cabo-San-Lucas.webp'
+                                    src='/images2/the-route-from-Los-Angeles-to-Cabo-San-Lucas-to-Van-Nuys-Airport-and-then-back-to-Los-Angeles-to-Cabo-San-Lucas.webp'
                                     alt='map'
                                     width={100}
                                     height={100}
@@ -1267,7 +1267,7 @@ const PricingContent = ({ children }: any) => {
                                 <h3 className='font-bold text-black'>Private Flight Scenario 3: International Business Conference</h3>
 
                                 <Image
-                                    src='https://jetlevel.com/wp-content/uploads/2024/04/flight-route-from-Miami-International-Airport-to-London-Heathrow-Airport-using-the-Google-Maps.webp'
+                                    src='/images2/flight-route-from-Miami-International-Airport-to-London-Heathrow-Airport-using-the-Google-Maps.webp'
                                     alt='map'
                                     width={100}
                                     height={100}
@@ -1371,7 +1371,7 @@ const PricingContent = ({ children }: any) => {
                                 <h3 className='font-bold text-black'>Private Flight Scenario 3: International Business Conference</h3>
 
                                 <Image
-                                    src='https://jetlevel.com/wp-content/uploads/2024/04/flight-route-from-San-Francisco-to-Seattle-to-Denver-and-back-to-San-Francisco.webp'
+                                    src='/images2/flight-route-from-San-Francisco-to-Seattle-to-Denver-and-back-to-San-Francisco.webp'
                                     alt='map'
                                     width={100}
                                     height={100}
@@ -1482,11 +1482,11 @@ const PricingContent = ({ children }: any) => {
 
                 <div className='w-[29%] max-[700px]:hidden sticky h-[500px] top-[100px] mt-[19px]'>
                     <h2 className='mb-8 border-b pb-4 '>On This Page</h2>
-                    <p 
-                    onClick={() => scrollToSection('general-cost-breakdown')}
-                    className='mb-8 ml-4 text-xl hover:text-[#0071BA] hover:border-l-2 hover:border-[#0071BA] cursor-pointer hover:pl-3'
+                    <p
+                        onClick={() => scrollToSection('general-cost-breakdown')}
+                        className='mb-8 ml-4 text-xl hover:text-[#0071BA] hover:border-l-2 hover:border-[#0071BA] cursor-pointer hover:pl-3'
                     >
-                    General Cost Breakdown
+                        General Cost Breakdown
                     </p>
                     <p onClick={() => scrollToSection('factors-affecting-charter-costs')} className='mb-8 ml-4 text-xl hover:text-[#0071BA] hover:border-l-2 hover:border-[#0071BA] cursor-pointer hover:pl-3'>Factors Affecting Charter Costs</p>
                     <p onClick={() => scrollToSection('additional-costs-and-fees')} className='mb-8 ml-4 text-xl hover:text-[#0071BA] hover:border-l-2 hover:border-[#0071BA] cursor-pointer hover:pl-3'>Additional Costs and Fees</p>
@@ -1498,25 +1498,25 @@ const PricingContent = ({ children }: any) => {
             {children}
 
             <div className='mt-14 w-[90%] m-[30px_auto]'>
-            <h2 className='text-center mb-10'>Frequently Asked Questions</h2>
-            <div className='flex flex-col gap-y-[15px]'>
-                {
-                faqData.map((faq,index) => (
-                    <Collapsible  
-                    key={index}
-                    question={faq.question}
-                    answer={faq.answer}
-                    iconStyle="caret"
-                    isfaq={true}
-                    iconPosition="end"
-                    isOpen={openIndex === index}
-                    onClick={() => handleToggle(index)} 
-                    />
-                ))
-                }
-            </div>
-            
-            {/* < /> */}
+                <h2 className='text-center mb-10'>Frequently Asked Questions</h2>
+                <div className='flex flex-col gap-y-[15px]'>
+                    {
+                        faqData.map((faq, index) => (
+                            <Collapsible
+                                key={index}
+                                question={faq.question}
+                                answer={faq.answer}
+                                iconStyle="caret"
+                                isfaq={true}
+                                iconPosition="end"
+                                isOpen={openIndex === index}
+                                onClick={() => handleToggle(index)}
+                            />
+                        ))
+                    }
+                </div>
+
+                {/* < /> */}
             </div>
         </>
     );

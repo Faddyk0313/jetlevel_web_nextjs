@@ -194,7 +194,7 @@ const Footer = () => {
                                 Get the Latest Updates
                             </h4>
                             <form
-                                action="mailto:kingshahbaz0313@gmail.com"
+                                action=""
                                 method="post"
                                 className="flex max-w-72 h-14 p-2 border-[#858585] border rounded-2xl"
                             >

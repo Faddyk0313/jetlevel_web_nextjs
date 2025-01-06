@@ -1,248 +1,1312 @@
 [
   {
-    "category": "Aircraft",
-    "id": "aircraft",
-    "content": [
-      {
-        "question": "Can I charter a helicopter along with a jet?",
-        "id": "c_01jexCKHA92DX5hnvw3sD62m84",
-        "answer": "<p>Yes, JetLevel Aviation offers the flexibility to charter both a private jet and a helicopter. This service is ideal for seamless travel, allowing you to connect to remote locations or avoid ground traffic. Our team will coordinate the helicopter charter to align with your jet schedule, ensuring a smooth and efficient travel experience.</p>"
-      },
-      {
-        "question": "Are private jets safe?",
-        "id": "c_01jGs2kC4k7DN1M9dNJQ5VQq9E",
-        "answer": "<p>Yes, private jets are highly safe, adhering to stringent safety standards set by aviation authorities. Operators follow rigorous maintenance schedules, and pilots undergo extensive training and certifications. Additionally, private jet travel often reduces exposure to crowded airports, adding a layer of safety and convenience. JetLevel Aviation prioritizes passenger safety, working with certified operators and experienced crews to ensure secure and reliable flights.</p>"
-      },
-      {
-        "question": "Are two pilots used on all flights?",
-        "id": "c_01jgS63w99731ze3c6T960wSP8",
-        "answer": "<p>Yes, all our private jet flights use <strong>two highly trained pilots</strong> for enhanced safety and compliance with FAA regulations. Both pilots hold <strong>ATP (Airline Transport Pilot) licenses</strong> and undergo regular training and proficiency checks to ensure they meet the highest industry standards. This ensures optimal safety and operational efficiency on every flight.</p>"
-      },
-      {
-        "question": "Can I bring Oxygen on a Private Jet?",
-        "id": "c_01jgs690hwXMDZNhR2d18YR3w8",
-        "answer": "<p>Yes, you can bring oxygen on a private jet, but it requires prior coordination. Inform us in advance so we can ensure compliance with safety regulations and confirm the aircraft is equipped to accommodate your needs. Some private jets can provide onboard oxygen systems for medical requirements, offering a safe and comfortable flight experience.</p>"
-      },
-      {
-        "question": "Can I take golf clubs with me on the private jet?",
-        "id": "c_01jgs65MM1pc47nFr0Sy4BP0AY",
-        "answer": "<p>Yes, you can bring golf clubs on a private jet. Private jets typically have sufficient luggage space for golf bags. For larger groups or multiple bags, let us know in advance to ensure the selected aircraft accommodates your needs. Traveling privately ensures your clubs are handled with care and arrive safely.</p>"
-      },
-      {
-        "question": "Can I take golf clubs with me on the private jet?",
-        "id": "c_01JGs64j2kPk1D61EyAH18rAkc",
-        "answer": "<p>Yes, all our private jet flights use <strong>two highly trained pilots</strong> for enhanced safety and compliance with FAA regulations. Both pilots hold <strong>ATP (Airline Transport Pilot) licenses</strong> and undergo regular training and proficiency checks to ensure they meet the highest industry standards. This ensures optimal safety and operational efficiency on every flight.</p>"
-      },
-      {
-        "question": "Can I take a wheelchair on a private jet?",
-        "id": "c_01JGS66HWW1p3ab60CGG59bZKX",
-        "answer": "<p>Yes, you can bring a wheelchair on a private jet. Most private jets can accommodate wheelchairs, and our team ensures a smooth boarding process, including assistance with mobility and securely stowing the wheelchair. For powered or oversized wheelchairs, please inform us in advance to confirm compatibility with the aircraft and arrange necessary accommodations.</p>"
-      },
-      {
-        "question": "How far can a private jet fly?",
-        "id": "c_01JGs61ZK898v066vWva2STJzT",
-        "answer": "<p>The range of a private jet varies by model, with most capable of flying <strong>1,500 to 7,500 miles</strong> on a single tank. Light jets typically cover <strong>1,500-2,500 miles</strong>, ideal for regional trips. Midsize jets range from <strong>2,000-4,000 miles</strong>, while large jets and ultra-long-range jets, like the Gulfstream G650, can fly up to <strong>7,500 miles</strong>, enabling non-stop international travel.</p>"
-      },
-      {
-        "question": "How fast do private jets fly?",
-        "id": "c_01jgS5y6rY43KrgAZJ3ddxrGef",
-        "answer": "<p>Private jets typically fly at speeds ranging from <strong>400 to 700 miles per hour (mph)</strong>, depending on the model and altitude. Light jets average around <strong>400-450 mph</strong>, while larger jets like the Gulfstream G650 can reach speeds of up to <strong>700 mph</strong>. Their efficiency at higher altitudes (35,000-45,000 feet) allows for faster travel compared to commercial airliners.</p>"
-      },
-      {
-        "question": "Can I take skis or snowboards on a private jet?",
-        "id": "c_01Jgs67Gp5zft44Rzen0qnAfk4",
-        "answer": "<p>Yes, you can bring skis or snowboards on a private jet. Most private jets have ample luggage space to accommodate ski equipment. For larger groups or multiple items, let us know in advance to ensure the selected aircraft meets your storage needs. Private jet travel ensures your gear is securely transported and easily accessible for your winter adventure.</p>"
-      },
-      {
-        "question": "How many pilots does JetLevel require?",
-        "id": "c_01jGs6Bhy0MPc2dbz3AcY5VtnP",
-        "answer": "<p>JetLevel requires <strong>two pilots</strong> on all flights to ensure maximum safety and compliance with FAA regulations. Both pilots are highly experienced, holding <strong>ATP (Airline Transport Pilot) licenses</strong> and undergoing regular training and proficiency checks. This dual-pilot approach ensures the highest levels of safety and operational excellence on every flight.</p>"
-      },
-      {
-        "question": "What is ARG/US?",
-        "id": "c_01Jgs6CFddyrd0nXd5FR2vGajS",
-        "answer": "<p>ARG/US (Aviation Research Group/United States) is a respected aviation safety organization that provides <strong>safety ratings, audits, and certification for charter operators</strong>. Their ratings—Gold, Gold Plus, and Platinum—are based on rigorous evaluations of operator practices, pilot qualifications, maintenance standards, and operational history. Choosing an ARG/US-rated operator ensures a commitment to the highest safety and operational standards in private aviation.</p>"
-      },
-      {
-        "question": "How will I know what type of Aircraft to book for my flight?",
-        "id": "c_01jGS6864CebyF52W15d5H7dnP",
-        "answer": "<p>Our team will assist you in selecting the ideal aircraft based on your travel needs, including <strong>distance, passenger count, luggage requirements, and preferences</strong>. We’ll provide tailored recommendations, detailing each aircraft's capacity, range, and amenities, ensuring a comfortable and efficient flight. Whether it’s a light jet for short trips or a long-range jet for international travel, we ensure the perfect fit for your journey.</p>"
-      },
-      {
-        "question": "What safety standards do your private jets, pilots, and crew abide by?",
-        "id": "c_01jgs630Zc294MFNTM90GS5ww2",
-        "answer": "<p>Our private jets, pilots, and crew adhere to the <strong>highest safety standards</strong>, including FAA Part 135 regulations for charter operations. Jets undergo regular maintenance and inspections by certified professionals. Pilots meet strict qualifications, holding <strong>ATP licenses</strong> and extensive flight experience. We also follow <strong>ARGUS and Wyvern safety audits</strong> and conduct rigorous training for our crew to ensure exceptional safety and service.</p>"
+    "id": "c_01jgVTp9SPF5s24q2D5g3d4r50",
+    "published_at": "2025-01-05T18:13:00+00:00",
+    "slug": "charter-a-private-jet-to-the-air-charter-expo",
+    "name": "Air Charter Expo",
+    "uri": "events/charter-a-private-jet-to-the-air-charter-expo",
+    "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-air-charter-expo",
+    "language": "en",
+    "created_at": "2025-01-05T18:12:31+00:00",
+    "updated_at": "2025-01-05T18:13:56+00:00",
+    "author": {
+      "id": "u_01Ja0HEzc351WG17ED5xp6P1X1",
+      "name": "Faddyk0313",
+      "email": "Fahd@elitedigitalpros.com",
+      "profile_photo_url": "https://assets.contento.io/profile-photos/Z9hqe3shfxs0v12Dbm6QuTV3FNruyKbqpv1SAz3f.png"
+    },
+    "content_type": {
+      "id": "ct_01Jgbmt5QZ2vW5W9Nyky1mdnSx",
+      "name": "Events Single Page",
+      "handle": "events_single_page",
+      "object_type": "page"
+    },
+    "seo": {
+      "title": "Charter a Private Jet to Charter a Private Jet to the Air Charter Expo - Jetlevel  Aviation",
+      "description": null,
+      "robots": null,
+      "canonical_url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-air-charter-expo",
+      "open_graph": {
+        "title": "Charter a Private Jet to Charter a Private Jet to the Air Charter Expo - Jetlevel  Aviation",
+        "description": null,
+        "image_secure_url": null,
+        "image_width": null,
+        "image_height": null,
+        "image_alt": null,
+        "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-air-charter-expo"
       }
-    ]
+    },
+    "fields": {
+      "title": {
+        "id": "f_01jGBMT5RKRV85KnY28ZABKyw7",
+        "name": "Title",
+        "handle": "title",
+        "help_text": null,
+        "type": "text",
+        "text": "Air Charter Expo"
+      },
+      "hero_image": {
+        "id": "f_01JGBMyJ7jz3pf2sb9wejApJat",
+        "name": "Hero Image",
+        "handle": "hero_image",
+        "help_text": null,
+        "type": "assets",
+        "assets": [
+          {
+            "sort": 0,
+            "asset": {
+              "id": "a_01JGvtRM4sN0S0hByX1394Z4XH",
+              "url": "https://assets.contento.io/assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/Black-Modern-Car-Racing-News-Youtube-Thumbnail-2.jpg",
+              "name": "Black Modern Car Racing News Youtube Thumbnail 2",
+              "path": "assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/Black-Modern-Car-Racing-News-Youtube-Thumbnail-2.jpg",
+              "size": "184.4 KB",
+              "width": "1280",
+              "height": "720",
+              "is_image": true,
+              "extension": "jpg",
+              "mime_type": "image/jpeg",
+              "created_at": "2025-01-05T18:13:47+00:00",
+              "updated_at": "2025-01-05T18:13:47+00:00",
+              "description": null
+            }
+          }
+        ]
+      },
+      "all_sections": {
+        "id": "f_01JgbmW7AGa29ZBhGd0fE1w6D7",
+        "name": "All Sections",
+        "handle": "all_sections",
+        "help_text": null,
+        "type": "long_text",
+        "text": "<p>The Air Charter Expo (ACE) is a premier event for the air charter industry, bringing together operators, brokers, and suppliers for a day of networking, learning, and showcasing the latest in aviation advancements. Held annually, ACE serves as the ultimate marketplace for air charter professionals, featuring a blend of exhibitions, workshops, and aircraft displays.</p>\n\n<h2><strong>We Can Get You There</strong></h2>\n\n<p>Jetlevel Aviation can arrange a flight for you into any of the major airports near the ACE venue, ensuring a luxurious and seamless journey:</p>\n\n<ul><li><p>London Biggin Hill Airport, EGKB, BQH, London, UK. </p></li><li><p>London City Airport, EGLC, LCY, London, UK (12 miles)</p></li><li><p>Gatwick Airport, EGKK, LGW, London, UK (24 miles)</p></li><li><p>Heathrow Airport, EGLL, LHR, London, UK (27 miles)</p></li></ul>\n\n<h2><strong>What To Expect</strong></h2>\n\n<p>The Air Charter Expo is the ultimate event for professionals in the air charter industry. Here’s what you can expect:</p>\n\n<ul><li><p><strong>Exhibitions:</strong> Discover the latest aircraft, products, and services from leading suppliers and manufacturers.</p></li><li><p><strong>Networking:</strong> Meet and connect with key players in the industry, including operators, brokers, and aviation professionals.</p></li><li><p><strong>Seminars and Workshops:</strong> Attend informative sessions covering industry trends, regulatory updates, and best practices.</p></li></ul>\n\n<p><strong>Aircraft Display:</strong> Explore a static display of various aircraft, offering a close-up look at the newest models and innovations.</p>\n\n<h2><strong>How It Started</strong></h2>\n\n<p>The Air Charter Expo was established to provide a dedicated platform for the air charter industry. It aims to bring together all sectors of the industry to foster business growth, innovation, and collaboration. Over the years, ACE has grown in prominence, attracting participants from all over the world and setting the stage for major industry announcements. This event not only highlights current trends and technologies but also shapes the future of air charter services by facilitating crucial discussions and partnerships.</p>\n\n<h2><strong>Tips For Going</strong></h2>\n\n<p><strong>Plan Ahead:</strong> Review the schedule of events and plan which seminars and exhibits you want to attend.</p>\n\n<p><strong>Bring Business Cards:</strong> Networking is a key component of ACE, so make sure you have plenty of business cards to exchange.</p>\n\n<p><strong>Stay Informed:</strong> Follow the event’s social media channels and use the official app to stay updated on any changes or announcements.</p>\n\n<h2><strong>What Else To See In London</strong></h2>\n\n<ul><li><p><strong>The British Museum:</strong> Explore a vast collection of world art and artifacts spanning over two million years of history.</p></li><li><p><strong>Tower of London:</strong> Discover the rich history of this iconic fortress, home to the Crown Jewels and centuries of British history.</p></li><li><p><strong>Buckingham Palace:</strong> Witness the Changing of the Guard and tour the State Rooms of the Queen’s official residence.</p></li><li><p><strong>The Shard:</strong> Enjoy breathtaking views of London from the tallest building in the UK.</p></li></ul>\n\n<p>The Air Charter Expo is an essential event for anyone involved in the air charter industry. Chartering a private jet ensures you arrive in style and comfort, ready to make the most of this valuable networking and learning opportunity. Don’t miss the chance to be part of this influential gathering in one of the world’s most vibrant cities, where the future of air charter is shaped and celebrated.</p>"
+      },
+      "hero_content": {
+        "id": "f_01jGbmz343Zp20f1F8CHcZS97f",
+        "name": "Hero Content",
+        "handle": "hero_content",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Charter a Private Jet to the Air Charter Expo",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p>Get Your Private Jet Quote Instantly and Fly in Ultimate Luxury</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "month_selector": {
+        "id": "f_01JGVszeb9bnCvH29rVB7T4G0H",
+        "name": "Month Selector",
+        "handle": "month_selector",
+        "help_text": null,
+        "type": "dropdown",
+        "selected_option": {
+          "label": "september",
+          "value": "september"
+        }
+      }
+    }
   },
   {
-    "category": "Charter",
-    "id": "charter",
-    "content": [
-      {
-        "question": "Can I choose my flight departure time?",
-        "id": "c_01JgS404ZrQzmnH6rFm3X69GEB",
-        "answer": "<p>Yes, with JetLevel Aviation, you have the flexibility to choose your flight departure time. Private jet charters operate on your schedule, allowing you to tailor your travel plans to your needs. Our team ensures a seamless experience, providing convenience and control over your itinerary.</p>"
-      },
-      {
-        "question": "Can I book by the seat or share a private plane with another party?",
-        "id": "c_01jGvrWk7vDYv019Y70AXS6y8x",
-        "answer": "<p>JetLevel Aviation specializes in full private jet charters, meaning you book the entire aircraft for your exclusive use. We do not typically offer by-the-seat booking or shared flights. This ensures privacy, flexibility, and a personalized travel experience tailored to your needs.</p>"
-      },
-      {
-        "question": "Can I change the schedule or the itinerary of my flight?",
-        "id": "c_01JGVRTvBeVB35n02w8M3s36R9",
-        "answer": "<p>Yes, private jet charters with JetLevel Aviation offer flexibility to adjust your schedule or itinerary. Changes can often be accommodated, subject to aircraft availability and operational requirements. Our team works closely with you to ensure your travel needs are met seamlessly.</p>"
-      },
-      {
-        "question": "Can I fly to multiple destinations on the same day?",
-        "id": "c_01JgvRPBq9fBdh7J0mE9mkRbKk",
-        "answer": "<p>Yes, with JetLevel Aviation, you can fly to multiple destinations on the same day. Private jet charters offer flexibility to customize your itinerary, allowing for efficient travel between locations without the delays of commercial flights. Our team ensures seamless coordination for a hassle-free experience.</p>"
-      },
-      {
-        "question": "Can I make last-minute changes to my flight itinerary?",
-        "id": "c_01jgvrXT16y4GN0HXkrGmK9613",
-        "answer": "<p>Yes, JetLevel Aviation allows last-minute changes to your flight itinerary, subject to aircraft availability and operational considerations. Our team works diligently to accommodate adjustments and ensure a smooth, flexible travel experience.</p>"
-      },
-      {
-        "question": "Can I travel with my pet?",
-        "id": "c_01JgVrT58q5nBC58m4CPg06ty9",
-        "answer": "<p>Yes, you can travel with your pet on a private jet charter. JetLevel Aviation welcomes pets and ensures their comfort and safety during the flight. Let us know your pet’s needs in advance, and we’ll arrange a pet-friendly experience tailored to you.</p>"
-      },
-      {
-        "question": "What type of Private Jet Charter Service do you offer at JetLevel Aviation?",
-        "id": "c_01JGvrw3fZ4pAB6Abb5NY1vJF9",
-        "answer": "<p>JetLevel Aviation offers a range of private jet charter services, including <strong>on-demand charters</strong>, <strong>group charters</strong>, <strong>corporate travel</strong>, <strong>luxury leisure trips</strong>, and <strong>medical or emergency flights</strong>. We tailor each service to your unique needs, providing access to a global fleet of aircraft for a seamless and personalized travel experience.</p>"
-      },
-      {
-        "question": "Is it possible to add a last-minute passenger on my flight?",
-        "id": "c_01JgvRVc4BW6QD66fM1nTV351C",
-        "answer": "<p>Yes, adding a last-minute passenger to your private jet flight is usually possible, provided the aircraft's seating capacity and weight limits allow it. Notify JetLevel Aviation as soon as possible, and we'll make the necessary arrangements to accommodate the additional traveler.</p>"
-      },
-      {
-        "question": "How far in advance do I need to book my Charter Flight?",
-        "id": "c_01Jgvrx7C4t2gRCST5kc8YT365",
-        "answer": "<p>You can book a charter flight with JetLevel Aviation as little as <strong>a few hours in advance</strong>, depending on aircraft availability and logistics. However, booking <strong>24-48 hours in advance</strong> is recommended to ensure optimal aircraft options and a seamless travel experience.</p>"
+    "id": "c_01jGvWa2gg0d3rK07a40qnKga6",
+    "published_at": "2025-01-05T18:49:00+00:00",
+    "slug": "charter-a-private-jet-to-the-albuquerque-international-balloon-fiesta",
+    "name": "Albuquerque International Balloon Fiesta",
+    "uri": "events/charter-a-private-jet-to-the-albuquerque-international-balloon-fiesta",
+    "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-albuquerque-international-balloon-fiesta",
+    "language": "en",
+    "created_at": "2025-01-05T18:40:47+00:00",
+    "updated_at": "2025-01-05T18:49:58+00:00",
+    "author": {
+      "id": "u_01Ja0HEzc351WG17ED5xp6P1X1",
+      "name": "Faddyk0313",
+      "email": "Fahd@elitedigitalpros.com",
+      "profile_photo_url": "https://assets.contento.io/profile-photos/Z9hqe3shfxs0v12Dbm6QuTV3FNruyKbqpv1SAz3f.png"
+    },
+    "content_type": {
+      "id": "ct_01Jgbmt5QZ2vW5W9Nyky1mdnSx",
+      "name": "Events Single Page",
+      "handle": "events_single_page",
+      "object_type": "page"
+    },
+    "seo": {
+      "title": "Charter a Private Jet to the Albuquerque International Balloon Fiesta - Jetlevel Aviation",
+      "description": null,
+      "robots": null,
+      "canonical_url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-albuquerque-international-balloon-fiesta",
+      "open_graph": {
+        "title": "Charter a Private Jet to the Albuquerque International Balloon Fiesta - Jetlevel Aviation",
+        "description": null,
+        "image_secure_url": null,
+        "image_width": null,
+        "image_height": null,
+        "image_alt": null,
+        "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-albuquerque-international-balloon-fiesta"
       }
-    ]
+    },
+    "fields": {
+      "title": {
+        "id": "f_01jGBMT5RKRV85KnY28ZABKyw7",
+        "name": "Title",
+        "handle": "title",
+        "help_text": null,
+        "type": "text",
+        "text": "Albuquerque International Balloon Fiesta"
+      },
+      "hero_image": {
+        "id": "f_01JGBMyJ7jz3pf2sb9wejApJat",
+        "name": "Hero Image",
+        "handle": "hero_image",
+        "help_text": null,
+        "type": "assets",
+        "assets": [
+          {
+            "sort": 0,
+            "asset": {
+              "id": "a_01jGVwss0K8bA26Jtw9S6TjfbT",
+              "url": "https://assets.contento.io/assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/wp4223673-scaled.jpg",
+              "name": "Wp4223673 Scaled",
+              "path": "assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/wp4223673-scaled.jpg",
+              "size": "480.9 KB",
+              "width": "2560",
+              "height": "1582",
+              "is_image": true,
+              "extension": "jpg",
+              "mime_type": "image/jpeg",
+              "created_at": "2025-01-05T18:49:22+00:00",
+              "updated_at": "2025-01-05T18:49:22+00:00",
+              "description": null
+            }
+          }
+        ]
+      },
+      "all_sections": {
+        "id": "f_01JgbmW7AGa29ZBhGd0fE1w6D7",
+        "name": "All Sections",
+        "handle": "all_sections",
+        "help_text": null,
+        "type": "long_text",
+        "text": "<p>The Albuquerque International Balloon Fiesta is a breathtaking event that fills the sky with hundreds of hot air balloons of all shapes and sizes. It’s the largest ballooning event in the world, attracting pilots and spectators from all over the globe.</p>\n\n<h2><strong>We Can Get You There</strong></h2>\n\n<p>If you want to experience the awe-inspiring sight of balloons filling the sky at dawn or glowing against the night sky, Jetlevel Aviation can arrange a flight for you into any nearby airport, including:</p>\n\n<ul><li><p>Albuquerque International Sunport, ABQ, Albuquerque, NM (3 miles)</p></li><li><p>Double Eagle II Airport, AEG, Albuquerque, NM (14 miles)</p></li><li><p>Santa Fe Regional Airport, SAF, Santa Fe, NM (62 miles)</p></li><li><p>Los Alamos County Airport, LAM, Los Alamos, NM (94 miles)</p></li><li><p>Four Corners Regional Airport, FMN, Farmington, NM (180 miles)</p></li></ul>\n\n<h2><strong>What To Expect</strong></h2>\n\n<p>The Albuquerque International Balloon Fiesta is a nine-day event featuring mass ascensions of hundreds of balloons, unique balloon shapes, and spectacular balloon glows. It’s a family-friendly event with activities and entertainment for all ages.</p>\n\n<p>You can expect:</p>\n\n<p>Mass Ascensions: A breathtaking launch of hundreds of balloons into the sky.</p>\n\n<p>Balloon Glows: Balloons are inflated and lit up at dusk, creating a magical glowing spectacle.</p>\n\n<p>Special Shape Rodeo: Unique and creatively shaped balloons take flight.</p>\n\n<p>Dawn Patrol: Early morning launches as the sun rises.</p>\n\n<p>Evening Events: Concerts, fireworks, and night glows.</p>\n\n<p>The event takes place at Balloon Fiesta Park, which spans 365 acres and offers plenty of space for spectators to spread out and enjoy the view.</p>\n\n<h2><strong>How It Started</strong></h2>\n\n<p>The Albuquerque International Balloon Fiesta began in 1972 with just 13 balloons in a shopping mall parking lot. It was organized by Sid Cutter, a local balloon pilot, to celebrate the 50th anniversary of KOB Radio. Since then, it has grown into the largest ballooning event in the world, attracting over 500 balloons and thousands of spectators each year.</p>\n\n<h2><strong>Tips For Going</strong></h2>\n\n<p>Dress in Layers: Mornings can be chilly, but it warms up quickly. Layer your clothing to stay comfortable.</p>\n\n<p>Arrive Early: Traffic can be heavy, and the best views are from the field. Gates open at 4:30 a.m.</p>\n\n<p>Bring Binoculars: To get a closer look at the balloons in the sky.</p>\n\n<p>Stay Hydrated: Bring water, especially if you plan to spend the whole day at the park.</p>\n\n<p>Check the Schedule: Events are weather-dependent, so check the daily schedule for updates.</p>\n\n<p>Parking: There are several parking options, including Park &amp; Ride services.</p>\n\n<h2><strong>What Else To See In Huntington Beach</strong></h2>\n\n<p>Sandia Peak Tramway: Ride the tram to the top of the Sandia Mountains for stunning views.</p>\n\n<p>Old Town Albuquerque: Explore historic adobe buildings, shops, and museums.</p>\n\n<p>The Indian Pueblo Cultural Center: Learn about the Native American culture and history.</p>\n\n<p>Petroglyph National Monument: See ancient rock carvings along scenic trails.</p>\n\n<p>With its vibrant colors, unique shapes, and awe-inspiring sights, the Albuquerque International Balloon Fiesta is an unforgettable experience. Charter a private jet with Jetlevel Aviation to ensure you arrive in style and comfort, ready to enjoy every moment of this spectacular event.</p>"
+      },
+      "hero_content": {
+        "id": "f_01jGbmz343Zp20f1F8CHcZS97f",
+        "name": "Hero Content",
+        "handle": "hero_content",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Charter a Private Jet to the Albuquerque International Balloon Fiesta",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p>Get Your Private Jet Quote Instantly and Fly in Ultimate Luxury.</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "month_selector": {
+        "id": "f_01JGVszeb9bnCvH29rVB7T4G0H",
+        "name": "Month Selector",
+        "handle": "month_selector",
+        "help_text": null,
+        "type": "dropdown",
+        "selected_option": {
+          "label": "October",
+          "value": "october"
+        }
+      }
+    }
   },
   {
-    "category": "Service",
-    "id": "service",
-    "content": [
-      {
-        "question": "Can I take golf clubs with me on the private jet?",
-        "id": "c_01jgs478QmsrEWq98C4F30r2x6",
-        "answer": "<p>Yes, you can bring golf clubs on a private jet. Private jets offer ample luggage space, and our team ensures your equipment is safely accommodated. Let us know your requirements, and we'll match you with an aircraft that meets your needs for a hassle-free golf trip.</p>"
-      },
-      {
-        "question": "Can I take a wheelchair on a private jet?",
-        "id": "c_01JGvs3C8nGr676Vdb53EAf98S",
-        "answer": "<p>Yes, wheelchairs can be accommodated on private jets. JetLevel Aviation ensures accessibility and can arrange for aircraft with suitable space and amenities. Let us know your requirements, and we'll coordinate the necessary arrangements for a comfortable travel experience.</p>"
-      },
-      {
-        "question": "Can I take skis or snowboards on a private jet?",
-        "id": "c_01JgVS3yM3Py23bFmHAtSh5hhJ",
-        "answer": "<p>Yes, you can bring skis or snowboards on a private jet. JetLevel Aviation ensures your equipment is safely stored, and we’ll match you with an aircraft that accommodates your luggage needs. Notify us in advance for a seamless experience.</p>"
-      },
-      {
-        "question": "Is smoking allowed on private jets?",
-        "id": "c_01JGVS4W3b512qg786Sv1nKgSB",
-        "answer": "<p>Smoking policies on private jets vary by operator and aircraft. Some jets allow smoking, while others prohibit it due to regulations or preferences. Let JetLevel Aviation know your preferences, and we’ll match you with an appropriate aircraft if smoking is permitted.</p>"
+    "id": "c_01JGvwV9P021q5X55nh5Pj0v0v",
+    "published_at": "2025-01-05T18:53:55+00:00",
+    "slug": "charter-a-private-jet-to-the-american-music-awards",
+    "name": "American Music Awards",
+    "uri": "events/charter-a-private-jet-to-the-american-music-awards",
+    "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-american-music-awards",
+    "language": "en",
+    "created_at": "2025-01-05T18:50:11+00:00",
+    "updated_at": "2025-01-05T18:50:12+00:00",
+    "author": {
+      "id": "u_01Ja0HEzc351WG17ED5xp6P1X1",
+      "name": "Faddyk0313",
+      "email": "Fahd@elitedigitalpros.com",
+      "profile_photo_url": "https://assets.contento.io/profile-photos/Z9hqe3shfxs0v12Dbm6QuTV3FNruyKbqpv1SAz3f.png"
+    },
+    "content_type": {
+      "id": "ct_01Jgbmt5QZ2vW5W9Nyky1mdnSx",
+      "name": "Events Single Page",
+      "handle": "events_single_page",
+      "object_type": "page"
+    },
+    "seo": {
+      "title": "Charter a Private Jet to the American Music Awards - JetLevel Aviation",
+      "description": null,
+      "robots": null,
+      "canonical_url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-american-music-awards",
+      "open_graph": {
+        "title": "Charter a Private Jet to the American Music Awards - JetLevel Aviation",
+        "description": null,
+        "image_secure_url": null,
+        "image_width": null,
+        "image_height": null,
+        "image_alt": null,
+        "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-american-music-awards"
       }
-    ]
+    },
+    "fields": {
+      "title": {
+        "id": "f_01jGBMT5RKRV85KnY28ZABKyw7",
+        "name": "Title",
+        "handle": "title",
+        "help_text": null,
+        "type": "text",
+        "text": "American Music Awards"
+      },
+      "hero_image": {
+        "id": "f_01JGBMyJ7jz3pf2sb9wejApJat",
+        "name": "Hero Image",
+        "handle": "hero_image",
+        "help_text": null,
+        "type": "assets",
+        "assets": [
+          {
+            "sort": 0,
+            "asset": {
+              "id": "a_01JgVX1VQhFE595mDg57WNw9rs",
+              "url": "https://assets.contento.io/assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/American-Music-Awards-event.webp",
+              "name": "American Music Awards Event",
+              "path": "assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/American-Music-Awards-event.webp",
+              "size": "144.62 KB",
+              "width": "1296",
+              "height": "730",
+              "is_image": true,
+              "extension": "webp",
+              "mime_type": "image/webp",
+              "created_at": "2025-01-05T18:53:47+00:00",
+              "updated_at": "2025-01-05T18:53:47+00:00",
+              "description": null
+            }
+          }
+        ]
+      },
+      "all_sections": {
+        "id": "f_01JgbmW7AGa29ZBhGd0fE1w6D7",
+        "name": "All Sections",
+        "handle": "all_sections",
+        "help_text": null,
+        "type": "long_text",
+        "text": "<p>The American Music Awards (AMAs) are one of the most significant nights in music, celebrating the hottest artists, songs, and albums in the industry. Join the stars in Los Angeles for a night of unforgettable performances, glamorous red carpet moments, and prestigious awards.</p>\n\n<h2><strong>We Can Get You There</strong></h2>\n\n<p>Jetlevel Aviation can arrange a private flight to Los Angeles, ensuring you arrive in style and comfort. The closest airport to the event is:</p>\n\n<p>Los Angeles International Airport, LAX, Los Angeles, California (15 miles).</p>\n\n<ul><li><p>Van Nuys Airport, VNY, Van Nuys, California (23 miles)</p></li><li><p>Hollywood Burbank Airport, BUR, Burbank, California (24 miles)</p></li><li><p>Long Beach Airport, LGB, Long Beach, California (28 miles)</p></li></ul>\n\n<h2><strong>What To Expect</strong></h2>\n\n<p>The AMAs are known for their electrifying performances by top artists across various genres. Expect an evening filled with live music, celebrity appearances, and the latest fashion trends. The event is held at the Microsoft Theater in downtown Los Angeles, providing a stunning backdrop for the festivities.</p>\n\n<p>The red carpet kicks off the night, where you’ll see your favorite stars posing for photos and giving interviews. The award show itself features numerous performances, award presentations, and special tributes, making it a night to remember.</p>\n\n<h2><strong>How It Started</strong></h2>\n\n<p>The American Music Awards were created by Dick Clark in 1973 as a rival to the Grammy Awards. The AMAs have since become a staple in the music industry, known for their fan-voted awards, which highlight the artists and music that resonate most with the public.</p>\n\n<h2><strong>Tips For Going</strong></h2>\n\n<ul><li><p>Dress to Impress: The AMAs are a glamorous event. Opt for formal or cocktail attire to fit in with the stylish crowd.</p></li><li><p>Arrive Early: To catch all the action on the red carpet, arrive at the venue a few hours before the show starts.</p></li><li><p>Stay Hydrated: With all the excitement, it’s easy to forget to drink water. Bring a water bottle or take advantage of the refreshments available.</p></li><li><p>Plan Your Transportation: Traffic in Los Angeles can be unpredictable. Consider booking a car service to ensure timely arrival. </p></li><li><p>After-Parties: The fun doesn’t stop when the show ends. Look into exclusive after-parties for a chance to mingle with the stars.</p></li></ul>\n\n<h2><strong>What Else To See In Huntington Beach</strong></h2>\n\n<p>Hollywood Walk of Fame: Stroll down Hollywood Boulevard to see the stars on the Walk of Fame and visit the iconic TCL Chinese Theatre.</p>\n\n<p>Griffith Observatory: Enjoy panoramic views of Los Angeles and explore the exhibits at this famous observatory.</p>\n\n<p>The Getty Center: Discover art and architecture at the Getty Center, which features impressive collections and stunning gardens.</p>\n\n<p>Santa Monica Pier: Visit this historic pier for a mix of fun activities, including rides, games, and ocean views.</p>\n\n<p>For an unforgettable experience at the American Music Awards, let Jetlevel Aviation handle your travel needs, ensuring you arrive ready to enjoy one of music’s most spectacular nights.</p>"
+      },
+      "hero_content": {
+        "id": "f_01jGbmz343Zp20f1F8CHcZS97f",
+        "name": "Hero Content",
+        "handle": "hero_content",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Charter a Private Jet to the American Music Awards",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p>Get Your Private Jet Quote Instantly and Fly in Ultimate Luxury.</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "month_selector": {
+        "id": "f_01JGVszeb9bnCvH29rVB7T4G0H",
+        "name": "Month Selector",
+        "handle": "month_selector",
+        "help_text": null,
+        "type": "dropdown",
+        "selected_option": {
+          "label": "October",
+          "value": "october"
+        }
+      }
+    }
   },
   {
-    "category": "Broker",
-    "id": "broker",
-    "content": [
-      {
-        "question": "Can you arrange ground transportation?",
-        "id": "c_01jgs3YVZWVybrE2wv9JkQZN4s",
-        "answer": "<p>Yes, JetLevel Aviation can arrange ground transportation for your journey. Whether you need a luxury car, SUV, or limousine, we coordinate with trusted providers to ensure a seamless transfer to and from the airport. Our team tailors arrangements to your preferences for a convenient and stress-free experience.</p>"
-      },
-      {
-        "question": "Why should I book with JetLevel?",
-        "id": "c_01jGVRnNZ70AzD6b04H7vTWrBz",
-        "answer": "<p>Booking with JetLevel Aviation ensures a premium travel experience with personalized service, 24/7 support, and access to a global network of top-tier aircraft. We prioritize safety, transparency, and efficiency, tailoring every flight to your needs for seamless, stress-free travel.</p>"
+    "id": "c_01JGvtvDMwzybK4z3Cn2w04NBj",
+    "published_at": "2025-01-05T18:19:43+00:00",
+    "slug": "charter-a-private-jet-to-the-california-international-airshow",
+    "name": "California International Airshow",
+    "uri": "events/charter-a-private-jet-to-the-california-international-airshow",
+    "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-california-international-airshow",
+    "language": "en",
+    "created_at": "2025-01-05T18:15:18+00:00",
+    "updated_at": "2025-01-05T18:15:19+00:00",
+    "author": {
+      "id": "u_01Ja0HEzc351WG17ED5xp6P1X1",
+      "name": "Faddyk0313",
+      "email": "Fahd@elitedigitalpros.com",
+      "profile_photo_url": "https://assets.contento.io/profile-photos/Z9hqe3shfxs0v12Dbm6QuTV3FNruyKbqpv1SAz3f.png"
+    },
+    "content_type": {
+      "id": "ct_01Jgbmt5QZ2vW5W9Nyky1mdnSx",
+      "name": "Events Single Page",
+      "handle": "events_single_page",
+      "object_type": "page"
+    },
+    "seo": {
+      "title": "Charter a Private Jet to Charter a Private Jet to the California International Airshow - Jetlevel  Aviation",
+      "description": null,
+      "robots": null,
+      "canonical_url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-california-international-airshow",
+      "open_graph": {
+        "title": "Charter a Private Jet to Charter a Private Jet to the California International Airshow - Jetlevel  Aviation",
+        "description": null,
+        "image_secure_url": null,
+        "image_width": null,
+        "image_height": null,
+        "image_alt": null,
+        "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-california-international-airshow"
       }
-    ]
+    },
+    "fields": {
+      "title": {
+        "id": "f_01jGBMT5RKRV85KnY28ZABKyw7",
+        "name": "Title",
+        "handle": "title",
+        "help_text": null,
+        "type": "text",
+        "text": "California International Airshow"
+      },
+      "hero_image": {
+        "id": "f_01JGBMyJ7jz3pf2sb9wejApJat",
+        "name": "Hero Image",
+        "handle": "hero_image",
+        "help_text": null,
+        "type": "assets",
+        "assets": [
+          {
+            "sort": 0,
+            "asset": {
+              "id": "a_01jGvtrkQWq36G95A291qreCs2",
+              "url": "https://assets.contento.io/assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/Black-Modern-Car-Racing-News-Youtube-Thumbnail-4.jpg",
+              "name": "Black Modern Car Racing News Youtube Thumbnail 4",
+              "path": "assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/Black-Modern-Car-Racing-News-Youtube-Thumbnail-4.jpg",
+              "size": "48.63 KB",
+              "width": "1280",
+              "height": "720",
+              "is_image": true,
+              "extension": "jpg",
+              "mime_type": "image/jpeg",
+              "created_at": "2025-01-05T18:13:46+00:00",
+              "updated_at": "2025-01-05T18:13:46+00:00",
+              "description": null
+            }
+          }
+        ]
+      },
+      "all_sections": {
+        "id": "f_01JgbmW7AGa29ZBhGd0fE1w6D7",
+        "name": "All Sections",
+        "handle": "all_sections",
+        "help_text": null,
+        "type": "long_text",
+        "text": "<p>The California International Airshow is an exhilarating event that showcases breathtaking aerial performances and static displays of both modern and vintage aircraft. Set against the scenic backdrop of the Salinas Valley, it’s a must-visit for aviation enthusiasts and families alike. Enjoy thrilling aerobatics, interactive exhibits, and the opportunity to meet pilots and crew members, making it a truly unforgettable experience.</p>\n\n<h2><strong>We Can Get You There</strong></h2>\n\n<p>Jetlevel Aviation can arrange a flight for you to the closest airports near the airshow, ensuring a seamless and luxurious travel experience. Consider these nearby airports for your journey:</p>\n\n<ul><li><p>Salinas Municipal Airport, SNS, Salinas, California (2 miles)</p></li><li><p>Monterey Regional Airport, MRY, Monterey, California (20 miles). </p></li><li><p>San Jose International Airport, SJC, San Jose, California (60 miles). </p></li><li><p>San Francisco International Airport, SFO, San Francisco, California (100 miles). </p></li><li><p>Oakland International Airport, OAK, Oakland, California (90 miles)</p></li></ul>\n\n<h2><strong>What To Expect</strong></h2>\n\n<p>The California International Airshow is a thrilling event that features high-energy aerobatics, precision flying, and an array of aircraft displays. Highlights include:</p>\n\n<ul><li><p><strong>Aerial Performances</strong>: Watch top aerobatic pilots, military jet teams, and parachute jumpers perform jaw-dropping stunts.</p></li><li><p><strong>Static Displays</strong>: Explore a wide variety of aircraft on the ground, ranging from modern fighter jets to vintage warbirds.</p></li><li><p><strong>Interactive Exhibits</strong>: Engage with aviation exhibits, flight simulators, and meet-and-greet opportunities with pilots and crew members.</p></li><li><p><strong>Family Fun Zone</strong>: Activities and entertainment for kids, including bounce houses, face painting, and educational displays.</p></li></ul>\n\n<h2><strong>How It Started</strong></h2>\n\n<p>The California International Airshow began in 1981, founded by a group of local aviation enthusiasts. Their goal was to bring a world-class airshow to the Salinas Valley while raising funds for local charities. Over the decades, the airshow has grown in popularity and impact, donating millions of dollars to community organizations.</p>\n\n<h2><strong>Tips For Going</strong></h2>\n\n<ul><li><p><strong>Arrive Early</strong>: Gates typically open in the morning, and arriving early ensures you get good parking and a prime viewing spot. </p></li><li><p><strong>Bring Sunscreen and Hats</strong>: The Salinas Valley can be sunny and warm. Protect yourself from the sun.</p></li><li><p><strong>Stay Hydrated</strong>: Bring water or purchase drinks at the event to stay hydrated throughout the day.</p></li><li><p><strong>Comfortable Shoes</strong>: There will be a lot of walking, so wear comfortable shoes. </p></li><li><p><strong>Ear Protection</strong>: The jet performances can be very loud. Consider bringing earplugs or noise-canceling headphones, especially for young children.</p></li><li><p><strong>Check the Schedule</strong>: Review the airshow schedule in advance to plan your day around must-see performances. </p></li><li><p><strong>Bring Cash</strong>: Some vendors may not accept cards, so having cash on hand can be helpful.</p></li></ul>\n\n<h2><strong>What Else To See In Salinas</strong></h2>\n\n<ul><li><p><strong>National Steinbeck Center</strong>: Dedicated to the works and life of John Steinbeck, the National Steinbeck Center offers exhibits, archives, and educational programs related to the famous author.</p></li><li><p><strong>Toro County Park</strong>: A great place for hiking, picnicking, and enjoying the natural beauty of the Salinas Valley.</p></li><li><p><strong>Monterey Bay Aquarium</strong>: Just a short drive away, this world-renowned aquarium features stunning marine exhibits and educational programs about ocean conservation.</p></li></ul>\n\n<p>Experience the thrill of the California International Airshow and make unforgettable memories with Jetlevel Aviation. Whether you’re an aviation enthusiast or looking for a fun-filled family outing, this event offers breathtaking performances, interactive exhibits, and a chance to explore a variety of aircraft up close. Ensure a luxurious and seamless travel experience by chartering a private jet with Jetlevel Aviation.</p>"
+      },
+      "hero_content": {
+        "id": "f_01jGbmz343Zp20f1F8CHcZS97f",
+        "name": "Hero Content",
+        "handle": "hero_content",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Charter a Private Jet to the California International Airshow",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p>Get Your Private Jet Quote Instantly and Fly in Ultimate Luxury</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "month_selector": {
+        "id": "f_01JGVszeb9bnCvH29rVB7T4G0H",
+        "name": "Month Selector",
+        "handle": "month_selector",
+        "help_text": null,
+        "type": "dropdown",
+        "selected_option": {
+          "label": "september",
+          "value": "september"
+        }
+      }
+    }
   },
   {
-    "category": "Airport",
-    "id": "airport",
-    "content": [
-      {
-        "question": "How long should I arrive before departure?",
-        "id": "c_01JgS3Y95h8tm8084hHNkv2Qje",
-        "answer": "<p>For private jet flights, arriving 15-30 minutes before departure is typically sufficient. Unlike commercial flights, private jet travel offers streamlined security and check-in processes, minimizing wait times. JetLevel Aviation ensures a hassle-free experience, allowing you to board quickly and depart on your schedule.</p>"
-      },
-      {
-        "question": "Can I travel to secondary or underserved airports?",
-        "id": "c_01JGs6p5rekD7Kf2QyfdqCR639",
-        "answer": "<p>Yes, private jets can access <strong>secondary and underserved airports</strong>, providing unparalleled flexibility. With the ability to land on shorter runways and at smaller airports, private jets bring you closer to your destination, often bypassing crowded major hubs. This allows for efficient and convenient travel to remote or less-serviced locations.</p>"
-      },
-      {
-        "question": "Is there parking at the FBO or the business aviation terminal?",
-        "id": "c_01JGs6kgJ7FWByMdjamyN956cg",
-        "answer": "<p>Yes, most FBOs (Fixed Base Operators) or business aviation terminals offer <strong>parking facilities</strong> for passengers. Many provide convenient, secure parking options, including valet services, for your vehicle while you travel. Contact your chosen FBO in advance to confirm parking availability and any associated fees or services.</p>"
-      },
-      {
-        "question": "How long in advance do I need to show up at the airport if I book a Private Charter?",
-        "id": "c_01JGvrk8nh4HpTHar5Xp6QK9N2",
-        "answer": "<p>For a private charter, you only need to arrive <strong>15-30 minutes before departure</strong>. The streamlined check-in process and private terminals eliminate long waits, providing a quick and hassle-free experience tailored to your schedule.</p>"
-      },
-      {
-        "question": "How does customs and immigration work when flying Internationally on a Private Jet?",
-        "id": "c_01jGvRkw6JgWG3GC5dAda6VwnK",
-        "answer": "<p>When flying internationally on a private jet, customs and immigration are expedited through private terminals or FBOs (Fixed Base Operators). Passengers typically present passports to customs officers on-site, with minimal wait times and personalized service. JetLevel Aviation ensures all necessary documentation and clearances are prearranged for a smooth and efficient process.</p>"
-      },
-      {
-        "question": "Do I still need my passport when flying on a Private Jet Internationally?",
-        "id": "c_01JGVrmgTPyS74vyfgfFTemBqC",
-        "answer": "<p>Yes, a passport is required when flying internationally on a private jet. Customs and immigration regulations still apply, and your passport must be valid for the destination's entry requirements. JetLevel Aviation ensures a smooth process by coordinating all necessary documentation.</p>"
-      },
-      {
-        "question": "Do I have to go through boarding formalities?",
-        "id": "c_01jGS6n7HhgBq50AA53q6KGrAV",
-        "answer": "<p>Private jet travel significantly minimizes boarding formalities. Passengers typically bypass standard airport security lines, completing quick identity and baggage checks at the <strong>FBO (Fixed Base Operator)</strong>. This streamlined process ensures a hassle-free and efficient boarding experience, allowing you to arrive just minutes before departure.</p>"
-      },
-      {
-        "question": "Where do I meet the aircraft?",
-        "id": "c_01JGs6Q3K4TSVGPJVsTWmcjDe5",
-        "answer": "<p>You’ll meet the aircraft at the <strong>Fixed Base Operator (FBO)</strong> or private aviation terminal at your departure airport. The FBO provides a dedicated and convenient facility for private jet passengers. Upon arrival, our team or the FBO staff will guide you directly to your aircraft for a seamless boarding experience. Specific details will be shared before your flight.</p>"
+    "id": "c_01jGK161hHkE6bK9hM1t5GYvCb",
+    "published_at": "2025-01-02T08:15:00+00:00",
+    "slug": "charter-a-private-jet-to-the-country-music-awards",
+    "name": "Country Music Awards",
+    "uri": "events/charter-a-private-jet-to-the-country-music-awards",
+    "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-country-music-awards",
+    "language": "en",
+    "created_at": "2025-01-02T08:12:48+00:00",
+    "updated_at": "2025-01-05T18:34:09+00:00",
+    "author": {
+      "id": "u_01Ja0HEzc351WG17ED5xp6P1X1",
+      "name": "Faddyk0313",
+      "email": "Fahd@elitedigitalpros.com",
+      "profile_photo_url": "https://assets.contento.io/profile-photos/Z9hqe3shfxs0v12Dbm6QuTV3FNruyKbqpv1SAz3f.png"
+    },
+    "content_type": {
+      "id": "ct_01Jgbmt5QZ2vW5W9Nyky1mdnSx",
+      "name": "Events Single Page",
+      "handle": "events_single_page",
+      "object_type": "page"
+    },
+    "seo": {
+      "title": "Charter a Private Jet to the Country Music Awards - Jetlevel Aviation",
+      "description": "Fly to the Country Music Awards in Style! Charter a private jet with Jetlevel Aviation for a luxurious, seamless journey to Nashville. Book now!",
+      "robots": null,
+      "canonical_url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-country-music-awards",
+      "open_graph": {
+        "title": "Charter a Private Jet to the Country Music Awards - Jetlevel Aviation",
+        "description": "Fly to the Country Music Awards in Style! Charter a private jet with Jetlevel Aviation for a luxurious, seamless journey to Nashville. Book now!",
+        "image_secure_url": null,
+        "image_width": null,
+        "image_height": null,
+        "image_alt": null,
+        "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-country-music-awards"
       }
-    ]
+    },
+    "fields": {
+      "title": {
+        "id": "f_01jGBMT5RKRV85KnY28ZABKyw7",
+        "name": "Title",
+        "handle": "title",
+        "help_text": null,
+        "type": "text",
+        "text": "Country Music Awards"
+      },
+      "hero_image": {
+        "id": "f_01JGBMyJ7jz3pf2sb9wejApJat",
+        "name": "Hero Image",
+        "handle": "hero_image",
+        "help_text": null,
+        "type": "assets",
+        "assets": [
+          {
+            "sort": 0,
+            "asset": {
+              "id": "a_01jgK18h9A65t3X58KC9QtDKF9",
+              "url": "https://assets.contento.io/assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/Events-Featured-Images.jpg",
+              "name": "Events Featured Images",
+              "path": "assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/Events-Featured-Images.jpg",
+              "size": "99.98 KB",
+              "width": "1000",
+              "height": "700",
+              "is_image": true,
+              "extension": "jpg",
+              "mime_type": "image/jpeg",
+              "created_at": "2025-01-02T08:14:10+00:00",
+              "updated_at": "2025-01-02T08:14:10+00:00",
+              "description": null
+            }
+          }
+        ]
+      },
+      "all_sections": {
+        "id": "f_01JgbmW7AGa29ZBhGd0fE1w6D7",
+        "name": "All Sections",
+        "handle": "all_sections",
+        "help_text": null,
+        "type": "long_text",
+        "text": "<p>The Country Music Awards (CMA) celebrate the best in country music, bringing together fans and artists for an unforgettable night of performances, awards, and memorable moments. The event is renowned for its celebration of country music’s history and its influence on the music industry.</p>\n\n<h2>We Can Get You There</h2>\n\n<p>If you want to experience the Country Music Awards in person, Jetlevel Aviation can arrange a flight for you to several nearby airports, ensuring you arrive in style and comfort:</p>\n\n<p>Nashville International Airport, BNA, Nashville, Tennessee (8 miles)</p>\n\n<p>Smyrna Airport, MQY, Smyrna, Tennessee (20 miles)</p>\n\n<p>John C. Tune Airport, JWN, Nashville, Tennessee (10 miles)</p>\n\n<p>Lebanon Municipal Airport, M54, Lebanon, Tennessee (29 miles)</p>\n\n<p>Shelbyville Municipal Airport, SYI, Shelbyville, Tennessee (56 miles)</p>\n\n<h2>What To Expect</h2>\n\n<p>The Country Music Awards is an evening of glitz, glamour, and great music. The event features performances from top country music artists, heartfelt acceptance speeches, and special tributes to legends of the genre. Expect a star-studded red carpet where artists showcase their unique styles.</p>\n\n<p>The ceremony typically lasts about three hours and includes numerous award presentations in various categories, including Entertainer of the Year, Album of the Year, and New Artist of the Year. The audience is a mix of industry professionals, celebrities, and enthusiastic fans.</p>\n\n<h2>How It Started</h2>\n\n<p>The Country Music Awards were first held in 1967, organized by the Country Music Association to recognize the achievements of country music artists and promote the genre. The inaugural event was a simple banquet, but it quickly grew in popularity and prestige, becoming one of the most anticipated events in the music industry.</p>\n\n<h2>Tips For Going</h2>\n\n<p><strong>Dress Code:</strong> The CMA is a formal event. Dress to impress with evening gowns and suits, but add a touch of country flair.</p>\n\n<p><strong>Arrive Early:</strong> Traffic around the venue can be heavy. Arriving early ensures you get a good spot and enjoy the red carpet arrivals.</p>\n\n<p><strong>Tickets:</strong> Purchase your tickets well in advance. The event often sells out quickly.</p>\n\n<p><strong>Stay Hydrated and Eat:</strong> The excitement and long duration can be exhausting. Keep hydrated and have a meal before the event.</p>\n\n<h2>What Else To See In Huntington Beach</h2>\n\n<p><strong>Country Music Hall of Fame and Museum:</strong> Explore the history of country music, with exhibits featuring artifacts, recordings, and memorabilia from the genre’s biggest stars.</p>\n\n<p><strong>Grand Ole Opry:</strong> Attend a live show at this historic venue, known as the home of American music.</p>\n\n<p><strong>The Johnny Cash Museum:</strong> A tribute to the legendary Man in Black, featuring artifacts, memorabilia, and interactive exhibits.</p>\n\n<p><strong>Broadway:</strong> Enjoy the vibrant nightlife on this famous street, lined with honky-tonks, bars, and live music venues.</p>\n\n<p>Experience the magic of the Country Music Awards and immerse yourself in the rich culture of Nashville. Whether you’re a lifelong country music fan or new to the genre, this event is a must-see celebration of talent and tradition.</p>"
+      },
+      "hero_content": {
+        "id": "f_01jGbmz343Zp20f1F8CHcZS97f",
+        "name": "Hero Content",
+        "handle": "hero_content",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Charter a Private Jet to the Country Music Awards",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p>Get Your Private Jet Quote Instantly and Fly in Ultimate Luxury</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "month_selector": {
+        "id": "f_01JGVszeb9bnCvH29rVB7T4G0H",
+        "name": "Month Selector",
+        "handle": "month_selector",
+        "help_text": null,
+        "type": "dropdown",
+        "selected_option": {
+          "label": "august",
+          "value": "august"
+        }
+      }
+    }
   },
   {
-    "category": "Price",
-    "id": "price",
-    "content": [
-      {
-        "question": "How much is a private jet per hour?",
-        "id": "c_01jgS40SpqTA4nGz0W5VZE6Dxj",
-        "answer": "<p>The cost of a private jet per hour typically ranges from <strong>$1,800 to $10,000</strong>, depending on the jet type. Light jets are on the lower end, while midsize, heavy, or ultra-long-range jets are higher. Additional factors like route, airport fees, and onboard services may affect pricing. JetLevel Aviation provides transparent quotes tailored to your travel needs.</p>"
-      },
-      {
-        "question": "Are there extra costs per passenger when flying private?",
-        "id": "c_01JGVs2EcFd21Z72FTcaqe5VC8",
-        "answer": "<p>No, private jet charter pricing is generally based on the aircraft, not the number of passengers. However, additional costs could arise for services like catering, luggage exceeding weight limits, or landing fees at specific airports. JetLevel Aviation provides transparent quotes, ensuring no surprises.</p>"
-      },
-      {
-        "question": "Is catering included in the quote?",
-        "id": "c_01JGvryM6Wp7scsF5Y8YrmRm1C",
-        "answer": "<p>Yes, standard catering is typically included in JetLevel Aviation's private jet charter quotes. Custom or premium catering requests can also be arranged for an additional cost, tailored to your preferences. Let us know your needs, and we’ll ensure an exceptional in-flight dining experience.</p>"
-      },
-      {
-        "question": "Is deicing included in the quote?",
-        "id": "c_01JGVs18C15wf5EbM71AvefyNy",
-        "answer": "<p>Deicing is typically <strong>not included</strong> in the initial charter quote, as it is a variable cost dependent on weather conditions and airport requirements. If deicing is necessary, the cost will be billed separately. JetLevel Aviation provides transparent pricing and keeps you informed of any additional charges.</p>"
-      },
-      {
-        "question": "Is food included in the price of the charter?",
-        "id": "c_01JgVS1x2e78Vybj6z73m6c844",
-        "answer": "<p>Yes, standard in-flight catering is typically included in the price of a private jet charter with JetLevel Aviation. For specific or premium dining requests, additional charges may apply. Let us know your preferences, and we’ll tailor the catering to enhance your travel experience.</p>"
+    "id": "c_01JGVtS68a5rnN0KnKnD1cpNM0",
+    "published_at": "2025-01-05T18:15:00+00:00",
+    "slug": "charter-a-private-jet-to-the-emmy-awards",
+    "name": "Emmy Awards",
+    "uri": "events/charter-a-private-jet-to-the-emmy-awards",
+    "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-emmy-awards",
+    "language": "en",
+    "created_at": "2025-01-05T18:14:05+00:00",
+    "updated_at": "2025-01-05T18:15:06+00:00",
+    "author": {
+      "id": "u_01Ja0HEzc351WG17ED5xp6P1X1",
+      "name": "Faddyk0313",
+      "email": "Fahd@elitedigitalpros.com",
+      "profile_photo_url": "https://assets.contento.io/profile-photos/Z9hqe3shfxs0v12Dbm6QuTV3FNruyKbqpv1SAz3f.png"
+    },
+    "content_type": {
+      "id": "ct_01Jgbmt5QZ2vW5W9Nyky1mdnSx",
+      "name": "Events Single Page",
+      "handle": "events_single_page",
+      "object_type": "page"
+    },
+    "seo": {
+      "title": "Charter a Private Jet to Charter a Private Jet to the Emmy Awards - Jetlevel  Aviation",
+      "description": null,
+      "robots": null,
+      "canonical_url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-emmy-awards",
+      "open_graph": {
+        "title": "Charter a Private Jet to Charter a Private Jet to the Emmy Awards - Jetlevel  Aviation",
+        "description": null,
+        "image_secure_url": null,
+        "image_width": null,
+        "image_height": null,
+        "image_alt": null,
+        "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-emmy-awards"
       }
-    ]
+    },
+    "fields": {
+      "title": {
+        "id": "f_01jGBMT5RKRV85KnY28ZABKyw7",
+        "name": "Title",
+        "handle": "title",
+        "help_text": null,
+        "type": "text",
+        "text": "Emmy Awards"
+      },
+      "hero_image": {
+        "id": "f_01JGBMyJ7jz3pf2sb9wejApJat",
+        "name": "Hero Image",
+        "handle": "hero_image",
+        "help_text": null,
+        "type": "assets",
+        "assets": [
+          {
+            "sort": 0,
+            "asset": {
+              "id": "a_01jGvtRKXVkWJ2G3m5v9C4R22v",
+              "url": "https://assets.contento.io/assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/Black-Modern-Car-Racing-News-Youtube-Thumbnail-3.jpg",
+              "name": "Black Modern Car Racing News Youtube Thumbnail 3",
+              "path": "assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/Black-Modern-Car-Racing-News-Youtube-Thumbnail-3.jpg",
+              "size": "79.97 KB",
+              "width": "1280",
+              "height": "720",
+              "is_image": true,
+              "extension": "jpg",
+              "mime_type": "image/jpeg",
+              "created_at": "2025-01-05T18:13:47+00:00",
+              "updated_at": "2025-01-05T18:13:47+00:00",
+              "description": null
+            }
+          }
+        ]
+      },
+      "all_sections": {
+        "id": "f_01JgbmW7AGa29ZBhGd0fE1w6D7",
+        "name": "All Sections",
+        "handle": "all_sections",
+        "help_text": null,
+        "type": "long_text",
+        "text": "<p>The Emmy Awards are the pinnacle of television excellence, where the brightest stars and most talented creators come together to celebrate the year’s outstanding achievements in TV. It’s a night of glitz, glamour, and unforgettable moments that captivate audiences worldwide. Whether you’re a fan of drama, comedy, or reality TV, the Emmys honor the very best, making it a must-watch event for television enthusiasts.</p>\n\n<h2><strong>We Can Get You There</strong></h2>\n\n<p>Jetlevel Aviation can arrange a flight for you into any of the major airports near the Emmy Awards venue, ensuring a luxurious and seamless journey:</p>\n\n<ul><li><p>Los Angeles International Airport, LAX, Los Angeles, California. </p></li><li><p>Bob Hope Airport, BUR, Burbank, California.</p></li><li><p>John Wayne Airport, SNA, Santa Ana, California.</p></li><li><p>Van Nuys Airport, VNY, Van Nuys, California</p></li></ul>\n\n<h2><strong>What To Expect</strong></h2>\n\n<p>The Emmy Awards are known for their prestigious atmosphere, star-studded guest list, and memorable highlights. Here’s what you can look forward to:</p>\n\n<p><strong>Red Carpet Extravaganza:</strong> Witness your favorite TV stars make grand entrances in stunning designer outfits, setting the stage for an elegant evening.</p>\n\n<p><strong>Star-Studded Performances:</strong> Enjoy special performances and comedic monologues from some of the most talented individuals in the industry.</p>\n\n<p><strong>Award Presentations:</strong> Categories like Outstanding Drama Series, Outstanding Comedy Series, and Outstanding Lead Actor/Actress are among the most anticipated, with heartfelt acceptance speeches and emotional moments.</p>\n\n<p><strong>Surprises and Highlights:</strong> The Emmys are known for their unexpected moments, whether it’s a heartfelt tribute, a surprise guest, or an unscripted incident.</p>\n\n<h2><strong>How It Started</strong></h2>\n\n<p>The Emmy Awards were first held in 1949 to honor excellence in the television industry. Named after “immy,” an informal term for the image orthicon camera tube, the Emmys have grown into one of the most prestigious award shows, celebrating the artistry and innovation of television. Over the decades, the Emmys have recognized groundbreaking shows and performances that have shaped the landscape of television, cementing their place as a cornerstone of the entertainment industry.</p>\n\n<h2><strong>Tips For Going</strong></h2>\n\n<ul><li><p><strong>Dress to Impress:</strong> The Emmys are a black-tie event, so wear your best formal attire to fit in with the glamorous crowd.</p></li><li><p><strong>Arrive Early:</strong> Ensure you get there early to experience the red carpet action and secure a good viewing spot.</p></li><li><p><strong>Stay Hydrated and Comfortable:</strong> Award shows can be lengthy, so make sure to drink plenty of water and wear comfortable shoes.</p></li><li><p><strong>Be Ready for Anything:</strong> The Emmys are full of surprises, so expect the unexpected and enjoy the show.</p></li></ul>\n\n<h2><strong>What Else To See In Los Angeles</strong></h2>\n\n<p><strong>Hollywood Walk of Fame:</strong> Stroll along this iconic sidewalk featuring the stars of your favorite celebrities.</p>\n\n<p><strong>Griffith Observatory:</strong> Enjoy stunning views of the city and the Hollywood Sign from this famous landmark.</p>\n\n<p><strong>Rodeo Drive:</strong> Indulge in some luxury shopping in Beverly Hills’ most famous shopping district.</p>\n\n<p>The Emmy Awards are a celebration of the best in television, offering a night of glamour, excitement, and star-studded fun. Chartering a private jet ensures you arrive in style and comfort, ready to enjoy one of the most prestigious events in the entertainment industry. Don’t miss the chance to be part of this extraordinary evening in the heart of Los Angeles.</p>"
+      },
+      "hero_content": {
+        "id": "f_01jGbmz343Zp20f1F8CHcZS97f",
+        "name": "Hero Content",
+        "handle": "hero_content",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Charter a Private Jet to the Emmy Awards",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p>Get Your Private Jet Quote Instantly and Fly in Ultimate Luxury</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "month_selector": {
+        "id": "f_01JGVszeb9bnCvH29rVB7T4G0H",
+        "name": "Month Selector",
+        "handle": "month_selector",
+        "help_text": null,
+        "type": "dropdown",
+        "selected_option": {
+          "label": "september",
+          "value": "september"
+        }
+      }
+    }
+  },
+  {
+    "id": "c_01jGvX8kWrv857DZg8p50N2DBB",
+    "published_at": "2025-01-05T18:59:51+00:00",
+    "slug": "charter-a-private-jet-to-the-f1-abu-dhabi-grand-prix",
+    "name": "F1 Abu Dhabi Grand Prix",
+    "uri": "events/charter-a-private-jet-to-the-f1-abu-dhabi-grand-prix",
+    "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-f1-abu-dhabi-grand-prix",
+    "language": "en",
+    "created_at": "2025-01-05T18:57:28+00:00",
+    "updated_at": "2025-01-05T18:58:53+00:00",
+    "author": {
+      "id": "u_01Ja0HEzc351WG17ED5xp6P1X1",
+      "name": "Faddyk0313",
+      "email": "Fahd@elitedigitalpros.com",
+      "profile_photo_url": "https://assets.contento.io/profile-photos/Z9hqe3shfxs0v12Dbm6QuTV3FNruyKbqpv1SAz3f.png"
+    },
+    "content_type": {
+      "id": "ct_01Jgbmt5QZ2vW5W9Nyky1mdnSx",
+      "name": "Events Single Page",
+      "handle": "events_single_page",
+      "object_type": "page"
+    },
+    "seo": {
+      "title": "Charter a Private Jet to the F1 Abu Dhabi Grand Prix - JetLevel Aviation",
+      "description": null,
+      "robots": null,
+      "canonical_url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-f1-abu-dhabi-grand-prix",
+      "open_graph": {
+        "title": "Charter a Private Jet to the F1 Abu Dhabi Grand Prix - JetLevel Aviation",
+        "description": null,
+        "image_secure_url": null,
+        "image_width": null,
+        "image_height": null,
+        "image_alt": null,
+        "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-f1-abu-dhabi-grand-prix"
+      }
+    },
+    "fields": {
+      "title": {
+        "id": "f_01jGBMT5RKRV85KnY28ZABKyw7",
+        "name": "Title",
+        "handle": "title",
+        "help_text": null,
+        "type": "text",
+        "text": "F1 Abu Dhabi Grand Prix"
+      },
+      "hero_image": {
+        "id": "f_01JGBMyJ7jz3pf2sb9wejApJat",
+        "name": "Hero Image",
+        "handle": "hero_image",
+        "help_text": null,
+        "type": "assets",
+        "assets": [
+          {
+            "sort": 0,
+            "asset": {
+              "id": "a_01jgVxAN3dn11v3fHTh2GzskmY",
+              "url": "https://assets.contento.io/assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/abu-dhabi-grand-prix-start-planetf1.jpg",
+              "name": "Abu Dhabi Grand Prix Start Planetf1",
+              "path": "assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/abu-dhabi-grand-prix-start-planetf1.jpg",
+              "size": "201.88 KB",
+              "width": "1600",
+              "height": "900",
+              "is_image": true,
+              "extension": "jpg",
+              "mime_type": "image/jpeg",
+              "created_at": "2025-01-05T18:58:35+00:00",
+              "updated_at": "2025-01-05T18:58:35+00:00",
+              "description": null
+            }
+          }
+        ]
+      },
+      "all_sections": {
+        "id": "f_01JgbmW7AGa29ZBhGd0fE1w6D7",
+        "name": "All Sections",
+        "handle": "all_sections",
+        "help_text": null,
+        "type": "long_text",
+        "text": "<h2><strong>Charter a Private Jet to the F1 Abu Dhabi Grand Prix</strong></h2>\n\n<p>The F1 Abu Dhabi Grand Prix is a pinnacle event in the world of motorsport. Held at the Yas Marina Circuit, it combines high-speed racing with luxury, attracting fans and celebrities from around the globe.</p>\n\n<h2><strong>We Can Get You There</strong></h2>\n\n<p>If you’d like to witness the thrilling races and enjoy the lavish atmosphere of the F1 Abu Dhabi Grand Prix, Jetlevel Aviation can arrange a flight for you into any airport in the region, including:</p>\n\n<ul><li><p>Abu Dhabi International Airport, OMAA, AUH, Abu Dhabi, UAE (10 miles)</p></li><li><p>Al Bateen Executive Airport, OMAD, AZI, Abu Dhabi, UAE (18 miles) </p></li><li><p>Dubai International Airport, OMDB, DXB, Dubai, UAE (85 miles)</p></li><li><p>Al Maktoum International Airport, OMDW, DWC, Dubai, UAE (62 miles)</p></li><li><p>Sharjah International Airport, OMSJ, SHJ, Sharjah, UAE (90 miles)</p></li><li><p>Ras Al Khaimah International Airport, OMRK, RKT, Ras Al Khaimah, UAE (144 miles)</p></li><li><p>Al Ain International Airport, OMAL, AAN, Al Ain, UAE (100 miles)</p></li><li><p>Fujairah International Airport, OMFJ, FJR, Fujairah, UAE (145 miles)</p></li></ul>\n\n<h2><strong>What To Expect</strong></h2>\n\n<p>The Abu Dhabi Grand Prix is not just a race; it’s an extravagant event featuring world-class entertainment, luxurious experiences, and high-speed action. Here’s what you can expect:</p>\n\n<ul><li><p><strong>Exciting Races:</strong> Witness the thrilling Formula 1 races as the world’s best drivers compete for the championship.</p></li><li><p><strong>Luxury Yachts:</strong> Experience the race from the comfort of a luxury yacht in the Yas Marina.</p></li><li><p><strong>Concerts:</strong> Enjoy live performances by top international artists during the after-race concerts.</p></li><li><p><strong>Exquisite Dining:</strong> Indulge in gourmet cuisine at the circuit’s premium hospitality venues.</p></li><li><p><strong>VIP Parties:</strong> Attend exclusive parties and mingle with celebrities and elite guests.</p></li></ul>\n\n<p>The event typically takes place in late November, providing a perfect escape from the winter chill for many international visitors.</p>\n\n<h2><strong>How It Started</strong></h2>\n\n<p>The Abu Dhabi Grand Prix made its debut in 2009 as the first ever day-to-night race in Formula 1 history. The Yas Marina Circuit, designed by Hermann Tilke, offers a unique racing experience with its stunning waterfront setting and cutting-edge facilities.</p>\n\n<h2><strong>Tips For Going</strong></h2>\n\n<ul><li><p><strong>Book Early:</strong> Tickets and accommodations sell out quickly. Plan and book your trip well in advance.</p></li><li><p><strong>Dress Comfortably:</strong> The weather in Abu Dhabi can be hot. Wear light and breathable clothing.</p></li><li><p><strong>Stay Hydrated:</strong> Carry water and stay hydrated, especially if you’re spending long hours at the circuit.</p></li><li><p><strong>Ear Protection:</strong> The noise from the F1 cars can be very loud. Consider bringing earplugs.</p></li><li><p><strong>Explore Yas Island:</strong> Take time to explore Yas Island’s attractions, such as Ferrari World, Yas Waterworld, and Warner Bros. World Abu Dhabi.</p></li><li><p><strong>Transportation:</strong> Use the free shuttle buses or taxis to get to and from the circuit.</p></li></ul>\n\n<h2><strong>What Else To See In Huntington Beach</strong></h2>\n\n<ul><li><p><strong>Sheikh Zayed Grand Mosque:</strong> One of the largest and most beautiful mosques in the world, featuring stunning architecture and intricate design.</p><ul><li><p><strong>Louvre Abu Dhabi:</strong> A world-class museum showcasing art and artifacts from around the globe.</p></li><li><p><strong>Qasr Al Watan:</strong> The Presidential Palace offers a glimpse into the UAE’s rich heritage and governance.</p></li><li><p><strong>Corniche Beach:</strong> A pristine beach with a picturesque promenade, perfect for relaxing and enjoying the waterfront views.</p></li></ul><p>Desert Safari: Experience the Arabian desert with activities like dune bashing, camel riding, and traditional Bedouin entertainment.</p></li></ul>\n\n<p>The F1 Abu Dhabi Grand Prix is a must-visit for motorsport enthusiasts and those seeking a luxurious and unforgettable experience. Book your private jet with Jetlevel Aviation and get ready for an incredible journey.</p>"
+      },
+      "hero_content": {
+        "id": "f_01jGbmz343Zp20f1F8CHcZS97f",
+        "name": "Hero Content",
+        "handle": "hero_content",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Charter a Private Jet to the F1 Abu Dhabi Grand Prix",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p>Get Your Private Jet Quote Instantly and Fly in Ultimate Luxury.</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "month_selector": {
+        "id": "f_01JGVszeb9bnCvH29rVB7T4G0H",
+        "name": "Month Selector",
+        "handle": "month_selector",
+        "help_text": null,
+        "type": "dropdown",
+        "selected_option": {
+          "label": "december",
+          "value": "december"
+        }
+      }
+    }
+  },
+  {
+    "id": "c_01JGVx4frEs45J79j8hw9R1xfc",
+    "published_at": "2025-01-05T18:57:18+00:00",
+    "slug": "charter-a-private-jet-to-the-f1-brazilian-grand-prix",
+    "name": "F1 Brazilian Grand Prix",
+    "uri": "events/charter-a-private-jet-to-the-f1-brazilian-grand-prix",
+    "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-f1-brazilian-grand-prix",
+    "language": "en",
+    "created_at": "2025-01-05T18:55:13+00:00",
+    "updated_at": "2025-01-05T18:55:13+00:00",
+    "author": {
+      "id": "u_01Ja0HEzc351WG17ED5xp6P1X1",
+      "name": "Faddyk0313",
+      "email": "Fahd@elitedigitalpros.com",
+      "profile_photo_url": "https://assets.contento.io/profile-photos/Z9hqe3shfxs0v12Dbm6QuTV3FNruyKbqpv1SAz3f.png"
+    },
+    "content_type": {
+      "id": "ct_01Jgbmt5QZ2vW5W9Nyky1mdnSx",
+      "name": "Events Single Page",
+      "handle": "events_single_page",
+      "object_type": "page"
+    },
+    "seo": {
+      "title": "Charter a Private Jet to the F1 Brazilian Grand Prix - JetLevel Aviation",
+      "description": null,
+      "robots": null,
+      "canonical_url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-f1-brazilian-grand-prix",
+      "open_graph": {
+        "title": "Charter a Private Jet to the F1 Brazilian Grand Prix - JetLevel Aviation",
+        "description": null,
+        "image_secure_url": null,
+        "image_width": null,
+        "image_height": null,
+        "image_alt": null,
+        "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-f1-brazilian-grand-prix"
+      }
+    },
+    "fields": {
+      "title": {
+        "id": "f_01jGBMT5RKRV85KnY28ZABKyw7",
+        "name": "Title",
+        "handle": "title",
+        "help_text": null,
+        "type": "text",
+        "text": "F1 Brazilian Grand Prix"
+      },
+      "hero_image": {
+        "id": "f_01JGBMyJ7jz3pf2sb9wejApJat",
+        "name": "Hero Image",
+        "handle": "hero_image",
+        "help_text": null,
+        "type": "assets",
+        "assets": [
+          {
+            "sort": 0,
+            "asset": {
+              "id": "a_01JGvX8307gq1s812Q981N2xG7",
+              "url": "https://assets.contento.io/assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/George-Russell-GP-Brazil-11122022.jpg",
+              "name": "George Russell G P Brazil 11122022",
+              "path": "assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/George-Russell-GP-Brazil-11122022.jpg",
+              "size": "162.61 KB",
+              "width": "1920",
+              "height": "1080",
+              "is_image": true,
+              "extension": "jpg",
+              "mime_type": "image/jpeg",
+              "created_at": "2025-01-05T18:57:11+00:00",
+              "updated_at": "2025-01-05T18:57:11+00:00",
+              "description": null
+            }
+          }
+        ]
+      },
+      "all_sections": {
+        "id": "f_01JgbmW7AGa29ZBhGd0fE1w6D7",
+        "name": "All Sections",
+        "handle": "all_sections",
+        "help_text": null,
+        "type": "long_text",
+        "text": "<p>The F1 Brazilian Grand Prix at Interlagos is one of the most thrilling events on the Formula 1 calendar. Fans from around the world gather to witness the high-speed action, passionate crowds, and the unique challenges of the circuit.</p>\n\n<h2><strong>We Can Get You There</strong></h2>\n\n<p>If you’d like to be among the fans cheering on your favorite drivers at the F1 Brazilian Grand Prix, Jetlevel Aviation can arrange a flight for you into any airport near São Paulo, including:</p>\n\n<ul><li><p>Congonhas-São Paulo Airport, SBSP, CGH, São Paulo, Brazil (10 miles)</p></li><li><p>São Paulo-Guarulhos International Airport, SBGR, GRU, São Paulo, Brazil (25 miles)</p></li><li><p>Viracopos-Campinas International Airport, SBKP, VCP, Campinas, Brazil (62 miles)</p></li><li><p>Santos Air Base, SBST, SSZ, Santos, Brazil (58 miles)</p></li></ul>\n\n<h2><strong>What To Expect</strong></h2>\n\n<p>The Brazilian Grand Prix is a spectacle of speed, skill, and strategy. Held at the Interlagos Circuit, the event attracts a diverse crowd of passionate fans. You can expect an electrifying atmosphere with:</p>\n\n<p>Intense Racing: The 2.677-mile track features a mix of challenging turns and long straights, providing plenty of overtaking opportunities.</p>\n\n<p>Passionate Fans: Brazilian fans are known for their enthusiasm and love for the sport, creating a vibrant and energetic atmosphere.</p>\n\n<p>Celebrity Sightings: The event draws celebrities and notable personalities from around the world.</p>\n\n<p>Cultural Experience: The Grand Prix weekend is not just about the race. Enjoy Brazilian cuisine, music, and culture throughout your stay.</p>\n\n<h2><strong>How It Started</strong></h2>\n\n<p>The Brazilian Grand Prix has a rich history dating back to 1972 when it was first held as a non-championship event. The following year, it became a part of the Formula 1 World Championship. The Interlagos Circuit has since hosted numerous memorable races and has been a key venue in the F1 calendar.</p>\n\n<h2><strong>Tips For Going</strong></h2>\n\n<ul><li><p>Arrive Early: To get the best spots and avoid traffic, plan to arrive at the circuit early.</p></li><li><p>Stay Hydrated: São Paulo can be hot and humid. Bring plenty of water.</p></li><li><p>Wear Comfortable Clothes: You’ll be walking a lot, so wear comfortable shoes and clothing.</p></li><li><p>Ear Protection: The roar of the engines can be extremely loud. Consider bringing earplugs.</p></li><li><p>Explore São Paulo: Take some time to explore the city. São Paulo offers a rich cultural experience with its museums, parks, and vibrant nightlife.</p></li><li><p>Transportation: Traffic can be heavy, especially on race days. Consider using public transportation or arrange for a private transfer.</p></li></ul>\n\n<h2><strong>What Else To See In Huntington Beach</strong></h2>\n\n<ul><li><p>Ibirapuera Park: One of São Paulo’s largest parks, offering museums, gardens, and recreational areas.</p></li><li><p>Paulista Avenue: The city’s main thoroughfare, lined with cultural institutions, shops, and restaurants.</p></li><li><p>São Paulo Museum of Art (MASP): Known for its striking architecture and impressive art collection.</p></li><li><p>Municipal Market: A bustling market offering a variety of local foods and products.</p></li><li><p>Liberdade District: The heart of the Japanese community in São Paulo, featuring unique shops and restaurants.</p></li></ul>\n\n<p>Experience the thrill of the F1 Brazilian Grand Prix and immerse yourself in the excitement and culture of São Paulo. Let Jetlevel Aviation take you there in style and comfort.</p>"
+      },
+      "hero_content": {
+        "id": "f_01jGbmz343Zp20f1F8CHcZS97f",
+        "name": "Hero Content",
+        "handle": "hero_content",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Charter a Private Jet to the F1 Brazilian Grand Prix",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p>Get Your Private Jet Quote Instantly and Fly in Ultimate Luxury.</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "month_selector": {
+        "id": "f_01JGVszeb9bnCvH29rVB7T4G0H",
+        "name": "Month Selector",
+        "handle": "month_selector",
+        "help_text": null,
+        "type": "dropdown",
+        "selected_option": {
+          "label": "november",
+          "value": "november"
+        }
+      }
+    }
+  },
+  {
+    "id": "c_01jGS7afz2mjbVzC654r55Kw9s",
+    "published_at": "2025-01-04T17:57:00+00:00",
+    "slug": "charter-a-private-jet-to-the-f1-italian-grand-prix",
+    "name": "F1 Italian Grand Prix",
+    "uri": "events/charter-a-private-jet-to-the-f1-italian-grand-prix",
+    "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-f1-italian-grand-prix",
+    "language": "en",
+    "created_at": "2025-01-04T17:55:32+00:00",
+    "updated_at": "2025-01-05T18:33:32+00:00",
+    "author": {
+      "id": "u_01jbr9f0NG3w5CHq4vnVm6aemK",
+      "name": "Saif Khan",
+      "email": "saifykhan6969@gmail.com",
+      "profile_photo_url": "https://ui-avatars.com/api/?name=S+K&bold=true&size=256&color=008673&background=00D6B5&font-size=0.4&format=svg"
+    },
+    "content_type": {
+      "id": "ct_01Jgbmt5QZ2vW5W9Nyky1mdnSx",
+      "name": "Events Single Page",
+      "handle": "events_single_page",
+      "object_type": "page"
+    },
+    "seo": {
+      "title": "Charter a Private Jet to the F1 Italian Grand Prix - JetLevel Private Jet Charter",
+      "description": null,
+      "robots": null,
+      "canonical_url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-f1-italian-grand-prix",
+      "open_graph": {
+        "title": "Charter a Private Jet to the F1 Italian Grand Prix - JetLevel Private Jet Charter",
+        "description": null,
+        "image_secure_url": null,
+        "image_width": null,
+        "image_height": null,
+        "image_alt": null,
+        "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-f1-italian-grand-prix"
+      }
+    },
+    "fields": {
+      "title": {
+        "id": "f_01jGBMT5RKRV85KnY28ZABKyw7",
+        "name": "Title",
+        "handle": "title",
+        "help_text": null,
+        "type": "text",
+        "text": "F1 Italian Grand Prix"
+      },
+      "hero_image": {
+        "id": "f_01JGBMyJ7jz3pf2sb9wejApJat",
+        "name": "Hero Image",
+        "handle": "hero_image",
+        "help_text": null,
+        "type": "assets",
+        "assets": [
+          {
+            "sort": 0,
+            "asset": {
+              "id": "a_01jGs7c1x2v8vFFdX5k5Knh16G",
+              "url": "https://assets.contento.io/assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/abu-dhabi-grand-prix-start-planetf1-(1).jpg",
+              "name": "Abu Dhabi Grand Prix Start Planetf1 (1)",
+              "path": "assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/abu-dhabi-grand-prix-start-planetf1-(1).jpg",
+              "size": "201.88 KB",
+              "width": "1600",
+              "height": "900",
+              "is_image": true,
+              "extension": "jpg",
+              "mime_type": "image/jpeg",
+              "created_at": "2025-01-04T17:56:23+00:00",
+              "updated_at": "2025-01-04T17:56:23+00:00",
+              "description": null
+            }
+          }
+        ]
+      },
+      "all_sections": {
+        "id": "f_01JgbmW7AGa29ZBhGd0fE1w6D7",
+        "name": "All Sections",
+        "handle": "all_sections",
+        "help_text": null,
+        "type": "long_text",
+        "text": "<p>Experience the thrill and prestige of the F1 Italian Grand Prix at the iconic Monza Circuit. Join the roaring crowds and witness the speed and skill of the world’s top drivers in a race that embodies passion and excellence.</p>\n\n<h2><strong>We Can Get You There</strong></h2>\n\n<p>Jetlevel Aviation can arrange a private flight to any airport near Monza, ensuring you arrive in style and comfort. Choose from the following airports:</p>\n\n<ul><li><p>Linate Airport, LIML, LIN, Milan, Italy (13 miles) </p></li><li><p>Malpensa Airport, LIMC, MXP, Milan, Italy (30 miles)</p></li><li><p>Orio al Serio Airport, LIME, BGY, Bergamo, Italy (31 miles)</p></li><li><p>Parma Airport, LIMP, PMF, Parma, Italy (76 miles)</p></li><li><p>Verona Villafranca Airport, LIPX, VRN, Verona, Italy (94 miles)</p></li><li><p>Genoa Cristoforo Colombo Airport, LIMJ, GOA, Genoa, Italy (100 miles)</p></li><li><p>Bologna Guglielmo Marconi Airport, LIPE, BLQ, Bologna, Italy (136 miles)</p></li></ul>\n\n<h2><strong>What To Expect</strong></h2>\n\n<p>The F1 Italian Grand Prix at Monza is a must-see for racing enthusiasts. The atmosphere is electric, with fans from all over the world coming together to celebrate speed and skill. The Monza Circuit, known as the “Temple of Speed,” is famous for its long straights and challenging corners, making for a thrilling race. The event spans a full weekend, with practice sessions, qualifying rounds, and the main race. Between races, enjoy the vibrant fan zone, featuring merchandise stalls, food and drink vendors, and entertainment activities. The Italian Grand Prix isn’t just about the race; it’s an entire experience. From the passionate Tifosi cheering for Ferrari to the luxury hospitality suites, there’s something for everyone.</p>\n\n<h2><strong>How It Started</strong></h2>\n\n<p>The Italian Grand Prix has been held at Monza since 1922, making it one of the oldest races on the F1 calendar. The circuit is known as the “Temple of Speed” due to its long straights and fast corners. Over the decades, Monza has witnessed countless historic moments and legendary battles, solidifying its status as a beloved venue in motorsport.</p>\n\n<h2><strong>Tips For Going</strong></h2>\n\n<ul><li><p><strong>Plan Your Travel</strong>: Book your flights and accommodation well in advance. The event attracts a huge number of visitors, and availability can be limited.</p></li><li><p><strong>Dress Comfortably</strong>: The weather can be hot in early September. Wear comfortable clothing and bring a hat and sunscreen.</p></li><li><p><strong>Stay Hydrated</strong>: With all the excitement, it’s easy to forget to drink water. Keep a bottle with you.</p></li><li><p><strong>Explore Milan</strong>: Take some time to visit Milan, a city known for its fashion, art, and cuisine. It’s just a short drive from Monza.</p></li><li><p><strong>Arrive Early</strong>: To get the best view and avoid the crowds, arrive at the circuit early.</p></li><li><p><strong>Ear Protection</strong>: The noise of the F1 cars can be extremely loud. Bring earplugs or noise-cancelling headphones, especially for children.</p></li></ul>\n\n<h2><strong>What Else To See In Milan</strong></h2>\n\n<p><strong>The Last Supper by Leonardo da Vinci</strong>: Visit the Santa Maria delle Grazie to see Leonardo’s masterpiece.</p>\n\n<p><strong>Duomo di Milano</strong>: This iconic cathedral is a must-visit with its stunning architecture and panoramic views from the rooftop.</p>\n\n<p><strong>Galleria Vittorio Emanuele II</strong>: One of the world’s oldest shopping malls, it offers luxury shopping and exquisite dining.</p>\n\n<p><strong>Sforza Castle</strong>: A historical fortress with museums and art collections, offering a glimpse into Milan’s rich history.</p>\n\n<p><strong>Teatro alla Scala</strong>: Experience an opera or ballet performance at one of the most famous opera houses in the world.</p>\n\n<p>The F1 Italian Grand Prix at Monza is an event that combines speed, history, and Italian passion. Chartering a private jet ensures you travel in luxury and comfort, making your trip to this iconic race unforgettable. Don’t miss the chance to be part of the action and immerse yourself in the excitement of Formula 1 racing.</p>"
+      },
+      "hero_content": {
+        "id": "f_01jGbmz343Zp20f1F8CHcZS97f",
+        "name": "Hero Content",
+        "handle": "hero_content",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Charter a Private Jet to the F1 Italian Grand Prix",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p>Get Your Private Jet Quote Instantly and Fly in Ultimate Luxury.</p>",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "month_selector": {
+        "id": "f_01JGVszeb9bnCvH29rVB7T4G0H",
+        "name": "Month Selector",
+        "handle": "month_selector",
+        "help_text": null,
+        "type": "dropdown",
+        "selected_option": {
+          "label": "august",
+          "value": "august"
+        }
+      }
+    }
+  },
+  {
+    "id": "c_01JgS7gqCTc63P68pnXtQGJB2a",
+    "published_at": "2025-01-04T18:00:00+00:00",
+    "slug": "charter-a-private-jet-to-the-f1-singapore-grand-prix",
+    "name": "F1 Singapore Grand Prix",
+    "uri": "events/charter-a-private-jet-to-the-f1-singapore-grand-prix",
+    "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-f1-singapore-grand-prix",
+    "language": "en",
+    "created_at": "2025-01-04T17:58:56+00:00",
+    "updated_at": "2025-01-05T17:49:35+00:00",
+    "author": {
+      "id": "u_01jbr9f0NG3w5CHq4vnVm6aemK",
+      "name": "Saif Khan",
+      "email": "saifykhan6969@gmail.com",
+      "profile_photo_url": "https://ui-avatars.com/api/?name=S+K&bold=true&size=256&color=008673&background=00D6B5&font-size=0.4&format=svg"
+    },
+    "content_type": {
+      "id": "ct_01Jgbmt5QZ2vW5W9Nyky1mdnSx",
+      "name": "Events Single Page",
+      "handle": "events_single_page",
+      "object_type": "page"
+    },
+    "seo": {
+      "title": "Charter a Private Jet to the F1 Singapore Grand Prix - JetLevel Private Jet Charter",
+      "description": null,
+      "robots": null,
+      "canonical_url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-f1-singapore-grand-prix",
+      "open_graph": {
+        "title": "Charter a Private Jet to the F1 Singapore Grand Prix - JetLevel Private Jet Charter",
+        "description": null,
+        "image_secure_url": null,
+        "image_width": null,
+        "image_height": null,
+        "image_alt": null,
+        "url": "https://jetlevel-web-nextjs-beta.vercel.app/events/charter-a-private-jet-to-the-f1-singapore-grand-prix"
+      }
+    },
+    "fields": {
+      "title": {
+        "id": "f_01jGBMT5RKRV85KnY28ZABKyw7",
+        "name": "Title",
+        "handle": "title",
+        "help_text": "",
+        "type": "text",
+        "text": "F1 Singapore Grand Prix"
+      },
+      "hero_image": {
+        "id": "f_01JGBMyJ7jz3pf2sb9wejApJat",
+        "name": "Hero Image",
+        "handle": "hero_image",
+        "help_text": null,
+        "type": "assets",
+        "assets": [
+          {
+            "sort": 0,
+            "asset": {
+              "id": "a_01jGs7hvc8h12j0PGPcgP05HA4",
+              "url": "https://assets.contento.io/assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/3kimiraikkonenhalotestmarch2016-scaled.jpg",
+              "name": "3Kimiraikkonenhalotestmarch2016 Scaled",
+              "path": "assets/s_01JA0hQj1BcayHdvz8pvEM0GH0/3kimiraikkonenhalotestmarch2016-scaled.jpg",
+              "size": "507.41 KB",
+              "width": "2560",
+              "height": "1440",
+              "is_image": true,
+              "extension": "jpg",
+              "mime_type": "image/jpeg",
+              "created_at": "2025-01-04T17:59:33+00:00",
+              "updated_at": "2025-01-04T17:59:33+00:00",
+              "description": null
+            }
+          }
+        ]
+      },
+      "all_sections": {
+        "id": "f_01JgbmW7AGa29ZBhGd0fE1w6D7",
+        "name": "All Sections",
+        "handle": "all_sections",
+        "help_text": null,
+        "type": "long_text",
+        "text": "<p>The F1 Singapore Grand Prix is a thrilling spectacle, combining the excitement of Formula 1 racing with the vibrant nightlife of Singapore. Held on the Marina Bay Street Circuit, it’s a unique night race that attracts fans from all over the world. The dazzling city lights and energetic atmosphere make it a must-see event for motorsport enthusiasts and party-goers alike.</p>\n\n<h2><strong>We Can Get You There</strong></h2>\n\n<p>If you’d like to witness the high-speed action and glamour of the F1 Singapore Grand Prix, Jetlevel Aviation can arrange a flight for you into any nearby airport, including:</p>\n\n<ul><li><p>Singapore Changi Airport (SIN): Main international gateway, just 10 miles from the city center.</p></li><li><p>Seletar Airport (XSP): A smaller airport, about 13 miles from the city center.</p></li><li><p>Senai International Airport (JHB): Located in Johor Bahru, Malaysia, about 40 miles from Singapore.</p></li></ul>\n\n<h2><strong>What To Expect</strong></h2>\n\n<p>The F1 Singapore Grand Prix is not just a race; it’s a festival. With concerts, parties, and various entertainment options, there’s something for everyone.</p>\n\n<ul><li><p><strong>Race Details</strong>: The Marina Bay Street Circuit is 3.15 miles long and features 23 corners. The race takes place at night under floodlights, providing a spectacular backdrop against the city skyline.</p></li><li><p><strong>Concerts and Entertainment</strong>: Top international artists perform throughout the weekend. Previous acts have included the likes of Calvin Harris, Ariana Grande, and Red Hot Chili Peppers.</p></li></ul>\n\n<p><strong>Glamour and Parties</strong>: Exclusive parties are held at high-end venues around the city, making it a prime spot for celebrity spotting and networking.</p>\n\n<h2><strong>How It Started</strong></h2>\n\n<p>The Singapore Grand Prix debuted in 2008 as the first-ever night race in Formula 1 history. It quickly became one of the most anticipated events on the F1 calendar, known for its challenging circuit and electric atmosphere. The combination of high-speed racing and the stunning cityscape of Singapore creates a truly unforgettable experience for all who attend.</p>\n\n<h2><strong>Tips For Going</strong></h2>\n\n<p><strong>Book Accommodations Early:</strong> Hotels fill up fast during race weekend. Book well in advance to secure your preferred spot.</p>\n\n<p><strong>Transport</strong>: Use public transport to get to the circuit. Singapore’s MRT system is efficient and convenient.</p>\n\n<p><strong>Dress Comfortably</strong>: Singapore is hot and humid. Light, breathable clothing is recommended.</p>\n\n<p><strong>Stay Hydrated</strong>: It’s easy to get dehydrated in the heat. Carry a water bottle with you.</p>\n\n<p><strong>Explore the City</strong>: Take some time to visit iconic attractions like Marina Bay Sands, Gardens by the Bay, and Sentosa Island.</p>\n\n<h2><strong>What Else To See In Singapore</strong></h2>\n\n<p><strong>Marina Bay Sands SkyPark</strong>: An iconic rooftop infinity pool with breathtaking views of the city.</p>\n\n<p><strong>Gardens by the Bay</strong>: A futuristic park featuring the Supertree Grove and Cloud Forest Dome.</p>\n\n<p><strong>Sentosa Island</strong>: A resort island with beaches, theme parks, and the S.E.A. Aquarium.</p>\n\n<p><strong>Chinatown</strong>: Explore vibrant markets, historic temples, and delicious street food.</p>\n\n<p>By planning ahead and chartering a private jet with Jetlevel Aviation, you can immerse yourself in the electrifying atmosphere of the F1 Singapore Grand Prix. Experience the thrill of night racing, the vibrant entertainment, and the rich cultural tapestry of Singapore. Book early, stay hydrated, and enjoy the world-class events and attractions that make this Grand Prix an unforgettable adventure.</p>"
+      },
+      "hero_content": {
+        "id": "f_01jGbmz343Zp20f1F8CHcZS97f",
+        "name": "Hero Content",
+        "handle": "hero_content",
+        "help_text": null,
+        "type": "blocks",
+        "blocks": [
+          {
+            "name": "",
+            "sort": 0,
+            "fields": {
+              "title": {
+                "id": "f_01jbqrk8wG0N12Yd6c1t8t9Da5",
+                "name": "Heading",
+                "text": "Charter a Private Jet to the F1 Singapore Grand Prix",
+                "type": "text",
+                "handle": "title",
+                "help_text": "Heading (h2)"
+              },
+              "paragraph": {
+                "id": "f_01jbQrN2830RDW6Px709G00xM8",
+                "name": "Paragraph",
+                "text": "<p>Get Your Private Jet Quote Instantly and Fly in Ultimate Luxury.</p>\n\n",
+                "type": "long_text",
+                "handle": "paragraph",
+                "help_text": "Paragraph (Long Text)"
+              }
+            },
+            "content_type": {
+              "id": "ct_01JbQRk8W5CgKhxH71P3FvZKMQ",
+              "name": "Content Section",
+              "handle": "content_section",
+              "object_type": "block"
+            }
+          }
+        ]
+      },
+      "month_selector": {
+        "id": "f_01JGVszeb9bnCvH29rVB7T4G0H",
+        "name": "Month Selector",
+        "handle": "month_selector",
+        "help_text": null,
+        "type": "dropdown",
+        "selected_option": {
+          "label": "January",
+          "value": "january"
+        }
+      }
+    }
   }
 ]

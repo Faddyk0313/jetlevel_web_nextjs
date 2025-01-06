@@ -138,7 +138,7 @@ const InstantQuote = () => {
                       <p className=''>Tap Share, then select “Add to Home Screen.” Name it and confirm to view it on your home screen.</p>
                     </div>
                     <div className='w-[68%] max-[700px]:w-full max-[700px]:mt-8'>
-                      <Image unoptimized src={'https://jetlevel.com/wp-content/uploads/2023/09/iphone-scaled.webp'} alt='image' width={100} height={100} className='w-full h-full object-cover' />
+                      <Image unoptimized src={'/images2/iphone-scaled.webp'} alt='image' width={100} height={100} className='w-full h-full object-cover' />
                     </div>
                   </div>
                 </div>
@@ -150,7 +150,7 @@ const InstantQuote = () => {
                     <p className=''>Tap on the three dots in the upper right corner, then select “Add to Home Screen.” Name it, confirm, and it will appear on your home screen.</p>
                   </div>
                   <div className='w-[68%] max-[700px]:w-full max-[700px]:mt-8'>
-                    <Image unoptimized src={'https://jetlevel.com/wp-content/uploads/2023/09/android-scaled.webp'} alt='image' width={100} height={100} className='w-full h-full object-cover' />
+                    <Image unoptimized src={'/images2/android-scaled.webp'} alt='image' width={100} height={100} className='w-full h-full object-cover' />
                   </div>
                 </div>
                 <p className='mt-6 '>By integrating our Private Jet Calculator into your daily life, you can effortlessly obtain accurate trip estimates wherever you are, whenever you need them.</p>

@@ -90,7 +90,7 @@ const UsaAirportPage = () => {
   ]
   return (
     <div>
-      <Hero title="JetLevel Airport Directory Guide" description="JetLevel offers flights to and from almost anywhere in the world. Learn more about some of the airports we fly into with our airport directory guide below." image="https://jetlevel.com/wp-content/uploads/2022/11/Airport-Runway-Aerial-1.jpg" hasCalculator={false} />
+      <Hero title="JetLevel Airport Directory Guide" description="JetLevel offers flights to and from almost anywhere in the world. Learn more about some of the airports we fly into with our airport directory guide below." image="/images2/Airport-Runway-Aerial-1.jpg" hasCalculator={false} />
       <BrandNames />
       <HalfSection showBottomContent={true}>
       <div className='flex flex-col justify-center gap-y-[20px] mt-8'>

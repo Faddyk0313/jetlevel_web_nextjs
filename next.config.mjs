@@ -111,6 +111,10 @@ const nextConfig = {
         destination: '/industory-charter/:location',
       },
       {
+        source: '/pages-sitemap.xml',
+        destination: '/pages-sitemap/sitemap.xml',
+      },
+      {
         source: '/airports-sitemap.xml',
         destination: '/airports-sitemap/sitemap.xml',
       },
@@ -162,16 +166,6 @@ const nextConfig = {
   },
   images: {
     remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'jetlevel.com',
-        pathname: '**',
-      },
-      {
-        protocol: 'https',
-        hostname: 'fly.jetlevel.com',
-        pathname: '**',
-      },
       {
         protocol: 'https',
         hostname: 'assets.contento.io', // Added this hostname
