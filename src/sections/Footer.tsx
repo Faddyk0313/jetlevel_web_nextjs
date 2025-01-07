@@ -3,6 +3,7 @@ import Image from "next/image"; // Next.js optimized image component
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
 import Link from "next/link";
+import SubscribeEmail from "./SubscribeEmail";
 
 type Section = {
     title: string;
@@ -193,24 +194,9 @@ const Footer = () => {
                             <h4 className="text-lg flex-1 min-w-36 lg:max-w-36 text-center">
                                 Get the Latest Updates
                             </h4>
-                            <form
-                                action=""
-                                method="post"
-                                className="flex max-w-72 h-14 p-2 border-[#858585] border rounded-2xl"
-                            >
-                                <input
-                                    type="email"
-                                    placeholder="Enter your email"
-                                    className="w-full text-sm placeholder-[#858585] bg-black outline-none"
-                                    required
-                                />
-                                <button
-                                    type="submit"
-                                    className="cursor-pointer text-xl pr-4 text-[#858585] hover:text-white transition-all duration-150"
-                                >
-                                    →
-                                </button>
-                            </form>
+                          
+                                <SubscribeEmail/>
+                            
                         </div>
                         <div className="flex flex-col lg:flex-row lg:items-center lg:h-[54px] gap-4 pb-0 lg:pb-0 ">
                             <h4 className="text-lg min-w-24 lg:max-w-24 text-center">
