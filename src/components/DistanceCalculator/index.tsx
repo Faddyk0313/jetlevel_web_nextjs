@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from "react";
 import CircularProgress from "@mui/material/CircularProgress";
 import Input from "../LeadForm/input";
-import {convertTimeFormat} from "../LeadForm/helper"
+import {convertTimeFormat, getNext15Minutes} from "../LeadForm/helper"
 const DistanceCalculator = () => {
   const [loading, setLoading] = useState(false);
   // const [error, setError] = useState(null);
@@ -10,20 +10,16 @@ const DistanceCalculator = () => {
   const [form, setForm] = useState({
     fromLocation: "",
     toLocation: "",
+    startDate: getNext15Minutes(),
+    endDate: getNext15Minutes(),
+    counter: 2,
+    tourType: "oneWay",
+    isErrorFrom:false,
+    isErrorTo:false,
     fromMunicipality: "",
     toMunicipality: "",
     fromAirPort: "",
     toAirPort: "",
-    isErrorFrom: false,
-    isErrorTo: false,
-    startDate: new Date(),
-    endDate: new Date(),
-    counter: 2,
-    tourType: "oneWay",
-    calenderCounter: 1,
-    currency: "USD",
-    showInquiryForm: -1,
-    aircraft: 0,
   });
 
   const [searchResults, setSearchResults] = useState({
@@ -43,42 +39,40 @@ const DistanceCalculator = () => {
     }
   }, [form.fromLocation, form.toLocation]);
 
-  const handleInputChange = async (event) => {
-    const { name, value } = event.target;
+  const handleInputChange = async (event:any) => {
+    const { name, value } = event.target; 
     setForm({
       ...form,
       [name]: value,
     });
 
-    if (event.target.name === "fromLocation") {
+    if (name === "fromLocation") {
       if (value === "") {
         setSearchResults((prevSearc) => ({
           ...prevSearc,
           fromLocationArray: [],
         }));
-        setForm((prevForm) => ({ ...prevForm, isErrorFrom: true }));
+        setForm((prevForm:any) => ({ ...prevForm, isErrorFrom: true }));
       } else {
-        setForm((prevForm) => ({ ...prevForm, isErrorFrom: false }));
+        setForm((prevForm:any) => ({ ...prevForm, isErrorFrom: false }));
       }
       if (value.length >= 3) {
-        // const options = {
-        //     method: 'GET',
-        //     url: '${process.env.REACT_APP_BACKEND_URL}/search',
-        //     params: {query: value}
-        //   };
+      
         const options = {
           method: "GET",
           params: { query: value },
          
         };
         try {
-          let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/search?`+ new URLSearchParams({ query: value }),options);
-          response = await response.json()
-          // console.log(response);
+          const response = await fetch(
+            `${process.env.NEXT_PUBLIC_BACKEND_URL}/search?` +
+            new URLSearchParams({ query: value }),
+            options
+          );
+          const data = await response.json();
           setSearchResults((prevSearc) => ({
             ...prevSearc,
-            fromLocationArray:
-              response && response.search,
+            fromLocationArray: data && data.search,
           }));
         } catch (error) {
           console.error(error);
@@ -91,30 +85,37 @@ const DistanceCalculator = () => {
       }
     }
 
-    if (event.target.name === "toLocation") {
+    if (name === "toLocation") {
       if (value === "") {
         setSearchResults((prevSearc) => ({
           ...prevSearc,
           ToLocationArray: [],
         }));
-        setForm((prevForm) => ({ ...prevForm, isErrorTo: true }));
+        setForm((prevForm:any) => ({ ...prevForm, isErrorTo: true }));
       } else {
-        setForm((prevForm) => ({ ...prevForm, isErrorTo: false }));
+        setForm((prevForm:any) => ({ ...prevForm, isErrorTo: false }));
       }
       if (value.length >= 3) {
         const options = {
           method: "GET",
           params: { query: value },
-         
         };
 
         try {
-          let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/search?`+ new URLSearchParams({ query: value }),options);
-          response = await response.json()
-          // console.log(response);
-          setSearchResults((prevSearc) => ({
+          const response = await fetch(
+            `${process.env.NEXT_PUBLIC_BACKEND_URL}/search?` +
+            new URLSearchParams({ query: value }),
+            options
+          );
+    if (!response.ok) {
+     console.error(`Fetch error: ${response.statusText}`);
+     return
+    }
+    const data = await response.json();
+
+          setSearchResults((prevSearc:any) => ({
             ...prevSearc,
-            toLocationArray: response && response.search,
+            toLocationArray: data && data.search,
           }));
         } catch (error) {
           console.error(error);
@@ -127,6 +128,7 @@ const DistanceCalculator = () => {
       }
     }
   };
+
 
   const handleSubmit = async () => {
     try {
@@ -154,10 +156,10 @@ const DistanceCalculator = () => {
         
       };
 
-      let response = await fetch(`${process.env.REACT_APP_BACKEND_URL}/calculateDistance/${form.fromLocation}/${form.toLocation}`,options);
-      response = await response.json();
+      let response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/calculateDistance/${form.fromLocation}/${form.toLocation}`,options);
+      const data = await response.json();
       // console.log(response);
-      setData(response.data);
+      setData(data.data);
       setLoading(false);
     } catch (error) {
       // setError(error);
@@ -165,7 +167,7 @@ const DistanceCalculator = () => {
     }
   };
 
-  const handleSaveAirport = (name, municipality, nameAirport, type) => {
+  const handleSaveAirport = (name:string, municipality:string, nameAirport:string, type:string) => {
     if (type === "fromLocation") {
       setForm((prevForm) => ({
         ...prevForm,
@@ -193,12 +195,13 @@ const DistanceCalculator = () => {
 
 
 
-
   return (
     <div className="main-container !w-fit mx-auto">
       <div className="tour-input-container">
         <div className="tour-select-fields">
+          
         <Input 
+
        form={form}
       //  sendHeightToParent={sendHeightToParent}
        handleSaveAirport={handleSaveAirport}
@@ -253,7 +256,7 @@ const DistanceCalculator = () => {
             <b>
               • Estimated Flight Time:{" "}
               <span style={{ color: "#0071BA" }}>
-                {convertTimeFormat(data / 676)} 
+                {convertTimeFormat((data / 676).toString())} 
               </span>
             </b>
             <div></div>

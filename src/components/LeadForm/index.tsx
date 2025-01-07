@@ -19,7 +19,11 @@ export default function Index({ widget }:LeadFormProps) {
       counter: 2,
       tourType: "oneWay",
       isErrorFrom:false,
-      isErrorTo:false
+      isErrorTo:false,
+      fromMunicipality: "",
+      toMunicipality: "",
+      fromAirPort: "",
+      toAirPort: "",
     });
 
     const handleTourChange = (type:"roundTrip"|"oneWay") => {
