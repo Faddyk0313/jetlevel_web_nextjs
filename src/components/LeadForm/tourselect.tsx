@@ -10,13 +10,11 @@ import Input from "./input";
 import "@/styles/leadForm.css"
 import {AirportResponse} from "./types"
 import {filterPassedTime} from "./helper"
-import { useRouter } from 'next/navigation';
 import ReactDatePicker from "react-datepicker";
 import Button from '../Button';
 import AirCraftList from './AirCraftList';
 export default function TourSelect (props:any) {
   const {formInfo,setFormInfo, widget } = props
-  const router = useRouter();
 
   const [openModal,setOpenModal] = useState(false);
 
@@ -408,7 +406,7 @@ export default function TourSelect (props:any) {
           className='h-[600px]' 
         >
           <div className='h-full overflow-auto overflow-design rounded-2xl'>
-            <AirCraftList openModal={openModal} setOpenModal={setOpenModal} formInfo={formInfo} data={data} />
+            <AirCraftList formInfo={formInfo} setForm={setFormInfo} data={data} />
           </div>
         </Modal>
       </div>

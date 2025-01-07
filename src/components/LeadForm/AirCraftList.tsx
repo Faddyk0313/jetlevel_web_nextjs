@@ -11,6 +11,7 @@ import { PhoneNumberUtil } from 'google-libphonenumber';
 const phoneUtil = PhoneNumberUtil.getInstance();
 
 import {convertTimeFormat,getTime,getCurrentTime,getPrice,getUTCTime,getNext15Minutes} from "./helper"
+import { useRouter } from 'next/navigation';
 
 // global.d.ts
 export {};
@@ -33,7 +34,10 @@ const aboutInfo = [
   "Other",
 ];
 
-export default function AirCraftList({setOpenModal,openModal,formInfo,data}:any) {
+export default function AirCraftList({formInfo,setForm,data}:any) {
+  const router = useRouter();
+  
+
 const form = formInfo;
   const [loading, setLoading] = useState(false);
   const [extraInfo, setExtraInfo] = useState({
@@ -273,8 +277,8 @@ const form = formInfo;
           'event_category': 'Form',
           'event_label': 'Quote Form',
         });
+        router.push('/thank-you'); // Navigates to the About page
 
-        window.location.href = "/thank-you/"
       }
 
     } catch (error) {
