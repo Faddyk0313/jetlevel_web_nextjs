@@ -15,7 +15,7 @@ const MeetOwner = () => {
                     /> 
                 </div>
 */}
-                <div className="text-white md:max-w-[60%] md:pl-5 pt-5 md:pt-[5vh]">
+                <div className="text-white md:max-w-[100%] md:pl-5 pt-5 md:pt-[5vh]">
                     <h4 className='mb-3'>MEET THE OWNER</h4>
                     <h2 className='mb-3 text-white'>Hi, I'm Ricky</h2>
                     <p className='mb-[10px] details leading-relaxed text-[#bbbbbb]'>
