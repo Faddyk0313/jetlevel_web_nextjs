@@ -237,14 +237,14 @@ export default function TourSelect (props:any) {
   const handleSearch = async () => {
     try {
       if (formInfo.fromLocation === "") {
-        setFormInfo((prevForm) => ({ ...prevForm, isErrorFrom: true }));
+        setFormInfo((prevForm:any) => ({ ...prevForm, isErrorFrom: true }));
       } else {
-        setFormInfo((prevForm) => ({ ...prevForm, isErrorFrom: false }));
+        setFormInfo((prevForm:any) => ({ ...prevForm, isErrorFrom: false }));
       }
       if (formInfo.toLocation === "") {
-        setFormInfo((prevForm) => ({ ...prevForm, isErrorTo: true }));
+        setFormInfo((prevForm:any) => ({ ...prevForm, isErrorTo: true }));
       } else {
-        setFormInfo((prevForm) => ({ ...prevForm, isErrorTo: false }));
+        setFormInfo((prevForm:any) => ({ ...prevForm, isErrorTo: false }));
       }
       if (
         formInfo.toLocation === "" ||

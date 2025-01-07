@@ -451,7 +451,7 @@ const form = formInfo;
   };
 
   const handleInquiryForm = (index:number, aircraft:string) => {
-    setForm((prevfrom) => ({
+    setForm((prevfrom:any) => ({
       ...prevfrom,
       aircraft: aircraft,
       showInquiryForm: prevfrom.showInquiryForm === index ? -1 : index,
