@@ -112,7 +112,7 @@ const nextConfig = {
       },
       {
         source: '/pages-sitemap.xml',
-        destination: '/pages-sitemap/sitemap.xml',
+        destination: '/page-sitemap/sitemap.xml',
       },
       {
         source: '/airports-sitemap.xml',
