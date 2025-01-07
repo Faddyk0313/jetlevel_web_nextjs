@@ -9,8 +9,7 @@ import CloseIcon from "@mui/icons-material/Close";
 import { PhoneInput } from 'react-international-phone';
 import { PhoneNumberUtil } from 'google-libphonenumber';
 const phoneUtil = PhoneNumberUtil.getInstance();
-import { useSearchParams } from 'next/navigation';
-import LeadForm from '@/components/LeadForm'
+
 import {convertTimeFormat,getTime,getCurrentTime,getPrice,getUTCTime,getNext15Minutes} from "./helper"
 
 // global.d.ts
@@ -34,26 +33,9 @@ const aboutInfo = [
   "Other",
 ];
 
-export default function AirCraftList({setOpenModal,openModal}:any) {
-  const [form, setForm] = useState({
-    fromLocation: "",
-    toLocation: "",
-    fromMunicipality: "",
-    toMunicipality: "",
-    fromAirPort: "",
-    toAirPort: "",
-    isErrorFrom: false,
-    isErrorTo: false,
-    startDate: getNext15Minutes(),
-    endDate: getNext15Minutes(),
-    counter: 2,
-    tourType: "oneWay",
-    currency: "USD",
-    showInquiryForm: -1,
-    aircraft: "",
-  });
+export default function AirCraftList({setOpenModal,openModal,formInfo,data}:any) {
+const form = formInfo;
   const [loading, setLoading] = useState(false);
-  const [data, setData] = useState([]);
   const [extraInfo, setExtraInfo] = useState({
     show: true,
     craftType: 0,
@@ -79,49 +61,9 @@ export default function AirCraftList({setOpenModal,openModal}:any) {
     quiryLoader: false,
   });
 
-  const searchParams = useSearchParams();
 
-  useEffect(() => {
-    const from = searchParams.get('from');
-    const to = searchParams.get('to');
-    const tourType = searchParams.get('tourType');
-    const startDate = searchParams.get('startDate') as Date|null;
-    
-    const counter = searchParams.get('counter') as number | null;
 
-    if (from && to && tourType && startDate  && counter) {
-      setOpenModal(true);
-      handleSubmit(from, to, tourType,counter,startDate);
-    }else{
-      setOpenModal(false);
-    }
-  }, [searchParams]);
 
-  const handleSubmit = async (from:string, to:string, tourType:string,counter:number,startDate:Date) => {
-    try {
-      setForm((prevForm:any) => ({ ...prevForm, tourType,fromLocation:from,toLocation:to,startDate,counter }));
-      if(tourType == "roundTrip" ){
-        const endDate = searchParams.get('endDate') 
-        setForm((prevForm:any) => ({ ...prevForm, endDate}))
-      }
-
-      setLoading(true);
-
-      const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/getAllJetInfo/${from}/${to}/${tourType}`
-      );
-      if(!response.ok){
-        setLoading(false);
-        return
-      }
-      const data = await response.json();
-      setData(data.data);
-      setLoading(false);
-    } catch (error) {
-      // setError(error);
-      setLoading(false);
-    }
-  };
 
   const handleEmailValidation = (e:React.FocusEvent<HTMLInputElement>) => {
     const email = e.target.value;
@@ -539,7 +481,7 @@ export default function AirCraftList({setOpenModal,openModal}:any) {
     }
   };
   
-  const startDateString = searchParams.get('startDate');
+  const startDateString = formInfo.startDate;
   let formattedDate;
   if (startDateString) {
     const timestamp = parseInt(startDateString, 10);
@@ -565,7 +507,7 @@ export default function AirCraftList({setOpenModal,openModal}:any) {
           <div>
             <h2 className='text-[33px] text-center'>Your Estimates Are Below</h2>
             <p className='text-center'><span>Please Note:</span> These are not formal quotes. {formattedDate}</p>
-            <p className='text-center'>({searchParams.get('from')}) to ({searchParams.get('to')}) {searchParams.get('counter')} passengers</p>
+            <p className='text-center'>({formInfo.fromLocation}) to ({formInfo.toLocation}) {formInfo.counter} passengers</p>
           </div>
           {data &&
             data.map((item:any, index:any) => (

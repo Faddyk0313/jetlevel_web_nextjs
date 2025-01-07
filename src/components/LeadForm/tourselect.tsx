@@ -26,6 +26,7 @@ export default function TourSelect (props:any) {
   });
   const [showTime, setShowTime] = useState(false); // State to toggle between date and time picker
   const [isMobile, setIsMobile] = useState(false); // State to track screen width
+  const [data, setData] = useState([]);
 
   const datePickerRef1 = useRef<ReactDatePicker>(null);
   const datePickerRef2 = useRef<ReactDatePicker>(null);
@@ -234,24 +235,44 @@ export default function TourSelect (props:any) {
     }
   };
 
-  const handleSearch = () => {  
-    const currentUrl = new URL(window.location.href);
-  
-    currentUrl.searchParams.set('from', formInfo.fromLocation);
-    currentUrl.searchParams.set('to', formInfo.toLocation);
-    currentUrl.searchParams.set('tourType', formInfo.tourType);
-    currentUrl.searchParams.set('counter', formInfo.counter.toString());
-    currentUrl.searchParams.set('startDate', new Date(formInfo.startDate).getTime().toString());
-  
-    if (formInfo.tourType === 'roundTrip') {
-      currentUrl.searchParams.set('endDate', new Date(formInfo.endDate).getTime().toString());
+
+  const handleSearch = async () => {
+    try {
+      if (formInfo.fromLocation === "") {
+        setFormInfo((prevForm) => ({ ...prevForm, isErrorFrom: true }));
+      } else {
+        setFormInfo((prevForm) => ({ ...prevForm, isErrorFrom: false }));
+      }
+      if (formInfo.toLocation === "") {
+        setFormInfo((prevForm) => ({ ...prevForm, isErrorTo: true }));
+      } else {
+        setFormInfo((prevForm) => ({ ...prevForm, isErrorTo: false }));
+      }
+      if (
+        formInfo.toLocation === "" ||
+        formInfo.fromLocation === "" ||
+        Number(formInfo.counter) === 0
+      ) {
+        return;
+      }
+
+      const response = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/getAllJetInfo/${formInfo.fromLocation}/${formInfo.toLocation}/${formInfo.tourType}`
+      );
+      if(!response.ok){
+        // setLoading(false);
+        return
+      }
+      const data = await response.json();
+      setData(data.data);
+      // setLoading(false);
+      setOpenModal(true);
+
+    } catch (error) {
+      // setError(error);
+      // setLoading(false);
     }
-  
-    window.history.pushState(null, '', currentUrl.toString());
-  
-    setOpenModal(true);
-  };
-  
+  }
   const closeModal = () => {
     // console.log("Modal closing...");
     setOpenModal(false);
@@ -387,7 +408,7 @@ export default function TourSelect (props:any) {
           className='h-[600px]' 
         >
           <div className='h-full overflow-auto overflow-design rounded-2xl'>
-            <AirCraftList openModal={openModal} setOpenModal={setOpenModal} />
+            <AirCraftList openModal={openModal} setOpenModal={setOpenModal} formInfo={formInfo} data={data} />
           </div>
         </Modal>
       </div>
