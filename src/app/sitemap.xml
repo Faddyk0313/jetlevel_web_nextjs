@@ -2,12 +2,12 @@
 <sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
   <sitemap>
-    <loc>https://www.jetlevel.com/post-sitemap.xml</loc>
+    <loc>https://www.jetlevel.com/blogs-sitemap.xml</loc>
     <lastmod>2025-01-06T12:00:00+00:00</lastmod>
   </sitemap>
 
   <sitemap>
-    <loc>https://www.jetlevel.com/page-sitemap.xml</loc>
+    <loc>https://www.jetlevel.com/pages-sitemap.xml</loc>
     <lastmod>2025-01-06T12:00:00+00:00</lastmod>
   </sitemap>
 
@@ -32,12 +32,12 @@
   </sitemap>
 
   <sitemap>
-    <loc>https://www.jetlevel.com/airport-sitemap.xml</loc>
+    <loc>https://www.jetlevel.com/airports-sitemap.xml</loc>
     <lastmod>2025-01-06T12:00:00+00:00</lastmod>
   </sitemap>
 
   <sitemap>
-    <loc>https://www.jetlevel.com/aircraft-sitemap.xml</loc>
+    <loc>https://www.jetlevel.com/aircrafts-sitemap.xml</loc>
     <lastmod>2025-01-06T12:00:00+00:00</lastmod>
   </sitemap>
   
