@@ -41,6 +41,8 @@ export default function Input(props:any) {
                       // sendHeightToParent();
                       handleSaveAirport(
                         list.codeIcaoAirport,
+                        list.municipality,
+                        list.nameAirport,
                         "fromLocation"
                       );
                       (document.querySelector('input[name="toLocation"]') as HTMLElement).focus();
@@ -127,6 +129,8 @@ export default function Input(props:any) {
                       // sendHeightToParent();
                       handleSaveAirport(
                         list.codeIcaoAirport,
+                        list.municipality,
+                        list.nameAirport,
                         "toLocation"
                       );
                     }}

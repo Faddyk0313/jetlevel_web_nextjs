@@ -192,11 +192,13 @@ export default function TourSelect (props:any) {
   };
 
 
-  const handleSaveAirport = (name:any, type:any) => {
+  const handleSaveAirport = (name:string, municipality:string, nameAirport:string, type:string) => {
     if (type === "fromLocation") {
       setFormInfo((prevForm:any) => ({
         ...prevForm,
         fromLocation: name,
+        fromMunicipality: municipality,
+        fromAirPort: nameAirport,
       }));
       setSearchResults((prevSearch) => ({
         ...prevSearch,
@@ -206,12 +208,13 @@ export default function TourSelect (props:any) {
       setFormInfo((prevForm:any) => ({
         ...prevForm,
         toLocation: name,
+        toMunicipality: municipality,
+        toAirPort: nameAirport,
       }));
       setSearchResults((prevSearch) => ({
         ...prevSearch,
         toLocationArray: [],
       }));
-      datePickerRef1.current!.setOpen(true);
     }
   };
   // Handle date and time selection

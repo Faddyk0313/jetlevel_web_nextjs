@@ -15,7 +15,11 @@ const DistanceCalculator = () => {
     counter: 2,
     tourType: "oneWay",
     isErrorFrom:false,
-    isErrorTo:false
+    isErrorTo:false,
+    fromMunicipality: "",
+    toMunicipality: "",
+    fromAirPort: "",
+    toAirPort: "",
   });
 
   const [searchResults, setSearchResults] = useState({
@@ -107,7 +111,7 @@ const DistanceCalculator = () => {
      console.error(`Fetch error: ${response.statusText}`);
      return
     }
-    const data: AirportResponse = await response.json();
+    const data = await response.json();
 
           setSearchResults((prevSearc:any) => ({
             ...prevSearc,
@@ -153,9 +157,9 @@ const DistanceCalculator = () => {
       };
 
       let response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/calculateDistance/${form.fromLocation}/${form.toLocation}`,options);
-      response = await response.json();
+      const data = await response.json();
       // console.log(response);
-      setData(response.data);
+      setData(data.data);
       setLoading(false);
     } catch (error) {
       // setError(error);
@@ -163,20 +167,24 @@ const DistanceCalculator = () => {
     }
   };
 
-  const handleSaveAirport = (name:any, type:any) => {
+  const handleSaveAirport = (name:string, municipality:string, nameAirport:string, type:string) => {
     if (type === "fromLocation") {
-      setForm((prevForm:any) => ({
+      setForm((prevForm) => ({
         ...prevForm,
         fromLocation: name,
+        fromMunicipality: municipality,
+        fromAirPort: nameAirport,
       }));
       setSearchResults((prevSearch) => ({
         ...prevSearch,
         fromLocationArray: [],
       }));
     } else {
-      setForm((prevForm:any) => ({
+      setForm((prevForm) => ({
         ...prevForm,
         toLocation: name,
+        toMunicipality: municipality,
+        toAirPort: nameAirport,
       }));
       setSearchResults((prevSearch) => ({
         ...prevSearch,
@@ -184,7 +192,6 @@ const DistanceCalculator = () => {
       }));
     }
   };
-
 
 
 
@@ -249,7 +256,7 @@ const DistanceCalculator = () => {
             <b>
               • Estimated Flight Time:{" "}
               <span style={{ color: "#0071BA" }}>
-                {convertTimeFormat(data / 676)} 
+                {convertTimeFormat((data / 676).toString())} 
               </span>
             </b>
             <div></div>
