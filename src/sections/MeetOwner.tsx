@@ -5,15 +5,16 @@ const MeetOwner = () => {
     return (
         <section className="bg-blue-background px-[80px] flex items-center min-h-screen py-10 bg-no-repeat bg-cover ">
             <div className="flex flex-col md:flex-row items-center justify-center lg:items-start gap-5 max-w-[1800px] m-auto">
-                <div className="mb-5 md:min-w-[400px]">
-{/*                     <Image
+              {/*  <div className="mb-5 md:min-w-[400px]">
+                  <Image
                         src='/images/ricky-photo.webp'
                         alt="Owner Image"
                         width={600} // Adjust according to the image size
                         height={800} // Adjust according to the image size
                         className="w-full h-full max-w-[570px] max-h-[780px] object-cover"
-                    /> */}
+                    /> 
                 </div>
+*/}
                 <div className="text-white md:max-w-[60%] md:pl-5 pt-5 md:pt-[5vh]">
                     <h4 className='mb-3'>MEET THE OWNER</h4>
                     <h2 className='mb-3 text-white'>Hi, I'm Ricky</h2>
