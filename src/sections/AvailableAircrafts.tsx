@@ -20,6 +20,16 @@ const AvailableAircrafts = ({sectionClass,heading,subHeading}:PageProps) => {
             price: "FROM $1,800"
         },
         {
+            type: "Very Light Jet",
+            name: "Phenom 100",
+            image: "/images/Very-Light-Jet.jpg",
+            seats: 4,
+            range: "1100 mi",
+            speed: "400 mph",
+            description: "Citation Mustang, Eclipse 500, HondaJet, HondaJet Elite, Phenom 100, Phenom 100E, Vision Jet",
+            price: "FROM $3,000"
+        },
+        {
             type: "Light Jets",
             name: "Honda Jet",
             image: "/images/Light-Jet.jpg",
@@ -58,16 +68,6 @@ const AvailableAircrafts = ({sectionClass,heading,subHeading}:PageProps) => {
             speed: "525 mph",
             description: "Global 5000, Gulfstream G500, Legacy 650, Gulfstream 450, Challenger 850, Falcon 900EX",
             price: "FROM $10,000"
-        },
-        {
-            type: "Very Light Jet",
-            name: "Phenom 100",
-            image: "/images/Very-Light-Jet.jpg",
-            seats: 4,
-            range: "1100 mi",
-            speed: "400 mph",
-            description: "Citation Mustang, Eclipse 500, HondaJet, HondaJet Elite, Phenom 100, Phenom 100E, Vision Jet",
-            price: "FROM $3,000"
         }
     ];
     return (
