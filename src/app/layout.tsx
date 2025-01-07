@@ -8,8 +8,8 @@ import Script from 'next/script';
 import 'aos/dist/aos.css';
 import "react-datepicker/dist/react-datepicker.css";
 import BookYourPrivateJet from '@/sections/BookYourPrivateJet';
-import { Analytics } from "@vercel/analytics/react"
-import { SpeedInsights } from "@vercel/speed-insights/next"
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 
 
 // Configure the fonts with subsets
@@ -65,7 +65,7 @@ export default function RootLayout({
         {/* Google tag (gtag.js ---End---- */}
       </head>
       <body className={`${playfairDisplay.variable} ${montserrat.variable} max-w-screen overflow-x-hidden`}>
-      {/*Google Tag Manager (noscript) */}
+        {/*Google Tag Manager (noscript) */}
         <noscript>
           <iframe
             src="https://www.googletagmanager.com/ns.html?id=GTM-PSWCSWH"
@@ -102,12 +102,13 @@ export default function RootLayout({
           src={`https://maps.googleapis.com/maps/api/js?key=${process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY}`}
           strategy="beforeInteractive"
         />
-        
+
         <Nav />
         {children}
         {/* <BookYourPrivateJet /> */}
         <ContactMenu />
         <Footer />
+ 
         <Analytics />
         <SpeedInsights />
       </body>

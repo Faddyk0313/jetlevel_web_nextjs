@@ -120,9 +120,6 @@ const FlightPage: React.FC<PageProps> = async ({ params }: PageProps) => {
         // const date = content.updated_at ? content.updated_at : content.created_at
         return <Airport_Aircraft_Blog_Page fields={content.fields} date={formattedDate} region={contentType} />;
     }
-
-    
-
     else {
         const { content, contentType2 } = await fetchContent(subOption, location);
         if (!content || !contentType2) {

@@ -19,6 +19,7 @@ export default function Index({ widget }:LeadFormProps) {
       counter: 2,
       tourType: "oneWay",
       isErrorFrom:false,
+      isErrorTo:false
     });
 
     const handleTourChange = (type:"roundTrip"|"oneWay") => {

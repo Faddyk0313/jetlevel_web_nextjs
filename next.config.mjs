@@ -111,43 +111,39 @@ const nextConfig = {
         destination: '/industory-charter/:location',
       },
       {
-        source: '/pages-sitemap.xml',
+        source: '/sitemaps/pages-sitemap.xml',
         destination: '/page-sitemap/sitemap.xml',
       },
       {
-        source: '/airports-sitemap.xml',
+        source: '/sitemaps/airports-sitemap.xml',
         destination: '/airport-sitemap/sitemap.xml',
       },
       {
-        source: '/aircrafts-sitemap.xml',
+        source: '/sitemaps/aircrafts-sitemap.xml',
         destination: '/aircraft-sitemap/sitemap.xml',
       },
       {
-        source: '/blogs-sitemap.xml',
+        source: '/sitemaps/blogs-sitemap.xml',
         destination: '/blogs-sitemap/sitemap.xml',
       },
       {
-        source: '/empty_leg_flights-sitemap.xml',
+        source: '/sitemaps/empty_leg_flights-sitemap.xml',
         destination: '/empty_leg_flights-sitemap/sitemap.xml',
       },
       {
-        source: '/events-sitemap.xml',
+        source: '/sitemaps/events-sitemap.xml',
         destination: '/events-sitemap/sitemap.xml',
       },
       {
-        source: '/routes-sitemap.xml',
+        source: '/sitemaps/routes-sitemap.xml',
         destination: '/routes-sitemap/sitemap.xml',
       },
       {
-        source: '/international_cities-sitemap.xml',
+        source: '/sitemaps/international_cities-sitemap.xml',
         destination: '/international_cities-sitemap/sitemap.xml',
       },
       {
-        source: '/international_cities-sitemap.xml',
-        destination: '/international_cities-sitemap/sitemap.xml',
-      },
-      {
-        source: '/usa_cities-sitemap.xml',
+        source: '/sitemaps/usa_cities-sitemap.xml',
         destination: '/usa_cities-sitemap/sitemap.xml',
       },
       {
