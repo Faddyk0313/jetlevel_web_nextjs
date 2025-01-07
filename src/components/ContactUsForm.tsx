@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import Button from '@/components/Button';
 
 interface ContactFormValues {
@@ -14,10 +14,20 @@ const ContactUsForm: React.FC = () => {
     name: "",
     email: "",
     message: "",
-    numberValue:''
+    numberValue:""
   });
 
   const [errors, setErrors] = useState<Partial<ContactFormValues>>({});
+  const [num1, setNum1] = useState(0);
+  const [num2, setNum2] = useState(0);
+
+ // Generate random numbers for the quiz when the component mounts
+ useEffect(() => {
+  setNum1(Math.floor(Math.random() * 50) + 1); // Random number between 1 and 50
+  setNum2(Math.floor(Math.random() * 50) + 1); // Random number between 1 and 50
+}, []);
+
+
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -34,16 +44,42 @@ const ContactUsForm: React.FC = () => {
     }
     if (!formValues.message) newErrors.message = "Message is required.";
 
+    if (Number(formValues.numberValue) !== Number(num1)+Number(num2)){ 
+      newErrors.numberValue = "Wrong Answer."
+    }
+    console.log(Number(formValues.numberValue), Number(num1),Number(num2),Number(num1)+Number(num2))
     setErrors(newErrors);
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async(e: React.FormEvent) => {
+    try{
     e.preventDefault();
     if (validate()) {
       console.log("Form submitted:", formValues);
+      
+      
+      const options = {
+        method: "POST",
+        headers: {
+          'Accept': 'application/json',
+          'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({name:formValues.name,email:formValues.email,message:formValues.message}),
+      };
       setFormValues({ name: "", email: "", message: "",numberValue:"" });
+      let response = await fetch(
+        `${process.env.NEXT_PUBLIC_BACKEND_URL}/contactUs`,
+        options,
+      );
+      if (!response.ok) {
+        console.error(`Fetch error: ${response}`);
+        return
+      }
     }
+  }catch(error){
+    console.error(`Fetch error: ${error}`);
+  }
   };
 
   return (
@@ -88,7 +124,7 @@ const ContactUsForm: React.FC = () => {
       </div>
 
       <div className='flex w-full items-center gap-x-2'>
-        <label htmlFor="message">12+ 48 =</label>
+        <label htmlFor="message">{num1} + {num2} =</label>
         <input
           type="text"
           id="email"
@@ -97,7 +133,7 @@ const ContactUsForm: React.FC = () => {
           onChange={handleChange}
           className='border border-[lightgray] p-2 rounded-md w-[40%]'
         />
-        {errors.message && <span style={{ color: "red" }}>{errors.message}</span>}
+        {errors.numberValue && <span style={{ color: "red" }}>{errors.numberValue}</span>}
       </div>
       <Button
         text='Send'

@@ -7,7 +7,7 @@ const AircraftComparison = () => {
   const [aircraftList, setAircraftList] = useState([]);
   useEffect(() => {
     async function init() {
-      let res = await fetch(`${process.env.REACT_APP_BACKEND_URL}/getAllAircraft`);
+      let res = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/getAllAircraft`);
       res = await res.json();
       setAircraftList(res.data);
     }
@@ -85,7 +85,7 @@ const AircraftItem = ({ id, data }) => {
 async function handleSaveName(airData) {
   setAircraftName({Aircraft_name:airData.Aircraft_name,_id:airData._id})
     let res = await fetch(
-      `${process.env.REACT_APP_BACKEND_URL}/getAircraft/${airData._id}`
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/getAircraft/${airData._id}`
     );
     res = await res.json();
     setAircraftData(res.data);

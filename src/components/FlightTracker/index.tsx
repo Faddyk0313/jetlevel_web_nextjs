@@ -16,7 +16,7 @@ const FlightTracker = () => {
     if (!ident) return;
     setLoading(true);
     let response = await fetch(
-      `${process.env.REACT_APP_BACKEND_URL}/getFlightInfo?ident=${ident}`
+      `${process.env.NEXT_PUBLIC_BACKEND_URL}/getFlightInfo?ident=${ident}`
     );
     let data = await response.json()
     setFightDetails(data[0]);
