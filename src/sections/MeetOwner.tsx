@@ -22,7 +22,7 @@ const MeetOwner = () => {
                         Working for over a decade in the private jet charter sector has helped me understand the problems that people are facing when looking for jets. Whether it's hard to get a hold of someone, trouble finding flights, or frustrating hidden costs and fees, I've seen it and I feel your pain.
                     </p>
                     <p className='mb-[10px] details leading-relaxed text-[#bbbbbb]'>
-                        That's exactly why I created JetLevel — so that you can enjoy the comfort, luxury, and convenience of a private jet without the hassle. Our team is dedicated to getting you on a jet quickly with clear communication and transparent pricing.
+                        That's exactly why I created JetLevel Aviation— so that you can enjoy the comfort, luxury, and convenience of a private jet without the hassle. Our team is dedicated to getting you on a jet quickly with clear communication and transparent pricing.
                     </p>
                     <p className='mb-[10px] details leading-relaxed text-[#bbbbbb]'>
                         Whether you're traveling for business or pleasure, we're ready to get you from point A to B in style and luxury. So, please, relax and enjoy your flight.
