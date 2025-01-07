@@ -116,11 +116,11 @@ const nextConfig = {
       },
       {
         source: '/airports-sitemap.xml',
-        destination: '/airports-sitemap/sitemap.xml',
+        destination: '/airport-sitemap/sitemap.xml',
       },
       {
         source: '/aircrafts-sitemap.xml',
-        destination: '/aircrafts-sitemap/sitemap.xml',
+        destination: '/aircraft-sitemap/sitemap.xml',
       },
       {
         source: '/blogs-sitemap.xml',
