@@ -31,7 +31,7 @@ const AvailableAircrafts = ({sectionClass,heading,subHeading}:PageProps) => {
         },
         {
             type: "Light Jets",
-            name: "Honda Jet",
+            name: "Citation CJ3",
             image: "/images/Light-Jet.jpg",
             seats: 6,
             range: "1700 mi",
