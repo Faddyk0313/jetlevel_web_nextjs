@@ -10,8 +10,8 @@ const Breadcrumb: React.FC = () => {
   const pathname = usePathname();
   const pathSegments: string[] = pathname?.split("/").filter(Boolean) || [];
 
-  // console.log("pathname", pathname);
-  // console.log("pathSegments", pathSegments);
+  console.log("pathname", pathname);
+  console.log("pathSegments", pathSegments);
 
   // Rewrite mappings (including dynamic routes)
   const rewriteMapping: { [key: string]: string; } = {
@@ -21,7 +21,9 @@ const Breadcrumb: React.FC = () => {
     '/our-services/helicopter': '/Helicopter-Charter-Flight',
     '/jet-charter/us-canada': '/us-canada-chartered-cities',
     '/jet-charter/cities/:location': '/private-jet-charter-flights-to-:location',
+    '/jet-charter/us-canada/:location': '/private-jet-charter-flights-to-:location',
     '/jet-charter/international': '/international-chartered-cities',
+    '/jet-charter/international/:location': '/private-jet-charter-flights-to-:location',
     '/jet-charter/popular-routes': '/popular-routes',
     '/jet-charter/popular-routes/:location': '/private-jet-charter-:location',
     '/jet-charter/empty-legs': '/empty-leg-flights',
@@ -33,18 +35,20 @@ const Breadcrumb: React.FC = () => {
     '/charter-resources/distance-calculator': '/distance-calculator',
     '/company/about-us': '/about-jet-level',
     '/company/contact-us': '/contact-us',
-    '/company/blogs': '/blog',
-    '/faq': '/private-jet-frequently-asked-questions',
+    '/company/blog': '/blog',
     '/company/our-team': '/our-team',
+    '/faq': '/private-jet-frequently-asked-questions',
     '/pricing': '/cost-of-chartering-a-private-jet',
     '/industory-charter': '/industry-specific-charter',
+    '/events': '/events',
+    '/events/:location': '/events/:location',
     '/request-quote': '/request-a-quote',
     '/instant-qoute': '/instant-private-jet-quotes',
     '/industory-charter/:location': '/industry-specific-charter/:location',
     '/charter-resources/airports-aircrafts/:location': '/:location',
     '/charter-resources/private-jet-airports/:location': '/:location',
     '/charter-resources/aircraft-types/:location': '/:location',
-    '/company/blogs/:location': '/:location',
+    '/company/blog/:location': '/:location',
   };
 
   // Helper function to apply rewrite rules based on dynamic segments
@@ -77,7 +81,7 @@ const Breadcrumb: React.FC = () => {
     applyRewrite(actualPath, true);
   let href;
   // console.log(pathSegments.slice(0, 1)[0])
-  if (pathSegments.slice(0, 1)[0] !== "cost-of-chartering-a-private-jet" && pathSegments.slice(0, 1)[0] !== "industry-specific-charter") {
+  if (pathSegments.slice(0, 1)[0] !== "cost-of-chartering-a-private-jet" && pathSegments.slice(0, 1)[0] !== "request-a-quote" && pathSegments.slice(0, 1)[0] !== "faq" && pathSegments.slice(0, 1)[0] !== "instant-private-jet-quotes" && pathSegments.slice(0, 1)[0] !== "industry-specific-charter" && pathSegments.slice(0, 1)[0] !== "events") {
     href = getRewritePath(pathSegments.slice(0, 1));
     // console.log("if")
   }
@@ -85,10 +89,10 @@ const Breadcrumb: React.FC = () => {
     href = getRewritePath(pathSegments);
   }
 
-  // console.log("href", href);
+  console.log("href", href);
   const segments = href.split("/").filter(Boolean); // Remove empty segments
   // Determine the base segment dynamically (e.g., 'jet-charter' or 'charter-resources')
-  // console.log("segments", segments);
+  console.log("segments", segments);
   let subOption = segments[1]; // cities, empty-legs etc.    
 
 
@@ -108,7 +112,7 @@ const Breadcrumb: React.FC = () => {
     segments[1] = subOption;
 
   }
-  else if (subOption == "airports-aircrafts") {
+  else if (subOption == "airports-aircrafts" ) {
     if (aircrafts.includes(segments[segments.length - 1])) {
       subOption = 'aircraft-types';
     } else if (airports.includes(segments[segments.length - 1])) {
@@ -120,14 +124,14 @@ const Breadcrumb: React.FC = () => {
     segments[1] = subOption;
   }
   const baseSegment = segments[0]; // Get the first segment
-  // console.log(baseSegment);
+  console.log("baseSegment", baseSegment);
   let hrefArray = segments;
-  if (hrefArray.length != 1 && hrefArray[0] != "industory-charter") {
+  if (hrefArray.length != 1 && hrefArray[0] != "industory-charter" && hrefArray[0] != "events") {
     hrefArray = segments.slice(1);
   }
 
-  // console.log("href", href);
-  // console.log("hrefArray", hrefArray);
+  console.log("href", href);
+  console.log("hrefArray", hrefArray);
 
   return (
     (<div
@@ -143,13 +147,26 @@ const Breadcrumb: React.FC = () => {
       </div>
       {
         hrefArray.map((segment, index) => {
-          const hrefPath = `/${[
-            baseSegment,
-            ...hrefArray.slice(0, index + 1),
-          ].join("/")}`;
+          let hrefPath;
+          if (baseSegment == "events" || baseSegment == "industory-charter" || baseSegment == "pricing" || baseSegment == "request-quote"  || baseSegment == "instant-qoute" || baseSegment == "faq") {
+            hrefPath = `/${[
+              ...hrefArray.slice(0, index + 1),
+            ].join("/")}`;
+          } else {
+            hrefPath = `/${[
+              baseSegment,
+              ...hrefArray.slice(0, index + 1),
+            ].join("/")}`;
+          }
+
+          console.log(`hrefPath: ${hrefPath}`)
+
           const rewrittenHref = getRewrittenHref(hrefPath);
           const segmentName = segment.replace(/-/g, " ").toUpperCase();
           const zIndex = 8 - index;
+          console.log(`rewrittenHref: ${rewrittenHref}`)
+          console.log(`segmentName: ${segmentName}`)
+
 
           return (
             <div key={`${hrefPath}-${index}`} className="flex items-center">
@@ -158,7 +175,7 @@ const Breadcrumb: React.FC = () => {
                 className={`${styles.breadcrumbLink} whitespace-nowrap py-2 pl-7 pr-3`}
                 style={{ zIndex: zIndex }}
               >
-                {segmentName}
+                {segmentName == "INSTANT QOUTE" ? "INTANT QUOTE" : segmentName }
               </Link>
             </div>
           );
