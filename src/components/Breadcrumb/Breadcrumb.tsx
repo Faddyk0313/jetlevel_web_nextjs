@@ -10,8 +10,8 @@ const Breadcrumb: React.FC = () => {
   const pathname = usePathname();
   const pathSegments: string[] = pathname?.split("/").filter(Boolean) || [];
 
-  console.log("pathname", pathname);
-  console.log("pathSegments", pathSegments);
+  // console.log("pathname", pathname);
+  // console.log("pathSegments", pathSegments);
 
   // Rewrite mappings (including dynamic routes)
   const rewriteMapping: { [key: string]: string; } = {
@@ -89,10 +89,10 @@ const Breadcrumb: React.FC = () => {
     href = getRewritePath(pathSegments);
   }
 
-  console.log("href", href);
+  // console.log("href", href);
   const segments = href.split("/").filter(Boolean); // Remove empty segments
   // Determine the base segment dynamically (e.g., 'jet-charter' or 'charter-resources')
-  console.log("segments", segments);
+  // console.log("segments", segments);
   let subOption = segments[1]; // cities, empty-legs etc.    
 
 
@@ -124,14 +124,14 @@ const Breadcrumb: React.FC = () => {
     segments[1] = subOption;
   }
   const baseSegment = segments[0]; // Get the first segment
-  console.log("baseSegment", baseSegment);
+  // console.log("baseSegment", baseSegment);
   let hrefArray = segments;
   if (hrefArray.length != 1 && hrefArray[0] != "industory-charter" && hrefArray[0] != "events") {
     hrefArray = segments.slice(1);
   }
 
-  console.log("href", href);
-  console.log("hrefArray", hrefArray);
+  // console.log("href", href);
+  // console.log("hrefArray", hrefArray);
 
   return (
     (<div
@@ -159,13 +159,13 @@ const Breadcrumb: React.FC = () => {
             ].join("/")}`;
           }
 
-          console.log(`hrefPath: ${hrefPath}`)
+          // console.log(`hrefPath: ${hrefPath}`)
 
           const rewrittenHref = getRewrittenHref(hrefPath);
           const segmentName = segment.replace(/-/g, " ").toUpperCase();
           const zIndex = 8 - index;
-          console.log(`rewrittenHref: ${rewrittenHref}`)
-          console.log(`segmentName: ${segmentName}`)
+          // console.log(`rewrittenHref: ${rewrittenHref}`)
+          // console.log(`segmentName: ${segmentName}`)
 
 
           return (
