@@ -58,4 +58,4 @@ const generateStaticSitemap = () => {
 
 generateStaticSitemap();
 
-console.log("Static sitemap generated successfully!");
+// console.log("Static sitemap generated successfully!");

@@ -21,7 +21,7 @@ const CollapsibleAircraftOverviewSection: React.FC<
 
   const toggleSection = () => setIsOpen((prev) => !prev);
 
-  console.log("content", typeof content)
+  // console.log("content", typeof content)
   return (
     <section className="border-b py-5">
       <div

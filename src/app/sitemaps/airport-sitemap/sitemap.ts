@@ -2,7 +2,7 @@ import { createClient } from "@/lib/contento";
 import { MetadataRoute } from "next";
 
 export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-    console.log("Sitemap")
+    // console.log("Sitemap")
     const client = createClient();
     const limit = 100; // Set to a reasonable high limit
     let response= await client.getContentByType({
