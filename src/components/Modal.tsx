@@ -42,7 +42,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, modalWidth, cl
       >
         <Close
           onClick={onClose}
-          className="mb-0 absolute top-[8px] right-[8px] cursor-pointer"
+          className="mb-0 absolute top-[8px] fill-[rgb(82,82,82)] text-[35px] right-[8px] cursor-pointer"
         />
         {/* <img onClick={onClose} className='mb-0 absolute top-[8px] right-[8px] cursor-pointer' src={`${ASSET_URL}/icons/close-icon.svg`} /> */}
         {children}

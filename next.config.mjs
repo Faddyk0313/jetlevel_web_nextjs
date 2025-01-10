@@ -111,40 +111,40 @@ const nextConfig = {
         destination: '/industory-charter/:location',
       },
       {
-        source: '/sitemaps/pages-sitemap.xml',
-        destination: '/page-sitemap/sitemap.xml',
+        source: '/pages-sitemap.xml',
+        destination: '/sitemaps/page-sitemap/sitemap.xml',
       },
       {
-        source: '/sitemaps/airports-sitemap.xml',
-        destination: '/airport-sitemap/sitemap.xml',
+        source: '/airports-sitemap.xml',
+        destination: '/sitemaps/airport-sitemap/sitemap.xml',
       },
       {
-        source: '/sitemaps/aircrafts-sitemap.xml',
-        destination: '/aircraft-sitemap/sitemap.xml',
+        source: '/aircrafts-sitemap.xml',
+        destination: '/sitemaps/aircraft-sitemap/sitemap.xml',
       },
       {
-        source: '/sitemaps/blogs-sitemap.xml',
-        destination: '/blogs-sitemap/sitemap.xml',
+        source: '/blogs-sitemap.xml',
+        destination: '/sitemaps/blogs-sitemap/sitemap.xml',
       },
       {
-        source: '/sitemaps/empty_leg_flights-sitemap.xml',
-        destination: '/empty_leg_flights-sitemap/sitemap.xml',
+        source: '/empty_leg_flights-sitemap.xml',
+        destination: '/sitemaps/empty_leg_flights-sitemap/sitemap.xml',
       },
       {
-        source: '/sitemaps/events-sitemap.xml',
-        destination: '/events-sitemap/sitemap.xml',
+        source: '/events-sitemap.xml',
+        destination: '/sitemaps/events-sitemap/sitemap.xml',
       },
       {
-        source: '/sitemaps/routes-sitemap.xml',
-        destination: '/routes-sitemap/sitemap.xml',
+        source: '/routes-sitemap.xml',
+        destination: '/sitemaps/routes-sitemap/sitemap.xml',
       },
       {
-        source: '/sitemaps/international_cities-sitemap.xml',
-        destination: '/international_cities-sitemap/sitemap.xml',
+        source: '/international_cities-sitemap.xml',
+        destination: '/sitemaps/international_cities-sitemap/sitemap.xml',
       },
       {
-        source: '/sitemaps/usa_cities-sitemap.xml',
-        destination: '/usa_cities-sitemap/sitemap.xml',
+        source: '/usa_cities-sitemap.xml',
+        destination: '/sitemaps/usa_cities-sitemap/sitemap.xml',
       },
       {
         source: '/:location',
