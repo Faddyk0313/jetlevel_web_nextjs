@@ -58,14 +58,12 @@ const Hero: React.FC<HeroProps> = ({ image, title, subtitle, tagline, descriptio
                 : showCalculator == 'FlightTracker' ?
                 <div className='w-full outline-none h-auto' id="my-iframe">
                 <Suspense fallback={<div className="search-form__loader"></div>}>
-
                     <FlightTracker/>
                 </Suspense>
                 </div>
                 : showCalculator == 'DistanceCalculator' ?
                 <div className='w-full outline-none h-auto' id="my-iframe">
                 <Suspense fallback={<div className="search-form__loader"></div>}>
-
                     <DistanceCalculator />
                 </Suspense>
                 </div>  : null
