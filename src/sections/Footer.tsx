@@ -189,17 +189,9 @@ const Footer = () => {
                             className="md:w-72 max-w-72 mx-auto h-auto"
                         />
                     </div>
-                    <div className="flex flex-col md:flex-row gap-7 ">
-                        <div className="flex flex-col lg:flex-row lg:items-center gap-3 lg:h-[54px]">
-                            <h4 className="text-lg flex-1 min-w-36 lg:max-w-36 text-center">
-                                Get the Latest Updates
-                            </h4>
-                          
-                                <SubscribeEmail/>
-                            
-                        </div>
+                    <div className="flex flex-col lg:flex-row gap-7 ">
                         <div className="flex flex-col lg:flex-row lg:items-center lg:h-[54px] gap-4 pb-0 lg:pb-0 ">
-                            <h4 className="text-lg min-w-24 lg:max-w-24 text-center">
+                            <h4 className="text-lg  text-center m-0">
                                 Connect with us
                             </h4>
                             <div className="flex gap-6 items-center mx-auto">
@@ -280,7 +272,7 @@ const Footer = () => {
                 <div className="max-w-[1800px] mx-auto flex flex-col lg:flex-row text-[#f0f1f2] gap-5 mt-8 py-4">
                     <div className="flex gap-5 flex-col md:flex-row lg:flex-col text-[11px]">
                         <div>
-                            &copy; 2024 Jetlevel Aviation LLC All rights
+                            &copy; 2025 Jetlevel Aviation LLC All rights
                             reserved
                         </div>
                         <div className="flex flex-row gap-3 md:mx-auto lg:mx-0">
