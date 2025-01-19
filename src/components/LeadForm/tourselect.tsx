@@ -17,6 +17,7 @@ export default function TourSelect (props:any) {
   const {formInfo,setFormInfo, widget } = props
 
   const [openModal,setOpenModal] = useState(false);
+  const [loading,setLoading] = useState(false);
 
   const [searchResults, setSearchResults] = useState({
     fromLocationArray: [],
@@ -109,7 +110,7 @@ export default function TourSelect (props:any) {
         };
         try {
           const response = await fetch(
-            `${process.env.NEXT_PUBLIC_BACKEND_URL}/search?` +
+            `/api/search?` +
             new URLSearchParams({ query: value }),
             options
           );
@@ -147,7 +148,7 @@ export default function TourSelect (props:any) {
 
         try {
           const response = await fetch(
-            `${process.env.NEXT_PUBLIC_BACKEND_URL}/search?` +
+            `/api/search?` +
             new URLSearchParams({ query: value }),
             options
           );
@@ -239,6 +240,8 @@ export default function TourSelect (props:any) {
 
   const handleSearch = async () => {
     try {
+      setLoading(true);
+
       if (formInfo.fromLocation === "") {
         setFormInfo((prevForm:any) => ({ ...prevForm, isErrorFrom: true }));
       } else {
@@ -254,24 +257,26 @@ export default function TourSelect (props:any) {
         formInfo.fromLocation === "" ||
         Number(formInfo.counter) === 0
       ) {
+        setLoading(false);
+
         return;
       }
 
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/getAllJetInfo/${formInfo.fromLocation}/${formInfo.toLocation}/${formInfo.tourType}`
+        `/api/getAllJetInfo/${formInfo.fromLocation}/${formInfo.toLocation}/${formInfo.tourType}`
       );
       if(!response.ok){
-        // setLoading(false);
+        setLoading(false);
         return
       }
       const data = await response.json();
       setData(data.data);
-      // setLoading(false);
+      setLoading(false);
       setOpenModal(true);
 
     } catch (error) {
       // setError(error);
-      // setLoading(false);
+      setLoading(false);
     }
   }
   const closeModal = () => {
@@ -398,7 +403,8 @@ export default function TourSelect (props:any) {
           className={"btn"}
           onClick={handleSearch}
         >
-           Search{" "}
+          {loading ? (<div className="search-form__loader"></div>) : "Search"}
+
         </button>
         }
 

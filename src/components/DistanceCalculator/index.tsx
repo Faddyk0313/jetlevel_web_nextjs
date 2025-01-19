@@ -1,6 +1,5 @@
 "use client"
 import React, { useState, useEffect } from "react";
-import CircularProgress from "@mui/material/CircularProgress";
 import Input from "../LeadForm/input";
 import {convertTimeFormat, getNext15Minutes} from "../LeadForm/helper"
 const DistanceCalculator = () => {
@@ -65,7 +64,7 @@ const DistanceCalculator = () => {
         };
         try {
           const response = await fetch(
-            `${process.env.NEXT_PUBLIC_BACKEND_URL}/search?` +
+            `/api/search?` +
             new URLSearchParams({ query: value }),
             options
           );
@@ -103,7 +102,7 @@ const DistanceCalculator = () => {
 
         try {
           const response = await fetch(
-            `${process.env.NEXT_PUBLIC_BACKEND_URL}/search?` +
+            `/api/search?` +
             new URLSearchParams({ query: value }),
             options
           );
@@ -156,7 +155,7 @@ const DistanceCalculator = () => {
         
       };
 
-      let response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/calculateDistance/${form.fromLocation}/${form.toLocation}`,options);
+      let response = await fetch(`/api/calculateDistance/${form.fromLocation}/${form.toLocation}`,options);
       const data = await response.json();
       // console.log(response);
       setData(data.data);
@@ -218,7 +217,7 @@ const DistanceCalculator = () => {
               handleSubmit();
             }}
           >
-            {loading ? <CircularProgress color="inherit" /> : ""} Search
+          {loading ? (<div className="search-form__loader"></div>) : "Search"}
           </button>
         </div>
         {data ? (
