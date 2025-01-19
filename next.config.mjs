@@ -24,6 +24,46 @@ const nextConfig = {
         destination: '/jet-charter/us-canada',
       },
       {
+        source: '/boston-private-jet-charter-flights',
+        destination: '/jet-charter/cities/boston-ma',
+      },
+      {
+        source: '/charter-flights-los-angeles',
+        destination: '/jet-charter/cities/los-angeles',
+      },
+      {
+        source: '/private-jet-charter-miami',
+        destination: '/jet-charter/cities/miami',
+      },
+      {
+        source: '/private-jet-charter-van-nuys',
+        destination: '/jet-charter/cities/van-nuys',
+      },
+      {
+        source: '/private-jet-charter-teterboro',
+        destination: '/jet-charter/cities/teterboro',
+      },
+      {
+        source: '/private-jet-charter-nashville',
+        destination: '/jet-charter/cities/nashville',
+      },
+      {
+        source: '/private-jet-charter-dallas',
+        destination: '/jet-charter/cities/dallas',
+      },
+      {
+        source: '/private-jet-charter-chicago',
+        destination: '/jet-charter/cities/chicago',
+      },
+      {
+        source: '/private-jet-charter-naples',
+        destination: '/jet-charter/cities/naples',
+      },
+      {
+        source: '/private-jet-charter-to-las-vegas',
+        destination: '/jet-charter/cities/las-vegas',
+      },
+      {
         source: '/private-jet-charter-flights-to-:location',
         destination: '/jet-charter/cities/:location',
       },
