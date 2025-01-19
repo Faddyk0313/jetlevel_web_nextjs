@@ -20,6 +20,16 @@ const Breadcrumb: React.FC = () => {
     '/our-services/air-ambulance': '/medical-flight-transport',
     '/our-services/helicopter': '/Helicopter-Charter-Flight',
     '/jet-charter/us-canada': '/us-canada-chartered-cities',
+    '/jet-charter/cities/boston-ma': '/boston-private-jet-charter-flights',
+    '/jet-charter/cities/los-angeles': '/charter-flights-los-angeles',
+    '/jet-charter/cities/miami': '/private-jet-charter-miami',
+    '/jet-charter/cities/van-nuys': '/private-jet-charter-van-nuys',
+    '/jet-charter/cities/teterboro': '/private-jet-charter-teterboro',
+    '/jet-charter/cities/nashville': '/private-jet-charter-nashville',
+    '/jet-charter/cities/dallas': '/private-jet-charter-dallas',
+    '/jet-charter/cities/chicago': '/private-jet-charter-chicago',
+    '/jet-charter/cities/naples': '/private-jet-charter-naples',
+    '/jet-charter/cities/las-vegas': '/private-jet-charter-to-las-vegas',
     '/jet-charter/cities/:location': '/private-jet-charter-flights-to-:location',
     '/jet-charter/us-canada/:location': '/private-jet-charter-flights-to-:location',
     '/jet-charter/international': '/international-chartered-cities',
@@ -112,7 +122,7 @@ const Breadcrumb: React.FC = () => {
     segments[1] = subOption;
 
   }
-  else if (subOption == "airports-aircrafts" ) {
+  else if (subOption == "airports-aircrafts") {
     if (aircrafts.includes(segments[segments.length - 1])) {
       subOption = 'aircraft-types';
     } else if (airports.includes(segments[segments.length - 1])) {
@@ -148,7 +158,7 @@ const Breadcrumb: React.FC = () => {
       {
         hrefArray.map((segment, index) => {
           let hrefPath;
-          if (baseSegment == "events" || baseSegment == "industory-charter" || baseSegment == "pricing" || baseSegment == "request-quote"  || baseSegment == "instant-qoute" || baseSegment == "faq") {
+          if (baseSegment == "events" || baseSegment == "industory-charter" || baseSegment == "pricing" || baseSegment == "request-quote" || baseSegment == "instant-qoute" || baseSegment == "faq") {
             hrefPath = `/${[
               ...hrefArray.slice(0, index + 1),
             ].join("/")}`;
@@ -175,7 +185,7 @@ const Breadcrumb: React.FC = () => {
                 className={`${styles.breadcrumbLink} whitespace-nowrap py-2 pl-7 pr-3`}
                 style={{ zIndex: zIndex }}
               >
-                {segmentName == "INSTANT QOUTE" ? "INTANT QUOTE" : segmentName }
+                {segmentName == "INSTANT QOUTE" ? "INTANT QUOTE" : segmentName}
               </Link>
             </div>
           );

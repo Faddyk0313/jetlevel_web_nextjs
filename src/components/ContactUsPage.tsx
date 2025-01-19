@@ -8,7 +8,7 @@ import PopularPrivateJetCharters from '@/sections/PopularPrivateJetCharters'
 const ContactUsPage = () => {
   return (
     <>
-     <div className="bg-[url('/images/private-jet-charter-services.jpg')] overlay bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-center justify-center">
+     <div className="bg-[url('/hero_images/2.png')] overlay bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-center justify-center">
         <h1 className="px-5 md:px-10 lg:px-20 max-w-[1800px] w-full mx-auto text-white ">
           Contact us
         </h1>

@@ -86,7 +86,7 @@ const faqDataHelicopter = [
 
   return (
     <div>
-      <Hero title="Helicopter Charter Flight Services"  image="/images/Helicopter Hero.jpg" hasOverlay={false} hasCalculator={true} />
+      <Hero title="Helicopter Charter Flight Services"  image="/images/Helicopter Hero.jpg" hasOverlay={true} hasCalculator={true} />
       <BrandNames />
       <HalfSection showBottomContent={true}>
       <div className='flex flex-col justify-center gap-y-[20px] pt-8'>

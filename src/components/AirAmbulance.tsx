@@ -36,7 +36,7 @@ const OnDemandCharterPage = () => {
   ];
   return (
     <div>
-      <Hero title="Medical Flight Transport" description="Air Ambulance Charter Flight Services " image="/images/air ambulance Hero image.jpg" hasOverlay={false} hasCalculator={true} />
+      <Hero title="Medical Flight Transport" description="Air Ambulance Charter Flight Services " image="/images/air ambulance Hero image.jpg" hasOverlay={true} hasCalculator={true} />
       <BrandNames />
       <HalfSection showBottomContent={true}>
         <div className='flex flex-col justify-center gap-y-[20px] pt-8'>

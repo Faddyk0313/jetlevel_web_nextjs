@@ -47,14 +47,16 @@ export async function generateStaticParams() {
 
 const IndustoryCharterDetail = ({ params }: PageProps) => {
   const singleIndustory = industory.industory.find((event) => event.id === params.subOption);
+  const charterType = charterTypes.charterTypes.find((charter) => charter.url === params.subOption);
   const filterCharters = charterTypes?.charterTypes.filter((charter) => charter.url !== params.subOption);
   return (
     <div>
       <Hero 
         title={singleIndustory?.hereosHeading || ''}
         description={singleIndustory?.heroDescription || ''}
-        image={"/images/Private jet interior bg .webp"}  
+        image={charterType?.image || ""}  
         hasCalculator={false} 
+        hasOverlay={true}
       />
       <BrandNames />
       <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">

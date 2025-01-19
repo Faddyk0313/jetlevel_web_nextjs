@@ -43,8 +43,8 @@ export async function generateMetadata({ params }: PageProps) {
     const description = content.seo.description;
 
     return {
-      title: title || "Default Page Title",
-      description: description || "Default page description.",
+      title: title || "Events - JetLevel Aviation",
+      description: description || "Events Single Page",
     };
   }
 
@@ -61,7 +61,7 @@ const EventDetailPage = async ({ params }: PageProps) => {
   // console.log('singleEvent',singleEvent);
 
   const { content } = await fetchContent(subOption);
-  // console.log('content ----------------', content);
+  // console.log('content ----------------', content.fields.hero_content.blocks[0].fields.title.text);
   if (!content) {
     return (
       <div className="p-6 max-w-4xl mx-auto text-center">
@@ -76,7 +76,7 @@ const EventDetailPage = async ({ params }: PageProps) => {
   // };
   return (
     <div>
-      <Hero title={content.fields.hero_content.blocks[0].title || 'Charter Private Jet for your Events Events '} description={content.fields.hero_content.blocks[0].paragraph || ""} image={content.fields.hero_image.assets[0].asset.url} hasOverlay={true} hasCalculator={true} />
+      <Hero title={content.fields.hero_content.blocks[0].fields.title.text} description={content.fields.hero_content.blocks[0].fields.paragraph.text || ""} image={content.fields.hero_image.assets[0].asset.url} hasOverlay={true} hasCalculator={true} />
       <BrandNames />
       <section className="px-5 md:px-10 xl:px-20 py-7 max-w-[1800px] mx-auto">
         <Breadcrumb />
