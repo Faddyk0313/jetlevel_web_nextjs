@@ -278,6 +278,18 @@
   background-color: #0071ba !important;
 }
 
+li.react-datepicker__time-list-item.react-datepicker__time-list-item--disabled,
+li.react-datepicker__time-list-item.react-datepicker__time-list-item--selected {
+  margin: 0;
+}
+@media (min-width: 1100px) {
+  .react-datepicker {
+    display: flex !important;
+  }
+
+}
+
+
 .person {
   display: flex;
   align-items: center;
