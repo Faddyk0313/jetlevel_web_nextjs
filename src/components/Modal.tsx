@@ -40,11 +40,12 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, modalWidth, cl
         style={{ width: modalWidth || 400 }}
         className={` ${className} max-[800px]:overflow-auto fixed max-[800px]:top-[57%] max-[800px]:h-[80%] max-[800px]:!w-[90%] top-[50%] translate-x-[-50%] translate-y-[-50%]  left-[50%] bg-white rounded-xl shadow-[0px_4px_6px_rgba(0, 0, 0, 0.1)]`}
       >
+        <div className='bg-white absolute p-2 pt-4 right-[10px] cursor-pointer'>
         <Close
           onClick={onClose}
-          className="mb-0 absolute top-[8px] fill-[rgb(82,82,82)] text-[35px] right-[8px] cursor-pointer"
+          className=" mb-0 !w-10 !h-10"
         />
-        {/* <img onClick={onClose} className='mb-0 absolute top-[8px] right-[8px] cursor-pointer' src={`${ASSET_URL}/icons/close-icon.svg`} /> */}
+        </div>
         {children}
       </div>
     </div>
