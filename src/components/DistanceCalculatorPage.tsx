@@ -36,7 +36,7 @@ const DistanceCalculatorPage = () => {
   ]
   return (
     <div>
-      <Hero title="Flight Time and Distance Calculator" description="Discover How Close Your Next Destination Is Instantly Calculate Your Flight Time and Distance with Precision" image="/images/Private jet interior bg .webp" hasOverlay={false} hasCalculator={true} showCalculator='DistanceCalculator' />
+      <Hero title="Flight Time and Distance Calculator" description="Discover How Close Your Next Destination Is Instantly Calculate Your Flight Time and Distance with Precision" image="/hero_images/4.png" hasOverlay={false} hasCalculator={true} showCalculator='DistanceCalculator' />
       <BrandNames />
       <HalfSection showBottomContent={true}>
       <div className='flex flex-col justify-center pt-8'>

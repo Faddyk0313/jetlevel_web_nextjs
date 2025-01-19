@@ -42,7 +42,7 @@ const OnDemandCharterPage = () => {
       <Hero
         title="Group Charter Flight Services"
         image="/images/private-jet-charter-services.jpg"
-        hasOverlay={false}
+        hasOverlay={true}
         hasCalculator={true}
       />
       <BrandNames />

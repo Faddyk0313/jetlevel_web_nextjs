@@ -16,7 +16,7 @@ const Events = ({eventsData}:any) => {
             {
               items.content.map((data) =>
                 <div className='w-[31%] max-[650px]:w-full'>
-                   <Image
+                   <img
                     src={data.image}
                     alt={data.heading}
                     width={200} 

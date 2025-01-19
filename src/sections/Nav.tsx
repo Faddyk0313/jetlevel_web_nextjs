@@ -6,38 +6,38 @@ import NavOptions from "@/components/Nav/NavOptions";
 
 import Link from "next/link";
 import Image from "next/image";
-import { Close, Search } from '@mui/icons-material';
 import { useState } from 'react';
-
+import { FiSearch } from "react-icons/fi";
+import { RiCloseLargeFill } from "react-icons/ri";
 const Nav = () => {
-  const [search,setSearch] = useState('');
-  const [searchBar,setSearchBar] = useState(false);
+  const [search, setSearch] = useState('');
+  const [searchBar, setSearchBar] = useState(false);
 
   const highlightText = () => {
-    const bodyElement = document.getElementsByTagName('body')[0]; 
+    const bodyElement = document.getElementsByTagName('body')[0];
     const contentElements = bodyElement.getElementsByTagName('*');
-  
+
     let firstMatchFound = false;
-  
+
     Array.from(contentElements).forEach((element) => {
       const textContent = element.textContent;
-  
+
       if (textContent) {
         const index = textContent.toLowerCase().indexOf(search.toLowerCase());
-  
+
         if (index !== -1 && !firstMatchFound) {
           const regex = new RegExp(`(${search})`, 'gi');
-  
+
           element.innerHTML = element.innerHTML.replace(regex, '<mark>$1</mark>');
-  
+
           element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-  
+
           firstMatchFound = true;
         }
       }
     });
-  };  
-  
+  };
+
   return (
     <header className="bg-black sticky top-0 z-50 px-5 md:px-10 lg:px-20 ">
       <nav className="text-white sticky flex items-center lg:items-end justify-between py-4 sm:py-3 lg:pt-2  max-w-[1800px] mx-auto ">
@@ -47,7 +47,7 @@ const Nav = () => {
             height={142}
             className="w-auto h-auto"
             src="/images/Logo.png"
-            alt="Jet Level Aviation Logo" 
+            alt="Jet Level Aviation Logo"
           />
         </Link>
         <div className="flex items-end gap-2 md:gap-5">
@@ -57,8 +57,8 @@ const Nav = () => {
 
           <div id="contact-request" className="flex flex-col text-xs xl:text-sm items-end gap-2 lg:gap-0.5 ">
             <div className="hidden lg:flex items-center gap-1 text-[11px] mr-3">
-            {/* <div className='flex items-center pr-4 cursor-pointer ' onClick={() => setSearchBar(true)}>
-               <Search className='cursor-pointer' />
+              {/* <div className='flex items-center pr-4 cursor-pointer ' onClick={() => setSearchBar(true)}>
+               <FiSearch className="text-xl" />
                 <p>Search</p>
             </div>
               {
@@ -68,13 +68,15 @@ const Nav = () => {
                     searchBar ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'
                   }`}
                   >
-                  <div onClick={() => setSearchBar(false)} className='relative flex items-end justify-end'>
-                    <Close className='cursor-pointer absolute right-0 text-white top-[49px]' />
+                  <div onClick={() => setSearchBar(false)} className='relative flex items-end justify-end '>
+                    <div className="">
+                    <RiCloseLargeFill className="text-xl cursor-pointer absolute right-0 text-white top-[49px]" />
+                    </div>
                   </div>
                   <div className='w-full h-[43px] flex items-center mb-[13px] bg-white rounded-[10px] pl-4'>
-                      <div>
-                        <Search className='text-black' onClick={highlightText} />
-                      </div>
+                      <button className='text-black' onClick={highlightText}>
+                        <FiSearch className="text-xl"  />
+                      </button>
                       <input
                         onKeyDown={(e) => e.key === 'Enter' && highlightText()}
                         value={search}

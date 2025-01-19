@@ -1,5 +1,5 @@
+import { Close } from '@/svg';
 import React, { useEffect } from 'react';
-import { Close } from '@mui/icons-material';
 
 interface ModalProps {
   isOpen: boolean;
@@ -46,6 +46,7 @@ const Modal: React.FC<ModalProps> = ({ isOpen, onClose, children, modalWidth, cl
           className=" mb-0 !w-10 !h-10"
         />
         </div>
+
         {children}
       </div>
     </div>

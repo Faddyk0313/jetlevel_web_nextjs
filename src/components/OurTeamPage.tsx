@@ -9,7 +9,7 @@ import React from 'react';
 const OurTeamPage = () => {
   return (
     <>
-    <div className="bg-[url('/images2/ban_jets-jpg.webp')] overlay bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-center justify-center">
+    <div className="bg-[url('/hero_images/3.png')] overlay bg-cover bg-center bg-no-repeat h-[130px] sm:h-[190px] lg:h-[300px] max-h-[300px] flex items-center justify-center">
         <h1 className="px-5 md:px-10 lg:px-20 max-w-[1800px] w-full mx-auto text-white ">
           Our Team
         </h1>

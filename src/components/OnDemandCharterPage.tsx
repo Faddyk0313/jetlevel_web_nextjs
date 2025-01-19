@@ -93,7 +93,7 @@ const OnDemandCharterPage = () => {
   ]
   return (
     <div>
-      <Hero title="On-Demand Private Jet Charter Flights" description="Luxury at Your Fingertips" image="/images/On Demand Charter Hero Image.jpeg" hasOverlay={false} hasCalculator={true} />
+      <Hero title="On-Demand Private Jet Charter Flights" description="Luxury at Your Fingertips" image="/images/On Demand Charter Hero Image.jpeg" hasOverlay={true} hasCalculator={true} />
       <BrandNames />
       <HalfSection showBottomContent={true}>
       <div className='flex flex-col justify-center gap-y-[20px] pt-8'>

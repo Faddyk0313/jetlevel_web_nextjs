@@ -5,13 +5,13 @@ import 'react-international-phone/style.css';
 import PersonIcon from "@mui/icons-material/Person";
 import EmailIcon from "@mui/icons-material/Email";
 import TextsmsIcon from "@mui/icons-material/Textsms";
-import CloseIcon from "@mui/icons-material/Close";
 import { PhoneInput } from 'react-international-phone';
 import { PhoneNumberUtil } from 'google-libphonenumber';
 const phoneUtil = PhoneNumberUtil.getInstance();
 
 import {convertTimeFormat,getTime,getCurrentTime,getPrice,getUTCTime,getNext15Minutes} from "./helper"
 import { useRouter } from 'next/navigation';
+import { Close } from '@/svg';
 
 // global.d.ts
 export {};
@@ -561,12 +561,11 @@ const form = formInfo;
                   <>
                     <div className="inquiry-header">
                       <p>Please provide your contact details here.</p>
-                      <CloseIcon
-                        className="close-icon"
-                        onClick={() => {
+                      <button  className="close-icon" onClick={() => {
                           handleInquiryForm(-1, "");
-                        }}
-                      />
+                        }}>
+                          <Close />
+                      </button>
                     </div>
                  
                     <>
