@@ -163,7 +163,7 @@ const FlightTracker: React.FC = () => {
             <div className="page-template page-template-page-flight-tracker-v2 page-template-page-flight-tracker-v2-php page page-id-3875 locked go-version0">
               <div className="flight-tracker-results">
                 <div className="flight-tracker-results-inner">
-                  <div className="ft-results-1">
+                  <div className="ft-results-1"> 
                     <div className="ft-results-1-left">
                       <h4>
                         {fightDetails?.ident} / {fightDetails?.registration}
@@ -176,8 +176,8 @@ const FlightTracker: React.FC = () => {
                       <img src={`data:image/png;base64,${image}`} alt="map" />
                     </div>
                   ) : null}
-                  <div className="ft-results-2 !flex-col md:!flex-row" style={{ marginTop: "10px" }}>
-                    <div className="ft-results-2-left !max-w-full md:!max-w-[50%] !pr-0 md:pr-[25px]">
+                  <div className="ft-results-2 justify-between !flex-col md:!flex-row" style={{ marginTop: "10px" }}>
+                    <div className="ft-results-2-left !max-w-full md:!max-w-[49%] !pr-0 md:pr-[25px]">
                       <h4 className="mb-0 pt-3">Flight Details</h4>
 
                       <p className="text-[rgb(33,33,33)] ft-results-highlight">Departure Times</p>
@@ -313,7 +313,7 @@ const FlightTracker: React.FC = () => {
                     </div>
 
                     {aircraftDetails ? (
-                      <div className="ft-results-2-right !max-w-full md:!max-w-[50%]">
+                      <div className="ft-results-2-right !max-w-full md:!max-w-[49%]">
                         <h4 className="mb-0 pt-3">Aircraft Details</h4>
                         <p className="text-[rgb(33,33,33)] ft-results-highlight">Aircraft Information</p>
                         <div className="ft-results-col-full">
