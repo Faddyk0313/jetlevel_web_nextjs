@@ -163,7 +163,7 @@ const FlightTracker: React.FC = () => {
             <div className="page-template page-template-page-flight-tracker-v2 page-template-page-flight-tracker-v2-php page page-id-3875 locked go-version0">
               <div className="flight-tracker-results">
                 <div className="flight-tracker-results-inner">
-                  <div className="ft-results-1">
+                  <div className="ft-results-1"> 
                     <div className="ft-results-1-left">
                       <h4>
                         {fightDetails?.ident} / {fightDetails?.registration}
