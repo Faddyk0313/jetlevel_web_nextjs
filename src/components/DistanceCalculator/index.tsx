@@ -65,7 +65,7 @@ const DistanceCalculator = () => {
         };
         try {
           const response = await fetch(
-            `${process.env.NEXT_PUBLIC_BACKEND_URL}/search?` +
+            `/api/search?` +
             new URLSearchParams({ query: value }),
             options
           );
@@ -103,7 +103,7 @@ const DistanceCalculator = () => {
 
         try {
           const response = await fetch(
-            `${process.env.NEXT_PUBLIC_BACKEND_URL}/search?` +
+            `/api/search?` +
             new URLSearchParams({ query: value }),
             options
           );
@@ -156,7 +156,7 @@ const DistanceCalculator = () => {
         
       };
 
-      let response = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/calculateDistance/${form.fromLocation}/${form.toLocation}`,options);
+      let response = await fetch(`/api/calculateDistance/${form.fromLocation}/${form.toLocation}`,options);
       const data = await response.json();
       // console.log(response);
       setData(data.data);

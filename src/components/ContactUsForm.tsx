@@ -69,7 +69,7 @@ const ContactUsForm: React.FC = () => {
       };
       setFormValues({ name: "", email: "", message: "",numberValue:"" });
       let response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/contactUs`,
+        `/api/contactUs`,
         options,
       );
       if (!response.ok) {

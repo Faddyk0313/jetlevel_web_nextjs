@@ -267,7 +267,7 @@ const form = formInfo;
         },
         body: JSON.stringify(extraData),
       };
-      let response2 = await fetch(`${process.env.NEXT_PUBLIC_BACKEND_URL}/sendEmail`, options);
+      let response2 = await fetch(`/api/sendEmail`, options);
       response2 = await response2.json();
       if (response2) {
         setInquiry((prevInquiry) => ({ ...prevInquiry, quiryLoader: false }));
@@ -426,7 +426,7 @@ const form = formInfo;
         body: JSON.stringify(extraData),
       };
       let response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/sendPriceEmail`,
+        `/api/sendPriceEmail`,
         options,
       );
       response = await response.json();

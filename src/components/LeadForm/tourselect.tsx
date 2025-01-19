@@ -109,7 +109,7 @@ export default function TourSelect (props:any) {
         };
         try {
           const response = await fetch(
-            `${process.env.NEXT_PUBLIC_BACKEND_URL}/search?` +
+            `/api/search?` +
             new URLSearchParams({ query: value }),
             options
           );
@@ -147,7 +147,7 @@ export default function TourSelect (props:any) {
 
         try {
           const response = await fetch(
-            `${process.env.NEXT_PUBLIC_BACKEND_URL}/search?` +
+            `/api/search?` +
             new URLSearchParams({ query: value }),
             options
           );
@@ -258,7 +258,7 @@ export default function TourSelect (props:any) {
       }
 
       const response = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/getAllJetInfo/${formInfo.fromLocation}/${formInfo.toLocation}/${formInfo.tourType}`
+        `/api/getAllJetInfo/${formInfo.fromLocation}/${formInfo.toLocation}/${formInfo.tourType}`
       );
       if(!response.ok){
         // setLoading(false);

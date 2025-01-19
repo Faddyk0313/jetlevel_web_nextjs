@@ -46,7 +46,7 @@ const AircraftComparison: React.FC = () => {
   useEffect(() => {
     async function init() {
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/getAllAircraft`
+        `/api/getAllAircraft`
       );
       const data = await res.json();
       // data.data should be an array of aircraft objects
@@ -178,7 +178,7 @@ const AircraftItem: React.FC<AircraftItemProps> = ({ id, data }) => {
       });
 
       const res = await fetch(
-        `${process.env.NEXT_PUBLIC_BACKEND_URL}/getAircraft/${airData._id}`
+        `/api/getAircraft/${airData._id}`
       );
       const fetchedData = await res.json();
       setAircraftData(fetchedData.data);

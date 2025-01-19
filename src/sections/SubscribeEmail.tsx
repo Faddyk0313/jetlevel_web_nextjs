@@ -6,23 +6,23 @@ const SubscribeEmail = () => {
     const [email,setEmail] = useState(""); 
     async function handleSubmit(e:any) {
         e.preventDefault();
-        try {
+        // try {
 
-            const response = await fetch("/api/subscribe", {
-                method: "POST",
-                headers: {
-                  "Content-Type": "application/json",
-                },
-                body: JSON.stringify({ email }),
-              });
+        //     const response = await fetch("/api/subscribe", {
+        //         method: "POST",
+        //         headers: {
+        //           "Content-Type": "application/json",
+        //         },
+        //         body: JSON.stringify({ email }),
+        //       });
         
-              const result = await response.json();
-            if (!result.ok) {
-                return
-            }
-        } catch (error) {
-            console.error("Error:", error);
-        }
+        //       const result = await response.json();
+        //     if (!result.ok) {
+        //         return
+        //     }
+        // } catch (error) {
+        //     console.error("Error:", error);
+        // }
     }
 
 
