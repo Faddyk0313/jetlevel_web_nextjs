@@ -1,6 +1,5 @@
 "use client"
 import React, { useState, useEffect } from "react";
-import CircularProgress from "@mui/material/CircularProgress";
 import Input from "../LeadForm/input";
 import {convertTimeFormat, getNext15Minutes} from "../LeadForm/helper"
 const DistanceCalculator = () => {
@@ -218,7 +217,7 @@ const DistanceCalculator = () => {
               handleSubmit();
             }}
           >
-            {loading ? <CircularProgress color="inherit" /> : ""} Search
+          {loading ? (<div className="search-form__loader"></div>) : "Search"}
           </button>
         </div>
         {data ? (
